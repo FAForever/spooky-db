@@ -1,0 +1,10 @@
+{
+    "id": "URL0107",
+    "name": "Mantis",
+    "description": "Assault Bot",
+    "faction": "Cybran",
+    "classification": "RULEUC_MilitaryVehicle",
+    "tech": "RULEUTL_Basic",
+    "strategicIcon": "icon_bot1_directfire",
+    "icon": "land"
+}

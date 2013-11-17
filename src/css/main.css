@@ -96,9 +96,35 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+html {
+}
+body {
+    background: #000;
+    color: #fff;
+    padding: 5px;
+}
+header, footer {
+    padding: 5px 0;
+}
+header {
+    color: #fda005;
+}
+footer {
+    font-size: .8em;
+    clear: both;
+}
+.faction {
+    width: 25%;
+    float: left;
+}
+.card p {
+    margin: 0;
+}
 
-
-
+.uef .card { background: #2d78b2; }
+.cybran .card { background: #df2d0e; }
+.aeon .card { background: #0a9d2f; }
+.seraphim .card { background: #f1c240; }
 
 
 
