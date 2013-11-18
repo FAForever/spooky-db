@@ -113,18 +113,34 @@ footer {
     font-size: .8em;
     clear: both;
 }
-.faction {
-    width: 25%;
+.faction, .filters {
+    width: 20%;
+    min-width: 325px;
     float: left;
 }
-.card p {
-    margin: 0;
+.kind {
+    float: left;
+    margin-right: 1px;
+}
+.thumb {
+    position: relative;
+    display: block;
+    border-radius: 3px;
+    margin-bottom: 1px;
+}
+.thumb img {
+    display: block;
+}
+.thumb .strategic {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
-.uef .card { background: #2d78b2; }
-.cybran .card { background: #df2d0e; }
-.aeon .card { background: #0a9d2f; }
-.seraphim .card { background: #f1c240; }
+.uef .thumb { background: #2d78b2; }
+.cybran .thumb { background: #df2d0e; }
+.aeon .thumb { background: #0a9d2f; }
+.seraphim .thumb { background: #f1c240; }
 
 
 

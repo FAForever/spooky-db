@@ -21,37 +21,29 @@
         <![endif]-->
 
         <script type="text/ng-template" id="home.html">
-            <header>
-                toolbar goes here
-            </header>
-            <div ng-repeat="faction in factions" class="faction {{ faction }}">
-                <ng-card ng-repeat="unit in index" ng-content="unit"></ng-card>
+            <header>header</header>
+            <section ng-repeat="f in index|pluck:'faction'|uniq" class="faction {{ f|lowercase }}">
+                <h1>{{ f }}</h1>
+                <div class="kind" ng-repeat="c in ['RULEUC_Engineer', 'RULEUC_Factory', 'RULEUC_MilitaryVehicle', 'RULEUC_MilitaryAircraft', 'RULEUC_MilitaryShip']">
+                    <ng-card ng-repeat="u in index|where:{faction: f, classification: c}" ng-content="u"></ng-card>
+                </div>
+            </section>
+            <div class="filters">
+                <em>search</em><br />
+                <input type="text" placeholder="search" /><br />
+                <em>filters</em><br />
+                aeon|uef|cybran|seraphim<br />
+                land|air|naval|base<br />
+                t1|t2|t3|exp
             </div>
-            <footer>
-                lorem ipsum
-            </footer>
+            <footer>footer</footer>
         </script>
 
-        <script type="text/ng-template" id="card.html">
-            <div id="{{ item.id }}" class="card">
-                <em class="row">{{ item.name }}: {{ item.tech|tech }} {{ item.description }}</em>
-                <div class="row">
-                    <p class="large-2 columns">
-                        <img ng-src="/img/units/{{ item.id }}_icon.png" alt="{{ item.name }}" />
-                        <img ng-src="/img/strategic/{{ item.faction|lowercase}}_{{ item.strategicIcon }}.png" alt="{{ item.name }}" />
-                    </p>
-                    <p class="large-3 columns">
-                        <img ng-src="/img/time.png" alt="time" /> 260
-                        <img ng-src="/img/health.png" alt="health" /> 270
-                    </p>
-                    <p class="large-4 columns">
-                        <img ng-src="/img/mass.png" alt="mass" /> -52 (-4)
-                        <img ng-src="/img/energy.png" alt="energy" /> -273 (-21)
-                    </p>
-                    <p class="large-3 columns">
-                    </p>
-                </div>
-            </div>
+        <script type="text/ng-template" id="thumb.html">
+            <a class="thumb" href="#{{ item.id }}" title="{{ item.name }}: {{ item.tech|tech }} {{ item.description }}">
+                <img ng-src="/img/units/{{ item.id }}_icon.png" alt="{{ item.name }}: {{ item.tech|tech }} {{ item.description }}" />
+                <img class="strategic" ng-src="/img/strategic/{{ item.faction }}_{{ item.strategicIcon }}.png" alt="" />
+            </a>
         </script>
 
         <ng-view></ng-view>
@@ -60,6 +52,8 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-2.0.3.min.js"><\/script>')</script>
         <script src="js/vendor/angular.js"></script>
         <script src="js/vendor/angular-route.js"></script>
+        <script src="js/vendor/underscore.js"></script>
+        <script src="js/vendor/angular-underscore.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
         <!--script>

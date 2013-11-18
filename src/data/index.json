@@ -18,5 +18,45 @@
         "tech": "RULEUTL_Basic",
         "strategicIcon": "icon_bot1_directfire",
         "icon": "land"
+    },
+    {
+        "id": "URL0107",
+        "name": "Mantis",
+        "description": "Assault Bot",
+        "faction": "Cybran",
+        "classification": "RULEUC_Engineer",
+        "tech": "RULEUTL_Basic",
+        "strategicIcon": "icon_bot1_directfire",
+        "icon": "land"
+    },
+    {
+        "id": "URL0107",
+        "name": "Mantis",
+        "description": "Assault Bot",
+        "faction": "Cybran",
+        "classification": "RULEUC_Factory",
+        "tech": "RULEUTL_Basic",
+        "strategicIcon": "icon_bot1_directfire",
+        "icon": "land"
+    },
+    {
+        "id": "URL0107",
+        "name": "Mantis",
+        "description": "Assault Bot",
+        "faction": "Cybran",
+        "classification": "RULEUC_MilitaryAircraft",
+        "tech": "RULEUTL_Basic",
+        "strategicIcon": "icon_bot1_directfire",
+        "icon": "land"
+    },
+    {
+        "id": "URL0107",
+        "name": "Mantis",
+        "description": "Assault Bot",
+        "faction": "Cybran",
+        "classification": "RULEUC_MilitaryShip",
+        "tech": "RULEUTL_Basic",
+        "strategicIcon": "icon_bot1_directfire",
+        "icon": "land"
     }
 ]
