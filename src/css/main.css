@@ -111,7 +111,7 @@ body {
     font-family: 'Muli', Verdana, Arial, sans-serif;
     background: #000;
     color: #fff;
-    padding: 5px;
+    padding: 3px;
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Zeroes Three', 'Muli', Verdana, Arial, sans-serif;;
@@ -131,6 +131,21 @@ footer {
     min-width: 325px;
     float: left;
 }
+.filters {
+    min-width: 0;
+    width: auto;
+    overflow: hidden;
+}
+.filters a {
+    display: block;
+}
+.filters img {
+    width: 48px;
+}
+.filters p {
+    float: right;
+    margin-right: 3px;
+}
 .kind {
     float: left;
     margin-right: 1px;
@@ -148,6 +163,10 @@ footer {
     position: absolute;
     top: 0;
     left: 0;
+}
+
+.faction .thumb:hover {
+    background: rgba(255,255,255, .6);
 }
 
 .uef .thumb { background: rgba(45,120,178, .2); /*#2d78b2*/; }

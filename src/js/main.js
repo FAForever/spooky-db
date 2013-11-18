@@ -24,6 +24,11 @@ app.filter('tech', function() {
         return dict[text] || 'T?';
     };
 })
+app.filter('name', function() {
+    return function(item) {
+        return (item.name ? item.name + ': ' : '') + item.tech + ' ' + item.description;
+    }
+});
 
 app.directive('ngCard', [function() {
     return {
