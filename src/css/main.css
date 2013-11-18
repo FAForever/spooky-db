@@ -184,7 +184,7 @@ footer {
     background: rgba(255,255,255, .4);
 }
 
-/*.faction h1 { background: no-repeat 50px -165px / 160%; padding-left: .33em; }*/
+/*.faction h1 { background: no-repeat 50px -165px / 160%; padding-left: .33em; }*/ /* css to achieve current faction logo with original images */
 .faction h1 { background: no-repeat right top; padding-left: .33em; }
 .uef .thumb { background: rgba(45,120,178, .2); /*#2d78b2*/; }
 .uef h1 { background-image: url(../img/SC_UEF.jpg) }
