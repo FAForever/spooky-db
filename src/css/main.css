@@ -96,12 +96,25 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-html {
+@font-face {
+    font-family: 'Zeroes Three';
+    src: url('zeroes_3-webfont.eot');
+    src: url('zeroes_3-webfont.eot?#iefix') format('embedded-opentype'),
+         url('zeroes_3-webfont.woff') format('woff'),
+         url('zeroes_3-webfont.ttf') format('truetype'),
+         url('zeroes_3-webfont.svg#zeroes_threeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
 }
 body {
+    font-family: 'Muli', Verdana, Arial, sans-serif;
     background: #000;
     color: #fff;
     padding: 5px;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Zeroes Three', 'Muli', Verdana, Arial, sans-serif;;
 }
 header, footer {
     padding: 5px 0;
@@ -137,10 +150,10 @@ footer {
     left: 0;
 }
 
-.uef .thumb { background: #2d78b2; }
-.cybran .thumb { background: #df2d0e; }
-.aeon .thumb { background: #0a9d2f; }
-.seraphim .thumb { background: #f1c240; }
+.uef .thumb { background: rgba(45,120,178, .2); /*#2d78b2*/; }
+.cybran .thumb { background: rgba(223,45,14, .2); /*#df2d0e*/ }
+.aeon .thumb { background: rgba(10,157,47, .2); /*#0a9d2f*/ }
+.seraphim .thumb { background: rgba(241,194,64, .2); /*#f1c240*/ }
 
 
 

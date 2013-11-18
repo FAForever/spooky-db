@@ -12,6 +12,7 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/foundation.min.css">
+        <link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
@@ -19,6 +20,13 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+
+        <script type="text/ng-template" id="thumb.html">
+            <a class="thumb" href="#{{ item.id }}" title="{{ item.name }}: {{ item.tech|tech }} {{ item.description }}">
+                <img ng-src="/img/units/{{ item.id }}.png" alt="{{ item.name }}: {{ item.tech|tech }} {{ item.description }}" />
+                <img class="strategic" ng-src="/img/strategic/{{ item.faction }}_{{ item.strategicIcon }}.png" alt="" />
+            </a>
+        </script>
 
         <script type="text/ng-template" id="home.html">
             <header>header</header>
@@ -37,13 +45,6 @@
                 t1|t2|t3|exp
             </div>
             <footer>footer</footer>
-        </script>
-
-        <script type="text/ng-template" id="thumb.html">
-            <a class="thumb" href="#{{ item.id }}" title="{{ item.name }}: {{ item.tech|tech }} {{ item.description }}">
-                <img ng-src="/img/units/{{ item.id }}_icon.png" alt="{{ item.name }}: {{ item.tech|tech }} {{ item.description }}" />
-                <img class="strategic" ng-src="/img/strategic/{{ item.faction }}_{{ item.strategicIcon }}.png" alt="" />
-            </a>
         </script>
 
         <ng-view></ng-view>
