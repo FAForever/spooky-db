@@ -151,6 +151,7 @@ footer {
 .filters a {
     display: block;
     border-radius: 3px;
+    margin-bottom: 3px;
 }
 .filters a:hover, .filters a:focus, .filters a.active {
     background: rgba(255,255,255, .4);

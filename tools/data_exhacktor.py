@@ -9,7 +9,7 @@ class UnitThumb:
     def comparer(u):
 
         faction_order = { 'UEF': 1, 'Cybran': 2, 'Aeon': 3, 'Seraphim': 4 }
-        tech_order = { 'RULEUTL_Basic': 1, 'RULEUTL_Advanced': 2, 'RULEUTL_Secret': 3, 'RULEUTL_Experimental': 4 }
+        tech_order = { 'T1': 1, 'T2': 2, 'T3': 3, 'Experimental': 4 } # TODO: remove doubled code
 
         # TODO: more sorting?
         return 1000*faction_order[u.faction] + 100*tech_order[u.tech] 
@@ -32,6 +32,29 @@ class UnitThumbEncoder(json.JSONEncoder):
         return o.__dict__
 
 class UnitFactory:
+    classification_lookup = {
+        'RULEUC_Engineer': 'Build',
+        'RULEUC_Commander': 'Build',
+        'RULEUMT_Amphibious': 'Land',
+        'RULEUC_MilitaryVehicle': 'Land',
+        'RULEUC_MilitaryAircraft': 'Air',
+        'RULEUC_MilitarySub': 'Naval',
+        'RULEUC_MilitaryShip': 'Naval',
+        'RULEUC_Weapon': 'Base',
+        'RULEUC_Sensor': 'Base',
+        'RULEUC_Factory': 'Base',
+        'RULEUC_Resource': 'Base',
+        'RULEUC_MiscSupport': 'Base',
+        'RULEUC_CounterMeasure': 'Base'
+    }
+
+    tech_lookup = {
+        'RULEUTL_Basic': 'T1',
+        'RULEUTL_Advanced': 'T2',
+        'RULEUTL_Secret': 'T3',
+        'RULEUTL_Experimental': 'Experimental'
+    }
+
     @staticmethod
     def extract_id(path):
         return os.path.basename(path).replace('_unit.bp', '');
@@ -49,9 +72,12 @@ class UnitFactory:
 
         thumb.description = re.search("Description = '(?:<.*>)(.+)'", bp).group(1)
         thumb.faction = re.search("FactionName = '(.+)'", bp).group(1)
-        thumb.classification = re.search("Classification = '(.+)'", bp).group(1)
-        thumb.tech = re.search("TechLevel = '(.+)'", bp).group(1)
+        thumb.classification = UnitFactory.classification_lookup[re.search("Classification = '(.+)'", bp).group(1)]
+        thumb.tech = UnitFactory.tech_lookup[re.search("TechLevel = '(.+)'", bp).group(1)]
         thumb.strategicIcon = re.search("StrategicIconName = '(.+)'", bp).group(1)
+
+        if thumb.strategicIcon == 'icon_experimental_generic': # HACK
+            thumb.tech = 'Experimental' # TODO: DRY 
 
         # BuildIconSortPriority = 15
 
