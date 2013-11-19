@@ -159,6 +159,9 @@ footer {
 .filters img {
     width: 48px;
 }
+.filters input {
+    width: 100%;
+}
 .filters p {
     float: left;
     margin-right: 3px;
