@@ -5,14 +5,40 @@ import json
 import shutil
 
 class UnitThumb:
-    @staticmethod
-    def comparer(u):
+    CLASS_BUILD = 'Build'
+    CLASS_LAND = 'Land'
+    CLASS_AIR = 'Air'
+    CLASS_NAVAL = 'Naval'
+    CLASS_BASE = 'Base'
 
-        faction_order = { 'UEF': 1, 'Cybran': 2, 'Aeon': 3, 'Seraphim': 4 }
-        tech_order = { 'T1': 1, 'T2': 2, 'T3': 3, 'Experimental': 4 } # TODO: remove doubled code
+    TECH_1 = 'T1'
+    TECH_2 = 'T2'
+    TECH_3 = 'T3'
+    TECH_X = 'Experimental'
+
+    FAC_UEF = 'UEF'
+    FAC_CYBRAN = 'Cybran'
+    FAC_AEON = 'Aeon'
+    FAC_SERAPHIM = 'Seraphim'
+
+    @staticmethod
+    def sort_order(u):
+        faction_order = {
+            UnitThumb.FAC_UEF: 1,
+            UnitThumb.FAC_CYBRAN: 2,
+            UnitThumb.FAC_AEON: 3,
+            UnitThumb.FAC_SERAPHIM: 4
+        }
+
+        tech_order = {
+            UnitThumb.TECH_1: 1,
+            UnitThumb.TECH_2: 2,
+            UnitThumb.TECH_3: 3,
+            UnitThumb.TECH_X: 4
+        }
 
         # TODO: more sorting?
-        return 1000*faction_order[u.faction] + 100*tech_order[u.tech] 
+        return 10000*faction_order[u.faction] + 1000*tech_order[u.tech]  + u.order
 
     def __init__(self):
         self.id = "" # URL0107
@@ -23,6 +49,7 @@ class UnitThumb:
         self.tech = "" # RULEUTL_Basic
         self.strategicIcon = "" # icon_bot1_directfire
         self.icon = "" # land
+        self.order = 1000
 
     def __repr__(self):
         return json.dumps(self, cls=UnitThumbEncoder, indent=2)
@@ -33,26 +60,26 @@ class UnitThumbEncoder(json.JSONEncoder):
 
 class UnitFactory:
     classification_lookup = {
-        'RULEUC_Engineer': 'Build',
-        'RULEUC_Commander': 'Build',
-        'RULEUMT_Amphibious': 'Land',
-        'RULEUC_MilitaryVehicle': 'Land',
-        'RULEUC_MilitaryAircraft': 'Air',
-        'RULEUC_MilitarySub': 'Naval',
-        'RULEUC_MilitaryShip': 'Naval',
-        'RULEUC_Weapon': 'Base',
-        'RULEUC_Sensor': 'Base',
-        'RULEUC_Factory': 'Base',
-        'RULEUC_Resource': 'Base',
-        'RULEUC_MiscSupport': 'Base',
-        'RULEUC_CounterMeasure': 'Base'
+        'RULEUC_Engineer': UnitThumb.CLASS_BUILD,
+        'RULEUC_Commander': UnitThumb.CLASS_BUILD,
+        'RULEUMT_Amphibious': UnitThumb.CLASS_LAND,
+        'RULEUC_MilitaryVehicle': UnitThumb.CLASS_LAND,
+        'RULEUC_MilitaryAircraft': UnitThumb.CLASS_AIR,
+        'RULEUC_MilitarySub': UnitThumb.CLASS_NAVAL,
+        'RULEUC_MilitaryShip': UnitThumb.CLASS_NAVAL,
+        'RULEUC_Weapon': UnitThumb.CLASS_BASE,
+        'RULEUC_Sensor': UnitThumb.CLASS_BASE,
+        'RULEUC_Factory': UnitThumb.CLASS_BASE,
+        'RULEUC_Resource': UnitThumb.CLASS_BASE,
+        'RULEUC_MiscSupport': UnitThumb.CLASS_BASE,
+        'RULEUC_CounterMeasure': UnitThumb.CLASS_BASE
     }
 
     tech_lookup = {
-        'RULEUTL_Basic': 'T1',
-        'RULEUTL_Advanced': 'T2',
-        'RULEUTL_Secret': 'T3',
-        'RULEUTL_Experimental': 'Experimental'
+        'RULEUTL_Basic': UnitThumb.TECH_1,
+        'RULEUTL_Advanced': UnitThumb.TECH_2,
+        'RULEUTL_Secret': UnitThumb.TECH_3,
+        'RULEUTL_Experimental': UnitThumb.TECH_X
     }
 
     @staticmethod
@@ -77,9 +104,10 @@ class UnitFactory:
         thumb.strategicIcon = re.search("StrategicIconName = '(.+)'", bp).group(1)
 
         if thumb.strategicIcon == 'icon_experimental_generic': # HACK
-            thumb.tech = 'Experimental' # TODO: DRY 
+            thumb.tech = UnitThumb.TECH_X
 
-        # BuildIconSortPriority = 15
+        x = re.search("BuildIconSortPriority = (\d+)", bp)
+        thumb.order = int(x.group(1)) if x else 1000
 
         x = re.search("Icon = '(.+)'", bp)
         thumb.icon = x.group(1) if x else ''
@@ -101,7 +129,7 @@ def run(source, destination):
     print('Saving to: {0}'.format(destination))
     out = open(destination, 'w+')
 
-    units.sort(key=UnitThumb.comparer)
+    units.sort(key=UnitThumb.sort_order)
 
     try:
         json.dump(units, out, cls=UnitThumbEncoder, indent=2)
