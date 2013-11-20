@@ -6,6 +6,14 @@ app.config(['$routeProvider', function($routeProvider) {
             controller: 'HomeCtrl',
             templateUrl: 'home.html'
         })
+        .when('/compare', {
+            controller: 'CompareCtrl',
+            templateUrl: 'compare.html'
+        })
+        .when('/:id', {
+            controller: 'DetailsCtrl',
+            templateUrl: 'details.html'
+        })
         .otherwise({
             templateUrl: '404.html'
         });
@@ -17,6 +25,7 @@ app.factory('data', ['$http', function($http) {
 
 app.filter('name', function() {
     return function(item) {
+        if (!item) return;
         return (item.name ? item.name + ': ' : '') + item.tech + ' ' + item.description;
     }
 });
@@ -33,7 +42,6 @@ app.directive('ngCard', [function() {
 }]);
 
 app.controller('HomeCtrl', ['$scope', 'data', function($scope, data) {
-
     $scope.factions = [];
     $scope.kinds = [];
     $scope.tech = [];
@@ -78,5 +86,9 @@ app.controller('HomeCtrl', ['$scope', 'data', function($scope, data) {
     data.success(function(d) {
         $scope.index = d;
     });
+}]);
+app.controller('DetailsCtrl', ['$scope', '$routeParams', 'data', function($scope, $routeParams, data) {
+}]);
+app.controller('CompareCtrl', ['$scope', function($scope) {
 
 }]);

@@ -23,9 +23,7 @@
 
         <script type="text/ng-template" id="thumb.html">
             <a class="thumb" href="#{{ item.id }}" title="{{ item|name }}">
-<!--
-                <img ng-src="/img/units/unknown.png" alt="{{ item|name }}" />
--->
+                <!--img ng-src="/img/units/unknown.png" alt="{{ item|name }}" /-->
                 <img ng-src="/img/units/{{ item.id }}.png" alt="{{ item|name }}" />
                 <img class="strategic" ng-src="/img/strategic/{{ item.faction }}_{{ item.strategicIcon }}.png" alt="" />
             </a>
@@ -58,7 +56,15 @@
                     </a>
                 </p>
             </aside>
-            <!--footer>by spooky</footer-->
+            <footer>by spooky</footer>
+        </script>
+
+        <script type="text/ng-template" id="details.html">
+        </script>
+
+        <script type="text/ng-template" id="compare.html">
+            <aside class="filters">
+            </aside>
         </script>
 
         <ng-view></ng-view>

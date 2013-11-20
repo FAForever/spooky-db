@@ -120,14 +120,13 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Zeroes Three', 'Muli', Verdana, Arial, sans-serif;;
 }
 header, footer {
-    padding: 5px 0;
-}
-header {
+    padding: 5px;
     color: #fda005;
 }
 footer {
     font-size: .8em;
     clear: both;
+    text-align: right;
 }
 .main {
     overflow: hidden;
