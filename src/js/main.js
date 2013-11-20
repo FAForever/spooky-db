@@ -15,15 +15,6 @@ app.factory('data', ['$http', function($http) {
     return $http.get('/data/index.json');
 }]);
 
-app.filter('tech', function() {
-    return function(text) {
-        var dict = {
-            RULEUTL_Basic: 'T1'
-        };
-
-        return dict[text] || 'T?';
-    };
-})
 app.filter('name', function() {
     return function(item) {
         return (item.name ? item.name + ': ' : '') + item.tech + ' ' + item.description;

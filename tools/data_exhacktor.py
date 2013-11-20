@@ -22,7 +22,7 @@ class UnitThumb:
     FAC_SERAPHIM = 'Seraphim'
 
     @staticmethod
-    def sort_order(u):
+    def sort_key(u):
         faction_order = {
             UnitThumb.FAC_UEF: 1,
             UnitThumb.FAC_CYBRAN: 2,
@@ -38,9 +38,9 @@ class UnitThumb:
         }
 
         # TODO: more sorting?
-        return 10000*faction_order[u.faction] + 1000*tech_order[u.tech]  + u.order
+        return 10000*faction_order[u.faction] + 1000*tech_order[u.tech]  + u.order + (1 if u.strategicIcon == 'icon_commander_generic' else 0) #HACK
 
-    def __init__(self):
+    def __init__(self, **kwargs):
         self.id = "" # URL0107
         self.name = "" # Mantis
         self.description = "" # Assault Bot
@@ -50,6 +50,10 @@ class UnitThumb:
         self.strategicIcon = "" # icon_bot1_directfire
         self.icon = "" # land
         self.order = 1000
+
+        # map(lambda k, v: setattr(self, k, v), kwargs.items())
+        for k, v in kwargs.items():
+            setattr(self, k, v)
 
     def __repr__(self):
         return json.dumps(self, cls=UnitThumbEncoder, indent=2)
@@ -79,7 +83,16 @@ class UnitFactory:
         'RULEUTL_Basic': UnitThumb.TECH_1,
         'RULEUTL_Advanced': UnitThumb.TECH_2,
         'RULEUTL_Secret': UnitThumb.TECH_3,
-        'RULEUTL_Experimental': UnitThumb.TECH_X
+        'RULEUTL_Experimental': UnitThumb.TECH_X,
+        'TECH1': UnitThumb.TECH_1,
+        'TECH2': UnitThumb.TECH_2,
+        'TECH3': UnitThumb.TECH_3,
+        'EXPERIMENTAL': UnitThumb.TECH_X,
+    }
+
+    exclusions = {
+        'XAC2101': None,
+        'XSL0402': None,
     }
 
     @staticmethod
@@ -91,6 +104,9 @@ class UnitFactory:
         thumb = UnitThumb()
         thumb.id = UnitFactory.extract_id(path);
 
+        if thumb.id in UnitFactory.exclusions:
+            return UnitFactory.exclusions[thumb.id]
+
         f = open(path, 'r')
         bp = f.read()
 
@@ -100,11 +116,11 @@ class UnitFactory:
         thumb.description = re.search("Description = '(?:<.*>)(.+)'", bp).group(1)
         thumb.faction = re.search("FactionName = '(.+)'", bp).group(1)
         thumb.classification = UnitFactory.classification_lookup[re.search("Classification = '(.+)'", bp).group(1)]
-        thumb.tech = UnitFactory.tech_lookup[re.search("TechLevel = '(.+)'", bp).group(1)]
         thumb.strategicIcon = re.search("StrategicIconName = '(.+)'", bp).group(1)
-
-        if thumb.strategicIcon == 'icon_experimental_generic': # HACK
-            thumb.tech = UnitThumb.TECH_X
+        
+        # this thing kind of sucks. To tell what's the tech level
+        # first check if there's a TECH{} or EXPERIMENTAL in the bp (usually in the categories) of not, then check the TechLevel
+        thumb.tech = UnitFactory.tech_lookup[list(filter(None, re.search("(?:'(TECH\d)')|(?:'(EXPERIMENTAL)')|(?:TechLevel = '(.+)')", bp).groups()))[0]]
 
         x = re.search("BuildIconSortPriority = (\d+)", bp)
         thumb.order = int(x.group(1)) if x else 1000
@@ -122,14 +138,16 @@ def run(source, destination):
     for bp in glob.glob(source + '/*/*.bp'):
         i += 1
         print('... {0}'.format(bp))
-        units.append(UnitFactory.create(bp))
+        u = UnitFactory.create(bp)
+        if u:
+            units.append(u)
     
     print('Done parsing {0} units'.format(i))
 
     print('Saving to: {0}'.format(destination))
     out = open(destination, 'w+')
 
-    units.sort(key=UnitThumb.sort_order)
+    units.sort(key=UnitThumb.sort_key)
 
     try:
         json.dump(units, out, cls=UnitThumbEncoder, indent=2)

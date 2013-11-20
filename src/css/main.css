@@ -168,7 +168,9 @@ footer {
 }
 .kind {
     float: left;
-    margin-right: 1px;
+    min-height: 1px;
+    padding-right: 1px;
+    width: 20%;
 }
 .thumb {
     position: relative;
