@@ -29,12 +29,34 @@ app.filter('name', function() {
         return (item.name ? item.name + ': ' : '') + item.tech + ' ' + item.description;
     }
 });
+app.filter('pic', function() {
+    return function (item) {
+        if (!item) return;
+        return '/img/units/'+item.id+'.png';
+    }
+});
+app.filter('icon', function() {
+    return function (item) {
+        if (!item) return;
+        return '/img/strategic/' + item.faction + '_' + item.strategicIcon +'.png';
+    }
+});
 
-app.directive('ngCard', [function() {
+app.directive('ngThumb', [function() {
     return {
         restrict: 'E',
         replace: true,
         templateUrl: 'thumb.html',
+        scope: {
+            item: '=ngContent'
+        }
+    }
+}]);
+app.directive('ngUnit', [function() {
+    return {
+        restrict: 'E',
+        replace: true,
+        templateUrl: 'unit.html',
         scope: {
             item: '=ngContent'
         }
@@ -88,6 +110,9 @@ app.controller('HomeCtrl', ['$scope', 'data', function($scope, data) {
     });
 }]);
 app.controller('DetailsCtrl', ['$scope', '$routeParams', 'data', function($scope, $routeParams, data) {
+    data.success(function(d) {
+        $scope.unit = _.where(d, { id: $routeParams.id })[0];
+    });
 }]);
 app.controller('CompareCtrl', ['$scope', function($scope) {
 

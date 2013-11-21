@@ -185,21 +185,37 @@ footer {
     top: 0;
     left: 0;
 }
-.faction .thumb:hover {
+.faction a.thumb:hover {
     background: rgba(255,255,255, .4);
 }
 
 /*.faction h1 { background: no-repeat 50px -165px / 160%; padding-left: .33em; }*/ /* css to achieve current faction logo with original images */
 .faction h1 { background: no-repeat right top; padding-left: .33em; }
-.uef .thumb { background: rgba(45,120,178, .2); /*#2d78b2*/; }
-.uef h1 { background-image: url(../img/SC_UEF.jpg) }
-.cybran .thumb { background: rgba(223,45,14, .2); /*#df2d0e*/ }
-.cybran h1 { background-image: url(../img/SC_Cybran.jpg) }
-.aeon .thumb { background: rgba(10,157,47, .2); /*#0a9d2f*/ }
-.aeon h1 { background-image: url(../img/SC_Aeon.jpg) }
-.seraphim .thumb { background: rgba(241,194,64, .2); /*#f1c240*/ }
-.seraphim h1 { background-image: url(../img/SC_Seraphim.jpg) }
+.uef { background: rgba(45,120,178, .2); /*#2d78b2*/; }
+h1.uef  { background-image: url(../img/SC_UEF.jpg) }
+.cybran { background: rgba(223,45,14, .2); /*#df2d0e*/ }
+h1.cybran { background-image: url(../img/SC_Cybran.jpg) }
+.aeon { background: rgba(10,157,47, .2); /*#0a9d2f*/ }
+h1.aeon { background-image: url(../img/SC_Aeon.jpg) }
+.seraphim { background: rgba(241,194,64, .2); /*#f1c240*/ }
+h1.seraphim { background-image: url(../img/SC_Seraphim.jpg) }
 
+.details {
+    padding: 5px;
+}
+.details header {
+    padding: 0;
+}
+.details h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.3em;
+    font-weight: normal;
+}
+.details .thumb {
+    float: left;
+    margin-right: 1em;
+}
 
 
 
