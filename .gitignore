@@ -1,5 +1,6 @@
 graphics
 faforever.nxt
 tools/units
-foo.txt
+tools/img
+tools/img_small
 *.sublime*
