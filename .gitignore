@@ -1,6 +1,6 @@
 graphics
-faforever.nxt
-tools/units
 tools/img
 tools/img_small
+tools/units
+tools/faforever.nxt
 *.sublime*
