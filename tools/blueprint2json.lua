@@ -40,4 +40,5 @@ if blueprint == nil then
     return 1
 end
 
+blueprint["Id"] = arg[1]:match "^.*/([A-Z0-9]+).*\.bp$"
 print(json.encode(stripLoc(blueprint)))
