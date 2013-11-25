@@ -5,7 +5,6 @@ import urllib.request
 base_big = 'http://faforever.com/faf/unitsDB/icons/big/{0}_icon.png'
 base_small = 'http://faforever.com/faf/unitsDB/icons/small/{0}_{1}.png'
 unit_index = 'd:/code/personal/html/unitdb/src/data/index.json'
-# unit_index = 'd:/code/personal/html/unitdb/tools/sample.json'
 
 index = json.loads(open(unit_index).read())
 
