@@ -22,7 +22,7 @@
         <![endif]-->
 
         <script type="text/ng-template" id="thumb.html">
-            <a class="thumb {{  item.faction|lowercase }}" href="#{{ item.id }}" title="{{ item|name }}">
+            <a class="thumb {{  item.faction|lowercase }}" ng-class="{selected: item.selected}" title="{{ item|name }}" ng-click="click()">
                 <!--img ng-src="/img/units/unknown.png" alt="{{ item|name }}" /-->
                 <img ng-src="{{ item|pic }}" alt="{{ item|name }}" />
                 <img class="strategic" ng-src="{{ item|icon }}" alt="" />
@@ -42,15 +42,17 @@
         </script>
 
         <script type="text/ng-template" id="home.html">
-            <!--header><h1>Forged Alliance Forever Unit Database</h1></header-->
             <section ng-repeat="f in index|pluck:'faction'|uniq" class="faction">
                 <h1 class="{{ f|lowercase }}">{{ f }}</h1>
                 <div class="kind" ng-repeat="c in ['Build', 'Base', 'Land', 'Air', 'Naval']">
-                    <ng-thumb ng-repeat="u in index|where:{faction: f, classification: c}|filter:strain|filter:expr" ng-content="u"></ng-thumb>
+                    <ng-thumb ng-repeat="u in index|where:{faction: f, classification: c}|filter:strain|filter:expr" content="u" click="compare(u)"></ng-thumb>
                 </div>
             </section>
             <aside class="filters">
-                <h1>&nbsp;</h1>
+                <header>
+                    {{ contenders.length }} selected
+                    <a href="#/compare">compare</a>
+                </header>
                 <input type="text" placeholder="filter" autofocus ng-model="expr" /><br />
                 <p>
                     <a ng-repeat="f in ['UEF', 'Cybran', 'Aeon', 'Seraphim']" title="{{ f }}" ng-click="toggleFaction(f)" ng-class="{active: factionSelected(f)}">
@@ -68,9 +70,7 @@
                     </a>
                 </p>
             </aside>
-            <footer>by spooky</footer>
         </script>
-
 
         <script type="text/ng-template" id="details.html">
             <section>
@@ -86,7 +86,9 @@
             </aside>
         </script>
 
+        <!--header><h1>Forged Alliance Forever Unit Database</h1></header-->
         <ng-view></ng-view>
+        <footer>by spooky</footer>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-2.0.3.min.js"><\/script>')</script>

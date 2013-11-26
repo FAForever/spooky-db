@@ -20,7 +20,10 @@ app.config(['$routeProvider', function($routeProvider) {
 }]);
 
 app.factory('data', ['$http', function($http) {
-    return $http.get('/data/index.json');
+    return {
+        items: $http.get('/data/index.json'),
+        contenders: []
+    };
 }]);
 
 app.filter('name', function() {
@@ -48,7 +51,8 @@ app.directive('ngThumb', [function() {
         replace: true,
         templateUrl: 'thumb.html',
         scope: {
-            item: '=ngContent'
+            item: '=content',
+            click: '&'
         }
     }
 }]);
@@ -67,6 +71,8 @@ app.controller('HomeCtrl', ['$scope', 'data', function($scope, data) {
     $scope.factions = [];
     $scope.kinds = [];
     $scope.tech = [];
+
+    $scope.contenders = data.contenders;
 
     var toggleArray = function(arr, el) {
         var idx = arr.indexOf(el);
@@ -98,22 +104,32 @@ app.controller('HomeCtrl', ['$scope', 'data', function($scope, data) {
     $scope.techSelected = function(t) {
         return isInArray($scope.tech, t);
     };
+    $scope.compare = function(item) {
+        item.selected = !item.selected;
 
+        var idx = data.contenders.indexOf(item);
+        if (idx == -1)
+            data.contenders.push(item);
+        else
+            data.contenders.splice(idx, 1);
+    };
     $scope.strain = function(e) {
         return ($scope.factions.length == 0 || isInArray($scope.factions, e.faction))
                 && ($scope.kinds.length == 0 || isInArray($scope.kinds, e.classification))
                 && ($scope.tech.length == 0 || isInArray($scope.tech, e.tech));
     };
 
-    data.success(function(d) {
+    data.items.success(function(d) {
         $scope.index = d;
     });
 }]);
 app.controller('DetailsCtrl', ['$scope', '$routeParams', 'data', function($scope, $routeParams, data) {
-    data.success(function(d) {
+    data.items.success(function(d) {
         $scope.unit = _.where(d, { id: $routeParams.id })[0];
     });
 }]);
-app.controller('CompareCtrl', ['$scope', function($scope) {
+app.controller('CompareCtrl', ['$scope', 'data', function($scope, data) {
+
+    $scope.contenders = data.contenders;
 
 }]);
