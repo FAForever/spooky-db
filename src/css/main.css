@@ -223,6 +223,7 @@ h1.seraphim { background-image: url(../img/SC_Seraphim.jpg) }
 
 .details {
     padding: 5px;
+    margin-right: 1px;
 }
 .details header {
     padding: 0;
