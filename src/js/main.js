@@ -45,7 +45,7 @@ app.filter('icon', function() {
     }
 });
 
-app.directive('ngThumb', [function() {
+app.directive('thumb', [function() {
     return {
         restrict: 'E',
         replace: true,
@@ -56,13 +56,13 @@ app.directive('ngThumb', [function() {
         }
     }
 }]);
-app.directive('ngUnit', [function() {
+app.directive('unit', [function() {
     return {
         restrict: 'E',
         replace: true,
         templateUrl: 'unit.html',
         scope: {
-            item: '=ngContent'
+            item: '=content'
         }
     }
 }]);

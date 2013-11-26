@@ -119,8 +119,14 @@ body, input, button, textarea {
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Zeroes Three', 'Muli', Verdana, Arial, sans-serif;
 }
-a:focus, a:link, a:visited, a:hover, a:active {
+a {
+    text-decoration: none;
+}
+a:link, a:visited, a:active {
     color: #fff;
+}
+a:hover, a:focus {
+    color: rgb(253,160,5);
 }
 header, footer {
     padding: 5px;
@@ -160,6 +166,9 @@ footer {
     text-decoration: none;
     display: inline-block;
     padding: 3px 5px;
+}
+.filters header a:hover, .filters header a:focus, .filters header a:active {
+    color: #fff;
 }
 .filters a {
     display: block;
