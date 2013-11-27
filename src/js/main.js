@@ -1,3 +1,49 @@
+// decorator to make the unit object a bit more usable
+UnitDecorator = function(blueprint) {
+    var classification_lookup = {
+            'RULEUC_Engineer': 'Build',
+            'RULEUC_Commander': 'Build',
+            'RULEUMT_Amphibious': 'Land',
+            'RULEUC_MilitaryVehicle': 'Land',
+            'RULEUC_MilitaryAircraft': 'Air',
+            'RULEUC_MilitarySub': 'Naval',
+            'RULEUC_MilitaryShip': 'Naval',
+            'RULEUC_Weapon': 'Base',
+            'RULEUC_Sensor': 'Base',
+            'RULEUC_Factory': 'Base',
+            'RULEUC_Resource': 'Base',
+            'RULEUC_MiscSupport': 'Base',
+            'RULEUC_CounterMeasure': 'Base'
+        },
+        tech_lookup = {
+            'RULEUTL_Basic': 'T1',
+            'RULEUTL_Advanced': 'T2',
+            'RULEUTL_Secret': 'T3',
+            'RULEUTL_Experimental': 'TX',
+            'TECH1': 'T1',
+            'TECH2': 'T2',
+            'TECH3': 'T3',
+            'EXPERIMENTAL': 'TX',
+        },
+        getTech = function(bp) {
+            var x = _.intersection(bp.Categories, _.keys(tech_lookup));
+            return x.length == 1 ? tech_lookup[x[0]] : '?';
+        }
+        self = {
+            id: blueprint.Id,
+            name: blueprint.General.UnitName,
+            description: blueprint.Description,
+            faction: blueprint.General.FactionName,
+            classification: classification_lookup[blueprint.General.Classification],
+            tech: getTech(blueprint),
+            strategicIcon: blueprint.StrategicIconName,
+            icon: blueprint.General.Icon || '',
+            order: blueprint.BuildIconSortPriority || 1000
+        };
+
+    return _.extend(self, blueprint);
+}
+
 var app = angular.module('app', ['ngRoute', 'angular-underscore']);
 
 app.config(['$routeProvider', function($routeProvider) {
@@ -120,7 +166,9 @@ app.controller('HomeCtrl', ['$scope', 'data', function($scope, data) {
     };
 
     data.items.success(function(d) {
-        $scope.index = d;
+        $scope.index = _.map(d, function(u) {
+            return UnitDecorator(u);
+        });
     });
 }]);
 app.controller('DetailsCtrl', ['$scope', '$routeParams', 'data', function($scope, $routeParams, data) {
@@ -129,7 +177,5 @@ app.controller('DetailsCtrl', ['$scope', '$routeParams', 'data', function($scope
     });
 }]);
 app.controller('CompareCtrl', ['$scope', 'data', function($scope, data) {
-
     $scope.contenders = data.contenders;
-
 }]);
