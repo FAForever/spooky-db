@@ -173,7 +173,8 @@ app.controller('HomeCtrl', ['$scope', 'data', function($scope, data) {
 }]);
 app.controller('DetailsCtrl', ['$scope', '$routeParams', 'data', function($scope, $routeParams, data) {
     data.items.success(function(d) {
-        $scope.unit = _.where(d, { id: $routeParams.id })[0];
+        d = _.map(d, function(u) { return UnitDecorator(u); });
+        $scope.unit = _.findWhere(d, { id: $routeParams.id });
     });
 }]);
 app.controller('CompareCtrl', ['$scope', 'data', function($scope, data) {
