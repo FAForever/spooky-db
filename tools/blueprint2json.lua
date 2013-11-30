@@ -4,10 +4,16 @@ local os = require("os")
 local io = require("io")
 local json = require("json")
 
-if arg[1] == nil then
+function usage(msg)
     print(string.format("Usage: %s <file>.bp", arg[0]))
     print("Parse Supreme Commander blueprint file and dump it as JSON")
+    print()
+    print(msg)
     os.exit(-1)
+end
+
+if arg[1] == nil then
+    usage("Missing argument")
 end
 
 function UnitBlueprint(table)
@@ -34,11 +40,13 @@ function stripLoc(x)
     return x
 end
 
-local blueprint = loadstring("return " .. io.open(arg[1]):read("*a"))()
+local blueprint = io.open(arg[1]):read("*a")
 
 if blueprint == nil then
-    return 1
+    usage(string.format("Cannot read %s", arg[1]))
 end
+
+blueprint = loadstring("return " .. blueprint)()
 
 blueprint["Id"] = arg[1]:match "^.*/([A-Z0-9]+).*\.bp$"
 print(json.encode(stripLoc(blueprint)))
