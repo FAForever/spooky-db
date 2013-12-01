@@ -14,7 +14,7 @@ index()
         fi
 
         echo $JSON | json_reformat
-        [ "$#" -gt 1 ] && echo ,
+        [ "$#" -gt 0 ] && echo ,
     done
     echo ']'
 }
