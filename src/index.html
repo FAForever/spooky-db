@@ -36,8 +36,20 @@
                         <img ng-src="{{ item|pic }}" alt="{{ item|name }}" />
                         <img class="strategic" ng-src="{{ item|icon }}" alt="" />
                     </span>
-                    <h1>{{ item|name }}</h1>
+                    <h1>{{ item|name }}<small>{{ item.faction }}</small></h1>
                 </header>
+                <section>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td><img src="img/health.png" alt="health" />{{ item.Defense.Health }}</td>
+                                <td><img src="img/mass.png" alt="mass" />{{ item.Economy.BuildCostMass }}</td>
+                                <td><img src="img/energy.png" alt="energy" />{{ item.Economy.BuildCostEnergy }}</td>
+                                <td><img src="img/time.png" alt="time" />{{ item.Economy.BuildTime }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
             </article>
         </script>
 
