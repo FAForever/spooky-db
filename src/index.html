@@ -42,6 +42,7 @@
         </script>
 
         <script type="text/ng-template" id="home.html">
+            <!--header><h1>Forged Alliance Forever Unit Database</h1></header-->
             <section ng-repeat="f in index|pluck:'faction'|uniq" class="faction">
                 <h1 class="{{ f|lowercase }}">{{ f }}</h1>
                 <div class="kind" ng-repeat="c in ['Build', 'Base', 'Land', 'Air', 'Naval']">
@@ -70,6 +71,7 @@
                     </a>
                 </p>
             </aside>
+            <footer><span>unit count: {{ index.length }}</span> | <a href="https://github.com/spooky/unitdb/issues">issues</a> | <a href="https://github.com/spooky/unitdb">source</a></footer>
         </script>
 
         <script type="text/ng-template" id="details.html">
@@ -86,9 +88,7 @@
             </aside>
         </script>
 
-        <!--header><h1>Forged Alliance Forever Unit Database</h1></header-->
         <ng-view></ng-view>
-        <footer><a href="https://github.com/spooky/unitdb/issues">issues</a> | <a href="https://github.com/spooky/unitdb">source</a></footer>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-2.0.3.min.js"><\/script>')</script>
