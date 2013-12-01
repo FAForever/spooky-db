@@ -4,11 +4,16 @@ index()
 {
     echo -n '['
     while [ "$#" -gt 0 ]; do
-        lua ./blueprint2json.lua $1 2> /dev/null
+        JSON=`lua ./blueprint2json.lua $1 2> /dev/null`
         ok=$?
         shift
 
-        [ $ok -eq 0 ] || continue
+        if [ $ok -ne 0 ]; then
+            echo "FAIL: $1"
+            exit 1
+        fi
+
+        echo $JSON | json_reformat
         [ "$#" -gt 1 ] && echo ,
     done
     echo ']'
@@ -19,4 +24,4 @@ if [ ! -d "$1" ]; then
     exit 1
 fi
 
-index $1/**/*.bp | json_reformat
+index $1/**/*.bp
