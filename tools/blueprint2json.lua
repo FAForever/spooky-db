@@ -16,14 +16,20 @@ if arg[1] == nil then
     usage("Missing argument")
 end
 
+-- this is the main function that's called in
+-- blueprint code
 function UnitBlueprint(table)
     return table
 end
 
+-- this is a function used in some blueprints,
+-- we need it in order to evaluate blueprint code
 function Sound(table)
     return table
 end
 
+-- strip '<LOC...>' prefixes found in some string
+-- values
 function stripLoc(x)
     if type(x) == "table" then
         local r = {}
