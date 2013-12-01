@@ -46,7 +46,20 @@ if blueprint == nil then
     usage(string.format("Cannot read %s", arg[1]))
 end
 
-blueprint = loadstring("return " .. blueprint)()
+-- for some reason, blueprints use different comment
+-- syntax than Lua
+blueprint = blueprint:gsub('#','--')
 
+blueprint, err = loadstring("return " .. blueprint)
+
+-- print parse errors
+if blueprint == nil then
+    print(err)
+    os.exit(-1)
+end
+
+-- evaluate the blueprint and add "Id" key to it
+blueprint = blueprint()
 blueprint["Id"] = arg[1]:match "^.*/([A-Z0-9]+).*\\.bp$"
+
 print(json.encode(stripLoc(blueprint)))
