@@ -1,7 +1,8 @@
 * unit details
 * add a persistent url for unit comparison
-* ctrl + click on thumb navigates to unit details instead of adding to compare list
+* performance
 * turn the filters into a directive and place it on unit compare screen as well
+* ctrl + click on thumb navigates to unit details instead of adding to compare list
 * hotkeys: 
     # focus input
     # go to compare
