@@ -66,6 +66,6 @@ end
 
 -- evaluate the blueprint and add "Id" key to it
 blueprint = blueprint()
-blueprint["Id"] = arg[1]:match "^.*/([A-Z0-9]+).*\\.bp$"
+blueprint["Id"] = arg[1]:match "^.*/([A-Z0-9]+).*.bp$"
 
 print(json.encode(stripLoc(blueprint)))
