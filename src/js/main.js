@@ -27,7 +27,7 @@ UnitDecorator = function(blueprint) {
         },
         getTech = function(bp) {
             var x = _.intersection(bp.Categories, _.keys(tech_lookup));
-            return x.length == 1 ? tech_lookup[x[0]] : '?';
+            return x.length == 1 ? tech_lookup[x[0]] : '';
         }
         self = {
             id: blueprint.Id,
