@@ -1,3 +1,4 @@
+# now obsolete - use blueprint2json.lua along with sorter.py to generate index.json
 import os
 import re
 import glob
