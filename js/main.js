@@ -63,7 +63,7 @@ app.config(['$routeProvider', function($routeProvider) {
 
 app.factory('data', ['$http', function($http) {
     return {
-        items: $http.get('/data/index.json'),
+        items: $http.get('data/index.json'),
         contenders: []
     };
 }]);
