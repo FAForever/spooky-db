@@ -23,7 +23,7 @@
 
         <script type="text/ng-template" id="thumb.html">
             <a class="thumb {{  item.faction|lowercase }}" ng-class="{selected: item.selected}" title="{{ item|name }}" ng-click="click()">
-                <!--img ng-src="/img/units/unknown.png" alt="{{ item|name }}" /-->
+                <!--img ng-src="img/units/unknown.png" alt="{{ item|name }}" /-->
                 <img ng-src="{{ item|pic }}" alt="{{ item|name }}" />
                 <img class="strategic" ng-src="{{ item|icon }}" alt="" />
             </a>
@@ -69,17 +69,17 @@
                 <input type="text" placeholder="filter" autofocus ng-model="expr" /><br />
                 <p>
                     <a ng-repeat="f in ['UEF', 'Cybran', 'Aeon', 'Seraphim']" title="{{ f }}" ng-click="toggleFaction(f)" ng-class="{active: factionSelected(f)}">
-                        <img ng-src="/img/{{ f }}.png" alt="{{ f }}" />
+                        <img ng-src="img/{{ f }}.png" alt="{{ f }}" />
                     </a>
                 </p>
                 <p>
                     <a ng-repeat="k in ['Land', 'Air', 'Naval', 'Base']" title="{{ k }}" ng-click="toggleKind(k)" ng-class="{active: kindSelected(k)}">
-                        <img ng-src="/img/{{ k }}.png" alt="{{ k }}" />
+                        <img ng-src="img/{{ k }}.png" alt="{{ k }}" />
                     </a>
                 </p>
                 <p>
                     <a ng-repeat="t in ['T1', 'T2', 'T3', 'TX']" title="{{ t }}" ng-click="toggleTech(t)" ng-class="{active: techSelected(t)}">
-                        <img ng-src="/img/{{ t }}.png" alt="{{ t }}" />
+                        <img ng-src="img/{{ t }}.png" alt="{{ t }}" />
                     </a>
                 </p>
             </aside>
