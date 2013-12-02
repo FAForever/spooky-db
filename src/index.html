@@ -64,7 +64,7 @@
             <aside class="filters">
                 <header>
                     {{ contenders.length }} selected
-                    <a href="#/compare">compare</a>
+                    <a href="#/{{ contenders.join(',') }}">compare</a>
                 </header>
                 <input type="text" placeholder="filter" autofocus ng-model="expr" /><br />
                 <p>
@@ -84,12 +84,6 @@
                 </p>
             </aside>
             <footer><span>unit count: {{ index.length }}</span> | <a href="https://github.com/spooky/unitdb/issues">issues</a> | <a href="https://github.com/spooky/unitdb">source</a></footer>
-        </script>
-
-        <script type="text/ng-template" id="details.html">
-            <section>
-                <unit content="unit"></ng-unit>
-            </section>
         </script>
 
         <script type="text/ng-template" id="compare.html">

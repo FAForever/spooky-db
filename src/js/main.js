@@ -52,13 +52,9 @@ app.config(['$routeProvider', function($routeProvider) {
             controller: 'HomeCtrl',
             templateUrl: 'home.html'
         })
-        .when('/compare', {
+        .when('/:ids', {
             controller: 'CompareCtrl',
             templateUrl: 'compare.html'
-        })
-        .when('/:id', {
-            controller: 'DetailsCtrl',
-            templateUrl: 'details.html'
         })
         .otherwise({
             templateUrl: '404.html'
@@ -153,9 +149,9 @@ app.controller('HomeCtrl', ['$scope', 'data', function($scope, data) {
     $scope.compare = function(item) {
         item.selected = !item.selected;
 
-        var idx = data.contenders.indexOf(item);
+        var idx = data.contenders.indexOf(item.id);
         if (idx == -1)
-            data.contenders.push(item);
+            data.contenders.push(item.id);
         else
             data.contenders.splice(idx, 1);
     };
@@ -171,12 +167,14 @@ app.controller('HomeCtrl', ['$scope', 'data', function($scope, data) {
         });
     });
 }]);
-app.controller('DetailsCtrl', ['$scope', '$routeParams', 'data', function($scope, $routeParams, data) {
+app.controller('CompareCtrl', ['$scope', '$routeParams', 'data', function($scope, $routeParams, data) {
+    ids = $routeParams.ids.split(',');
+
     data.items.success(function(d) {
         d = _.map(d, function(u) { return UnitDecorator(u); });
-        $scope.unit = _.findWhere(d, { id: $routeParams.id });
+        $scope.contenders = _.sortBy(
+            _.filter(d, function(x) { return _.contains(ids, x.id); }), 
+            function(x) { return ids.indexOf(x.id); }
+        );
     });
-}]);
-app.controller('CompareCtrl', ['$scope', 'data', function($scope, data) {
-    $scope.contenders = data.contenders;
 }]);
