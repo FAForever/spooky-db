@@ -87,9 +87,9 @@ def sort(units):
     units.sort(key=sort_key)
     print('sorted')
 
-def save(units, path):
+def save(units, path, debug=False):
     out = open(path, 'w+')
-    json.dump(units, out, indent=2)
+    json.dump(units, out, indent=(2 if debug else None))
     print('saved to {0}'.format(path))
 
 def run(path):
