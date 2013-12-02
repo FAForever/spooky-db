@@ -1,3 +1,4 @@
+* load the unit index only once (before bootsrapping ng-app)
 * unit details
 * performance
 * turn the filters into a directive and place it on unit compare screen as well
