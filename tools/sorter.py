@@ -47,12 +47,11 @@ def sort(units):
         }[val]
 
     def get_tech(u):
-        # first check if there's a TECH{} or EXPERIMENTAL in the bp (usually in the categories) of not, then check the TechLevel
         possible_tech_values = ['TECH1', 'TECH2', 'TECH3', 'EXPERIMENTAL', 'RULEUTL_Basic', 'RULEUTL_Advanced', 'RULEUTL_Secret', 'RULEUTL_Experimental']
         unit_values = u['Categories'] + [u['General']['TechLevel']]
 
         intersection = list(set(possible_tech_values).intersection(unit_values))
-        intersection.sort(key=tech_key, reverse=True)
+        intersection.sort(key=tech_key)
 
         return tech_lookup[intersection[0] if len(intersection) > 0 else None]
 
@@ -73,8 +72,15 @@ def sort(units):
 
         faction_key =  10000*faction_order[u['General']['FactionName']]
         tech_key = 1000*(tech_order[get_tech(u)] if get_tech(u) else 1)
-        priority_key = u['BuildIconSortPriority'] if 'BuildIconSortPriority' in u else 1000
-        command_key = 1000 if u['General']['Category'] == 'Command' or 'COMMAND' in u['Categories'] else 0
+        priority_key = u['BuildIconSortPriority'] if 'BuildIconSortPriority' in u else 100
+        command_key = 11 if u['General']['Category'] == 'Command' or 'COMMAND' in u['Categories'] else 0
+
+        # print('-{0}--------------------'.format(u['Id']))
+        # print(faction_key)
+        # print(tech_key)
+        # print(priority_key)
+        # print(command_key)
+        # print(faction_key + tech_key + priority_key + command_key)
 
         return faction_key + tech_key + priority_key + command_key
 
