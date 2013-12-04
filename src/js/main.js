@@ -71,7 +71,7 @@ app.factory('data', ['$http', function($http) {
 app.filter('name', function() {
     return function(item) {
         if (!item) return;
-        return (item.name ? item.name + ': ' : '') + item.tech + ' ' + item.description;
+        return (item.name ? item.name + ': ' : '') + (item.tech == 'TX' ? ' ' : item.tech + ' ') + item.description;
     }
 });
 app.filter('pic', function() {
