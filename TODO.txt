@@ -1,4 +1,5 @@
 TODO:
+    * check for aeon experimental resource generator and cybran missle defense
     * load the unit index only once (before bootsrapping ng-app)
     * unit details
     * performance
