@@ -51,22 +51,12 @@ unitDb.controllers = {
                     && ($scope.tech.length == 0 || isInArray($scope.tech, e.tech));
         };
 
-        data.items.success(function(d) {
-            $scope.index = _.map(d, function(u) {
-                return unitDb.UnitDecorator(u);
-            });
-        });
+        $scope.index = data.items;
     }],
 
     compareCtrl: ['$scope', '$routeParams', 'data', function($scope, $routeParams, data) {
         ids = $routeParams.ids.split(',');
-
-        data.items.success(function(d) {
-            d = _.map(d, function(u) { return unitDb.UnitDecorator(u); });
-            $scope.contenders = _.sortBy(
-                _.filter(d, function(x) { return _.contains(ids, x.id); }), 
-                function(x) { return ids.indexOf(x.id); }
-            );
-        });
+        $scope.contenders = _.sortBy(_.filter(data.items, function(x) { return _.contains(ids, x.id); }), 
+                                    function(x) { return ids.indexOf(x.id); });
     }]
 };

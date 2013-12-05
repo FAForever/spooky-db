@@ -26,7 +26,11 @@ var unitDb = function() {
             }]);
 
             // services
-            app.factory('data', unitDb.services.data);
+            app.provider('data', unitDb.services.dataProvider);
+            app.config(['dataProvider', function(dataProvider) {
+                if (!payload) throw 'need unit data!';
+                dataProvider.setIndex(payload);
+            }]);
 
             // filters
             angular.forEach(unitDb.filters, function(v, k) { app.filter(k, v); })
@@ -41,7 +45,7 @@ var unitDb = function() {
     return {
         start: start
     }
-}()
+}();
 
 // decorator to make the unit object a bit more usable
 unitDb.UnitDecorator = function(blueprint) {
