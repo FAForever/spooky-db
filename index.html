@@ -111,7 +111,7 @@
         <script src="js/controllers.js"></script>
         <script>
             $.get('data/index.json', function(index){
-                unitDb.start('unitDb', JSON.parse(index));
+                unitDb.start('unitDb', index);
             });
         </script>
         <script>
