@@ -1,6 +1,5 @@
 TODO:
     * check for aeon experimental resource generator (XAB1401) and cybran missle defense (URB4302)
-    * load the unit index only once (before bootsrapping ng-app)
     * unit details
     * performance
     * turn the filters into a directive and place it on unit compare screen as well
