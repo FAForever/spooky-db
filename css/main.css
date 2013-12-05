@@ -108,8 +108,7 @@ textarea {
 
 }
 body {
-    background: #000 url(../img/background.jpg) no-repeat 0 0;
-    background-size: cover;
+    background: #222 fixed url(../img/background.jpg) no-repeat 0 0 / cover;
     color: #fff;
     padding: 3px;
 }
