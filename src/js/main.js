@@ -23,7 +23,7 @@ UnitDecorator = function(blueprint) {
             'TECH1': 'T1',
             'TECH2': 'T2',
             'TECH3': 'T3',
-            'EXPERIMENTAL': 'TX',
+            'EXPERIMENTAL': 'EXP',
         },
         getTech = function(bp) {
             var x = _.intersection(bp.Categories, _.keys(tech_lookup));
