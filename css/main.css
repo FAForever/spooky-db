@@ -289,6 +289,8 @@ h1.seraphim { background-image: url(../img/SC_Seraphim.jpg) }
     body {
         margin-top: 51px;
         background-image: url(../img/background_small.jpg);
+        background-position: right top;
+        background-size: auto;
     }
     .filters {
         position: absolute;
