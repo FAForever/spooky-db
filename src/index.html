@@ -64,10 +64,10 @@
             </section>
             <aside class="filters">
                 <header>
-                    {{ contenders.length }} selected<br />
-                    <a href="#/{{ contenders.join(',') }}">compare</a>
+                    <span class="count" title="{{ contenders.length }} selected">{{ contenders.length }}</span>
+                    <a href="#/{{ contenders.join(',') }}" title="compare">compare</a>
                 </header>
-                <input type="text" placeholder="filter" autofocus ng-model="expr" /><br />
+                <input type="text" placeholder="filter" autofocus ng-model="expr" />
                 <p>
                     <a ng-repeat="f in ['UEF', 'Cybran', 'Aeon', 'Seraphim']" title="{{ f }}" ng-click="toggleFaction(f)" ng-class="{active: factionSelected(f)}">
                         <img ng-src="img/{{ f }}.png" alt="{{ f }}" />
