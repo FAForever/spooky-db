@@ -107,8 +107,12 @@ textarea {
     font-style: normal;
 
 }
+html {
+    background-color: #222;
+}
 body {
-    background: #222 fixed url(../img/background.jpg) no-repeat 0 0 / cover;
+    background: #222 fixed url(../img/background.jpg) no-repeat 0 0;
+    background-size: cover;
     color: #fff;
     padding: 3px;
 }
