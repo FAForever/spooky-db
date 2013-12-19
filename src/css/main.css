@@ -340,7 +340,7 @@ h1.seraphim { background-image: url(../img/SC_Seraphim.jpg) }
 }
 
 /* 2 line horizontal filter */
-@media only screen and (max-width: 1014px) {
+@media only screen and (max-width: 1031px) {
     body {
         margin-top: 99px;
     }
@@ -353,7 +353,7 @@ h1.seraphim { background-image: url(../img/SC_Seraphim.jpg) }
 }
 
 /* 3 line horizontal filter */
-@media only screen and (max-width: 779px) {
+@media only screen and (max-width: 796px) {
     body {
         margin-top: 146px;
     }
@@ -379,7 +379,7 @@ h1.seraphim { background-image: url(../img/SC_Seraphim.jpg) }
 }
 
 /* 5 line horizontal filter */
-@media only screen and (max-width: 613px) {
+@media only screen and (max-width: 630px) {
     body {
         margin-top: 242px;
     }
@@ -401,6 +401,9 @@ h1.seraphim { background-image: url(../img/SC_Seraphim.jpg) }
 @media only screen and (max-width: 450px) {
     .filters input {
         width: 200px;
+    }
+    .filters p {
+        white-space: nowrap;
     }
     .faction {
         width: 100%;
