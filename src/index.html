@@ -23,9 +23,9 @@
         <![endif]-->
 
         <script type="text/ng-template" id="thumb.html">
-            <a class="thumb {{  item.faction|lowercase }}" ng-class="{selected: item.selected}" title="{{ item|name }}" ng-click="click()">
-                <!--img ng-src="img/units/unknown.png" alt="{{ item|name }}" /-->
-                <img ng-src="{{ item|pic }}" alt="{{ item|name }}" />
+            <a class="thumb {{  item.faction|lowercase }}" ng-class="{selected: item.selected}" title="{{ item.fullName() }}" ng-click="click()">
+                <!--img ng-src="img/units/unknown.png" alt="{{ item.fullName() }}" /-->
+                <img ng-src="{{ item|pic }}" alt="{{ item.fullName() }}" />
                 <img class="strategic" ng-src="{{ item|icon }}" alt="" />
             </a>
         </script>
@@ -33,11 +33,11 @@
         <script type="text/ng-template" id="unit.html">
             <article class="details faction {{ item.faction|lowercase }}">
                 <header>
-                    <span class="thumb" title="{{ item|name }}">
-                        <img ng-src="{{ item|pic }}" alt="{{ item|name }}" />
+                    <span class="thumb" title="{{ item.fullName() }}">
+                        <img ng-src="{{ item|pic }}" alt="{{ item.fullName() }}" />
                         <img class="strategic" ng-src="{{ item|icon }}" alt="" />
                     </span>
-                    <h1>{{ item|name }}<small>{{ item.faction }}</small></h1>
+                    <h1>{{ item.fullName() }}<small> {{ item.faction }}</small></h1>
                 </header>
                 <section>
                     <table>
