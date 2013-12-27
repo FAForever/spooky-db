@@ -243,6 +243,9 @@ h1.seraphim { background-image: url(../img/SC_Seraphim.jpg) }
 .details table {
     width: 100%;
 }
+.details table td {
+    vertical-align: top;
+}
 .details .thumb {
     float: left;
     margin-right: 1em;
