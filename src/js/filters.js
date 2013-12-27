@@ -21,7 +21,7 @@ unitDb.filters = {
 
     flatten: function() {
         return function(item) {
-            var separator = ', ';
+            var separator = '<br/> ';
 
             if(angular.isArray(item)) {
                 return item.join(separator)

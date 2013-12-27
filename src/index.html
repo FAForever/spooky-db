@@ -50,12 +50,21 @@
                             </tr>
                             <tr>
                                 <td>Abilities</td>
-                                <td colspan="3">{{ item.Display.Abilities|flatten }}</td>
+                                <td colspan="3" ng-bind-html="item.Display.Abilities|flatten|unsafe"></td>
                             </tr>
                             <tr>
                                 <td>Intel</td>
-                                <td colspan="3">{{ item.Intel|flatten }}</td>
+                                <td colspan="3" ng-bind-html="item.Intel|flatten|unsafe"></td>
                             </tr>
+                            <tr>
+                                <td>Physics</td>
+                                <td colspan="3" ng-bind-html="item.Physics|pick:'MaxSpeed':'TurnRate'|flatten|unsafe"></td>
+                            </tr>
+                            <tr>
+                                <td>Wreckage</td>
+                                <td colspan="3" ng-bind-html="item.Wreckage|pick:'HealthMult':'MassMult'|flatten|unsafe"></td>
+                            </tr>
+
                         </tbody>
                     </table>
                 </section>
