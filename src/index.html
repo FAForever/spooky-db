@@ -43,10 +43,18 @@
                     <table>
                         <tbody>
                             <tr>
-                                <td><img src="img/health.png" alt="health" />{{ item.Defense.Health }}</td>
+                                <td><img src="img/health.png" alt="health" />{{ item.Defense.Health }}&nbsp;({{ item.Defense.RegenRate }}hp/s)</td>
                                 <td><img src="img/mass.png" alt="mass" />{{ item.Economy.BuildCostMass }}</td>
                                 <td><img src="img/energy.png" alt="energy" />{{ item.Economy.BuildCostEnergy }}</td>
                                 <td><img src="img/time.png" alt="time" />{{ item.Economy.BuildTime }}</td>
+                            </tr>
+                            <tr>
+                                <td>Abilities</td>
+                                <td colspan="3">{{ item.Display.Abilities|flatten }}</td>
+                            </tr>
+                            <tr>
+                                <td>Intel</td>
+                                <td colspan="3">{{ item.Intel|flatten }}</td>
                             </tr>
                         </tbody>
                     </table>
@@ -101,6 +109,7 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-2.0.3.min.js"><\/script>')</script>
         <script src="js/vendor/angular.js"></script>
         <script src="js/vendor/angular-route.js"></script>
+        <script src="js/vendor/angular-sanitize.js"></script>
         <script src="js/vendor/underscore.js"></script>
         <script src="js/vendor/angular-underscore.js"></script>
         <script src="js/plugins.js"></script>
