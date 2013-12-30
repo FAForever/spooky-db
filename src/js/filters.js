@@ -29,6 +29,8 @@ unitDb.filters = {
 
             if (angular.isObject(item)) {
                 return _.map(item, function(v, k) {
+                    if (angular.isObject(v)) return;
+
                     return k + (v === true ? '' :  ': ' + v)
                 }).join(separator)
             }
