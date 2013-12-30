@@ -23,9 +23,9 @@
         <![endif]-->
 
         <script type="text/ng-template" id="thumb.html">
-            <a class="thumb {{  item.faction|lowercase }}" ng-class="{selected: item.selected}" title="{{ item|name }}" ng-click="click()">
-                <!--img ng-src="img/units/unknown.png" alt="{{ item|name }}" /-->
-                <img ng-src="{{ item|pic }}" alt="{{ item|name }}" />
+            <a class="thumb {{  item.faction|lowercase }}" ng-class="{selected: item.selected}" title="{{ item.fullName() }}" ng-click="click()">
+                <!--img ng-src="img/units/unknown.png" alt="{{ item.fullName() }}" /-->
+                <img ng-src="{{ item|pic }}" alt="{{ item.fullName() }}" />
                 <img class="strategic" ng-src="{{ item|icon }}" alt="" />
             </a>
         </script>
@@ -33,21 +33,38 @@
         <script type="text/ng-template" id="unit.html">
             <article class="details faction {{ item.faction|lowercase }}">
                 <header>
-                    <span class="thumb" title="{{ item|name }}">
-                        <img ng-src="{{ item|pic }}" alt="{{ item|name }}" />
+                    <span class="thumb" title="{{ item.fullName() }}">
+                        <img ng-src="{{ item|pic }}" alt="{{ item.fullName() }}" />
                         <img class="strategic" ng-src="{{ item|icon }}" alt="" />
                     </span>
-                    <h1>{{ item|name }}<small>{{ item.faction }}</small></h1>
+                    <h1>{{ item.fullName() }}<small> {{ item.faction }}</small></h1>
                 </header>
                 <section>
                     <table>
                         <tbody>
                             <tr>
-                                <td><img src="img/health.png" alt="health" />{{ item.Defense.Health }}</td>
+                                <td><img src="img/health.png" alt="health" />{{ item.Defense.Health }}&nbsp;({{ item.Defense.RegenRate }}hp/s)</td>
                                 <td><img src="img/mass.png" alt="mass" />{{ item.Economy.BuildCostMass }}</td>
                                 <td><img src="img/energy.png" alt="energy" />{{ item.Economy.BuildCostEnergy }}</td>
                                 <td><img src="img/time.png" alt="time" />{{ item.Economy.BuildTime }}</td>
                             </tr>
+                            <tr>
+                                <td>Abilities</td>
+                                <td colspan="3" ng-bind-html="item.Display.Abilities|flatten|unsafe"></td>
+                            </tr>
+                            <tr>
+                                <td>Intel</td>
+                                <td colspan="3" ng-bind-html="item.Intel|flatten|unsafe"></td>
+                            </tr>
+                            <tr>
+                                <td>Physics</td>
+                                <td colspan="3" ng-bind-html="item.Physics|pick:'MaxSpeed':'TurnRate'|flatten|unsafe"></td>
+                            </tr>
+                            <tr>
+                                <td>Wreckage</td>
+                                <td colspan="3" ng-bind-html="item.Wreckage|pick:'HealthMult':'MassMult'|flatten|unsafe"></td>
+                            </tr>
+
                         </tbody>
                     </table>
                 </section>
@@ -101,6 +118,7 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-2.0.3.min.js"><\/script>')</script>
         <script src="js/vendor/angular.js"></script>
         <script src="js/vendor/angular-route.js"></script>
+        <script src="js/vendor/angular-sanitize.js"></script>
         <script src="js/vendor/underscore.js"></script>
         <script src="js/vendor/angular-underscore.js"></script>
         <script src="js/plugins.js"></script>

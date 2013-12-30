@@ -7,7 +7,7 @@ var unitDb = function() {
             return module;
         },
         init = function(appName, payload) {
-            var app = angular.module(appName, ['ngRoute', 'angular-underscore']);
+            var app = angular.module(appName, ['ngRoute', 'ngSanitize', 'angular-underscore']);
 
             // routing
             app.config(['$routeProvider', function($routeProvider) {
@@ -77,7 +77,10 @@ unitDb.UnitDecorator = function(blueprint) {
         getTech = function(bp) {
             var x = _.intersection(bp.Categories, _.keys(tech_lookup));
             return x.length == 1 ? tech_lookup[x[0]] : '';
-        }
+        },
+        fullName = function() {
+            return (this.name ? this.name + ': ' : '') + (this.tech == 'EXP' ? '' : this.tech + ' ') + this.description;
+        };
         self = {
             id: blueprint.Id,
             name: blueprint.General.UnitName,
@@ -87,8 +90,15 @@ unitDb.UnitDecorator = function(blueprint) {
             tech: getTech(blueprint),
             strategicIcon: blueprint.StrategicIconName,
             icon: blueprint.General.Icon || '',
-            order: blueprint.BuildIconSortPriority || 1000
+            order: blueprint.BuildIconSortPriority || 1000,
+            fullName: fullName
         };
 
     return _.extend(self, blueprint);
+}
+
+unitDb.GeneralPropertiesDecorator = function(blueprint) {
+
+
+
 }
