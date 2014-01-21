@@ -37,5 +37,20 @@ unitDb.filters = {
 
             return item;
         }
+    },
+
+    time: function() {
+        return function(item) {
+            function padTime(val) {
+                return ("00"+val).slice(-2);
+            }
+            return Math.floor((item%3600)/60) + ":" + padTime(Math.floor((item%3600)%60));
+        }
+    },
+
+    round: function() {
+        return function(item) {
+            return Math.round(item);
+        }
     }
 };
