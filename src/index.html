@@ -43,10 +43,10 @@
                     <table>
                         <tbody>
                             <tr>
-                                <td><img src="img/health.png" alt="health" />{{ item.Defense.Health }}&nbsp;({{ item.Defense.RegenRate }}hp/s)</td>
+                                <td><img src="img/health.png" alt="health" />{{ item.Defense.Health }}<small ng-if="item.Defense.RegenRate">&nbsp;({{ item.Defense.RegenRate }}hp/s)</small></td>
                                 <td><img src="img/mass.png" alt="mass" />{{ item.Economy.BuildCostMass }}</td>
                                 <td><img src="img/energy.png" alt="energy" />{{ item.Economy.BuildCostEnergy }}</td>
-                                <td><img src="img/time.png" alt="time" />{{ item.Economy.BuildTime/20 | time }}</td>
+                                <td><img src="img/time.png" alt="time" />{{ item.Economy.BuildTime }}</td>
                             </tr>
 
                             <!-- Abilities -->
@@ -73,15 +73,15 @@
                             </tr>
 
                             <!-- Physics -->
-                            <tr class="sec">
+                            <tr ng-if="item.Physics.MaxSpeed" class="sec">
                                 <td>Physics</td>
                                 <td colspan="2">Max speed:</td>
-                                <td>{{ item.Physics.MaxSpeed | number:0 }}</td>
+                                <td>{{ item.Physics.MaxSpeed }}</td>
                             </tr>
-                            <tr>
+                            <tr ng-if="item.Physics.TurnRate">
                                 <td></td>
                                 <td colspan="2">Turn rate:</td>
-                                <td>{{ item.Physics.TurnRate | number:0 }}</td>
+                                <td>{{ item.Physics.TurnRate }}</td>
                             </tr>
                             <tr ng-if="item.Physics.FuelUseTime">
                                 <td></td>
@@ -95,7 +95,7 @@
                             </tr>
 
                             <!-- Air Physics -->
-                            <tr class="sec" ng-if="item.Air.MinAirspeed">
+                            <tr ng-if="item.Air.MinAirspeed" class="sec">
                                 <td>Air Physics:</td>
                                 <td colspan="2">Speed:</td>
                                 <td>{{ item.Air.MinAirspeed }}-{{ item.Air.MaxAirspeed }}</td>
@@ -122,15 +122,15 @@
                             </tr>
 
                             <!-- Wreckage -->
-                            <tr class="sec">
+                            <tr ng-if="item.Wreckage.HealthMult" class="sec">
                                 <td>Wreckage</td>
                                 <td colspan="2">Health:</td>
-                                <td>{{ item.Wreckage.HealthMult*item.Defense.Health | number:0 }}</td>
+                                <td>{{ item.Wreckage.HealthMult*item.Defense.Health | round }}</td>
                             </tr>
-                            <tr>
+                            <tr ng-if="item.Wreckage.MassMult">
                                 <td></td>
                                 <td colspan="2">Mass:</td>
-                                <td>{{ item.Wreckage.MassMult*item.Economy.BuildCostMass | number:0 }}</td>
+                                <td>{{ item.Wreckage.MassMult*item.Economy.BuildCostMass | round }}</td>
                             </tr>
 
                             <!-- Weapons -->
