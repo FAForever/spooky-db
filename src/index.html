@@ -49,6 +49,23 @@
                                 <td><img src="img/time.png" alt="time" />{{ item.Economy.BuildTime }}</td>
                             </tr>
 
+                            <!-- Economy -->
+                            <tr class="sec" ng-if="item.Economy.StorageEnergy">
+                                <td>Economy</td>
+                                <td colspan="2">Storage energy</td>
+                                <td>{{ item.Economy.StorageEnergy }}</td>
+                            </tr>
+                            <tr ng-if="item.Economy.StorageMass">
+                                <td ng-class="{ invisible: item.Economy.StorageEnergy }">Economy</td>
+                                <td colspan="2">Storage mass</td>
+                                <td>{{ item.Economy.StorageMass }}</td>
+                            </tr>
+                            <tr ng-if="item.Economy.StorageMass">
+                                <td ng-class="{ invisible: item.Economy.StorageEnergy || item.Economy.StorageMass }">Economy</td>
+                                <td colspan="2">Build rate</td>
+                                <td>{{ item.Economy.BuildRate }}</td>
+                            </tr>
+
                             <!-- Abilities -->
                             <tr class="sec">
                                 <td>Abilities</td>
@@ -176,7 +193,7 @@
                     </a>
                 </p>
             </aside>
-            <footer><span>unit count: {{ index.length }}</span> | <a href="https://github.com/spooky/unitdb/issues">issues</a> | <a href="https://github.com/spooky/unitdb">source</a></footer>
+            <footer><span>last update: 04-02-2014</span> | <span>unit count: {{ index.length }}</span> | <a href="https://github.com/spooky/unitdb/issues">issues</a> | <a href="https://github.com/spooky/unitdb">source</a></footer>
         </script>
 
         <script type="text/ng-template" id="compare.html">
