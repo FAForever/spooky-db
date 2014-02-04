@@ -50,7 +50,7 @@
                             </tr>
 
                             <!-- Economy -->
-                            <tr class="sec" ng-if="item.Economy.StorageEnergy">
+                            <tr ng-if="item.Economy.StorageEnergy" class="sec">
                                 <td>Economy</td>
                                 <td colspan="2">Storage energy</td>
                                 <td>{{ item.Economy.StorageEnergy }}</td>
@@ -150,6 +150,14 @@
                                 <td>{{ item.Wreckage.MassMult*item.Economy.BuildCostMass | round }}</td>
                             </tr>
 
+                            <!-- Veterancy -->
+                            <tr ng-if="item.Veteran" ng-repeat="lv in [1,2,3,4,5]" class="sec">
+                                <td ng-class="{ invisible: !$first }">Veterancy</td>
+                                <td title="kills"><small>{{ item.Veteran['Level'+lv] }}</small></td>
+                                <td title="health"><small>{{ item.Defense.Health * lv * 1.1 | round }}hp</small></td>
+                                <td title="regeneration rate"><small>{{ item.Defense.RegenRate + item.Buffs.Regen['Level'+lv] }}hp/s</small></td>
+                            </tr>
+
                             <!-- Weapons -->
                             <!--tr class="sec">
                                 <td>Weapons</td>
@@ -219,7 +227,7 @@
         <script src="js/filters.js"></script>
         <script src="js/directives.js"></script>
         <script src="js/controllers.js"></script>
-        <script>$.get(window.location.hostname == 'localhost' ? 'data/index.dev.json' : 'data/index.json', function(d){unitDb.start('unitDb', typeof d == 'string' ? JSON.parse(d) : d)});</script>
+        <script>$.get(window.location.hostname == 'localhost' && !window.location.search.contains("all") ? 'data/index.dev.json' : 'data/index.json', function(d){unitDb.start('unitDb', typeof d == 'string' ? JSON.parse(d) : d)});</script>
         <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
