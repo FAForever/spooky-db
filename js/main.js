@@ -96,9 +96,3 @@ unitDb.UnitDecorator = function(blueprint) {
 
     return _.extend(self, blueprint);
 }
-
-unitDb.GeneralPropertiesDecorator = function(blueprint) {
-
-
-
-}
