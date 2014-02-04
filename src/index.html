@@ -50,20 +50,10 @@
                             </tr>
 
                             <!-- Economy -->
-                            <tr ng-if="item.Economy.StorageEnergy" class="sec">
-                                <td>Economy</td>
-                                <td colspan="2">Storage energy</td>
-                                <td>{{ item.Economy.StorageEnergy }}</td>
-                            </tr>
-                            <tr ng-if="item.Economy.StorageMass">
-                                <td ng-class="{ invisible: item.Economy.StorageEnergy }">Economy</td>
-                                <td colspan="2">Storage mass</td>
-                                <td>{{ item.Economy.StorageMass }}</td>
-                            </tr>
-                            <tr ng-if="item.Economy.StorageMass">
-                                <td ng-class="{ invisible: item.Economy.StorageEnergy || item.Economy.StorageMass }">Economy</td>
-                                <td colspan="2">Build rate</td>
-                                <td>{{ item.Economy.BuildRate }}</td>
+                            <tr ng-repeat="(k, v) in item.Economy | pick: ['BuildRate', 'StorageMass', 'StorageEnergy', 'ProductionPerSecondMass', 'ProductionPerSecondEnergy', 'MaintenanceConsumptionPerSecondEnergy']" ng-class="{ sec: $first }">
+                                <td ng-class="{ invisible: !$first }">Economy</td>
+                                <td colspan="2">{{ {'BuildRate': 'Build rate', 'StorageMass': 'Storage mass', 'StorageEnergy': 'Storage energy', 'ProductionPerSecondMass': 'Yield mass', 'ProductionPerSecondEnergy': 'Yield energy', 'MaintenanceConsumptionPerSecondEnergy': 'Drain energy'}[k] }}</td>
+                                <td>{{ v }}</td>
                             </tr>
 
                             <!-- Abilities -->
@@ -161,6 +151,13 @@
                             <!-- Weapons -->
                             <!--tr class="sec">
                                 <td>Weapons</td>
+                                <td colspan="2">?:</td>
+                                <td></td>
+                            </tr-->
+
+                            <!-- Upgrades -->
+                            <!--tr class="sec">
+                                <td>Upgrades</td>
                                 <td colspan="2">?:</td>
                                 <td></td>
                             </tr-->
