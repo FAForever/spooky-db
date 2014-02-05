@@ -191,6 +191,11 @@ footer {
     float: left;
     margin-right: 3px;
 }
+.filters .clear {
+    font-size: 20px;
+    margin: 0;
+    padding: 0 5px 3px;
+}
 .kind {
     float: left;
     min-height: 1px;
@@ -269,6 +274,7 @@ h1.seraphim { background-image: url(../img/SC_Seraphim.jpg) }
 @media only screen and (max-width: 1461px) {
     .filters header {
         padding: 2px 0 0;
+        height: auto;
     }
     .filters header a {
         font-size: 11px;
@@ -291,6 +297,14 @@ h1.seraphim { background-image: url(../img/SC_Seraphim.jpg) }
         clear: left;
         margin-top: 0;
         margin-right: 0;
+    }
+    .filters .clear {
+        background: none;
+        color: #fff;
+    }
+    .filters .clear:hover {
+        background: rgba(255,255,255, .4);
+        color: #fff;
     }
 }
 
@@ -350,10 +364,13 @@ h1.seraphim { background-image: url(../img/SC_Seraphim.jpg) }
     .filters .count:after {
         content: ' selected';
     }
+    .filters .clear {
+        padding: 0 5px;
+    }
 }
 
 /* 2 line horizontal filter */
-@media only screen and (max-width: 1031px) {
+@media only screen and (max-width: 1041px) {
     body {
         margin-top: 99px;
     }

@@ -45,6 +45,11 @@ unitDb.controllers = {
             else
                 data.contenders.splice(idx, 1);
         };
+        $scope.clear = function() {
+            for (c in data.items)
+                data.items[c].selected = false;
+            data.contenders = [];
+        };
         $scope.strain = function(e) {
             return ($scope.factions.length == 0 || isInArray($scope.factions, e.faction))
                     && ($scope.kinds.length == 0 || isInArray($scope.kinds, e.classification))
