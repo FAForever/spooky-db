@@ -90,7 +90,11 @@ textarea {
     margin: 0.2em 0;
     background: #ccc;
     color: #000;
-    padding: 0.2em 0;
+    padding: 0.6em;
+}
+.browsehappy a:hover {
+    color: #777;
+    text-decoration: underline;
 }
 
 /* ==========================================================================
