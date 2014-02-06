@@ -28,6 +28,10 @@ function Sound(table)
     return table
 end
 
+function MeshBlueprint(table)
+    return table
+end
+
 -- strip '<LOC...>' prefixes found in some string
 -- values
 function stripLoc(x)
