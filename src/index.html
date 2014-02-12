@@ -144,7 +144,7 @@
                             <tr ng-if="item.Veteran" ng-repeat="lv in [1,2,3,4,5]" class="sec">
                                 <td ng-class="{ invisible: !$first }">Veterancy</td>
                                 <td title="kills"><small>{{ item.Veteran['Level'+lv] }}</small></td>
-                                <td title="health"><small>{{ item.Defense.Health * lv * 1.1 | round }}hp</small></td>
+                                <td title="health"><small>{{ item.Defense.Health * (1 + lv * 0.1) | round }}hp</small></td>
                                 <td title="regeneration rate"><small>{{ item.Defense.RegenRate + item.Buffs.Regen['Level'+lv] }}hp/s</small></td>
                             </tr>
 
