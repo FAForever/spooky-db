@@ -52,5 +52,12 @@ unitDb.filters = {
             if (!item) return;
             return 'img/strategic/' + item.faction + '_' + item.strategicIcon +'.png';
         }
+    },
+
+    dps: function() {
+        return function(weapon) {
+            // TODO
+            return weapon.Damage;
+        }
     }
 };

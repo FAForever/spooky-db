@@ -149,11 +149,15 @@
                             </tr>
 
                             <!-- Weapons -->
-                            <!--tr class="sec">
-                                <td>Weapons</td>
-                                <td colspan="2">?:</td>
+                            <tr ng-if="item.Weapon" ng-repeat-start="w in item.Weapon" class="sec">
+                                <td ng-class="{ invisible: !$first }">Weapons</td>
+                                <td colspan="3">{{ w.DisplayName }}</td>
+                            </tr>
+                            <tr ng-repeat-end>
                                 <td></td>
-                            </tr-->
+                                <td title="category (damage type)" colspan="2"><small>{{ w.WeaponCategory }} ({{ w.DamageType }})</small></td>
+                                <td title="damage per second"><small>{{ w | dps }}dps!?</small></td>
+                            </tr>
 
                             <!-- Upgrades -->
                             <!--tr class="sec">
