@@ -255,6 +255,9 @@ h1.seraphim { background-image: url(../img/SC_Seraphim.jpg) }
 .details table td {
     vertical-align: top;
 }
+.details table td:first-child {
+    min-width:  92px;
+}
 .details table .sec ~ tr td {
     padding-bottom: 5px;
 }
