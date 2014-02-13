@@ -43,10 +43,10 @@
                     <table>
                         <tbody>
                             <tr>
-                                <td><img src="img/health.png" alt="health" />{{ item.Defense.Health }}<small ng-if="item.Defense.RegenRate">&nbsp;({{ item.Defense.RegenRate }}hp/s)</small></td>
-                                <td><img src="img/mass.png" alt="mass" />{{ item.Economy.BuildCostMass }}</td>
-                                <td><img src="img/energy.png" alt="energy" />{{ item.Economy.BuildCostEnergy }}</td>
-                                <td><img src="img/time.png" alt="time" />{{ item.Economy.BuildTime }}</td>
+                                <td title="{{ item.Defense.Health }}"><img src="img/health.png" alt="health" />{{ item.Defense.Health | shorten }}<small ng-if="item.Defense.RegenRate">&nbsp;({{ item.Defense.RegenRate }}hp/s)</small></td>
+                                <td title="{{ item.Economy.BuildCostMass }}"><img src="img/mass.png" alt="mass" />{{ item.Economy.BuildCostMass | shorten }}</td>
+                                <td title="{{ item.Economy.BuildCostEnergy }}"><img src="img/energy.png" alt="energy" />{{ item.Economy.BuildCostEnergy | shorten }}</td>
+                                <td title="{{ item.Economy.BuildTime }}"><img src="img/time.png" alt="time" />{{ item.Economy.BuildTime | shorten }}</td>
                             </tr>
 
                             <!-- Economy -->
@@ -141,19 +141,50 @@
                             </tr>
 
                             <!-- Veterancy -->
-                            <tr ng-if="item.Veteran" ng-repeat="lv in [1,2,3,4,5]" class="sec">
+                            <tr ng-if="item.Veteran" ng-repeat="lv in [1,2,3,4,5]" ng-class="{ sec: $first }">
                                 <td ng-class="{ invisible: !$first }">Veterancy</td>
                                 <td title="kills"><small>{{ item.Veteran['Level'+lv] }}</small></td>
-                                <td title="health"><small>{{ item.Defense.Health * lv * 1.1 | round }}hp</small></td>
+                                <td title="{{ item.Defense.Health }}hp health"><small>{{ item.Defense.Health * (1 + lv * 0.1) | round | shorten }} hp</small></td>
                                 <td title="regeneration rate"><small>{{ item.Defense.RegenRate + item.Buffs.Regen['Level'+lv] }}hp/s</small></td>
                             </tr>
 
                             <!-- Weapons -->
-                            <!--tr class="sec">
-                                <td>Weapons</td>
-                                <td colspan="2">?:</td>
+                            <tr ng-if="item.Weapon" ng-repeat-start="w in item.Weapon" class="sec">
+                                <td ng-class="{ invisible: !$first }">Weapons</td>
+                                <td colspan="3">{{ w.DisplayName }}</td>
+                            </tr>
+                            <tr>
                                 <td></td>
-                            </tr-->
+                                <td title="category (damage type)" colspan="2"><small>{{ w.WeaponCategory }} ({{ w.DamageType }})</small></td>
+                                <td title="damage per second"><small>{{ w | dps }}dps</small></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td title="range" colspan="2"><small>Range</small></td>
+                                <td title="min - max"><small>{{ w.MinRadius || 0  }} - {{ w.MaxRadius }}</small></td>
+                            </tr>
+
+                            <tr>
+                                <td></td>
+                                <td colspan="2"><small>Fire cycle</small></td>
+                                <td><small></small></td>
+                            </tr>
+
+                            <tr ng-if="TurretPitchRange">
+                                <td></td>
+                                <td colspan="2"><small>Turret pitch</small></td>
+                                <td title="min ~ max @ speed"><small>{{ w.TurretPitch }}~{{ w.TurretPitchRange }}° @&nbsp;{{ w.TurretPitchSpeed }}°/s</small></td>
+                            </tr>
+                            <tr ng-if="TurretYawRange">
+                                <td></td>
+                                <td colspan="2"><small>Turret yaw</small></td>
+                                <td title="min ~ max @ speed"><small>{{ w.TurretYaw }}~{{ w.TurretYawRange }}° @&nbsp;{{ w.TurretYawSpeed }}°/s</small></td>
+                            </tr>
+                            <tr ng-if="w.FiringTolerance" ng-repeat-end>
+                                <td></td>
+                                <td colspan="2"><small>Firing tolerance</small></td>
+                                <td><small>{{ w.FiringTolerance }}</small></td>
+                            </tr>
 
                             <!-- Upgrades -->
                             <!--tr class="sec">
@@ -199,7 +230,7 @@
                     </a>
                 </p>
             </aside>
-            <footer><span>last update: 2014-02-06</span> | <span>unit count: {{ index.length }}</span> | <a href="https://github.com/spooky/unitdb/issues">issues</a> | <a href="https://github.com/spooky/unitdb">source</a></footer>
+            <footer><span>last update: 2014-02-13</span> | <span>unit count: {{ index.length }}</span> | <a href="https://github.com/spooky/unitdb/issues">issues</a> | <a href="https://github.com/spooky/unitdb">source</a></footer>
         </script>
 
         <script type="text/ng-template" id="compare.html">
