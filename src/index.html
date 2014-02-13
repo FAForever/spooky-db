@@ -141,7 +141,7 @@
                             </tr>
 
                             <!-- Veterancy -->
-                            <tr ng-if="item.Veteran" ng-repeat="lv in [1,2,3,4,5]" class="sec">
+                            <tr ng-if="item.Veteran" ng-repeat="lv in [1,2,3,4,5]" ng-class="{ sec: $first }">
                                 <td ng-class="{ invisible: !$first }">Veterancy</td>
                                 <td title="kills"><small>{{ item.Veteran['Level'+lv] }}</small></td>
                                 <td title="health"><small>{{ item.Defense.Health * (1 + lv * 0.1) | round }}hp</small></td>
@@ -153,10 +153,37 @@
                                 <td ng-class="{ invisible: !$first }">Weapons</td>
                                 <td colspan="3">{{ w.DisplayName }}</td>
                             </tr>
-                            <tr ng-repeat-end>
+                            <tr>
                                 <td></td>
                                 <td title="category (damage type)" colspan="2"><small>{{ w.WeaponCategory }} ({{ w.DamageType }})</small></td>
                                 <td title="damage per second"><small>{{ w | dps }}dps</small></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td title="range" colspan="2"><small>Range</small></td>
+                                <td title="min - max"><small>{{ w.MinRadius || 0  }} - {{ w.MaxRadius }}</small></td>
+                            </tr>
+
+                            <tr>
+                                <td></td>
+                                <td colspan="2"><small>Fire cycle</small></td>
+                                <td><small></small></td>
+                            </tr>
+
+                            <tr>
+                                <td></td>
+                                <td colspan="2"><small>Turret pitch</small></td>
+                                <td title="min ~ max @ speed"><small>{{ w.TurretPitch }}~{{ w.TurretPitchRange }}° @&nbsp;{{ w.TurretPitchSpeed }}°/s</small></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td colspan="2"><small>Turret yaw</small></td>
+                                <td title="min ~ max @ speed"><small>{{ w.TurretYaw }}~{{ w.TurretYawRange }}° @&nbsp;{{ w.TurretYawSpeed }}°/s</small></td>
+                            </tr>
+                            <tr ng-repeat-end>
+                                <td></td>
+                                <td colspan="2"><small>Firing tolerance</small></td>
+                                <td><small>{{ w.FiringTolerance }}</small></td>
                             </tr>
 
                             <!-- Upgrades -->

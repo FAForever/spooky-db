@@ -255,8 +255,15 @@ h1.seraphim { background-image: url(../img/SC_Seraphim.jpg) }
 .details table td {
     vertical-align: top;
 }
+.details table .sec ~ tr td {
+    padding-bottom: 5px;
+}
 .details table .sec td {
     padding-top: 5px;
+}
+.details table .sec td {
+    /*padding-top: 5px;*/
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
 }
 .details .thumb {
     float: left;
