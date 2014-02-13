@@ -54,6 +54,21 @@ unitDb.filters = {
         }
     },
 
+    shorten: function() {
+        return function(num) {
+            if (num > 1000*1000*1000)
+                return num/(1000*1000*1000) + "G";
+
+            if (num > 1000*1000)
+                return num/(1000*1000) + "M";
+
+            if (num > 1000)
+                return num/1000 + "k";
+
+            return num;
+        }
+    },
+
     dps: function() {
         return function(weapon) {
             // TODO
