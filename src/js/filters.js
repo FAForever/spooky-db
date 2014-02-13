@@ -72,7 +72,7 @@ unitDb.filters = {
     dps: function() {
         return function(weapon) {
             // TODO
-            return 'todo ';//weapon.Damage;
+            return '?!? ';//weapon.Damage;
         }
     }
 };

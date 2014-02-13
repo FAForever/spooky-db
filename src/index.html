@@ -57,7 +57,7 @@
                             </tr>
 
                             <!-- Abilities -->
-                            <tr class="sec">
+                            <tr ng-if="item.Display.Abilities" class="sec">
                                 <td>Abilities</td>
                                 <td colspan="3" ng-bind-html="item.Display.Abilities|flatten|unsafe"></td>
                             </tr>
@@ -158,16 +158,31 @@
                                 <td title="category (damage type)" colspan="2"><small>{{ w.WeaponCategory }} ({{ w.DamageType }})</small></td>
                                 <td title="damage per second"><small>{{ w | dps }}dps</small></td>
                             </tr>
-                            <tr>
+                            <tr ng-if="w.MaxRadius">
                                 <td></td>
                                 <td title="range" colspan="2"><small>Range</small></td>
-                                <td title="min - max"><small>{{ w.MinRadius || 0  }} - {{ w.MaxRadius }}</small></td>
+                                <td title="min - max"><small>{{ w.MinRadius || 0  }} - {{ w.MaxRadius | shorten }}</small></td>
+                            </tr>
+                            <tr ng-if="w.DamageRadius">
+                                <td></td>
+                                <td colspan="2"><small>Damage radius</small></td>
+                                <td title="damage radius"><small>{{ w.DamageRadius  }}</small></td>
+                            </tr>
+                            <tr ng-if="w.NukeInnerRingRadius && w.NukeOuterRingRadius">
+                                <td></td>
+                                <td colspan="2"><small>Ring radius</small></td>
+                                <td title="inner ring radius | outer ring radius"><small>{{ w.NukeInnerRingRadius  }} | {{ w.NukeOuterRingRadius }}</small></td>
+                            </tr>
+                            <tr ng-if="w.NukeInnerRingDamage && w.NukeOuterRingDamage">
+                                <td></td>
+                                <td colspan="2"><small>Ring damage</small></td>
+                                <td title="inner ring damage | outer ring damage"><small>{{ w.NukeInnerRingDamage | shorten }} | {{ w.NukeOuterRingDamage | shorten }}</small></td>
                             </tr>
 
                             <tr>
                                 <td></td>
                                 <td colspan="2"><small>Fire cycle</small></td>
-                                <td><small></small></td>
+                                <td><small>?!?</small></td>
                             </tr>
 
                             <tr ng-if="TurretPitchRange">
