@@ -132,12 +132,12 @@
                             <tr ng-if="item.Wreckage.HealthMult" class="sec">
                                 <td>Wreckage</td>
                                 <td colspan="2">Health</td>
-                                <td>{{ item.Wreckage.HealthMult*item.Defense.Health | round }}</td>
+                                <td title="{{ item.Wreckage.HealthMult*item.Defense.Health | round }}">{{ item.Wreckage.HealthMult*item.Defense.Health | round | shorten }}</td>
                             </tr>
                             <tr ng-if="item.Wreckage.MassMult">
                                 <td></td>
                                 <td colspan="2">Mass</td>
-                                <td>{{ item.Wreckage.MassMult*item.Economy.BuildCostMass | round }}</td>
+                                <td title="{{ item.Wreckage.MassMult*item.Economy.BuildCostMass | round }}">{{ item.Wreckage.MassMult*item.Economy.BuildCostMass | round | shorten }}</td>
                             </tr>
 
                             <!-- Veterancy -->
