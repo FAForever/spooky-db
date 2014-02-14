@@ -52,7 +52,7 @@
                             <!-- Economy -->
                             <tr ng-repeat="(k, v) in item.Economy | pick: ['BuildRate', 'StorageMass', 'StorageEnergy', 'ProductionPerSecondMass', 'ProductionPerSecondEnergy', 'MaintenanceConsumptionPerSecondEnergy']" ng-class="{ sec: $first }">
                                 <td ng-class="{ invisible: !$first }">Economy</td>
-                                <td colspan="2">{{ {'BuildRate': 'Build rate', 'StorageMass': 'Storage mass', 'StorageEnergy': 'Storage energy', 'ProductionPerSecondMass': 'Yield mass', 'ProductionPerSecondEnergy': 'Yield energy', 'MaintenanceConsumptionPerSecondEnergy': 'Drain energy'}[k] }}</td>
+                                <td colspan="2">{{ {'BuildRate': 'Build rate', 'StorageMass': 'Mass storage', 'StorageEnergy': 'Energy storage', 'ProductionPerSecondMass': 'Mass yield', 'ProductionPerSecondEnergy': 'Energy yield', 'MaintenanceConsumptionPerSecondEnergy': 'Energy drain' }[k] }}</td>
                                 <td>{{ v }}</td>
                             </tr>
 
@@ -65,78 +65,78 @@
                             <!-- Intel -->
                             <tr class="sec">
                                 <td>Intel</td>
-                                <td colspan="2">Vision radius:</td>
+                                <td colspan="2">Vision radius</td>
                                 <td>{{ item.Intel.VisionRadius }}</td>
                             </tr>
                             <tr ng-if="item.Intel.RadarRadius">
                                 <td></td>
-                                <td colspan="2">Radar radius:</td>
+                                <td colspan="2">Radar radius</td>
                                 <td>{{ item.Intel.RadarRadius }}</td>
                             </tr>
                             <tr ng-if="item.Intel.SonarRadius">
                                 <td></td>
-                                <td colspan="2">Sonar radius:</td>
+                                <td colspan="2">Sonar radius</td>
                                 <td>{{ item.Intel.SonarRadius }}</td>
                             </tr>
 
                             <!-- Physics -->
                             <tr ng-if="item.Physics.MaxSpeed" class="sec">
                                 <td>Physics</td>
-                                <td colspan="2">Max speed:</td>
+                                <td colspan="2">Max speed</td>
                                 <td>{{ item.Physics.MaxSpeed }}</td>
                             </tr>
                             <tr ng-if="item.Physics.TurnRate">
                                 <td></td>
-                                <td colspan="2">Turn rate:</td>
+                                <td colspan="2">Turn rate</td>
                                 <td>{{ item.Physics.TurnRate }}</td>
                             </tr>
                             <tr ng-if="item.Physics.FuelUseTime">
                                 <td></td>
-                                <td colspan="2">Fuel use time:</td>
+                                <td colspan="2">Fuel use time</td>
                                 <td>{{ item.Physics.FuelUseTime | time }}</td>
                             </tr>
                             <tr ng-if="item.Physics.FuelRechargeRate">
                                 <td></td>
-                                <td colspan="2">Fuel rechanrge time:</td>
+                                <td colspan="2">Fuel rechanrge time</td>
                                 <td>{{ 10*item.Physics.FuelUseTime / item.Physics.FuelRechargeRate | time }}</td>
                             </tr>
 
                             <!-- Air Physics -->
                             <tr ng-if="item.Air.MinAirspeed" class="sec">
-                                <td>Air Physics:</td>
-                                <td colspan="2">Speed:</td>
+                                <td>Air Physics</td>
+                                <td colspan="2">Speed</td>
                                 <td>{{ item.Air.MinAirspeed }}-{{ item.Air.MaxAirspeed }}</td>
                             </tr>
                             <tr ng-if="item.Physics.Elevation">
                                 <td></td>
-                                <td colspan="2">Elevation:</td>
+                                <td colspan="2">Elevation</td>
                                 <td>{{ item.Physics.Elevation }}</td>
                             </tr>
                             <tr ng-if="item.Air.EngageDistance">
                                 <td></td>
-                                <td colspan="2">Engage distance:</td>
+                                <td colspan="2">Engage distance</td>
                                 <td>{{ item.Air.EngageDistance }}</td>
                             </tr>
                             <tr ng-if="item.Air.TurnSpeed">
                                 <td></td>
-                                <td colspan="2">Turn speed:</td>
+                                <td colspan="2">Turn speed</td>
                                 <td>{{ item.Air.TurnSpeed }}</td>
                             </tr>
                             <tr ng-if="item.Air.CombatTurnSpeed">
                                 <td></td>
-                                <td colspan="2">Combat turn speed:</td>
+                                <td colspan="2">Combat turn speed</td>
                                 <td>{{ item.Air.CombatTurnSpeed }}</td>
                             </tr>
 
                             <!-- Wreckage -->
                             <tr ng-if="item.Wreckage.HealthMult" class="sec">
                                 <td>Wreckage</td>
-                                <td colspan="2">Health:</td>
+                                <td colspan="2">Health</td>
                                 <td>{{ item.Wreckage.HealthMult*item.Defense.Health | round }}</td>
                             </tr>
                             <tr ng-if="item.Wreckage.MassMult">
                                 <td></td>
-                                <td colspan="2">Mass:</td>
+                                <td colspan="2">Mass</td>
                                 <td>{{ item.Wreckage.MassMult*item.Economy.BuildCostMass | round }}</td>
                             </tr>
 
@@ -185,12 +185,12 @@
                                 <td><small>?!?</small></td>
                             </tr>
 
-                            <tr ng-if="TurretPitchRange">
+                            <tr ng-if="w.TurretPitchRange">
                                 <td></td>
                                 <td colspan="2"><small>Turret pitch</small></td>
                                 <td title="min ~ max @ speed"><small>{{ w.TurretPitch }}~{{ w.TurretPitchRange }}° @&nbsp;{{ w.TurretPitchSpeed }}°/s</small></td>
                             </tr>
-                            <tr ng-if="TurretYawRange">
+                            <tr ng-if="w.TurretYawRange">
                                 <td></td>
                                 <td colspan="2"><small>Turret yaw</small></td>
                                 <td title="min ~ max @ speed"><small>{{ w.TurretYaw }}~{{ w.TurretYawRange }}° @&nbsp;{{ w.TurretYawSpeed }}°/s</small></td>
