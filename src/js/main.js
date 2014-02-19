@@ -80,7 +80,12 @@ unitDb.UnitDecorator = function(blueprint) {
         },
         fullName = function() {
             return (this.name ? this.name + ': ' : '') + (this.tech == 'EXP' ? '' : this.tech + ' ') + this.description;
+        },
+        getDps = function(weapon) {
+            return '?!?';
         };
+
+
         self = {
             id: blueprint.Id,
             name: blueprint.General.UnitName,
@@ -93,6 +98,13 @@ unitDb.UnitDecorator = function(blueprint) {
             order: blueprint.BuildIconSortPriority || 1000,
             fullName: fullName
         };
+
+        // additional stats for weapons
+        for(var i in blueprint.Weapon) {
+            _.extend(blueprint.Weapon[i], {
+                dps: getDps(blueprint.Weapon[i])
+            });
+        }
 
     return _.extend(self, blueprint);
 }
