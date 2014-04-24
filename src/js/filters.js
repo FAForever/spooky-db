@@ -5,6 +5,15 @@ unitDb.filters = {
         }
     }],
 
+    if: function() {
+        return function(item, cond) {
+            if (!cond)
+                return;
+
+            return item;
+        }
+    },
+
     flatten: function() {
         return function(item) {
             var separator = '<br/> ';
@@ -36,7 +45,7 @@ unitDb.filters = {
 
     round: function() {
         return function(item) {
-            return Math.round(item);
+            return Math.round(item || 0);
         }
     },
 

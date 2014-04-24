@@ -1,0 +1,305 @@
+{
+    "id": "URB2108",
+    "name": "TML-4",
+    "description": "Tactical Missile Launcher",
+    "faction": "Cybran",
+    "classification": "Base",
+    "tech": "T2",
+    "strategicIcon": "icon_structure2_missile",
+    "icon": "land",
+    "order": 150,
+    "SplitDamage": {
+        "DamageRadius": 1.3,
+        "DamageAmount": 833
+    },
+    "Wreckage": {
+        "Blueprint": "/props/DefaultWreckage/DefaultWreckage_prop.bp",
+        "MassMult": 0.9,
+        "EnergyMult": 0,
+        "ReclaimTimeMultiplier": 1,
+        "HealthMult": 0.9,
+        "WreckageLayers": {
+            "Water": false,
+            "Land": true,
+            "Seabed": false,
+            "Sub": false,
+            "Air": false
+        }
+    },
+    "Intel": {
+        "VisionRadius": 24
+    },
+    "Interface": {
+        "HelpText": "Tactical Missile Launcher"
+    },
+    "Audio": {
+        "DoneBeingBuilt": {
+            "Cue": "URB2108_Activate",
+            "Bank": "URB",
+            "LodCutoff": "UnitMove_LodCutoff"
+        },
+        "UISelection": {
+            "Cue": "Cybran_Select_Gun",
+            "Bank": "Interface",
+            "LodCutoff": "UnitMove_LodCutoff"
+        }
+    },
+    "StrategicIconSortPriority": 180,
+    "LifeBarSize": 1.1,
+    "Categories": [
+        "PRODUCTSC1",
+        "SELECTABLE",
+        "BUILTBYTIER2ENGINEER",
+        "BUILTBYTIER3ENGINEER",
+        "BUILTBYTIER2COMMANDER",
+        "BUILTBYTIER3COMMANDER",
+        "CYBRAN",
+        "STRUCTURE",
+        "STRATEGIC",
+        "TECH2",
+        "INDIRECTFIRE",
+        "TACTICALMISSILEPLATFORM",
+        "DRAGBUILD",
+        "SILO",
+        "SIZE4",
+        "VISIBLETORECON",
+        "RECLAIMABLE",
+        "OVERLAYINDIRECTFIRE",
+        "SORTSTRATEGIC"
+    ],
+    "Display": {
+        "SpawnRandomRotation": true,
+        "UniformScale": 0.04,
+        "Mesh": {
+            "LODs": [
+                {
+                    "ShaderName": "Insect",
+                    "LODCutoff": 100
+                },
+                {
+                    "ShaderName": "Insect",
+                    "SpecularName": "urb2108_lod1_specteam.dds",
+                    "AlbedoName": "urb2108_lod1_albedo.dds",
+                    "LODCutoff": 215
+                }
+            ],
+            "IconFadeInZoom": 130
+        },
+        "Tarmacs": [
+            {
+                "Width": 6.4,
+                "Length": 6.4,
+                "RemoveWhenDead": false,
+                "Orientations": [
+                    0,
+                    90,
+                    180,
+                    270
+                ],
+                "DeathLifetime": 300,
+                "Normal": "Tarmacs/Tar6x_cybran_01_normals",
+                "FadeOut": 150,
+                "Albedo": "Tarmacs/Tar6x_cybran_01_albedo"
+            }
+        ],
+        "olderMeshName": "UXB0026",
+        "Abilities": [
+            "Manual Launch"
+        ]
+    },
+    "LifeBarHeight": 0.075,
+    "SelectionSizeX": 0.75,
+    "SelectionSizeZ": 0.75,
+    "SizeX": 1,
+    "Weapon": [
+        {
+            "RackSalvoSize": 1,
+            "TurretYaw": 0,
+            "MuzzleVelocity": 10,
+            "WeaponCategory": "Missile",
+            "MaxProjectileStorage": 10,
+            "MinRadius": 15,
+            "RackRecoilDistance": 0,
+            "Turreted": false,
+            "TurretPitch": 0,
+            "DamageRadius": 2,
+            "MuzzleSalvoSize": 1,
+            "CollideFriendly": false,
+            "FiringTolerance": 5,
+            "Label": "CruiseMissile",
+            "WeaponRepackTimeout": 3.5,
+            "ProjectileLifetime": 30,
+            "WeaponUnpacks": true,
+            "RackSalvoReloadTime": 3.5,
+            "FireTargetLayerCapsTable": {
+                "Water": "Land|Water|Seabed",
+                "Land": "Land|Water|Seabed",
+                "Seabed": "Land|Water|Seabed",
+                "Sub": "Land|Water|Seabed"
+            },
+            "TargetCheckInterval": 0.16,
+            "TurretPitchRange": 0,
+            "TargetRestrictDisallow": "UNTARGETABLE",
+            "TurretDualManipulators": false,
+            "ProjectileId": "/projectiles/CIFMissileTactical03/CIFMissileTactical03_proj.bp",
+            "TargetPriorities": [
+                "SPECIALHIGHPRI",
+                "SPECIALLOWPRI",
+                "ALLUNITS"
+            ],
+            "RackFireTogether": false,
+            "Audio": {
+                "Fire": {
+                    "Cue": "URB2108_Missile_Cruise",
+                    "Bank": "URLWeapon",
+                    "LodCutoff": "Weapon_LodCutoff"
+                }
+            },
+            "ManualFire": true,
+            "MaxRadius": 256,
+            "BallisticArc": "RULEUBA_None",
+            "TurretPitchSpeed": 0,
+            "ForceSingleFire": true,
+            "TurretYawSpeed": 0,
+            "MuzzleSalvoDelay": 0,
+            "RackSlavedToTurret": false,
+            "CountedProjectile": true,
+            "RateOfFire": 3,
+            "RackSalvoChargeTime": 1.5,
+            "RangeCategory": "UWRC_IndirectFire",
+            "InitialProjectileStorage": 0,
+            "TurretYawRange": 0,
+            "AboveWaterTargetsOnly": true,
+            "RackBones": [
+                {
+                    "RackBone": "Projectile01",
+                    "MuzzleBones": [
+                        "Projectile01"
+                    ]
+                },
+                {
+                    "RackBone": "Projectile02",
+                    "MuzzleBones": [
+                        "Projectile02"
+                    ]
+                },
+                {
+                    "RackBone": "Projectile03",
+                    "MuzzleBones": [
+                        "Projectile03"
+                    ]
+                },
+                {
+                    "RackBone": "Projectile04",
+                    "MuzzleBones": [
+                        "Projectile04"
+                    ]
+                }
+            ],
+            "DisplayName": "Loa Tactical Missile",
+            "RackReloadTimeout": 10,
+            "DamageType": "Normal",
+            "Damage": 6000,
+            "dps": 18000
+        }
+    ],
+    "BuildIconSortPriority": 150,
+    "General": {
+        "CommandCaps": {
+            "RULEUCC_Move": false,
+            "RULEUCC_Stop": true,
+            "RULEUCC_Transport": false,
+            "RULEUCC_Capture": false,
+            "RULEUCC_Nuke": false,
+            "RULEUCC_Patrol": false,
+            "RULEUCC_Tactical": true,
+            "RULEUCC_CallTransport": false,
+            "RULEUCC_Pause": true,
+            "RULEUCC_Guard": false,
+            "RULEUCC_Reclaim": false,
+            "RULEUCC_Repair": false,
+            "RULEUCC_RetaliateToggle": false,
+            "RULEUCC_SiloBuildTactical": true,
+            "RULEUCC_Attack": false
+        },
+        "Category": "Strategic",
+        "UnitName": "TML-4",
+        "Classification": "RULEUC_Weapon",
+        "SelectionPriority": 5,
+        "UnitWeight": 1,
+        "FactionName": "Cybran",
+        "TechLevel": "RULEUTL_Advanced",
+        "Icon": "land"
+    },
+    "Economy": {
+        "BuildCostEnergy": 5100,
+        "BuildTime": 850,
+        "RebuildBonusIds": [
+            "urb2108"
+        ],
+        "BuildCostMass": 850,
+        "BuildRate": 80
+    },
+    "Defense": {
+        "RegenRate": 0,
+        "EconomyThreatLevel": 9,
+        "SubThreatLevel": 0,
+        "SurfaceThreatLevel": 0,
+        "Health": 1500,
+        "AirThreatLevel": 0,
+        "ArmorType": "Structure",
+        "MaxHealth": 1500
+    },
+    "StrategicIconName": "icon_structure2_missile",
+    "SelectionThickness": 0.5,
+    "Physics": {
+        "MinSpeedPercent": 0,
+        "MaxSteerForce": 0,
+        "SkirtSizeX": 2,
+        "MotionType": "RULEUMT_None",
+        "SkirtSizeZ": 2,
+        "BankingSlope": 0,
+        "TurnRate": 0,
+        "BuildOnLayerCaps": {
+            "LAYER_Orbit": false,
+            "LAYER_Air": false,
+            "LAYER_Seabed": false,
+            "LAYER_Water": false,
+            "LAYER_Sub": false,
+            "LAYER_Land": true
+        },
+        "DragCoefficient": 0.2,
+        "SkirtOffsetX": -0.5,
+        "SkirtOffsetZ": -0.5,
+        "FlattenSkirt": true
+    },
+    "Id": "URB2108",
+    "SizeY": 0.75,
+    "Footprint": {
+        "SizeX": 1,
+        "SizeZ": 1
+    },
+    "CollisionOffsetY": -0.25,
+    "SizeZ": 1,
+    "Buffs": {
+        "Regen": {
+            "Level1": 2,
+            "Level2": 4,
+            "Level3": 6,
+            "Level4": 8,
+            "Level5": 10
+        }
+    },
+    "AI": {
+        "InitialAutoMode": true
+    },
+    "Veteran": {
+        "Level1": 9,
+        "Level2": 18,
+        "Level3": 27,
+        "Level4": 36,
+        "Level5": 45
+    },
+    "LifeBarOffset": 0.5,
+    "Description": "Tactical Missile Launcher"
+}

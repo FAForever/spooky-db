@@ -1,0 +1,12 @@
+regular (striker, mantis)
+nuke
+tactical
+kamikaze (mercy|fire beattle)
+arty
+direct fire
+projectile (hoplite)
+cont. beam
+
+
+10tml - 47sec (co 5 sek)
+2 nuke - 30 sec (co 22 sec)

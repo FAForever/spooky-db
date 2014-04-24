@@ -1,0 +1,1207 @@
+{
+    "id": "UEL0401",
+    "name": "Fatboy",
+    "description": "Experimental Mobile Factory",
+    "faction": "UEF",
+    "classification": "Land",
+    "tech": "EXP",
+    "strategicIcon": "icon_experimental_generic",
+    "icon": "amph",
+    "order": 10,
+    "BuildIconSortPriority": 10,
+    "Wreckage": {
+        "Blueprint": "/props/DefaultWreckage/DefaultWreckage_prop.bp",
+        "MassMult": 0.9,
+        "EnergyMult": 0,
+        "ReclaimTimeMultiplier": 1,
+        "HealthMult": 0.9,
+        "WreckageLayers": {
+            "Water": true,
+            "Land": true,
+            "Seabed": true,
+            "Sub": true,
+            "Air": false
+        }
+    },
+    "Intel": {
+        "WaterVisionRadius": 32,
+        "VisionRadius": 32
+    },
+    "Interface": {
+        "HelpText": "Experimental Mobile Factory"
+    },
+    "Audio": {
+        "Destroyed": {
+            "Cue": "UEL0401_Destroy",
+            "Bank": "UELDestroy",
+            "LodCutoff": "UnitMove_LodCutoff"
+        },
+        "ConstructLoop": {
+            "Cue": "UEL0401_Construct_Loop",
+            "Bank": "UEL",
+            "LodCutoff": "UnitMove_LodCutoff"
+        },
+        "AmbientMoveWater": {
+            "Cue": "UEL0401_Move_Water",
+            "Bank": "UEL",
+            "LodCutoff": "UnitMove_LodCutoff"
+        },
+        "TransitionWater": {
+            "Cue": "UEL0401_Water_Trans",
+            "Bank": "UEL",
+            "LodCutoff": "UnitMove_LodCutoff"
+        },
+        "UISelection": {
+            "Cue": "UEF_Select_Tank",
+            "Bank": "Interface",
+            "LodCutoff": "UnitMove_LodCutoff"
+        },
+        "Open": {
+            "Cue": "UEL0401_Open",
+            "Bank": "UEL",
+            "LodCutoff": "UnitMove_LodCutoff"
+        },
+        "StopMove": {
+            "Cue": "UEL0401_Move_Stop",
+            "Bank": "UEL",
+            "LodCutoff": "UnitMove_LodCutoff"
+        },
+        "AmbientMoveLand": {
+            "Cue": "UEL0401_Move_Loop",
+            "Bank": "UEL",
+            "LodCutoff": "UnitMove_LodCutoff"
+        },
+        "Close": {
+            "Cue": "UEL0401_Close",
+            "Bank": "UEL",
+            "LodCutoff": "UnitMove_LodCutoff"
+        },
+        "TransitionLand": {
+            "Cue": "UEL0401_Water_Trans",
+            "Bank": "UEL",
+            "LodCutoff": "UnitMove_LodCutoff"
+        },
+        "ConstructStop": {
+            "Cue": "UEL0401_Construct_Stop",
+            "Bank": "UEL",
+            "LodCutoff": "UnitMove_LodCutoff"
+        },
+        "StartMove": {
+            "Cue": "UEL0401_Move_Start",
+            "Bank": "UEL",
+            "LodCutoff": "UnitMove_LodCutoff"
+        },
+        "Construct": {
+            "Cue": "UEL0401_Construct_Start",
+            "Bank": "UEL",
+            "LodCutoff": "UnitMove_LodCutoff"
+        }
+    },
+    "StrategicIconSortPriority": 45,
+    "LifeBarSize": 5.75,
+    "Categories": [
+        "PRODUCTSC1",
+        "SELECTABLE",
+        "BUILTBYTIER3COMMANDER",
+        "BUILTBYTIER3ENGINEER",
+        "UEF",
+        "MOBILE",
+        "LAND",
+        "EXPERIMENTAL",
+        "INDIRECTFIRE",
+        "ARTILLERY",
+        "CONSTRUCTION",
+        "AIRSTAGINGPLATFORM",
+        "FACTORY",
+        "NEEDMOBILEBUILD",
+        "ANTIAIR",
+        "VISIBLETORECON",
+        "RECLAIMABLE",
+        "DRAGBUILD",
+        "SHOWQUEUE",
+        "OVERLAYMISC",
+        "OVERLAYANTIAIR",
+        "OVERLAYDEFENSE",
+        "OVERLAYANTINAVY",
+        "OVERLAYDIRECTFIRE",
+        "OVERLAYMISC",
+        "BUBBLESHIELDSPILLOVERCHECK"
+    ],
+    "Display": {
+        "SpawnRandomRotation": true,
+        "UniformScale": 0.22,
+        "Mesh": {
+            "LODs": [
+                {
+                    "ShaderName": "Unit",
+                    "Scrolling": true,
+                    "LODCutoff": 200
+                },
+                {
+                    "ShaderName": "Unit",
+                    "SpecularName": "uel0401_lod1_specteam.dds",
+                    "AlbedoName": "uel0401_lod1_albedo.dds",
+                    "LODCutoff": 600
+                }
+            ],
+            "IconFadeInZoom": 130
+        },
+        "Abilities": [
+            "Air Staging",
+            "Amphibious",
+            "Anti-Air",
+            "Factory",
+            "Shield Dome",
+            "Torpedoes",
+            "Volatile"
+        ],
+        "IdleEffects": {
+            "Land": {
+                "Effects": [
+                    {
+                        "Bones": [
+                            "UEL0401"
+                        ],
+                        "Type": "SeaIdle02"
+                    }
+                ]
+            }
+        },
+        "MovementEffects": {
+            "Land": {
+                "CameraShake": {
+                    "Interval": 5,
+                    "Radius": 20,
+                    "MaxShakeEpicenter": 0.2,
+                    "MinShakeAtRadius": 0
+                },
+                "Effects": [
+                    {
+                        "Bones": [
+                            "Exhaust_Left02",
+                            "Exhaust_Right02"
+                        ],
+                        "Type": "GroundKickup02"
+                    },
+                    {
+                        "Bones": [
+                            "Wheel_Left01",
+                            "Wheel_Left02",
+                            "Wheel_Right01",
+                            "Wheel_Right02"
+                        ],
+                        "Type": "GroundKickup04"
+                    },
+                    {
+                        "Bones": [
+                            "UEL0401"
+                        ],
+                        "Type": "Shoreline01"
+                    }
+                ],
+                "Treads": {
+                    "TreadMarks": [
+                        {
+                            "TreadMarks": "tank_treads06_albedo",
+                            "TreadMarksSizeX": 5,
+                            "TreadOffset": [
+                                0,
+                                0,
+                                -1.5
+                            ],
+                            "TreadMarksInterval": 0.6,
+                            "TreadMarksSizeZ": 5.5
+                        },
+                        {
+                            "TreadMarks": "tank_treads06_albedo",
+                            "TreadMarksSizeX": 5.5,
+                            "TreadOffset": [
+                                0,
+                                0,
+                                -5.5
+                            ],
+                            "TreadMarksInterval": 0.6,
+                            "TreadMarksSizeZ": 5.5
+                        }
+                    ],
+                    "ScrollTreads": true
+                }
+            },
+            "Seabed": {
+                "Effects": [
+                    {
+                        "Bones": [
+                            "UEL0401"
+                        ],
+                        "Type": "Shoreline01"
+                    }
+                ],
+                "Treads": {
+                    "ScrollTreads": true
+                }
+            }
+        },
+        "AnimationBuild": "/units/uel0401/uel0401_aactivate.sca",
+        "LayerChangeEffects": {
+            "SeabedLand": {
+                "Effects": [
+                    {
+                        "Bones": [
+                            "Front_Core"
+                        ],
+                        "Type": "Surface01"
+                    },
+                    {
+                        "Bones": [
+                            "Wheel_Left01",
+                            "Wheel_Right01"
+                        ],
+                        "Type": "Surface02"
+                    }
+                ]
+            }
+        },
+        "PlaceholderMeshName": "UXB0000"
+    },
+    "Transport": {
+        "DockingSlots": 4,
+        "ClassGenericUpTo": 4,
+        "Class2AttachSize": 2,
+        "TransportClass": 10,
+        "StorageSlots": 0,
+        "Class3AttachSize": 4
+    },
+    "SelectionSizeX": 4,
+    "LifeBarHeight": 0.075,
+    "SelectionSizeZ": 5.25,
+    "SelectionCenterOffsetZ": -0.3,
+    "SizeY": 1.5,
+    "SelectionCenterOffsetX": 0,
+    "General": {
+        "ToggleCaps": {
+            "RULEUTC_ShieldToggle": true
+        },
+        "UnitWeight": 1,
+        "TechLevel": "RULEUTL_Experimental",
+        "BuildBones": {
+            "BuildEffectBones": [
+                "Arm_Right01_Build_Emitter",
+                "Arm_Right02_Build_Emitter",
+                "Arm_Right03_Build_Emitter",
+                "Arm_Left01_Build_Emitter",
+                "Arm_Left02_Build_Emitter",
+                "Arm_Left03_Build_Emitter"
+            ]
+        },
+        "Icon": "amph",
+        "Category": "Experimental",
+        "OrderOverrides": {
+            "RULEUTC_ShieldToggle": {
+                "bitmapId": "shield-dome",
+                "helpText": "toggle_shield_dome"
+            },
+            "RULEUCC_Transport": {
+                "bitmapId": "deploy",
+                "helpText": "deploy"
+            }
+        },
+        "Classification": "RULEUC_MilitaryVehicle",
+        "UnitName": "Fatboy",
+        "ConstructionBar": true,
+        "FactionName": "UEF",
+        "CommandCaps": {
+            "RULEUCC_Move": true,
+            "RULEUCC_Stop": true,
+            "RULEUCC_Transport": true,
+            "RULEUCC_Capture": false,
+            "RULEUCC_Nuke": false,
+            "RULEUCC_Patrol": true,
+            "RULEUCC_CallTransport": false,
+            "RULEUCC_Pause": true,
+            "RULEUCC_Guard": true,
+            "RULEUCC_Reclaim": false,
+            "RULEUCC_Repair": false,
+            "RULEUCC_RetaliateToggle": true,
+            "RULEUCC_Attack": true
+        }
+    },
+    "Economy": {
+        "BuildableCategory": [
+            "BUILTBYTIER3FACTORY UEF MOBILE LAND",
+            "BUILTBYTIER2FACTORY UEF MOBILE LAND",
+            "BUILTBYLANDTIER2FACTORY UEF MOBILE LAND"
+        ],
+        "BuildCostMass": 28000,
+        "MaintenanceConsumptionPerSecondEnergy": 500,
+        "StorageEnergy": 1000,
+        "BuildCostEnergy": 350000,
+        "BuildTime": 21000,
+        "StorageMass": 200,
+        "BuildRate": 180
+    },
+    "Defense": {
+        "RegenRate": 20,
+        "EconomyThreatLevel": 0,
+        "SubThreatLevel": 40,
+        "SurfaceThreatLevel": 380,
+        "Health": 12500,
+        "Shield": {
+            "ImpactEffects": "UEFShieldHit01",
+            "ShieldEnergyDrainRechargeTime": 5,
+            "ImpactMesh": "/effects/entities/ShieldSection01/ShieldSection01_mesh",
+            "ShieldRegenStartTime": 1,
+            "ShieldVerticalOffset": -7,
+            "ShieldRechargeTime": 160,
+            "MeshZ": "/effects/entities/Shield01/Shield01z_mesh",
+            "ShieldSize": 25,
+            "ShieldMaxHealth": 20000,
+            "RegenAssistMult": 60,
+            "ShieldSpillOverDamageMod": 0,
+            "ShieldRegenRate": 64,
+            "Mesh": "/effects/entities/Shield01/Shield01_mesh"
+        },
+        "AirThreatLevel": 16,
+        "ArmorType": "Experimental",
+        "MaxHealth": 12500
+    },
+    "Veteran": {
+        "Level1": 40,
+        "Level2": 80,
+        "Level3": 120,
+        "Level4": 160,
+        "Level5": 200
+    },
+    "StrategicIconName": "icon_experimental_generic",
+    "SizeX": 5.5,
+    "SelectionThickness": 0.34,
+    "Physics": {
+        "BankingSlope": 3,
+        "MaxSteerForce": 1000,
+        "MeshExtentsZ": 10.5,
+        "MeshExtentsX": 8,
+        "MinSpeedPercent": 0,
+        "TurnRate": 30,
+        "RotateOnSpot": false,
+        "MaxSpeed": 1.75,
+        "TurnRadius": 0,
+        "DragCoefficient": 0.2,
+        "MotionType": "RULEUMT_Amphibious",
+        "SkirtOffsetZ": -1.5,
+        "MeshExtentsY": 2,
+        "SkirtSizeX": 9,
+        "SkirtOffsetX": -1.5,
+        "SkirtSizeZ": 9,
+        "MaxBrake": 1.75,
+        "BuildOnLayerCaps": {
+            "LAYER_Orbit": false,
+            "LAYER_Air": false,
+            "LAYER_Seabed": false,
+            "LAYER_Water": true,
+            "LAYER_Sub": false,
+            "LAYER_Land": true
+        },
+        "RotateOnSpotThreshold": 0.5,
+        "Elevation": 1,
+        "MaxAcceleration": 1.75,
+        "BackUpDistance": 15,
+        "MaxSpeedReverse": 1.75,
+        "LayerChangeOffsetHeight": -0.75,
+        "RotateBodyWhileMoving": false
+    },
+    "Id": "UEL0401",
+    "CollisionOffsetZ": 0,
+    "SizeZ": 8,
+    "Buffs": {
+        "Regen": {
+            "Level1": 15,
+            "Level2": 30,
+            "Level3": 45,
+            "Level4": 60,
+            "Level5": 75
+        }
+    },
+    "AI": {
+        "TargetBones": [
+            "Bay_Cover",
+            "Front_Core",
+            "Rear_Core",
+            "Ramp",
+            "Turret_Left01",
+            "Turret_Left02",
+            "Turret_Right01",
+            "Turret_Right02",
+            "UEL0401"
+        ],
+        "GuardScanRadius": 300,
+        "RepairConsumeMass": 0.5,
+        "RepairConsumeEnergy": 5,
+        "AttackAngle": 10,
+        "RefuelingRepairAmount": 500,
+        "AddTargetBones": [
+            "Turret_Left01_Barrel02",
+            "Turret_Left02_Barrel02",
+            "Turret_Right01_Barrel02",
+            "Turret_Right02_Barrel02",
+            "Attachpoint3",
+            "Turret_Left_AA",
+            "Turret_Right_AA"
+        ],
+        "RefuelingMultiplier": 75
+    },
+    "Weapon": [
+        {
+            "HeadingArcRange": 120,
+            "RackSalvoSize": 1,
+            "TurretYaw": -20,
+            "MuzzleVelocity": 25,
+            "WeaponUnpacks": false,
+            "WeaponCategory": "Direct Fire",
+            "RackRecoilDistance": -1,
+            "ProjectileLifetimeUsesMultiplier": 1.15,
+            "TurretPitch": 0,
+            "RackSlavedToTurret": true,
+            "MuzzleSalvoSize": 1,
+            "CollideFriendly": false,
+            "TrackingRadius": 1.15,
+            "AboveWaterFireOnly": true,
+            "FiringTolerance": 2,
+            "Label": "RightTurret01",
+            "WeaponRepackTimeout": 0,
+            "RangeCategory": "UWRC_DirectFire",
+            "TurretBonePitch": "Turret_Right01_Barrel02",
+            "Turreted": true,
+            "TurretBoneYaw": "Turret_Right01",
+            "RackSalvoReloadTime": 0,
+            "FireTargetLayerCapsTable": {
+                "Land": "Land|Water|Seabed",
+                "Seabed": "Land|Water|Seabed"
+            },
+            "TargetCheckInterval": 0.5,
+            "TurretPitchRange": 60,
+            "TargetRestrictDisallow": "UNTARGETABLE",
+            "TurretDualManipulators": false,
+            "ProjectileId": "/projectiles/TDFGauss04/TDFGauss04_proj.bp",
+            "Audio": {
+                "Fire": {
+                    "Cue": "UEL0401_Cannon_Exp_Lrg",
+                    "Bank": "UELWeapon",
+                    "LodCutoff": "Weapon_LodCutoff"
+                }
+            },
+            "RackFireTogether": true,
+            "TurretBoneMuzzle": "Turret_Right01_Muzzle02",
+            "MaxRadius": 100,
+            "BallisticArc": "RULEUBA_LowArc",
+            "TurretPitchSpeed": 50,
+            "TurretYawSpeed": 50,
+            "MuzzleSalvoDelay": 0,
+            "DamageRadius": 1.5,
+            "TargetPriorities": [
+                "SPECIALHIGHPRI",
+                "EXPERIMENTAL",
+                "SUBCOMMANDER",
+                "TECH3 MOBILE",
+                "TECH2 MOBILE",
+                "TECH1 MOBILE",
+                "STRUCTURE DEFENSE",
+                "SPECIALLOWPRI",
+                "ALLUNITS"
+            ],
+            "MuzzleVelocityReduceDistance": 90,
+            "RateOfFire": 1,
+            "RackSalvoChargeTime": 0,
+            "FiringRandomness": 1.1,
+            "TurretYawRange": 100,
+            "AboveWaterTargetsOnly": true,
+            "ProjectilesPerOnFire": 3,
+            "RackBones": [
+                {
+                    "RackBone": "Turret_Right01_Barrel01",
+                    "MuzzleBones": [
+                        "Turret_Right01_Muzzle01"
+                    ]
+                },
+                {
+                    "RackBone": "Turret_Right01_Barrel02",
+                    "MuzzleBones": [
+                        "Turret_Right01_Muzzle02"
+                    ]
+                },
+                {
+                    "RackBone": "Turret_Right01_Barrel03",
+                    "MuzzleBones": [
+                        "Turret_Right01_Muzzle03"
+                    ]
+                }
+            ],
+            "DisplayName": "Gauss Cannon",
+            "HeadingArcCenter": 75,
+            "RackReloadTimeout": 10,
+            "DamageType": "Normal",
+            "Damage": 250,
+            "dps": "?!?"
+        },
+        {
+            "HeadingArcRange": 130,
+            "RackSalvoSize": 1,
+            "TurretYaw": 30,
+            "MuzzleVelocity": 25,
+            "WeaponCategory": "Direct Fire",
+            "RackRecoilDistance": -1,
+            "ProjectileLifetimeUsesMultiplier": 1.15,
+            "TurretPitch": 0,
+            "PrefersPrimaryWeaponTarget": true,
+            "DamageRadius": 1.5,
+            "MuzzleSalvoSize": 1,
+            "CollideFriendly": false,
+            "TrackingRadius": 1.15,
+            "AboveWaterFireOnly": true,
+            "FiringTolerance": 2,
+            "Label": "RightTurret02",
+            "WeaponRepackTimeout": 0,
+            "RangeCategory": "UWRC_DirectFire",
+            "TurretBonePitch": "Turret_Right02_Barrel02",
+            "WeaponUnpacks": false,
+            "TurretBoneYaw": "Turret_Right02",
+            "RackSalvoReloadTime": 0,
+            "FireTargetLayerCapsTable": {
+                "Land": "Land|Water|Seabed",
+                "Seabed": "Land|Water|Seabed"
+            },
+            "TargetCheckInterval": 0.5,
+            "TurretPitchRange": 60,
+            "TargetRestrictDisallow": "UNTARGETABLE",
+            "TurretDualManipulators": false,
+            "ProjectileId": "/projectiles/TDFGauss04/TDFGauss04_proj.bp",
+            "Audio": {
+                "Fire": {
+                    "Cue": "UEL0401_Cannon_Exp_Lrg",
+                    "Bank": "UELWeapon",
+                    "LodCutoff": "Weapon_LodCutoff"
+                }
+            },
+            "RackFireTogether": true,
+            "TurretBoneMuzzle": "Turret_Right02_Muzzle02",
+            "MaxRadius": 100,
+            "BallisticArc": "RULEUBA_LowArc",
+            "TurretPitchSpeed": 50,
+            "TurretYawSpeed": 50,
+            "DamageType": "Normal",
+            "RackSlavedToTurret": true,
+            "TargetPriorities": [
+                "SPECIALHIGHPRI",
+                "TECH3 MOBILE",
+                "TECH2 MOBILE",
+                "TECH1 MOBILE",
+                "STRUCTURE DEFENSE",
+                "SPECIALLOWPRI",
+                "ALLUNITS"
+            ],
+            "MuzzleVelocityReduceDistance": 90,
+            "RateOfFire": 1,
+            "RackSalvoChargeTime": 0,
+            "FiringRandomness": 1.1,
+            "Turreted": true,
+            "TurretYawRange": 110,
+            "AboveWaterTargetsOnly": true,
+            "ProjectilesPerOnFire": 3,
+            "RackBones": [
+                {
+                    "RackBone": "Turret_Right02_Barrel01",
+                    "MuzzleBones": [
+                        "Turret_Right02_Muzzle01"
+                    ]
+                },
+                {
+                    "RackBone": "Turret_Right02_Barrel02",
+                    "MuzzleBones": [
+                        "Turret_Right02_Muzzle02"
+                    ]
+                },
+                {
+                    "RackBone": "Turret_Right02_Barrel03",
+                    "MuzzleBones": [
+                        "Turret_Right02_Muzzle03"
+                    ]
+                }
+            ],
+            "DisplayName": "Gauss Cannon",
+            "HeadingArcCenter": 120,
+            "RackReloadTimeout": 10,
+            "MuzzleSalvoDelay": 0,
+            "Damage": 250,
+            "dps": "?!?"
+        },
+        {
+            "HeadingArcRange": 125,
+            "RackSalvoSize": 1,
+            "TurretYaw": 20,
+            "MuzzleVelocity": 25,
+            "WeaponCategory": "Direct Fire",
+            "RackRecoilDistance": -1,
+            "ProjectileLifetimeUsesMultiplier": 1.15,
+            "TurretPitch": 0,
+            "PrefersPrimaryWeaponTarget": true,
+            "DamageRadius": 1.5,
+            "MuzzleSalvoSize": 1,
+            "CollideFriendly": false,
+            "TrackingRadius": 1.15,
+            "AboveWaterFireOnly": true,
+            "FiringTolerance": 2,
+            "Label": "LeftTurret01",
+            "WeaponRepackTimeout": 0,
+            "RangeCategory": "UWRC_DirectFire",
+            "TurretBonePitch": "Turret_Left01_Barrel02",
+            "WeaponUnpacks": false,
+            "TurretBoneYaw": "Turret_Left01",
+            "RackSalvoReloadTime": 0,
+            "FireTargetLayerCapsTable": {
+                "Land": "Land|Water|Seabed",
+                "Seabed": "Land|Water|Seabed"
+            },
+            "TargetCheckInterval": 0.5,
+            "TurretPitchRange": 60,
+            "TargetRestrictDisallow": "UNTARGETABLE",
+            "TurretDualManipulators": false,
+            "ProjectileId": "/projectiles/TDFGauss04/TDFGauss04_proj.bp",
+            "Audio": {
+                "Fire": {
+                    "Cue": "UEL0401_Cannon_Exp_Lrg",
+                    "Bank": "UELWeapon",
+                    "LodCutoff": "Weapon_LodCutoff"
+                }
+            },
+            "RackFireTogether": true,
+            "TurretBoneMuzzle": "Turret_Left01_Muzzle02",
+            "MaxRadius": 100,
+            "BallisticArc": "RULEUBA_LowArc",
+            "TurretPitchSpeed": 50,
+            "TurretYawSpeed": 50,
+            "DamageType": "Normal",
+            "RackSlavedToTurret": true,
+            "TargetPriorities": [
+                "SPECIALHIGHPRI",
+                "EXPERIMENTAL",
+                "SUBCOMMANDER",
+                "TECH3 MOBILE",
+                "TECH2 MOBILE",
+                "TECH1 MOBILE",
+                "STRUCTURE DEFENSE",
+                "SPECIALLOWPRI",
+                "ALLUNITS"
+            ],
+            "MuzzleVelocityReduceDistance": 90,
+            "RateOfFire": 1,
+            "RackSalvoChargeTime": 0,
+            "FiringRandomness": 1.1,
+            "Turreted": true,
+            "TurretYawRange": 100,
+            "AboveWaterTargetsOnly": true,
+            "ProjectilesPerOnFire": 3,
+            "RackBones": [
+                {
+                    "RackBone": "Turret_Left01_Barrel01",
+                    "MuzzleBones": [
+                        "Turret_Left01_Muzzle01"
+                    ]
+                },
+                {
+                    "RackBone": "Turret_Left01_Barrel02",
+                    "MuzzleBones": [
+                        "Turret_Left01_Muzzle02"
+                    ]
+                },
+                {
+                    "RackBone": "Turret_Left01_Barrel03",
+                    "MuzzleBones": [
+                        "Turret_Left01_Muzzle03"
+                    ]
+                }
+            ],
+            "DisplayName": "Gauss Cannon",
+            "HeadingArcCenter": -75,
+            "RackReloadTimeout": 10,
+            "MuzzleSalvoDelay": 0,
+            "Damage": 250,
+            "dps": "?!?"
+        },
+        {
+            "HeadingArcRange": 130,
+            "RackSalvoSize": 1,
+            "TurretYaw": -30,
+            "MuzzleVelocity": 25,
+            "WeaponCategory": "Direct Fire",
+            "RackRecoilDistance": -1,
+            "ProjectileLifetimeUsesMultiplier": 1.15,
+            "TurretPitch": 0,
+            "PrefersPrimaryWeaponTarget": true,
+            "DamageRadius": 1.5,
+            "MuzzleSalvoSize": 1,
+            "CollideFriendly": false,
+            "TrackingRadius": 1.15,
+            "AboveWaterFireOnly": true,
+            "FiringTolerance": 2,
+            "Label": "LeftTurret02",
+            "WeaponRepackTimeout": 0,
+            "RangeCategory": "UWRC_DirectFire",
+            "TurretBonePitch": "Turret_Left02_Barrel02",
+            "WeaponUnpacks": false,
+            "TurretBoneYaw": "Turret_Left02",
+            "RackSalvoReloadTime": 0,
+            "FireTargetLayerCapsTable": {
+                "Land": "Land|Water|Seabed",
+                "Seabed": "Land|Water|Seabed"
+            },
+            "TargetCheckInterval": 0.5,
+            "TurretPitchRange": 60,
+            "TargetRestrictDisallow": "UNTARGETABLE",
+            "TurretDualManipulators": false,
+            "ProjectileId": "/projectiles/TDFGauss04/TDFGauss04_proj.bp",
+            "Audio": {
+                "Fire": {
+                    "Cue": "UEL0401_Cannon_Exp_Lrg",
+                    "Bank": "UELWeapon",
+                    "LodCutoff": "Weapon_LodCutoff"
+                }
+            },
+            "RackFireTogether": true,
+            "TurretBoneMuzzle": "Turret_Left02_Muzzle02",
+            "MaxRadius": 100,
+            "BallisticArc": "RULEUBA_LowArc",
+            "TurretPitchSpeed": 50,
+            "TurretYawSpeed": 50,
+            "DamageType": "Normal",
+            "RackSlavedToTurret": true,
+            "TargetPriorities": [
+                "SPECIALHIGHPRI",
+                "EXPERIMENTAL",
+                "SUBCOMMANDER",
+                "TECH3 MOBILE",
+                "TECH2 MOBILE",
+                "TECH1 MOBILE",
+                "STRUCTURE DEFENSE",
+                "SPECIALLOWPRI",
+                "ALLUNITS"
+            ],
+            "MuzzleVelocityReduceDistance": 90,
+            "RateOfFire": 1,
+            "RackSalvoChargeTime": 0,
+            "FiringRandomness": 1.1,
+            "Turreted": true,
+            "TurretYawRange": 110,
+            "AboveWaterTargetsOnly": true,
+            "ProjectilesPerOnFire": 3,
+            "RackBones": [
+                {
+                    "RackBone": "Turret_Left02_Barrel01",
+                    "MuzzleBones": [
+                        "Turret_Left02_Muzzle01"
+                    ]
+                },
+                {
+                    "RackBone": "Turret_Left02_Barrel02",
+                    "MuzzleBones": [
+                        "Turret_Left02_Muzzle02"
+                    ]
+                },
+                {
+                    "RackBone": "Turret_Left02_Barrel03",
+                    "MuzzleBones": [
+                        "Turret_Left02_Muzzle03"
+                    ]
+                }
+            ],
+            "DisplayName": "Gauss Cannon",
+            "HeadingArcCenter": -120,
+            "RackReloadTimeout": 10,
+            "MuzzleSalvoDelay": 0,
+            "Damage": 250,
+            "dps": "?!?"
+        },
+        {
+            "HeadingArcRange": 90,
+            "RackSalvoSize": 1,
+            "TurretYaw": 0,
+            "MuzzleVelocity": 45,
+            "WeaponCategory": "Direct Fire",
+            "RackRecoilDistance": 0,
+            "Turreted": true,
+            "TurretPitch": 0,
+            "MuzzleSalvoSize": 1,
+            "CollideFriendly": false,
+            "TrackingRadius": 1.15,
+            "AboveWaterFireOnly": true,
+            "FiringTolerance": 2,
+            "Label": "RightRiotgun",
+            "RangeCategory": "UWRC_DirectFire",
+            "TurretBonePitch": "Riot_Gun_Right_Barrel",
+            "TurretBoneYaw": "Riot_Gun_Right",
+            "RackSalvoReloadTime": 0,
+            "FireTargetLayerCapsTable": {
+                "Land": "Land|Water|Seabed",
+                "Seabed": "Land|Water|Seabed"
+            },
+            "TurretDualManipulators": false,
+            "TurretPitchRange": 25,
+            "TargetRestrictDisallow": "UNTARGETABLE",
+            "TargetCheckInterval": 0.16,
+            "ProjectileId": "/projectiles/TDFRiot02/TDFRiot02_proj.bp",
+            "Audio": {
+                "Fire": {
+                    "Cue": "UEL0203_Riot_Gun",
+                    "Bank": "UELWeapon",
+                    "LodCutoff": "Weapon_LodCutoff"
+                }
+            },
+            "RackFireTogether": false,
+            "TurretBoneMuzzle": "Riot_Gun_Right_Barrel_Muzzle",
+            "MaxRadius": 45,
+            "BallisticArc": "RULEUBA_LowArc",
+            "TurretPitchSpeed": 30,
+            "TurretYawSpeed": 60,
+            "MuzzleSalvoDelay": 0,
+            "RackSlavedToTurret": false,
+            "TargetPriorities": [
+                "SPECIALHIGHPRI",
+                "TECH1 MOBILE",
+                "TECH2 MOBILE",
+                "TECH3 MOBILE",
+                "STRUCTURE DEFENSE",
+                "SPECIALLOWPRI",
+                "ALLUNITS"
+            ],
+            "RateOfFire": 3,
+            "RackSalvoChargeTime": 0,
+            "ProjectileLifetimeUsesMultiplier": 1.15,
+            "TurretYawRange": 90,
+            "AboveWaterTargetsOnly": true,
+            "RackBones": [
+                {
+                    "RackBone": "Riot_Gun_Right_Barrel",
+                    "MuzzleBones": [
+                        "Riot_Gun_Right_Barrel_Muzzle"
+                    ]
+                }
+            ],
+            "DisplayName": "Hells Fury Riot Gun",
+            "HeadingArcCenter": 90,
+            "RackReloadTimeout": 10,
+            "DamageType": "Normal",
+            "Damage": 150,
+            "dps": "?!?"
+        },
+        {
+            "HeadingArcRange": 90,
+            "RackSalvoSize": 1,
+            "TurretYaw": 0,
+            "MuzzleVelocity": 45,
+            "WeaponCategory": "Direct Fire",
+            "RackRecoilDistance": 0,
+            "Turreted": true,
+            "TurretPitch": 0,
+            "PrefersPrimaryWeaponTarget": true,
+            "MuzzleSalvoSize": 1,
+            "CollideFriendly": false,
+            "TrackingRadius": 1.15,
+            "AboveWaterFireOnly": true,
+            "FiringTolerance": 2,
+            "Label": "LeftRiotgun",
+            "RangeCategory": "UWRC_DirectFire",
+            "TurretBonePitch": "Riot_Gun_Left_Barrel",
+            "TurretBoneYaw": "Riot_Gun_Left",
+            "RackSalvoReloadTime": 0,
+            "FireTargetLayerCapsTable": {
+                "Land": "Land|Water|Seabed",
+                "Seabed": "Land|Water|Seabed"
+            },
+            "TurretDualManipulators": false,
+            "TurretPitchRange": 25,
+            "TargetRestrictDisallow": "UNTARGETABLE",
+            "TargetCheckInterval": 0.16,
+            "ProjectileId": "/projectiles/TDFRiot02/TDFRiot02_proj.bp",
+            "Audio": {
+                "Fire": {
+                    "Cue": "UEL0203_Riot_Gun",
+                    "Bank": "UELWeapon",
+                    "LodCutoff": "Weapon_LodCutoff"
+                }
+            },
+            "RackFireTogether": false,
+            "TurretBoneMuzzle": "Riot_Gun_Left_Barrel_Muzzle",
+            "MaxRadius": 45,
+            "BallisticArc": "RULEUBA_LowArc",
+            "TurretPitchSpeed": 30,
+            "TurretYawSpeed": 60,
+            "MuzzleSalvoDelay": 0,
+            "RackSlavedToTurret": false,
+            "TargetPriorities": [
+                "SPECIALHIGHPRI",
+                "TECH1 MOBILE",
+                "TECH2 MOBILE",
+                "TECH3 MOBILE",
+                "STRUCTURE DEFENSE",
+                "SPECIALLOWPRI",
+                "ALLUNITS"
+            ],
+            "RateOfFire": 3,
+            "RackSalvoChargeTime": 0,
+            "ProjectileLifetimeUsesMultiplier": 1.15,
+            "TurretYawRange": 90,
+            "AboveWaterTargetsOnly": true,
+            "RackBones": [
+                {
+                    "RackBone": "Riot_Gun_Left_Barrel",
+                    "MuzzleBones": [
+                        "Riot_Gun_Left_Barrel_Muzzle"
+                    ]
+                }
+            ],
+            "DisplayName": "Hells Fury Riot Gun",
+            "HeadingArcCenter": -90,
+            "RackReloadTimeout": 10,
+            "DamageType": "Normal",
+            "Damage": 150,
+            "dps": "?!?"
+        },
+        {
+            "CollideFriendly": false,
+            "TurretYaw": 0,
+            "MuzzleVelocity": 90,
+            "WeaponCategory": "Anti Air",
+            "RackRecoilDistance": -0.5,
+            "FiringRandomness": 0.01,
+            "TurretPitch": 45,
+            "EffectiveRadius": 42,
+            "MuzzleSalvoSize": 1,
+            "RackSalvoSize": 1,
+            "TrackingRadius": 1.4,
+            "AboveWaterFireOnly": true,
+            "FiringTolerance": 0.05,
+            "Label": "RightAAGun",
+            "WeaponRepackTimeout": 0,
+            "RangeCategory": "UWRC_AntiAir",
+            "TurretBonePitch": "Turret_Right_AA_Barrel",
+            "WeaponUnpacks": false,
+            "TurretBoneYaw": "Turret_Right_AA",
+            "RackSalvoReloadTime": 0,
+            "FireTargetLayerCapsTable": {
+                "Water": "Air",
+                "Land": "Air",
+                "Seabed": "Air"
+            },
+            "TurretDualManipulators": false,
+            "TurretPitchRange": 45,
+            "TargetRestrictDisallow": "UNTARGETABLE",
+            "TargetCheckInterval": 0.3,
+            "ProjectileId": "/projectiles/TAARailgun01/TAARailgun01_proj.bp",
+            "Audio": {
+                "Fire": {
+                    "Cue": "UEB2104_Railgun",
+                    "Bank": "UELWeapon",
+                    "LodCutoff": "Weapon_LodCutoff"
+                }
+            },
+            "RackFireTogether": false,
+            "CannotAttackGround": true,
+            "TurretBoneMuzzle": "Turret_Right_AA_Muzzle01",
+            "MaxRadius": 45,
+            "BallisticArc": "RULEUBA_None",
+            "TurretPitchSpeed": 180,
+            "ProjectileLifetimeUsesMultiplier": 1.25,
+            "TurretYawSpeed": 180,
+            "MuzzleSalvoDelay": 0,
+            "RackSlavedToTurret": false,
+            "TargetPriorities": [
+                "SPECIALHIGHPRI",
+                "AIR MOBILE HIGHPRIAIR",
+                "AIR MOBILE TECH3 BOMBER",
+                "AIR MOBILE BOMBER",
+                "AIR MOBILE GROUNDATTACK",
+                "AIR MOBILE TRANSPORTATION",
+                "AIR MOBILE",
+                "SPECIALLOWPRI",
+                "ALLUNITS"
+            ],
+            "RateOfFire": 1.5,
+            "AlwaysRecheckTarget": true,
+            "RackSalvoChargeTime": 0,
+            "Turreted": true,
+            "TurretYawRange": 180,
+            "ProjectilesPerOnFire": 1,
+            "RackBones": [
+                {
+                    "RackBone": "Turret_Right_AA_Barrel",
+                    "MuzzleBones": [
+                        "Turret_Right_AA_Muzzle01",
+                        "Turret_Right_AA_Muzzle02"
+                    ]
+                }
+            ],
+            "DisplayName": "Linked Railgun",
+            "RackReloadTimeout": 10,
+            "DamageType": "Normal",
+            "Damage": 20,
+            "dps": "?!?"
+        },
+        {
+            "CollideFriendly": false,
+            "TurretYaw": 0,
+            "MuzzleVelocity": 90,
+            "WeaponCategory": "Anti Air",
+            "RackRecoilDistance": -0.5,
+            "FiringRandomness": 0.01,
+            "TurretPitch": 45,
+            "PrefersPrimaryWeaponTarget": true,
+            "EffectiveRadius": 42,
+            "MuzzleSalvoSize": 1,
+            "RackSalvoSize": 1,
+            "TrackingRadius": 1.4,
+            "AboveWaterFireOnly": true,
+            "FiringTolerance": 0.05,
+            "Label": "LeftAAGun",
+            "WeaponRepackTimeout": 0,
+            "RangeCategory": "UWRC_AntiAir",
+            "TurretBonePitch": "Turret_Left_AA_Barrel",
+            "WeaponUnpacks": false,
+            "TurretBoneYaw": "Turret_Left_AA",
+            "RackSalvoReloadTime": 0,
+            "FireTargetLayerCapsTable": {
+                "Water": "Air",
+                "Land": "Air",
+                "Seabed": "Air"
+            },
+            "TurretDualManipulators": false,
+            "TurretPitchRange": 45,
+            "TargetRestrictDisallow": "UNTARGETABLE",
+            "TargetCheckInterval": 0.3,
+            "ProjectileId": "/projectiles/TAARailgun01/TAARailgun01_proj.bp",
+            "Audio": {
+                "Fire": {
+                    "Cue": "UEB2104_Railgun",
+                    "Bank": "UELWeapon",
+                    "LodCutoff": "Weapon_LodCutoff"
+                }
+            },
+            "RackFireTogether": false,
+            "CannotAttackGround": true,
+            "TurretBoneMuzzle": "Turret_Left_AA_Muzzle01",
+            "MaxRadius": 45,
+            "BallisticArc": "RULEUBA_None",
+            "TurretPitchSpeed": 180,
+            "ProjectileLifetimeUsesMultiplier": 1.25,
+            "TurretYawSpeed": 180,
+            "MuzzleSalvoDelay": 0,
+            "RackSlavedToTurret": false,
+            "TargetPriorities": [
+                "SPECIALHIGHPRI",
+                "AIR MOBILE HIGHPRIAIR",
+                "AIR MOBILE TECH3 BOMBER",
+                "AIR MOBILE BOMBER",
+                "AIR MOBILE GROUNDATTACK",
+                "AIR MOBILE TRANSPORTATION",
+                "AIR MOBILE",
+                "SPECIALLOWPRI",
+                "ALLUNITS"
+            ],
+            "RateOfFire": 1.5,
+            "AlwaysRecheckTarget": true,
+            "RackSalvoChargeTime": 0,
+            "Turreted": true,
+            "TurretYawRange": 180,
+            "ProjectilesPerOnFire": 1,
+            "RackBones": [
+                {
+                    "RackBone": "Turret_Left_AA_Barrel",
+                    "MuzzleBones": [
+                        "Turret_Left_AA_Muzzle01",
+                        "Turret_Left_AA_Muzzle02"
+                    ]
+                }
+            ],
+            "DisplayName": "Linked Railgun",
+            "RackReloadTimeout": 10,
+            "DamageType": "Normal",
+            "Damage": 20,
+            "dps": "?!?"
+        },
+        {
+            "ProjectileId": "/projectiles/TANAnglerTorpedo02/TANAnglerTorpedo02_proj.bp",
+            "TargetPriorities": [
+                "SPECIALHIGHPRI",
+                "MOBILE",
+                "STRUCTURE DEFENSE",
+                "SPECIALLOWPRI",
+                "ALLUNITS"
+            ],
+            "RackSalvoSize": 1,
+            "FireTargetLayerCapsTable": {
+                "Seabed": "Seabed|Sub|Water"
+            },
+            "TurretYaw": 0,
+            "RackFireTogether": false,
+            "MuzzleVelocity": 5,
+            "TargetRestrictDisallow": "UNTARGETABLE, HOVER",
+            "Audio": {
+                "Fire": {
+                    "Cue": "UES0203_Torpedo",
+                    "Bank": "UESWeapon",
+                    "LodCutoff": "Weapon_LodCutoff"
+                }
+            },
+            "MaxRadius": 40,
+            "BallisticArc": "RULEUBA_None",
+            "RackRecoilDistance": 0,
+            "Turreted": false,
+            "WeaponCategory": "Anti Navy",
+            "TurretPitch": 0,
+            "TurretYawSpeed": 0,
+            "DamageType": "Normal",
+            "MuzzleSalvoSize": 1,
+            "CollideFriendly": false,
+            "RateOfFire": 0.25,
+            "TrackingRadius": 1.15,
+            "FiringTolerance": 2,
+            "Label": "Torpedo",
+            "RackSalvoChargeTime": 0,
+            "RangeCategory": "UWRC_AntiNavy",
+            "ProjectileLifetime": 9,
+            "TurretPitchSpeed": 0,
+            "RackSlavedToTurret": false,
+            "TurretYawRange": 0,
+            "RackSalvoReloadTime": 0,
+            "RackBones": [
+                {
+                    "RackBone": "Torpedo_01",
+                    "MuzzleBones": [
+                        "Torpedo_01",
+                        "Torpedo_02",
+                        "Torpedo_03",
+                        "Torpedo_04"
+                    ]
+                }
+            ],
+            "DisplayName": "Angler Torpedo",
+            "TargetCheckInterval": 2.5,
+            "RackReloadTimeout": 10,
+            "MuzzleSalvoDelay": 0,
+            "TurretPitchRange": 0,
+            "Damage": 75,
+            "TurretDualManipulators": false,
+            "dps": "?!?"
+        },
+        {
+            "DisplayName": "Death Weapon",
+            "DamageType": "Normal",
+            "DamageFriendly": true,
+            "DamageRadius": 7,
+            "WeaponCategory": "Death",
+            "DummyWeapon": true,
+            "Damage": 4000,
+            "Label": "DeathWeapon",
+            "dps": "?!?"
+        }
+    ],
+    "LifeBarOffset": 4.35,
+    "Description": "Experimental Mobile Factory",
+    "selected": true
+}

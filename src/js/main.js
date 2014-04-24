@@ -82,9 +82,8 @@ unitDb.UnitDecorator = function(blueprint) {
             return (this.name ? this.name + ': ' : '') + (this.tech == 'EXP' ? '' : this.tech + ' ') + this.description;
         },
         getDps = function(weapon) {
-            return '?!?';
+            return weapon.Damage * weapon.RateOfFire * weapon.MuzzleSalvoSize;
         };
-
 
         self = {
             id: blueprint.Id,

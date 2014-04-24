@@ -156,7 +156,7 @@
                             <tr>
                                 <td></td>
                                 <td title="category (damage type)" colspan="2"><small>{{ w.WeaponCategory }} ({{ w.DamageType }})</small></td>
-                                <td title="damage per second"><small>{{ w.dps }}dps</small></td>
+                                <td title="damage per second{{ ' - manual fire' | if:w.ManualFire }}"><small>{{ w.dps | round }}dps{{ " !"| if:w.ManualFire }}</small></td>
                             </tr>
                             <tr ng-if="w.MaxRadius">
                                 <td></td>

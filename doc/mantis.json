@@ -1,0 +1,337 @@
+{
+    "id": "URL0107",
+    "name": "Mantis",
+    "description": "Assault Bot",
+    "faction": "Cybran",
+    "classification": "Land",
+    "tech": "T1",
+    "strategicIcon": "icon_bot1_directfire",
+    "icon": "land",
+    "order": 40,
+    "Wreckage": {
+        "Blueprint": "/props/DefaultWreckage/DefaultWreckage_prop.bp",
+        "MassMult": 0.9,
+        "EnergyMult": 0,
+        "ReclaimTimeMultiplier": 1,
+        "HealthMult": 0.9,
+        "WreckageLayers": {
+            "Water": false,
+            "Land": true,
+            "Seabed": false,
+            "Sub": false,
+            "Air": false
+        }
+    },
+    "Intel": {
+        "VisionRadius": 20
+    },
+    "Interface": {
+        "HelpText": "Assault Bot"
+    },
+    "Audio": {
+        "Destroyed": {
+            "Cue": "URL_Destroy_Land",
+            "Bank": "URLDestroy",
+            "LodCutoff": "UnitMove_LodCutoff"
+        },
+        "ConstructLoop": {
+            "Cue": "URL0208_Construct_Loop",
+            "Bank": "URL",
+            "LodCutoff": "UnitMove_LodCutoff"
+        },
+        "UISelection": {
+            "Cue": "Cybran_Select_Bot",
+            "Bank": "Interface",
+            "LodCutoff": "UnitMove_LodCutoff"
+        },
+        "AmbientMove": {
+            "Cue": "URL0107_Move_Loop",
+            "Bank": "URL",
+            "LodCutoff": "UnitMove_LodCutoff"
+        },
+        "StartMove": {
+            "Cue": "URL0107_Move_Start",
+            "Bank": "URL",
+            "LodCutoff": "UnitMove_LodCutoff"
+        },
+        "Construct": {
+            "Cue": "URL0208_Construct_Start",
+            "Bank": "URL",
+            "LodCutoff": "UnitMove_LodCutoff"
+        },
+        "StopMove": {
+            "Cue": "URL0107_Move_Stop",
+            "Bank": "URL",
+            "LodCutoff": "UnitMove_LodCutoff"
+        }
+    },
+    "StrategicIconSortPriority": 135,
+    "Display": {
+        "AnimationWalk": "/units/url0107/URL0107_A001.sca",
+        "SpawnRandomRotation": true,
+        "UniformScale": 0.1475,
+        "Mesh": {
+            "LODs": [
+                {
+                    "ShaderName": "Insect",
+                    "Scrolling": true,
+                    "LODCutoff": 100
+                },
+                {
+                    "ShaderName": "Insect",
+                    "SpecularName": "url0107_lod1_specteam.dds",
+                    "AlbedoName": "url0107_lod1_albedo.dds",
+                    "LODCutoff": 215
+                }
+            ],
+            "IconFadeInZoom": 130
+        },
+        "Abilities": [
+            "Repairs"
+        ],
+        "PlaceholderMeshName": "UXB0000",
+        "MovementEffects": {
+            "Land": {
+                "Effects": [
+                    {
+                        "Bones": [
+                            "URL0107"
+                        ],
+                        "Type": "GroundKickup01"
+                    }
+                ]
+            }
+        },
+        "AnimationDeath": [
+            {
+                "AnimationRateMin": 0.75,
+                "Animation": "/units/URL0107/URL0107_Adeath01.sca",
+                "AnimationRateMax": 1.25,
+                "Weight": 1
+            },
+            {
+                "AnimationRateMin": 0.75,
+                "Animation": "/units/URL0107/URL0107_Adeath02.sca",
+                "AnimationRateMax": 1.25,
+                "Weight": 1
+            }
+        ],
+        "TransportAnimation": [
+            {
+                "Animation": "/units/URL0107/URL0107_Afold01.sca",
+                "Weight": 100
+            }
+        ],
+        "AnimationWalkRate": 8
+    },
+    "Categories": [
+        "PRODUCTSC1",
+        "SELECTABLE",
+        "BUILTBYTIER1FACTORY",
+        "BUILTBYTIER2FACTORY",
+        "BUILTBYTIER3FACTORY",
+        "CYBRAN",
+        "MOBILE",
+        "LAND",
+        "TECH1",
+        "REPAIR",
+        "DIRECTFIRE",
+        "VISIBLETORECON",
+        "RECLAIMABLE",
+        "BOT",
+        "OVERLAYDIRECTFIRE"
+    ],
+    "LifeBarSize": 0.75,
+    "Transport": {
+        "CanFireFromTransport": false
+    },
+    "LifeBarHeight": 0.075,
+    "SizeZ": 0.9,
+    "SelectionSizeX": 0.55,
+    "SelectionSizeZ": 0.6,
+    "SelectionCenterOffsetZ": 0,
+    "SizeY": 0.7,
+    "BuildIconSortPriority": 40,
+    "General": {
+        "Category": "Direct Fire",
+        "CommandCaps": {
+            "RULEUCC_Move": true,
+            "RULEUCC_Stop": true,
+            "RULEUCC_Transport": false,
+            "RULEUCC_Capture": false,
+            "RULEUCC_Nuke": false,
+            "RULEUCC_Patrol": true,
+            "RULEUCC_CallTransport": true,
+            "RULEUCC_Guard": true,
+            "RULEUCC_Reclaim": false,
+            "RULEUCC_Repair": true,
+            "RULEUCC_Attack": true,
+            "RULEUCC_RetaliateToggle": true
+        },
+        "BuildBones": {
+            "BuildEffectBones": [
+                "Turret_Muzzle_01",
+                "Turret_Muzzle_02"
+            ],
+            "PitchBone": "Turret_Muzzle_01",
+            "YawBone": "Torso"
+        },
+        "Classification": "RULEUC_MilitaryVehicle",
+        "UnitName": "Mantis",
+        "UnitWeight": 1,
+        "FactionName": "Cybran",
+        "TechLevel": "RULEUTL_Basic",
+        "Icon": "land"
+    },
+    "Economy": {
+        "TeleportMassMod": 1,
+        "NeedToFaceTargetToBuild": true,
+        "TeleportEnergyMod": 0.15,
+        "BuildCostMass": 52,
+        "BuildCostEnergy": 273,
+        "BuildTime": 260,
+        "TeleportTimeMod": 0.01,
+        "BuildRate": 1
+    },
+    "Defense": {
+        "RegenRate": 0,
+        "EconomyThreatLevel": 0,
+        "SubThreatLevel": 0,
+        "SurfaceThreatLevel": 1,
+        "Health": 270,
+        "AirThreatLevel": 0,
+        "ArmorType": "Normal",
+        "MaxHealth": 270
+    },
+    "Veteran": {
+        "Level1": 3,
+        "Level2": 6,
+        "Level3": 9,
+        "Level4": 12,
+        "Level5": 15
+    },
+    "StrategicIconName": "icon_bot1_directfire",
+    "SizeX": 0.7,
+    "SelectionThickness": 0.7,
+    "Physics": {
+        "MaxBrake": 3.6,
+        "MaxSteerForce": 10,
+        "MotionType": "RULEUMT_Land",
+        "MinSpeedPercent": 0,
+        "TurnRate": 80,
+        "BuildOnLayerCaps": {
+            "LAYER_Orbit": false,
+            "LAYER_Air": false,
+            "LAYER_Seabed": false,
+            "LAYER_Water": false,
+            "LAYER_Sub": false,
+            "LAYER_Land": true
+        },
+        "MaxSpeed": 3.7,
+        "MaxAcceleration": 3.6,
+        "DragCoefficient": 0.2,
+        "MaxSpeedReverse": 0,
+        "BankingSlope": 0,
+        "TurnRadius": 2
+    },
+    "Id": "URL0107",
+    "CollisionOffsetY": 0.15,
+    "SelectionCenterOffsetX": 0,
+    "Buffs": {
+        "Regen": {
+            "Level1": 1,
+            "Level2": 2,
+            "Level3": 3,
+            "Level4": 4,
+            "Level5": 5
+        }
+    },
+    "AI": {
+        "TargetBones": [
+            "Torso"
+        ]
+    },
+    "Weapon": [
+        {
+            "RackSalvoSize": 1,
+            "TurretYaw": 0,
+            "MuzzleVelocity": 25,
+            "WeaponCategory": "Direct Fire",
+            "RackRecoilDistance": 0,
+            "Turreted": true,
+            "TurretPitch": 0,
+            "DamageRadius": 0,
+            "MuzzleSalvoSize": 1,
+            "CollideFriendly": false,
+            "TrackingRadius": 1.15,
+            "FiringTolerance": 2,
+            "Label": "LaserArms",
+            "RangeCategory": "UWRC_DirectFire",
+            "TurretBonePitch": "Turret_Barrel",
+            "TurretBoneYaw": "Torso",
+            "RackSalvoReloadTime": 0,
+            "FireTargetLayerCapsTable": {
+                "Water": "Land|Water|Seabed",
+                "Land": "Land|Water|Seabed",
+                "Air": "Land|Water|Seabed"
+            },
+            "TargetCheckInterval": 0.16,
+            "TurretPitchRange": 45,
+            "TargetRestrictDisallow": "UNTARGETABLE",
+            "TurretDualManipulators": false,
+            "ProjectileId": "/projectiles/CDFLaserHeavy01/CDFLaserHeavy01_proj.bp",
+            "Audio": {
+                "Fire": {
+                    "Cue": "URL0107_Laser_Auto",
+                    "Bank": "URLWeapon",
+                    "LodCutoff": "Weapon_LodCutoff"
+                }
+            },
+            "RackFireTogether": false,
+            "TurretBoneMuzzle": "Turret_Muzzle_01",
+            "MaxRadius": 18,
+            "BallisticArc": "RULEUBA_LowArc",
+            "TurretPitchSpeed": 100,
+            "TurretYawSpeed": 100,
+            "MuzzleSalvoDelay": 0,
+            "RackSlavedToTurret": false,
+            "TargetPriorities": [
+                "SPECIALHIGHPRI",
+                "TECH1 MOBILE",
+                "TECH2 MOBILE",
+                "TECH3 MOBILE",
+                "STRUCTURE DEFENSE",
+                "SPECIALLOWPRI",
+                "ALLUNITS"
+            ],
+            "RateOfFire": 3,
+            "RackSalvoChargeTime": 0,
+            "ProjectileLifetimeUsesMultiplier": 1.15,
+            "FiringRandomnessWhileMoving": 0,
+            "TurretYawRange": 180,
+            "AboveWaterTargetsOnly": true,
+            "ProjectilesPerOnFire": 1,
+            "RackBones": [
+                {
+                    "RackBone": "Turret_Barrel",
+                    "MuzzleBones": [
+                        "Turret_Muzzle_01"
+                    ]
+                },
+                {
+                    "RackBone": "Turret_Barrel",
+                    "MuzzleBones": [
+                        "Turret_Muzzle_02"
+                    ]
+                }
+            ],
+            "DisplayName": "Light Pulse Laser",
+            "RackReloadTimeout": 10,
+            "DamageType": "Normal",
+            "Damage": 8,
+            "dps": "?!?"
+        }
+    ],
+    "LifeBarOffset": 0.4,
+    "Description": "Assault Bot"
+}

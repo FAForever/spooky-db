@@ -1,0 +1,316 @@
+{
+    "id": "DRL0204",
+    "name": "Hoplite",
+    "description": "Rocket Bot",
+    "faction": "Cybran",
+    "classification": "Land",
+    "tech": "T2",
+    "strategicIcon": "icon_bot2_directfire",
+    "icon": "land",
+    "order": 20,
+    "BuildIconSortPriority": 20,
+    "Wreckage": {
+        "Blueprint": "/props/DefaultWreckage/DefaultWreckage_prop.bp",
+        "MassMult": 0.9,
+        "EnergyMult": 0,
+        "ReclaimTimeMultiplier": 1,
+        "HealthMult": 0.9,
+        "WreckageLayers": {
+            "Water": false,
+            "Land": true,
+            "Seabed": false,
+            "Sub": false,
+            "Air": false
+        }
+    },
+    "Interface": {
+        "HelpText": "Rocket Bot"
+    },
+    "Audio": {
+        "Destroyed": {
+            "Cue": "URL_Destroy_Land",
+            "Bank": "URLDestroy",
+            "LodCutoff": "UnitMove_LodCutoff"
+        },
+        "StartMove": {
+            "Cue": "URL0107_Move_Start",
+            "Bank": "URL",
+            "LodCutoff": "UnitMove_LodCutoff"
+        },
+        "StopMove": {
+            "Cue": "URL0107_Move_Stop",
+            "Bank": "URL",
+            "LodCutoff": "UnitMove_LodCutoff"
+        },
+        "AmbientMove": {
+            "Cue": "URL0107_Move_Loop",
+            "Bank": "URL",
+            "LodCutoff": "UnitMove_LodCutoff"
+        },
+        "UISelection": {
+            "Cue": "Cybran_Select_Bot",
+            "Bank": "Interface",
+            "LodCutoff": "UnitMove_LodCutoff"
+        }
+    },
+    "StrategicIconSortPriority": 135,
+    "LifeBarSize": 0.75,
+    "Categories": [
+        "PRODUCTDL",
+        "SELECTABLE",
+        "BUILTBYTIER2FACTORY",
+        "BUILTBYTIER3FACTORY",
+        "CYBRAN",
+        "MOBILE",
+        "LAND",
+        "TECH2",
+        "DIRECTFIRE",
+        "VISIBLETORECON",
+        "RECLAIMABLE",
+        "BOT",
+        "OVERLAYDIRECTFIRE"
+    ],
+    "Display": {
+        "AnimationWalk": "/units/drl0204/drl0204_awalk.sca",
+        "TransportDropAnimation": [
+            {
+                "Animation": "/units/DRL0204/DRL0204_aunfold.sca",
+                "Weight": 100
+            }
+        ],
+        "UniformScale": 0.085,
+        "Mesh": {
+            "LODs": [
+                {
+                    "ShaderName": "Insect",
+                    "Scrolling": true,
+                    "LODCutoff": 100
+                },
+                {
+                    "ShaderName": "Insect",
+                    "SpecularName": "drl0204_lod1_specteam.dds",
+                    "AlbedoName": "drl0204_lod1_albedo.dds",
+                    "LODCutoff": 215
+                }
+            ],
+            "IconFadeInZoom": 130
+        },
+        "PlaceholderMeshName": "UXB0000",
+        "SpawnRandomRotation": true,
+        "MovementEffects": {
+            "Land": {
+                "Effects": [
+                    {
+                        "Bones": [
+                            "DRL0204"
+                        ],
+                        "Type": "GroundKickup01"
+                    }
+                ]
+            }
+        },
+        "AnimationDeath": [
+            {
+                "AnimationRateMin": 0.75,
+                "Animation": "/units/drl0204/drl0204_adeath.sca",
+                "AnimationRateMax": 1.25,
+                "Weight": 1
+            },
+            {
+                "AnimationRateMin": 0.75,
+                "Animation": "/units/drl0204/drl0204_adeath01.sca",
+                "AnimationRateMax": 1.25,
+                "Weight": 1
+            },
+            {
+                "AnimationRateMin": 0.75,
+                "Animation": "/units/drl0204/drl0204_adeath02.sca",
+                "AnimationRateMax": 1.25,
+                "Weight": 1
+            }
+        ],
+        "TransportAnimation": [
+            {
+                "Animation": "/units/DRL0204/DRL0204_afold.sca",
+                "Weight": 100
+            }
+        ],
+        "AnimationWalkRate": 3.7
+    },
+    "Transport": {
+        "CanFireFromTransport": false,
+        "TransportClass": 2
+    },
+    "LifeBarHeight": 0.075,
+    "SizeZ": 0.9,
+    "SelectionSizeX": 0.75,
+    "SelectionSizeZ": 0.85,
+    "SelectionCenterOffsetZ": 0,
+    "SizeY": 0.8,
+    "SelectionCenterOffsetX": 0,
+    "General": {
+        "Category": "Direct Fire",
+        "UnitName": "Hoplite",
+        "Classification": "RULEUC_MilitaryVehicle",
+        "Icon": "land",
+        "UnitWeight": 1,
+        "FactionName": "Cybran",
+        "TechLevel": "RULEUTL_Basic",
+        "CommandCaps": {
+            "RULEUCC_Move": true,
+            "RULEUCC_Stop": true,
+            "RULEUCC_Transport": false,
+            "RULEUCC_Capture": false,
+            "RULEUCC_Nuke": false,
+            "RULEUCC_Patrol": true,
+            "RULEUCC_CallTransport": true,
+            "RULEUCC_Guard": true,
+            "RULEUCC_Reclaim": false,
+            "RULEUCC_Repair": false,
+            "RULEUCC_Attack": true,
+            "RULEUCC_RetaliateToggle": true
+        }
+    },
+    "Economy": {
+        "TeleportMassMod": 1,
+        "TeleportEnergyMod": 0.15,
+        "BuildCostMass": 200,
+        "BuildCostEnergy": 1000,
+        "BuildTime": 1000,
+        "TeleportTimeMod": 0.01
+    },
+    "Defense": {
+        "RegenRate": 0,
+        "EconomyThreatLevel": 0,
+        "SubThreatLevel": 0,
+        "SurfaceThreatLevel": 4.5,
+        "Health": 550,
+        "AirThreatLevel": 0,
+        "ArmorType": "Normal",
+        "MaxHealth": 550
+    },
+    "Veteran": {
+        "Level1": 6,
+        "Level2": 12,
+        "Level3": 18,
+        "Level4": 24,
+        "Level5": 30
+    },
+    "StrategicIconName": "icon_bot2_directfire",
+    "SizeX": 0.45,
+    "SelectionThickness": 0.5,
+    "Physics": {
+        "MaxBrake": 3.6,
+        "MaxSteerForce": 10,
+        "MotionType": "RULEUMT_Land",
+        "MinSpeedPercent": 0,
+        "TurnRate": 90,
+        "BuildOnLayerCaps": {
+            "LAYER_Orbit": false,
+            "LAYER_Air": false,
+            "LAYER_Seabed": false,
+            "LAYER_Water": false,
+            "LAYER_Sub": false,
+            "LAYER_Land": true
+        },
+        "MaxSpeed": 3.6,
+        "MaxAcceleration": 3.5,
+        "DragCoefficient": 0.2,
+        "MaxSpeedReverse": 0,
+        "BankingSlope": 0,
+        "TurnRadius": 2
+    },
+    "Id": "DRL0204",
+    "Description": "Rocket Bot",
+    "Buffs": {
+        "Regen": {
+            "Level1": 2,
+            "Level2": 4,
+            "Level3": 6,
+            "Level4": 8,
+            "Level5": 10
+        }
+    },
+    "Weapon": [
+        {
+            "RackSalvoSize": 1,
+            "TurretYaw": 0,
+            "MuzzleVelocity": 15,
+            "WeaponCategory": "Direct Fire",
+            "RackRecoilDistance": 0,
+            "Turreted": true,
+            "TurretPitch": 0,
+            "DamageRadius": 2,
+            "MuzzleSalvoSize": 3,
+            "CollideFriendly": false,
+            "TrackingRadius": 1.15,
+            "FiringTolerance": 0.1,
+            "Label": "RocketBackpack",
+            "RangeCategory": "UWRC_DirectFire",
+            "LeadTarget": true,
+            "TurretBonePitch": "Turret_Barrel",
+            "TurretBoneYaw": "Turret",
+            "RackSalvoReloadTime": 0,
+            "FireTargetLayerCapsTable": {
+                "Water": "Land|Water|Seabed",
+                "Land": "Land|Water|Seabed"
+            },
+            "TargetCheckInterval": 0.5,
+            "TurretPitchRange": 45,
+            "TargetRestrictDisallow": "HIGHALTAIR, UNTARGETABLE",
+            "TurretDualManipulators": false,
+            "ProjectileId": "/projectiles/CDFRocketIridium02/CDFRocketIridium02_proj.bp",
+            "Audio": {
+                "Fire": {
+                    "Cue": "URL0402_Missile_Nanite",
+                    "Bank": "URLWeapon",
+                    "LodCutoff": "Weapon_LodCutoff"
+                }
+            },
+            "RackFireTogether": false,
+            "TurretBoneMuzzle": "Turret_Muzzle_01",
+            "MaxRadius": 37,
+            "BallisticArc": "RULEUBA_None",
+            "TurretPitchSpeed": 100,
+            "ProjectileLifetimeUsesMultiplier": 1.15,
+            "TurretYawSpeed": 60,
+            "MuzzleSalvoDelay": 0.2,
+            "RackSlavedToTurret": false,
+            "TargetPriorities": [
+                "SPECIALHIGHPRI",
+                "TECH3 MOBILE",
+                "TECH2 MOBILE",
+                "TECH1 MOBILE",
+                "STRUCTURE DEFENSE",
+                "SPECIALLOWPRI",
+                "ALLUNITS"
+            ],
+            "RateOfFire": 0.25,
+            "RackSalvoChargeTime": 0,
+            "FiringRandomness": 0,
+            "TurretYawRange": 180,
+            "AboveWaterTargetsOnly": true,
+            "ProjectilesPerOnFire": 3,
+            "RackBones": [
+                {
+                    "RackBone": "Turret_Barrel",
+                    "MuzzleBones": [
+                        "Turret_Muzzle_01",
+                        "Turret_Muzzle_02",
+                        "Turret_Muzzle_03"
+                    ]
+                }
+            ],
+            "DisplayName": "Iridium Rocket Pack",
+            "RackReloadTimeout": 10,
+            "DamageType": "Normal",
+            "Damage": 60,
+            "dps": "?!?"
+        }
+    ],
+    "LifeBarOffset": 0.6,
+    "Intel": {
+        "VisionRadius": 26
+    },
+    "selected": true
+}

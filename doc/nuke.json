@@ -1,0 +1,362 @@
+{
+    "id": "URB2305",
+    "name": "Liberator",
+    "description": "Strategic Missile Launcher",
+    "faction": "Cybran",
+    "classification": "Base",
+    "tech": "T3",
+    "strategicIcon": "icon_structure3_missile",
+    "icon": "land",
+    "order": 150,
+    "Wreckage": {
+        "Blueprint": "/props/DefaultWreckage/DefaultWreckage_prop.bp",
+        "MassMult": 0.9,
+        "EnergyMult": 0,
+        "ReclaimTimeMultiplier": 1,
+        "HealthMult": 0.9,
+        "WreckageLayers": {
+            "Water": false,
+            "Land": true,
+            "Seabed": false,
+            "Sub": false,
+            "Air": false
+        }
+    },
+    "Intel": {
+        "VisionRadius": 28
+    },
+    "Interface": {
+        "HelpText": "Strategic Missile Launcher"
+    },
+    "Audio": {
+        "Destroyed": {
+            "Cue": "URB_Destroy_Huge",
+            "Bank": "URLDestroy",
+            "LodCutoff": "UnitMove_LodCutoff"
+        },
+        "DoneBeingBuilt": {
+            "Cue": "URB2305_Activate",
+            "Bank": "URL",
+            "LodCutoff": "UnitMove_LodCutoff"
+        },
+        "Close": {
+            "Cue": "URB2305_Close",
+            "Bank": "URB",
+            "LodCutoff": "UnitMove_LodCutoff"
+        },
+        "DeathExplosion": {
+            "Cue": "URB_Destroy_Lrg_PreDestroy",
+            "Bank": "URLDestroy",
+            "LodCutoff": "UnitMove_LodCutoff"
+        },
+        "UISelection": {
+            "Cue": "Cybran_Select_Gun",
+            "Bank": "Interface",
+            "LodCutoff": "UnitMove_LodCutoff"
+        },
+        "NuclearLaunchDetected": {
+            "Cue": "Computer_Computer_MissileLaunch_01351",
+            "Bank": "XGG"
+        },
+        "Open": {
+            "Cue": "URB2305_Open",
+            "Bank": "URB",
+            "LodCutoff": "UnitMove_LodCutoff"
+        }
+    },
+    "StrategicIconSortPriority": 175,
+    "LifeBarSize": 3,
+    "Categories": [
+        "PRODUCTSC1",
+        "SELECTABLE",
+        "BUILTBYTIER3ENGINEER",
+        "BUILTBYTIER3COMMANDER",
+        "CYBRAN",
+        "STRUCTURE",
+        "STRATEGIC",
+        "TECH3",
+        "NUKE",
+        "SILO",
+        "DRAGBUILD",
+        "SIZE12",
+        "VISIBLETORECON",
+        "RECLAIMABLE",
+        "SORTSTRATEGIC"
+    ],
+    "Display": {
+        "SpawnRandomRotation": true,
+        "UniformScale": 0.19,
+        "Mesh": {
+            "LODs": [
+                {
+                    "ShaderName": "Insect",
+                    "LODCutoff": 140
+                },
+                {
+                    "ShaderName": "Insect",
+                    "SpecularName": "urb2305_lod1_specteam.dds",
+                    "AlbedoName": "urb2305_lod1_albedo.dds",
+                    "LODCutoff": 300
+                }
+            ],
+            "IconFadeInZoom": 130
+        },
+        "DamageEffects": [
+            {
+                "OffsetZ": 1,
+                "OffsetX": 0,
+                "OffsetY": 0.8,
+                "Bone": 0
+            },
+            {
+                "OffsetZ": -0.4,
+                "OffsetX": 0.8,
+                "OffsetY": 0.8,
+                "Bone": 0
+            },
+            {
+                "OffsetZ": -0.4,
+                "OffsetX": -0.8,
+                "OffsetY": 0.8,
+                "Bone": 0
+            },
+            {
+                "OffsetZ": -0.9,
+                "OffsetX": -0.4,
+                "OffsetY": 1.25,
+                "Bone": 0
+            },
+            {
+                "OffsetZ": -0.9,
+                "OffsetX": 0.4,
+                "OffsetY": 1.25,
+                "Bone": 0
+            }
+        ],
+        "Tarmacs": [
+            {
+                "Width": 12.8,
+                "Length": 12.8,
+                "RemoveWhenDead": false,
+                "Orientations": [
+                    0,
+                    90,
+                    180,
+                    270
+                ],
+                "DeathLifetime": 300,
+                "Normal": "Tarmacs/Tar8x_cybran_01_normals",
+                "FadeOut": 150,
+                "Albedo": "Tarmacs/Tar8x_cybran_01_albedo"
+            }
+        ],
+        "AnimationOpen": "/units/urb2305/urb2305_aactivate.sca",
+        "Abilities": [
+            "EMP Weapon",
+            "Manual Launch"
+        ],
+        "PlaceholderMeshName": "UXB0026"
+    },
+    "LifeBarHeight": 0.075,
+    "SelectionSizeX": 1.8,
+    "SelectionSizeZ": 1.8,
+    "SizeX": 2.5,
+    "Weapon": [
+        {
+            "RackSalvoSize": 1,
+            "TurretYaw": 0,
+            "MuzzleVelocity": 0,
+            "TargetRestrictDisallow": "UNTARGETABLE",
+            "MaxProjectileStorage": 5,
+            "MinRadius": 0,
+            "RackRecoilDistance": 0,
+            "Turreted": false,
+            "TurretPitch": 0,
+            "MuzzleSalvoSize": 1,
+            "CollideFriendly": false,
+            "FiringTolerance": 2,
+            "Label": "NukeMissiles",
+            "NukeInnerRingTicks": 24,
+            "WeaponRepackTimeout": 9.1,
+            "EnergyDrainPerSecond": 0,
+            "NukeInnerRingTotalTime": 0,
+            "RangeCategory": "UWRC_IndirectFire",
+            "EnergyRequired": 0,
+            "NukeOuterRingDamage": 500,
+            "WeaponUnpacks": true,
+            "WeaponUnpackAnimationRate": 1,
+            "RackSalvoReloadTime": 0,
+            "FireTargetLayerCapsTable": {
+                "Water": "Land|Water|Seabed",
+                "Land": "Land|Water|Seabed",
+                "Seabed": "Land|Water|Seabed",
+                "Sub": "Land|Water|Seabed"
+            },
+            "TurretDualManipulators": false,
+            "Buffs": [
+                {
+                    "AppliedToTarget": true,
+                    "TargetAllow": "ALLUNITS",
+                    "Add": {
+                        "OnImpact": true
+                    },
+                    "Radius": 40,
+                    "Duration": 15,
+                    "BuffType": "STUN"
+                }
+            ],
+            "TurretPitchRange": 0,
+            "WeaponCategory": "Missile",
+            "NukeInnerRingRadius": 30,
+            "TargetCheckInterval": 0.5,
+            "NukeWeapon": true,
+            "ProjectileId": "/projectiles/CIFEMPFluxWarhead01/CIFEMPFluxWarhead01_proj.bp",
+            "RackFireTogether": false,
+            "Audio": {
+                "Fire": {
+                    "Cue": "URB2305_Missile_Cruise",
+                    "Bank": "URLWeapon",
+                    "LodCutoff": "Weapon_LodCutoff"
+                }
+            },
+            "ManualFire": 1,
+            "MaxRadius": 20000,
+            "NukeInnerRingDamage": 70000,
+            "TurretPitchSpeed": 0,
+            "ForceSingleFire": true,
+            "WeaponUnpackAnimation": "/units/urb2305/urb2305_aactivate.sca",
+            "TurretYawSpeed": 0,
+            "MuzzleSalvoDelay": 0,
+            "RackSlavedToTurret": false,
+            "BallisticArc": "RULEUBA_None",
+            "CountedProjectile": true,
+            "RateOfFire": 1,
+            "RackSalvoChargeTime": 0,
+            "NukeOuterRingTotalTime": 0,
+            "InitialProjectileStorage": 0,
+            "TurretYawRange": 0,
+            "AboveWaterTargetsOnly": true,
+            "ProjectilesPerOnFire": 1,
+            "RackBones": [
+                {
+                    "RackBone": "Projectile",
+                    "MuzzleBones": [
+                        "Projectile"
+                    ]
+                }
+            ],
+            "DisplayName": "EMP Flux Warhead",
+            "RackReloadTimeout": 0,
+            "NukeOuterRingRadius": 40,
+            "DamageType": "Normal",
+            "NukeOuterRingTicks": 20,
+            "Damage": 0,
+            "dps": 0
+        },
+        {
+            "DisplayName": "Death Weapon",
+            "DamageType": "Normal",
+            "DamageFriendly": true,
+            "DamageRadius": 6,
+            "WeaponCategory": "Death",
+            "DummyWeapon": true,
+            "Damage": 10000,
+            "Label": "DeathWeapon",
+            "dps": null
+        }
+    ],
+    "SizeZ": 2.5,
+    "General": {
+        "CommandCaps": {
+            "RULEUCC_Move": false,
+            "RULEUCC_Stop": true,
+            "RULEUCC_Transport": false,
+            "RULEUCC_Capture": false,
+            "RULEUCC_Nuke": true,
+            "RULEUCC_Patrol": false,
+            "RULEUCC_SiloBuildNuke": true,
+            "RULEUCC_CallTransport": false,
+            "RULEUCC_Pause": true,
+            "RULEUCC_Guard": false,
+            "RULEUCC_Reclaim": false,
+            "RULEUCC_Repair": false,
+            "RULEUCC_RetaliateToggle": false,
+            "RULEUCC_Attack": false
+        },
+        "Category": "Strategic",
+        "UnitName": "Liberator",
+        "Classification": "RULEUC_Weapon",
+        "SelectionPriority": 5,
+        "UnitWeight": 1,
+        "FactionName": "Cybran",
+        "TechLevel": "RULEUTL_Secret",
+        "Icon": "land"
+    },
+    "Economy": {
+        "BuildCostEnergy": 210000,
+        "BuildTime": 10453,
+        "RebuildBonusIds": [
+            "urb2305"
+        ],
+        "BuildCostMass": 15000,
+        "BuildRate": 1080
+    },
+    "Defense": {
+        "RegenRate": 0,
+        "EconomyThreatLevel": 1693,
+        "SubThreatLevel": 0,
+        "SurfaceThreatLevel": 0,
+        "Health": 4000,
+        "AirThreatLevel": 0,
+        "ArmorType": "Structure",
+        "MaxHealth": 4000
+    },
+    "StrategicIconName": "icon_structure3_missile",
+    "SelectionThickness": 0.39,
+    "Physics": {
+        "MinSpeedPercent": 0,
+        "MaxSteerForce": 0,
+        "SkirtSizeX": 6,
+        "MotionType": "RULEUMT_None",
+        "SkirtSizeZ": 6,
+        "BankingSlope": 0,
+        "TurnRate": 0,
+        "BuildOnLayerCaps": {
+            "LAYER_Orbit": false,
+            "LAYER_Air": false,
+            "LAYER_Seabed": false,
+            "LAYER_Water": false,
+            "LAYER_Sub": false,
+            "LAYER_Land": true
+        },
+        "DragCoefficient": 0.2,
+        "SkirtOffsetX": -1.5,
+        "SkirtOffsetZ": -1.5,
+        "FlattenSkirt": true
+    },
+    "Id": "URB2305",
+    "SizeY": 1.75,
+    "CollisionOffsetY": -0.25,
+    "BuildIconSortPriority": 150,
+    "Buffs": {
+        "Regen": {
+            "Level1": 3,
+            "Level2": 6,
+            "Level3": 9,
+            "Level4": 12,
+            "Level5": 15
+        }
+    },
+    "AI": {
+        "InitialAutoMode": true
+    },
+    "Veteran": {
+        "Level1": 30,
+        "Level2": 60,
+        "Level3": 90,
+        "Level4": 120,
+        "Level5": 150
+    },
+    "LifeBarOffset": 1.05,
+    "Description": "Strategic Missile Launcher"
+}
