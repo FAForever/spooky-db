@@ -75,20 +75,23 @@ def sort(units):
             TECH_X: 4
         }
 
-        # print(u['Id'])
-        faction_key =  10000*faction_order[u['General']['FactionName']]
-        tech_key = 1000*(tech_order[get_tech(u)] if get_tech(u) else 1)
-        priority_key = u['BuildIconSortPriority'] if 'BuildIconSortPriority' in u else 100
-        command_key = 11 if u['General']['Category'] == 'Command' or 'COMMAND' in u['Categories'] else 0
+        try:
+            faction_key =  10000*faction_order[u['General']['FactionName']]
+            tech_key = 1000*(tech_order[get_tech(u)] if get_tech(u) else 1)
+            priority_key = u['BuildIconSortPriority'] if 'BuildIconSortPriority' in u else 100
+            command_key = 11 if u['General']['Category'] == 'Command' or 'COMMAND' in u['Categories'] else 0
 
-        # print('-{0}--------------------'.format(u['Id']))
-        # print(faction_key)
-        # print(tech_key)
-        # print(priority_key)
-        # print(command_key)
-        # print(faction_key + tech_key + priority_key + command_key)
+            # print('-{0}--------------------'.format(u['Id']))
+            # print(faction_key)
+            # print(tech_key)
+            # print(priority_key)
+            # print(command_key)
+            # print(faction_key + tech_key + priority_key + command_key)
 
-        return faction_key + tech_key + priority_key + command_key
+            return faction_key + tech_key + priority_key + command_key
+        except:
+            print('sort error. unit {0}'.format(u['Id']))
+            raise
 
     units.sort(key=sort_key)
     print('sorted')
