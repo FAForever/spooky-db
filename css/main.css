@@ -223,7 +223,7 @@ footer {
 
 /*.faction h1 { background: no-repeat 50px -165px / 160%; padding-left: .33em; }*/ /* css to achieve current faction logo with original images */
 .faction h1 { background: no-repeat right top; padding-left: .33em; }
-.uef { background: rgba(45,120,178, .2); /*#2d78b2*/; }
+.uef { background: rgba(45,120,178, .2); /*#2d78b2*/ }
 h1.uef  { background-image: url(../img/SC_UEF.jpg) }
 .cybran { background: rgba(223,45,14, .2); /*#df2d0e*/ }
 h1.cybran { background-image: url(../img/SC_Cybran.jpg) }
