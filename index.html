@@ -156,7 +156,7 @@
                             <tr>
                                 <td></td>
                                 <td title="category (damage type)" colspan="2"><small>{{ w.WeaponCategory }} ({{ w.DamageType }})</small></td>
-                                <td title="damage per second{{ ' - manual fire' | if:w.ManualFire }}"><small>{{ w.dps | round }}dps{{ " !"| if:w.ManualFire }}</small></td>
+                                <td title="damage per second"><small>{{ w.dps | round }}dps</small></td>
                             </tr>
                             <tr ng-if="w.MaxRadius">
                                 <td></td>
@@ -179,10 +179,10 @@
                                 <td title="inner ring damage | outer ring damage"><small>{{ w.NukeInnerRingDamage | shorten }} | {{ w.NukeOuterRingDamage | shorten }}</small></td>
                             </tr>
 
-                            <tr>
+                            <tr ng-if="w.ManualFire || w.ProjectilesPerOnFire">
                                 <td></td>
-                                <td colspan="2"><small>Fire cycle</small></td>
-                                <td><small>?!?</small></td>
+                                <td colspan="2" title="{{ 'manual fire' | if:w.ManualFire }}"><small>Fire cycle{{ " ⦿"| if:w.ManualFire }}</small></td>
+                                <td><small>{{ item.fireCycle(w) }}</small></td>
                             </tr>
 
                             <tr ng-if="w.TurretPitchRange">
@@ -245,7 +245,7 @@
                     </a>
                 </p>
             </aside>
-            <footer><span>last update: 2014-04-24</span> | <span>unit count: {{ index.length }}</span> | <a href="https://github.com/spooky/unitdb/issues">issues</a> | <a href="https://github.com/spooky/unitdb">source</a></footer>
+            <footer><span>last update: 2014-05-21</span> | <span>unit count: {{ index.length }}</span> | <a href="https://github.com/spooky/unitdb/issues">issues</a> | <a href="https://github.com/spooky/unitdb">source</a></footer>
         </script>
 
         <script type="text/ng-template" id="compare.html">

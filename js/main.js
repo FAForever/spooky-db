@@ -81,8 +81,23 @@ unitDb.UnitDecorator = function(blueprint) {
         fullName = function() {
             return (this.name ? this.name + ': ' : '') + (this.tech == 'EXP' ? '' : this.tech + ' ') + this.description;
         },
+        weaponStats = function(weapon) {
+            // ?? MuzzleSalvoSize, MuzzleSalvoDelay
+            var shots = weapon.ManualFire ? 1 : weapon.ProjectilesPerOnFire, // number of projectiles
+                   rate = weapon.ProjectilesPerOnFire ? weapon.RateOfFire : 1 / weapon.RateOfFire, // tml/nuke launch weapons seem to be mixed up
+                   delay = weapon.RackSalvoChargeTime,
+                   cycle = 1 / rate + delay, // how long it takes between shots
+                   damage = weapon.Damage;
+
+            return { shots: shots, cycle: cycle, damage: damage };
+        },
+        fireCycle = function(weapon) {
+            var stats = weaponStats(weapon);
+            return stats.shots + ' shot' + (stats.shots > 1 ? 's' : '') + ' / ' + ( stats.cycle == 1 ? '' : Math.round(stats.cycle * 10)/10 ) + ' sec';
+        },
         getDps = function(weapon) {
-            return weapon.Damage * weapon.RateOfFire * weapon.MuzzleSalvoSize;
+            var stats = weaponStats(weapon);
+            return (stats.damage * stats.shots) / stats.cycle
         };
 
         self = {
@@ -95,7 +110,8 @@ unitDb.UnitDecorator = function(blueprint) {
             strategicIcon: blueprint.StrategicIconName,
             icon: blueprint.General.Icon || '',
             order: blueprint.BuildIconSortPriority || 1000,
-            fullName: fullName
+            fullName: fullName,
+            fireCycle: fireCycle
         };
 
         // additional stats for weapons
