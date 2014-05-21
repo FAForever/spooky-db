@@ -81,24 +81,23 @@ unitDb.UnitDecorator = function(blueprint) {
         fullName = function() {
             return (this.name ? this.name + ': ' : '') + (this.tech == 'EXP' ? '' : this.tech + ' ') + this.description;
         },
-        fireCycle = function(weapon) {
+        weaponStats = function(weapon) {
             // ?? MuzzleSalvoSize, MuzzleSalvoDelay
-            if (!weapon.ManualFire) {
-                if (weapon.RateOfFire <= 1) {
-                    return weapon.ProjectilesPerOnFire +' shot(s) / ' + (1 / weapon.RateOfFire + weapon.RackSalvoChargeTime) + ' sec';
-                } else {
-                    return weapon.ProjectilesPerOnFire * (weapon.RateOfFire + weapon.RackSalvoChargeTime) + ' shot(s) / sec';
-                }
-            } else {
-                return '1 shot / ' + (weapon.RateOfFire + weapon.RackSalvoChargeTime) +' sec';
-            }
+            var shots = weapon.ManualFire ? 1 : weapon.ProjectilesPerOnFire, // number of projectiles
+                   rate = weapon.ProjectilesPerOnFire ? weapon.RateOfFire : 1 / weapon.RateOfFire, // tml/nuke launch weapons seem to be mixed up
+                   delay = weapon.RackSalvoChargeTime,
+                   cycle = 1 / rate + delay, // how long it takes between shots
+                   damage = weapon.Damage;
 
+            return { shots: shots, cycle: cycle, damage: damage };
+        },
+        fireCycle = function(weapon) {
+            var stats = weaponStats(weapon);
+            return stats.shots + ' shot' + (stats.shots > 1 ? 's' : '') + ' / ' + ( stats.cycle == 1 ? '' : Math.round(stats.cycle * 10)/10 ) + ' sec';
         },
         getDps = function(weapon) {
-            if (weapon.ManualFire)
-                return (weapon.Damage * weapon.MuzzleSalvoSize) / (weapon.RateOfFire + weapon.RackSalvoChargeTime);
-            else
-                return weapon.Damage * weapon.MuzzleSalvoSize * (weapon.RateOfFire / (1 + weapon.RackSalvoChargeTime));
+            var stats = weaponStats(weapon);
+            return (stats.damage * stats.shots) / stats.cycle
         };
 
         self = {

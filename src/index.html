@@ -179,10 +179,10 @@
                                 <td title="inner ring damage | outer ring damage"><small>{{ w.NukeInnerRingDamage | shorten }} | {{ w.NukeOuterRingDamage | shorten }}</small></td>
                             </tr>
 
-                            <tr>
+                            <tr ng-if="w.ManualFire || w.ProjectilesPerOnFire">
                                 <td></td>
-                                <td colspan="2"><small>Fire cycle</small></td>
-                                <td title="{{ 'manual fire' | if:w.ManualFire }}"><small>{{ item.fireCycle(w) }}{{ " ⦿"| if:w.ManualFire }}</small></td>
+                                <td colspan="2" title="{{ 'manual fire' | if:w.ManualFire }}"><small>Fire cycle{{ " ⦿"| if:w.ManualFire }}</small></td>
+                                <td><small>{{ item.fireCycle(w) }}</small></td>
                             </tr>
 
                             <tr ng-if="w.TurretPitchRange">
