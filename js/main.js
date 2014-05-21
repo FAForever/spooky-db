@@ -97,7 +97,7 @@ unitDb.UnitDecorator = function(blueprint) {
         },
         getDps = function(weapon) {
             var stats = weaponStats(weapon);
-            return (stats.damage * stats.shots) / stats.cycle
+            return (stats.damage * stats.shots) / stats.cycle;
         };
 
         self = {

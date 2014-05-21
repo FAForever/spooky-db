@@ -153,10 +153,11 @@
                                 <td ng-class="{ invisible: !$first }">Weapons</td>
                                 <td colspan="3">{{ w.DisplayName }}</td>
                             </tr>
-                            <tr>
+                            <tr ng-if="w.dps || w.Damage">
                                 <td></td>
                                 <td title="category (damage type)" colspan="2"><small>{{ w.WeaponCategory }} ({{ w.DamageType }})</small></td>
-                                <td title="damage per second"><small>{{ w.dps | round }}dps</small></td>
+                                <td ng-if="w.dps" title="damage per second"><small>{{ w.dps | round }}dps</small></td>
+                                <td ng-if="!w.dps" title="damage"><small>{{ w.Damage | round }}dmg</small></td>
                             </tr>
                             <tr ng-if="w.MaxRadius">
                                 <td></td>
@@ -190,16 +191,16 @@
                                 <td colspan="2"><small>Turret pitch</small></td>
                                 <td title="min ~ max @ speed"><small>{{ w.TurretPitch }}~{{ w.TurretPitchRange }}° @&nbsp;{{ w.TurretPitchSpeed }}°/s</small></td>
                             </tr>
-                            <tr ng-if="w.TurretYawRange">
+                            <tr ng-if="w.TurretYawRange" ng-repeat-end>
                                 <td></td>
                                 <td colspan="2"><small>Turret yaw</small></td>
                                 <td title="min ~ max @ speed"><small>{{ w.TurretYaw }}~{{ w.TurretYawRange }}° @&nbsp;{{ w.TurretYawSpeed }}°/s</small></td>
                             </tr>
-                            <tr ng-if="w.FiringTolerance" ng-repeat-end>
+                            <!--tr ng-if="w.FiringTolerance">
                                 <td></td>
                                 <td colspan="2"><small>Firing tolerance</small></td>
                                 <td><small>{{ w.FiringTolerance }}</small></td>
-                            </tr>
+                            </tr-->
 
                             <!-- Upgrades -->
                             <!--tr class="sec">
@@ -245,7 +246,7 @@
                     </a>
                 </p>
             </aside>
-            <footer><span>last update: 2014-05-21</span> | <span>unit count: {{ index.length }}</span> | <a href="https://github.com/spooky/unitdb/issues">issues</a> | <a href="https://github.com/spooky/unitdb">source</a></footer>
+            <footer><span>last update: 2014-05-22</span> | <span>unit count: {{ index.length }}</span> | <a href="https://github.com/spooky/unitdb/issues">issues</a> | <a href="https://github.com/spooky/unitdb">source</a></footer>
         </script>
 
         <script type="text/ng-template" id="compare.html">
