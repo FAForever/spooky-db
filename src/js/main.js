@@ -81,8 +81,24 @@ unitDb.UnitDecorator = function(blueprint) {
         fullName = function() {
             return (this.name ? this.name + ': ' : '') + (this.tech == 'EXP' ? '' : this.tech + ' ') + this.description;
         },
+        fireCycle = function(weapon) {
+            // ?? MuzzleSalvoSize, MuzzleSalvoDelay
+            if (!weapon.ManualFire) {
+                if (weapon.RateOfFire <= 1) {
+                    return weapon.ProjectilesPerOnFire +' shot(s) / ' + (1 / weapon.RateOfFire + weapon.RackSalvoChargeTime) + ' sec';
+                } else {
+                    return weapon.ProjectilesPerOnFire * (weapon.RateOfFire + weapon.RackSalvoChargeTime) + ' shot(s) / sec';
+                }
+            } else {
+                return '1 shot / ' + (weapon.RateOfFire + weapon.RackSalvoChargeTime) +' sec';
+            }
+
+        },
         getDps = function(weapon) {
-            return weapon.Damage * weapon.RateOfFire * weapon.MuzzleSalvoSize;
+            if (weapon.ManualFire)
+                return (weapon.Damage * weapon.MuzzleSalvoSize) / (weapon.RateOfFire + weapon.RackSalvoChargeTime);
+            else
+                return weapon.Damage * weapon.MuzzleSalvoSize * (weapon.RateOfFire / (1 + weapon.RackSalvoChargeTime));
         };
 
         self = {
@@ -95,7 +111,8 @@ unitDb.UnitDecorator = function(blueprint) {
             strategicIcon: blueprint.StrategicIconName,
             icon: blueprint.General.Icon || '',
             order: blueprint.BuildIconSortPriority || 1000,
-            fullName: fullName
+            fullName: fullName,
+            fireCycle: fireCycle
         };
 
         // additional stats for weapons
