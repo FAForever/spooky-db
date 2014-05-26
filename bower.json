@@ -1,0 +1,20 @@
+{
+    "name": "unitdb",
+    "version": "0.0.0",
+
+    "dependencies": {
+        "jquery": "",
+        "json3": "",
+        "es5-shim": "",
+        "angular": "",
+        "angular-sanitize": "",
+        "angular-route": "",
+        "underscore": "",
+        "angular-underscore": ""
+    },
+
+    "devDependencies": {
+        "angular-mocks": "",
+        "angular-scenario": ""
+    }
+} 

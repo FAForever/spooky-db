@@ -1,6 +1,6 @@
-graphics
-tools/img
-tools/img_small
-tools/units
-tools/faforever.nxt
+node_modules
+dist
+.tmp
+.sass-cache
+app/bower_components
 *.sublime*
