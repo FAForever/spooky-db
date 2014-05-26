@@ -1,0 +1,864 @@
+{
+    "id": "URL0301",
+    "description": "Support Armored Command Unit",
+    "faction": "Cybran",
+    "classification": "Build",
+    "tech": "T3",
+    "strategicIcon": "icon_commander_generic",
+    "icon": "amph",
+    "order": 10,
+    "BuildIconSortPriority": 10,
+    "Intel": {
+        "ReactivateTime": 2,
+        "Cloak": true,
+        "WaterVisionRadius": 26,
+        "SonarStealth": true,
+        "FreeIntel": false,
+        "VisionRadius": 26,
+        "OmniRadius": 16,
+        "RadarStealth": true
+    },
+    "Description": "Support Armored Command Unit",
+    "General": {
+        "CommandCaps": {
+            "RULEUCC_Move": true,
+            "RULEUCC_Pause": true,
+            "RULEUCC_CallTransport": true,
+            "RULEUCC_Attack": true,
+            "RULEUCC_Sacrifice": false,
+            "RULEUCC_Repair": true,
+            "RULEUCC_Stop": true,
+            "RULEUCC_Reclaim": true,
+            "RULEUCC_Guard": true,
+            "RULEUCC_Capture": true,
+            "RULEUCC_RetaliateToggle": true,
+            "RULEUCC_Transport": false,
+            "RULEUCC_Nuke": false,
+            "RULEUCC_Patrol": true
+        },
+        "TechLevel": "RULEUTL_Secret",
+        "UnitWeight": 1,
+        "BuildBones": {
+            "YawBone": "Torso",
+            "BuildEffectBones": [
+                "Build"
+            ],
+            "AimBone": 0,
+            "PitchBone": "Engineering_Arm"
+        },
+        "Category": "Command",
+        "Icon": "amph",
+        "FactionName": "Cybran",
+        "Classification": "RULEUC_Commander",
+        "ConstructionBar": true,
+        "SelectionPriority": 3
+    },
+    "Defense": {
+        "SurfaceThreatLevel": 150,
+        "RegenRate": 25,
+        "Health": 19000,
+        "MaxHealth": 19000,
+        "EconomyThreatLevel": 0,
+        "AirThreatLevel": 0,
+        "SubThreatLevel": 0,
+        "ArmorType": "Normal"
+    },
+    "Interface": {
+        "HelpText": "Support Armored Command Unit"
+    },
+    "Economy": {
+        "NaturalProducer": true,
+        "BuildableCategory": [
+            "BUILTBYTIER3ENGINEER CYBRAN"
+        ],
+        "BuildCostMass": 2000,
+        "MaxBuildDistance": 10,
+        "ProductionPerSecondEnergy": 20,
+        "StorageMass": 275,
+        "BuildRate": 56,
+        "TeleportMassMod": 3,
+        "TeleportEnergyMod": 4,
+        "ProductionPerSecondMass": 1,
+        "TeleportTimeMod": 0.0001,
+        "BuildTime": 14400,
+        "StorageEnergy": 500,
+        "BuildCostEnergy": 26400,
+        "MaintenanceConsumptionPerSecondEnergy": 0
+    },
+    "Veteran": {
+        "Level2": 50,
+        "Level4": 100,
+        "Level1": 25,
+        "Level5": 125,
+        "Level3": 75
+    },
+    "Weapon": [
+        {
+            "TargetRestrictDisallow": "UNTARGETABLE",
+            "RackBones": [
+                {
+                    "MuzzleBones": [
+                        "Laser"
+                    ],
+                    "RackBone": "Pulse_Laser"
+                }
+            ],
+            "TurretYaw": 0,
+            "RackFireTogether": false,
+            "FiringTolerance": 2,
+            "RackSalvoSize": 1,
+            "Label": "RightDisintegrator",
+            "TurretPitchSpeed": 90,
+            "Turreted": true,
+            "MuzzleSalvoSize": 1,
+            "AboveWaterFireOnly": true,
+            "WeaponCategory": "Direct Fire",
+            "TurretBoneYaw": "Torso",
+            "TurretBonePitch": "Pulse_Laser",
+            "BallisticArc": "RULEUBA_LowArc",
+            "ProjectileId": "/projectiles/CDFLaserDisintegrator03/CDFLaserDisintegrator03_proj.bp",
+            "MaxRadius": 25,
+            "ProjectilesPerOnFire": 1,
+            "CollideFriendly": false,
+            "Buffs": [
+                {
+                    "Duration": 4,
+                    "Radius": 3,
+                    "AppliedToTarget": true,
+                    "Add": {
+                        "OnImpact": true
+                    },
+                    "TargetDisallow": "EXPERIMENTAL,SUBCOMMANDER,COMMAND,WALL",
+                    "BuffType": "STUN",
+                    "TargetAllow": "MOBILE"
+                }
+            ],
+            "MuzzleVelocity": 18,
+            "TargetCheckInterval": 0.5,
+            "ProjectileLifetimeUsesMultiplier": 1.3,
+            "TargetPriorities": [
+                "SPECIALHIGHPRI",
+                "MOBILE",
+                "STRUCTURE DEFENSE",
+                "SPECIALLOWPRI",
+                "ALLUNITS"
+            ],
+            "TurretYawSpeed": 180,
+            "Damage": 300,
+            "RangeCategory": "UWRC_DirectFire",
+            "DamageType": "Normal",
+            "RateOfFire": 1,
+            "TurretBoneMuzzle": "Laser",
+            "UseFiringSolutionInsteadOfAimBone": true,
+            "RackSlavedToTurret": false,
+            "AboveWaterTargetsOnly": true,
+            "RackRecoilDistance": -0.1,
+            "RackSalvoReloadTime": 0,
+            "MuzzleSalvoDelay": 0,
+            "Audio": {
+                "Fire": {
+                    "LodCutoff": "Weapon_LodCutoff",
+                    "Bank": "URLWeapon",
+                    "Cue": "URL0301_BG_Gun"
+                }
+            },
+            "RackSalvoChargeTime": 0,
+            "TurretPitch": 0,
+            "TurretPitchRange": 90,
+            "TurretDualManipulators": false,
+            "TurretYawRange": 180,
+            "ChargeDelay": 0.5,
+            "MinRadius": 1,
+            "RackReloadTimeout": 10,
+            "DisplayName": "Disintegrator Pulse Laser",
+            "FireTargetLayerCapsTable": {
+                "Land": "Land|Water|Seabed",
+                "Seabed": "Land|Water|Seabed",
+                "Water": "Land|Water|Seabed"
+            },
+            "dps": 300
+        },
+        {
+            "TargetRestrictDisallow": "UNTARGETABLE",
+            "RackBones": [
+                {
+                    "MuzzleBones": [
+                        "Muzzle02"
+                    ],
+                    "RackBone": "Barrel01"
+                }
+            ],
+            "TrackingRadius": 1.4,
+            "TurretYaw": 0,
+            "RackSlavedToTurret": false,
+            "RackFireTogether": false,
+            "FiringTolerance": 50,
+            "RackSalvoSize": 1,
+            "EnergyRequired": 0,
+            "TurretPitchSpeed": 180,
+            "AlwaysRecheckTarget": true,
+            "ProjectileLifetime": 5,
+            "TargetCheckInterval": 0.3,
+            "AboveWaterFireOnly": true,
+            "WeaponCategory": "Anti Air",
+            "TurretBoneYaw": "Barrel01",
+            "TurretBonePitch": "Barrel01",
+            "BallisticArc": "RULEUBA_None",
+            "ProjectileId": "/projectiles/CAAMissileNanite02/CAAMissileNanite02_proj.bp",
+            "MaxRadius": 60,
+            "ProjectilesPerOnFire": 3,
+            "CollideFriendly": false,
+            "RackRecoilDistance": 0,
+            "MuzzleVelocity": 30,
+            "MuzzleSalvoSize": 3,
+            "CannotAttackGround": true,
+            "TargetPriorities": [
+                "SPECIALHIGHPRI",
+                "AIR MOBILE HIGHPRIAIR",
+                "AIR MOBILE TECH3 BOMBER",
+                "AIR MOBILE BOMBER",
+                "AIR MOBILE GROUNDATTACK",
+                "AIR MOBILE TRANSPORTATION",
+                "AIR MOBILE",
+                "SPECIALLOWPRI",
+                "ALLUNITS"
+            ],
+            "TurretYawSpeed": 180,
+            "Damage": 300,
+            "RangeCategory": "UWRC_AntiAir",
+            "DamageType": "Normal",
+            "RateOfFire": 0.3,
+            "TurretBoneMuzzle": "Muzzle01",
+            "Turreted": true,
+            "EnergyDrainPerSecond": 0,
+            "RackSalvoReloadTime": 0,
+            "EnabledByEnhancement": "NaniteMissileSystem",
+            "TurretYawRange": 180,
+            "DamageRadius": 1.5,
+            "Audio": {
+                "Fire": {
+                    "LodCutoff": "Weapon_LodCutoff",
+                    "Bank": "URLWeapon",
+                    "Cue": "URL0301_Missile_Nanite_BC"
+                }
+            },
+            "RackSalvoChargeTime": 0,
+            "EffectiveRadius": 0,
+            "TurretPitch": 25,
+            "TurretPitchRange": 60,
+            "TurretDualManipulators": false,
+            "MuzzleSalvoDelay": 0.4,
+            "RackReloadTimeout": 0,
+            "DisplayName": "Nanite Missile System",
+            "FireTargetLayerCapsTable": {
+                "Land": "Air",
+                "Seabed": "Air",
+                "Water": "Air"
+            },
+            "Label": "NMissile",
+            "dps": 270
+        },
+        {
+            "TargetRestrictDisallow": "UNTARGETABLE",
+            "MuzzleSalvoSize": 1,
+            "RackBones": [
+                {
+                    "MuzzleBones": [
+                        0
+                    ],
+                    "RackBone": 0
+                }
+            ],
+            "Damage": 1000,
+            "DamageFriendly": true,
+            "FiringTolerance": 2,
+            "Label": "DeathWeapon",
+            "DamageType": "Normal",
+            "CollideFriendly": false,
+            "MuzzleVelocity": 0,
+            "Turreted": false,
+            "AboveWaterTargetsOnly": true,
+            "TargetCheckInterval": 9999999,
+            "WeaponCategory": "Death",
+            "FireOnDeath": true,
+            "MuzzleSalvoDelay": 0,
+            "DamageRadius": 10,
+            "ProjectileId": "/effects/Entities/SCUDeath01/SCUDeath01_proj.bp",
+            "MaxRadius": 1,
+            "RateOfFire": 1,
+            "RackRecoilDistance": 0,
+            "DisplayName": "Death Nuke",
+            "dps": null
+        }
+    ],
+    "SelectionYOffset": 0,
+    "Physics": {
+        "MotionType": "RULEUMT_Amphibious",
+        "MaxSteerForce": 12,
+        "StandUpright": true,
+        "DragCoefficient": 0.2,
+        "MaxAcceleration": 2.2,
+        "BuildOnLayerCaps": {
+            "LAYER_Orbit": false,
+            "LAYER_Seabed": false,
+            "LAYER_Water": false,
+            "LAYER_Air": false,
+            "LAYER_Land": true,
+            "LAYER_Sub": false
+        },
+        "BankingSlope": 0,
+        "LayerChangeOffsetHeight": -0.9,
+        "MaxSpeedReverse": 0,
+        "TurnRadius": 10,
+        "TurnRate": 150,
+        "MaxSpeed": 2.2,
+        "MinSpeedPercent": 0,
+        "MaxBrake": 2.2
+    },
+    "StrategicIconSortPriority": 1,
+    "SizeX": 0.7,
+    "AI": {
+        "GuardRadius": 10,
+        "TargetBones": [
+            "Head",
+            "Right_Arm01",
+            "Left_Arm01",
+            "Torso",
+            "Left_Thigh",
+            "Right_Thigh"
+        ]
+    },
+    "SizeZ": 0.4,
+    "StrategicIconName": "icon_commander_generic",
+    "EnhancementPresets": {
+        "Cloak": {
+            "SortCategory": "SORTOTHER",
+            "Enhancements": [
+                "FocusConvertor",
+                "StealthGenerator",
+                "CloakingGenerator"
+            ],
+            "UnitName": "SACU (Cloak preset)",
+            "Description": "Support Armored Command Unit (Cloak preset)",
+            "HelpText": "Support Armored Command Unit. Enhanced during construction with the personal cloaking generator and disintegrator amplifier enhancements.",
+            "BuildIconSortPriority": 35
+        },
+        "AntiAir": {
+            "SortCategory": "SORTOTHER",
+            "Enhancements": [
+                "NaniteMissileSystem"
+            ],
+            "UnitName": "SACU (Anti-Air preset)",
+            "Description": "Support Armored Command Unit (Anti-Air preset)",
+            "HelpText": "Support Armored Command Unit. Enhanced during construction with the nanite missile system enhancement.",
+            "BuildIconSortPriority": 45
+        },
+        "Rambo": {
+            "SortCategory": "SORTOTHER",
+            "Enhancements": [
+                "EMPCharge",
+                "FocusConvertor",
+                "SelfRepairSystem"
+            ],
+            "UnitName": "SACU (Rambo preset)",
+            "Description": "Support Armored Command Unit (Rambo preset)",
+            "HelpText": "Support Armored Command Unit. Enhanced during construction with the EMP burst, disintegrator amplifier and nano-repair system enhancements.",
+            "BuildIconSortPriority": 25
+        },
+        "Stealth": {
+            "SortCategory": "SORTOTHER",
+            "Enhancements": [
+                "StealthGenerator"
+            ],
+            "UnitName": "SACU (Stealth preset)",
+            "Description": "url0301_Stealth_desc>Support Armored Command Unit (Stealth preset)",
+            "HelpText": "Support Armored Command Unit. Enhanced during construction with the personal stealth generator enhancement.",
+            "BuildIconSortPriority": 30
+        },
+        "Combat": {
+            "SortCategory": "SORTOTHER",
+            "Enhancements": [
+                "EMPCharge",
+                "FocusConvertor"
+            ],
+            "UnitName": "SACU (Combatant preset)",
+            "Description": "Support Armored Command Unit (Combatant preset)",
+            "HelpText": "Support Armored Command Unit. Enhanced during construction with the EMP burst and disintegrator amplifier enhancements.",
+            "BuildIconSortPriority": 15
+        },
+        "Engineer": {
+            "SortCategory": "SORTOTHER",
+            "Enhancements": [
+                "Switchback"
+            ],
+            "UnitName": "SACU (Engineer preset)",
+            "Description": "Support Armored Command Unit (Engineer preset)",
+            "HelpText": "Support Armored Command Unit. Enhanced during construction with the rapid fabricator enhancement.",
+            "BuildIconSortPriority": 20
+        }
+    },
+    "SelectionSizeZ": 0.5,
+    "Audio": {
+        "ReclaimLoop": {
+            "LodCutoff": "UnitMove_LodCutoff",
+            "Bank": "URL",
+            "Cue": "URL0301_Reclaim_Loop"
+        },
+        "EnhanceFail": {
+            "LodCutoff": "UnitMove_LodCutoff",
+            "Bank": "UnitsGlobal",
+            "Cue": "GLB_Enhance_Fail"
+        },
+        "UISelection": {
+            "LodCutoff": "UnitMove_LodCutoff",
+            "Bank": "Interface",
+            "Cue": "Cybran_Select_Commander"
+        },
+        "EnhanceStart": {
+            "LodCutoff": "UnitMove_LodCutoff",
+            "Bank": "UnitsGlobal",
+            "Cue": "GLB_Enhance_Start"
+        },
+        "StartReclaim": {
+            "LodCutoff": "UnitMove_LodCutoff",
+            "Bank": "URL",
+            "Cue": "URL0301_Reclaim_Start"
+        },
+        "ConstructLoop": {
+            "LodCutoff": "UnitMove_LodCutoff",
+            "Bank": "URL",
+            "Cue": "URL0301_Construct_Loop"
+        },
+        "CaptureLoop": {
+            "LodCutoff": "UnitMove_LodCutoff",
+            "Bank": "URL",
+            "Cue": "URL0301_Capture_Loop"
+        },
+        "EnhanceEnd": {
+            "LodCutoff": "UnitMove_LodCutoff",
+            "Bank": "UnitsGlobal",
+            "Cue": "GLB_Enhance_Stop"
+        },
+        "StartCapture": {
+            "LodCutoff": "UnitMove_LodCutoff",
+            "Bank": "URL",
+            "Cue": "URL0301_Capture_Start"
+        },
+        "EnhanceLoop": {
+            "LodCutoff": "UnitMove_LodCutoff",
+            "Bank": "UnitsGlobal",
+            "Cue": "GLB_Enhance_Loop"
+        },
+        "FootFallGeneric": {
+            "LodCutoff": "UnitMove_LodCutoff",
+            "Bank": "URL",
+            "Cue": "URL0301_Move_Step"
+        },
+        "Construct": {
+            "LodCutoff": "UnitMove_LodCutoff",
+            "Bank": "URL",
+            "Cue": "URL0301_Construct_Start"
+        },
+        "StartMove": {
+            "LodCutoff": "UnitMove_LodCutoff",
+            "Bank": "URL",
+            "Cue": "URL0301_Move_Start"
+        },
+        "FootFallGenericSeabed": {
+            "LodCutoff": "UnitMove_LodCutoff",
+            "Bank": "URL",
+            "Cue": "URL0001_Move_UW_Step"
+        },
+        "Destroyed": {
+            "LodCutoff": "UnitMove_LodCutoff",
+            "Bank": "URLDestroy",
+            "Cue": "URL_Destroy_Land"
+        },
+        "Killed": {
+            "LodCutoff": "UnitMove_LodCutoff",
+            "Bank": "Explosions",
+            "Cue": "Cybran_Nuke_Impact"
+        },
+        "StopMove": {
+            "LodCutoff": "UnitMove_LodCutoff",
+            "Bank": "URL",
+            "Cue": "URL0301_Move_Stop"
+        }
+    },
+    "LifeBarSize": 0.9,
+    "SelectionSizeX": 0.55,
+    "SizeY": 1.8,
+    "SelectionThickness": 0.7,
+    "Enhancements": {
+        "NaniteMissileSystem": {
+            "BuildCostEnergy": 30000,
+            "Name": "Nanite Missile System",
+            "BuildCostMass": 800,
+            "Slot": "Back",
+            "Icon": "nms",
+            "UpgradeUnitAmbientBones": [
+                "URL0301"
+            ],
+            "BuildTime": 3360
+        },
+        "ResourceAllocation": {
+            "ProductionPerSecondMass": 10,
+            "Name": "Resource Allocation System",
+            "BuildTime": 8400,
+            "ProductionPerSecondEnergy": 1000,
+            "Slot": "RCH",
+            "BuildCostEnergy": 60000,
+            "Icon": "ras",
+            "BuildCostMass": 4500,
+            "UpgradeUnitAmbientBones": [
+                "URL0301"
+            ]
+        },
+        "ResourceAllocationRemove": {
+            "Name": "Remove Resource Allocation System",
+            "BuildCostMass": 1,
+            "Slot": "RCH",
+            "BuildCostEnergy": 1,
+            "Icon": "ras",
+            "RemoveEnhancements": [
+                "ResourceAllocation",
+                "ResourceAllocationRemove"
+            ],
+            "Prerequisite": "ResourceAllocation",
+            "BuildTime": 0.1
+        },
+        "NaniteMissileSystemRemove": {
+            "Name": "Remove Nanite Missile System",
+            "BuildCostMass": 1,
+            "Slot": "Back",
+            "BuildCostEnergy": 1,
+            "Icon": "nms",
+            "RemoveEnhancements": [
+                "NaniteMissileSystem",
+                "NaniteMissileSystemRemove"
+            ],
+            "Prerequisite": "NaniteMissileSystem",
+            "BuildTime": 0.1
+        },
+        "SwitchbackRemove": {
+            "Name": "Remove Rapid Fabricator",
+            "BuildCostMass": 1,
+            "Slot": "LCH",
+            "BuildCostEnergy": 1,
+            "Icon": "ses",
+            "RemoveEnhancements": [
+                "Switchback",
+                "SwitchbackRemove"
+            ],
+            "Prerequisite": "Switchback",
+            "BuildTime": 0.1
+        },
+        "StealthGenerator": {
+            "Name": "Personal Stealth Generator",
+            "BuildCostMass": 600,
+            "Icon": "sfs",
+            "BuildCostEnergy": 18000,
+            "UpgradeUnitAmbientBones": [
+                "URL0301"
+            ],
+            "BuildTime": 2240,
+            "MaintenanceConsumptionPerSecondEnergy": 100,
+            "Slot": "Back"
+        },
+        "Switchback": {
+            "Name": "Rapid Fabricator",
+            "BuildCostMass": 800,
+            "Slot": "LCH",
+            "BuildCostEnergy": 50000,
+            "Icon": "ses",
+            "UpgradeUnitAmbientBones": [
+                "URL0301"
+            ],
+            "BuildTime": 4200,
+            "NewBuildRate": 98
+        },
+        "SelfRepairSystem": {
+            "Name": "Nano-Repair System",
+            "BuildCostMass": 2000,
+            "Slot": "Back",
+            "BuildCostEnergy": 105000,
+            "Icon": "srs",
+            "UpgradeUnitAmbientBones": [
+                "URL0301"
+            ],
+            "NewRegenRate": 400,
+            "BuildTime": 6720
+        },
+        "CloakingGenerator": {
+            "Name": "Personal Cloaking Generator",
+            "BuildTime": 14000,
+            "Slot": "Back",
+            "BuildCostEnergy": 500000,
+            "Icon": "cfs",
+            "BuildCostMass": 5000,
+            "UpgradeUnitAmbientBones": [
+                "URL0301"
+            ],
+            "Prerequisite": "StealthGenerator",
+            "MaintenanceConsumptionPerSecondEnergy": 3500,
+            "NewHealth": 15000
+        },
+        "StealthGeneratorRemove": {
+            "Name": "Remove Personal Stealth Generator",
+            "BuildCostMass": 1,
+            "Slot": "Back",
+            "BuildCostEnergy": 1,
+            "Icon": "sfs",
+            "RemoveEnhancements": [
+                "StealthGenerator",
+                "StealthGeneratorRemove"
+            ],
+            "Prerequisite": "StealthGenerator",
+            "BuildTime": 0.1
+        },
+        "FocusConvertor": {
+            "Name": "Disintegrator Amplifier",
+            "BuildTime": 3360,
+            "Slot": "RCH",
+            "BuildCostEnergy": 24000,
+            "Icon": "fc",
+            "BuildCostMass": 800,
+            "UpgradeUnitAmbientBones": [
+                "URL0301"
+            ],
+            "NewMaxRadius": 35,
+            "NewDamageMod": 250
+        },
+        "Slots": {
+            "Back": {
+                "name": "",
+                "x": 9,
+                "y": -2
+            },
+            "LCH": {
+                "name": "",
+                "x": 48,
+                "y": 10
+            },
+            "RCH": {
+                "name": "",
+                "x": -10,
+                "y": 10
+            }
+        },
+        "EMPCharge": {
+            "BuildCostEnergy": 60000,
+            "Name": "EMP Burst",
+            "BuildCostMass": 1000,
+            "Slot": "LCH",
+            "Icon": "emp",
+            "UpgradeUnitAmbientBones": [
+                "URL0301"
+            ],
+            "BuildTime": 3360
+        },
+        "CloakingGeneratorRemove": {
+            "Name": "Remove Personal Cloaking Generator",
+            "BuildCostMass": 1,
+            "Slot": "Back",
+            "BuildCostEnergy": 1,
+            "Icon": "cfs",
+            "RemoveEnhancements": [
+                "StealthGenerator",
+                "CloakingGenerator",
+                "CloakingGeneratorRemove"
+            ],
+            "Prerequisite": "CloakingGenerator",
+            "BuildTime": 0.1
+        },
+        "EMPChargeRemove": {
+            "Name": "Remove EMP Burst",
+            "BuildCostMass": 1,
+            "Slot": "LCH",
+            "BuildCostEnergy": 1,
+            "Icon": "emp",
+            "RemoveEnhancements": [
+                "EMPCharge",
+                "EMPChargeRemove"
+            ],
+            "Prerequisite": "EMPCharge",
+            "BuildTime": 0.1
+        },
+        "FocusConvertorRemove": {
+            "Name": "Remove Disintegrator Amplifier",
+            "BuildCostMass": 1,
+            "Slot": "RCH",
+            "BuildCostEnergy": 1,
+            "Icon": "fc",
+            "RemoveEnhancements": [
+                "FocusConvertor",
+                "FocusConvertorRemove"
+            ],
+            "Prerequisite": "FocusConvertor",
+            "BuildTime": 0.1
+        },
+        "SelfRepairSystemRemove": {
+            "Name": "Remove Nano-Repair System",
+            "BuildCostMass": 1,
+            "Slot": "Back",
+            "BuildCostEnergy": 1,
+            "Icon": "srs",
+            "RemoveEnhancements": [
+                "SelfRepairSystem",
+                "SelfRepairSystemRemove"
+            ],
+            "Prerequisite": "SelfRepairSystem",
+            "BuildTime": 0.1
+        }
+    },
+    "Transport": {
+        "TransportClass": 3,
+        "CanFireFromTransport": false
+    },
+    "SelectionCenterOffsetX": 0,
+    "SelectionCenterOffsetZ": -0.1,
+    "Id": "URL0301",
+    "Display": {
+        "TransportAnimation": [
+            {
+                "Animation": "/units/URL0301/URL0301_afold01.sca",
+                "Weight": 100
+            }
+        ],
+        "IdleEffects": {
+            "Seabed": {
+                "Effects": [
+                    {
+                        "Type": "UnderWater01",
+                        "Bones": [
+                            "Left_Shoulder",
+                            "Right_Shoulder",
+                            "Build",
+                            "Laser"
+                        ]
+                    }
+                ]
+            }
+        },
+        "AnimationWalk": "/units/url0301/url0301_awalk01.sca",
+        "SpawnRandomRotation": true,
+        "UniformScale": 0.13,
+        "AnimationWalkRate": 3.2,
+        "PlaceholderMeshName": "UXB0000",
+        "MovementEffects": {
+            "Land": {
+                "Footfall": {
+                    "Bones": [
+                        {
+                            "Tread": {
+                                "TreadMarksSizeX": 0.45,
+                                "TreadMarks": "CommanderPrint_albedo",
+                                "TreadOffset": [
+                                    0.1,
+                                    0,
+                                    0.25
+                                ],
+                                "TreadMarksSizeZ": 0.45
+                            },
+                            "FootBone": "Left_Foot02"
+                        },
+                        {
+                            "Tread": {
+                                "TreadMarksSizeX": 0.45,
+                                "TreadMarks": "CommanderPrint_albedo",
+                                "TreadOffset": [
+                                    -0.12,
+                                    0,
+                                    0.25
+                                ],
+                                "TreadMarksSizeZ": 0.45
+                            },
+                            "FootBone": "Right_Foot02"
+                        }
+                    ]
+                },
+                "Effects": [
+                    {
+                        "Type": "GroundKickup01",
+                        "Bones": [
+                            "Right_Foot01",
+                            "Left_Foot01"
+                        ]
+                    }
+                ]
+            },
+            "Seabed": {
+                "Effects": [
+                    {
+                        "Type": "UnderWater01",
+                        "Bones": [
+                            "URL0301",
+                            "Left_Shoulder",
+                            "Right_Shoulder",
+                            "Build",
+                            "Laser",
+                            "Left_Foot01",
+                            "Right_Foot01"
+                        ]
+                    }
+                ]
+            }
+        },
+        "Mesh": {
+            "IconFadeInZoom": 130,
+            "LODs": [
+                {
+                    "LODCutoff": 100,
+                    "ShaderName": "Insect"
+                },
+                {
+                    "SpecularName": "url0301_lod1_specteam.dds",
+                    "LODCutoff": 215,
+                    "AlbedoName": "url0301_lod1_albedo.dds",
+                    "ShaderName": "Insect"
+                }
+            ]
+        },
+        "Abilities": [
+            "Amphibious",
+            "Customizable",
+            "Engineering Suite",
+            "Not Capturable",
+            "Omni Sensor",
+            "Volatile"
+        ]
+    },
+    "Buffs": {
+        "Regen": {
+            "Level2": 10,
+            "Level4": 20,
+            "Level1": 5,
+            "Level5": 25,
+            "Level3": 15
+        }
+    },
+    "Categories": [
+        "PRODUCTSC1",
+        "SELECTABLE",
+        "CYBRAN",
+        "MOBILE",
+        "LAND",
+        "TECH3",
+        "ENGINEER",
+        "CONSTRUCTION",
+        "REPAIR",
+        "RECLAIM",
+        "REBUILDER",
+        "BUILTBYQUANTUMGATE",
+        "CAPTURE",
+        "VISIBLETORECON",
+        "SUBCOMMANDER",
+        "PATROLHELPER",
+        "SHOWQUEUE",
+        "OVERLAYOMNI",
+        "OVERLAYDIRECTFIRE",
+        "USEBUILDPRESETS"
+    ],
+    "LifeBarOffset": 0.4,
+    "LifeBarHeight": 0.075
+}
