@@ -160,6 +160,14 @@ module.exports = function (grunt) {
           from: /[0-9]{4}-[0-9]{1,2}-[0-9]{1,2}/g,
           to: '<%= grunt.template.today("yyyy-mm-dd") %>'
         }]
+      },
+      hackUrls: { // hack to solve problem with css-min url rewriting
+        src: ['<%= yeoman.dist %>/css/*.main.css'],
+        overwrite: true,
+        replacements: [
+          { from: 'url(/css/fonts/', to: 'url(fonts/' },
+          { from: 'url(/img/', to: 'url(../img/' }
+        ]
       }
     },
 
@@ -170,8 +178,8 @@ module.exports = function (grunt) {
           src: [
             '<%= yeoman.dist %>/js/{,*/}*.js',
             '<%= yeoman.dist %>/css/{,*/}*.css',
-            // '<%= yeoman.dist %>/img/{,*/}*.{png,jpg,jpeg,gif,webp,svg}', // MODIFIED
-            '<%= yeoman.dist %>/css/fonts/*',
+            // '<%= yeoman.dist %>/img/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
+            '<%= yeoman.dist %>/css/fonts/*.{eot,svg,ttf,woff}',
             '<%= yeoman.dist %>/data/*.json'
           ]
         }
@@ -286,7 +294,7 @@ module.exports = function (grunt) {
             '.htaccess',
             '*.html',
             'views/{,*/}*.html',
-            'img/{,*/}*.{png,jpg,jpeg,gif,webp,svg}', //MODIFIED: {webp}
+            'img/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
             'css/fonts/*',
             'js/vendor/*',
             'data/*'
@@ -388,7 +396,7 @@ module.exports = function (grunt) {
   grunt.registerTask('build', [
     'clean:dist',
     'bowerInstall',
-    'replace',
+    'replace:stamp',
     'useminPrepare',
     'concurrent:dist',
     'autoprefixer',
@@ -400,7 +408,8 @@ module.exports = function (grunt) {
     'uglify',
     'rev',
     'usemin',
-    'htmlmin'
+    'htmlmin',
+    'replace:hackUrls'
   ]);
 
   grunt.registerTask('default', [
