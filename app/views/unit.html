@@ -170,11 +170,71 @@
                 </tr-->
 
                 <!-- Upgrades -->
-                <!--tr class="sec">
-                    <td>Upgrades</td>
-                    <td colspan="2">?:</td>
+                <tr  ng-if="item.Enhancements" ng-repeat-start="u in item.Enhancements | where: {RemoveEnhancements:undefined} | sortBy: 'Slot'" class="sec">
+                    <td ng-class="{ invisible: !$first }">Upgrades</td>
+                    <td colspan="3">{{ u.Name }}</td>
+                </tr>
+                <tr title="{{ u }}" >
+                    <td><small>{{ u.Slot }}</small></td>
+                    <td title="{{ u.BuildCostMass }}"><img src="img/mass.png" alt="mass" />{{ u.BuildCostMass | shorten }}</td>
+                    <td title="{{ u.BuildCostEnergy }}"><img src="img/energy.png" alt="energy" />{{ u.BuildCostEnergy | shorten }}</td>
+                    <td title="{{ u.BuildTime }}"><img src="img/time.png" alt="time" />{{ u.BuildTime | shorten }}</td>
+                </tr>
+                <tr ng-if="u.NewMaxRadius">
                     <td></td>
-                </tr-->
+                    <td colspan="2"><small>new max radius</small></td>
+                    <td><small>{{ u.NewMaxRadius }}</small></td>
+                </tr>
+                <tr ng-if="u.NewRateOfFire">
+                    <td></td>
+                    <td colspan="2"><small>new rate of fire</small></td>
+                    <td><small>{{ u.NewRateOfFire }}</small></td>
+                </tr>
+                <tr ng-if="u.MaintenanceConsumptionPerSecondEnergy">
+                    <td></td>
+                    <td colspan="2"><small>new energy drain</small></td>
+                    <td><small>{{ u.MaintenanceConsumptionPerSecondEnergy | shorten }}</small></td>
+                </tr>
+                <tr ng-if="u.ProductionPerSecondMass">
+                    <td></td>
+                    <td colspan="2"><small>new mass yield</small></td>
+                    <td><small>{{ u.ProductionPerSecondMass | shorten }}</small></td>
+                </tr>
+                <tr ng-if="u.ProductionPerSecondEnergy">
+                    <td></td>
+                    <td colspan="2"><small>new energy yield</small></td>
+                    <td><small>{{ u.ProductionPerSecondEnergy | shorten }}</small></td>
+                </tr>
+                <tr ng-if="u.NewHealth">
+                    <td></td>
+                    <td colspan="2"><small>new health</small></td>
+                    <td><small>{{ u.NewHealth | shorten }}</small></td>
+                </tr>
+                <tr ng-if="u.NewRegenRate">
+                    <td></td>
+                    <td colspan="2"><small>new regen rate</small></td>
+                    <td><small>{{ u.NewRegenRate }}hp/s</small></td>
+                </tr>
+                <tr ng-if="u.NewOmniRadius">
+                    <td></td>
+                    <td colspan="2"><small>new omni radius</small></td>
+                    <td><small>{{ u.NewOmniRadius }}</small></td>
+                </tr>
+                <tr ng-if="u.AdditionalDamage">
+                    <td></td>
+                    <td colspan="2"><small>additional damage</small></td>
+                    <td><small>{{ u.AdditionalDamage }}</small></td>
+                </tr>
+                <tr ng-if="u.NewDamageRadius">
+                    <td></td>
+                    <td colspan="2"><small>new damage radius</small></td>
+                    <td><small>{{ u.NewDamageRadius }}</small></td>
+                </tr>
+                <tr ng-if="u.NewBuildRate" ng-repeat-end>
+                    <td></td>
+                    <td colspan="2"><small>new build rate</small></td>
+                    <td><small>{{ u.NewBuildRate }}</small></td>
+                </tr>
 
             </tbody>
         </table>
