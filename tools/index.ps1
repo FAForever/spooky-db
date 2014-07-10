@@ -1,5 +1,5 @@
 param (
-    [string]$target = "d:\code\personal\html\unitdb\app\data\index.json",
+    [string]$target = "d:\code\personal\html\unitdb\app",
     [string]$faUnitFile = "d:\games\steam\SteamApps\common\Supreme Commander Forged Alliance\gamedata\units.scd",
     [string]$fafFile = "c:\ProgramData\FAForever\gamedata\faforever.nxt"
 )
@@ -35,7 +35,7 @@ Function Run {
 
     $tempDir = "C:\Temp\!fafUnits"
 
-    Write-Progress -Activity "Cleaning"
+    Write-Progress -Activity "Cleaning unit dir"
     If (Test-Path $tempDir) {
         Remove-Item -Recurse -Force $tempDir
     }
@@ -49,13 +49,10 @@ Function Run {
     Write-Progress -Activity "Creating unit index"
     $json = Create-UnitIndex "$tempDir/units"
     $Utf8NoBomEncoding = New-Object System.Text.UTF8Encoding($False)
-    [System.IO.File]::WriteAllLines($target, $json, $Utf8NoBomEncoding)
+    [System.IO.File]::WriteAllLines("$target\data\index.json" , $json, $Utf8NoBomEncoding)
 
-    Write-Progress -Activity "Sorting"
-    python sorter.py $target
-
-    Write-Progress -Activity "Slenderizing"
-    python slenderizer.py $target
+    Write-Progress -Activity "Cleaning"
+    python cleaner.py $target
 }
 
 Run $target
