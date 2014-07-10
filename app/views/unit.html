@@ -163,11 +163,6 @@
                     <td colspan="2"><small>Turret yaw</small></td>
                     <td title="min ~ max @ speed"><small>{{ w.TurretYaw }}~{{ w.TurretYawRange }}° @&nbsp;{{ w.TurretYawSpeed }}°/s</small></td>
                 </tr>
-                <!--tr ng-if="w.FiringTolerance">
-                    <td></td>
-                    <td colspan="2"><small>Firing tolerance</small></td>
-                    <td><small>{{ w.FiringTolerance }}</small></td>
-                </tr-->
 
                 <!-- Upgrades -->
                 <tr  ng-if="item.Enhancements" ng-repeat-start="u in item.Enhancements | where: {RemoveEnhancements:undefined} | sortBy: 'Slot'" class="sec">

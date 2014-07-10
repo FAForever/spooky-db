@@ -107,4 +107,4 @@ def run(path):
     save(units, path)
 
 if __name__ == '__main__':
-    run(( sys.argv[1] if len(sys.argv) > 1 else False ) or 'd:/code/personal/html/unitdb/src/data/index.json')
+    run(( sys.argv[1] if len(sys.argv) > 1 else False ) or 'd:/code/personal/html/unitdb/app/data/index.fat.json')

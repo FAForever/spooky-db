@@ -1,5 +1,5 @@
 param (
-    [string]$target = "d:\code\personal\html\unitdb\src\data\index.json",
+    [string]$target = "d:\code\personal\html\unitdb\app\data\index.json",
     [string]$faUnitFile = "d:\games\steam\SteamApps\common\Supreme Commander Forged Alliance\gamedata\units.scd",
     [string]$fafFile = "c:\ProgramData\FAForever\gamedata\faforever.nxt"
 )
@@ -53,6 +53,9 @@ Function Run {
 
     Write-Progress -Activity "Sorting"
     python sorter.py $target
+
+    Write-Progress -Activity "Slenderizing"
+    python slenderizer.py $target
 }
 
 Run $target
