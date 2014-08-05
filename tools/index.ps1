@@ -1,7 +1,8 @@
 param (
     [string]$target = "d:\code\personal\html\unitdb\app",
     [string]$faUnitFile = "d:\games\steam\SteamApps\common\Supreme Commander Forged Alliance\gamedata\units.scd",
-    [string]$fafFile = "c:\ProgramData\FAForever\gamedata\faforever.nxt"
+    [string]$fafFile = "c:\ProgramData\FAForever\gamedata\faforever.nxt",
+    [string]$fafUnitsFile = "c:\ProgramData\FAForever\gamedata\units.nx2"
 )
 
 Function Create-UnitIndex {
@@ -43,8 +44,11 @@ Function Run {
     Write-Progress -Activity "Extracting Forged Alliance units"
     7z x "$faUnitFile" -o"$tempDir"
 
-    Write-Progress -Activity "Extracting FAF units"
+    Write-Progress -Activity "Extracting FAF units 1/2"
     7z x "$fafFile" "units" -o"$tempDir" -y
+
+    Write-Progress -Activity "Extracting FAF units 2/2"
+    7z x "$fafUnitsFile" "units" -o"$tempDir" -y
 
     Write-Progress -Activity "Creating unit index"
     $json = Create-UnitIndex "$tempDir/units"
