@@ -127,6 +127,8 @@ def slenderize(units, app_path = 'd:/code/personal/html/unitdb/app'):
 
     def trim(u, props):
         for k in dict(u).keys():
+            if k == 'Enhancements': # this needs to stay as it is - not optimal, but at least it's there
+                continue
             if k not in props:
                 u.pop(k)
             elif (type(u[k]) is dict):
