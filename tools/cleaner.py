@@ -125,14 +125,22 @@ def slenderize(units, app_path = 'd:/code/personal/html/unitdb/app'):
     def split_nested(properties):
         return set([e for p in properties for e in p.split('.')])
 
+    def handle_enhancements(d, props):
+        for k in dict(d).keys():
+            if k == 'Slots' or k.endswith('Remove'):
+                d.pop(k)
+            else:
+                trim(d[k], props)
+
     def trim(u, props):
         for k in dict(u).keys():
-            if k == 'Enhancements': # this needs to stay as it is - not optimal, but at least it's there
-                continue
             if k not in props:
                 u.pop(k)
             elif (type(u[k]) is dict):
-                trim(u[k], props)
+                if k == 'Enhancements': # ugh
+                    handle_enhancements(u[k], props)
+                else:
+                    trim(u[k], props)
             elif (type(u[k]) is list):
                 for x in u[k]:
                     if (type(x) is dict):
