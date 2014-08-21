@@ -316,7 +316,7 @@ module.exports = function (grunt) {
             'views/{,*/}*.html',
             //'img/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
             'css/fonts/*',
-            'js/vendor/*',
+            //'js/vendor/*',
             'data/*'
           ]
         }, {
@@ -337,7 +337,10 @@ module.exports = function (grunt) {
     // Run some tasks in parallel to speed up the build process
     concurrent: {
       server: [
-        'copy:styles'
+        'copy:styles',
+        'sprite:ui',
+        'sprite:units',
+        'sprite:strategic'
       ],
       test: [
         'copy:styles'
