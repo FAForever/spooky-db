@@ -57,8 +57,8 @@ unitDb.DpsCalculator = {
     canCalculate: function() { return false; },
     _dps: function() { },
     rate: function(w) {
-        var rate = (w.ProjectilesPerOnFire ? w.RateOfFire : 1 / w.RateOfFire) // tml/nuke launch weapons seem to be mixed up
-        return (Math.round(10 / rate) / 10)
+        var rate = (w.ProjectilesPerOnFire ? w.RateOfFire : 1 / w.RateOfFire); // tml/nuke launch weapons seem to be mixed up
+        return (Math.round(10 / rate) / 10);
     },
     dps: function(w) {
         if (this.canCalculate(w))
