@@ -56,6 +56,10 @@ unitDb.DpsCalculator = {
     next : null,
     canCalculate: function() { return false; },
     _dps: function() { },
+    rate: function(w) {
+        var rate = (w.ProjectilesPerOnFire ? w.RateOfFire : 1 / w.RateOfFire) // tml/nuke launch weapons seem to be mixed up
+        return (Math.round(10 / rate) / 10)
+    },
     dps: function(w) {
         if (this.canCalculate(w))
             return this._dps(w);
@@ -69,7 +73,7 @@ unitDb.DefaultDpsCalculator = angular.extend({}, unitDb.DpsCalculator, {
         return true;
     },
     _dps: function(w) {
-        return (w.Damage * w.MuzzleSalvoSize) / (Math.round(10 / w.RateOfFire) / 10);
+        return (w.Damage * w.MuzzleSalvoSize) / unitDb.DpsCalculator.rate(w);
     }
 });
 unitDb.BeamDpsCalculator = angular.extend({}, unitDb.DpsCalculator, {
@@ -78,7 +82,7 @@ unitDb.BeamDpsCalculator = angular.extend({}, unitDb.DpsCalculator, {
         return w.BeamLifetime;
     },
     _dps: function(w) {
-        return w.Damage * w.BeamLifetime * (w.BeamCollisionDelay || 1) * 10 / (Math.round(10 / w.RateOfFire) / 10);
+        return w.Damage * w.BeamLifetime * (w.BeamCollisionDelay || 1) * 10 / unitDb.DpsCalculator.rate(w);
     }
 });
 unitDb.ContinousBeamDpsCalculator = angular.extend({}, unitDb.DpsCalculator, {
@@ -97,7 +101,7 @@ unitDb.DoTDpsCalculator = angular.extend({}, unitDb.DpsCalculator, {
     },
     _dps: function(w) {
         var initial = unitDb.DefaultDpsCalculator._dps(w);
-        return (initial + w.Damage * w.DoTPulses * w.MuzzleSalvoSize) /  (Math.round(10 / w.RateOfFire) / 10);
+        return (initial + w.Damage * w.DoTPulses * w.MuzzleSalvoSize) /  unitDb.DpsCalculator.rate(w);
     }
 });
 
@@ -138,7 +142,6 @@ unitDb.UnitDecorator = function(blueprint) {
             return (this.name ? this.name + ': ' : '') + (this.tech === 'EXP' ? '' : this.tech + ' ') + this.description;
         },
         weaponStats = function(weapon) {
-            // ?? MuzzleSalvoSize, MuzzleSalvoDelay
             var shots = weapon.ManualFire ? 1 : weapon.ProjectilesPerOnFire, // number of projectiles
                    rate = weapon.ProjectilesPerOnFire ? weapon.RateOfFire : 1 / weapon.RateOfFire, // tml/nuke launch weapons seem to be mixed up
                    delay = weapon.RackSalvoChargeTime,
