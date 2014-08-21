@@ -170,9 +170,9 @@
                 </tr>
                 <tr title="{{ u }}" >
                     <td><small>{{ u.Slot }}</small></td>
-                    <td title="{{ u.BuildCostMass }}"><img src="img/mass.png" alt="mass" />{{ u.BuildCostMass | shorten }}</td>
-                    <td title="{{ u.BuildCostEnergy }}"><img src="img/energy.png" alt="energy" />{{ u.BuildCostEnergy | shorten }}</td>
-                    <td title="{{ u.BuildTime }}"><img src="img/time.png" alt="time" />{{ u.BuildTime | shorten }}</td>
+                    <td title="{{ u.BuildCostMass }}"><span title="mass" class="ic icon-mass"></span>{{ u.BuildCostMass | shorten }}</td>
+                    <td title="{{ u.BuildCostEnergy }}"><span title="energy" class="ic icon-energy"></span>{{ u.BuildCostEnergy | shorten }}</td>
+                    <td title="{{ u.BuildTime }}"><span title="time" class="ic icon-time"></span>{{ u.BuildTime | shorten }}</td>
                 </tr>
                 <tr ng-if="u.NewMaxRadius">
                     <td></td>
