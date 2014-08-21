@@ -1,0 +1,109 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+```html
+<i class="icon-home"></i>
+```
+*/
+.icon-Aeon {
+  background-image: url(../img/ui.png);
+  background-position: -48px 0px;
+  width: 48px;
+  height: 48px;
+}
+.icon-Air {
+  background-image: url(../img/ui.png);
+  background-position: -96px -96px;
+  width: 48px;
+  height: 48px;
+}
+.icon-Base {
+  background-image: url(../img/ui.png);
+  background-position: 0px -48px;
+  width: 48px;
+  height: 48px;
+}
+.icon-Cybran {
+  background-image: url(../img/ui.png);
+  background-position: -48px -48px;
+  width: 48px;
+  height: 48px;
+}
+.icon-EXP {
+  background-image: url(../img/ui.png);
+  background-position: -96px 0px;
+  width: 48px;
+  height: 48px;
+}
+.icon-Land {
+  background-image: url(../img/ui.png);
+  background-position: -96px -48px;
+  width: 48px;
+  height: 48px;
+}
+.icon-Naval {
+  background-image: url(../img/ui.png);
+  background-position: 0px -96px;
+  width: 48px;
+  height: 48px;
+}
+.icon-Seraphim {
+  background-image: url(../img/ui.png);
+  background-position: -48px -96px;
+  width: 48px;
+  height: 48px;
+}
+.icon-T1 {
+  background-image: url(../img/ui.png);
+  background-position: 0px 0px;
+  width: 48px;
+  height: 48px;
+}
+.icon-T2 {
+  background-image: url(../img/ui.png);
+  background-position: -144px 0px;
+  width: 48px;
+  height: 48px;
+}
+.icon-T3 {
+  background-image: url(../img/ui.png);
+  background-position: -144px -48px;
+  width: 48px;
+  height: 48px;
+}
+.icon-UEF {
+  background-image: url(../img/ui.png);
+  background-position: -144px -96px;
+  width: 48px;
+  height: 48px;
+}
+.icon-compare {
+  background-image: url(../img/ui.png);
+  background-position: 0px -144px;
+  width: 48px;
+  height: 48px;
+}
+.icon-energy {
+  background-image: url(../img/ui.png);
+  background-position: -48px -144px;
+  width: 20px;
+  height: 20px;
+}
+.icon-health {
+  background-image: url(../img/ui.png);
+  background-position: -68px -144px;
+  width: 20px;
+  height: 20px;
+}
+.icon-mass {
+  background-image: url(../img/ui.png);
+  background-position: -88px -144px;
+  width: 20px;
+  height: 20px;
+}
+.icon-time {
+  background-image: url(../img/ui.png);
+  background-position: -108px -144px;
+  width: 20px;
+  height: 20px;
+}

@@ -366,6 +366,13 @@ module.exports = function (grunt) {
     },
 
     sprite: {
+      ui: {
+        src: ['<%= yeoman.app %>/img/*.png', '!**/units.png', '!**/strategic.png', '!**/ui.png'],
+        destImg: '<%= yeoman.app %>/img/ui.png',
+        destCSS: '<%= yeoman.app %>/css/ui_sprites.css',
+        algorithm: 'binary-tree',
+        engine: 'phantomjs'
+      },
       strategic: {
         src: '<%= yeoman.app %>/img/strategic/*.png',
         destImg: '<%= yeoman.app %>/img/strategic.png',
@@ -417,6 +424,7 @@ module.exports = function (grunt) {
     'bowerInstall',
     'replace:stamp',
     'useminPrepare',
+    'sprite:ui',
     'sprite:strategic',
     'sprite:units',
     'concurrent:dist',

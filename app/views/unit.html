@@ -9,10 +9,10 @@
         <table>
             <tbody>
                 <tr>
-                    <td title="{{ item.Defense.Health }}"><img src="img/health.png" alt="health" />{{ item.Defense.Health | shorten }}<small ng-if="item.Defense.RegenRate">&nbsp;({{ item.Defense.RegenRate }}hp/s)</small></td>
-                    <td title="{{ item.Economy.BuildCostMass }}"><img src="img/mass.png" alt="mass" />{{ item.Economy.BuildCostMass | shorten }}</td>
-                    <td title="{{ item.Economy.BuildCostEnergy }}"><img src="img/energy.png" alt="energy" />{{ item.Economy.BuildCostEnergy | shorten }}</td>
-                    <td title="{{ item.Economy.BuildTime }}"><img src="img/time.png" alt="time" />{{ item.Economy.BuildTime | shorten }}</td>
+                    <td title="{{ item.Defense.Health }}"><span title="health" class="ic icon-health"></span>{{ item.Defense.Health | shorten }}<small ng-if="item.Defense.RegenRate">&nbsp;({{ item.Defense.RegenRate }}hp/s)</small></td>
+                    <td title="{{ item.Economy.BuildCostMass }}"><span title="mass" class="ic icon-mass"></span>{{ item.Economy.BuildCostMass | shorten }}</td>
+                    <td title="{{ item.Economy.BuildCostEnergy }}"><span title="energy" class="ic icon-energy"></span>{{ item.Economy.BuildCostEnergy | shorten }}</td>
+                    <td title="{{ item.Economy.BuildTime }}"><span title="time" class="ic icon-time"></span>{{ item.Economy.BuildTime | shorten }}</td>
                 </tr>
 
                 <!-- Economy -->

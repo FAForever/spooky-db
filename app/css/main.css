@@ -181,9 +181,6 @@ footer {
     border-radius: 3px;
     margin-bottom: 3px;
 }
-.filters img {
-    width: 48px;
-}
 .filters input {
     width: 100%;
 }
@@ -265,6 +262,10 @@ h1.seraphim { background-image: url(../img/SC_Seraphim.jpg) }
 .details .thumb {
     float: left;
     margin-right: 1em;
+}
+.details .ic {
+    display: inline-block;
+    vertical-align: middle;
 }
 
 /* full mode */
