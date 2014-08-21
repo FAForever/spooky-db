@@ -148,7 +148,9 @@ def slenderize(units, app_path = 'd:/code/personal/html/unitdb/app'):
 
     view_props = extract_properties([os.path.join(app_path, 'views', v) for v in VIEWS])
     script_props = extract_properties([os.path.join(app_path, 'js', s) for s in SCRIPTS])
-    other_props = ['Level1', 'Level2', 'Level3', 'Level4', 'Level5'] # not detected by script because of usage in unit.html ... well, shit happens
+    # not detected by script because of usage in unit.html ... well, shit happens
+    other_props = ['Level1', 'Level2', 'Level3', 'Level4', 'Level5']
+    other_props += ['BuildRate', 'StorageMass', 'StorageEnergy', 'ProductionPerSecondMass', 'ProductionPerSecondEnergy', 'MaintenanceConsumptionPerSecondEnergy']
     
     props = filter_lowercase(view_props.union(script_props).union(other_props))
     props = split_nested(props)
