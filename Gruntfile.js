@@ -46,6 +46,18 @@ module.exports = function (grunt) {
         files: ['<%= yeoman.app %>/css/{,*/}*.css'],
         tasks: ['newer:copy:styles', 'autoprefixer']
       },
+      imagesUi: {
+        files: ['<%= yeoman.app %>/img/*.{png,jpg,jpeg,gif,webp,svg}'],
+        tasks: ['sprite:ui']
+      },
+      imagesStrategic: {
+        files: ['<%= yeoman.app %>/img/strategic/*.{png,jpg,jpeg,gif,webp,svg}'],
+        tasks: ['sprite:strategic']
+      },
+      imagesUnits: {
+        files: ['<%= yeoman.app %>/img/units/*.{png,jpg,jpeg,gif,webp,svg}'],
+        tasks: ['sprite:units']
+      },
       gruntfile: {
         files: ['Gruntfile.js']
       },
@@ -56,6 +68,7 @@ module.exports = function (grunt) {
         files: [
           '<%= yeoman.app %>/{,*/}*.html',
           '.tmp/css/{,*/}*.css',
+          '.tmp/img/*.{png,jpg,jpeg,gif,webp,svg}',
           '<%= yeoman.app %>/img/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ]
       }
@@ -179,7 +192,7 @@ module.exports = function (grunt) {
           src: [
             '<%= yeoman.dist %>/js/{,*/}*.js',
             '<%= yeoman.dist %>/css/{,*/}*.css',
-            // '<%= yeoman.dist %>/img/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
+            '<%= yeoman.dist %>/img/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
             '<%= yeoman.dist %>/css/fonts/*.{eot,svg,ttf,woff}',
             '<%= yeoman.dist %>/data/*.json'
           ]
@@ -226,9 +239,14 @@ module.exports = function (grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: '<%= yeoman.app %>/img',
+          cwd: '.tmp/img',
           //src: '{,*/}*.{png,jpg,jpeg,gif}',
           src: '*.{png,jpg,jpeg,gif}',
+          dest: '<%= yeoman.dist %>/img'
+        }, {
+          expand: true,
+          cwd: '<%= yeoman.app %>/img',
+          src: '*.{jpg,jpeg,gif}',
           dest: '<%= yeoman.dist %>/img'
         }]
       }
@@ -296,7 +314,7 @@ module.exports = function (grunt) {
             '.htaccess',
             '*.html',
             'views/{,*/}*.html',
-            'img/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
+            //'img/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
             'css/fonts/*',
             'js/vendor/*',
             'data/*'
@@ -367,23 +385,23 @@ module.exports = function (grunt) {
 
     sprite: {
       ui: {
-        src: ['<%= yeoman.app %>/img/*.png', '!**/units.png', '!**/strategic.png', '!**/ui.png'],
-        destImg: '<%= yeoman.app %>/img/ui.png',
-        destCSS: '<%= yeoman.app %>/css/ui_sprites.css',
+        src: '<%= yeoman.app %>/img/*.png',
+        destImg: '.tmp/img/ui.png',
+        destCSS: '.tmp/css/ui_sprites.css',
         algorithm: 'binary-tree',
         engine: 'phantomjs'
       },
       strategic: {
         src: '<%= yeoman.app %>/img/strategic/*.png',
-        destImg: '<%= yeoman.app %>/img/strategic.png',
-        destCSS: '<%= yeoman.app %>/css/strategic_sprites.css',
+        destImg: '.tmp/img/strategic.png',
+        destCSS: '.tmp/css/strategic_sprites.css',
         algorithm: 'binary-tree',
         engine: 'phantomjs'
       },
       units: {
         src: '<%= yeoman.app %>/img/units/*.png',
-        destImg: '<%= yeoman.app %>/img/units.png',
-        destCSS: '<%= yeoman.app %>/css/units_sprites.css',
+        destImg: '.tmp/img/units.png',
+        destCSS: '.tmp/css/units_sprites.css',
         algorithm: 'binary-tree',
         engine: 'phantomjs'
       }
