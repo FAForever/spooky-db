@@ -1,8 +1,7 @@
 <article class="details faction {{ item.faction|lowercase }}">
     <header>
-        <span class="thumb" title="{{ item.fullName() }}">
-            <img ng-src="{{ item|pic }}" alt="{{ item.fullName() }}" />
-            <img class="strategic" ng-src="{{ item|icon }}" alt="" />
+        <span class="thumb icon-{{ item.id }}" title="{{ item.fullName() }}">
+            <span class="strategic icon-{{ item.faction  }}_{{ item.strategicIcon}}" ></span>
         </span>
         <h1>{{ item.fullName() }}<small> {{ item.faction }}</small></h1>
     </header>

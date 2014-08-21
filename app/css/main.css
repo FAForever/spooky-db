@@ -218,18 +218,18 @@ footer {
 }
 .filters a:hover, .filters a:focus, .filters a.active,
 .faction a.thumb:hover, .faction a.thumb:focus, .faction a.thumb.selected {
-    background: rgba(255,255,255, .4);
+    background-color: rgba(255,255,255, .4);
 }
 
 /*.faction h1 { background: no-repeat 50px -165px / 160%; padding-left: .33em; }*/ /* css to achieve current faction logo with original images */
 .faction h1 { background: no-repeat right top; padding-left: .33em; }
-.uef { background: rgba(45,120,178, .2); /*#2d78b2*/ }
+.uef { background-color: rgba(45,120,178, .2); /*#2d78b2*/ }
 h1.uef  { background-image: url(../img/SC_UEF.jpg) }
-.cybran { background: rgba(223,45,14, .2); /*#df2d0e*/ }
+.cybran { background-color: rgba(223,45,14, .2); /*#df2d0e*/ }
 h1.cybran { background-image: url(../img/SC_Cybran.jpg) }
-.aeon { background: rgba(10,157,47, .2); /*#0a9d2f*/ }
+.aeon { background-color: rgba(10,157,47, .2); /*#0a9d2f*/ }
 h1.aeon { background-image: url(../img/SC_Aeon.jpg) }
-.seraphim { background: rgba(241,194,64, .2); /*#f1c240*/ }
+.seraphim { background-color: rgba(241,194,64, .2); /*#f1c240*/ }
 h1.seraphim { background-image: url(../img/SC_Seraphim.jpg) }
 
 .details {

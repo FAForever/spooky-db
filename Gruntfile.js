@@ -227,7 +227,8 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: '<%= yeoman.app %>/img',
-          src: '{,*/}*.{png,jpg,jpeg,gif}',
+          //src: '{,*/}*.{png,jpg,jpeg,gif}',
+          src: '*.{png,jpg,jpeg,gif}',
           dest: '<%= yeoman.dist %>/img'
         }]
       }
@@ -309,7 +310,7 @@ module.exports = function (grunt) {
       },
       styles: {
         expand: true,
-        cwd: '<%= yeoman.app %>/styles',
+        cwd: '<%= yeoman.app %>/css',
         dest: '.tmp/css/',
         src: '{,*/}*.css'
       }
@@ -362,6 +363,23 @@ module.exports = function (grunt) {
         configFile: 'karma.conf.js',
         singleRun: true
       }
+    },
+
+    sprite: {
+      strategic: {
+        src: '<%= yeoman.app %>/img/strategic/*.png',
+        destImg: '<%= yeoman.app %>/img/strategic.png',
+        destCSS: '<%= yeoman.app %>/css/strategic_sprites.css',
+        algorithm: 'binary-tree',
+        engine: 'phantomjs'
+      },
+      units: {
+        src: '<%= yeoman.app %>/img/units/*.png',
+        destImg: '<%= yeoman.app %>/img/units.png',
+        destCSS: '<%= yeoman.app %>/css/units_sprites.css',
+        algorithm: 'binary-tree',
+        engine: 'phantomjs'
+      }
     }
   });
 
@@ -399,6 +417,8 @@ module.exports = function (grunt) {
     'bowerInstall',
     'replace:stamp',
     'useminPrepare',
+    'sprite:strategic',
+    'sprite:units',
     'concurrent:dist',
     'autoprefixer',
     'concat',
