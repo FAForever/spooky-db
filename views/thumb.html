@@ -1,1 +1,1 @@
-<a class="thumb {{ item.faction|lowercase }}" ng-class="{selected: item.selected}" title="{{ item.fullName() }}" ng-click="click()"><!--img ng-src="img/units/unknown.png" alt="{{ item.fullName() }}" /--><img ng-src="{{ item|pic }}" alt="{{ item.fullName() }}"> <img class="strategic" ng-src="{{ item|icon }}" alt=""></a>
+<a class="thumb {{ item.faction|lowercase }} icon-{{ item.id }}" ng-class="{selected: item.selected}" title="{{ item.fullName() }}" ng-click="click()"><span class="strategic icon-{{ item.faction }}_{{ item.strategicIcon}}"></span></a>
