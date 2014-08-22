@@ -120,7 +120,7 @@ def slenderize(units, app_path = 'd:/code/personal/html/unitdb/app'):
         return set(properties)
 
     def filter_lowercase(properties):
-        return [p for p in properties if p[0].isupper()]
+        return [p for p in properties if len(p) > 0 and p[0].isupper()]
 
     def split_nested(properties):
         return set([e for p in properties for e in p.split('.')])
