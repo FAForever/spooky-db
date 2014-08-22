@@ -45,8 +45,9 @@ unitDb.filters = {
     },
 
     round: function() {
-        return function(item) {
-            return Math.round(item || 0);
+        return function(item, places = 0) {
+            var x = Math.pow(10, places);
+            return Math.round((item || 0) * x) / x;
         };
     },
 
