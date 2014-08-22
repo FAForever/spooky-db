@@ -73,6 +73,8 @@ unitDb.DefaultDpsCalculator = angular.extend({}, unitDb.DpsCalculator, {
     },
     _dps: function(w) {
         var projectileMultiplier = 1,
+            // this thing is needed to properly calculate split projectiles. Unfortunately the numbers hardcoded here are not available in the blueprint,
+            // but specified in the .lua files for corresponding projectiles.
             projectileMultiplierLookup = {
                 '/projectiles/TIFFragmentationSensorShell01/TIFFragmentationSensorShell01_proj.bp': 4, // Lobo
                 '/projectiles/SIFThunthoArtilleryShell01/SIFThunthoArtilleryShell01_proj.bp': 5 // Zthuee
