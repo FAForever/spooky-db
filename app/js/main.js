@@ -72,7 +72,16 @@ unitDb.DefaultDpsCalculator = angular.extend({}, unitDb.DpsCalculator, {
         return true;
     },
     _dps: function(w) {
-        return (w.Damage * w.MuzzleSalvoSize) / unitDb.DpsCalculator.rateInverse(w);
+        var projectileMultiplier = 1,
+            projectileMultiplierLookup = {
+                '/projectiles/TIFFragmentationSensorShell01/TIFFragmentationSensorShell01_proj.bp': 4, // Lobo
+                '/projectiles/SIFThunthoArtilleryShell01/SIFThunthoArtilleryShell01_proj.bp': 5 // Zthuee
+        };
+
+        if (w.ProjectileId)
+            projectileMultiplier = w.ProjectilesPerOnFire || projectileMultiplierLookup[w.ProjectileId];
+
+        return (projectileMultiplier * w.Damage * w.MuzzleSalvoSize) / unitDb.DpsCalculator.rateInverse(w);
     }
 });
 unitDb.BeamDpsCalculator = angular.extend({}, unitDb.DpsCalculator, {
