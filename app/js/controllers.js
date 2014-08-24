@@ -5,6 +5,7 @@ unitDb.controllers = {
         $scope.kinds = [];
         $scope.tech = [];
 
+        $scope.index = data.items;
         $scope.contenders = data.contenders;
 
         var toggleArray = function(arr, el) {
@@ -48,7 +49,9 @@ unitDb.controllers = {
         };
         $scope.clear = function() {
             for (var c in data.items)
-                data.items[c].selected = false;
+                if (data.items[c].selected)
+                    data.items[c].selected = false;
+
             data.contenders = [];
         };
         $scope.strain = function(e) {
@@ -56,8 +59,6 @@ unitDb.controllers = {
                        ($scope.kinds.length === 0 || isInArray($scope.kinds, e.classification)) &&
                        ($scope.tech.length === 0 || isInArray($scope.tech, e.tech));
         };
-
-        $scope.index = data.items;
     }],
 
     compareCtrl: ['$scope', '$routeParams', 'data', function($scope, $routeParams, data) {
