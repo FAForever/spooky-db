@@ -80,8 +80,8 @@ unitDb.DefaultDpsCalculator = angular.extend({}, unitDb.DpsCalculator, {
                 '/projectiles/SIFThunthoArtilleryShell01/SIFThunthoArtilleryShell01_proj.bp': 5 // Zthuee
         };
 
-        if (w.ProjectileId && projectileMultiplierLookup[w.ProjectileId])
-            projectileMultiplier = w.ProjectilesPerOnFire || projectileMultiplierLookup[w.ProjectileId];
+        if (w.ProjectileId)
+            projectileMultiplier = w.ProjectilesPerOnFire || projectileMultiplierLookup[w.ProjectileId] || 1;
 
         return (projectileMultiplier * w.Damage * w.MuzzleSalvoSize) / unitDb.DpsCalculator.rateInverse(w);
     }
