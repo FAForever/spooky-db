@@ -77,11 +77,12 @@ unitDb.DefaultDpsCalculator = angular.extend({}, unitDb.DpsCalculator, {
             // but specified in the .lua files for corresponding projectiles.
             projectileMultiplierLookup = {
                 '/projectiles/TIFFragmentationSensorShell01/TIFFragmentationSensorShell01_proj.bp': 4, // Lobo
-                '/projectiles/SIFThunthoArtilleryShell01/SIFThunthoArtilleryShell01_proj.bp': 5 // Zthuee
+                '/projectiles/SIFThunthoArtilleryShell01/SIFThunthoArtilleryShell01_proj.bp': 5, // Zthuee
+                '/projectiles/CIFNeutronClusterBomb01/CIFNeutronClusterBomb01_proj.bp': 1 // cybran bomber
         };
 
         if (w.ProjectileId)
-            projectileMultiplier = w.ProjectilesPerOnFire || projectileMultiplierLookup[w.ProjectileId] || 1;
+            projectileMultiplier = projectileMultiplierLookup[w.ProjectileId] || w.ProjectilesPerOnFire || 1;
 
         return (projectileMultiplier * w.Damage * w.MuzzleSalvoSize) / unitDb.DpsCalculator.rateInverse(w);
     }
