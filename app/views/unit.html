@@ -122,8 +122,7 @@
                 <tr ng-if="w.dps || w.Damage">
                     <td></td>
                     <td title="category (damage type)" colspan="2"><small>{{ w.WeaponCategory }} ({{ w.DamageType }})</small></td>
-                    <td ng-if="w.dps" title="damage per second"><small>{{ w.dps | round:2 }}dps</small></td>
-                    <td ng-if="!w.dps" title="damage"><small>{{ w.Damage | round }}dmg</small></td>
+                    <td title="damage per second"><small ng-if="w.dps">{{ w.dps | round:2 }}dps<br /></small><small>{{ w.Damage | round }}dmg</small></td>
                 </tr>
                 <tr ng-if="w.MaxRadius">
                     <td></td>
