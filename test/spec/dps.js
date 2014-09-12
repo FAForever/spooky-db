@@ -245,23 +245,23 @@ describe('dps', function () {
 
   it('Zeus (URA0103) - Neutron Cluster Bomb', function () {
     var weapon = {
-        "Damage": 50,
-        "DamageRadius": 3,
-        "DamageType": "Normal",
-        "DisplayName": "Neutron Cluster Bomb",
-        "MaxRadius": 40,
-        "MuzzleSalvoSize": 6,
-        "ProjectileId": "/projectiles/CIFNeutronClusterBomb01/CIFNeutronClusterBomb01_proj.bp",
-        "ProjectilesPerOnFire": 6,
-        "RackSalvoChargeTime": 0,
-        "RateOfFire": 0.25,
-        "TurretPitch": 0,
-        "TurretPitchRange": 0,
-        "TurretPitchSpeed": 0,
-        "TurretYaw": 0,
-        "TurretYawRange": 0,
-        "TurretYawSpeed": 0,
-        "WeaponCategory": "Bomb"
+        'Damage': 50,
+        'DamageRadius': 3,
+        'DamageType': 'Normal',
+        'DisplayName': 'Neutron Cluster Bomb',
+        'MaxRadius': 40,
+        'MuzzleSalvoSize': 6,
+        'ProjectileId': '/projectiles/CIFNeutronClusterBomb01/CIFNeutronClusterBomb01_proj.bp',
+        'ProjectilesPerOnFire': 6,
+        'RackSalvoChargeTime': 0,
+        'RateOfFire': 0.25,
+        'TurretPitch': 0,
+        'TurretPitchRange': 0,
+        'TurretPitchSpeed': 0,
+        'TurretYaw': 0,
+        'TurretYawRange': 0,
+        'TurretYawSpeed': 0,
+        'WeaponCategory': 'Bomb'
     };
     var dps = unitDb.dpsCalculator.dps(weapon);
     expect(dps).toBeCloseTo(75);
@@ -269,18 +269,18 @@ describe('dps', function () {
 
   it('Shimmer (UAA0103) - Graviton Bomb', function () {
     var weapon = {
-        "Buffs": [ {} ],
-        "Damage": 200,
-        "DamageRadius": 4,
-        "DamageType": "Normal",
-        "DisplayName": "Graviton Bomb",
-        "MaxRadius": 40,
-        "MuzzleSalvoSize": 1,
-        "ProjectileId": "/projectiles/AIFBombGraviton01/AIFBombGraviton01_proj.bp",
-        "ProjectilesPerOnFire": 1,
-        "RackSalvoChargeTime": 0,
-        "RateOfFire": 0.25,
-        "WeaponCategory": "Bomb"
+        'Buffs': [ {} ],
+        'Damage': 200,
+        'DamageRadius': 4,
+        'DamageType': 'Normal',
+        'DisplayName': 'Graviton Bomb',
+        'MaxRadius': 40,
+        'MuzzleSalvoSize': 1,
+        'ProjectileId': '/projectiles/AIFBombGraviton01/AIFBombGraviton01_proj.bp',
+        'ProjectilesPerOnFire': 1,
+        'RackSalvoChargeTime': 0,
+        'RateOfFire': 0.25,
+        'WeaponCategory': 'Bomb'
     };
     var dps = unitDb.dpsCalculator.dps(weapon);
     expect(dps).toBeCloseTo(50);
@@ -288,17 +288,17 @@ describe('dps', function () {
 
   it('Sinnve (XSA0103) - Othe Tactical Bomb', function () {
     var weapon = {
-        "Damage": 250,
-        "DamageRadius": 4,
-        "DamageType": "Normal",
-        "DisplayName": "Othe Tactical Bomb",
-        "MaxRadius": 40,
-        "MuzzleSalvoSize": 1,
-        "ProjectileId": "/projectiles/SBOOtheTacticalBomb01/SBOOtheTacticalBomb01_proj.bp",
-        "ProjectilesPerOnFire": 1,
-        "RackSalvoChargeTime": 0,
-        "RateOfFire": 0.25,
-        "WeaponCategory": "Bomb"
+        'Damage': 250,
+        'DamageRadius': 4,
+        'DamageType': 'Normal',
+        'DisplayName': 'Othe Tactical Bomb',
+        'MaxRadius': 40,
+        'MuzzleSalvoSize': 1,
+        'ProjectileId': '/projectiles/SBOOtheTacticalBomb01/SBOOtheTacticalBomb01_proj.bp',
+        'ProjectilesPerOnFire': 1,
+        'RackSalvoChargeTime': 0,
+        'RateOfFire': 0.25,
+        'WeaponCategory': 'Bomb'
     };
     var dps = unitDb.dpsCalculator.dps(weapon);
     expect(dps).toBeCloseTo(62.5);
