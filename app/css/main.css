@@ -111,6 +111,26 @@ textarea {
     font-style: normal;
 
 }
+@keyframes neon-glow {
+  from {
+    text-shadow:
+        0 0 1px #fff,
+        0 0 4px  #fff,
+        0 0 6px  #fff,
+        0 0 8px  #f90,
+        0 0 15px  #f90,
+        0 0 20px  #f90,
+        0 0 30px #f90,
+        0 0 40px #f90;
+  }
+  to {
+    text-shadow: 0 0 0 #fff;
+  }
+}
+@keyframes background-glow {
+  from { background-color: #f90; }
+  to { background-color: transparent; }
+}
 body {
     background: #222 fixed url(../img/background.jpg) no-repeat 0 0;
     background-size: cover;
@@ -140,6 +160,9 @@ footer {
     font-size: .8em;
     clear: both;
     text-align: right;
+}
+.glow {
+    animation: neon-glow 1.5s ease-in-out infinite alternate;
 }
 .main {
     overflow: hidden;
@@ -277,6 +300,9 @@ h1.seraphim { background-image: url(../img/SC_Seraphim.jpg) }
 
 /* filter in single column */
 @media only screen and (max-width: 1461px) {
+    .glow {
+        animation: background-glow 1.5s ease-in-out infinite alternate;
+    }
     .filters header {
         padding: 2px 0 0;
         height: auto;
