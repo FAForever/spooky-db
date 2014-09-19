@@ -19,6 +19,8 @@ module.exports = function(config) {
       'app/bower_components/angular-underscore/angular-underscore.js',
       'app/js/plugins.js',
       'app/js/main.js',
+      'app/js/dps.js',
+      'app/js/UnitDecorator.js',
       'app/js/services.js',
       'app/js/filters.js',
       'app/js/directives.js',

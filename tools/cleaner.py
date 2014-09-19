@@ -106,7 +106,7 @@ def sort(units):
 
 def slenderize(units, app_path = 'd:/code/personal/html/unitdb/app'):
     VIEWS = ['compare.html', 'home.html', 'thumb.html', 'unit.html']
-    SCRIPTS = ['filters.js', 'main.js']
+    SCRIPTS = ['filters.js', 'main.js', 'dps.js', 'UnitDecorator.js']
 
     def extract_properties(files):
         properties = []
