@@ -9,10 +9,32 @@
         <table>
             <tbody>
                 <tr>
-                    <td title="{{ item.Defense.Health }}"><span title="health" class="ic icon-health"></span>{{ item.Defense.Health | shorten }}<small ng-if="item.Defense.RegenRate">&nbsp;({{ item.Defense.RegenRate }}hp/s)</small></td>
+                    <td title="{{ item.Defense.Health }} hp"><span title="health" class="ic icon-health"></span>{{ item.Defense.Health | shorten }}<small ng-if="item.Defense.RegenRate">&nbsp;({{ item.Defense.RegenRate }}hp/s)</small></td>
                     <td title="{{ item.Economy.BuildCostMass }}"><span title="mass" class="ic icon-mass"></span>{{ item.Economy.BuildCostMass | shorten }}</td>
                     <td title="{{ item.Economy.BuildCostEnergy }}"><span title="energy" class="ic icon-energy"></span>{{ item.Economy.BuildCostEnergy | shorten }}</td>
                     <td title="{{ item.Economy.BuildTime }}"><span title="time" class="ic icon-time"></span>{{ item.Economy.BuildTime | shorten }}</td>
+                </tr>
+
+                <!-- Shields -->
+                <tr class="sec" ng-if="item.Defense.Shield">
+                    <td>Shield</td>
+                    <td colspan="2">Health</td>
+                    <td>{{ item.Defense.Shield.ShieldMaxHealth }}</td>
+                </tr>
+                <tr ng-if="item.Defense.Shield">
+                    <td></td>
+                    <td colspan="2">Regen</td>
+                    <td>{{ item.Defense.Shield.ShieldRegenRate }} hp/s</td>
+                </tr>
+                <tr ng-if="item.Defense.Shield">
+                    <td></td>
+                    <td colspan="2">Size</td>
+                    <td>{{ item.Defense.Shield.ShieldSize }}</td>
+                </tr>
+                <tr ng-if="item.Defense.Shield">
+                    <td></td>
+                    <td colspan="2">Recharge time</td>
+                    <td>{{ item.Defense.Shield.ShieldRechargeTime + item.Defense.Shield.ShieldRegenStartTime }} s</td>
                 </tr>
 
                 <!-- Economy -->
@@ -111,7 +133,7 @@
                     <td ng-class="{ invisible: !$first }">Veterancy</td>
                     <td title="kills"><small>{{ item.Veteran['Level'+lv] }}</small></td>
                     <td title="{{ item.Defense.Health * (1 + lv * 0.1) | round }}hp health"><small>{{ item.Defense.Health * (1 + lv * 0.1) | round | shorten }} hp</small></td>
-                    <td title="regeneration rate"><small>{{ item.Defense.RegenRate + item.Buffs.Regen['Level'+lv] }}hp/s</small></td>
+                    <td title="regeneration rate"><small>{{ item.Defense.RegenRate + item.Buffs.Regen['Level'+lv] }} hp/s</small></td>
                 </tr>
 
                 <!-- Weapons -->
@@ -223,10 +245,30 @@
                     <td colspan="2"><small>new damage radius</small></td>
                     <td><small>{{ u.NewDamageRadius }}</small></td>
                 </tr>
-                <tr ng-if="u.NewBuildRate" ng-repeat-end>
+                <tr ng-if="u.NewBuildRate">
                     <td></td>
                     <td colspan="2"><small>new build rate</small></td>
                     <td><small>{{ u.NewBuildRate }}</small></td>
+                </tr>
+                <tr ng-if="u.ShieldMaxHealth">
+                    <td></td>
+                    <td colspan="2"><small>health</small></td>
+                    <td><small>{{ u.ShieldMaxHealth }}</small></td>
+                </tr>
+                <tr ng-if="u.ShieldRegenRate">
+                    <td></td>
+                    <td colspan="2"><small>regen</small></td>
+                    <td><small>{{ u.ShieldRegenRate }}</small></td>
+                </tr>
+                <tr ng-if="u.ShieldSize">
+                    <td></td>
+                    <td colspan="2"><small>size</small></td>
+                    <td><small>{{ u.ShieldSize }}</small></td>
+                </tr>
+                <tr ng-if="u.ShieldRechargeTime && u.ShieldRegenStartTime" ng-repeat-end>
+                    <td></td>
+                    <td colspan="2"><small>recharge time</small></td>
+                    <td><small>{{ u.ShieldRechargeTime + u.ShieldRegenStartTime }}</small></td>
                 </tr>
             </tbody>
         </table>
