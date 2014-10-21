@@ -19,7 +19,7 @@
                 <tr class="sec" ng-if="item.Defense.Shield">
                     <td>Shield</td>
                     <td colspan="2">Health</td>
-                    <td>{{ item.Defense.Shield.ShieldMaxHealth }}</td>
+                    <td>{{ item.Defense.Shield.ShieldMaxHealth | shorten }}</td>
                 </tr>
                 <tr ng-if="item.Defense.Shield">
                     <td></td>
@@ -253,7 +253,7 @@
                 <tr ng-if="u.ShieldMaxHealth">
                     <td></td>
                     <td colspan="2"><small>health</small></td>
-                    <td><small>{{ u.ShieldMaxHealth }}</small></td>
+                    <td><small>{{ u.ShieldMaxHealth | shorten }}</small></td>
                 </tr>
                 <tr ng-if="u.ShieldRegenRate">
                     <td></td>
