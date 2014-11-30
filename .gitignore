@@ -7,3 +7,4 @@ app/bower_components
 local.conf.json
 __pycache__
 phantomjsPath.ps1
+*.sublime-*
