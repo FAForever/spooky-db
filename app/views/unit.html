@@ -90,10 +90,10 @@
                 </tr>
 
                 <!-- Air Physics -->
-                <tr ng-if="item.Air.MinAirspeed" class="sec">
+                <tr ng-if="item.Air.MaxAirspeed" class="sec">
                     <td>Air Physics</td>
                     <td colspan="2">Speed</td>
-                    <td>{{ item.Air.MinAirspeed }}-{{ item.Air.MaxAirspeed }}</td>
+                    <td>{{ item.Air.MinAirspeed || 0 }}-{{ item.Air.MaxAirspeed }}</td>
                 </tr>
                 <tr ng-if="item.Physics.Elevation">
                     <td></td>
