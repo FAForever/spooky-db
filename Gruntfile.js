@@ -169,7 +169,7 @@ module.exports = function (grunt) {
     replace: {
       stamp: {
         src: ['<%= yeoman.app %>/views/home.html'],
-        overwrite: true,                 // overwrite matched source files
+        overwrite: true, // overwrite matched source files
         replacements: [{
           from: /[0-9]{4}-[0-9]{1,2}-[0-9]{1,2}/g,
           to: '<%= grunt.template.today("yyyy-mm-dd") %>'
@@ -179,8 +179,8 @@ module.exports = function (grunt) {
         src: ['<%= yeoman.dist %>/css/*.main.css'],
         overwrite: true,
         replacements: [
-          { from: 'url(/css/fonts/', to: 'url(fonts/' },
-          { from: 'url(/img/', to: 'url(../img/' }
+          { from: /url\(.*?\.tmp\/css\/fonts\//g, to: 'url(fonts/' },
+          { from: /url\(.*?\.tmp\/img\//g, to: 'url(../img/' }
         ]
       }
     },
