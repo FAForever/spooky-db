@@ -150,9 +150,9 @@ module.exports = function (grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: '.tmp/css/',
+          cwd: '.tmp/css',
           src: '{,*/}*.css',
-          dest: '.tmp/css/'
+          dest: '.tmp/css'
         }]
       }
     },
@@ -192,8 +192,8 @@ module.exports = function (grunt) {
           src: [
             '<%= yeoman.dist %>/js/{,*/}*.js',
             '<%= yeoman.dist %>/css/{,*/}*.css',
-            '<%= yeoman.dist %>/img/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
             '<%= yeoman.dist %>/css/fonts/*.{eot,svg,ttf,woff}',
+            '<%= yeoman.dist %>/img/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
             '<%= yeoman.dist %>/data/*.json'
           ]
         }
@@ -224,14 +224,13 @@ module.exports = function (grunt) {
       html: ['<%= yeoman.dist %>/{,*/}*.html'],
       css: ['<%= yeoman.dist %>/css/{,*/}*.css'],
       options: {
-        assetsDirs: ['<%= yeoman.dist %>']
+        assetsDirs: ['<%= yeoman.dist %>', '<%= yeoman.dist %>/css']
       }
     },
 
     // The following *-min tasks produce minified files in the dist folder
     cssmin: {
       options: {
-        root: '<%= yeoman.app %>'
       }
     },
 
@@ -329,7 +328,7 @@ module.exports = function (grunt) {
       styles: {
         expand: true,
         cwd: '<%= yeoman.app %>/css',
-        dest: '.tmp/css/',
+        dest: '.tmp/css',
         src: '{,*/}*.css'
       }
     },
@@ -460,7 +459,7 @@ module.exports = function (grunt) {
     'rev',
     'usemin',
     'htmlmin',
-    'replace:hackUrls'
+    // 'replace:hackUrls'
   ]);
 
   grunt.registerTask('default', [
