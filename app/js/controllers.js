@@ -41,18 +41,18 @@ unitDb.controllers = {
         $scope.compare = function(item) {
             item.selected = !item.selected;
 
-            var idx = data.contenders.indexOf(item.id);
+            var idx = $scope.contenders.indexOf(item.id);
             if (idx === -1)
-                data.contenders.push(item.id);
+                $scope.contenders.push(item.id);
             else
-                data.contenders.splice(idx, 1);
+                $scope.contenders.splice(idx, 1);
         };
         $scope.clear = function() {
-            for (var c in data.items)
-                if (data.items[c].selected)
-                    data.items[c].selected = false;
+            for (var c in $scope.index)
+                if ($scope.index[c].selected)
+                    $scope.index[c].selected = false;
 
-            data.contenders = [];
+            $scope.contenders = [];
         };
         $scope.strain = function(e) {
             return ($scope.factions.length === 0 || isInArray($scope.factions, e.faction)) &&
