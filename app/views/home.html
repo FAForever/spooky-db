@@ -8,7 +8,7 @@
 <aside class="filters">
     <header>
         <span class="count" title="{{ contenders.length }} selected">{{ contenders.length }}</span>
-        <a href="#" title="clear selection" class="clear" ng-click="clear()">x</a>
+        <a href="#/" title="clear selection" class="clear" ng-click="clear()">x</a>
         <a href="#/{{ contenders.join(',') }}" title="compare" ng-class="{ glow: contenders.length }">compare</a>
     </header>
     <input type="text" placeholder="filter" autofocus ng-model="expr" />
