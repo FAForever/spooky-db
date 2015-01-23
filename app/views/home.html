@@ -2,7 +2,7 @@
 <section ng-repeat="f in ::['UEF', 'Cybran', 'Aeon', 'Seraphim']" class="faction">
     <h1 class="{{ f|lowercase }}">{{ f }}</h1>
     <div class="kind" ng-repeat="c in ::['Build', 'Base', 'Land', 'Air', 'Naval']">
-        <thumb ng-repeat="u in index|where:{faction: f, classification: c}|filter:strain|filter:expr" content="u" click="compare(u)"></ng-thumb>
+        <thumb ng-repeat="u in index|where:{faction: f, classification: c}|filter:strain|filter:expr track by u.id" content="u" click="compare(u)"></ng-thumb>
     </div>
 </section>
 <aside class="filters">
