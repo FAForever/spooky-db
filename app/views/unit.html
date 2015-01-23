@@ -156,6 +156,11 @@
                     <td colspan="2"><small>Damage radius</small></td>
                     <td title="damage radius"><small>{{ ::w.DamageRadius  }}</small></td>
                 </tr>
+                <tr ng-if="w.MuzzleVelocity">
+                    <td></td>
+                    <td colspan="2"><small>Muzzle velocity</small></td>
+                    <td title="muzzle velocity"><small>{{ ::w.MuzzleVelocity  }}</small></td>
+                </tr>
                 <tr ng-if="w.NukeInnerRingRadius && w.NukeOuterRingRadius">
                     <td></td>
                     <td colspan="2"><small>Ring radius</small></td>
