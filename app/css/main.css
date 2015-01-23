@@ -313,12 +313,10 @@ h1.seraphim { background-image: url(../img/SC_Seraphim.jpg) }
         margin-top: 5px;
         max-width: 48px;
         display: block;
+        background-repeat: no-repeat;
     }
     .filters header a, .filters header a:hover, .filters header a:focus {
         color: transparent;
-        background-image: url(../img/compare.png);
-        background-repeat: no-repeat;
-        background-position: center center;
     }
     .filters input {
         width: 48px;
@@ -336,6 +334,12 @@ h1.seraphim { background-image: url(../img/SC_Seraphim.jpg) }
     .filters .clear:hover {
         background: rgba(255,255,255, .4);
         color: #fff;
+    }
+    .filters .compare {
+        background-image: url(../img/ui.png);
+        background-position: 0px -144px;
+        width: 48px;
+        height: 48px;
     }
 }
 
@@ -397,6 +401,11 @@ h1.seraphim { background-image: url(../img/SC_Seraphim.jpg) }
     }
     .filters .clear {
         padding: 0 5px;
+    }
+    .filters .compare {
+        background-image: none;
+        width: auto;
+        height: auto;
     }
 }
 
