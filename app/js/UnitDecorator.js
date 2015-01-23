@@ -36,9 +36,9 @@ unitDb.UnitDecorator = function(blueprint) {
             return (this.name ? this.name + ': ' : '') + (this.tech === 'EXP' ? '' : this.tech + ' ') + this.description;
         },
         weaponStats = function(weapon) {
-            var shots = weapon.ManualFire ? 1 : weapon.ProjectilesPerOnFire, // number of projectiles
-                   rate = weapon.ProjectilesPerOnFire ? weapon.RateOfFire : 1 / weapon.RateOfFire, // tml/nuke launch weapons seem to be mixed up
-                   delay = weapon.RackSalvoChargeTime,
+            var shots = weapon.ManualFire ? 1 : weapon.MuzzleSalvoSize, // number of projectiles
+                   rate = weapon.RateOfFire,
+                   delay = weapon.RackSalvoChargeTime||0 + weapon.RackSalvoReloadTime||0,
                    cycle = 1 / rate + delay, // how long it takes between shots
                    damage = weapon.Damage;
 

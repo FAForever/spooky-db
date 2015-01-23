@@ -31,7 +31,7 @@ unitDb.DefaultDpsCalculator = angular.extend({}, unitDb.DpsCalculator, {
         };
 
         if (w.ProjectileId)
-            projectileMultiplier = projectileMultiplierLookup[w.ProjectileId] || 1; // w.ProjectilesPerOnFire ?????
+            projectileMultiplier = projectileMultiplierLookup[w.ProjectileId] || 1;
 
         return (projectileMultiplier * w.Damage * w.MuzzleSalvoSize) / unitDb.DpsCalculator.rateInverse(w);
     }
