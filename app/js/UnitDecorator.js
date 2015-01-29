@@ -32,8 +32,8 @@ unitDb.UnitDecorator = function(blueprint) {
             var x = _.intersection(bp.Categories, _.keys(techLookup));
             return x.length === 1 ? techLookup[x[0]] : '';
         },
-        fullName = function() {
-            return (this.name ? this.name + ': ' : '') + (this.tech === 'EXP' ? '' : this.tech + ' ') + this.description;
+        fullName = function(u) {
+            return (u.name ? u.name + ': ' : '') + (u.tech === 'EXP' ? '' : u.tech + ' ') + u.description;
         },
         weaponStats = function(weapon) {
             var shots = weapon.ManualFire ? 1 : weapon.MuzzleSalvoSize, // number of projectiles
@@ -62,9 +62,10 @@ unitDb.UnitDecorator = function(blueprint) {
             strategicIcon: blueprint.StrategicIconName,
             icon: blueprint.General.Icon || '',
             order: blueprint.BuildIconSortPriority || 1000,
-            fullName: fullName,
             fireCycle: fireCycle
         };
+
+        self.fullName = fullName(self);
 
         // additional stats for weapons
         for(var i in blueprint.Weapon) {
