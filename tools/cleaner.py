@@ -5,17 +5,17 @@ Loads the unit JSON files, filter, reorganise and trim them before saving them
 back.
 
 
-The whole process is donve via the function run which call some other functions:
+The whole process is done via the function run which call some other functions:
 
 Filtering: via a whitelist
     function: whitelist
 
-Reorganisation: sorting according to faction, tech level, priority and unit 
+Reorganization: sorting according to faction, tech level, priority and unit 
 capability
     function: sort
 
 Triming:
-    function: slenderize
+    function: slenderize, regroup_weapons
 
 Saving back:
     function save
@@ -138,21 +138,19 @@ def get_whitelisted(unit_list, whitelist):
     return whitelisted_units
 
 
-def sort_unit_list(unit_list):
+def sort_unit_list(unit_list, legacy=False):
     """
     Creates a function (sort_key) that associates to every unit a key -which is 
     a tuple of 4 elements- based on its faction, tech level, priority and 
     command abilities -in this order.
     
     The key  is then used to sort the list, in place.
-    """"""
-    #TODO: This is never used, remove it ?
-    CLASS_BUILD = 'Build'
-    CLASS_LAND = 'Land'
-    #CLASS_AIR = 'Air'
-    CLASS_NAVAL = 'Naval'
-    CLASS_BASE = 'Base'
-"""
+    If legacy is set to true this results in exactly the same ordering as before
+    the refactoring. In legacy the sort function tends to fail and raise 
+    exceptions and priority may interfere with any other sorting criterions
+    because its values come directly from the game file and is added with the 
+    others values which are more controlled.
+    """
     #Faction:
     faction_order = { # Associates to each possible sting of faction an order
         'UEF': 1,
@@ -208,18 +206,93 @@ def sort_unit_list(unit_list):
                 return 1
         else: return 0
     
-    def sort_key(unit):
-        key = (# (faction, tech, unit priority, have command)
-            get_faction_order(unit),
-            get_tech_order(unit),
-            get_unit_priority(unit),
-            get_command_ability(unit)
-        )
-        
-        debug("Priority key for {0}: {1}".format(unit['Id'], key))
-        
-        return key
-    
+    if not legacy:
+		def sort_key(unit):
+			key = (# (faction, tech, unit priority, have command)
+				get_faction_order(unit),
+				get_tech_order(unit),
+				get_unit_priority(unit),
+				get_command_ability(unit)
+			)
+			
+			debug("Priority key for {0}: {1}".format(unit['Id'], key))
+			
+			return key
+    else: #Legacy sorting:
+		CLASS_BUILD = 'Build'
+		CLASS_LAND = 'Land'
+		CLASS_AIR = 'Air'
+		CLASS_NAVAL = 'Naval'
+		CLASS_BASE = 'Base'
+
+		TECH_1 = 'T1'
+		TECH_2 = 'T2'
+		TECH_3 = 'T3'
+		TECH_X = 'Experimental'
+
+		tech_lookup = {
+			'RULEUTL_Basic': TECH_1,
+			'RULEUTL_Advanced': TECH_2,
+			'RULEUTL_Secret': TECH_3,
+			'RULEUTL_Experimental': TECH_X,
+			'TECH1': TECH_1,
+			'TECH2': TECH_2,
+			'TECH3': TECH_3,
+			'EXPERIMENTAL': TECH_X,
+		}
+
+		FAC_UEF = 'UEF'
+		FAC_CYBRAN = 'Cybran'
+		FAC_AEON = 'Aeon'
+		FAC_SERAPHIM = 'Seraphim'
+
+		def tech_key(val):
+			return {
+				'TECH1': 1,
+				'TECH2': 2,
+				'TECH3': 3,
+				'EXPERIMENTAL': 4,
+				'RULEUTL_Basic': 5,
+				'RULEUTL_Advanced': 6,
+				'RULEUTL_Secret': 7,
+				'RULEUTL_Experimental': 8,
+			}[val]
+
+		def get_tech(u):
+			possible_tech_values = ['TECH1', 'TECH2', 'TECH3', 'EXPERIMENTAL', 'RULEUTL_Basic', 'RULEUTL_Advanced', 'RULEUTL_Secret', 'RULEUTL_Experimental']
+			unit_values = u['Categories'] + [u['General']['TechLevel']]
+
+			intersection = list(set(possible_tech_values).intersection(unit_values))
+			intersection.sort(key=tech_key)
+
+			return tech_lookup[intersection[0] if len(intersection) > 0 else None]
+
+		def sort_key(u):
+			faction_order = {
+				FAC_UEF: 1,
+				FAC_CYBRAN: 2,
+				FAC_AEON: 3,
+				FAC_SERAPHIM: 4
+			}
+
+			tech_order = {
+				TECH_1: 1,
+				TECH_2: 2,
+				TECH_3: 3,
+				TECH_X: 4
+			}
+
+			try:
+				faction_key = 10000*faction_order[u['General']['FactionName']]
+				tech_key = 1000*(tech_order[get_tech(u)] if get_tech(u) else 1)
+				priority_key = u['BuildIconSortPriority'] if 'BuildIconSortPriority' in u else 100
+				command_key = 11 if u['General']['Category'] == 'Command' or 'COMMAND' in u['Categories'] else 0
+
+				return faction_key + tech_key + priority_key + command_key
+			except:
+				print('sort error. unit {0}'.format(u['Id']))
+				raise
+		
     unit_list.sort(key=sort_key)
     info('Unit list is sorted')
 
@@ -326,7 +399,7 @@ def run(app_path):
     
     info('Sorting units')
     sort_unit_list(unit_list)
-    save_unit_file(unit_list, unit_dataFat_path)  # save for dev and debug purpuses
+    save_unit_file(unit_list, unit_dataFat_path)  # save for dev and debug purposes
     
     info('Slenderizing')
     slenderize(unit_list, app_path)
@@ -344,6 +417,6 @@ if __name__ == '__main__':
     stream = sys.stdout,
         format = '%(asctime)s-%(levelname)s: %(message)s',
         datefmt='%Y/%m/%d %H:%M:%S',
-        level = logging.INFO #Or logging.DEBUG if needed
+        level = logging.INFO # or logging.DEBUG if needed
     )
     run(sys.argv[1] if len(sys.argv) > 1 else DEFAULT_APP_PATH)
