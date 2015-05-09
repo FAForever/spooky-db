@@ -10,7 +10,10 @@ unitDb.services = {
         this.$get = [function() {
             return {
                 items: _.map(unitIndex, function(u) { return unitDb.UnitDecorator(u); }),
-                contenders: []
+                selectedFilterFractions: [],
+                selectedFilterKinds: [],
+                selectedFilterTech: [],
+                contenders: [],
             };
         }];
     }

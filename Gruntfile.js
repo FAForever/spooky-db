@@ -16,10 +16,10 @@ module.exports = function (grunt) {
   require('time-grunt')(grunt);
 
   // Define the configuration for all the tasks
-  var dist_location = 'dist';
+  var distLocation = 'dist';
   
   try {
-    dist_location = require('./local.conf.json').distPath;  
+    distLocation = require('./local.conf.json').distPath;  
   } catch(e) {
     grunt.log.writeln('Cannot use configuration from local.conf.json, using ' +
     'default configuration instead.');
@@ -31,7 +31,7 @@ module.exports = function (grunt) {
     yeoman: {
       // configurable paths
       app: require('./bower.json').appPath || 'app',
-      dist: dist_location//require('./local.conf.json').distPath || 'dist'
+      dist: distLocation
     },
 
     // Watches files for changes and runs tasks based on the changed files
@@ -86,7 +86,7 @@ module.exports = function (grunt) {
     // The actual grunt server settings
     connect: {
       options: {
-        port: 9000,
+        port: 9001,
         // Change this to '0.0.0.0' to access the server from outside.
         hostname: 'localhost',
         livereload: 35729
