@@ -121,7 +121,7 @@ unitDb.controllers = {
             var classItems = _.sortBy(
                                         _.filter($scope.index, 
                                                  function(e) { return gdiClass === e.gdiClassification && $scope.strain(e); }),
-                                     function(x) { return x.factionId; });
+                                     function(x) { return x.factionId + x.id.substr(-4); });
             var newStateIsSelected = true;
             if ( classItems.length > 0 ) {
                 newStateIsSelected = !classItems[0].selected;
