@@ -84,7 +84,9 @@ unitDb.UnitDecorator = function(blueprint) {
             'DSLK004': 'T3 Mobile Anti-Air',
             'DRLK001': 'T3 Mobile Anti-Air',
             'DALK003': 'T3 Mobile Anti-Air',
-            'XAS0204': 'T2 Submarine Killer',
+            'UAS0102': 'T1 Anti-Air Boat',
+            'XRS0204': 'T2 Submarine',
+            'XAS0204': 'T2 Submarine',
             'XSB5202': 'T2 Air Staging Facility',
             'URA0303': 'T3 Air-Superiority Fighter',
             'XAA0305': 'T3 Anti-Air Gunship',
@@ -98,7 +100,7 @@ unitDb.UnitDecorator = function(blueprint) {
 
             'Air': ['T1 Interceptor','T1 Attack Bomber','T1 Light Gunship','T1 Air Scout','T1 Light Air Transport','T2 Combat Fighter','T2 Fighter/Bomber','T2 Gunship','T2 Torpedo Bomber','T2 Guided Missile','T2 Air Transport','T3 Air-Superiority Fighter','T3 Strategic Bomber','T3 Heavy Gunship','T3 Anti-Air Gunship','T3 Torpedo Bomber','T3 Spy Plane','T3 Heavy Air Transport'],
             
-            'Naval': ['T1 Attack Submarine','T1 Frigate','T1 Air Attack Boat','T2 Submarine Killer','T2 Destroyer','T2 Cruiser','T2 Torpedo Boat','T2 Shield Boat','T2 Counter-Intelligence Boat','T3 Submarine Hunter','T3 Battleship','T3 Strategic Missile Submarine','T3 Aircraft Carrier','T3 Battlecruiser','T3 Missile Ship'],
+            'Naval': ['T1 Attack Submarine','T1 Frigate','T1 Anti-Air Boat','T2 Submarine','T2 Destroyer','T2 Cruiser','T2 Torpedo Boat','T2 Shield Boat','T2 Counter-Intelligence Boat','T3 Submarine Hunter','T3 Battleship','T3 Strategic Missile Submarine','T3 Aircraft Carrier','T3 Battlecruiser','T3 Missile Ship'],
             
             'Experimental' : ['Direct Fire Experimental', 'Air Experimental', 'Naval Experimental', 'Indirect Fire Experimental', 'Other Experimental'],
             

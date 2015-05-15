@@ -3,7 +3,7 @@ unitdb
 
 Forged Alliance Forever unit database remake. Uses Angular.js + some hack scripts to extract the data from unit blueprint files.
 
-You can see the app [here](http://spooky.github.io/unitdb).
+You can see the original app [here](http://spooky.github.io/unitdb) and a modified version [here](http://b2ag.github.io/unitdb#/gdi).
 
 images
 ------
