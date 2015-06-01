@@ -678,3 +678,48 @@ h1.seraphim { background-image: url(../img/SC_Seraphim.jpg) }
         page-break-after: avoid;
     }
 }
+
+
+div.gdiBaseCategory {
+   width: 100%;
+   display: block;
+   clear: both;
+}
+
+div.gdiBaseCategory div.clear {
+   clear: both;
+}
+
+section.gdiCategory {
+   width: 100%;
+   display: block;
+   clear: both;
+}
+
+section.gdiCategory h2.gdiCategory {
+   /*width: 600px;*/
+   margin-left: 8px;
+   margin-right: 8px;
+   float: left;
+}
+
+section.gdiCategory .faction {
+   min-height: 72px;
+   width: 72px;
+   display:block;
+}
+
+section.gdiCategory a.thumb {
+   margin-bottom: 8px;
+}
+
+div.gdiItemsContainer {
+   margin-left: 176px;
+}
+
+.filters.gdi {
+   position: fixed;
+   left: 0px;
+   top: 80px; 
+   width: 176px;
+}
