@@ -18,6 +18,10 @@ var unitDb = (function() {
                         controller: 'homeCtrl',
                         templateUrl: 'views/home.html'
                     })
+                    .when('/gdi', {
+                        controller: 'gdiCtrl',
+                        templateUrl: 'views/gdi.html'
+                    })
                     .when('/:ids', {
                         controller: 'compareCtrl',
                         templateUrl: 'views/compare.html'
