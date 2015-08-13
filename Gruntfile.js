@@ -16,22 +16,22 @@ module.exports = function (grunt) {
   require('time-grunt')(grunt);
 
   // Define the configuration for all the tasks
-  var dist_location = 'dist';
-  
+  var distLocation = 'dist';
+
   try {
-    dist_location = require('./local.conf.json').distPath;  
+    distLocation = require('./local.conf.json').distPath;
   } catch(e) {
     grunt.log.writeln('Cannot use configuration from local.conf.json, using ' +
     'default configuration instead.');
   }
-  
+
   grunt.initConfig({
 
     // Project settings
     yeoman: {
       // configurable paths
       app: require('./bower.json').appPath || 'app',
-      dist: dist_location//require('./local.conf.json').distPath || 'dist'
+      dist: distLocation//require('./local.conf.json').distPath || 'dist'
     },
 
     // Watches files for changes and runs tasks based on the changed files
