@@ -13,5 +13,8 @@ cb260 - http://cb260.deviantart.com/
 fonts
 -----
 
-Zeroes Three - http://www.larabiefonts.com/  
+Zeroes Three - http://www.larabiefonts.com/
 Muli - http://www.newtypography.co.uk/
+
+
+License: http://www.wtfpl.net/
