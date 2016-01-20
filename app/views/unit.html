@@ -141,6 +141,11 @@
                     <td ng-class="{ invisible: !$first }">Weapons</td>
                     <td colspan="3">{{ w.DisplayName }}</td>
                 </tr>
+                <tr ng-if="w.WeaponNumber">
+                    <td></td>
+                    <td colspan="2"><small>Number of weapons</small></td>
+                    <td title="number"><small>{{ w.WeaponNumber  }}</small></td>
+                </tr>
                 <tr ng-if="w.dps || w.Damage">
                     <td></td>
                     <td title="category (damage type)" colspan="2"><small>{{ w.WeaponCategory }} ({{ w.DamageType }})</small></td>
