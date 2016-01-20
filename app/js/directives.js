@@ -5,10 +5,6 @@ unitDb.directives = {
             restrict: 'E',
             replace: true,
             templateUrl: 'views/thumb.html',
-            scope: {
-                item: '=content',
-                click: '&'
-            }
         };
     }],
 

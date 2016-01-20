@@ -1,6 +1,6 @@
 'use strict';
 unitDb.controllers = {
-    homeCtrl: ['$scope', 'data', function($scope, data) {
+    homeCtrl: ['$scope', '$window', '$location', 'data', function($scope, $window, $location, data) {
         $scope.factions = [];
         $scope.kinds = [];
         $scope.tech = [];
@@ -58,6 +58,37 @@ unitDb.controllers = {
             return ($scope.factions.length === 0 || isInArray($scope.factions, e.faction)) &&
                        ($scope.kinds.length === 0 || isInArray($scope.kinds, e.classification)) &&
                        ($scope.tech.length === 0 || isInArray($scope.tech, e.tech));
+        };
+        
+        var lastClickTime = 0;
+        var lastClickUnit = null;
+        var maxDoubleClickDelay = 500; //in miliseconds
+        
+        $scope.unitClick = function(unit, event) {
+            //What happens when the user click on a unit thumbnail in the home 
+            //view (the click actually happens in the thumb view)
+            
+            if (event.ctrlKey) {//The control key is pressed: we open a new page 
+                //with only the unit
+                $window.open('#/' + unit.id, '_blank');
+                
+            } else {
+                var newTime = (new Date()).getTime();
+                
+                if ((lastClickUnit === unit) && //it a double click: we go to 
+                        (newTime - lastClickTime) < maxDoubleClickDelay) { //compare view
+                    if (!unit.selected)
+                        $scope.compare(unit);
+                    
+                    var newURL = '/' + $scope.contenders.join(',');
+                    $scope.$apply($location.path( newURL ));
+                    
+                } else {
+                    lastClickUnit = unit;
+                    lastClickTime = newTime;
+                    $scope.compare(unit);
+                }
+            }
         };
     }],
 
