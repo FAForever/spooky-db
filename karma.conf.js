@@ -11,7 +11,7 @@ module.exports = function(config) {
 
 	plugins: [
 	  'karma-jasmine',
-      'karma-phantomjs2-launcher',
+      'karma-phantomjs-launcher',
 	],
 
     // list of files / patterns to load in the browser
@@ -57,7 +57,7 @@ module.exports = function(config) {
     // - Safari (only Mac)
     // - PhantomJS
     // - IE (only Windows)
-    browsers: ['PhantomJS2'],
+    browsers: ['PhantomJS'],
 
 
     // Continuous Integration mode
