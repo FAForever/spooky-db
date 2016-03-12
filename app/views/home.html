@@ -1,10 +1,4 @@
 <!--header><h1>Forged Alliance Forever Unit Database</h1></header-->
-<section ng-repeat="f in ['UEF', 'Cybran', 'Aeon', 'Seraphim']" class="faction">
-    <h1 class="{{ f|lowercase }}">{{ f }}</h1>
-    <div class="kind" ng-repeat="c in ['Build', 'Base', 'Land', 'Air', 'Naval']">
-        <thumb ng-repeat="item in index|where:{faction: f, classification: c}|filter:strain|filter:expr"></ng-thumb>
-    </div>
-</section>
 <aside class="filters">
     <header>
         <span class="count" title="{{ contenders.length }} selected">{{ contenders.length }}</span>
@@ -22,4 +16,11 @@
         <a ng-repeat="t in ['T1', 'T2', 'T3', 'EXP']" title="{{ t }}" ng-click="toggleTech(t)" ng-class="{active: techSelected(t)}" class="icon-{{ t }}"></a>
     </p>
 </aside>
+<section ng-repeat="f in ['UEF', 'Cybran', 'Aeon', 'Seraphim']" class="faction">
+    <h1 class="{{ f|lowercase }}">{{ f }}</h1>
+    <div class="kind" ng-repeat="c in ['Build', 'Base', 'Land', 'Air', 'Naval']">
+        <thumb ng-repeat="item in index|where:{faction: f, classification: c}|filter:strain|filter:expr"></ng-thumb>
+    </div>
+</section>
+
 <footer><span>last update: 2016-01-19</span> | <span>unit count: {{ index.length }}</span> | <a href="https://github.com/spooky/unitdb/issues">issues</a> | <a href="https://github.com/spooky/unitdb">source</a></footer>

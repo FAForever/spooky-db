@@ -179,7 +179,8 @@ footer {
     padding: .67em 0;
 }
 .filters {
-    float: left;
+    float: right;/*To have almost the same behaviour as before:
+    aside bar on the right when the screen is big enough*/
     max-width: 153px;
     margin-left: 3px;
     overflow: hidden;
@@ -346,13 +347,12 @@ h1.seraphim { background-image: url(../img/SC_Seraphim.jpg) }
 /* filter horizontal */
 @media only screen and (max-width: 1373px) {
     body {
-        margin-top: 51px;
         background-image: none;
         background-size: auto;
     }
     .filters {
-        position: absolute;
-        top: -51px;
+        display: inline;
+        top: 0px;
         left: 0;
         width: 100%;
         max-width: none;
@@ -411,12 +411,6 @@ h1.seraphim { background-image: url(../img/SC_Seraphim.jpg) }
 
 /* 2 line horizontal filter */
 @media only screen and (max-width: 1041px) {
-    body {
-        margin-top: 99px;
-    }
-    .filters {
-        top: -99px;
-    }
     .filters input {
         clear: left;
     }
@@ -424,11 +418,7 @@ h1.seraphim { background-image: url(../img/SC_Seraphim.jpg) }
 
 /* 3 line horizontal filter */
 @media only screen and (max-width: 796px) {
-    body {
-        margin-top: 146px;
-    }
     .filters {
-        top: -146px;
         text-align: center;
     }
     .filters header, .filters input {
@@ -450,14 +440,8 @@ h1.seraphim { background-image: url(../img/SC_Seraphim.jpg) }
 
 /* 5 line horizontal filter */
 @media only screen and (max-width: 630px) {
-    body {
-        margin-top: 242px;
-    }
     h1 {
         font-size: 1em;
-    }
-    .filters {
-        top: -242px;
     }
     .filters p {
         float: none;
