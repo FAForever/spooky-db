@@ -19,10 +19,10 @@ unitDb.UnitDecorator = function(blueprint) {
             'RULEUC_CounterMeasure': 'Base'
         },
         techLookup = {
-            'RULEUTL_Basic': 'T1',
-            'RULEUTL_Advanced': 'T2',
-            'RULEUTL_Secret': 'T3',
-            'RULEUTL_Experimental': 'TX',
+            // 'RULEUTL_Basic': 'T1',
+            // 'RULEUTL_Advanced': 'T2',
+            // 'RULEUTL_Secret': 'T3',
+            // 'RULEUTL_Experimental': 'EXP',
             'TECH1': 'T1',
             'TECH2': 'T2',
             'TECH3': 'T3',
