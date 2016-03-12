@@ -139,12 +139,7 @@
                 <!-- Weapons -->
                 <tr ng-if="item.Weapon" ng-repeat-start="w in item.Weapon" class="sec">
                     <td ng-class="{ invisible: !$first }">Weapons</td>
-                    <td colspan="3">{{ w.DisplayName }}</td>
-                </tr>
-                <tr ng-if="w.WeaponNumber">
-                    <td></td>
-                    <td colspan="2"><small>Number of weapons</small></td>
-                    <td title="number"><small>{{ w.WeaponNumber  }}</small></td>
+                    <td colspan="3">{{ w.DisplayName }} <small ng-if="w.WeaponNumber > 0">(&times;{{ w.WeaponNumber }})</small></td>
                 </tr>
                 <tr ng-if="w.dps || w.Damage">
                     <td></td>
