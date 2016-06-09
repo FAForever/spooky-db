@@ -1,4 +1,4 @@
-unitdb
+unitdb [![Build Status](https://travis-ci.org/spooky/unitdb.svg?branch=master)](https://travis-ci.org/spooky/unitdb)
 ======
 
 Forged Alliance Forever unit database remake. Uses Angular.js + some hack scripts to extract the data from unit blueprint files.
