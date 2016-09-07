@@ -17,9 +17,9 @@ module.exports = function (grunt) {
 
   // Define the configuration for all the tasks
   var distLocation = 'dist';
-  
+
   try {
-    distLocation = require('./local.conf.json').distPath;  
+    distLocation = require('./local.conf.json').distPath;
   } catch(e) {
     grunt.log.writeln('Cannot use configuration from local.conf.json, using ' +
     'default configuration instead.');
