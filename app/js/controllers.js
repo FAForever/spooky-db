@@ -52,7 +52,8 @@ unitDb.controllers = {
                 if ($scope.index[c].selected)
                     $scope.index[c].selected = false;
 
-            $scope.contenders = [];
+            // clear the array without loosing reference
+            $scope.contenders.length = 0;
         };
         $scope.strain = function(e) {
             return ($scope.factions.length === 0 || isInArray($scope.factions, e.faction)) &&
