@@ -25,3 +25,19 @@ contributing
 All contributions are welcome, though I can't guarantee to pull all of them in. If you do want to contribute,
 please create a separate branch and a pull request for that. It'll be a bit easier for me to keep the repo tidy that way.  
 Thanks in advance.
+
+Running the Application
+-----------------------
+Necessary packages that need to be installed beforehand:
+
+> brew install pkgconfig
+> brew install pixman
+> brew install libjpeg
+> brew install giflib 
+> brew install cairo
+> brew install graphicsmagick
+> npm install
+> bower install - will need npm V4 - otherwise issue `Cannot find module 'internal/fs'`
+> grunt default
+
+View the program in dist directory.
