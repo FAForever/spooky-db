@@ -398,24 +398,18 @@ module.exports = function (grunt) {
     sprite: {
       ui: {
         src: '<%= yeoman.app %>/img/*.png',
-        destImg: '.tmp/img/ui.png',
-        destCSS: '.tmp/css/ui_sprites.css',
-        algorithm: 'binary-tree',
-        engine: 'phantomjs'
+        dest: '.tmp/img/ui.png',
+        destCss: '.tmp/css/ui_sprites.css'
       },
       strategic: {
         src: '<%= yeoman.app %>/img/strategic/*.png',
-        destImg: '.tmp/img/strategic.png',
-        destCSS: '.tmp/css/strategic_sprites.css',
-        algorithm: 'binary-tree',
-        engine: 'phantomjs'
+        dest: '.tmp/img/strategic.png',
+        destCss: '.tmp/css/strategic_sprites.css'
       },
       units: {
         src: '<%= yeoman.app %>/img/units/*.png',
-        destImg: '.tmp/img/units.png',
-        destCSS: '.tmp/css/units_sprites.css',
-        algorithm: 'binary-tree',
-        engine: 'phantomjs'
+        dest: '.tmp/img/units.png',
+        destCss: '.tmp/css/units_sprites.css'
       }
     }
   });
