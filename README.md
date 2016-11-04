@@ -26,10 +26,10 @@ All contributions are welcome, though I can't guarantee to pull all of them in. 
 please create a separate branch and a pull request for that. It'll be a bit easier for me to keep the repo tidy that way.  
 Thanks in advance.
 
-Running the Application
------------------------
+Running the Application on MAC OS X
+-----------------------------------
 Necessary packages that need to be installed beforehand:
-
+    
 > brew install pkgconfig
 > brew install pixman
 > brew install libjpeg
@@ -38,6 +38,6 @@ Necessary packages that need to be installed beforehand:
 > brew install graphicsmagick
 > npm install
 > bower install - will need npm V4 - otherwise issue `Cannot find module 'internal/fs'`
-> grunt default
+> grunt serve
 
 View the program in dist directory.
