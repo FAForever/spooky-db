@@ -707,3 +707,25 @@ div.gdiItemsContainer {
    top: 80px; 
    width: 176px;
 }
+
+.filters .view {
+    clear: both;
+}
+
+.filters .center {
+    text-align: center;
+}
+
+.filters .jfl-views {
+    float: left;
+    width: 50%;
+}
+
+#switchViews a.active {
+    color: rgb(253,160,5);
+    background-color: transparent;
+}
+
+#switchViews li {
+    list-style: none;
+}
