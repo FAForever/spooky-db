@@ -4,7 +4,7 @@
     <h1 class="gdiBaseCategory" >{{ firstItemOfBaseGroup.gdiBaseClassification }}</h1>
     <section class="gdiCategory" ng-repeat="firstItemOfGroup in index |where:{gdiBaseClassification: firstItemOfBaseGroup.gdiBaseClassification}|filter:strain|filter:expr|orderBy:'gdiOrder'|filter:uniqGdiClass">
         <div ng-repeat="f in ['UEF', 'Cybran', 'Aeon', 'Seraphim']" class="faction">
-            <thumb ng-repeat="bp in index|where:{faction: f, gdiBaseClassification: firstItemOfBaseGroup.gdiBaseClassification, gdiClassification: firstItemOfGroup.gdiClassification}|filter:strain|filter:expr|orderBy:'id'" content="bp" click="toggleBpSelected( bp )" />
+            <thumb ng-repeat="item in index|where:{faction: f, gdiBaseClassification: firstItemOfBaseGroup.gdiBaseClassification, gdiClassification: firstItemOfGroup.gdiClassification}|filter:strain|filter:expr|orderBy:'id'">
         </div>
         <h2 class="gdiCategory" ><a ng-click="toggleBpSelectedByGdiClass( firstItemOfGroup.gdiClassification )">{{ firstItemOfGroup.gdiClassification }}</a></h2>
     </section>
@@ -15,7 +15,7 @@
     <header>
         <span class="count" title="{{ contenders.length }} selected">{{ contenders.length }}</span>
         <a href="#/gdi" title="clear selection" class="clear" ng-click="clearSelectedBps()">x</a>
-        <a href="#/{{ contenders.join(',') }}" title="compare" ng-class="{ glow: contenders.length, compare: true }">compare</a>
+        <a ng-href="#/{{ contenders.join(',') }}" title="compare" ng-class="{ glow: contenders.length, compare: true }">compare</a>
     </header>
     <input type="text" placeholder="filter" autofocus ng-model="expr" />
     <p>

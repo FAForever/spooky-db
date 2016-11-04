@@ -93,7 +93,7 @@ unitDb.controllers = {
         };
     }],
 
-    gdiCtrl: ['$scope', 'data', function($scope, data) {
+    gdiCtrl: ['$scope', '$window', '$location', 'data', function($scope, $window, $location, data) {
         $scope.factions = data.selectedFilterFractions;
         $scope.kinds = data.selectedFilterKinds;
         $scope.tech = data.selectedFilterTech;
@@ -185,6 +185,46 @@ unitDb.controllers = {
             if ( idx === 0 || e.gdiBaseClassification !== $scope.lastDisplayedGdiBaseClassification ) {
                 $scope.lastDisplayedGdiBaseClassification = e.gdiBaseClassification;
                 return e.gdiBaseClassification;
+            }
+        };
+        $scope.compare = function(item) {
+            item.selected = !item.selected;
+
+            var idx = $scope.contenders.indexOf(item.id);
+            if (idx === -1)
+                $scope.contenders.push(item.id);
+            else
+                $scope.contenders.splice(idx, 1);
+        };
+
+        var lastClickTime = 0;
+        var lastClickUnit = null;
+        var maxDoubleClickDelay = 500; //in miliseconds
+
+        $scope.unitClick = function(unit, event) {
+            //What happens when the user click on a unit thumbnail in the home
+            //view (the click actually happens in the thumb view)
+
+            if (event.ctrlKey) {//The control key is pressed: we open a new page
+                //with only the unit
+                $window.open('#/' + unit.id, '_blank');
+
+            } else {
+                var newTime = (new Date()).getTime();
+
+                if ((lastClickUnit === unit) && //it a double click: we go to
+                    (newTime - lastClickTime) < maxDoubleClickDelay) { //compare view
+                    if (!unit.selected)
+                        $scope.compare(unit);
+
+                    var newURL = '/' + $scope.contenders.join(',');
+                    $scope.$apply($location.path( newURL ));
+
+                } else {
+                    lastClickUnit = unit;
+                    lastClickTime = newTime;
+                    $scope.compare(unit);
+                }
             }
         };
     }],
