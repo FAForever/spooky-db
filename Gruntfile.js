@@ -176,16 +176,8 @@ module.exports = function (grunt) {
 
     // replace in files
     replace: {
-      homestamp: {
-        src: ['<%= yeoman.app %>/views/home.html'],
-        overwrite: true, // overwrite matched source files
-        replacements: [{
-          from: /[0-9]{4}-[0-9]{1,2}-[0-9]{1,2}/g,
-          to: '<%= grunt.template.today("yyyy-mm-dd") %>'
-        }]
-      },
-      gdistamp: {
-        src: ['<%= yeoman.app %>/views/gdi.html'],
+      stamp: {
+        src: ['<%= yeoman.app %>/views/home.html', '<%= yeoman.app %>/views/gdi.html'],
         overwrite: true, // overwrite matched source files
         replacements: [{
           from: /[0-9]{4}-[0-9]{1,2}-[0-9]{1,2}/g,
@@ -454,8 +446,7 @@ module.exports = function (grunt) {
   grunt.registerTask('build', [
     'clean:dist',
     'bowerInstall',
-    'replace:homestamp',
-    'replace:gdistamp',
+    'replace:stamp',
     'useminPrepare',
     'sprite:ui',
     'sprite:strategic',
