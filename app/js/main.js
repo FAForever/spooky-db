@@ -1,14 +1,7 @@
 'use strict';
 
 var unitDb = (function() {
-    var start = function(appName, payload) {
-
-            var module = init(appName, payload);
-            angular.bootstrap(document, [appName]);
-
-            return module;
-        },
-        init = function(appName, payload) {
+    var init = function(appName, payload) {
             var app = angular.module(appName, ['ngRoute', 'ngSanitize', 'angular-underscore']);
 
             // routing
@@ -48,6 +41,13 @@ var unitDb = (function() {
             angular.forEach(unitDb.controllers, function(v, k) { app.controller(k, v); });
 
             return app;
+        },
+        start = function(appName, payload) {
+
+            var module = init(appName, payload);
+            angular.bootstrap(document, [appName]);
+
+            return module;
         };
 
     return {

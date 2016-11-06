@@ -115,6 +115,29 @@ unitDb.UnitDecorator = function(blueprint) {
             'Structures - Factorys': ['T1 Land Factory','T1 Air Factory','T1 Naval Factory','T2 Land Factory HQ','T2 Land Factory','T2 Air Factory HQ','T2 Air Factory','T2 Naval Factory HQ','T2 Naval Factory','T3 Land Factory HQ','T3 Land Factory','T3 Air Factory HQ','T3 Air Factory','T3 Naval Factory HQ','T3 Naval Factory','T3 Quantum Gateway'],
             
         },
+        getTech = function(bp) {
+            var x = _.intersection(bp.Categories, _.keys(techLookup));
+            return x.length === 1 ? techLookup[x[0]] : '';
+        },
+        fullName = function(u) {
+            return (u.name ? u.name + ': ' : '') + (u.tech === 'EXP' ? '' : u.tech + ' ') + u.description;
+        },
+        weaponStats = function(weapon) {
+            var shots = weapon.ManualFire ? 1 : weapon.MuzzleSalvoSize, // number of projectiles
+                   rate = weapon.RateOfFire,
+                   delay = weapon.RackSalvoChargeTime||0 + weapon.RackSalvoReloadTime||0,
+                   cycle = 1 / rate + delay, // how long it takes between shots
+                   damage = weapon.Damage;
+
+            return { shots: shots, cycle: cycle, damage: damage };
+        },
+        fireCycle = function(weapon) {
+            var stats = weaponStats(weapon);
+            return stats.shots + ' shot' + (stats.shots > 1 ? 's' : '') + ' / ' + ( stats.cycle === 1 ? '' : Math.round(stats.cycle * 10)/10 ) + ' sec';
+        },
+        getDps = function(weapon) {
+            return unitDb.dpsCalculator.dps(weapon);
+        },
         gdiClassificationLookupFunc = function( bp ) {
             var gdiClassById = gdiClassificationLookup[bp.Id];
             if ( gdiClassById ) return gdiClassById;
@@ -140,29 +163,6 @@ unitDb.UnitDecorator = function(blueprint) {
         gdiOrderFunc = function( bp ) {
             var ret = gdiBaseClassificationLookupAndOrderFunc( bp );
             return ret[1]*100+ret[2];
-        },
-        getTech = function(bp) {
-            var x = _.intersection(bp.Categories, _.keys(techLookup));
-            return x.length === 1 ? techLookup[x[0]] : '';
-        },
-        fullName = function(u) {
-            return (u.name ? u.name + ': ' : '') + (u.tech === 'EXP' ? '' : u.tech + ' ') + u.description;
-        },
-        weaponStats = function(weapon) {
-            var shots = weapon.ManualFire ? 1 : weapon.MuzzleSalvoSize, // number of projectiles
-                   rate = weapon.RateOfFire,
-                   delay = weapon.RackSalvoChargeTime||0 + weapon.RackSalvoReloadTime||0,
-                   cycle = 1 / rate + delay, // how long it takes between shots
-                   damage = weapon.Damage;
-
-            return { shots: shots, cycle: cycle, damage: damage };
-        },
-        fireCycle = function(weapon) {
-            var stats = weaponStats(weapon);
-            return stats.shots + ' shot' + (stats.shots > 1 ? 's' : '') + ' / ' + ( stats.cycle === 1 ? '' : Math.round(stats.cycle * 10)/10 ) + ' sec';
-        },
-        getDps = function(weapon) {
-            return unitDb.dpsCalculator.dps(weapon);
         };
 
         var self = {
