@@ -31,7 +31,7 @@ module.exports = function (grunt) {
     yeoman: {
       // configurable paths
       app: require('./bower.json').appPath || 'app',
-      dist: distLocation//require('./local.conf.json').distPath || 'dist'
+      dist: distLocation
     },
 
     // Watches files for changes and runs tasks based on the changed files
@@ -177,7 +177,7 @@ module.exports = function (grunt) {
     // replace in files
     replace: {
       stamp: {
-        src: ['<%= yeoman.app %>/views/home.html'],
+        src: ['<%= yeoman.app %>/views/home.html', '<%= yeoman.app %>/views/gdi.html'],
         overwrite: true, // overwrite matched source files
         replacements: [{
           from: /[0-9]{4}-[0-9]{1,2}-[0-9]{1,2}/g,
@@ -398,24 +398,18 @@ module.exports = function (grunt) {
     sprite: {
       ui: {
         src: '<%= yeoman.app %>/img/*.png',
-        destImg: '.tmp/img/ui.png',
-        destCSS: '.tmp/css/ui_sprites.css',
-        algorithm: 'binary-tree',
-        engine: 'phantomjs'
+        dest: '.tmp/img/ui.png',
+        destCss: '.tmp/css/ui_sprites.css'
       },
       strategic: {
         src: '<%= yeoman.app %>/img/strategic/*.png',
-        destImg: '.tmp/img/strategic.png',
-        destCSS: '.tmp/css/strategic_sprites.css',
-        algorithm: 'binary-tree',
-        engine: 'phantomjs'
+        dest: '.tmp/img/strategic.png',
+        destCss: '.tmp/css/strategic_sprites.css'
       },
       units: {
         src: '<%= yeoman.app %>/img/units/*.png',
-        destImg: '.tmp/img/units.png',
-        destCSS: '.tmp/css/units_sprites.css',
-        algorithm: 'binary-tree',
-        engine: 'phantomjs'
+        dest: '.tmp/img/units.png',
+        destCss: '.tmp/css/units_sprites.css'
       }
     }
   });
