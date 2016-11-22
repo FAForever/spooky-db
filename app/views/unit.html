@@ -184,10 +184,22 @@
                     <td colspan="2"><small>Turret pitch</small></td>
                     <td title="min ~ max @ speed"><small>{{ w.TurretPitch }}~{{ w.TurretPitchRange }}° @&nbsp;{{ w.TurretPitchSpeed }}°/s</small></td>
                 </tr>
-                <tr ng-if="w.TurretYawRange" ng-repeat-end>
+                <tr ng-if="w.TurretYawRange">
                     <td></td>
                     <td colspan="2"><small>Turret yaw</small></td>
                     <td title="min ~ max @ speed"><small>{{ w.TurretYaw }}~{{ w.TurretYawRange }}° @&nbsp;{{ w.TurretYawSpeed }}°/s</small></td>
+                </tr>
+
+                <tr ng-if="w.FiringTolerance">
+                    <td></td>
+                    <td colspan="2"><small>Firing Tolerance</small></td>
+                    <td><small>{{ w.FiringTolerance }}</small></td>
+                </tr>
+
+                <tr ng-if="w.FiringRandomness" ng-repeat-end>
+                    <td></td>
+                    <td colspan="2"><small>Firing Randomness</small></td>
+                    <td><small>{{ w.FiringRandomness }}</small></td>
                 </tr>
 
                 <!-- Upgrades -->
