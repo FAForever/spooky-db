@@ -398,12 +398,12 @@ def run(app_path):
     unit_data_path = os.path.join(app_path, 'data', 'index.json')
     unit_dataFat_path = os.path.join(app_path, 'data', 'index.fat.json')
 
-    unit_list = load_unit_file(unit_data_path)
+    unit_list = load_unit_file(unit_dataFat_path)
     unit_list = get_whitelisted(unit_list, UNIT_WHITELIST)
 
     info('Sorting units')
     sort_unit_list(unit_list)
-    save_unit_file(unit_list, unit_dataFat_path)  # save for dev and debug purposes
+    save_unit_file(unit_list, unit_data_path)  # save for dev and debug purposes
 
     info('Slenderizing')
     slenderize(unit_list, app_path)
