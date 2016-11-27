@@ -178,7 +178,19 @@
                     <td title="inner ring damage | outer ring damage"><small>{{ w.NukeInnerRingDamage | shorten }} | {{ w.NukeOuterRingDamage | shorten }}</small></td>
                 </tr>
 
-                <tr ng-if="w.ManualFire || w.MuzzleSalvoSize">
+                <tr ng-if="w.BeamLifetime">
+                    <td></td>
+                    <td colspan="2"><small>Beam cycle</small></td>
+                    <td><small>{{ item.beamCycle(w) }}</small></td>
+                </tr>
+
+                <tr ng-if="w.RackFireTogether">
+                    <td></td>
+                    <td colspan="2"><small>RackFireTogether</small></td>
+                    <td><small>{{ w.RackFireTogether }}</small></td>
+                </tr>
+
+                <tr ng-if="(w.ManualFire || w.MuzzleSalvoSize) && ! w.isTML">
                     <td></td>
                     <td colspan="2" title="{{ 'manual fire' | if:w.ManualFire }}"><small>Fire cycle{{ " ⦿"| if:w.ManualFire }}</small></td>
                     <td><small>{{ item.fireCycle(w) }}</small></td>
