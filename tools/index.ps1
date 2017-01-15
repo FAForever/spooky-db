@@ -1,7 +1,7 @@
 param (
     [string]$target = "d:\code\personal\unitdb\app",
     [string]$faUnitFile = "d:\games\steam\SteamApps\common\Supreme Commander Forged Alliance\gamedata\units.scd",
-    [string]$fafFile = "c:\ProgramData\FAForever\gamedata\faforever.nxt",
+    [string]$fafFile = "c:\ProgramData\FAForever\gamedata\faforever.faf",
     [string]$fafUnitsFile = "c:\ProgramData\FAForever\gamedata\units.nx2"
 )
 
