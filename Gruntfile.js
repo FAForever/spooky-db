@@ -177,7 +177,7 @@ module.exports = function (grunt) {
     // replace in files
     replace: {
       stamp: {
-        src: ['<%= yeoman.app %>/views/home.html', '<%= yeoman.app %>/views/gdi.html'],
+        src: ['<%= yeoman.app %>/views/app-footer.html'],
         overwrite: true, // overwrite matched source files
         replacements: [{
           from: /[0-9]{4}-[0-9]{1,2}-[0-9]{1,2}/g,
