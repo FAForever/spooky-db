@@ -11,9 +11,9 @@ var unitDb = (function() {
                         controller: 'homeCtrl',
                         templateUrl: 'views/home.html'
                     })
-                    .when('/gdi', {
+                    .when('/by-class', {
                         controller: 'gdiCtrl',
-                        templateUrl: 'views/gdi.html'
+                        templateUrl: 'views/by-class.html'
                     })
                     .when('/:ids', {
                         controller: 'compareCtrl',

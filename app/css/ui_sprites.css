@@ -1,9 +1,20 @@
 /*
 Icon classes can be used entirely standalone. They are named after their original file names.
 
-```html
-<i class="icon-home"></i>
-```
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
 */
 .icon-Aeon {
   background-image: url(../img/ui.png);
@@ -13,7 +24,7 @@ Icon classes can be used entirely standalone. They are named after their origina
 }
 .icon-Air {
   background-image: url(../img/ui.png);
-  background-position: -96px -96px;
+  background-position: -144px 0px;
   width: 48px;
   height: 48px;
 }
@@ -55,13 +66,13 @@ Icon classes can be used entirely standalone. They are named after their origina
 }
 .icon-T1 {
   background-image: url(../img/ui.png);
-  background-position: 0px 0px;
+  background-position: -96px -96px;
   width: 48px;
   height: 48px;
 }
 .icon-T2 {
   background-image: url(../img/ui.png);
-  background-position: -144px 0px;
+  background-position: 0px 0px;
   width: 48px;
   height: 48px;
 }
@@ -77,6 +88,18 @@ Icon classes can be used entirely standalone. They are named after their origina
   width: 48px;
   height: 48px;
 }
+.icon-by_class {
+  background-image: url(../img/ui.png);
+  background-position: -96px -144px;
+  width: 48px;
+  height: 31px;
+}
+.icon-by_kind {
+  background-image: url(../img/ui.png);
+  background-position: -48px -144px;
+  width: 48px;
+  height: 31px;
+}
 .icon-compare {
   background-image: url(../img/ui.png);
   background-position: 0px -144px;
@@ -85,25 +108,25 @@ Icon classes can be used entirely standalone. They are named after their origina
 }
 .icon-energy {
   background-image: url(../img/ui.png);
-  background-position: -48px -144px;
+  background-position: -144px -144px;
   width: 20px;
   height: 20px;
 }
 .icon-health {
   background-image: url(../img/ui.png);
-  background-position: -68px -144px;
+  background-position: -164px -144px;
   width: 20px;
   height: 20px;
 }
 .icon-mass {
   background-image: url(../img/ui.png);
-  background-position: -88px -144px;
+  background-position: -192px 0px;
   width: 20px;
   height: 20px;
 }
 .icon-time {
   background-image: url(../img/ui.png);
-  background-position: -108px -144px;
+  background-position: -192px -20px;
   width: 20px;
   height: 20px;
 }

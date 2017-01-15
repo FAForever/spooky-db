@@ -162,7 +162,7 @@ unitDb.controllers = {
             for (var c in classItems)
                 $scope.setBpSelected( classItems[c], newStateIsSelected );
         };
-        $scope.clearSelectedBps = function() {
+        $scope.clear = function() {
             for (var c in $scope.index)
                 if ($scope.index[c].selected)
                     $scope.index[c].selected = false;

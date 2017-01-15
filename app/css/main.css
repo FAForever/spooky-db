@@ -169,6 +169,10 @@ footer {
     float: left;
     position: relative;
 }
+.container {
+    min-width: 1300px;
+    min-height: 385px;
+}
 .faction {
     float: left;
     width: 25%;
@@ -208,7 +212,7 @@ footer {
 .filters input {
     width: 100%;
 }
-.filters p {
+.filters p, .filters .view-switcher a {
     float: left;
     margin-right: 3px;
 }
@@ -216,6 +220,12 @@ footer {
     font-size: 20px;
     margin: 0;
     padding: 0 5px 3px;
+}
+.filters .view-switcher {
+    border-top: 1px solid;
+    margin: 0;
+    padding-top: 8px;
+    width: 100%;
 }
 .kind {
     float: left;
@@ -293,14 +303,19 @@ h1.seraphim { background-image: url(../img/SC_Seraphim.jpg) }
 }
 
 /* full mode */
-@media only screen and (min-width: 1462px) {
+@media only screen and (min-width: 1479px) {
+    .filters {
+        position: fixed;
+        top: 0;
+        right: 0;
+    }
     .filters .count:after {
         content: ' selected';
     }
 }
 
 /* filter in single column */
-@media only screen and (max-width: 1461px) {
+@media only screen and (max-width: 1478px) {
     .glow {
         animation: background-glow 1.5s ease-in-out infinite alternate;
     }
@@ -323,7 +338,7 @@ h1.seraphim { background-image: url(../img/SC_Seraphim.jpg) }
         width: 48px;
         display: block;
     }
-    .filters p {
+    .filters p, .filters .view-switcher a {
         clear: left;
         margin-top: 0;
         margin-right: 0;
@@ -406,6 +421,14 @@ h1.seraphim { background-image: url(../img/SC_Seraphim.jpg) }
         background-image: none;
         width: auto;
         height: auto;
+    }
+    .filters .view-switcher {
+        border: 0;
+        width: auto;
+    }
+    .filters .view-switcher a {
+        float: none;
+        display: inline-block;
     }
 }
 
@@ -698,34 +721,19 @@ section.gdiCategory a.thumb {
 }
 
 div.gdiItemsContainer {
-   margin-left: 176px;
+   float: left;
 }
-
 .filters.gdi {
-   position: fixed;
-   left: 0px;
-   top: 80px; 
-   width: 176px;
+   float: left;
+   margin-right: 7px;
 }
 
-.filters .view {
-    clear: both;
-}
-
-.filters .center {
-    text-align: center;
-}
-
-.filters .jfl-views {
-    float: left;
-    width: 50%;
-}
-
-#switchViews a.active {
-    color: rgb(253,160,5);
-    background-color: transparent;
-}
-
-#switchViews li {
-    list-style: none;
+@media only screen and (min-width: 1479px) {
+    .filters.gdi {
+        left: 0;
+        right: auto;
+    }
+    div.gdiItemsContainer {
+        margin-left: 160px;
+    }
 }
