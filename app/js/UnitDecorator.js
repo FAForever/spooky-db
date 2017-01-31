@@ -112,7 +112,7 @@ unitDb.UnitDecorator = function(blueprint) {
 
             'Structures - Economy': ['T1 Mass Extractor','T1 Power Generator','T1 Hydrocarbon Power Plant','T1 Energy Storage','T1 Mass Storage','T2 Mass Extractor','T2 Power Generator','T2 Mass Fabricator','T3 Mass Extractor','T3 Power Generator','T3 Mass Fabricator'],
 
-            'Structures - Factorys': ['T1 Land Factory','T1 Air Factory','T1 Naval Factory','T2 Land Factory HQ','T2 Land Factory','T2 Air Factory HQ','T2 Air Factory','T2 Naval Factory HQ','T2 Naval Factory','T3 Land Factory HQ','T3 Land Factory','T3 Air Factory HQ','T3 Air Factory','T3 Naval Factory HQ','T3 Naval Factory','T3 Quantum Gateway'],
+            'Structures - Factories': ['T1 Land Factory','T1 Air Factory','T1 Naval Factory','T2 Land Factory HQ','T2 Land Factory','T2 Air Factory HQ','T2 Air Factory','T2 Naval Factory HQ','T2 Naval Factory','T3 Land Factory HQ','T3 Land Factory','T3 Air Factory HQ','T3 Air Factory','T3 Naval Factory HQ','T3 Naval Factory','T3 Quantum Gateway'],
 
         },
         getTech = function(bp) {
