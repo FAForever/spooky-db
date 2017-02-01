@@ -27,7 +27,14 @@ describe('dps', function () {
         'TurretYawSpeed': 100,
         'WeaponCategory': 'Direct Fire'
     };
-    var stats = JSON.parse('{"shots":1,"cycle":0.3,"damage":8,"salvoDelay":0,"salvoSize":1,"dotPulse":1}');
+    var stats = {
+        'shots':1,
+        'cycle':0.3,
+        'damage':8,
+        'salvoDelay':0,
+        'salvoSize':1,
+        'dotPulse':1
+    };
     var dps = unitDb.dpsCalculator.dps(weapon, stats);
     expect(dps).toBeCloseTo(26.67);
   });
@@ -51,7 +58,14 @@ describe('dps', function () {
         'TurretYawSpeed': 100,
         'WeaponCategory': 'Direct Fire Naval'
     };
-    var stats = JSON.parse('{"shots":1,"cycle":5,"damage":1060,"salvoDelay":0,"salvoSize":1,"dotPulse":1}');
+    var stats = {
+        'shots':1,
+        'cycle':5,
+        'damage':1060,
+        'salvoDelay':0,
+        'salvoSize':1,
+        'dotPulse':1
+     };
     var dps = unitDb.dpsCalculator.dps(weapon, stats);
     expect(dps).toBeCloseTo(212);
   });
@@ -76,7 +90,14 @@ describe('dps', function () {
         'TurretYawSpeed': 60,
         'WeaponCategory': 'Direct Fire Naval'
     };
-    var stats = JSON.parse('{"shots":1,"cycle":4,"damage":50,"salvoDelay":0,"salvoSize":1,"dotPulse":1}');
+    var stats = {
+        'shots':1,
+        'cycle':4,
+        'damage':50,
+        'salvoDelay':0,
+        'salvoSize':1,
+        'dotPulse':1
+    };
     var dps = unitDb.dpsCalculator.dps(weapon, stats);
     expect(dps).toBeCloseTo(112.5);
   });
@@ -101,7 +122,14 @@ describe('dps', function () {
         'TurretYawSpeed': 60,
         'WeaponCategory': 'Direct Fire Naval'
     };
-    var stats = JSON.parse('{"shots":1,"cycle":4,"damage":26,"salvoDelay":0,"salvoSize":1,"dotPulse":1}');
+    var stats = {
+        'shots':1,
+        'cycle':4,
+        'damage':26,
+        'salvoDelay':0,
+        'salvoSize':1,
+        'dotPulse':1
+    };
     var dps = unitDb.dpsCalculator.dps(weapon, stats);
     expect(dps).toBeCloseTo(58.5);
   });
@@ -126,7 +154,14 @@ describe('dps', function () {
             'TurretYawSpeed': 90,
             'WeaponCategory': 'Direct Fire Naval'
         };
-        var stats = JSON.parse('{"shots":2,"cycle":4,"damage":275,"salvoDelay":0,"salvoSize":1,"dotPulse":1}');
+        var stats = {
+            'shots':2,
+            'cycle':4,
+            'damage':275,
+            'salvoDelay':0,
+            'salvoSize':1,
+            'dotPulse':1
+        };
         var dps = unitDb.dpsCalculator.dps(weapon, stats);
         expect(dps).toBeCloseTo(137.5);
     });
@@ -149,7 +184,14 @@ describe('dps', function () {
         'TurretYawSpeed': 0,
         'WeaponCategory': 'Anti Navy'
     };
-    var stats = JSON.parse('{"shots":4,"cycle":3.3,"damage":80,"salvoDelay":0.3,"salvoSize":4,"dotPulse":1}');
+    var stats = {
+        'shots':4,
+        'cycle':3.3,
+        'damage':80,
+        'salvoDelay':0.3,
+        'salvoSize':4,
+        'dotPulse':1
+    };
     var dps = unitDb.dpsCalculator.dps(weapon, stats);
     expect(dps).toBeCloseTo(96.97);
   });
@@ -172,7 +214,14 @@ describe('dps', function () {
         'TurretYawSpeed': 0,
         'WeaponCategory': 'Anti Navy'
     };
-    var stats = JSON.parse('{"shots":4,"cycle":4,"damage":90,"salvoDelay":0.3,"salvoSize":4,"dotPulse":1}');
+    var stats = {
+        'shots':4,
+        'cycle':4,
+        'damage':90,
+        'salvoDelay':0.3,
+        'salvoSize':4,
+        'dotPulse':1
+    };
     var dps = unitDb.dpsCalculator.dps(weapon, stats);
     expect(dps).toBeCloseTo(90);
   });
@@ -197,7 +246,14 @@ describe('dps', function () {
         'TurretYawSpeed': 70,
         'WeaponCategory': 'Artillery'
     };
-    var stats = JSON.parse('{"shots":5,"cycle":8.3,"damage":100,"salvoDelay":0,"salvoSize":1,"dotPulse":1}');
+    var stats = {
+        'shots':5,
+        'cycle':8.3,
+        'damage':100,
+        'salvoDelay':0,
+        'salvoSize':1,
+        'dotPulse':1
+    };
     var dps = unitDb.dpsCalculator.dps(weapon, stats);
     expect(dps).toBeCloseTo(60.24);
   });
@@ -223,7 +279,14 @@ describe('dps', function () {
         'TurretYawSpeed': 60,
         'WeaponCategory': 'Artillery'
     };
-    var stats = JSON.parse('{"shots":6,"cycle":2.9,"damage":45,"salvoDelay":0,"salvoSize":1,"dotPulse":1}');
+    var stats = {
+        'shots':6,
+        'cycle':2.9,
+        'damage':45,
+        'salvoDelay':0,
+        'salvoSize':1,
+        'dotPulse':1
+    };
     var dps = unitDb.dpsCalculator.dps(weapon, stats);
     expect(dps).toBeCloseTo(93.1);
   });
@@ -248,7 +311,14 @@ describe('dps', function () {
         'TurretYawSpeed': 180,
         'WeaponCategory': 'Direct Fire'
     };
-    var stats = JSON.parse('{"shots":1,"cycle":0.6,"damage":140,"salvoDelay":0,"salvoSize":1,"dotPulse":1}');
+    var stats = {
+      'shots':1,
+      'cycle':0.6,
+      'damage':140,
+      'salvoDelay':0,
+      'salvoSize':1,
+      'dotPulse':1
+      };
     var dps = unitDb.dpsCalculator.dps(weapon, stats);
     expect(dps).toBeCloseTo(233.33);
   });
@@ -273,7 +343,14 @@ describe('dps', function () {
         'TurretYawSpeed': 0,
         'WeaponCategory': 'Bomb'
     };
-    var stats = JSON.parse('{"shots":6,"cycle":5,"damage":50,"salvoDelay":0.1,"salvoSize":6,"dotPulse":1}');
+    var stats = {
+        'shots':6,
+        'cycle':5,
+        'damage':50,
+        'salvoDelay':0.1,
+        'salvoSize':6,
+        'dotPulse':1
+    };
     var dps = unitDb.dpsCalculator.dps(weapon, stats);
     expect(dps).toBeCloseTo(60);
   });
@@ -293,7 +370,14 @@ describe('dps', function () {
         'RateOfFire': 0.25,
         'WeaponCategory': 'Bomb'
     };
-    var stats = JSON.parse('{"shots":1,"cycle":5,"damage":200,"salvoDelay":0,"salvoSize":1,"dotPulse":1}');
+    var stats = {
+        'shots':1,
+        'cycle':5,
+        'damage':200,
+        'salvoDelay':0,
+        'salvoSize':1,
+        'dotPulse':1
+    };
     var dps = unitDb.dpsCalculator.dps(weapon, stats);
     expect(dps).toBeCloseTo(40);
   });
@@ -312,7 +396,14 @@ describe('dps', function () {
         'RateOfFire': 0.25,
         'WeaponCategory': 'Bomb'
     };
-    var stats = JSON.parse('{"shots":1,"cycle":5,"damage":250,"salvoDelay":0,"salvoSize":1,"dotPulse":1}');
+    var stats = {
+        'shots':1,
+        'cycle':5,
+        'damage':250,
+        'salvoDelay':0,
+        'salvoSize':1,
+        'dotPulse':1
+    };
     var dps = unitDb.dpsCalculator.dps(weapon, stats);
     expect(dps).toBeCloseTo(50);
   });
