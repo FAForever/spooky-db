@@ -27,6 +27,7 @@ import re
 import sys
 import json
 import logging
+import pprint
 from logging import info, error, debug
 
 
@@ -367,9 +368,12 @@ def regroup_weapons(unit):
     new_weapon_list = []#List of [weapon, number of weapon]
     for weapon in unit['Weapon']:
         for existing_weapon in new_weapon_list:
-            if existing_weapon[0] == weapon:
-                existing_weapon[1] += 1
-                break
+            try:
+                if existing_weapon[0]['DisplayName'] == weapon['DisplayName'] and existing_weapon[0]['Damage'] == weapon['Damage']:
+                    existing_weapon[1] += 1
+                    break
+            except Exception as e:
+              pprint.pprint(e)
         else:
             new_weapon_list.append([weapon,1])
 
@@ -394,12 +398,12 @@ def run(app_path):
     unit_data_path = os.path.join(app_path, 'data', 'index.json')
     unit_dataFat_path = os.path.join(app_path, 'data', 'index.fat.json')
 
-    unit_list = load_unit_file(unit_data_path)
+    unit_list = load_unit_file(unit_dataFat_path)
     unit_list = get_whitelisted(unit_list, UNIT_WHITELIST)
 
     info('Sorting units')
     sort_unit_list(unit_list)
-    save_unit_file(unit_list, unit_dataFat_path)  # save for dev and debug purposes
+    save_unit_file(unit_list, unit_data_path)  # save for dev and debug purposes
 
     info('Slenderizing')
     slenderize(unit_list, app_path)

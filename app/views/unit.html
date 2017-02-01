@@ -4,7 +4,7 @@
             <span class="strategic icon-{{ item.faction  }}_{{ item.strategicIcon}}" ></span>
         </span>
         <h1>{{ item.fullName }}</h1>
-        <small>{{ item.id }}</small>
+        <a href="https://github.com/FAForever/fa/blob/develop/units/{{ item.id }}/{{ item.id }}_unit.bp" target="_blank"><small>{{ item.id }}</small></a>
     </header>
     <section>
         <table>
@@ -162,6 +162,11 @@
                     <td colspan="2"><small>Muzzle velocity</small></td>
                     <td title="muzzle velocity"><small>{{ w.MuzzleVelocity  }}</small></td>
                 </tr>
+                <tr ng-if="w.ProjectileLifetime">
+                    <td></td>
+                    <td colspan="2"><small>Lifetime</small></td>
+                    <td title="muzzle lifetime"><small>{{ w.ProjectileLifetime  }}</small></td>
+                </tr>
                 <tr ng-if="w.NukeInnerRingRadius && w.NukeOuterRingRadius">
                     <td></td>
                     <td colspan="2"><small>Ring radius</small></td>
@@ -173,7 +178,19 @@
                     <td title="inner ring damage | outer ring damage"><small>{{ w.NukeInnerRingDamage | shorten }} | {{ w.NukeOuterRingDamage | shorten }}</small></td>
                 </tr>
 
-                <tr ng-if="w.ManualFire || w.MuzzleSalvoSize">
+                <tr ng-if="w.BeamLifetime">
+                    <td></td>
+                    <td colspan="2"><small>Beam cycle</small></td>
+                    <td><small>{{ item.beamCycle(w) }}</small></td>
+                </tr>
+
+                <tr ng-if="w.RackFireTogether">
+                    <td></td>
+                    <td colspan="2"><small>RackFireTogether</small></td>
+                    <td><small>{{ w.RackFireTogether }}</small></td>
+                </tr>
+
+                <tr ng-if="(w.ManualFire || w.MuzzleSalvoSize) && ! w.isTML">
                     <td></td>
                     <td colspan="2" title="{{ 'manual fire' | if:w.ManualFire }}"><small>Fire cycle{{ " ⦿"| if:w.ManualFire }}</small></td>
                     <td><small>{{ item.fireCycle(w) }}</small></td>
@@ -184,10 +201,22 @@
                     <td colspan="2"><small>Turret pitch</small></td>
                     <td title="min ~ max @ speed"><small>{{ w.TurretPitch }}~{{ w.TurretPitchRange }}° @&nbsp;{{ w.TurretPitchSpeed }}°/s</small></td>
                 </tr>
-                <tr ng-if="w.TurretYawRange" ng-repeat-end>
+                <tr ng-if="w.TurretYawRange">
                     <td></td>
                     <td colspan="2"><small>Turret yaw</small></td>
                     <td title="min ~ max @ speed"><small>{{ w.TurretYaw }}~{{ w.TurretYawRange }}° @&nbsp;{{ w.TurretYawSpeed }}°/s</small></td>
+                </tr>
+
+                <tr ng-if="w.FiringTolerance">
+                    <td></td>
+                    <td colspan="2"><small>Firing Tolerance</small></td>
+                    <td><small>{{ w.FiringTolerance }}</small></td>
+                </tr>
+
+                <tr ng-if="w.FiringRandomness" ng-repeat-end>
+                    <td></td>
+                    <td colspan="2"><small>Firing Randomness</small></td>
+                    <td><small>{{ w.FiringRandomness }}</small></td>
                 </tr>
 
                 <!-- Upgrades -->
