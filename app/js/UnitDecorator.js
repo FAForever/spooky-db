@@ -35,6 +35,7 @@ unitDb.UnitDecorator = function(blueprint) {
             'Seraphim': 3,
         },
         gdiClassificationLookup = {
+            'XEB0204': 'T2 Engineering Station',
             'UEL0401': 'Direct Fire Experimental',
             'UAL0401': 'Direct Fire Experimental',
             'XSL0401': 'Direct Fire Experimental',
