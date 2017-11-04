@@ -27,7 +27,15 @@ describe('dps', function () {
         'TurretYawSpeed': 100,
         'WeaponCategory': 'Direct Fire'
     };
-    var dps = unitDb.dpsCalculator.dps(weapon);
+    var stats = {
+        'shots':1,
+        'cycle':0.3,
+        'damage':8,
+        'salvoDelay':0,
+        'salvoSize':1,
+        'dotPulse':1
+    };
+    var dps = unitDb.dpsCalculator.dps(weapon, stats);
     expect(dps).toBeCloseTo(26.67);
   });
 
@@ -50,7 +58,15 @@ describe('dps', function () {
         'TurretYawSpeed': 100,
         'WeaponCategory': 'Direct Fire Naval'
     };
-    var dps = unitDb.dpsCalculator.dps(weapon);
+    var stats = {
+        'shots':1,
+        'cycle':5,
+        'damage':1060,
+        'salvoDelay':0,
+        'salvoSize':1,
+        'dotPulse':1
+     };
+    var dps = unitDb.dpsCalculator.dps(weapon, stats);
     expect(dps).toBeCloseTo(212);
   });
 
@@ -74,8 +90,16 @@ describe('dps', function () {
         'TurretYawSpeed': 60,
         'WeaponCategory': 'Direct Fire Naval'
     };
-    var dps = unitDb.dpsCalculator.dps(weapon);
-    expect(dps).toBeCloseTo(125);
+    var stats = {
+        'shots':1,
+        'cycle':4,
+        'damage':50,
+        'salvoDelay':0,
+        'salvoSize':1,
+        'dotPulse':1
+    };
+    var dps = unitDb.dpsCalculator.dps(weapon, stats);
+    expect(dps).toBeCloseTo(112.5);
   });
 
   it('Uashavoh (XSS0201) - Ultrachromatic Beam Generator 2', function () {
@@ -98,8 +122,16 @@ describe('dps', function () {
         'TurretYawSpeed': 60,
         'WeaponCategory': 'Direct Fire Naval'
     };
-    var dps = unitDb.dpsCalculator.dps(weapon);
-    expect(dps).toBeCloseTo(65);
+    var stats = {
+        'shots':1,
+        'cycle':4,
+        'damage':26,
+        'salvoDelay':0,
+        'salvoSize':1,
+        'dotPulse':1
+    };
+    var dps = unitDb.dpsCalculator.dps(weapon, stats);
+    expect(dps).toBeCloseTo(58.5);
   });
 
   it('Valiant Class (UES0201) - Gauss Cannon', function () {
@@ -122,8 +154,16 @@ describe('dps', function () {
             'TurretYawSpeed': 90,
             'WeaponCategory': 'Direct Fire Naval'
         };
-        var dps = unitDb.dpsCalculator.dps(weapon);
-        expect(dps).toBeCloseTo(68.75);
+        var stats = {
+            'shots':2,
+            'cycle':4,
+            'damage':275,
+            'salvoDelay':0,
+            'salvoSize':1,
+            'dotPulse':1
+        };
+        var dps = unitDb.dpsCalculator.dps(weapon, stats);
+        expect(dps).toBeCloseTo(137.5);
     });
 
   it('Cooper (XES0102) - Angler Torpedo', function () {
@@ -144,7 +184,15 @@ describe('dps', function () {
         'TurretYawSpeed': 0,
         'WeaponCategory': 'Anti Navy'
     };
-    var dps = unitDb.dpsCalculator.dps(weapon);
+    var stats = {
+        'shots':4,
+        'cycle':3.3,
+        'damage':80,
+        'salvoDelay':0.3,
+        'salvoSize':4,
+        'dotPulse':1
+    };
+    var dps = unitDb.dpsCalculator.dps(weapon, stats);
     expect(dps).toBeCloseTo(96.97);
   });
 
@@ -166,7 +214,15 @@ describe('dps', function () {
         'TurretYawSpeed': 0,
         'WeaponCategory': 'Anti Navy'
     };
-    var dps = unitDb.dpsCalculator.dps(weapon);
+    var stats = {
+        'shots':4,
+        'cycle':4,
+        'damage':90,
+        'salvoDelay':0.3,
+        'salvoSize':4,
+        'dotPulse':1
+    };
+    var dps = unitDb.dpsCalculator.dps(weapon, stats);
     expect(dps).toBeCloseTo(90);
   });
 
@@ -190,8 +246,16 @@ describe('dps', function () {
         'TurretYawSpeed': 70,
         'WeaponCategory': 'Artillery'
     };
-    var dps = unitDb.dpsCalculator.dps(weapon);
-    expect(dps).toBeCloseTo(48.19);
+    var stats = {
+        'shots':5,
+        'cycle':8.3,
+        'damage':100,
+        'salvoDelay':0,
+        'salvoSize':1,
+        'dotPulse':1
+    };
+    var dps = unitDb.dpsCalculator.dps(weapon, stats);
+    expect(dps).toBeCloseTo(60.24);
   });
 
   it('Zthuee (XSL0103) - Thuntho Artillery Cannon', function () {
@@ -215,8 +279,16 @@ describe('dps', function () {
         'TurretYawSpeed': 60,
         'WeaponCategory': 'Artillery'
     };
-    var dps = unitDb.dpsCalculator.dps(weapon);
-    expect(dps).toBeCloseTo(77.59);
+    var stats = {
+        'shots':6,
+        'cycle':2.9,
+        'damage':45,
+        'salvoDelay':0,
+        'salvoSize':1,
+        'dotPulse':1
+    };
+    var dps = unitDb.dpsCalculator.dps(weapon, stats);
+    expect(dps).toBeCloseTo(93.1);
   });
 
   it('Wailer (XRA0305) - Disintegrator Pulse Laser', function () {
@@ -239,7 +311,15 @@ describe('dps', function () {
         'TurretYawSpeed': 180,
         'WeaponCategory': 'Direct Fire'
     };
-    var dps = unitDb.dpsCalculator.dps(weapon);
+    var stats = {
+      'shots':1,
+      'cycle':0.6,
+      'damage':140,
+      'salvoDelay':0,
+      'salvoSize':1,
+      'dotPulse':1
+      };
+    var dps = unitDb.dpsCalculator.dps(weapon, stats);
     expect(dps).toBeCloseTo(233.33);
   });
 
@@ -263,8 +343,16 @@ describe('dps', function () {
         'TurretYawSpeed': 0,
         'WeaponCategory': 'Bomb'
     };
-    var dps = unitDb.dpsCalculator.dps(weapon);
-    expect(dps).toBeCloseTo(75);
+    var stats = {
+        'shots':6,
+        'cycle':5,
+        'damage':50,
+        'salvoDelay':0.1,
+        'salvoSize':6,
+        'dotPulse':1
+    };
+    var dps = unitDb.dpsCalculator.dps(weapon, stats);
+    expect(dps).toBeCloseTo(60);
   });
 
   it('Shimmer (UAA0103) - Graviton Bomb', function () {
@@ -282,8 +370,16 @@ describe('dps', function () {
         'RateOfFire': 0.25,
         'WeaponCategory': 'Bomb'
     };
-    var dps = unitDb.dpsCalculator.dps(weapon);
-    expect(dps).toBeCloseTo(50);
+    var stats = {
+        'shots':1,
+        'cycle':5,
+        'damage':200,
+        'salvoDelay':0,
+        'salvoSize':1,
+        'dotPulse':1
+    };
+    var dps = unitDb.dpsCalculator.dps(weapon, stats);
+    expect(dps).toBeCloseTo(40);
   });
 
   it('Sinnve (XSA0103) - Othe Tactical Bomb', function () {
@@ -300,8 +396,16 @@ describe('dps', function () {
         'RateOfFire': 0.25,
         'WeaponCategory': 'Bomb'
     };
-    var dps = unitDb.dpsCalculator.dps(weapon);
-    expect(dps).toBeCloseTo(62.5);
+    var stats = {
+        'shots':1,
+        'cycle':5,
+        'damage':250,
+        'salvoDelay':0,
+        'salvoSize':1,
+        'dotPulse':1
+    };
+    var dps = unitDb.dpsCalculator.dps(weapon, stats);
+    expect(dps).toBeCloseTo(50);
   });
 
 });

@@ -27,6 +27,7 @@ import re
 import sys
 import json
 import logging
+import pprint
 from logging import info, error, debug
 
 
@@ -369,9 +370,12 @@ def regroup_weapons(unit):
     new_weapon_list = []#List of [weapon, number of weapon]
     for weapon in unit['Weapon']:
         for existing_weapon in new_weapon_list:
-            if existing_weapon[0] == weapon:
-                existing_weapon[1] += 1
-                break
+            try:
+                if existing_weapon[0]['DisplayName'] == weapon['DisplayName'] and existing_weapon[0]['Damage'] == weapon['Damage']:
+                    existing_weapon[1] += 1
+                    break
+            except Exception as e:
+              pprint.pprint(e)
         else:
             new_weapon_list.append([weapon,1])
 
