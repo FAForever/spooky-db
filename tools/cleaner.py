@@ -5,7 +5,7 @@ Loads the unit JSON files, filter, reorganise and trim them before saving them
 back.
 
 
-The whole process is done via the function run which call some other functions:
+The whole process is done via the function run which calls other functions:
 
 Filtering: via a whitelist
     function: whitelist
@@ -358,6 +358,7 @@ def slenderize(unit_list, app_path=DEFAULT_APP_PATH):
     for u in unit_list:
         trim(u, props)
 
+
 def regroup_weapons(unit):
     """
     Checks if two weapons are the same, if so regroups them in a single item and
@@ -391,6 +392,18 @@ def regroup_weapons(unit):
     return True
 
 
+def fix_properties(unit_list):
+  """
+  This function 'fixes' mistakes in unit properties - these are mostly faf bugs/typos/whatevers that
+  cause problems in the unitdb.
+  Function is separated to that it can be cleaned when these are fixed in faf sources
+  """
+  for unit in unit_list:
+    # Give kennels the right classification: https://github.com/FAForever/fa/issues/2300
+    if unit['Id'] in ['XEB0104', 'XEB0204']:
+      unit['General']['Classification'] = 'RULEUC_Engineer'
+
+
 def run(app_path):
     """
     Applies all the transformations on data/index.json and data/index.fat.json
@@ -402,6 +415,8 @@ def run(app_path):
 
     unit_list = load_unit_file(unit_data_path)
     unit_list = get_whitelisted(unit_list, UNIT_WHITELIST)
+
+    fix_properties(unit_list)
 
     info('Sorting units')
     sort_unit_list(unit_list)
