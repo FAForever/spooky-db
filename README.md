@@ -29,16 +29,18 @@ Thanks in advance.
 Running the Application on MAC OS X
 -----------------------------------
 Necessary packages that need to be installed beforehand:
-    
-> brew install pkgconfig
-> brew install pixman
-> brew install libjpeg
-> brew install giflib 
-> brew install cairo
-> brew install graphicsmagick
-> npm install
-> bower install - will need npm V4 - otherwise issue `Cannot find module 'internal/fs'`
-> grunt serve
+
+```shell
+brew install pkgconfig
+brew install pixman
+brew install libjpeg
+brew install giflib
+brew install cairo
+brew install graphicsmagick
+npm install
+bower install # will need npm V4 - otherwise issue `Cannot find module 'internal/fs'`
+grunt serve
+```
 
 View the program in dist directory.
 
