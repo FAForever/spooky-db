@@ -40,6 +40,10 @@ var unitDb = (function() {
             // controllers
             angular.forEach(unitDb.controllers, function(v, k) { app.controller(k, v); });
 
+            // hash-bang introduced in AngularJS 1.6 already deprecated
+            // https://webmasters.googleblog.com/2015/10/deprecating-our-ajax-crawling-scheme.html
+            app.config(['$locationProvider', function($locationProvider) { $locationProvider.hashPrefix(""); }]);
+
             return app;
         },
         start = function(appName, payload) {
