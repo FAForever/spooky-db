@@ -41,3 +41,19 @@ Necessary packages that need to be installed beforehand:
 > grunt serve
 
 View the program in dist directory.
+
+Running with Docker (on Linux)
+------------------------------
+
+Prepare
+```shell
+git clone "https://github.com/spooky/unitdb.git"
+cd unitdb
+docker build -t unitdb-server .
+```
+Starting the server
+```shell
+docker run --network=host -v $(pwd):/unitdb -it unitdb-server
+```
+
+Open http://localhost:9000
