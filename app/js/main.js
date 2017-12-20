@@ -42,7 +42,7 @@ var unitDb = (function() {
 
             // hash-bang introduced in AngularJS 1.6 already deprecated
             // https://webmasters.googleblog.com/2015/10/deprecating-our-ajax-crawling-scheme.html
-            app.config(['$locationProvider', function($locationProvider) { $locationProvider.hashPrefix(""); }]);
+            app.config(['$locationProvider', function($locationProvider) { $locationProvider.hashPrefix(''); }]);
 
             return app;
         },
