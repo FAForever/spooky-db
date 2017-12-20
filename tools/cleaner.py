@@ -376,6 +376,7 @@ def regroup_weapons(unit):
                     existing_weapon[1] += 1
                     break
             except Exception as e:
+              print(unit['Id'], end=' ')
               pprint.pprint(e)
         else:
             new_weapon_list.append([weapon,1])
