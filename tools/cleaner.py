@@ -190,7 +190,7 @@ def sort_unit_list(unit_list, legacy=False):
         ]
 
         if intersection:
-            tech_ordering, tech_level, unused_string = max(
+            tech_ordering, tech_level, unused_string = min(
                 tech_lookup_table[tech] for tech in intersection
             )
             return tech_level
