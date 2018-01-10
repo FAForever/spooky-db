@@ -50,6 +50,7 @@ unitDb.UnitDecorator = function(blueprint) {
             'UEB2401': 'Indirect Fire Experimental',
             'URL0401': 'Indirect Fire Experimental',
             'XSB2401': 'Indirect Fire Experimental',
+            'XAB2307': 'Indirect Fire Experimental',
             'XAB1401': 'Other Experimental',
             'XEA0002': 'Other Experimental',
             'XEB2402': 'Other Experimental',
@@ -91,7 +92,7 @@ unitDb.UnitDecorator = function(blueprint) {
             'XSB5202': 'T2 Air Staging Facility',
             'XAA0305': 'T3 Anti-Air Gunship',
             'XSB2304': 'T3 Anti-Air SAM Launcher',
-            'XSB3104': 'T3 Omni Sensor Array',
+            'XSB3104': 'T3 Omni Sensor Array'
         },
         gdiBaseClassificationLookupAndOrder = {
             'Construction - Buildpower': ['T1 Engineer','T2 Engineer','T2 Field Engineer','T2 Engineering Station','T1 Engineering Drone','T3 Engineer','T3 Engineering Station','T3 Support Armored Command Unit','Armored Command Unit','ACU Engineering Drone'],
