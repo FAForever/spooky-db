@@ -9,7 +9,7 @@
         <a ng-repeat="f in ['UEF', 'Cybran', 'Aeon', 'Seraphim']" title="{{ f }}" ng-click="toggleFaction(f)" ng-class="{active: factionSelected(f)}" class="icon-{{ f }}"></a>
     </p>
     <p>
-        <a ng-repeat="k in ['Land', 'Air', 'Naval', 'Base']" title="{{ k }}" ng-click="toggleKind(k)" ng-class="{active: kindSelected(k)}" class="icon-{{ k }}"></a>
+        <a ng-repeat="k in ['Base', 'Land', 'Air', 'Naval']" title="{{ k }}" ng-click="toggleKind(k)" ng-class="{active: kindSelected(k)}" class="icon-{{ k }}"></a>
     </p>
     <p>
         <a ng-repeat="t in ['T1', 'T2', 'T3', 'EXP']" title="{{ t }}" ng-click="toggleTech(t)" ng-class="{active: techSelected(t)}" class="icon-{{ t }}"></a>
