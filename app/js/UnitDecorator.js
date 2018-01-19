@@ -187,38 +187,38 @@ unitDb.UnitDecorator = function(blueprint) {
             var stats = weaponStats(weapon);
             switch (weapon.BeamLifetime) {
                 case 1:
-                    return stats.shots + ' beam(s) / ' + stats.cycle + 's, ' + (9 * weapon.Damage) * stats.shots + ' damage total';
+                    return stats.shots + ' beam(s) / ' + stats.cycle + 's, ' + (9 * weapon.Damage) * stats.shots + ' dmg total';
                 case 0:
-                    return 'continuous beam: ' + (weapon.Damage * stats.shots);// + ' #' + (weapon.Damage * 2) + ' damage';
+                    return 'continuous beam: ' + (weapon.Damage * stats.shots);// + ' #' + (weapon.Damage * 2) + ' dmg';
             }
 
             if (stats.salvoDelay !== 0) {
                 var projectiles = stats.shots;
                 var x = Math.pow(10, 1 || 0);
                 var reload = Math.round(((stats.cycle - ((projectiles - 1) * stats.salvoDelay)) || 0) * x) / x;
-                return projectiles + ' times 1 projectile / ' + stats.salvoDelay + ' seconds + ' +
-                reload + ' seconds reload ' +
-                '= ' + stats.cycle + ' seconds total, ' + weapon.Damage * projectiles + ' damage total';
+                return projectiles + ' times 1 projectile / ' + stats.salvoDelay + ' sec + ' +
+                reload + ' sec reload ' +
+                '= ' + stats.cycle + ' sec total, ' + weapon.Damage * projectiles + ' dmg total';
             }
-            return stats.shots + ' shot' + (stats.shots > 1 ? 's' : '') + ' / ' + ( stats.cycle === 1 ? '' : Math.round(stats.cycle * 10)/10 ) + ' sec<br/>' + (weapon.Damage * stats.shots) + ' total damage';
+            return stats.shots + ' shot' + (stats.shots > 1 ? 's' : '') + ' / ' + ( stats.cycle === 1 ? '' : Math.round(stats.cycle * 10)/10 ) + ' sec<br/>' + (weapon.Damage * stats.shots) + ' total dmg';
         },
         beamCycle = function(weapon) {
             if (weapon.BeamCollisionDelay > 0.1) {
                 var shots = Math.round(weapon.BeamLifetime/(0.1 + weapon.BeamCollisionDelay));
                 var shotText = '';
                 if (shots > 1)
-                    shotText = '/ ' + weapon.BeamCollisionDelay + 0.1 + ' seconds ';
+                    shotText = '/ ' + weapon.BeamCollisionDelay + 0.1 + ' sec ';
                 return shots + ' times ' + weapon.Damage +
-                ' damage ' + shotText + weapon.Damage * shots + ' damage total';
+                ' dmg ' + shotText + weapon.Damage * shots + ' dmg total';
             } else if (weapon.BeamLifetime === 1) {
-                return '9 times / 0.1 seconds ' + weapon.Damage + ' damage = ' + (9 * weapon.Damage) + ' damage total, 0.8 seconds total';
+                return '9 times / 0.1 sec ' + weapon.Damage + ' dmg = ' + (9 * weapon.Damage) + ' dmg total, 0.8 sec total';
             } else {
                 if (weapon.DoTPulses) {
-                    return weapon.DoTPulses + ' times ' + weapon.Damage + ' damage / ' +
-                    (weapon.DoTTime/10) + ' seconds = ' + (weapon.damage * weapon.DoTPulses) + ' total ' +
-                    (weapon.DoTTime/10 * weapon.DoTPulses - 0.1) + ' seconds total';
+                    return weapon.DoTPulses + ' times ' + weapon.Damage + ' dmg / ' +
+                    (weapon.DoTTime/10) + ' sec = ' + (weapon.damage * weapon.DoTPulses) + ' total ' +
+                    (weapon.DoTTime/10 * weapon.DoTPulses - 0.1) + ' sec total';
                 } else {
-                    return weapon.Damage + ' damage';
+                    return weapon.Damage + ' dmg';
                 }
             }
         },
