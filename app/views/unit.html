@@ -193,7 +193,7 @@
                 <tr ng-if="(w.ManualFire || w.MuzzleSalvoSize) && ! w.isTML">
                     <td></td>
                     <td colspan="2" title="{{ 'manual fire' | if:w.ManualFire }}"><small>Fire cycle{{ " ⦿"| if:w.ManualFire }}</small></td>
-                    <td><small>{{ item.fireCycle(w) }}</small></td>
+                    <td><small ng-bind-html="item.fireCycle(w) | unsafe"></small></td>
                 </tr>
 
                 <tr ng-if="w.TurretPitchRange">
