@@ -24,6 +24,15 @@ var unitDb = (function() {
                     });
             }]);
 
+            app.run(['$rootScope', '$location', function($rootScope, $location) {
+                var lastView = localStorage.getItem('lastView');
+                $location.path(lastView);
+
+                $rootScope.$on("$routeChangeStart", function(event, next, current) {
+                  localStorage.setItem('lastView', next.originalPath);
+                });
+            }]);
+
             // services
             app.provider('data', unitDb.services.dataProvider);
             app.config(['dataProvider', function(dataProvider) {
