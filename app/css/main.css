@@ -741,3 +741,41 @@ div.gdiItemsContainer {
         margin-left: 160px;
     }
 }
+
+.tools {
+    position: fixed;
+    top: 385px;
+    left: 0;
+}
+
+.compact h1 {
+    font-size: 1.3em;
+}
+
+.compact h2 {
+    font-size: 1em;
+    margin: 3px 0;
+    font-weight: normal;
+    font-family: 'Muli', Verdana, Arial, sans-serif;
+}
+
+.compact .thumb {
+    background: none;
+    width: 21px;
+    height: 21px;
+    margin-right: 3px
+}
+
+.compact .thumb .strategic {
+    top: 1px;
+    left: 2px;
+}
+
+.compact div.gdiBaseCategory {
+    margin-bottom: 3em;
+}
+
+.compact .gdiCategory .faction {
+    min-height: 21px;
+    width: 24px;
+}
