@@ -248,7 +248,8 @@ footer {
     left: 0;
 }
 .filters a:hover, .filters a:focus, .filters a.active,
-.faction a.thumb:hover, .faction a.thumb:focus, .faction a.thumb.selected {
+.faction a.thumb:hover, .faction a.thumb:focus, .faction a.thumb.selected,
+.tools a:hover, .tools a:focus, .tools a:active {
     background-color: rgba(255,255,255, .4);
 }
 
@@ -746,6 +747,17 @@ div.gdiItemsContainer {
     position: fixed;
     top: 385px;
     left: 0;
+}
+
+.tools a {
+    border-radius: 2px;
+}
+
+.compact-toggle {
+    position: fixed;
+    margin: 0.67em;
+    top: 0;
+    right: 0;
 }
 
 .compact h1 {

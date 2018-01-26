@@ -1960,123 +1960,129 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_structure2_intel {
+.icon-UEF_icon_structure2_engineer {
   background-image: url(../img/strategic.png);
   background-position: -306px 0px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_structure2_mass {
+.icon-UEF_icon_structure2_intel {
   background-image: url(../img/strategic.png);
   background-position: -306px -17px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_structure2_missile {
+.icon-UEF_icon_structure2_mass {
   background-image: url(../img/strategic.png);
   background-position: -306px -34px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_structure2_shield {
+.icon-UEF_icon_structure2_missile {
   background-image: url(../img/strategic.png);
   background-position: -306px -51px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_structure3_antiair {
+.icon-UEF_icon_structure2_shield {
   background-image: url(../img/strategic.png);
   background-position: -306px -68px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_structure3_antimissile {
+.icon-UEF_icon_structure3_antiair {
   background-image: url(../img/strategic.png);
   background-position: -306px -85px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_structure3_artillery {
+.icon-UEF_icon_structure3_antimissile {
   background-image: url(../img/strategic.png);
   background-position: -306px -102px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_structure3_directfire {
+.icon-UEF_icon_structure3_artillery {
   background-image: url(../img/strategic.png);
   background-position: -306px -119px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_structure3_energy {
+.icon-UEF_icon_structure3_directfire {
   background-image: url(../img/strategic.png);
   background-position: -306px -136px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_structure3_engineer {
+.icon-UEF_icon_structure3_energy {
   background-image: url(../img/strategic.png);
   background-position: -306px -153px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_structure3_intel {
+.icon-UEF_icon_structure3_engineer {
   background-image: url(../img/strategic.png);
   background-position: -306px -170px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_structure3_mass {
+.icon-UEF_icon_structure3_intel {
   background-image: url(../img/strategic.png);
   background-position: -306px -187px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_structure3_missile {
+.icon-UEF_icon_structure3_mass {
   background-image: url(../img/strategic.png);
   background-position: -306px -204px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_structure3_shield {
+.icon-UEF_icon_structure3_missile {
   background-image: url(../img/strategic.png);
   background-position: -306px -221px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_structure3_transport {
+.icon-UEF_icon_structure3_shield {
   background-image: url(../img/strategic.png);
   background-position: -306px -238px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_structure_energy {
+.icon-UEF_icon_structure3_transport {
   background-image: url(../img/strategic.png);
   background-position: -306px -255px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_structure_generic {
+.icon-UEF_icon_structure_energy {
   background-image: url(../img/strategic.png);
   background-position: -306px -272px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_structure_wall {
+.icon-UEF_icon_structure_generic {
   background-image: url(../img/strategic.png);
   background-position: -306px -289px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_sub1_antinavy {
+.icon-UEF_icon_structure_wall {
   background-image: url(../img/strategic.png);
   background-position: 0px -306px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_sub3_missile {
+.icon-UEF_icon_sub1_antinavy {
   background-image: url(../img/strategic.png);
   background-position: -17px -306px;
+  width: 17px;
+  height: 17px;
+}
+.icon-UEF_icon_sub3_missile {
+  background-image: url(../img/strategic.png);
+  background-position: -34px -306px;
   width: 17px;
   height: 17px;
 }
