@@ -1,6 +1,6 @@
 'use strict';
 unitDb.controllers = {
-    homeCtrl: ['$scope', '$window', '$location', 'data', function($scope, $window, $location, data) {
+    homeCtrl: ['$scope', '$window', '$location', '$hotkey', 'data', function($scope, $window, $location, $hotkey, data) {
         $scope.factions = [];
         $scope.kinds = [];
         $scope.tech = [];
@@ -91,10 +91,15 @@ unitDb.controllers = {
                 }
             }
         };
+
+        $hotkey.bind('Ctrl + X', $scope.clear);
+        $hotkey.bind('Ctrl + Z', function() {
+            angular.element('#filter').focus();
+        });
     }],
 
-    gdiCtrl: ['$scope', '$window', '$location', 'data', function($scope, $window, $location, data) {
-        $scope.compact = false || (localStorage.getItem('compact') == 'true');
+    gdiCtrl: ['$scope', '$window', '$location', '$hotkey', 'data', function($scope, $window, $location, $hotkey, data) {
+        $scope.compact = false || (localStorage.getItem('compact') === 'true');
 
         $scope.factions = data.selectedFilterFractions;
         $scope.kinds = data.selectedFilterKinds;
@@ -169,7 +174,6 @@ unitDb.controllers = {
                 if ($scope.index[c].selected)
                     $scope.index[c].selected = false;
 
-            //$scope.contenders = [];
             $scope.contenders.splice($scope.contenders.len);
         };
         $scope.strain = function(e) {
@@ -233,7 +237,12 @@ unitDb.controllers = {
         $scope.toggleCompact = function() {
             $scope.compact = !$scope.compact;
             localStorage.setItem('compact', $scope.compact);
-        }
+        };
+
+        $hotkey.bind('Ctrl + X', $scope.clear);
+        $hotkey.bind('Ctrl + Z', function() {
+            angular.element('#filter').focus();
+        });
     }],
 
     compareCtrl: ['$scope', '$routeParams', 'data', function($scope, $routeParams, data) {

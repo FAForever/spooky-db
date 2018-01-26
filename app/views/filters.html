@@ -4,7 +4,7 @@
         <a href="" title="clear selection" class="clear" ng-click="clear()">x</a>
         <a ng-href="#/{{ contenders.join(',') }}" title="compare" ng-class="{ glow: contenders.length, compare: true }">compare</a>
     </header>
-    <input type="text" placeholder="filter" autofocus ng-model="expr" />
+    <form><input id="filter" type="text" placeholder="filter" autofocus ng-model="expr" /></form>
     <p>
         <a ng-repeat="f in ['UEF', 'Cybran', 'Aeon', 'Seraphim']" title="{{ f }}" ng-click="toggleFaction(f)" ng-class="{active: factionSelected(f)}" class="icon-{{ f }}"></a>
     </p>

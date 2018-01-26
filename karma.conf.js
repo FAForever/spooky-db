@@ -22,6 +22,7 @@ module.exports = function(config) {
       'app/bower_components/angular-route/angular-route.js',
       'app/bower_components/underscore/underscore.js',
       'app/bower_components/angular-underscore/angular-underscore.js',
+      'app/bower_components/angular-hotkeys/angular-hotkeys.js',
       'app/js/plugins.js',
       'app/js/main.js',
       'app/js/dps.js',

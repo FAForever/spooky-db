@@ -2,7 +2,7 @@
 
 var unitDb = (function() {
     var init = function(appName, payload) {
-            var app = angular.module(appName, ['ngRoute', 'ngSanitize', 'angular-underscore']);
+            var app = angular.module(appName, ['ngRoute', 'ngSanitize', 'angular-underscore', 'drahak.hotkeys']);
 
             // routing
             app.config(['$routeProvider', function($routeProvider) {
@@ -28,7 +28,7 @@ var unitDb = (function() {
                 var lastView = localStorage.getItem('lastView');
                 $location.path(lastView);
 
-                $rootScope.$on("$routeChangeStart", function(event, next, current) {
+                $rootScope.$on('$routeChangeStart', function(event, next) {
                   localStorage.setItem('lastView', next.originalPath);
                 });
             }]);
