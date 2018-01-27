@@ -29,7 +29,7 @@ var unitDb = (function() {
                 $location.path(lastView);
 
                 $rootScope.$on('$routeChangeStart', function(event, next) {
-                  localStorage.setItem('lastView', next.originalPath);
+                    localStorage.setItem('lastView', $location.path());
                 });
             }]);
 
