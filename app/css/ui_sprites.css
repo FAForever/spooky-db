@@ -24,7 +24,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-Air {
   background-image: url(../img/ui.png);
-  background-position: -144px -48px;
+  background-position: -144px -96px;
   width: 48px;
   height: 48px;
 }
@@ -78,13 +78,13 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-T3 {
   background-image: url(../img/ui.png);
-  background-position: 0px 0px;
+  background-position: -144px -48px;
   width: 48px;
   height: 48px;
 }
 .icon-UEF {
   background-image: url(../img/ui.png);
-  background-position: -144px -96px;
+  background-position: 0px 0px;
   width: 48px;
   height: 48px;
 }
@@ -114,25 +114,37 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-energy {
   background-image: url(../img/ui.png);
-  background-position: -192px 0px;
+  background-position: -192px -48px;
   width: 20px;
   height: 20px;
+}
+.icon-float {
+  background-image: url(../img/ui.png);
+  background-position: -192px 0px;
+  width: 24px;
+  height: 24px;
 }
 .icon-health {
   background-image: url(../img/ui.png);
-  background-position: -192px -20px;
+  background-position: -192px -68px;
   width: 20px;
   height: 20px;
 }
+.icon-horizontal {
+  background-image: url(../img/ui.png);
+  background-position: -192px -24px;
+  width: 24px;
+  height: 24px;
+}
 .icon-mass {
   background-image: url(../img/ui.png);
-  background-position: -192px -40px;
+  background-position: -192px -88px;
   width: 20px;
   height: 20px;
 }
 .icon-time {
   background-image: url(../img/ui.png);
-  background-position: -192px -60px;
+  background-position: -192px -108px;
   width: 20px;
   height: 20px;
 }

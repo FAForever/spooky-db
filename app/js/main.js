@@ -28,7 +28,7 @@ var unitDb = (function() {
                 var lastView = localStorage.getItem('lastView');
                 $location.path(lastView);
 
-                $rootScope.$on('$routeChangeStart', function(event, next) {
+                $rootScope.$on('$routeChangeStart', function() {
                     localStorage.setItem('lastView', $location.path());
                 });
             }]);

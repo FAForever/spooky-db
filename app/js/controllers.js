@@ -246,8 +246,15 @@ unitDb.controllers = {
     }],
 
     compareCtrl: ['$scope', '$routeParams', 'data', function($scope, $routeParams, data) {
+        $scope.layoutClass = localStorage.getItem('compareLayout');
+
         var ids = $routeParams.ids.split(',');
         $scope.contenders = _.sortBy(_.filter(data.items, function(x) { return _.contains(ids, x.id); }),
                                     function(x) { return ids.indexOf(x.id); });
+
+        $scope.layout = function(className) {
+            $scope.layoutClass = className;
+            localStorage.setItem('compareLayout', className);
+        };
     }]
 };
