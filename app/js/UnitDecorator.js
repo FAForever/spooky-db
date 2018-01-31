@@ -95,7 +95,7 @@ unitDb.UnitDecorator = function(blueprint) {
             'XSB3104': 'T3 Omni Sensor Array'
         },
         gdiBaseClassificationLookupAndOrder = {
-            'Construction - Buildpower': ['Armored Command Unit','T3 Support Armored Command Unit','T1 Engineer','T2 Engineer','T2 Field Engineer','T3 Engineer','T2 Engineering Station','T3 Engineering Station','ACU Engineering Drone','T1 Engineering Drone'],
+            'Construction - Buildpower': ['T1 Engineer','T2 Engineer','T2 Field Engineer','T3 Engineer','T3 Support Armored Command Unit','Armored Command Unit','ACU Engineering Drone','T1 Engineering Drone','T2 Engineering Station','T3 Engineering Station'],
 
             'Land': ['T1 Bot/Tank','T1 Light Assault Bot','T1 Mobile Light Artillery','T1 Mobile Anti-Air','T1 Land Scout','T2 Heavy Tank','T2 Hover Tank','T2 Amphibious Tank','T2 Bot','T2 Mobile Missile Launcher','T2 Mobile Anti-Air','T2 Mobile Shield Generator','T2 Mobile Stealth Field System','T2 Mobile Bomb','T2 Crab Egg (Flak)','T3 Main Assault Bot/Tank','T3 Assault Bot','T3 Sniper Bot','T3 Mobile Heavy Artillery','T3 Mobile Missile Platform','T3 Mobile Anti-Air','T3 Mobile Shield Generator','T3 Shield Disruptor','T3 Crab Egg (Engineer)','T3 Crab Egg (Brick)','T3 Crab Egg (Artillery)'],
 
