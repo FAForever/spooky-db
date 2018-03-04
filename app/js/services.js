@@ -3,9 +3,11 @@ unitDb.services = {
     dataProvider: function() {
         var unitIndex = [];
         var contenders = [];
+        var version = null;
 
         this.setIndex = function(index) {
-            unitIndex = index;
+            unitIndex = index.units;
+            version = index.version;
         };
 
         this.$get = ['$hotkey', '$location', function($hotkey, $location) {
@@ -19,6 +21,7 @@ unitDb.services = {
                 selectedFilterKinds: [],
                 selectedFilterTech: [],
                 contenders: contenders,
+                version: version
             };
         }];
     }

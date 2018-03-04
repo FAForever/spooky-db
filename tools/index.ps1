@@ -2,18 +2,26 @@ param (
     [string]$target = "d:\code\personal\unitdb\app",
     [string]$faUnitFile = "d:\games\steam\SteamApps\common\Supreme Commander Forged Alliance\gamedata\units.scd",
     [string]$fafFile = "c:\ProgramData\FAForever\gamedata\faforever.faf",
-    [string]$fafUnitsFile = "c:\ProgramData\FAForever\gamedata\units.nx2"
+    [string]$fafUnitsFile = "c:\ProgramData\FAForever\gamedata\units.nx2",
+    [string]$fafLuaFile = "c:\ProgramData\FAForever\gamedata\lua.nx2"
 )
 
 Function Create-UnitIndex {
     param (
-        [string]$unitDir
+        [string]$unitDir,
+        [string]$luaVersionFile
     )
+
+    $version = lua getVersion.lua "$luaVersionFile"
+
+    echo '{'
+    echo "`"version`": `"$version`","
 
     $blueprints = Get-ChildItem "$unitDir\**\*_unit.bp"
     $count = 1
     $total = $blueprints.Count
 
+    echo '"units": '
     echo '['
     $blueprints | Foreach-Object {
         $file = $_.BaseName
@@ -27,6 +35,8 @@ Function Create-UnitIndex {
         $count++
     }
     echo ']'
+
+    echo '}'
 }
 
 Function Run {
@@ -50,8 +60,11 @@ Function Run {
     Write-Progress -Activity "Extracting FAF units 2/2"
     7z x "$fafUnitsFile" "units" -o"$tempDir" -y
 
+    Write-Progress -Activity "Extracting FAF lua"
+    7z e "$fafLuaFile" "lua/version.lua" -o"$tempDir" -y
+
     Write-Progress -Activity "Creating unit index"
-    $json = Create-UnitIndex "$tempDir/units"
+    $json = Create-UnitIndex "$tempDir/units" "$tempDir/version.lua"
     $Utf8NoBomEncoding = New-Object System.Text.UTF8Encoding($False)
     [System.IO.File]::WriteAllLines("$target\data\index.json" , $json, $Utf8NoBomEncoding)
 

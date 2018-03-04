@@ -1,19 +1,15 @@
 #!/usr/bin/lua
 
-local os = require("os")
-local io = require("io")
 local json = require("json")
 
-function usage(msg)
-    print(string.format("Usage: %s <file>.bp", arg[0]))
-    print("Parse Supreme Commander blueprint file and dump it as JSON")
-    print()
-    print(msg)
-    os.exit(-1)
-end
+local cmn = require("common")
 
-if arg[1] == nil then
-    usage("Missing argument")
+function usage(msg)
+    cmn.usageHelper(
+        string.format("Usage: %s <file>.bp", arg[0]),
+        "Parse Supreme Commander blueprint file and dump it as JSON",
+        msg
+    )
 end
 
 -- this is the main function that's called in
@@ -50,23 +46,17 @@ function stripLoc(x)
     return x
 end
 
-local blueprint = io.open(arg[1]):read("*a")
-
-if blueprint == nil then
+function readError()
     usage(string.format("Cannot read %s", arg[1]))
 end
+
+local blueprint = cmn.readFile(arg[1], readError)
 
 -- for some reason, blueprints use different comment
 -- syntax than Lua
 blueprint = blueprint:gsub('#','--')
 
-blueprint, err = loadstring("return " .. blueprint)
-
--- print parse errors
-if blueprint == nil then
-    print(err)
-    os.exit(-1)
-end
+blueprint = cmn.load("return " .. blueprint)
 
 -- evaluate the blueprint and add "Id" key to it
 blueprint = blueprint()

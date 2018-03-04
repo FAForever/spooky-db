@@ -31,8 +31,8 @@ import pprint
 from logging import info, error, debug
 
 
-DEFAULT_APP_PATH = 'd:/code/personal/html/unitdb/app'#TODO: remove this string,
-#maybe use the previous folder of current working dir or sys.argv[0] ?
+DEFAULT_APP_PATH = 'd:/code/personal/html/unitdb/app'  # TODO: remove this string,
+# maybe use the previous folder of current working dir or sys.argv[0] ?
 
 UNIT_WHITELIST = set((
     'UEB0101','UEB3101','UEL0105','UEA0101','UEB0102','UEB3102','UEL0101',
@@ -104,26 +104,30 @@ def load_unit_file(unit_data_path):
     """
 
     with open(unit_data_path, 'r') as in_file:
-        loaded_units = json.load(in_file)
+        loaded_file = json.load(in_file)
 
-    distinct = { unit['Id']: unit for unit in loaded_units if 'Id' in unit }
-    loaded_units = distinct.values()
+    distinct = { unit['Id']: unit for unit in loaded_file['units'] if 'Id' in unit }
+    loaded_file['units'] = list(distinct.values())
 
-    info('Loaded {0} units'.format(len(loaded_units)))
+    info('Loaded version {0} containing {1} units'.format(loaded_file['version'], len(loaded_file['units'])))
 
-    return loaded_units
+    return loaded_file
 
 
-def save_unit_file(unit_list, unit_data_path, debug=False):
+def save_unit_file(unit_file, unit_list, unit_data_path, debug=False):
     """
-    Uses the JSON module to save unit_list in a json file.
+    Uses the JSON module to save unit_file in a json file.
 
     debug=True can be used to add indentation in the saved file
     """
-    with open(unit_data_path, 'w+') as out_file:
-        json.dump(unit_list, out_file, indent=(2 if debug else None))
 
-    info('Saved {0} units to {1}'.format(len(unit_list), unit_data_path))
+    # yeah, I should start using marshmallow or something
+    unit_file['units'] = unit_list
+
+    with open(unit_data_path, 'w+') as out_file:
+        json.dump(unit_file, out_file, indent=(2 if debug else None))
+
+    info('Saved {0} units to {1}'.format(len(unit_file), unit_data_path))
 
 
 def get_whitelisted(unit_list, whitelist):
@@ -414,23 +418,25 @@ def run(app_path):
     unit_data_path = os.path.join(app_path, 'data', 'index.json')
     unit_dataFat_path = os.path.join(app_path, 'data', 'index.fat.json')
 
-    unit_list = load_unit_file(unit_data_path)
+    unit_file = load_unit_file(unit_data_path)
+    unit_list = unit_file['units']
     unit_list = get_whitelisted(unit_list, UNIT_WHITELIST)
 
     fix_properties(unit_list)
 
     info('Sorting units')
     sort_unit_list(unit_list)
-    save_unit_file(unit_list, unit_dataFat_path)  # save for dev and debug purposes
-
-    info('Slenderizing')
-    slenderize(unit_list, app_path)
 
     info('Regrouping weapons')
     for unit in unit_list:
         regroup_weapons(unit)
 
-    save_unit_file(unit_list, unit_data_path)
+    save_unit_file(unit_file, unit_list, unit_dataFat_path)  # save for dev and debug purposes
+
+    info('Slenderizing')
+    slenderize(unit_list, app_path)
+
+    save_unit_file(unit_file, unit_list, unit_data_path)
     info('Done')
 
 

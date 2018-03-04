@@ -6,6 +6,7 @@ unitDb.controllers = {
         $scope.tech = [];
 
         $scope.index = data.items;
+        $scope.version = data.version;
         $scope.contenders = data.contenders;
 
         var toggleArray = function(arr, el) {
@@ -106,6 +107,7 @@ unitDb.controllers = {
         $scope.tech = data.selectedFilterTech;
 
         $scope.index = data.items;
+        $scope.version = data.version;
         $scope.visibleIndex = data.visibleIndex;
         $scope.contenders = data.contenders;
 
