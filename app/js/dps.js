@@ -71,7 +71,7 @@ unitDb.DoTDpsCalculator = angular.extend({}, unitDb.DpsCalculator, {
     },
     _dps: function(w,s) {
         var initial = unitDb.DefaultDpsCalculator._dps(w,s);
-        return (initial + w.Damage * w.DoTPulses * w.MuzzleSalvoSize) /  unitDb.DpsCalculator.rateInverse(w);
+        return w.Damage * (w.DoTPulses || 1) + (initial || 0);
     }
 });
 
