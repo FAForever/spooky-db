@@ -222,13 +222,13 @@ unitDb.UnitDecorator = function(blueprint) {
                 }
             }
         },
-        getDps = function(weapon) {
+        getDps = function(weapon, isSpecial) {
             var stats = weaponStats(weapon);
 
             if (weapon.ForceSingleFire)
                 return null;
 
-            return unitDb.dpsCalculator.dps(weapon, stats);
+            return unitDb.dpsCalculator.dps(weapon, stats, isSpecial);
         },
         isTML = function(weapon) {
             return !!weapon.ForceSingleFire;
@@ -280,10 +280,18 @@ unitDb.UnitDecorator = function(blueprint) {
 
         self.fullName = fullName(self);
 
+        // some things just don't play along...
+        var specials = [
+            'UEL0103', // lobo
+            'XSL0103', // zthuee
+            'DAA0206', // mercy
+            'XAA0306' // solace
+        ];
+
         // additional stats for weapons
         for(var i in blueprint.Weapon) {
             _.extend(blueprint.Weapon[i], {
-                dps: getDps(blueprint.Weapon[i]),
+                dps: getDps(blueprint.Weapon[i], specials.indexOf(self.id) > -1),
                 isTML: isTML(blueprint.Weapon[i])
             });
         }
