@@ -24,14 +24,17 @@ var unitDb = (function() {
                     });
             }]);
 
-            // app.run(['$rootScope', '$location', function($rootScope, $location) {
-            //     var lastView = localStorage.getItem('lastView');
-            //     $location.path(lastView);
+            app.run(['$rootScope', '$location', function($rootScope, $location) {
+                // var lastView = localStorage.getItem('lastView');
+                // $location.path(lastView);
 
-            //     $rootScope.$on('$routeChangeStart', function() {
-            //         localStorage.setItem('lastView', $location.path());
-            //     });
-            // }]);
+                $rootScope.$on('$routeChangeStart', function() {
+                    var listViewPath = ['/', '/by-class'].indexOf($location.path()) > -1 ? $location.path() : null;
+
+                    if (!!listViewPath)
+                        localStorage.setItem('lastView', $location.path());
+                });
+            }]);
 
             // services
             app.provider('data', unitDb.services.dataProvider);

@@ -247,7 +247,7 @@ unitDb.controllers = {
         });
     }],
 
-    compareCtrl: ['$scope', '$routeParams', 'data', function($scope, $routeParams, data) {
+    compareCtrl: ['$scope', '$routeParams', '$location', 'data', function($scope, $routeParams, $location, data) {
         $scope.layoutClass = localStorage.getItem('compareLayout');
 
         var ids = $routeParams.ids.split(',');
@@ -257,6 +257,11 @@ unitDb.controllers = {
         $scope.layout = function(className) {
             $scope.layoutClass = className;
             localStorage.setItem('compareLayout', className);
+        };
+
+        $scope.back = function() {
+            var lastView = localStorage.getItem('lastView') || '/';
+            $location.path(lastView);
         };
     }]
 };
