@@ -10,7 +10,7 @@
     "angular-route": "",
     "underscore": "",
     "angular-underscore": "",
-    "angular-hotkeys": "^0.2.2"
+    "angular-hotkeys": ""
   },
   "devDependencies": {
     "angular-mocks": "",
