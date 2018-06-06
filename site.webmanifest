@@ -1,0 +1,11 @@
+{
+    "short_name": "faf unit db",
+    "name": "Forged Aliance Forever unit database",
+    "start_url": "/",
+    "icons": [{
+        "src": "apple-touch-icon-precomposed.png",
+        "sizes": "192x192",
+        "type": "image/png"
+    }],
+    "background_color": "#222"
+}
