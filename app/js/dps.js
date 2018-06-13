@@ -126,7 +126,7 @@ unitDb.NotNukeDpsCalculator = angular.extend({}, unitDb.DpsCalculator, {
 
         var trueDamage = w.Damage*(w.DoTPulses || 1) + (w.InitialDamage || 0);
         // beam weapons are a thing and do their own thing. yeah good luck working out that.
-        trueDamage = Math.max((Math.floor((w.BeamLifetime || 0) / ((w.BeamCollisionDelay || 0)+0.1))-1)*w.Damage, trueDamage);
+        trueDamage = Math.max((Math.floor((w.BeamLifetime || 0) / ((w.BeamCollisionDelay || 0)+0.1))+1)*w.Damage, trueDamage);
         var salvoDamage = trueSalvoSize * trueDamage * (isSpecial ? w.ProjectilesPerOnFire || 1 : 1);
         var trueDPS = (salvoDamage / trueReload);
 
