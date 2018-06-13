@@ -138,8 +138,9 @@ unitDb.UnitDecorator = function(blueprint) {
                       // but specified in the .lua files for corresponding projectiles.
                    projectileMultiplierLookup = {
                       '/projectiles/TIFFragmentationSensorShell01/TIFFragmentationSensorShell01_proj.bp': 5, // Lobo
-                      '/projectiles/SIFThunthoArtilleryShell01/SIFThunthoArtilleryShell01_proj.bp': 6, // Zthuee
+                      '/projectiles/SIFThunthoArtilleryShell01/SIFThunthoArtilleryShell01_proj.bp': 5, // Zthuee
                       '/projectiles/AIFFragmentationSensorShell01/AIFFragmentationSensorShell01_proj.bp': 36, // Zthuee
+                      '/projectiles/aantorpedocluster01/aantorpedocluster01_proj.bp': 2, // Aeon T3 Torpedo Bomber
                    };
 
             salvoDelay = salvoDelay === 0 ? 0 : salvoDelay - 0.1;
