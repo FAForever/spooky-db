@@ -131,7 +131,7 @@
                 <tr ng-if="item.Wreckage.MassMult">
                     <td></td>
                     <td colspan="2">Mass</td>
-                    <td title="{{ item.Wreckage.MassMult*item.Economy.BuildCostMass | round }}">{{ item.Wreckage.MassMult*item.Economy.BuildCostMass | round | shorten }}</td>
+                    <td title="{{ item.Wreckage.HealthMult*item.Wreckage.MassMult*item.Economy.BuildCostMass | round }}">{{ item.Wreckage.HealthMult*item.Wreckage.MassMult*item.Economy.BuildCostMass | round | shorten }}</td>
                 </tr>
 
                 <!-- Veterancy -->
