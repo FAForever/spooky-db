@@ -99,7 +99,7 @@ describe('dps', function () {
         'dotPulse':1
     };
     var dps = unitDb.dpsCalculator.dps(weapon, stats);
-    expect(dps).toBeCloseTo(112.5);
+    expect(dps).toBeCloseTo(137.5);
   });
 
   it('Uashavoh (XSS0201) - Ultrachromatic Beam Generator 2', function () {
@@ -131,7 +131,7 @@ describe('dps', function () {
         'dotPulse':1
     };
     var dps = unitDb.dpsCalculator.dps(weapon, stats);
-    expect(dps).toBeCloseTo(58.5);
+    expect(dps).toBeCloseTo(71.5);
   });
 
   it('Valiant Class (UES0201) - Gauss Cannon', function () {
