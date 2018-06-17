@@ -24,7 +24,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-Aeon_icon_bomber2_antinavy {
   background-image: url(../img/strategic.png);
-  background-position: -221px -51px;
+  background-position: -221px -85px;
   width: 17px;
   height: 17px;
 }
@@ -514,537 +514,549 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   width: 17px;
   height: 17px;
 }
-.icon-Aeon_icon_structure_wall {
+.icon-Aeon_icon_structure_mass {
   background-image: url(../img/strategic.png);
   background-position: -153px -34px;
   width: 17px;
   height: 17px;
 }
-.icon-Aeon_icon_sub1_antinavy {
+.icon-Aeon_icon_structure_wall {
   background-image: url(../img/strategic.png);
   background-position: -153px -51px;
   width: 17px;
   height: 17px;
 }
-.icon-Aeon_icon_sub2_antinavy {
+.icon-Aeon_icon_sub1_antinavy {
   background-image: url(../img/strategic.png);
   background-position: -153px -68px;
   width: 17px;
   height: 17px;
 }
-.icon-Aeon_icon_sub3_missile {
+.icon-Aeon_icon_sub2_antinavy {
   background-image: url(../img/strategic.png);
   background-position: -153px -85px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_bomber1_directfire {
+.icon-Aeon_icon_sub3_missile {
   background-image: url(../img/strategic.png);
   background-position: -153px -102px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_bomber2_antinavy {
+.icon-Cybran_icon_bomber1_directfire {
   background-image: url(../img/strategic.png);
   background-position: -153px -119px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_bomber3_directfire {
+.icon-Cybran_icon_bomber2_antinavy {
   background-image: url(../img/strategic.png);
   background-position: -153px -136px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_bot1_directfire {
+.icon-Cybran_icon_bomber3_directfire {
   background-image: url(../img/strategic.png);
   background-position: 0px -153px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_bot2_directfire {
+.icon-Cybran_icon_bot1_directfire {
   background-image: url(../img/strategic.png);
   background-position: -17px -153px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_bot3_antiair {
+.icon-Cybran_icon_bot2_directfire {
   background-image: url(../img/strategic.png);
   background-position: -34px -153px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_bot3_armored {
+.icon-Cybran_icon_bot3_antiair {
   background-image: url(../img/strategic.png);
   background-position: -51px -153px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_bot3_directfire {
+.icon-Cybran_icon_bot3_armored {
   background-image: url(../img/strategic.png);
   background-position: -68px -153px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_commander_generic {
+.icon-Cybran_icon_bot3_directfire {
   background-image: url(../img/strategic.png);
   background-position: -85px -153px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_experimental_generic {
+.icon-Cybran_icon_commander_generic {
   background-image: url(../img/strategic.png);
   background-position: -102px -153px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_factory1_air {
+.icon-Cybran_icon_experimental_generic {
   background-image: url(../img/strategic.png);
   background-position: -119px -153px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_factory1_land {
+.icon-Cybran_icon_factory1_air {
   background-image: url(../img/strategic.png);
   background-position: -136px -153px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_factory1_naval {
+.icon-Cybran_icon_factory1_land {
   background-image: url(../img/strategic.png);
   background-position: -153px -153px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_factory2_air {
+.icon-Cybran_icon_factory1_naval {
   background-image: url(../img/strategic.png);
   background-position: -170px 0px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_factory2_land {
+.icon-Cybran_icon_factory2_air {
   background-image: url(../img/strategic.png);
   background-position: -170px -17px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_factory2_naval {
+.icon-Cybran_icon_factory2_land {
   background-image: url(../img/strategic.png);
   background-position: -170px -34px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_factory3_air {
+.icon-Cybran_icon_factory2_naval {
   background-image: url(../img/strategic.png);
   background-position: -170px -51px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_factory3_land {
+.icon-Cybran_icon_factory3_air {
   background-image: url(../img/strategic.png);
   background-position: -170px -68px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_factory3_naval {
+.icon-Cybran_icon_factory3_land {
   background-image: url(../img/strategic.png);
   background-position: -170px -85px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_factoryhq2_air {
+.icon-Cybran_icon_factory3_naval {
   background-image: url(../img/strategic.png);
   background-position: -170px -102px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_factoryhq2_land {
+.icon-Cybran_icon_factoryhq2_air {
   background-image: url(../img/strategic.png);
   background-position: -170px -119px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_factoryhq2_naval {
+.icon-Cybran_icon_factoryhq2_land {
   background-image: url(../img/strategic.png);
   background-position: -170px -136px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_factoryhq3_air {
+.icon-Cybran_icon_factoryhq2_naval {
   background-image: url(../img/strategic.png);
   background-position: -170px -153px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_factoryhq3_land {
+.icon-Cybran_icon_factoryhq3_air {
   background-image: url(../img/strategic.png);
   background-position: 0px -170px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_factoryhq3_naval {
+.icon-Cybran_icon_factoryhq3_land {
   background-image: url(../img/strategic.png);
   background-position: -17px -170px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_fighter1_antiair {
+.icon-Cybran_icon_factoryhq3_naval {
   background-image: url(../img/strategic.png);
   background-position: -34px -170px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_fighter1_intel {
+.icon-Cybran_icon_fighter1_antiair {
   background-image: url(../img/strategic.png);
   background-position: -51px -170px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_fighter2_directfire {
+.icon-Cybran_icon_fighter1_intel {
   background-image: url(../img/strategic.png);
   background-position: -68px -170px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_fighter3_antiair {
+.icon-Cybran_icon_fighter2_directfire {
   background-image: url(../img/strategic.png);
   background-position: -85px -170px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_fighter3_intel {
+.icon-Cybran_icon_fighter3_antiair {
   background-image: url(../img/strategic.png);
   background-position: -102px -170px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_gunship1_directfire {
+.icon-Cybran_icon_fighter3_intel {
   background-image: url(../img/strategic.png);
   background-position: -119px -170px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_gunship1_transport {
+.icon-Cybran_icon_gunship1_directfire {
   background-image: url(../img/strategic.png);
   background-position: -136px -170px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_gunship2_directfire {
+.icon-Cybran_icon_gunship1_transport {
   background-image: url(../img/strategic.png);
   background-position: -153px -170px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_gunship2_transport {
+.icon-Cybran_icon_gunship2_directfire {
   background-image: url(../img/strategic.png);
   background-position: -170px -170px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_gunship3_directfire {
+.icon-Cybran_icon_gunship2_transport {
   background-image: url(../img/strategic.png);
   background-position: -187px 0px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_land1_antiair {
+.icon-Cybran_icon_gunship3_directfire {
   background-image: url(../img/strategic.png);
   background-position: -187px -17px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_land1_artillery {
+.icon-Cybran_icon_land1_antiair {
   background-image: url(../img/strategic.png);
   background-position: -187px -34px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_land1_engineer {
+.icon-Cybran_icon_land1_artillery {
   background-image: url(../img/strategic.png);
   background-position: -187px -51px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_land1_intel {
+.icon-Cybran_icon_land1_engineer {
   background-image: url(../img/strategic.png);
   background-position: -187px -68px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_land2_antiair {
+.icon-Cybran_icon_land1_intel {
   background-image: url(../img/strategic.png);
   background-position: -187px -85px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_land2_bomb {
+.icon-Cybran_icon_land2_antiair {
   background-image: url(../img/strategic.png);
   background-position: -187px -102px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_land2_counterintel {
+.icon-Cybran_icon_land2_bomb {
   background-image: url(../img/strategic.png);
   background-position: -187px -119px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_land2_directfire {
+.icon-Cybran_icon_land2_counterintel {
   background-image: url(../img/strategic.png);
   background-position: -187px -136px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_land2_engineer {
+.icon-Cybran_icon_land2_directfire {
   background-image: url(../img/strategic.png);
   background-position: -187px -153px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_land2_missile {
+.icon-Cybran_icon_land2_engineer {
   background-image: url(../img/strategic.png);
   background-position: -187px -170px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_land3_artillery {
+.icon-Cybran_icon_land2_missile {
   background-image: url(../img/strategic.png);
   background-position: 0px -187px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_land3_engineer {
+.icon-Cybran_icon_land3_artillery {
   background-image: url(../img/strategic.png);
   background-position: -17px -187px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_ship1_intel {
+.icon-Cybran_icon_land3_engineer {
   background-image: url(../img/strategic.png);
   background-position: -34px -187px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_ship2_antiair {
+.icon-Cybran_icon_ship1_intel {
   background-image: url(../img/strategic.png);
   background-position: -51px -187px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_ship2_antinavy {
+.icon-Cybran_icon_ship2_antiair {
   background-image: url(../img/strategic.png);
   background-position: -68px -187px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_ship2_counterintel {
+.icon-Cybran_icon_ship2_antinavy {
   background-image: url(../img/strategic.png);
   background-position: -85px -187px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_ship3_air {
+.icon-Cybran_icon_ship2_counterintel {
   background-image: url(../img/strategic.png);
   background-position: -102px -187px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_ship3_directfire {
+.icon-Cybran_icon_ship3_air {
   background-image: url(../img/strategic.png);
   background-position: -119px -187px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_structure1_antiair {
+.icon-Cybran_icon_ship3_directfire {
   background-image: url(../img/strategic.png);
   background-position: -136px -187px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_structure1_antinavy {
+.icon-Cybran_icon_structure1_antiair {
   background-image: url(../img/strategic.png);
   background-position: -153px -187px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_structure1_directfire {
+.icon-Cybran_icon_structure1_antinavy {
   background-image: url(../img/strategic.png);
   background-position: -170px -187px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_structure1_energy {
+.icon-Cybran_icon_structure1_directfire {
   background-image: url(../img/strategic.png);
   background-position: -187px -187px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_structure1_intel {
+.icon-Cybran_icon_structure1_energy {
   background-image: url(../img/strategic.png);
   background-position: -204px 0px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_structure1_mass {
+.icon-Cybran_icon_structure1_intel {
   background-image: url(../img/strategic.png);
   background-position: -204px -17px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_structure2_air {
+.icon-Cybran_icon_structure1_mass {
   background-image: url(../img/strategic.png);
   background-position: -204px -34px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_structure2_antiair {
+.icon-Cybran_icon_structure2_air {
   background-image: url(../img/strategic.png);
   background-position: -204px -51px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_structure2_antimissile {
+.icon-Cybran_icon_structure2_antiair {
   background-image: url(../img/strategic.png);
   background-position: -204px -68px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_structure2_antinavy {
+.icon-Cybran_icon_structure2_antimissile {
   background-image: url(../img/strategic.png);
   background-position: -204px -85px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_structure2_artillery {
+.icon-Cybran_icon_structure2_antinavy {
   background-image: url(../img/strategic.png);
   background-position: -204px -102px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_structure2_counterintel {
+.icon-Cybran_icon_structure2_artillery {
   background-image: url(../img/strategic.png);
   background-position: -204px -119px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_structure2_directfire {
+.icon-Cybran_icon_structure2_counterintel {
   background-image: url(../img/strategic.png);
   background-position: -204px -136px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_structure2_energy {
+.icon-Cybran_icon_structure2_directfire {
   background-image: url(../img/strategic.png);
   background-position: -204px -153px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_structure2_engineer {
+.icon-Cybran_icon_structure2_energy {
   background-image: url(../img/strategic.png);
   background-position: -204px -170px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_structure2_intel {
+.icon-Cybran_icon_structure2_engineer {
   background-image: url(../img/strategic.png);
   background-position: -204px -187px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_structure2_mass {
+.icon-Cybran_icon_structure2_intel {
   background-image: url(../img/strategic.png);
   background-position: 0px -204px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_structure2_missile {
+.icon-Cybran_icon_structure2_mass {
   background-image: url(../img/strategic.png);
   background-position: -17px -204px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_structure2_shield {
+.icon-Cybran_icon_structure2_missile {
   background-image: url(../img/strategic.png);
   background-position: -34px -204px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_structure3_antiair {
+.icon-Cybran_icon_structure2_shield {
   background-image: url(../img/strategic.png);
   background-position: -51px -204px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_structure3_antimissile {
+.icon-Cybran_icon_structure3_antiair {
   background-image: url(../img/strategic.png);
   background-position: -68px -204px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_structure3_antinavy {
+.icon-Cybran_icon_structure3_antimissile {
   background-image: url(../img/strategic.png);
   background-position: -85px -204px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_structure3_artillery {
+.icon-Cybran_icon_structure3_antinavy {
   background-image: url(../img/strategic.png);
   background-position: -102px -204px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_structure3_energy {
+.icon-Cybran_icon_structure3_artillery {
   background-image: url(../img/strategic.png);
   background-position: -119px -204px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_structure3_intel {
+.icon-Cybran_icon_structure3_energy {
   background-image: url(../img/strategic.png);
   background-position: -136px -204px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_structure3_mass {
+.icon-Cybran_icon_structure3_intel {
   background-image: url(../img/strategic.png);
   background-position: -153px -204px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_structure3_missile {
+.icon-Cybran_icon_structure3_mass {
   background-image: url(../img/strategic.png);
   background-position: -170px -204px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_structure3_transport {
+.icon-Cybran_icon_structure3_missile {
   background-image: url(../img/strategic.png);
   background-position: -187px -204px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_structure_energy {
+.icon-Cybran_icon_structure3_transport {
   background-image: url(../img/strategic.png);
   background-position: -204px -204px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_structure_generic {
+.icon-Cybran_icon_structure_energy {
   background-image: url(../img/strategic.png);
   background-position: -221px 0px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_structure_wall {
+.icon-Cybran_icon_structure_generic {
   background-image: url(../img/strategic.png);
   background-position: -221px -17px;
   width: 17px;
   height: 17px;
 }
-.icon-Cybran_icon_sub1_antinavy {
+.icon-Cybran_icon_structure_mass {
   background-image: url(../img/strategic.png);
   background-position: -221px -34px;
+  width: 17px;
+  height: 17px;
+}
+.icon-Cybran_icon_structure_wall {
+  background-image: url(../img/strategic.png);
+  background-position: -221px -51px;
+  width: 17px;
+  height: 17px;
+}
+.icon-Cybran_icon_sub1_antinavy {
+  background-image: url(../img/strategic.png);
+  background-position: -221px -68px;
   width: 17px;
   height: 17px;
 }
@@ -1056,1033 +1068,1045 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-Cybran_icon_sub3_missile {
   background-image: url(../img/strategic.png);
-  background-position: -221px -68px;
+  background-position: -221px -102px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_bomber1_directfire {
   background-image: url(../img/strategic.png);
-  background-position: -221px -85px;
+  background-position: -221px -119px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_bomber2_antinavy {
   background-image: url(../img/strategic.png);
-  background-position: -221px -102px;
+  background-position: -221px -136px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_bomber3_directfire {
   background-image: url(../img/strategic.png);
-  background-position: -221px -119px;
+  background-position: -221px -153px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_bot1_intel {
   background-image: url(../img/strategic.png);
-  background-position: -221px -136px;
+  background-position: -221px -170px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_bot2_directfire {
   background-image: url(../img/strategic.png);
-  background-position: -221px -153px;
+  background-position: -221px -187px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_bot3_sniper {
   background-image: url(../img/strategic.png);
-  background-position: -221px -170px;
+  background-position: -221px -204px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_commander_generic {
   background-image: url(../img/strategic.png);
-  background-position: -221px -187px;
+  background-position: 0px -221px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_experimental_generic {
   background-image: url(../img/strategic.png);
-  background-position: -221px -204px;
+  background-position: -17px -221px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_factory1_air {
   background-image: url(../img/strategic.png);
-  background-position: 0px -221px;
+  background-position: -34px -221px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_factory1_land {
   background-image: url(../img/strategic.png);
-  background-position: -17px -221px;
+  background-position: -51px -221px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_factory1_naval {
   background-image: url(../img/strategic.png);
-  background-position: -34px -221px;
+  background-position: -68px -221px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_factory2_air {
   background-image: url(../img/strategic.png);
-  background-position: -51px -221px;
+  background-position: -85px -221px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_factory2_land {
   background-image: url(../img/strategic.png);
-  background-position: -68px -221px;
+  background-position: -102px -221px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_factory2_naval {
   background-image: url(../img/strategic.png);
-  background-position: -85px -221px;
+  background-position: -119px -221px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_factory3_air {
   background-image: url(../img/strategic.png);
-  background-position: -102px -221px;
+  background-position: -136px -221px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_factory3_land {
   background-image: url(../img/strategic.png);
-  background-position: -119px -221px;
+  background-position: -153px -221px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_factory3_naval {
   background-image: url(../img/strategic.png);
-  background-position: -136px -221px;
+  background-position: -170px -221px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_factoryhq2_air {
   background-image: url(../img/strategic.png);
-  background-position: -153px -221px;
+  background-position: -187px -221px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_factoryhq2_land {
   background-image: url(../img/strategic.png);
-  background-position: -170px -221px;
+  background-position: -204px -221px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_factoryhq2_naval {
   background-image: url(../img/strategic.png);
-  background-position: -187px -221px;
+  background-position: -221px -221px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_factoryhq3_air {
   background-image: url(../img/strategic.png);
-  background-position: -204px -221px;
+  background-position: -238px 0px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_factoryhq3_land {
   background-image: url(../img/strategic.png);
-  background-position: -221px -221px;
+  background-position: -238px -17px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_factoryhq3_naval {
   background-image: url(../img/strategic.png);
-  background-position: -238px 0px;
+  background-position: -238px -34px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_fighter1_antiair {
   background-image: url(../img/strategic.png);
-  background-position: -238px -17px;
+  background-position: -238px -51px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_fighter1_intel {
   background-image: url(../img/strategic.png);
-  background-position: -238px -34px;
+  background-position: -238px -68px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_fighter2_directfire {
   background-image: url(../img/strategic.png);
-  background-position: -238px -51px;
+  background-position: -238px -85px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_fighter3_antiair {
   background-image: url(../img/strategic.png);
-  background-position: -238px -68px;
+  background-position: -238px -102px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_fighter3_intel {
   background-image: url(../img/strategic.png);
-  background-position: -238px -85px;
+  background-position: -238px -119px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_gunship1_transport {
   background-image: url(../img/strategic.png);
-  background-position: -238px -102px;
+  background-position: -238px -136px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_gunship2_directfire {
   background-image: url(../img/strategic.png);
-  background-position: -238px -119px;
+  background-position: -238px -153px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_gunship2_transport {
   background-image: url(../img/strategic.png);
-  background-position: -238px -136px;
+  background-position: -238px -170px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_land1_antiair {
   background-image: url(../img/strategic.png);
-  background-position: -238px -153px;
+  background-position: -238px -187px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_land1_artillery {
   background-image: url(../img/strategic.png);
-  background-position: -238px -170px;
+  background-position: -238px -204px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_land1_directfire {
   background-image: url(../img/strategic.png);
-  background-position: -238px -187px;
+  background-position: -238px -221px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_land1_engineer {
   background-image: url(../img/strategic.png);
-  background-position: -238px -204px;
+  background-position: 0px -238px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_land2_antiair {
   background-image: url(../img/strategic.png);
-  background-position: -238px -221px;
+  background-position: -17px -238px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_land2_directfire {
   background-image: url(../img/strategic.png);
-  background-position: 0px -238px;
+  background-position: -34px -238px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_land2_engineer {
   background-image: url(../img/strategic.png);
-  background-position: -17px -238px;
+  background-position: -51px -238px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_land2_missile {
   background-image: url(../img/strategic.png);
-  background-position: -34px -238px;
+  background-position: -68px -238px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_land3_antiair {
   background-image: url(../img/strategic.png);
-  background-position: -51px -238px;
+  background-position: -85px -238px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_land3_artillery {
   background-image: url(../img/strategic.png);
-  background-position: -68px -238px;
+  background-position: -102px -238px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_land3_directfire {
   background-image: url(../img/strategic.png);
-  background-position: -85px -238px;
+  background-position: -119px -238px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_land3_engineer {
   background-image: url(../img/strategic.png);
-  background-position: -102px -238px;
+  background-position: -136px -238px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_land3_shield {
   background-image: url(../img/strategic.png);
-  background-position: -119px -238px;
+  background-position: -153px -238px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_ship1_intel {
   background-image: url(../img/strategic.png);
-  background-position: -136px -238px;
+  background-position: -170px -238px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_ship2_antiair {
   background-image: url(../img/strategic.png);
-  background-position: -153px -238px;
+  background-position: -187px -238px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_ship2_antinavy {
   background-image: url(../img/strategic.png);
-  background-position: -170px -238px;
+  background-position: -204px -238px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_ship3_air {
   background-image: url(../img/strategic.png);
-  background-position: -187px -238px;
+  background-position: -221px -238px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_ship3_directfire {
   background-image: url(../img/strategic.png);
-  background-position: -204px -238px;
+  background-position: -238px -238px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_structure1_antiair {
   background-image: url(../img/strategic.png);
-  background-position: -221px -238px;
+  background-position: -255px 0px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_structure1_antinavy {
   background-image: url(../img/strategic.png);
-  background-position: -238px -238px;
+  background-position: -255px -17px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_structure1_directfire {
   background-image: url(../img/strategic.png);
-  background-position: -255px 0px;
+  background-position: -255px -34px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_structure1_energy {
   background-image: url(../img/strategic.png);
-  background-position: -255px -17px;
+  background-position: -255px -51px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_structure1_intel {
   background-image: url(../img/strategic.png);
-  background-position: -255px -34px;
+  background-position: -255px -68px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_structure1_mass {
   background-image: url(../img/strategic.png);
-  background-position: -255px -51px;
+  background-position: -255px -85px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_structure2_air {
   background-image: url(../img/strategic.png);
-  background-position: -255px -68px;
+  background-position: -255px -102px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_structure2_antiair {
   background-image: url(../img/strategic.png);
-  background-position: -255px -85px;
+  background-position: -255px -119px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_structure2_antimissile {
   background-image: url(../img/strategic.png);
-  background-position: -255px -102px;
+  background-position: -255px -136px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_structure2_antinavy {
   background-image: url(../img/strategic.png);
-  background-position: -255px -119px;
+  background-position: -255px -153px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_structure2_artillery {
   background-image: url(../img/strategic.png);
-  background-position: -255px -136px;
+  background-position: -255px -170px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_structure2_counterintel {
   background-image: url(../img/strategic.png);
-  background-position: -255px -153px;
+  background-position: -255px -187px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_structure2_directfire {
   background-image: url(../img/strategic.png);
-  background-position: -255px -170px;
+  background-position: -255px -204px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_structure2_energy {
   background-image: url(../img/strategic.png);
-  background-position: -255px -187px;
+  background-position: -255px -221px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_structure2_intel {
   background-image: url(../img/strategic.png);
-  background-position: -255px -204px;
+  background-position: -255px -238px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_structure2_mass {
   background-image: url(../img/strategic.png);
-  background-position: -255px -221px;
+  background-position: 0px -255px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_structure2_missile {
   background-image: url(../img/strategic.png);
-  background-position: -255px -238px;
+  background-position: -17px -255px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_structure2_shield {
   background-image: url(../img/strategic.png);
-  background-position: 0px -255px;
+  background-position: -34px -255px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_structure3_antiair {
   background-image: url(../img/strategic.png);
-  background-position: -17px -255px;
+  background-position: -51px -255px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_structure3_antimissile {
   background-image: url(../img/strategic.png);
-  background-position: -34px -255px;
+  background-position: -68px -255px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_structure3_artillery {
   background-image: url(../img/strategic.png);
-  background-position: -51px -255px;
+  background-position: -85px -255px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_structure3_energy {
   background-image: url(../img/strategic.png);
-  background-position: -68px -255px;
+  background-position: -102px -255px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_structure3_intel {
   background-image: url(../img/strategic.png);
-  background-position: -85px -255px;
+  background-position: -119px -255px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_structure3_mass {
   background-image: url(../img/strategic.png);
-  background-position: -102px -255px;
+  background-position: -136px -255px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_structure3_missile {
   background-image: url(../img/strategic.png);
-  background-position: -119px -255px;
+  background-position: -153px -255px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_structure3_shield {
   background-image: url(../img/strategic.png);
-  background-position: -136px -255px;
+  background-position: -170px -255px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_structure3_transport {
   background-image: url(../img/strategic.png);
-  background-position: -153px -255px;
+  background-position: -187px -255px;
   width: 17px;
   height: 17px;
 }
 .icon-Seraphim_icon_structure_energy {
   background-image: url(../img/strategic.png);
-  background-position: -170px -255px;
-  width: 17px;
-  height: 17px;
-}
-.icon-Seraphim_icon_structure_wall {
-  background-image: url(../img/strategic.png);
-  background-position: -187px -255px;
-  width: 17px;
-  height: 17px;
-}
-.icon-Seraphim_icon_sub1_antinavy {
-  background-image: url(../img/strategic.png);
   background-position: -204px -255px;
   width: 17px;
   height: 17px;
 }
-.icon-Seraphim_icon_sub3_antinavy {
+.icon-Seraphim_icon_structure_mass {
   background-image: url(../img/strategic.png);
   background-position: -221px -255px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_bomber1_directfire {
+.icon-Seraphim_icon_structure_wall {
   background-image: url(../img/strategic.png);
   background-position: -238px -255px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_bomber2_antinavy {
+.icon-Seraphim_icon_sub1_antinavy {
   background-image: url(../img/strategic.png);
   background-position: -255px -255px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_bomber3_directfire {
+.icon-Seraphim_icon_sub3_antinavy {
   background-image: url(../img/strategic.png);
   background-position: -272px 0px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_bot1_directfire {
+.icon-UEF_icon_bomber1_directfire {
   background-image: url(../img/strategic.png);
   background-position: -272px -17px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_bot2_directfire {
+.icon-UEF_icon_bomber2_antinavy {
   background-image: url(../img/strategic.png);
   background-position: -272px -34px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_bot3_armored {
+.icon-UEF_icon_bomber3_directfire {
   background-image: url(../img/strategic.png);
   background-position: -272px -51px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_bot3_directfire {
+.icon-UEF_icon_bot1_directfire {
   background-image: url(../img/strategic.png);
   background-position: -272px -68px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_commander_generic {
+.icon-UEF_icon_bot2_directfire {
   background-image: url(../img/strategic.png);
   background-position: -272px -85px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_experimental_generic {
+.icon-UEF_icon_bot3_armored {
   background-image: url(../img/strategic.png);
   background-position: -272px -102px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_factory1_air {
+.icon-UEF_icon_bot3_directfire {
   background-image: url(../img/strategic.png);
   background-position: -272px -119px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_factory1_land {
+.icon-UEF_icon_commander_generic {
   background-image: url(../img/strategic.png);
   background-position: -272px -136px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_factory1_naval {
+.icon-UEF_icon_experimental_generic {
   background-image: url(../img/strategic.png);
   background-position: -272px -153px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_factory2_air {
+.icon-UEF_icon_factory1_air {
   background-image: url(../img/strategic.png);
   background-position: -272px -170px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_factory2_land {
+.icon-UEF_icon_factory1_land {
   background-image: url(../img/strategic.png);
   background-position: -272px -187px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_factory2_naval {
+.icon-UEF_icon_factory1_naval {
   background-image: url(../img/strategic.png);
   background-position: -272px -204px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_factory3_air {
+.icon-UEF_icon_factory2_air {
   background-image: url(../img/strategic.png);
   background-position: -272px -221px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_factory3_land {
+.icon-UEF_icon_factory2_land {
   background-image: url(../img/strategic.png);
   background-position: -272px -238px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_factory3_naval {
+.icon-UEF_icon_factory2_naval {
   background-image: url(../img/strategic.png);
   background-position: -272px -255px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_factoryhq2_air {
+.icon-UEF_icon_factory3_air {
   background-image: url(../img/strategic.png);
   background-position: 0px -272px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_factoryhq2_land {
+.icon-UEF_icon_factory3_land {
   background-image: url(../img/strategic.png);
   background-position: -17px -272px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_factoryhq2_naval {
+.icon-UEF_icon_factory3_naval {
   background-image: url(../img/strategic.png);
   background-position: -34px -272px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_factoryhq3_air {
+.icon-UEF_icon_factoryhq2_air {
   background-image: url(../img/strategic.png);
   background-position: -51px -272px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_factoryhq3_land {
+.icon-UEF_icon_factoryhq2_land {
   background-image: url(../img/strategic.png);
   background-position: -68px -272px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_factoryhq3_naval {
+.icon-UEF_icon_factoryhq2_naval {
   background-image: url(../img/strategic.png);
   background-position: -85px -272px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_fighter1_antiair {
+.icon-UEF_icon_factoryhq3_air {
   background-image: url(../img/strategic.png);
   background-position: -102px -272px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_fighter1_intel {
+.icon-UEF_icon_factoryhq3_land {
   background-image: url(../img/strategic.png);
   background-position: -119px -272px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_fighter2_directfire {
+.icon-UEF_icon_factoryhq3_naval {
   background-image: url(../img/strategic.png);
   background-position: -136px -272px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_fighter3_antiair {
+.icon-UEF_icon_fighter1_antiair {
   background-image: url(../img/strategic.png);
   background-position: -153px -272px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_fighter3_intel {
+.icon-UEF_icon_fighter1_intel {
   background-image: url(../img/strategic.png);
   background-position: -170px -272px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_gunship1_transport {
+.icon-UEF_icon_fighter2_directfire {
   background-image: url(../img/strategic.png);
   background-position: -187px -272px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_gunship2_directfire {
+.icon-UEF_icon_fighter3_antiair {
   background-image: url(../img/strategic.png);
   background-position: -204px -272px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_gunship2_transport {
+.icon-UEF_icon_fighter3_intel {
   background-image: url(../img/strategic.png);
   background-position: -221px -272px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_gunship3_directfire {
+.icon-UEF_icon_gunship1_transport {
   background-image: url(../img/strategic.png);
   background-position: -238px -272px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_gunship3_transport {
+.icon-UEF_icon_gunship2_directfire {
   background-image: url(../img/strategic.png);
   background-position: -255px -272px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_land1_antiair {
+.icon-UEF_icon_gunship2_transport {
   background-image: url(../img/strategic.png);
   background-position: -272px -272px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_land1_artillery {
+.icon-UEF_icon_gunship3_directfire {
   background-image: url(../img/strategic.png);
   background-position: -289px 0px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_land1_directfire {
+.icon-UEF_icon_gunship3_transport {
   background-image: url(../img/strategic.png);
   background-position: -289px -17px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_land1_engineer {
+.icon-UEF_icon_land1_antiair {
   background-image: url(../img/strategic.png);
   background-position: -289px -34px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_land1_intel {
+.icon-UEF_icon_land1_artillery {
   background-image: url(../img/strategic.png);
   background-position: -289px -51px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_land2_antiair {
+.icon-UEF_icon_land1_directfire {
   background-image: url(../img/strategic.png);
   background-position: -289px -68px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_land2_directfire {
+.icon-UEF_icon_land1_engineer {
   background-image: url(../img/strategic.png);
   background-position: -289px -85px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_land2_engineer {
+.icon-UEF_icon_land1_intel {
   background-image: url(../img/strategic.png);
   background-position: -289px -102px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_land2_missile {
+.icon-UEF_icon_land2_antiair {
   background-image: url(../img/strategic.png);
   background-position: -289px -119px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_land2_shield {
+.icon-UEF_icon_land2_directfire {
   background-image: url(../img/strategic.png);
   background-position: -289px -136px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_land3_antiair {
+.icon-UEF_icon_land2_engineer {
   background-image: url(../img/strategic.png);
   background-position: -289px -153px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_land3_artillery {
+.icon-UEF_icon_land2_missile {
   background-image: url(../img/strategic.png);
   background-position: -289px -170px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_land3_engineer {
+.icon-UEF_icon_land2_shield {
   background-image: url(../img/strategic.png);
   background-position: -289px -187px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_land3_missile {
+.icon-UEF_icon_land3_antiair {
   background-image: url(../img/strategic.png);
   background-position: -289px -204px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_ship1_intel {
+.icon-UEF_icon_land3_artillery {
   background-image: url(../img/strategic.png);
   background-position: -289px -221px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_ship2_antiair {
+.icon-UEF_icon_land3_engineer {
   background-image: url(../img/strategic.png);
   background-position: -289px -238px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_ship2_antinavy {
+.icon-UEF_icon_land3_missile {
   background-image: url(../img/strategic.png);
   background-position: -289px -255px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_ship2_directfire {
+.icon-UEF_icon_ship1_intel {
   background-image: url(../img/strategic.png);
   background-position: -289px -272px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_ship2_shield {
+.icon-UEF_icon_ship2_antiair {
   background-image: url(../img/strategic.png);
   background-position: 0px -289px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_ship3_antinavy {
+.icon-UEF_icon_ship2_antinavy {
   background-image: url(../img/strategic.png);
   background-position: -17px -289px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_ship3_directfire {
+.icon-UEF_icon_ship2_directfire {
   background-image: url(../img/strategic.png);
   background-position: -34px -289px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_structure1_antiair {
+.icon-UEF_icon_ship2_shield {
   background-image: url(../img/strategic.png);
   background-position: -51px -289px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_structure1_antinavy {
+.icon-UEF_icon_ship3_antinavy {
   background-image: url(../img/strategic.png);
   background-position: -68px -289px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_structure1_directfire {
+.icon-UEF_icon_ship3_directfire {
   background-image: url(../img/strategic.png);
   background-position: -85px -289px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_structure1_energy {
+.icon-UEF_icon_structure1_antiair {
   background-image: url(../img/strategic.png);
   background-position: -102px -289px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_structure1_engineer {
+.icon-UEF_icon_structure1_antinavy {
   background-image: url(../img/strategic.png);
   background-position: -119px -289px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_structure1_intel {
+.icon-UEF_icon_structure1_directfire {
   background-image: url(../img/strategic.png);
   background-position: -136px -289px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_structure1_mass {
+.icon-UEF_icon_structure1_energy {
   background-image: url(../img/strategic.png);
   background-position: -153px -289px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_structure2_air {
+.icon-UEF_icon_structure1_engineer {
   background-image: url(../img/strategic.png);
   background-position: -170px -289px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_structure2_antiair {
+.icon-UEF_icon_structure1_intel {
   background-image: url(../img/strategic.png);
   background-position: -187px -289px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_structure2_antimissile {
+.icon-UEF_icon_structure1_mass {
   background-image: url(../img/strategic.png);
   background-position: -204px -289px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_structure2_antinavy {
+.icon-UEF_icon_structure2_air {
   background-image: url(../img/strategic.png);
   background-position: -221px -289px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_structure2_artillery {
+.icon-UEF_icon_structure2_antiair {
   background-image: url(../img/strategic.png);
   background-position: -238px -289px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_structure2_counterintel {
+.icon-UEF_icon_structure2_antimissile {
   background-image: url(../img/strategic.png);
   background-position: -255px -289px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_structure2_directfire {
+.icon-UEF_icon_structure2_antinavy {
   background-image: url(../img/strategic.png);
   background-position: -272px -289px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_structure2_energy {
+.icon-UEF_icon_structure2_artillery {
   background-image: url(../img/strategic.png);
   background-position: -289px -289px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_structure2_engineer {
+.icon-UEF_icon_structure2_counterintel {
   background-image: url(../img/strategic.png);
   background-position: -306px 0px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_structure2_intel {
+.icon-UEF_icon_structure2_directfire {
   background-image: url(../img/strategic.png);
   background-position: -306px -17px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_structure2_mass {
+.icon-UEF_icon_structure2_energy {
   background-image: url(../img/strategic.png);
   background-position: -306px -34px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_structure2_missile {
+.icon-UEF_icon_structure2_engineer {
   background-image: url(../img/strategic.png);
   background-position: -306px -51px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_structure2_shield {
+.icon-UEF_icon_structure2_intel {
   background-image: url(../img/strategic.png);
   background-position: -306px -68px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_structure3_antiair {
+.icon-UEF_icon_structure2_mass {
   background-image: url(../img/strategic.png);
   background-position: -306px -85px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_structure3_antimissile {
+.icon-UEF_icon_structure2_missile {
   background-image: url(../img/strategic.png);
   background-position: -306px -102px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_structure3_artillery {
+.icon-UEF_icon_structure2_shield {
   background-image: url(../img/strategic.png);
   background-position: -306px -119px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_structure3_directfire {
+.icon-UEF_icon_structure3_antiair {
   background-image: url(../img/strategic.png);
   background-position: -306px -136px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_structure3_energy {
+.icon-UEF_icon_structure3_antimissile {
   background-image: url(../img/strategic.png);
   background-position: -306px -153px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_structure3_engineer {
+.icon-UEF_icon_structure3_artillery {
   background-image: url(../img/strategic.png);
   background-position: -306px -170px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_structure3_intel {
+.icon-UEF_icon_structure3_directfire {
   background-image: url(../img/strategic.png);
   background-position: -306px -187px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_structure3_mass {
+.icon-UEF_icon_structure3_energy {
   background-image: url(../img/strategic.png);
   background-position: -306px -204px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_structure3_missile {
+.icon-UEF_icon_structure3_engineer {
   background-image: url(../img/strategic.png);
   background-position: -306px -221px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_structure3_shield {
+.icon-UEF_icon_structure3_intel {
   background-image: url(../img/strategic.png);
   background-position: -306px -238px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_structure3_transport {
+.icon-UEF_icon_structure3_mass {
   background-image: url(../img/strategic.png);
   background-position: -306px -255px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_structure_energy {
+.icon-UEF_icon_structure3_missile {
   background-image: url(../img/strategic.png);
   background-position: -306px -272px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_structure_generic {
+.icon-UEF_icon_structure3_shield {
   background-image: url(../img/strategic.png);
   background-position: -306px -289px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_structure_wall {
+.icon-UEF_icon_structure3_transport {
   background-image: url(../img/strategic.png);
   background-position: 0px -306px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_sub1_antinavy {
+.icon-UEF_icon_structure_energy {
   background-image: url(../img/strategic.png);
   background-position: -17px -306px;
   width: 17px;
   height: 17px;
 }
-.icon-UEF_icon_sub3_missile {
+.icon-UEF_icon_structure_generic {
   background-image: url(../img/strategic.png);
   background-position: -34px -306px;
+  width: 17px;
+  height: 17px;
+}
+.icon-UEF_icon_structure_mass {
+  background-image: url(../img/strategic.png);
+  background-position: -51px -306px;
+  width: 17px;
+  height: 17px;
+}
+.icon-UEF_icon_structure_wall {
+  background-image: url(../img/strategic.png);
+  background-position: -68px -306px;
+  width: 17px;
+  height: 17px;
+}
+.icon-UEF_icon_sub1_antinavy {
+  background-image: url(../img/strategic.png);
+  background-position: -85px -306px;
+  width: 17px;
+  height: 17px;
+}
+.icon-UEF_icon_sub3_missile {
+  background-image: url(../img/strategic.png);
+  background-position: -102px -306px;
   width: 17px;
   height: 17px;
 }
