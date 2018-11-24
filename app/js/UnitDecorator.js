@@ -92,7 +92,8 @@ unitDb.UnitDecorator = function(blueprint) {
             'XSB5202': 'T2 Air Staging Facility',
             'XAA0305': 'T3 Anti-Air Gunship',
             'XSB2304': 'T3 Anti-Air SAM Launcher',
-            'XSB3104': 'T3 Omni Sensor Array'
+            'XSB3104': 'T3 Omni Sensor Array',
+            'URB4207': 'T3 Heavy Shield Generator'
         },
         gdiBaseClassificationLookupAndOrder = {
             'Construction - Buildpower': ['T1 Engineer','T2 Engineer','T2 Field Engineer','T3 Engineer','T3 Support Armored Command Unit','Armored Command Unit','ACU Engineering Drone','T1 Engineering Drone','T2 Engineering Station','T3 Engineering Station'],
@@ -107,7 +108,7 @@ unitDb.UnitDecorator = function(blueprint) {
 
             'Structures - Weapons': ['T1 Point Defense','T1 Anti-Air Turret','T1 Torpedo Launcher','T2 Point Defense','T2 Anti-Air Flak Artillery','T2 Torpedo Launcher','T2 Artillery Installation','T2 Tactical Missile Launcher','T2 Tactical Missile Defense','T3 Heavy Point Defense','T3 Anti-Air SAM Launcher','T3 Torpedo Ambushing System','T3 Heavy Artillery Installation','T3 Rapid-Fire Artillery Installation','T3 Strategic Missile Launcher','T3 Strategic Missile Defense'],
 
-            'Structures - Support': ['T1 Wall Section','T2 Air Staging Facility','T2 Shield Generator','T2 Shield Generator: ED2','T2 Shield Generator: ED3','T2 Shield Generator: ED4','T2 Shield Generator: ED5','T3 Heavy Shield Generator'],
+            'Structures - Support': ['T1 Wall Section','T2 Air Staging Facility','T2 Shield Generator','T2 Shield Generator: ED2','T2 Shield Generator: ED3','T3 Shield Generator','T2 Shield Generator: ED4','T2 Shield Generator: ED5','T3 Heavy Shield Generator'],
 
             'Structures - Intelligence': ['T1 Radar System','T1 Sonar System','T2 Radar System','T2 Sonar System','T2 Stealth Field Generator','T3 Omni Sensor Array','T3 Sonar Platform','T3 Perimeter Monitoring System','T3 Quantum Optics Facility'],
 
