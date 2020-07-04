@@ -6,7 +6,7 @@
     </header>
     <form><input id="filter" type="text" placeholder="filter" autofocus ng-model="expr" /></form>
     <p>
-        <a ng-repeat="f in ['UEF', 'Cybran', 'Aeon', 'Seraphim']" title="{{ f }}" ng-click="toggleFaction(f)" ng-class="{active: factionSelected(f)}" class="icon-{{ f }}"></a>
+        <a ng-repeat="f in ['UEF', 'Cybran', 'Aeon', 'Seraphim', 'Nomads']" title="{{ f }}" ng-click="toggleFaction(f)" ng-class="{active: factionSelected(f)}" class="icon-{{ f }}"></a>
     </p>
     <p>
         <a ng-repeat="k in ['Base', 'Land', 'Air', 'Naval']" title="{{ k }}" ng-click="toggleKind(k)" ng-class="{active: kindSelected(k)}" class="icon-{{ k }}"></a>
