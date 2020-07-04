@@ -263,6 +263,8 @@ h1.cybran { background-image: url(../img/SC_Cybran.jpg) }
 h1.aeon { background-image: url(../img/SC_Aeon.jpg) }
 .seraphim { background-color: rgba(241,194,64, .2); /*#f1c240*/ }
 h1.seraphim { background-image: url(../img/SC_Seraphim.jpg) }
+.nomads { background-color: rgba(225,125,35, .2); /*#e17d23*/ }
+h1.nomads { background-image: url(../img/SC_Nomads.jpg) }
 
 .details {
     padding: 5px;
