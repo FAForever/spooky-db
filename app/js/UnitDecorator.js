@@ -33,6 +33,7 @@ unitDb.UnitDecorator = function(blueprint) {
             'Cybran': 1,
             'Aeon': 2,
             'Seraphim': 3,
+            'Nomads': 4,
         },
         gdiClassificationLookup = {
             'XEB0204': 'T2 Engineering Station',
