@@ -94,7 +94,22 @@ UNIT_WHITELIST = set((
     'XSB2305','XSB4302','XSB4301','XSB3104','XSB0304','XSA0402','XSL0401',
     'XSL0001','XSB2401',
     # t3 anti air:
-    'DRLK001', 'DELK002', 'DALK003', 'DSLK004'
+    'DRLK001', 'DELK002', 'DALK003', 'DSLK004',
+    # Nomads units:
+    'XNA0101','XNA0102','XNA0103','XNA0104','XNA0105','XNA0107','XNA0202',
+    'XNA0203','XNA0302','XNA0304','XNA0305','XNA0401','XNB0101','XNB0102',
+    'XNB0103','XNB0201','XNB0202','XNB0203','XNB0301','XNB0302','XNB0303',
+    'XNB0304','XNB1101','XNB1102','XNB1103','XNB1104','XNB1105','XNB1106',
+    'XNB1201','XNB1202','XNB1301','XNB1302','XNB1303','XNB2101','XNB2102',
+    'XNB2109','XNB2202','XNB2207','XNB2208','XNB2301','XNB2302','XNB2303',
+    'XNB2305','XNB3101','XNB3102','XNB3201','XNB3202','XNB3301','XNB3302',
+    'XNB3303','XNB4201','XNB4202','XNB4204','XNB4205','XNB4301','XNB4302',
+    'XNB4305','XNB5101','XNB5202','XNC0001','XNL0001','XNL0101','XNL0103',
+    'XNL0105','XNL0106','XNL0107','XNL0111','XNL0201','XNL0202','XNL0203',
+    'XNL0205','XNL0208','XNL0209','XNL0301','XNL0302','XNL0303','XNL0304',
+    'XNL0305','XNL0306','XNL0309','XNL0402','XNL0403','XNO0001','XNS0102',
+    'XNS0103','XNS0201','XNS0202','XNS0203','XNS0302','XNS0303','XNS0304',
+    'ZNB9501','ZNB9502','ZNB9503','ZNB9601','ZNB9602','ZNB9603'
 ))
 
 
@@ -164,6 +179,7 @@ def sort_unit_list(unit_list, legacy=False):
         'Cybran': 2,
         'Aeon': 3,
         'Seraphim': 4
+        'Nomads': 4
     }
 
     def get_faction_order(unit):
@@ -252,6 +268,7 @@ def sort_unit_list(unit_list, legacy=False):
         FAC_CYBRAN = 'Cybran'
         FAC_AEON = 'Aeon'
         FAC_SERAPHIM = 'Seraphim'
+        FAC_NOMADS = 'Nomads'
 
         def tech_key(val):
             return {
@@ -280,6 +297,7 @@ def sort_unit_list(unit_list, legacy=False):
                 FAC_CYBRAN: 2,
                 FAC_AEON: 3,
                 FAC_SERAPHIM: 4
+                FAC_NOMADS: 4
             }
 
             tech_order = {
