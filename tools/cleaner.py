@@ -297,7 +297,7 @@ def sort_unit_list(unit_list, legacy=False):
                 FAC_CYBRAN: 2,
                 FAC_AEON: 3,
                 FAC_SERAPHIM: 4
-                FAC_NOMADS: 4
+                FAC_NOMADS: 5
             }
 
             tech_order = {
