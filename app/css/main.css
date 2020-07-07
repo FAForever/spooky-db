@@ -170,7 +170,7 @@ footer {
     position: relative;
 }
 .container {
-    min-width: 1300px;
+    min-width: 1625px;
     min-height: 385px;
 }
 .faction {
@@ -311,7 +311,7 @@ h1.nomads { background-image: url(../img/SC_Nomads.jpg) }
 }
 
 /* full mode */
-@media only screen and (min-width: 1479px) {
+@media only screen and (min-width: 1804px) {
     .filters {
         position: fixed;
         top: 0;
@@ -320,10 +320,13 @@ h1.nomads { background-image: url(../img/SC_Nomads.jpg) }
     .filters .count:after {
         content: ' selected';
     }
+    .filters .v2-link {
+        margin-bottom: 0;
+    }
 }
 
 /* filter in single column */
-@media only screen and (max-width: 1478px) {
+@media only screen and (max-width: 1805px) {
     .glow {
         animation: background-glow 1.5s ease-in-out infinite alternate;
     }
@@ -365,10 +368,14 @@ h1.nomads { background-image: url(../img/SC_Nomads.jpg) }
         width: 48px;
         height: 48px;
     }
+    .filters .v2-link {
+        width: 48px;
+        text-align: center;
+    }
 }
 
 /* filter horizontal */
-@media only screen and (max-width: 1373px) {
+@media only screen and (max-width: 1698px) {
     body {
         background-image: none;
         background-size: auto;
@@ -437,6 +444,12 @@ h1.nomads { background-image: url(../img/SC_Nomads.jpg) }
     .filters .view-switcher a {
         float: none;
         display: inline-block;
+    }
+    .filters .v2-link {
+        width: auto;
+        text-align: left;
+        padding-top: 8px;
+        margin-left: 16px!important;
     }
 }
 
