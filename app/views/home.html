@@ -1,6 +1,6 @@
 <div class="container">
     <filters></filters>
-    <section ng-repeat="f in ['UEF', 'Cybran', 'Aeon', 'Seraphim']" class="faction">
+    <section ng-repeat="f in ['UEF', 'Cybran', 'Aeon', 'Seraphim', 'Nomads']" class="faction">
         <h1 class="{{ f|lowercase }}">{{ f }}</h1>
         <div class="kind" ng-repeat="c in ['Build', 'Base', 'Land', 'Air', 'Naval']">
             <thumb ng-repeat="item in index|where:{faction: f, classification: c}|filter:strain|filter:expr"></thumb>

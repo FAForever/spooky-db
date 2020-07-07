@@ -3,6 +3,7 @@ param (
     [string]$faUnitFile = "d:\games\steam\SteamApps\common\Supreme Commander Forged Alliance\gamedata\units.scd",
     [string]$fafFile = "c:\ProgramData\FAForever\gamedata\faforever.faf",
     [string]$fafUnitsFile = "c:\ProgramData\FAForever\gamedata\units.nx2",
+    [string]$nomadsUnitsFile = "c:\ProgramData\FAForever\gamedata\units.nmd",
     [string]$fafLuaFile = "c:\ProgramData\FAForever\gamedata\lua.nx2"
 )
 
@@ -59,6 +60,9 @@ Function Run {
 
     Write-Progress -Activity "Extracting FAF units 2/2"
     7z x "$fafUnitsFile" "units" -o"$tempDir" -y
+
+    Write-Progress -Activity "Extracting Nomads units"
+    7z x "$nomadsUnitsFile" "units" -o"$tempDir" -y
 
     Write-Progress -Activity "Extracting FAF lua"
     7z e "$fafLuaFile" "lua/version.lua" -o"$tempDir" -y

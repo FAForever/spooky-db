@@ -7,7 +7,7 @@
         <div class="gdiBaseCategory" ng-repeat="firstItemOfBaseGroup in index |filter:strain|filter:expr|orderBy:'gdiOrder'|filter:uniqGdiBaseClass">
             <h1 class="gdiBaseCategory" >{{ firstItemOfBaseGroup.gdiBaseClassification }}</h1>
             <section class="gdiCategory" ng-repeat="firstItemOfGroup in index |where:{gdiBaseClassification: firstItemOfBaseGroup.gdiBaseClassification}|filter:strain|filter:expr|orderBy:'gdiOrder'|filter:uniqGdiClass">
-                <div ng-repeat="f in ['UEF', 'Cybran', 'Aeon', 'Seraphim']" class="faction">
+                <div ng-repeat="f in ['UEF', 'Cybran', 'Aeon', 'Seraphim', 'Nomads']" class="faction">
                     <thumb ng-repeat="item in index|where:{faction: f, gdiBaseClassification: firstItemOfBaseGroup.gdiBaseClassification, gdiClassification: firstItemOfGroup.gdiClassification}|filter:strain|filter:expr|orderBy:'id'"></thumb>
                 </div>
                 <h2 class="gdiCategory" ><a ng-click="toggleBpSelectedByGdiClass( firstItemOfGroup.gdiClassification )">{{ firstItemOfGroup.gdiClassification }}</a></h2>
