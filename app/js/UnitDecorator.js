@@ -118,9 +118,9 @@ unitDb.UnitDecorator = function(blueprint) {
             'XAA0305': 'T3 Anti-Air Gunship',
             'XSB2304': 'T3 Anti-Air SAM Launcher',
             'XSB3104': 'T3 Omni Sensor Array',
-            'XNB4202': 'T2 Shield Generator'
-            'URB4207': 'T3 Heavy Shield Generator'
-            'XNB5101': 'T1 Wall Section'
+            'XNB4202': 'T2 Shield Generator',
+            'URB4207': 'T3 Heavy Shield Generator',
+            'XNB5101': 'T1 Wall Section',
         },
 
         
