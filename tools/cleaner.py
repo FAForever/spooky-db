@@ -178,8 +178,8 @@ def sort_unit_list(unit_list, legacy=False):
         'UEF': 1,
         'Cybran': 2,
         'Aeon': 3,
-        'Seraphim': 4
-        'Nomads': 4
+        'Seraphim': 4,
+        'Nomads': 5
     }
 
     def get_faction_order(unit):
@@ -296,7 +296,7 @@ def sort_unit_list(unit_list, legacy=False):
                 FAC_UEF: 1,
                 FAC_CYBRAN: 2,
                 FAC_AEON: 3,
-                FAC_SERAPHIM: 4
+                FAC_SERAPHIM: 4,
                 FAC_NOMADS: 5
             }
 
