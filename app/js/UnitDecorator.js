@@ -119,6 +119,7 @@ unitDb.UnitDecorator = function(blueprint) {
             'XNB4202': 'T2 Shield Generator',
             'URB4207': 'T3 Heavy Shield Generator',
             'XNB5101': 'T1 Wall Section',
+            'XNA0303': 'T3 Air Superiority Fighter'
         },
 
         gdiBaseClassificationLookupAndOrder = {
