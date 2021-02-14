@@ -47,25 +47,25 @@ Function Run {
 
     $tempDir = "C:\Temp\!fafUnits"
 
-    # Write-Progress -Activity "Cleaning unit dir"
-    # If (Test-Path $tempDir) {
-    #     Remove-Item -Recurse -Force $tempDir
-    # }
+    Write-Progress -Activity "Cleaning unit dir"
+    If (Test-Path $tempDir) {
+        Remove-Item -Recurse -Force $tempDir
+    }
 
-    # Write-Progress -Activity "Extracting Forged Alliance units"
-    # 7z x "$faUnitFile" -o"$tempDir"
+    Write-Progress -Activity "Extracting Forged Alliance units"
+    7z x "$faUnitFile" -o"$tempDir"
 
-    # Write-Progress -Activity "Extracting FAF units 1/2"
-    # 7z x "$fafFile" "units" -o"$tempDir" -y
+    Write-Progress -Activity "Extracting FAF units 1/2"
+    7z x "$fafFile" "units" -o"$tempDir" -y
 
-    # Write-Progress -Activity "Extracting FAF units 2/2"
-    # 7z x "$fafUnitsFile" "units" -o"$tempDir" -y
+    Write-Progress -Activity "Extracting FAF units 2/2"
+    7z x "$fafUnitsFile" "units" -o"$tempDir" -y
 
-    # Write-Progress -Activity "Extracting Nomads units"
-    # 7z x "$nomadsUnitsFile" "units" -o"$tempDir" -y
+    Write-Progress -Activity "Extracting Nomads units"
+    7z x "$nomadsUnitsFile" "units" -o"$tempDir" -y
 
-    # Write-Progress -Activity "Extracting FAF lua"
-    # 7z e "$fafLuaFile" "lua/version.lua" -o"$tempDir" -y
+    Write-Progress -Activity "Extracting FAF lua"
+    7z e "$fafLuaFile" "lua/version.lua" -o"$tempDir" -y
 
     Write-Progress -Activity "Creating unit index"
     $json = Create-UnitIndex "$tempDir/units" "$tempDir/version.lua"
