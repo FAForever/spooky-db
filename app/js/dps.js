@@ -108,7 +108,7 @@ unitDb.NotNukeDpsCalculator = angular.extend({}, unitDb.DpsCalculator, {
             return (s.shots * w.Damage * s.dotPulse) / s.cycle;
         }
 
-        var trueReload = Math.max(0.1*Math.floor(10 / w.RateOfFire), 0.1); //the rof is rounded down to the nearest tick since the game runs in ticks. (eg. If the unit's RoF is 0.8 it should shoot every 1.25 second but it shoots every 1.2 second.)
+        var trueReload = Math.max(0.1*Math.floor((10 / w.RateOfFire) + 0.5), 0.1); //the rof is rounded to the nearest tick since the game runs in ticks.
         // some weapons also have separate charge and reload times which results in them firing less often. yeah.
         // in theory if your total MuzzleSalvoDelay is longer than the reload time your weapon waits for the reload time twice, but thats pretty much a bug so not taken into account here
         trueReload = Math.max((w.RackSalvoChargeTime || 0) + (w.RackSalvoReloadTime || 0) + (w.MuzzleSalvoDelay || 0)*((w.MuzzleSalvoSize || 1)-1), trueReload);
