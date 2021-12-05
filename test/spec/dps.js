@@ -333,7 +333,7 @@ describe('dps', function () {
         'dotPulse':1
     };
     var dps = unitDb.dpsCalculator.dps(weapon, stats);
-    expect(dps).toBeCloseTo(15.52);
+    expect(dps).toBeCloseTo(16.07);
   });
 
   it('Wailer (XRA0305) - Disintegrator Pulse Laser', function () {
