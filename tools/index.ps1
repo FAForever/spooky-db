@@ -1,10 +1,17 @@
 param (
-    [string]$target = "d:\code\personal\unitdb\app",
-    [string]$faUnitFile = "d:\games\steam\SteamApps\common\Supreme Commander Forged Alliance\gamedata\units.scd",
-    [string]$fafFile = "c:\ProgramData\FAForever\gamedata\faforever.faf",
-    [string]$fafUnitsFile = "c:\ProgramData\FAForever\gamedata\units.nx2",
-    [string]$nomadsUnitsFile = "c:\ProgramData\FAForever\gamedata\units.nmd",
-    [string]$fafLuaFile = "c:\ProgramData\FAForever\gamedata\lua.nx2"
+    # [string]$target = "d:\code\personal\unitdb\app",
+    # [string]$faUnitFile = "d:\games\steam\SteamApps\common\Supreme Commander Forged Alliance\gamedata\units.scd",
+    # [string]$fafFile = "c:\ProgramData\FAForever\gamedata\faforever.faf",
+    # [string]$fafUnitsFile = "c:\ProgramData\FAForever\gamedata\units.nx2",
+    # [string]$nomadsUnitsFile = "c:\ProgramData\FAForever\gamedata\units.nmd",
+    # [string]$fafLuaFile = "c:\ProgramData\FAForever\gamedata\lua.nx2"
+
+    [string]$target = "C:\Users\Blackrobe\repo\spooky-db\app",
+    [string]$faUnitFile = "C:\Program Files (x86)\Steam\steamapps\common\Supreme Commander Forged Alliance\gamedata\units.scd",
+    [string]$fafFile = "C:\ProgramData\FAForever\gamedata\faforever.faf",
+    [string]$fafUnitsFile = "C:\ProgramData\FAForever\gamedata\units.nx2",
+    [string]$nomadsUnitsFile = "C:\ProgramData\FAForever\gamedata\units.nmd",
+    [string]$fafLuaFile = "C:\ProgramData\FAForever\gamedata\lua.nx2"
 )
 
 Function Create-UnitIndex {
