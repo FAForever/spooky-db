@@ -129,7 +129,7 @@ def load_unit_file(unit_data_path):
     return loaded_file
 
 
-def save_unit_file(unit_file, unit_list, unit_data_path, debug=False):
+def save_unit_file(unit_file, unit_list, unit_data_path, debug=True):
     """
     Uses the JSON module to save unit_file in a json file.
 
