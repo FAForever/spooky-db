@@ -54,5 +54,5 @@ jobs:
 
                   ls -al temp
 
-                  pwsh /tools.index.ps1 -inputUnits "temp/units" -inputLua "temp/Lua"
+                  pwsh /tools/index.ps1 -inputUnits "temp/units" -inputLua "temp/Lua"
 
