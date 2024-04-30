@@ -421,8 +421,6 @@ def find_classification(unit):
             return 'RULEUC_Engineer'
         if "COMMAND" in unit['Categories']:
             return 'RULEUC_Commander'
-        if "COUNTERINTELLIGENCE" in unit['Categories']:
-            return 'RULEUC_CounterMeasure'
         if "LAND" in unit['Categories']: 
             return 'RULEUC_MilitaryVehicle'
         if "NAVAL" in unit['Categories']:
@@ -430,7 +428,9 @@ def find_classification(unit):
         if "SUB" in unit['Categories']:
             return 'RULEUC_MilitarySub'
         if "AIR" in unit['Categories']:
-            return 'RULEUC_MilitarySub'
+            return 'RULEUC_MilitaryAircraft'
+        if "COUNTERINTELLIGENCE" in unit['Categories']:
+            return 'RULEUC_CounterMeasure'
     
     if "STRUCTURE" in unit['Categories']:
         if "ENGINEER" in unit['Categories']:
@@ -445,6 +445,8 @@ def find_classification(unit):
             return 'RULEUC_MilitaryStructure'
         if "ANTIMISSILE" in unit['Categories']:
             return 'RULEUC_MilitaryStructure'
+        if "COUNTERINTELLIGENCE" in unit['Categories']:
+            return 'RULEUC_CounterMeasure'
         if "SHIELD" in unit['Categories']:
             return 'RULEUC_MiscSupport'
         if "RADAR" in unit['Categories']:
