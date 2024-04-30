@@ -1,27 +1,33 @@
 name: Generate blueprint data
 
 on:
-  workflow_dispatch:
+    workflow_dispatch:
 
 jobs:
-  generate:
-    name: Generate
-    runs-on: ubuntu-latest
-    steps:
-      - name: Install Lua
-        uses: leafo/gh-actions-lua@v10
+    generate:
+        name: Generate
+        runs-on: ubuntu-latest
+        steps:
+            - name: Install Lua
+              uses: leafo/gh-actions-lua@v10
 
-      - name: Checkout spooky db code
-        uses: actions/checkout@v4
+            - name: Checkout spooky db code
+              uses: actions/checkout@v4
 
-      - name: Checkout FAForever blueprints and lua files
-        uses: actions/checkout@v4 
-        with:
-          repository: FAForever/fa
-          path: fa
+            - name: Checkout FAForever blueprints and lua files
+              uses: actions/checkout@v4
+              with:
+                  repository: FAForever/fa
+                  path: fa
+                  sparse-checkout: |
+                      '*.bp'
+                      '*.lua'
 
-      - name: Checkout Nomads blueprints and lua files
-        uses: actions/checkout@v4 
-        with:
-            repository: FAForever/nomads
-            path: nomads
+            - name: Checkout Nomads blueprints and lua files
+              uses: actions/checkout@v4
+              with:
+                  repository: FAForever/nomads
+                  path: nomads
+                  sparse-checkout: |
+                      '*.bp'
+                      '*.lua'
