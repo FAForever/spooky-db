@@ -50,7 +50,7 @@ jobs:
             - uses: leafo/gh-actions-luarocks@v4
 
             - name: Install JSON module for Lua
-              run: luarocks install json
+              run: luarocks install lua-json
 
             # Prepare the script context
 
