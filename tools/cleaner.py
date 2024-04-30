@@ -414,17 +414,53 @@ def regroup_weapons(unit):
     unit[u'Weapon'] = new_weapon_field
     return True
 
+def find_classification(unit):
 
+    if "MOBILE" in unit['Categories']:
+        if "ENGINEER" in unit['Categories']:
+            return 'RULEUC_Engineer'
+        if "COMMAND" in unit['Categories']:
+            return 'RULEUC_Commander'
+        if "COUNTERINTELLIGENCE" in unit['Categories']:
+            return 'RULEUC_CounterMeasure'
+        if "LAND" in unit['Categories']: 
+            return 'RULEUC_MilitaryVehicle'
+        if "NAVAL" in unit['Categories']:
+            return 'RULEUC_MilitaryShip'
+        if "SUB" in unit['Categories']:
+            return 'RULEUC_MilitarySub'
+        if "AIR" in unit['Categories']:
+            return 'RULEUC_MilitarySub'
+    
+    if "STRUCTURE" in unit['Categories']:
+        if "ENGINEER" in unit['Categories']:
+            return 'RULEUC_Engineer'
+        if "FACTORY"in unit['Categories']:
+            return "RULEUC_Factory"
+        if "DIRECTFIRE" in unit['Categories']:
+            return 'RULEUC_MilitaryStructure'
+        if "ANTIAIR" in unit['Categories']:
+            return 'RULEUC_MilitaryStructure'
+        if "INDIRECTFIRE" in unit['Categories']:
+            return 'RULEUC_MilitaryStructure'
+        if "ANTIMISSILE" in unit['Categories']:
+            return 'RULEUC_MilitaryStructure'
+        if "SHIELD" in unit['Categories']:
+            return 'RULEUC_MiscSupport'
+        if "RADAR" in unit['Categories']:
+            return 'RULEUC_Sensor'
+        if "OMNI" in unit['Categories']:
+            return 'RULEUC_Sensor'
+        if "SONAR" in unit['Categories']:
+            return 'RULEUC_Sensor'
+        return "RULEUC_Resource"
+        
 def fix_properties(unit_list):
   """
-  This function 'fixes' mistakes in unit properties - these are mostly faf bugs/typos/whatevers that
-  cause problems in the unitdb.
-  Function is separated to that it can be cleaned when these are fixed in faf sources
+  When we cleaned up the blueprint files we thought this field was not used. But here we are - two years later.
   """
   for unit in unit_list:
-    # Give kennels the right classification: https://github.com/FAForever/fa/issues/2300
-    if unit['Id'] in ['XEB0104', 'XEB0204']:
-      unit['General']['Classification'] = 'RULEUC_Engineer'
+      unit['General']['Classification'] = find_classification(unit)
 
 
 def run(app_path):
