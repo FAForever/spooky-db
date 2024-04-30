@@ -8,7 +8,7 @@ param (
 
     [string]$target = "",
     [string]$inputUnits = "",
-    [string]$inputLua = "",
+    [string]$inputLua = ""
 )
 
 Function Create-UnitIndex {
