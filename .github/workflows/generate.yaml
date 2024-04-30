@@ -9,16 +9,6 @@ jobs:
         permissions: write-all
         runs-on: ubuntu-latest
         steps:
-            # - name: Checks and balances
-            #   shell: bash
-            #   run: |
-            #       lua -v
-            #       python -v
-            #       pwsh -v
-            #       git -v
-            #       echo "$(which lua)" >> $GITHUB_PATH
-            #       echo $GITHUB_PATH
-
             - name: Checkout spooky db code
               uses: actions/checkout@v4
               with: # todo: remove when done
@@ -68,6 +58,8 @@ jobs:
                   mv -f nomads/units/* temp/units
                   mv fa/lua/version.lua temp/lua/version.lua
 
+                  ls -asR temp/lua
+
             - name: Run the script
               shell: pwsh
               working-directory: tools  # script expects this directory
@@ -78,6 +70,6 @@ jobs:
             - name: Add the generated file as an artifact
               uses: actions/upload-artifact@v4
               with:
-                name: changelog
+                name: generated-blueprint-information.json
                 path: |
                   app/data/index.json
