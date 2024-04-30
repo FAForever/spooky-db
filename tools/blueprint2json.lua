@@ -52,8 +52,6 @@ end
 
 local blueprint = cmn.readFile(arg[1], readError)
 
-print(blueprint)
-
 -- for some reason, blueprints use different comment
 -- syntax than Lua
 blueprint = blueprint:gsub('#','--')

@@ -6,6 +6,7 @@ on:
 jobs:
     generate:
         name: Generate
+        permissions: write-all
         runs-on: ubuntu-latest
         steps:
             # - name: Checks and balances
@@ -74,9 +75,10 @@ jobs:
 
             - name: Run the script
               shell: pwsh
+              working-directory: tools  # script expects this directory
               run: |
                   lua -v
-                  pwsh ./tools/index.ps1 -target app -inputUnits "temp/units" -inputLua "temp/Lua"
+                  pwsh ./index.ps1 -target ..\app -inputUnits "../temp/units" -inputLua "../temp/Lua"
 
             - name: Add the generated file as an artifact
               uses: actions/upload-artifact@v4

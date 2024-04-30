@@ -18,9 +18,6 @@ function common.readFile(file, errCallback)
         errCallback()
     end
 
-    print(io)
-    print(file)
-
     local handle = io.open(file)
     if not handle then
         error(string.format("Cannot open handle to %s", file))
