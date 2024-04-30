@@ -71,7 +71,8 @@ jobs:
             - name: Debugging
               shell: bash
               run: |
-                ls -asR
+                ls -asR temp
+                ls -asR app
 
             - name: Run the script
               shell: pwsh
