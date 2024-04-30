@@ -11,6 +11,9 @@ jobs:
             - name: Install Lua
               uses: leafo/gh-actions-lua@v10
 
+            - name: Setup PowerShell
+              uses: microsoft/setup-powershell@v1
+
             - name: Checks and balances
               run: |
                   lua -v

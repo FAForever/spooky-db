@@ -11,6 +11,8 @@ param (
     [string]$inputLua = ""
 )
 
+$env:Path -split ';'
+
 Function Create-UnitIndex {
     param (
         [string]$unitDir,
