@@ -53,9 +53,7 @@ Function Create-Version {
 
     $version = lua getVersion.lua "$luaVersionFile"
 
-    echo '{'
-    echo "`"version`": `"$version`""
-    echo '}'
+    echo "{ `"version`": `"$version`" }"
 }
 
 Function Run {
