@@ -8,6 +8,8 @@ jobs:
         name: Generate
         runs-on: windows-latest
         steps:
+            - uses: ilammy/msvc-dev-cmd@v1
+            
             - name: Install Lua
               uses: leafo/gh-actions-lua@v10
 
