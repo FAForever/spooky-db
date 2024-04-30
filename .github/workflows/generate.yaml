@@ -42,8 +42,17 @@ jobs:
                   sparse-checkout: |
                       *.bp
 
+            # Prepare the Lua context
+
             - name: Install Lua
               uses: leafo/gh-actions-lua@v10
+
+            - uses: leafo/gh-actions-luarocks@v4
+
+            - name: Install JSON module for Lua
+              run: luarocks install json
+
+            # Prepare the script context
 
             - name: Prepare for the script
               shell: bash
