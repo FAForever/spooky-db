@@ -7,7 +7,7 @@ on:
                 description: "Update the repository"
                 required: false
                 type: "boolean"
-                default: false
+                default: false  # it is a boolean here...
 
 jobs:
     generate:
@@ -17,8 +17,6 @@ jobs:
         steps:
             - name: Checkout spooky db code
               uses: actions/checkout@v4
-              with: # todo: remove when done
-                  ref: feature/generate-workflow-setup-02 # todo: remove when done
 
             - name: Checkout FAForever blueprints and lua files
               uses: actions/checkout@v4
@@ -81,14 +79,14 @@ jobs:
             # Update the repository
 
             - name: Store the game version
-              id: gameVersionJSON
-              if: ${{ github.event.inputs.update == 'true' }}
+              id: gameVersionJSON # but it is a string here!
+              if: ${{ github.event.inputs.update == 'true' }}   
               working-directory: app/data
               run: |
                   json=`cat ./version.json`
                   echo "json=$json" >> $GITHUB_OUTPUT
 
-            - name: Add the generated file as an artifact
+            - name: Update repository # but it is a string here!
               if: ${{ github.event.inputs.update == 'true' }}
               working-directory: app/data
               run: |
