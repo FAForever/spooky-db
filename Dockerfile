@@ -1,4 +1,4 @@
-FROM base/devel:latest
+FROM archlinux:latest
 
 # fetch dependencies
 RUN pacman --noconfirm -Syu bower cairo giflib graphicsmagick grunt-cli libjpeg-turbo npm
