@@ -11,6 +11,14 @@ jobs:
             - name: Install Lua
               uses: leafo/gh-actions-lua@v10
 
+            - name: Checks and balances
+              run: |
+                  lua --version
+                  python --version
+                  powershell
+                  git --version
+
+
             - name: Checkout spooky db code
               uses: actions/checkout@v4
 
@@ -32,8 +40,3 @@ jobs:
                       '/units/*.bp'
                       '/lua/*.lua'
 
-            - name: Checks and balances
-              run: |
-                  lua --version
-                  python --version
-                  powershell
