@@ -13,10 +13,10 @@ jobs:
 
             - name: Checks and balances
               run: |
-                  lua --version
-                  python --version
+                  lua -v
+                  python -v
                   powershell
-                  git --version
+                  git -v
 
 
             - name: Checkout spooky db code
