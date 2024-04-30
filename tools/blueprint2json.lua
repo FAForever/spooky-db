@@ -1,6 +1,6 @@
 #!/usr/bin/lua
 
-local json = require("json")
+local json = require("dkjson")
 
 local cmn = require("common")
 

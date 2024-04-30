@@ -18,14 +18,21 @@ function common.readFile(file, errCallback)
         errCallback()
     end
 
-    local f = io.open(file):read("*a")
-
-    if f == nil then
-        print(string.format("Cannot read %s", file))
+    local handle = io.open(file)
+    if not handle then
+        error(string.format("Cannot open handle to %s", file))
         os.exit(-1)
+        return
     end
 
-    return f
+    local file = handle:read("*a")
+    if not file then
+        error(string.format("Cannot read %s", file))
+        os.exit(-1)
+        return
+    end
+
+    return file
 end
 
 function common.load(str)

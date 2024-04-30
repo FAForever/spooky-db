@@ -1,27 +1,101 @@
 name: Generate blueprint data
 
 on:
-  workflow_dispatch:
+    workflow_dispatch:
+        inputs:
+            update:
+                description: "Update the repository"
+                required: false
+                type: "boolean"
+                default: false  # it is a boolean here...
 
 jobs:
-  generate:
-    name: Generate
-    runs-on: ubuntu-latest
-    steps:
-      - name: Install Lua
-        uses: leafo/gh-actions-lua@v10
+    generate:
+        name: Generate
+        permissions: write-all
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout spooky db code
+              uses: actions/checkout@v4
 
-      - name: Checkout spooky db code
-        uses: actions/checkout@v4
+            - name: Checkout FAForever blueprints and lua files
+              uses: actions/checkout@v4
+              with:
+                  repository: FAForever/fa
+                  path: fa
+                  sparse-checkout-cone-mode: false
+                  sparse-checkout: |
+                      *.bp
+                      *.lua
 
-      - name: Checkout FAForever blueprints and lua files
-        uses: actions/checkout@v4 
-        with:
-          repository: FAForever/fa
-          path: fa
+            - name: Checkout Nomads blueprints and lua files
+              uses: actions/checkout@v4
+              with:
+                  repository: FAForever/nomads
+                  path: nomads
+                  sparse-checkout-cone-mode: false
+                  sparse-checkout: |
+                      *.bp
 
-      - name: Checkout Nomads blueprints and lua files
-        uses: actions/checkout@v4 
-        with:
-            repository: FAForever/nomads
-            path: nomads
+            # Prepare the Lua context
+
+            - name: Install Lua
+              uses: leafo/gh-actions-lua@v10
+              with:
+                  luaVersion: "5.1.5"
+
+            - uses: leafo/gh-actions-luarocks@v4
+
+            - name: Install JSON module for Lua
+              run: luarocks install dkjson
+
+            # Prepare the script context
+
+            - name: Prepare for the script
+              shell: bash
+              run: |
+                  mkdir tools/temp
+                  mkdir tools/temp/units
+                  mkdir tools/temp/lua
+
+                  mv -f fa/units/* tools/temp/units
+                  mv -f nomads/units/* tools/temp/units
+                  mv fa/lua/version.lua tools/temp/lua/version.lua
+
+            - name: Run the script
+              shell: pwsh
+              working-directory: tools # script expects this directory
+              run: |
+                  lua -v
+                  pwsh ./index.ps1 -target ../app -inputUnits "temp/units" -inputLua "temp/lua"
+
+            - name: Add the generated file as an artifact
+              uses: actions/upload-artifact@v4
+              with:
+                  name: Generated files
+                  path: |
+                      app/data
+
+            # Update the repository
+
+            - name: Store the game version
+              id: gameVersionJSON # but it is a string here!
+              if: ${{ github.event.inputs.update == 'true' }}   
+              working-directory: app/data
+              run: |
+                  json=`cat ./version.json`
+                  echo "json=$json" >> $GITHUB_OUTPUT
+
+            - name: Update repository # but it is a string here!
+              if: ${{ github.event.inputs.update == 'true' }}
+              working-directory: app/data
+              run: |
+                  git config user.email "administrator@faforever.com"
+                  git config user.name "FAForever"
+
+                  git stage .
+                  git commit -m "Update generated data to game version ${{ fromJson(steps.gameVersionJSON.outputs.json).version}}"
+                  git push origin HEAD:master
+
+                  git tag "${{ fromJson(steps.gameVersionJSON.outputs.json).version}}"
+                  git tag push
