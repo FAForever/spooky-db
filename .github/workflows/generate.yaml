@@ -17,7 +17,8 @@ jobs:
                   python -v
                   pwsh -v
                   git -v
-                  which lua
+                  echo "$(which lua)" >> $GITHUB_PATH 
+                  echo $GITHUB_PATH 
 
             - name: Checkout spooky db code
               uses: actions/checkout@v4
