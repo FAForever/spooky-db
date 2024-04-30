@@ -27,15 +27,17 @@ jobs:
               with:
                   repository: FAForever/fa
                   path: fa
+                  sparse-checkout-cone-mode: false
                   sparse-checkout: |
-                      '/units/*
-                      '/lua/*
+                    *.bp
+                    *.lua
 
             - name: Checkout Nomads blueprints and lua files
               uses: actions/checkout@v4
               with:
                   repository: FAForever/nomads
                   path: nomads
+                  sparse-checkout-cone-mode: false
                   sparse-checkout: |
-                      '/units/*
+                    *.bp
 
