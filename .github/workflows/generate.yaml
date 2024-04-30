@@ -8,20 +8,18 @@ jobs:
         name: Generate
         runs-on: ubuntu-latest
         steps:
-            - uses: ilammy/msvc-dev-cmd@v1
-
             - name: Install Lua
               uses: leafo/gh-actions-lua@v10
 
-            - name: Checks and balances
-              shell: bash
-              run: |
-                  lua -v
-                  python -v
-                  pwsh -v
-                  git -v
-                  echo "$(which lua)" >> $GITHUB_PATH 
-                  echo $GITHUB_PATH
+            # - name: Checks and balances
+            #   shell: bash
+            #   run: |
+            #       lua -v
+            #       python -v
+            #       pwsh -v
+            #       git -v
+            #       echo "$(which lua)" >> $GITHUB_PATH 
+            #       echo $GITHUB_PATH
 
             - name: Checkout spooky db code
               uses: actions/checkout@v4
