@@ -18,7 +18,7 @@ jobs:
             #       python -v
             #       pwsh -v
             #       git -v
-            #       echo "$(which lua)" >> $GITHUB_PATH 
+            #       echo "$(which lua)" >> $GITHUB_PATH
             #       echo $GITHUB_PATH
 
             - name: Checkout spooky db code
@@ -48,7 +48,6 @@ jobs:
             - name: Prepare for the script
               shell: bash
               run: |
-                  #!/bin/bash
                   mkdir temp
                   mkdir temp/units
                   mkdir temp/lua
@@ -57,12 +56,6 @@ jobs:
                   mv -f nomads/units/* temp/units
                   mv fa/lua/version.lua temp/lua/version.lua
 
-                  cd tools
-                  ./generate.sh "../temp/units" "../temp/Lua"
-
-            - name: Run the script
-              shell: bash
-              working-directory: tools
-              run: |
                   lua -v
-
+                  cd tools
+              #   ./generate.sh "../temp/units" "../temp/Lua"
