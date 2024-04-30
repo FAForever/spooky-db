@@ -57,7 +57,7 @@ Function Run {
     [System.IO.File]::WriteAllLines("$target\data\index.json" , $json, $Utf8NoBomEncoding)
 
     Write-Progress -Activity "Cleaning"
-    python cleaner.py $target
+    python tools/cleaner.py $target
 
     echo $json
 }

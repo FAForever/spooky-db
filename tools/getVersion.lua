@@ -14,6 +14,10 @@ end
 function LOG(msg)
 end
 
+function GetVersion()
+    return -1
+end
+
 function readError()
     usage("Missing argument")
 end
