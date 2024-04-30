@@ -50,22 +50,22 @@ jobs:
             - name: Prepare for the script
               shell: bash
               run: |
-                  mkdir temp
-                  mkdir temp/units
-                  mkdir temp/lua
+                  mkdir tools/temp
+                  mkdir tools/temp/units
+                  mkdir tools/temp/lua
 
-                  mv -f fa/units/* temp/units
-                  mv -f nomads/units/* temp/units
-                  mv fa/lua/version.lua temp/lua/version.lua
+                  mv -f fa/units/* tools/temp/units
+                  mv -f nomads/units/* tools/temp/units
+                  mv fa/lua/version.lua tools/temp/lua/version.lua
 
-                  ls -asR temp/lua
+                  ls -asR tools/temp/lua
 
             - name: Run the script
               shell: pwsh
               working-directory: tools  # script expects this directory
               run: |
                   lua -v
-                  pwsh ./index.ps1 -target ../app -inputUnits "../temp/units" -inputLua "../temp/Lua"
+                  pwsh ./index.ps1 -target ../app -inputUnits "temp/units" -inputLua "temp/lua"
 
             - name: Add the generated file as an artifact
               uses: actions/upload-artifact@v4
