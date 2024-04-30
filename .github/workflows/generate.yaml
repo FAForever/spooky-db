@@ -60,11 +60,6 @@ jobs:
                   mv fa/lua/version.lua temp/lua/version.lua
 
             - name: Run the script
-              uses: Amadevus/pwsh-script@v2
-              with:
-                  script: ./tools/index.ps1 -inputUnits "../temp/units" -inputLua "../temp/Lua"
-
-            - name: Run the script
               shell: pwsh
               working-directory: tools
               run: |
