@@ -8,9 +8,6 @@ jobs:
         name: Generate
         runs-on: ubuntu-latest
         steps:
-            - name: Install Lua
-              uses: leafo/gh-actions-lua@v10
-
             # - name: Checks and balances
             #   shell: bash
             #   run: |
@@ -44,6 +41,9 @@ jobs:
                   sparse-checkout-cone-mode: false
                   sparse-checkout: |
                       *.bp
+
+            - name: Install Lua
+              uses: leafo/gh-actions-lua@v10
 
             - name: Prepare for the script
               shell: bash
