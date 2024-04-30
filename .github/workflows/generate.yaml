@@ -20,8 +20,8 @@ jobs:
                   repository: FAForever/fa
                   path: fa
                   sparse-checkout: |
-                      '*.bp'
-                      '*.lua'
+                      '/units/*.bp'
+                      '/lua/*.lua'
 
             - name: Checkout Nomads blueprints and lua files
               uses: actions/checkout@v4
@@ -29,5 +29,11 @@ jobs:
                   repository: FAForever/nomads
                   path: nomads
                   sparse-checkout: |
-                      '*.bp'
-                      '*.lua'
+                      '/units/*.bp'
+                      '/lua/*.lua'
+
+            - name: Checks and balances
+              run: |
+                  lua --version
+                  python --version
+                  powershell
