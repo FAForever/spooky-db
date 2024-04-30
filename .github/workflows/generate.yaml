@@ -11,12 +11,12 @@ jobs:
             - name: Install Lua
               uses: leafo/gh-actions-lua@v10
 
-            - name: Checks and balances
-              run: |
-                  lua -v
-                  python -v
-                  pwsh -v
-                  git -v
+            # - name: Checks and balances
+            #   run: |
+            #       lua -v
+            #       python -v
+            #       pwsh -v
+            #       git -v
 
             - name: Checkout spooky db code
               uses: actions/checkout@v4
@@ -48,8 +48,8 @@ jobs:
                   mkdir temp/units
                   mkdir temp/lua
 
-                  mv fa/units temp/units
-                  mv nomads/units temp/units
+                  mv -f fa/units/* temp/units
+                  mv -f nomads/units/* temp/units
                   mv fa/lua/version.lua temp/lua/version.lua
 
                   ls -al temp
