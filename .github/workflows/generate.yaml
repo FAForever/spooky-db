@@ -28,8 +28,8 @@ jobs:
                   repository: FAForever/fa
                   path: fa
                   sparse-checkout: |
-                      '/units/*.bp'
-                      '/lua/*.lua'
+                      '/units/*
+                      '/lua/*
 
             - name: Checkout Nomads blueprints and lua files
               uses: actions/checkout@v4
@@ -37,6 +37,5 @@ jobs:
                   repository: FAForever/nomads
                   path: nomads
                   sparse-checkout: |
-                      '/units/*.bp'
-                      '/lua/*.lua'
+                      '/units/*
 
