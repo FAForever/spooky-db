@@ -6,7 +6,8 @@ on:
             update:
                 description: "Update the repository with the generated data"
                 required: false
-                default: "false"
+                type: "boolean"
+                default: false
 
 jobs:
     generate:
@@ -83,13 +84,13 @@ jobs:
 
             - name: Store the game version
               id: gameVersionJSON
-              if: ${{ github.event.inputs.update == 'true' }}
+              if: ${{ github.event.inputs.update }}
               working-directory: app/data
               run: json=`cat ./version.json`
                   echo "json=$json" >> $GITHUB_OUTPUT
 
             - name: Add the generated file as an artifact
-              if: ${{ github.event.inputs.update == 'true' }}
+              if: ${{ github.event.inputs.update }}
               working-directory: app/data
               run: $content=`cat ./version.json`
 
