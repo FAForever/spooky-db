@@ -62,7 +62,7 @@ Function Run {
     Write-Progress -Activity "Cleaning"
     python cleaner.py $target
 
-    echo $json
+    # echo $json
 }
 
 echo $target
