@@ -31,7 +31,7 @@ import pprint
 from logging import info, error, debug
 
 
-DEFAULT_APP_PATH = 'app'
+DEFAULT_APP_PATH = 'd:/code/personal/html/unitdb/app'  # TODO: remove this string,
 # maybe use the previous folder of current working dir or sys.argv[0] ?
 
 UNIT_WHITELIST = set((

@@ -61,4 +61,4 @@ jobs:
               working-directory: tools
               run: |
                   lua -v
-                  pwsh ./index.ps1 "../temp/units" "../temp/Lua"
+                  pwsh ./index.ps1 -target ../app -inputUnits "../temp/units" -inputLua "../temp/Lua"

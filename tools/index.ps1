@@ -51,13 +51,6 @@ Function Run {
         [string]$target
     )
 
-    $tempDir = "C:\Temp\!fafUnits"
-
-    Write-Progress -Activity "Cleaning unit dir"
-    If (Test-Path $tempDir) {
-        Remove-Item -Recurse -Force $tempDir
-    }
-
     Write-Progress -Activity "Creating unit index"
     $json = Create-UnitIndex "$inputUnits" "$inputLua/version.lua"
     $Utf8NoBomEncoding = New-Object System.Text.UTF8Encoding($False)
