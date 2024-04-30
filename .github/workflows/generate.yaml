@@ -64,8 +64,6 @@ jobs:
                   mv -f nomads/units/* tools/temp/units
                   mv fa/lua/version.lua tools/temp/lua/version.lua
 
-                  ls -asR tools/temp/lua
-
             - name: Run the script
               shell: pwsh
               working-directory: tools # script expects this directory
@@ -84,14 +82,14 @@ jobs:
 
             - name: Store the game version
               id: gameVersionJSON
-              if: ${{ github.event.inputs.update }}
+              if: ${{ github.event.inputs.update == true }}
               working-directory: app/data
               run: |
                   json=`cat ./version.json`
                   echo "json=$json" >> $GITHUB_OUTPUT
 
             - name: Add the generated file as an artifact
-              if: ${{ github.event.inputs.update }}
+              if: ${{ github.event.inputs.update == true }}
               working-directory: app/data
               run: |
                   git config user.email "administrator@faforever.com"
