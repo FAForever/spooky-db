@@ -58,5 +58,5 @@ jobs:
             - name: Run the script
               shell: pwsh
               working-directory: tools
-              run: index -inputUnits "../temp/units" -inputLua "../temp/Lua"
+              run: index.ps1 -inputUnits "../temp/units" -inputLua "../temp/Lua"
 
