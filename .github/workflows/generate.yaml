@@ -56,7 +56,7 @@ jobs:
                   mv -f nomads/units/* temp/units
                   mv fa/lua/version.lua temp/lua/version.lua
 
-            - name: Prepare for the script
+            - name: Run the script
               shell: pwsh
               working-directory: tools
               run: |

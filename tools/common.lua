@@ -18,6 +18,9 @@ function common.readFile(file, errCallback)
         errCallback()
     end
 
+    print(io)
+    print(file)
+
     local f = io.open(file):read("*a")
 
     if f == nil then
