@@ -6,10 +6,10 @@ on:
 jobs:
     generate:
         name: Generate
-        runs-on: windows-latest
+        runs-on: ubuntu-latest
         steps:
             - uses: ilammy/msvc-dev-cmd@v1
-            
+
             - name: Install Lua
               uses: leafo/gh-actions-lua@v10
 
@@ -21,12 +21,12 @@ jobs:
                   pwsh -v
                   git -v
                   echo "$(which lua)" >> $GITHUB_PATH 
-                  echo $GITHUB_PATH 
+                  echo $GITHUB_PATH
 
             - name: Checkout spooky db code
               uses: actions/checkout@v4
-              with:                                         # todo: remove when done
-                ref: feature/generate-workflow-setup-02     # todo: remove when done
+              with: # todo: remove when done
+                  ref: feature/generate-workflow-setup-02 # todo: remove when done
 
             - name: Checkout FAForever blueprints and lua files
               uses: actions/checkout@v4
@@ -60,7 +60,13 @@ jobs:
                   mv fa/lua/version.lua temp/lua/version.lua
 
             - name: Run the script
+              uses: Amadevus/pwsh-script@v2
+              with:
+                  script: ./tools/index.ps1 -inputUnits "../temp/units" -inputLua "../temp/Lua"
+
+            - name: Run the script
               shell: pwsh
               working-directory: tools
-              run: ./index.ps1 -inputUnits "../temp/units" -inputLua "../temp/Lua"
-
+              run: |
+                  lua -v
+                  ./index.ps1 -inputUnits "../temp/units" -inputLua "../temp/Lua"
