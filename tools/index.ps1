@@ -46,22 +46,32 @@ Function Create-UnitIndex {
     echo '}'
 }
 
+Function Create-Version {
+    param (
+        [string]$luaVersionFile
+    )
+
+    $version = lua getVersion.lua "$luaVersionFile"
+
+    echo '{'
+    echo "`"version`": `"$version`","
+    echo '}'
+}
+
 Function Run {
     param (
         [string]$target
     )
 
     Write-Progress -Activity "Creating unit index"
-    $json = Create-UnitIndex "$inputUnits" "$inputLua/version.lua"
-    $Utf8NoBomEncoding = New-Object System.Text.UTF8Encoding($False)
-    Set-Content -Path "$target\data\index.json" -Value $json
-    
-    echo "$target\data\index.json"
+    $jsonVersion = Create-Version "$inputLua/version.lua"
+    $jsonData = Create-UnitIndex "$inputUnits" "$inputLua/version.lua"
+
+    Set-Content -Path "$target\data\version.json" -Value $jsonVersion
+    Set-Content -Path "$target\data\index.json" -Value $jsonData
 
     Write-Progress -Activity "Cleaning"
     python cleaner.py $target
-
-    # echo $json
 }
 
 echo $target
