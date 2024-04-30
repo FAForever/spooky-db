@@ -53,6 +53,7 @@ Function Run {
 
     Write-Progress -Activity "Creating unit index"
     $json = Create-UnitIndex "$inputUnits" "$inputLua/version.lua"
+    echo $json
     $Utf8NoBomEncoding = New-Object System.Text.UTF8Encoding($False)
     [System.IO.File]::WriteAllLines("$target\data\index.json" , $json, $Utf8NoBomEncoding)
 
