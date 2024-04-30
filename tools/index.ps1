@@ -56,7 +56,8 @@ Function Run {
     $Utf8NoBomEncoding = New-Object System.Text.UTF8Encoding($False)
     # [System.IO.File]::WriteAllLines("$target\data\index.json" , $json, $Utf8NoBomEncoding)
     Set-Content -Path "$target\data\index.json" -Value $json
-
+    echo "$target\data\index.json"
+    
     Write-Progress -Activity "Cleaning"
     python cleaner.py $target
 
