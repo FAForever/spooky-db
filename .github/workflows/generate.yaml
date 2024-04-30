@@ -56,6 +56,9 @@ jobs:
                   mv -f nomads/units/* temp/units
                   mv fa/lua/version.lua temp/lua/version.lua
 
+            - name: Prepare for the script
+              shell: pwsh
+              working-directory: tools
+              run: |
                   lua -v
-                  cd tools
-                  ./generate.sh "../temp/units" "../temp/Lua"
+                  pwsh ./index.ps1 "../temp/units" "../temp/Lua"
