@@ -60,4 +60,8 @@ Function Run {
     python cleaner.py $target
 }
 
+echo $target
+echo $inputUnits
+echo $inputLua
+
 Run $target
