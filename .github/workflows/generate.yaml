@@ -44,7 +44,7 @@ jobs:
                   sparse-checkout: |
                       *.bp
 
-            - name: Run the power shell script
+            - name: Prepare for the script
               run: |
                   #!/bin/bash
                   mkdir temp
@@ -55,8 +55,9 @@ jobs:
                   mv -f nomads/units/* temp/units
                   mv fa/lua/version.lua temp/lua/version.lua
 
-                  ls
-
-                  cd tools
-                  pwsh index.ps1 -inputUnits "temp/units" -inputLua "temp/Lua"
+            - name: Run the script
+              shell: pwsh
+              working-directory: tools
+              run: |
+                pwsh index.ps1 -inputUnits "../temp/units" -inputLua "../temp/Lua"
 
