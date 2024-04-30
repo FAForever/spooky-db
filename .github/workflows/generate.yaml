@@ -73,3 +73,10 @@ jobs:
               run: |
                   lua -v
                   pwsh ./index.ps1 -target ../app -inputUnits "../temp/units" -inputLua "../temp/Lua"
+
+            - name: Add the generated file as an artifact
+              uses: actions/upload-artifact@v4
+              with:
+                name: changelog
+                path: |
+                  app/data/index.json
