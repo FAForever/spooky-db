@@ -70,6 +70,6 @@ jobs:
             - name: Add the generated file as an artifact
               uses: actions/upload-artifact@v4
               with:
-                name: generated-blueprint-information.json
+                name: Generated files
                 path: |
-                  app/data/index.json
+                  app/data
