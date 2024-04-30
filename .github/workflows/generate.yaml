@@ -82,14 +82,14 @@ jobs:
 
             - name: Store the game version
               id: gameVersionJSON
-              if: ${{ github.event.inputs.update == true }}
+              if: ${{ github.event.inputs.update == 'true' }}
               working-directory: app/data
               run: |
                   json=`cat ./version.json`
                   echo "json=$json" >> $GITHUB_OUTPUT
 
             - name: Add the generated file as an artifact
-              if: ${{ github.event.inputs.update == true }}
+              if: ${{ github.event.inputs.update == 'true' }}
               working-directory: app/data
               run: |
                   git config user.email "administrator@faforever.com"
