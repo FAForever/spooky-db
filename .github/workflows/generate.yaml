@@ -15,7 +15,7 @@ jobs:
               run: |
                   lua -v
                   python -v
-                  powershell
+                  pwsh -v
                   git -v
 
 
