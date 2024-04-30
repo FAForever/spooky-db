@@ -18,9 +18,10 @@ jobs:
                   pwsh -v
                   git -v
 
-
             - name: Checkout spooky db code
               uses: actions/checkout@v4
+              with:                                         # todo: remove when done
+                ref: feature/generate-workflow-setup-02     # todo: remove when done
 
             - name: Checkout FAForever blueprints and lua files
               uses: actions/checkout@v4
@@ -29,8 +30,8 @@ jobs:
                   path: fa
                   sparse-checkout-cone-mode: false
                   sparse-checkout: |
-                    *.bp
-                    *.lua
+                      *.bp
+                      *.lua
 
             - name: Checkout Nomads blueprints and lua files
               uses: actions/checkout@v4
@@ -39,5 +40,19 @@ jobs:
                   path: nomads
                   sparse-checkout-cone-mode: false
                   sparse-checkout: |
-                    *.bp
+                      *.bp
+
+            - name: Run the power shell script
+              run: |
+                  mkdir temp
+                  mkdir temp/units
+                  mkdir temp/lua
+
+                  mv fa/units temp/units
+                  mv nomads/units temp/units
+                  mv fa/lua/version.lua temp/lua/version.lua
+
+                  ls -al temp
+
+                  pwsh /tools.index.ps1 -inputUnits "temp/units" -inputLua "temp/Lua"
 

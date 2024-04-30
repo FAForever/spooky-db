@@ -6,12 +6,9 @@ param (
     # [string]$nomadsUnitsFile = "c:\ProgramData\FAForever\gamedata\units.nmd",
     # [string]$fafLuaFile = "c:\ProgramData\FAForever\gamedata\lua.nx2"
 
-    [string]$target = "C:\Users\Blackrobe\repo\spooky-db\app",
-    [string]$faUnitFile = "C:\Program Files (x86)\Steam\steamapps\common\Supreme Commander Forged Alliance\gamedata\units.scd",
-    [string]$fafFile = "C:\ProgramData\FAForever\gamedata\faforever.faf",
-    [string]$fafUnitsFile = "C:\ProgramData\FAForever\gamedata\units.nx2",
-    [string]$nomadsUnitsFile = "C:\ProgramData\FAForever\gamedata\units.nmd",
-    [string]$fafLuaFile = "C:\ProgramData\FAForever\gamedata\lua.nx2"
+    [string]$target = "",
+    [string]$inputUnits = "",
+    [string]$inputLua = "",
 )
 
 Function Create-UnitIndex {
@@ -59,23 +56,8 @@ Function Run {
         Remove-Item -Recurse -Force $tempDir
     }
 
-    Write-Progress -Activity "Extracting Forged Alliance units"
-    7z x "$faUnitFile" -o"$tempDir"
-
-    Write-Progress -Activity "Extracting FAF units 1/2"
-    7z x "$fafFile" "units" -o"$tempDir" -y
-
-    Write-Progress -Activity "Extracting FAF units 2/2"
-    7z x "$fafUnitsFile" "units" -o"$tempDir" -y
-
-    Write-Progress -Activity "Extracting Nomads units"
-    7z x "$nomadsUnitsFile" "units" -o"$tempDir" -y
-
-    Write-Progress -Activity "Extracting FAF lua"
-    7z e "$fafLuaFile" "lua/version.lua" -o"$tempDir" -y
-
     Write-Progress -Activity "Creating unit index"
-    $json = Create-UnitIndex "$tempDir/units" "$tempDir/version.lua"
+    $json = Create-UnitIndex "$inputUnits" "$inputLua/version.lua"
     $Utf8NoBomEncoding = New-Object System.Text.UTF8Encoding($False)
     [System.IO.File]::WriteAllLines("$target\data\index.json" , $json, $Utf8NoBomEncoding)
 
