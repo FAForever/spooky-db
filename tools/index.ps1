@@ -54,7 +54,7 @@ Function Create-Version {
     $version = lua getVersion.lua "$luaVersionFile"
 
     echo '{'
-    echo "`"version`": `"$version`","
+    echo "`"version`": `"$version`""
     echo '}'
 }
 
@@ -73,9 +73,5 @@ Function Run {
     Write-Progress -Activity "Cleaning"
     python cleaner.py $target
 }
-
-echo $target
-echo $inputUnits
-echo $inputLua
 
 Run $target

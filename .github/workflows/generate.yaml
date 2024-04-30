@@ -4,7 +4,7 @@ on:
     workflow_dispatch:
         inputs:
             update:
-                description: "Update the repository with the generated data"
+                description: "Update the repository"
                 required: false
                 type: "boolean"
                 default: false
