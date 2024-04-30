@@ -1,6 +1,6 @@
 #!/usr/bin/lua
 
-local json = require("json")
+local json = require("dkjson")
 
 local cmn = require("common")
 
@@ -51,6 +51,8 @@ function readError()
 end
 
 local blueprint = cmn.readFile(arg[1], readError)
+
+print(blueprint)
 
 -- for some reason, blueprints use different comment
 -- syntax than Lua

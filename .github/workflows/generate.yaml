@@ -52,7 +52,7 @@ jobs:
             - uses: leafo/gh-actions-luarocks@v4
 
             - name: Install JSON module for Lua
-              run: luarocks install lua-json
+              run: luarocks install dkjson
 
             # Prepare the script context
 
