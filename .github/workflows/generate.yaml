@@ -44,6 +44,7 @@ jobs:
 
             - name: Run the power shell script
               run: |
+                  #!/bin/bash
                   mkdir temp
                   mkdir temp/units
                   mkdir temp/lua
@@ -52,7 +53,7 @@ jobs:
                   mv -f nomads/units/* temp/units
                   mv fa/lua/version.lua temp/lua/version.lua
 
-                  ls -al temp
+                  ls
 
                   pwsh /tools/index.ps1 -inputUnits "temp/units" -inputLua "temp/Lua"
 
