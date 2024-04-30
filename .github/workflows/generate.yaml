@@ -58,4 +58,4 @@ jobs:
 
                   lua -v
                   cd tools
-              #   ./generate.sh "../temp/units" "../temp/Lua"
+                  ./generate.sh "../temp/units" "../temp/Lua"
