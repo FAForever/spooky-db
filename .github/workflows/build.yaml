@@ -1,0 +1,29 @@
+name: Build
+
+on:
+    workflow_dispatch:
+
+jobs:
+    build:
+        name: Build
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout spooky db code
+              uses: actions/checkout@v4
+
+            - name: Install tooling
+              run: |
+                npm install -g bower grunt-cli
+                bower install
+                npm install
+
+            - name: Build the application
+              run: |
+                grunt build
+
+            - name: Create an artifact
+              uses: actions/upload-artifact@v4
+              with:
+                  name: spookydb-dist
+                  path: |
+                      dist
