@@ -13,8 +13,8 @@ jobs:
 
             - name: Install tooling
               run: |
-                npm install -g bower grunt-cli
-                bower install
+                npm install bower grunt-cli
+                npx bower install
                 npm install
 
             - name: Build the application
