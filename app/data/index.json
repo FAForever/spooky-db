@@ -28,7 +28,8 @@
       "BuildIconSortPriority": 10,
       "General": {
         "FactionName": "UEF",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_Factory"
       },
       "Economy": {
         "BuildTime": 300,
@@ -86,7 +87,8 @@
       "General": {
         "FactionName": "UEF",
         "Icon": "land",
-        "UnitName": "SA1 - 1000"
+        "UnitName": "SA1 - 1000",
+        "Classification": "RULEUC_Sensor"
       },
       "Economy": {
         "BuildTime": 80,
@@ -143,7 +145,8 @@
       "Description": "Engineer",
       "General": {
         "FactionName": "UEF",
-        "Icon": "amph"
+        "Icon": "amph",
+        "Classification": "RULEUC_Engineer"
       },
       "BuildIconSortPriority": 10,
       "Physics": {
@@ -201,7 +204,8 @@
       "General": {
         "UnitName": "Hummingbird",
         "FactionName": "UEF",
-        "Icon": "air"
+        "Icon": "air",
+        "Classification": "RULEUC_MilitaryAircraft"
       },
       "BuildIconSortPriority": 20,
       "Physics": {
@@ -283,7 +287,8 @@
       "BuildIconSortPriority": 20,
       "General": {
         "FactionName": "UEF",
-        "Icon": "air"
+        "Icon": "air",
+        "Classification": "RULEUC_Factory"
       },
       "Economy": {
         "BuildTime": 300,
@@ -341,7 +346,8 @@
       "General": {
         "FactionName": "UEF",
         "Icon": "sea",
-        "UnitName": "SP1 - 1000"
+        "UnitName": "SP1 - 1000",
+        "Classification": "RULEUC_Sensor"
       },
       "Economy": {
         "BuildTime": 125,
@@ -396,7 +402,8 @@
       "General": {
         "UnitName": "Snoop",
         "FactionName": "UEF",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "StrategicIconName": "icon_land1_intel",
       "BuildIconSortPriority": 20,
@@ -503,7 +510,8 @@
       "General": {
         "UnitName": "Tigershark",
         "FactionName": "UEF",
-        "Icon": "sea"
+        "Icon": "sea",
+        "Classification": "RULEUC_MilitaryShip"
       },
       "Physics": {
         "Elevation": -1.5,
@@ -625,7 +633,8 @@
       "General": {
         "UnitName": "Cyclone",
         "FactionName": "UEF",
-        "Icon": "air"
+        "Icon": "air",
+        "Classification": "RULEUC_MilitaryAircraft"
       },
       "Economy": {
         "BuildTime": 500,
@@ -739,7 +748,8 @@
       "Description": "Naval Factory",
       "General": {
         "FactionName": "UEF",
-        "Icon": "sea"
+        "Icon": "sea",
+        "Classification": "RULEUC_Factory"
       },
       "StrategicIconName": "icon_factory1_naval",
       "Physics": {},
@@ -792,7 +802,8 @@
       "General": {
         "UnitName": "Mech Marine",
         "FactionName": "UEF",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "BuildIconSortPriority": 30,
       "Physics": {
@@ -906,7 +917,8 @@
       "General": {
         "FactionName": "UEF",
         "Icon": "sea",
-        "UnitName": "Thunderhead Class"
+        "UnitName": "Thunderhead Class",
+        "Classification": "RULEUC_MilitaryShip"
       },
       "Physics": {
         "TurnRate": 60,
@@ -1033,7 +1045,8 @@
       "General": {
         "UnitName": "Scorcher",
         "FactionName": "UEF",
-        "Icon": "air"
+        "Icon": "air",
+        "Classification": "RULEUC_MilitaryAircraft"
       },
       "BuildIconSortPriority": 40,
       "StrategicIconName": "icon_bomber1_directfire",
@@ -1150,7 +1163,8 @@
       "General": {
         "FactionName": "UEF",
         "Icon": "amph",
-        "UnitName": "Mass Pump 1"
+        "UnitName": "Mass Pump 1",
+        "Classification": "RULEUC_Resource"
       },
       "Defense": {
         "Health": 400,
@@ -1203,7 +1217,8 @@
       "General": {
         "UnitName": "MA12 Striker",
         "FactionName": "UEF",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "Defense": {
         "Health": 300,
@@ -1280,7 +1295,8 @@
       "General": {
         "UnitName": "C-6 Courier",
         "Icon": "air",
-        "FactionName": "UEF"
+        "FactionName": "UEF",
+        "Classification": "RULEUC_MilitaryAircraft"
       },
       "Description": "Light Air Transport",
       "StrategicIconName": "icon_gunship1_transport",
@@ -1369,7 +1385,8 @@
       "General": {
         "UnitName": "Archer",
         "FactionName": "UEF",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "BuildIconSortPriority": 50,
       "Physics": {
@@ -1478,7 +1495,8 @@
       "BuildIconSortPriority": 60,
       "General": {
         "FactionName": "UEF",
-        "Icon": "amph"
+        "Icon": "amph",
+        "Classification": "RULEUC_Resource"
       },
       "Economy": {
         "BuildTime": 250,
@@ -1525,7 +1543,8 @@
       "General": {
         "UnitName": "Lobo",
         "FactionName": "UEF",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "Economy": {
         "BuildTime": 200,
@@ -1623,7 +1642,8 @@
       "Physics": {},
       "General": {
         "FactionName": "UEF",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_Resource"
       },
       "Defense": {
         "Health": 600,
@@ -1674,7 +1694,8 @@
       "General": {
         "UnitName": "HCPP - X1000",
         "Icon": "amph",
-        "FactionName": "UEF"
+        "FactionName": "UEF",
+        "Classification": "RULEUC_Resource"
       },
       "Economy": {
         "BuildTime": 400,
@@ -1732,7 +1753,8 @@
       "Physics": {},
       "General": {
         "FactionName": "UEF",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_Resource"
       },
       "Defense": {
         "Health": 500,
@@ -1794,7 +1816,8 @@
       "Description": "Armored Command Unit",
       "General": {
         "FactionName": "UEF",
-        "Icon": "amph"
+        "Icon": "amph",
+        "Classification": "RULEUC_Engineer"
       },
       "Economy": {
         "StorageMass": 650,
@@ -2183,7 +2206,8 @@
       "General": {
         "UnitName": "DM1 Plasma Cannon",
         "Icon": "land",
-        "FactionName": "UEF"
+        "FactionName": "UEF",
+        "Classification": "RULEUC_MilitaryStructure"
       },
       "Defense": {
         "Health": 1300,
@@ -2273,7 +2297,8 @@
       "General": {
         "UnitName": "DA1 Railgun",
         "Icon": "amph",
-        "FactionName": "UEF"
+        "FactionName": "UEF",
+        "Classification": "RULEUC_MilitaryStructure"
       },
       "Physics": {},
       "Intel": {
@@ -2372,7 +2397,8 @@
       "General": {
         "UnitName": "DN1",
         "Icon": "sea",
-        "FactionName": "UEF"
+        "FactionName": "UEF",
+        "Classification": "RULEUC_Resource"
       },
       "Physics": {},
       "Intel": {
@@ -2466,7 +2492,8 @@
       "General": {
         "FactionName": "UEF",
         "Icon": "land",
-        "UnitName": "Calcicrete"
+        "UnitName": "Calcicrete",
+        "Classification": "RULEUC_Resource"
       },
       "Defense": {
         "RegenRate": 0,
@@ -2516,7 +2543,8 @@
       "General": {
         "FactionName": "UEF",
         "Icon": "land",
-        "UnitName": "Refuel & Repair"
+        "UnitName": "Refuel & Repair",
+        "Classification": "RULEUC_Resource"
       },
       "Defense": {
         "Health": 500,
@@ -2570,7 +2598,8 @@
       "StrategicIconName": "icon_land2_engineer",
       "General": {
         "FactionName": "UEF",
-        "Icon": "amph"
+        "Icon": "amph",
+        "Classification": "RULEUC_Engineer"
       },
       "Physics": {
         "TurnRate": 150,
@@ -2630,7 +2659,8 @@
       "General": {
         "UnitName": "Sparky",
         "FactionName": "UEF",
-        "Icon": "amph"
+        "Icon": "amph",
+        "Classification": "RULEUC_Engineer"
       },
       "Physics": {
         "TurnRate": 160,
@@ -2733,7 +2763,8 @@
       "General": {
         "UnitName": "Janus",
         "FactionName": "UEF",
-        "Icon": "air"
+        "Icon": "air",
+        "Classification": "RULEUC_MilitaryAircraft"
       },
       "BuildIconSortPriority": 18,
       "StrategicIconName": "icon_fighter2_directfire",
@@ -2882,7 +2913,8 @@
       "General": {
         "UnitName": "Mongoose",
         "FactionName": "UEF",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "StrategicIconName": "icon_bot2_directfire",
       "Physics": {
@@ -3005,7 +3037,8 @@
       "General": {
         "UnitName": "Stork",
         "FactionName": "UEF",
-        "Icon": "air"
+        "Icon": "air",
+        "Classification": "RULEUC_MilitaryAircraft"
       },
       "BuildIconSortPriority": 20,
       "StrategicIconName": "icon_bomber2_antinavy",
@@ -3113,7 +3146,8 @@
       "General": {
         "UnitName": "Pillar",
         "FactionName": "UEF",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "BuildIconSortPriority": 20,
       "Physics": {
@@ -3215,7 +3249,8 @@
       "General": {
         "UnitName": "Cooper",
         "FactionName": "UEF",
-        "Icon": "sea"
+        "Icon": "sea",
+        "Classification": "RULEUC_MilitaryShip"
       },
       "Physics": {
         "TurnRate": 100,
@@ -3332,7 +3367,8 @@
       "General": {
         "UnitName": "Riptide",
         "FactionName": "UEF",
-        "Icon": "amph"
+        "Icon": "amph",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "BuildIconSortPriority": 25,
       "Physics": {
@@ -3428,7 +3464,8 @@
       "General": {
         "UnitName": "Stinger",
         "FactionName": "UEF",
-        "Icon": "air"
+        "Icon": "air",
+        "Classification": "RULEUC_MilitaryAircraft"
       },
       "StrategicIconName": "icon_gunship2_directfire",
       "BuildIconSortPriority": 30,
@@ -3553,7 +3590,8 @@
       "General": {
         "UnitName": "Valiant Class",
         "FactionName": "UEF",
-        "Icon": "sea"
+        "Icon": "sea",
+        "Classification": "RULEUC_MilitaryShip"
       },
       "Physics": {
         "TurnRate": 50,
@@ -3822,7 +3860,8 @@
       "General": {
         "UnitName": "Governor Class",
         "FactionName": "UEF",
-        "Icon": "sea"
+        "Icon": "sea",
+        "Classification": "RULEUC_MilitaryShip"
       },
       "Physics": {
         "TurnRate": 40,
@@ -4048,7 +4087,8 @@
       "General": {
         "UnitName": "C14 Star Lifter",
         "Icon": "air",
-        "FactionName": "UEF"
+        "FactionName": "UEF",
+        "Classification": "RULEUC_MilitaryAircraft"
       },
       "Economy": {
         "BuildTime": 2640,
@@ -4199,7 +4239,8 @@
       "General": {
         "UnitName": "Mass Pump 2",
         "Icon": "amph",
-        "FactionName": "UEF"
+        "FactionName": "UEF",
+        "Classification": "RULEUC_Resource"
       },
       "Economy": {
         "BuildTime": 900,
@@ -4256,7 +4297,8 @@
       "BuildIconSortPriority": 50,
       "General": {
         "FactionName": "UEF",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_Factory"
       },
       "Economy": {
         "StorageMass": 160,
@@ -4321,7 +4363,8 @@
       "Physics": {},
       "General": {
         "FactionName": "UEF",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_Resource"
       },
       "Defense": {
         "Health": 360,
@@ -4434,7 +4477,8 @@
       "BuildIconSortPriority": 60,
       "General": {
         "FactionName": "UEF",
-        "Icon": "air"
+        "Icon": "air",
+        "Classification": "RULEUC_Factory"
       },
       "Economy": {
         "StorageMass": 160,
@@ -4489,7 +4533,8 @@
       "General": {
         "FactionName": "UEF",
         "Icon": "sea",
-        "UnitName": "Bulwark"
+        "UnitName": "Bulwark",
+        "Classification": "RULEUC_MilitaryShip"
       },
       "Economy": {
         "BuildTime": 3600,
@@ -4626,7 +4671,8 @@
       "Description": "Naval Factory HQ",
       "General": {
         "FactionName": "UEF",
-        "Icon": "sea"
+        "Icon": "sea",
+        "Classification": "RULEUC_Factory"
       },
       "StrategicIconName": "icon_factoryhq2_naval",
       "Physics": {},
@@ -4683,7 +4729,8 @@
       "General": {
         "UnitName": "EG - 200 Fusion Reactor",
         "Icon": "land",
-        "FactionName": "UEF"
+        "FactionName": "UEF",
+        "Classification": "RULEUC_Resource"
       },
       "Economy": {
         "BuildTime": 2198,
@@ -4802,7 +4849,8 @@
       "General": {
         "UnitName": "Sky Boxer",
         "FactionName": "UEF",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "BuildIconSortPriority": 90,
       "Physics": {
@@ -4915,7 +4963,8 @@
       "General": {
         "UnitName": "Flapjack",
         "FactionName": "UEF",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "StrategicIconName": "icon_land2_missile",
       "BuildIconSortPriority": 100,
@@ -5006,7 +5055,8 @@
       "General": {
         "FactionName": "UEF",
         "Icon": "air",
-        "UnitName": "C-D2 \"Rover-2\""
+        "UnitName": "C-D2 \"Rover-2\"",
+        "Classification": "RULEUC_Engineer"
       },
       "StrategicIconName": "icon_land1_engineer",
       "Description": "Engineering Drone",
@@ -5082,7 +5132,8 @@
       "General": {
         "UnitName": "Triad",
         "Icon": "land",
-        "FactionName": "UEF"
+        "FactionName": "UEF",
+        "Classification": "RULEUC_MilitaryStructure"
       },
       "Economy": {
         "BuildTime": 675,
@@ -5196,7 +5247,8 @@
       "General": {
         "FactionName": "UEF",
         "Icon": "land",
-        "UnitName": "Parashield"
+        "UnitName": "Parashield",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "Display": {
         "Abilities": [
@@ -5256,7 +5308,8 @@
       "General": {
         "UnitName": "Air Cleaner",
         "Icon": "amph",
-        "FactionName": "UEF"
+        "FactionName": "UEF",
+        "Classification": "RULEUC_MilitaryStructure"
       },
       "Physics": {},
       "Intel": {
@@ -5361,7 +5414,8 @@
       "General": {
         "UnitName": "Tsunami",
         "Icon": "sea",
-        "FactionName": "UEF"
+        "FactionName": "UEF",
+        "Classification": "RULEUC_Resource"
       },
       "Physics": {},
       "Intel": {
@@ -5459,7 +5513,8 @@
       "General": {
         "UnitName": "Klink Hammer",
         "Icon": "land",
-        "FactionName": "UEF"
+        "FactionName": "UEF",
+        "Classification": "RULEUC_MilitaryStructure"
       },
       "StrategicIconName": "icon_structure2_artillery",
       "Physics": {},
@@ -5560,7 +5615,8 @@
       "General": {
         "UnitName": "Aloha",
         "Icon": "land",
-        "FactionName": "UEF"
+        "FactionName": "UEF",
+        "Classification": "RULEUC_MilitaryStructure"
       },
       "Physics": {},
       "Defense": {
@@ -5660,7 +5716,8 @@
       "General": {
         "FactionName": "UEF",
         "Icon": "amph",
-        "UnitName": "Buzzkill"
+        "UnitName": "Buzzkill",
+        "Classification": "RULEUC_MilitaryStructure"
       },
       "Economy": {
         "BuildTime": 400,
@@ -5748,7 +5805,8 @@
       "General": {
         "FactionName": "UEF",
         "Icon": "land",
-        "UnitName": "SD - Pulse"
+        "UnitName": "SD - Pulse",
+        "Classification": "RULEUC_MiscSupport"
       },
       "Economy": {
         "BuildTime": 1150,
@@ -5812,7 +5870,8 @@
       "General": {
         "UnitName": "SA2 - 2000",
         "Icon": "land",
-        "FactionName": "UEF"
+        "FactionName": "UEF",
+        "Classification": "RULEUC_Sensor"
       },
       "Economy": {
         "BuildTime": 780,
@@ -5870,7 +5929,8 @@
       "General": {
         "UnitName": "SP2 - 2000",
         "Icon": "sea",
-        "FactionName": "UEF"
+        "FactionName": "UEF",
+        "Classification": "RULEUC_Sensor"
       },
       "Economy": {
         "BuildTime": 780,
@@ -5927,7 +5987,8 @@
       "General": {
         "FactionName": "UEF",
         "Icon": "land",
-        "UnitName": "Scattershield"
+        "UnitName": "Scattershield",
+        "Classification": "RULEUC_CounterMeasure"
       },
       "Economy": {
         "BuildTime": 664,
@@ -5983,7 +6044,7 @@
         "FactionName": "UEF",
         "Icon": "land",
         "UnitName": "The Kennel",
-        "Classification": "RULEUC_Engineer"
+        "Classification": "RULEUC_Resource"
       },
       "Economy": {
         "BuildTime": 1000,
@@ -6140,7 +6201,8 @@
       },
       "General": {
         "FactionName": "UEF",
-        "Icon": "amph"
+        "Icon": "amph",
+        "Classification": "RULEUC_Engineer"
       },
       "Defense": {
         "Health": 16000,
@@ -6271,7 +6333,8 @@
       "StrategicIconName": "icon_land3_engineer",
       "General": {
         "FactionName": "UEF",
-        "Icon": "amph"
+        "Icon": "amph",
+        "Classification": "RULEUC_Engineer"
       },
       "Physics": {
         "TurnRate": 120,
@@ -6331,7 +6394,8 @@
       "General": {
         "UnitName": "Ace",
         "FactionName": "UEF",
-        "Icon": "sea"
+        "Icon": "sea",
+        "Classification": "RULEUC_MilitaryShip"
       },
       "Physics": {
         "Elevation": -2,
@@ -6481,7 +6545,8 @@
       "General": {
         "FactionName": "UEF",
         "Icon": "air",
-        "UnitName": "SR90 Blackbird"
+        "UnitName": "SR90 Blackbird",
+        "Classification": "RULEUC_MilitaryAircraft"
       },
       "StrategicIconName": "icon_fighter3_intel",
       "Description": "Spy Plane",
@@ -6555,7 +6620,8 @@
       "General": {
         "FactionName": "UEF",
         "Icon": "land",
-        "UnitName": "Titan"
+        "UnitName": "Titan",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "Description": "Heavy Assault Bot",
       "BuildIconSortPriority": 20,
@@ -6675,7 +6741,8 @@
       "General": {
         "UnitName": "Summit Class",
         "FactionName": "UEF",
-        "Icon": "sea"
+        "Icon": "sea",
+        "Classification": "RULEUC_MilitaryShip"
       },
       "Physics": {
         "MaxSpeed": 2.75,
@@ -6855,7 +6922,8 @@
       "General": {
         "UnitName": "Neptune Class",
         "FactionName": "UEF",
-        "Icon": "sea"
+        "Icon": "sea",
+        "Classification": "RULEUC_MilitaryShip"
       },
       "Physics": {
         "MaxSpeed": 4.25,
@@ -7041,7 +7109,8 @@
       "General": {
         "UnitName": "Cougar",
         "FactionName": "UEF",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "Physics": {
         "TurnRate": 100,
@@ -7147,7 +7216,8 @@
       "General": {
         "UnitName": "Wasp",
         "FactionName": "UEF",
-        "Icon": "air"
+        "Icon": "air",
+        "Classification": "RULEUC_MilitaryAircraft"
       },
       "BuildIconSortPriority": 30,
       "StrategicIconName": "icon_fighter3_antiair",
@@ -7257,7 +7327,8 @@
       "General": {
         "UnitName": "Demolisher",
         "FactionName": "UEF",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "BuildIconSortPriority": 30,
       "StrategicIconName": "icon_land3_artillery",
@@ -7352,7 +7423,8 @@
       "General": {
         "UnitName": "Percival",
         "FactionName": "UEF",
-        "Icon": "amph"
+        "Icon": "amph",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "StrategicIconName": "icon_bot3_armored",
       "BuildIconSortPriority": 30,
@@ -7447,7 +7519,8 @@
       "General": {
         "UnitName": "Spearhead",
         "FactionName": "UEF",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "BuildIconSortPriority": 30,
       "StrategicIconName": "icon_land3_missile",
@@ -7536,7 +7609,8 @@
       "General": {
         "FactionName": "UEF",
         "Icon": "air",
-        "UnitName": "Ambassador"
+        "UnitName": "Ambassador",
+        "Classification": "RULEUC_MilitaryAircraft"
       },
       "Economy": {
         "BuildTime": 12000,
@@ -7682,7 +7756,8 @@
       "BuildIconSortPriority": 40,
       "General": {
         "FactionName": "UEF",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_Factory"
       },
       "Economy": {
         "StorageMass": 320,
@@ -7732,7 +7807,8 @@
       "General": {
         "FactionName": "UEF",
         "UnitName": "Mass Pump 3",
-        "Icon": "amph"
+        "Icon": "amph",
+        "Classification": "RULEUC_Resource"
       },
       "Economy": {
         "BuildTime": 2875,
@@ -7838,7 +7914,8 @@
       "General": {
         "FactionName": "UEF",
         "Icon": "air",
-        "UnitName": "Broadsword"
+        "UnitName": "Broadsword",
+        "Classification": "RULEUC_MilitaryAircraft"
       },
       "Description": "Heavy Gunship",
       "BuildIconSortPriority": 50,
@@ -7990,7 +8067,8 @@
       "StrategicIconName": "icon_factoryhq3_air",
       "General": {
         "FactionName": "UEF",
-        "Icon": "air"
+        "Icon": "air",
+        "Classification": "RULEUC_Factory"
       },
       "Economy": {
         "StorageMass": 320,
@@ -8041,7 +8119,8 @@
       "StrategicIconName": "icon_structure3_mass",
       "General": {
         "FactionName": "UEF",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_Resource"
       },
       "Economy": {
         "BuildTime": 5000,
@@ -8158,7 +8237,8 @@
       "Description": "Naval Factory HQ",
       "General": {
         "FactionName": "UEF",
-        "Icon": "sea"
+        "Icon": "sea",
+        "Classification": "RULEUC_Factory"
       },
       "StrategicIconName": "icon_factoryhq3_naval",
       "Physics": {},
@@ -8213,7 +8293,8 @@
       "General": {
         "FactionName": "UEF",
         "Icon": "air",
-        "UnitName": "Continental"
+        "UnitName": "Continental",
+        "Classification": "RULEUC_MilitaryAircraft"
       },
       "Economy": {
         "BuildTime": 5250,
@@ -8445,7 +8526,8 @@
       "General": {
         "UnitName": "EG 900 Fusion Reactor",
         "Icon": "land",
-        "FactionName": "UEF"
+        "FactionName": "UEF",
+        "Classification": "RULEUC_Resource"
       },
       "Physics": {},
       "Economy": {
@@ -8500,7 +8582,7 @@
       ],
       "Description": "Engineering Drone",
       "General": {
-        "Classification": "RULEUC_MilitaryAircraft",
+        "Classification": "RULEUC_Engineer",
         "Icon": "air",
         "UnitName": "C-D3 \"Rover-3\"",
         "FactionName": "UEF"
@@ -8576,7 +8658,8 @@
       "General": {
         "UnitName": "Ravager",
         "Icon": "land",
-        "FactionName": "UEF"
+        "FactionName": "UEF",
+        "Classification": "RULEUC_MilitaryStructure"
       },
       "Economy": {
         "BuildTime": 2000,
@@ -8666,7 +8749,8 @@
       "General": {
         "UnitName": "Flayer",
         "Icon": "amph",
-        "FactionName": "UEF"
+        "FactionName": "UEF",
+        "Classification": "RULEUC_MilitaryStructure"
       },
       "Economy": {
         "BuildTime": 1400,
@@ -8771,7 +8855,8 @@
       "General": {
         "UnitName": "Duke",
         "Icon": "land",
-        "FactionName": "UEF"
+        "FactionName": "UEF",
+        "Classification": "RULEUC_MilitaryStructure"
       },
       "BuildIconSortPriority": 140,
       "Intel": {
@@ -8860,7 +8945,8 @@
       "General": {
         "UnitName": "Stonager",
         "Icon": "land",
-        "FactionName": "UEF"
+        "FactionName": "UEF",
+        "Classification": "RULEUC_Resource"
       },
       "Economy": {
         "BuildTime": 25000,
@@ -8969,7 +9055,8 @@
       "General": {
         "FactionName": "UEF",
         "Icon": "land",
-        "UnitName": "Nuke Eliminator"
+        "UnitName": "Nuke Eliminator",
+        "Classification": "RULEUC_MilitaryStructure"
       },
       "Economy": {
         "BuildTime": 5841,
@@ -9047,7 +9134,8 @@
       "General": {
         "FactionName": "UEF",
         "UnitName": "HSD Pulse",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_MiscSupport"
       },
       "Economy": {
         "BuildTime": 5000,
@@ -9118,7 +9206,8 @@
       "General": {
         "FactionName": "UEF",
         "UnitName": "SP3 - 3000",
-        "Icon": "sea"
+        "Icon": "sea",
+        "Classification": "RULEUC_MilitaryShip"
       },
       "Physics": {
         "TurnRate": 100,
@@ -9206,7 +9295,8 @@
       "General": {
         "FactionName": "UEF",
         "UnitName": "SA3 - Omni",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_Sensor"
       },
       "Economy": {
         "BuildTime": 2400,
@@ -9259,7 +9349,7 @@
         "FactionName": "UEF",
         "UnitName": "The Kennel",
         "Icon": "land",
-        "Classification": "RULEUC_Engineer"
+        "Classification": "RULEUC_Resource"
       },
       "BuildIconSortPriority": 200,
       "Physics": {
@@ -9316,7 +9406,8 @@
       "General": {
         "FactionName": "UEF",
         "Icon": "land",
-        "UnitName": "QGW R-32"
+        "UnitName": "QGW R-32",
+        "Classification": "RULEUC_Factory"
       },
       "Economy": {
         "BuildTime": 4097,
@@ -9375,7 +9466,8 @@
       "General": {
         "UnitName": "Fatboy",
         "Icon": "amph",
-        "FactionName": "UEF"
+        "FactionName": "UEF",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "Economy": {
         "BuildTime": 47500,
@@ -9608,7 +9700,8 @@
       "StrategicIconName": "icon_experimental_generic",
       "General": {
         "FactionName": "UEF",
-        "Icon": "air"
+        "Icon": "air",
+        "Classification": "RULEUC_MilitaryAircraft"
       },
       "Economy": {
         "BuildTime": 30000,
@@ -9759,7 +9852,8 @@
       "General": {
         "FactionName": "UEF",
         "Icon": "sea",
-        "UnitName": "Atlantis"
+        "UnitName": "Atlantis",
+        "Classification": "RULEUC_MilitaryShip"
       },
       "Display": {
         "Abilities": [
@@ -9893,7 +9987,8 @@
       "General": {
         "FactionName": "UEF",
         "Icon": "air",
-        "UnitName": "Novax Center"
+        "UnitName": "Novax Center",
+        "Classification": "RULEUC_Factory"
       },
       "Defense": {
         "Health": 9000,
@@ -9946,7 +10041,8 @@
       "General": {
         "UnitName": "Mavor",
         "Icon": "land",
-        "FactionName": "UEF"
+        "FactionName": "UEF",
+        "Classification": "RULEUC_MilitaryStructure"
       },
       "Physics": {},
       "Intel": {
@@ -10034,7 +10130,8 @@
       "BuildIconSortPriority": 10,
       "General": {
         "FactionName": "Cybran",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_Factory"
       },
       "Economy": {
         "StorageMass": 80,
@@ -10090,7 +10187,8 @@
       "Description": "Engineer",
       "General": {
         "FactionName": "Cybran",
-        "Icon": "amph"
+        "Icon": "amph",
+        "Classification": "RULEUC_Engineer"
       },
       "BuildIconSortPriority": 10,
       "Physics": {
@@ -10148,7 +10246,8 @@
       "General": {
         "UnitName": "Flying Eyes",
         "FactionName": "Cybran",
-        "Icon": "air"
+        "Icon": "air",
+        "Classification": "RULEUC_MilitaryAircraft"
       },
       "Description": "Air Scout",
       "StrategicIconName": "icon_fighter1_intel",
@@ -10230,7 +10329,8 @@
       "BuildIconSortPriority": 20,
       "General": {
         "FactionName": "Cybran",
-        "Icon": "air"
+        "Icon": "air",
+        "Classification": "RULEUC_Factory"
       },
       "Economy": {
         "BuildTime": 300,
@@ -10286,7 +10386,8 @@
       "General": {
         "FactionName": "Cybran",
         "Icon": "land",
-        "UnitName": "Mole"
+        "UnitName": "Mole",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "Economy": {
         "BuildTime": 60,
@@ -10349,7 +10450,8 @@
       "General": {
         "UnitName": "Prowler",
         "FactionName": "Cybran",
-        "Icon": "air"
+        "Icon": "air",
+        "Classification": "RULEUC_MilitaryAircraft"
       },
       "BuildIconSortPriority": 30,
       "StrategicIconName": "icon_fighter1_antiair",
@@ -10465,7 +10567,8 @@
       "Description": "Naval Factory",
       "General": {
         "FactionName": "Cybran",
-        "Icon": "sea"
+        "Icon": "sea",
+        "Classification": "RULEUC_Factory"
       },
       "BuildIconSortPriority": 30,
       "Economy": {
@@ -10518,7 +10621,8 @@
       "General": {
         "UnitName": "Hunter",
         "FactionName": "Cybran",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "StrategicIconName": "icon_bot1_directfire",
       "Physics": {
@@ -10621,7 +10725,8 @@
       "General": {
         "UnitName": "Sliver",
         "FactionName": "Cybran",
-        "Icon": "sea"
+        "Icon": "sea",
+        "Classification": "RULEUC_MilitaryShip"
       },
       "Physics": {
         "TurnRate": 80,
@@ -10737,7 +10842,8 @@
       "General": {
         "UnitName": "Zeus",
         "FactionName": "Cybran",
-        "Icon": "air"
+        "Icon": "air",
+        "Classification": "RULEUC_MilitaryAircraft"
       },
       "BuildIconSortPriority": 40,
       "StrategicIconName": "icon_bomber1_directfire",
@@ -10862,7 +10968,8 @@
       },
       "General": {
         "FactionName": "Cybran",
-        "Icon": "amph"
+        "Icon": "amph",
+        "Classification": "RULEUC_Resource"
       },
       "Defense": {
         "Health": 360,
@@ -10903,7 +11010,8 @@
       "General": {
         "FactionName": "Cybran",
         "Icon": "land",
-        "UnitName": "Mantis"
+        "UnitName": "Mantis",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "StrategicIconName": "icon_land1_directfire",
       "Physics": {
@@ -11019,7 +11127,8 @@
       "General": {
         "UnitName": "Trident Class",
         "FactionName": "Cybran",
-        "Icon": "sea"
+        "Icon": "sea",
+        "Classification": "RULEUC_MilitaryShip"
       },
       "Physics": {
         "TurnRate": 60,
@@ -11145,7 +11254,8 @@
       "General": {
         "UnitName": "Jester",
         "FactionName": "Cybran",
-        "Icon": "air"
+        "Icon": "air",
+        "Classification": "RULEUC_MilitaryAircraft"
       },
       "BuildIconSortPriority": 40,
       "Description": "Light Gunship",
@@ -11250,7 +11360,8 @@
       "General": {
         "UnitName": "Skyhook",
         "Icon": "air",
-        "FactionName": "Cybran"
+        "FactionName": "Cybran",
+        "Classification": "RULEUC_MilitaryAircraft"
       },
       "Description": "Light Air Transport",
       "StrategicIconName": "icon_gunship1_transport",
@@ -11340,7 +11451,8 @@
       "General": {
         "UnitName": "Sky Slammer",
         "FactionName": "Cybran",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "StrategicIconName": "icon_land1_antiair",
       "Physics": {
@@ -11470,7 +11582,8 @@
       "BuildIconSortPriority": 60,
       "General": {
         "FactionName": "Cybran",
-        "Icon": "amph"
+        "Icon": "amph",
+        "Classification": "RULEUC_Resource"
       },
       "Economy": {
         "BuildTime": 250,
@@ -11516,7 +11629,8 @@
       "General": {
         "UnitName": "Medusa",
         "FactionName": "Cybran",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "Economy": {
         "BuildTime": 200,
@@ -11614,7 +11728,8 @@
       ],
       "General": {
         "FactionName": "Cybran",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_Resource"
       },
       "BuildIconSortPriority": 70,
       "StrategicIconName": "icon_structure1_energy",
@@ -11675,7 +11790,8 @@
       "BuildIconSortPriority": 80,
       "General": {
         "FactionName": "Cybran",
-        "Icon": "amph"
+        "Icon": "amph",
+        "Classification": "RULEUC_Resource"
       },
       "Economy": {
         "BuildTime": 400,
@@ -11720,7 +11836,8 @@
       ],
       "General": {
         "FactionName": "Cybran",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_Resource"
       },
       "BuildIconSortPriority": 90,
       "StrategicIconName": "icon_structure_energy_storage",
@@ -11902,7 +12019,8 @@
       },
       "General": {
         "FactionName": "Cybran",
-        "Icon": "amph"
+        "Icon": "amph",
+        "Classification": "RULEUC_Engineer"
       },
       "Weapon": [
         {
@@ -12174,7 +12292,8 @@
       "General": {
         "UnitName": "Auto Gun",
         "Icon": "land",
-        "FactionName": "Cybran"
+        "FactionName": "Cybran",
+        "Classification": "RULEUC_MilitaryStructure"
       },
       "Defense": {
         "Health": 1300,
@@ -12264,7 +12383,8 @@
       "General": {
         "UnitName": "Tracer",
         "Icon": "amph",
-        "FactionName": "Cybran"
+        "FactionName": "Cybran",
+        "Classification": "RULEUC_MilitaryStructure"
       },
       "Physics": {},
       "Intel": {
@@ -12363,7 +12483,8 @@
       "General": {
         "UnitName": "Scuttle",
         "Icon": "sea",
-        "FactionName": "Cybran"
+        "FactionName": "Cybran",
+        "Classification": "RULEUC_Resource"
       },
       "Physics": {},
       "Intel": {
@@ -12456,7 +12577,8 @@
       "General": {
         "FactionName": "Cybran",
         "Icon": "land",
-        "UnitName": "Magno"
+        "UnitName": "Magno",
+        "Classification": "RULEUC_Sensor"
       },
       "Economy": {
         "BuildTime": 80,
@@ -12514,7 +12636,8 @@
       "General": {
         "FactionName": "Cybran",
         "Icon": "sea",
-        "UnitName": "Noah"
+        "UnitName": "Noah",
+        "Classification": "RULEUC_Sensor"
       },
       "Economy": {
         "BuildTime": 125,
@@ -12574,7 +12697,8 @@
       },
       "General": {
         "FactionName": "Cybran",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_Resource"
       },
       "Defense": {
         "RegenRate": 0,
@@ -12623,7 +12747,8 @@
       },
       "General": {
         "FactionName": "Cybran",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_Resource"
       },
       "Defense": {
         "Health": 500,
@@ -12677,7 +12802,8 @@
       "StrategicIconName": "icon_land2_engineer",
       "General": {
         "FactionName": "Cybran",
-        "Icon": "amph"
+        "Icon": "amph",
+        "Classification": "RULEUC_Engineer"
       },
       "Physics": {
         "TurnRate": 160,
@@ -12727,7 +12853,8 @@
       "General": {
         "UnitName": "Corsair",
         "FactionName": "Cybran",
-        "Icon": "air"
+        "Icon": "air",
+        "Classification": "RULEUC_MilitaryAircraft"
       },
       "BuildIconSortPriority": 15,
       "StrategicIconName": "icon_fighter2_directfire",
@@ -12878,7 +13005,8 @@
       "General": {
         "UnitName": "Hoplite",
         "FactionName": "Cybran",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "StrategicIconName": "icon_bot2_directfire",
       "Physics": {
@@ -12972,7 +13100,8 @@
       "General": {
         "UnitName": "Cormorant",
         "FactionName": "Cybran",
-        "Icon": "air"
+        "Icon": "air",
+        "Classification": "RULEUC_MilitaryAircraft"
       },
       "BuildIconSortPriority": 20,
       "StrategicIconName": "icon_bomber2_antinavy",
@@ -13083,7 +13212,8 @@
       "General": {
         "UnitName": "Rhino",
         "FactionName": "Cybran",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "Description": "Heavy Tank",
       "BuildIconSortPriority": 20,
@@ -13185,7 +13315,8 @@
       "General": {
         "FactionName": "Cybran",
         "Icon": "sea",
-        "UnitName": "Barracuda"
+        "UnitName": "Barracuda",
+        "Classification": "RULEUC_MilitaryShip"
       },
       "Physics": {
         "TurnRate": 80,
@@ -13304,7 +13435,8 @@
       "General": {
         "UnitName": "Wagner",
         "FactionName": "Cybran",
-        "Icon": "amph"
+        "Icon": "amph",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "StrategicIconName": "icon_land2_directfire",
       "Physics": {
@@ -13480,7 +13612,8 @@
       "General": {
         "FactionName": "Cybran",
         "Icon": "amph",
-        "UnitName": "Salem Class"
+        "UnitName": "Salem Class",
+        "Classification": "RULEUC_MilitaryShip"
       },
       "Physics": {
         "TurnRate": 50,
@@ -13668,7 +13801,8 @@
       "General": {
         "UnitName": "Renegade",
         "FactionName": "Cybran",
-        "Icon": "air"
+        "Icon": "air",
+        "Classification": "RULEUC_MilitaryAircraft"
       },
       "Description": "Gunship",
       "BuildIconSortPriority": 30,
@@ -13774,7 +13908,8 @@
       "General": {
         "UnitName": "Banger",
         "FactionName": "Cybran",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "StrategicIconName": "icon_land2_antiair",
       "Physics": {
@@ -13929,7 +14064,8 @@
       "General": {
         "FactionName": "Cybran",
         "Icon": "sea",
-        "UnitName": "Siren Class"
+        "UnitName": "Siren Class",
+        "Classification": "RULEUC_MilitaryShip"
       },
       "Display": {
         "Abilities": [
@@ -14108,7 +14244,8 @@
       "StrategicIconName": "icon_structure_generic",
       "General": {
         "Icon": "land",
-        "FactionName": "Cybran"
+        "FactionName": "Cybran",
+        "Classification": "RULEUC_Factory"
       },
       "Economy": {
         "BuildTime": 400,
@@ -14159,7 +14296,8 @@
       "General": {
         "UnitName": "Dragon Fly",
         "Icon": "air",
-        "FactionName": "Cybran"
+        "FactionName": "Cybran",
+        "Classification": "RULEUC_MilitaryAircraft"
       },
       "Economy": {
         "BuildTime": 2640,
@@ -14307,7 +14445,8 @@
       "StrategicIconName": "icon_structure2_mass",
       "General": {
         "FactionName": "Cybran",
-        "Icon": "amph"
+        "Icon": "amph",
+        "Classification": "RULEUC_Resource"
       },
       "Economy": {
         "BuildTime": 900,
@@ -14389,7 +14528,8 @@
       "General": {
         "UnitName": "Viper",
         "FactionName": "Cybran",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "Display": {},
       "BuildIconSortPriority": 40,
@@ -14456,7 +14596,8 @@
       "General": {
         "FactionName": "Cybran",
         "Icon": "sea",
-        "UnitName": "CI:18 Mermaid"
+        "UnitName": "CI:18 Mermaid",
+        "Classification": "RULEUC_MilitaryShip"
       },
       "Economy": {
         "BuildTime": 3000,
@@ -14548,7 +14689,8 @@
       "BuildIconSortPriority": 50,
       "General": {
         "FactionName": "Cybran",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_Factory"
       },
       "Economy": {
         "StorageMass": 160,
@@ -14613,7 +14755,8 @@
       "Physics": {},
       "General": {
         "FactionName": "Cybran",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_Resource"
       },
       "Defense": {
         "Health": 360,
@@ -14726,7 +14869,8 @@
       "BuildIconSortPriority": 60,
       "General": {
         "FactionName": "Cybran",
-        "Icon": "air"
+        "Icon": "air",
+        "Classification": "RULEUC_Factory"
       },
       "Economy": {
         "StorageMass": 160,
@@ -14784,7 +14928,8 @@
       "General": {
         "FactionName": "Cybran",
         "Icon": "land",
-        "UnitName": "Deceiver"
+        "UnitName": "Deceiver",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "Economy": {
         "BuildTime": 800,
@@ -14911,7 +15056,8 @@
       "Description": "Naval Factory HQ",
       "General": {
         "FactionName": "Cybran",
-        "Icon": "sea"
+        "Icon": "sea",
+        "Classification": "RULEUC_Factory"
       },
       "BuildIconSortPriority": 70,
       "Economy": {
@@ -14968,7 +15114,8 @@
       "StrategicIconName": "icon_structure2_energy",
       "General": {
         "FactionName": "Cybran",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_Resource"
       },
       "Economy": {
         "BuildTime": 2198,
@@ -15089,7 +15236,8 @@
       "General": {
         "UnitName": "Fire Beetle",
         "Icon": "land",
-        "FactionName": "Cybran"
+        "FactionName": "Cybran",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "Economy": {
         "BuildTime": 550,
@@ -15198,7 +15346,8 @@
       "General": {
         "UnitName": "Cerberus",
         "Icon": "land",
-        "FactionName": "Cybran"
+        "FactionName": "Cybran",
+        "Classification": "RULEUC_MilitaryStructure"
       },
       "Economy": {
         "BuildTime": 600,
@@ -15295,7 +15444,8 @@
       "General": {
         "UnitName": "Burst Master",
         "Icon": "amph",
-        "FactionName": "Cybran"
+        "FactionName": "Cybran",
+        "Classification": "RULEUC_MilitaryStructure"
       },
       "Physics": {},
       "Intel": {
@@ -15402,7 +15552,8 @@
       "General": {
         "UnitName": "Nanite Torpedo Array",
         "Icon": "sea",
-        "FactionName": "Cybran"
+        "FactionName": "Cybran",
+        "Classification": "RULEUC_Resource"
       },
       "Physics": {},
       "Intel": {
@@ -15505,7 +15656,8 @@
       "General": {
         "UnitName": "Gunther",
         "Icon": "land",
-        "FactionName": "Cybran"
+        "FactionName": "Cybran",
+        "Classification": "RULEUC_MilitaryStructure"
       },
       "Defense": {
         "Health": 3150,
@@ -15621,7 +15773,8 @@
       "General": {
         "UnitName": "TML-4",
         "Icon": "land",
-        "FactionName": "Cybran"
+        "FactionName": "Cybran",
+        "Classification": "RULEUC_MilitaryStructure"
       },
       "Display": {
         "Abilities": [
@@ -15716,7 +15869,8 @@
       "General": {
         "FactionName": "Cybran",
         "Icon": "amph",
-        "UnitName": "Zapper"
+        "UnitName": "Zapper",
+        "Classification": "RULEUC_MilitaryStructure"
       },
       "Economy": {
         "BuildTime": 400,
@@ -15804,7 +15958,8 @@
       "General": {
         "FactionName": "Cybran",
         "Icon": "land",
-        "UnitName": "ED1"
+        "UnitName": "ED1",
+        "Classification": "RULEUC_MiscSupport"
       },
       "Economy": {
         "BuildTime": 700,
@@ -15864,7 +16019,8 @@
       "General": {
         "UnitName": "ED2",
         "Icon": "land",
-        "FactionName": "Cybran"
+        "FactionName": "Cybran",
+        "Classification": "RULEUC_MiscSupport"
       },
       "Economy": {
         "BuildTime": 775,
@@ -15924,7 +16080,8 @@
       "General": {
         "UnitName": "ED3",
         "Icon": "land",
-        "FactionName": "Cybran"
+        "FactionName": "Cybran",
+        "Classification": "RULEUC_MiscSupport"
       },
       "Economy": {
         "BuildTime": 2200,
@@ -15988,7 +16145,8 @@
       "General": {
         "UnitName": "Magno XR",
         "Icon": "land",
-        "FactionName": "Cybran"
+        "FactionName": "Cybran",
+        "Classification": "RULEUC_Sensor"
       },
       "Economy": {
         "BuildTime": 780,
@@ -16046,7 +16204,8 @@
       "General": {
         "UnitName": "Flood",
         "Icon": "sea",
-        "FactionName": "Cybran"
+        "FactionName": "Cybran",
+        "Classification": "RULEUC_Sensor"
       },
       "Economy": {
         "BuildTime": 780,
@@ -16103,7 +16262,8 @@
       "General": {
         "FactionName": "Cybran",
         "Icon": "land",
-        "UnitName": "Twilight"
+        "UnitName": "Twilight",
+        "Classification": "RULEUC_CounterMeasure"
       },
       "Economy": {
         "BuildTime": 400,
@@ -16164,7 +16324,8 @@
       "General": {
         "UnitName": "The Hive",
         "Icon": "land",
-        "FactionName": "Cybran"
+        "FactionName": "Cybran",
+        "Classification": "RULEUC_Engineer"
       },
       "BuildIconSortPriority": 200,
       "Economy": {
@@ -16224,7 +16385,8 @@
       "General": {
         "FactionName": "Cybran",
         "UnitName": "The Hive",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_Engineer"
       },
       "BuildIconSortPriority": 200,
       "Economy": {
@@ -16283,7 +16445,8 @@
       "General": {
         "FactionName": "Cybran",
         "Icon": "land",
-        "UnitName": "The Hive"
+        "UnitName": "The Hive",
+        "Classification": "RULEUC_Engineer"
       },
       "BuildIconSortPriority": 200,
       "Economy": {
@@ -16426,7 +16589,8 @@
       },
       "General": {
         "FactionName": "Cybran",
-        "Icon": "amph"
+        "Icon": "amph",
+        "Classification": "RULEUC_Engineer"
       },
       "Economy": {
         "StorageMass": 275,
@@ -16594,7 +16758,8 @@
       "StrategicIconName": "icon_land3_engineer",
       "General": {
         "FactionName": "Cybran",
-        "Icon": "amph"
+        "Icon": "amph",
+        "Classification": "RULEUC_Engineer"
       },
       "Physics": {
         "TurnRate": 140,
@@ -16642,7 +16807,8 @@
       "StrategicIconName": "icon_structure_generic",
       "General": {
         "Icon": "amph",
-        "FactionName": "Cybran"
+        "FactionName": "Cybran",
+        "Classification": "RULEUC_Factory"
       },
       "Economy": {
         "BuildTime": 780,
@@ -16693,7 +16859,8 @@
       "General": {
         "UnitName": "Spook",
         "FactionName": "Cybran",
-        "Icon": "air"
+        "Icon": "air",
+        "Classification": "RULEUC_MilitaryAircraft"
       },
       "StrategicIconName": "icon_fighter3_intel",
       "Description": "Spy Plane",
@@ -16777,7 +16944,8 @@
       "General": {
         "UnitName": "Loyalist",
         "FactionName": "Cybran",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "StrategicIconName": "icon_bot3_directfire",
       "Intel": {
@@ -16968,7 +17136,8 @@
       "General": {
         "FactionName": "Cybran",
         "Icon": "sea",
-        "UnitName": "Plan B"
+        "UnitName": "Plan B",
+        "Classification": "RULEUC_MilitaryShip"
       },
       "Display": {
         "Abilities": [
@@ -17111,7 +17280,8 @@
       "StrategicIconName": "icon_structure_generic",
       "General": {
         "Icon": "amph",
-        "FactionName": "Cybran"
+        "FactionName": "Cybran",
+        "Classification": "RULEUC_Factory"
       },
       "Economy": {
         "BuildTime": 2400,
@@ -17158,7 +17328,7 @@
         null
       ],
       "General": {
-        "Classification": "RULEUMT_Amphibious",
+        "Classification": "RULEUC_MilitaryVehicle",
         "FactionName": "Cybran",
         "Icon": "amph",
         "UnitName": "The Brick"
@@ -17309,7 +17479,8 @@
       "General": {
         "UnitName": "Bouncer",
         "FactionName": "Cybran",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "Description": "Mobile Missile Anti-Air",
       "BuildIconSortPriority": 25,
@@ -17526,7 +17697,8 @@
       "General": {
         "FactionName": "Cybran",
         "Icon": "air",
-        "UnitName": "Gemini"
+        "UnitName": "Gemini",
+        "Classification": "RULEUC_MilitaryAircraft"
       },
       "Economy": {
         "BuildTime": 3840,
@@ -17638,7 +17810,8 @@
       "General": {
         "UnitName": "Trebuchet",
         "FactionName": "Cybran",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "BuildIconSortPriority": 30,
       "StrategicIconName": "icon_land3_artillery",
@@ -17748,7 +17921,8 @@
       "General": {
         "UnitName": "Galaxy Class",
         "FactionName": "Cybran",
-        "Icon": "sea"
+        "Icon": "sea",
+        "Classification": "RULEUC_MilitaryShip"
       },
       "Physics": {
         "TurnRate": 30,
@@ -17951,7 +18125,8 @@
       "StrategicIconName": "icon_structure_generic",
       "General": {
         "Icon": "land",
-        "FactionName": "Cybran"
+        "FactionName": "Cybran",
+        "Classification": "RULEUC_Factory"
       },
       "Economy": {
         "BuildTime": 2400,
@@ -18043,7 +18218,8 @@
       "General": {
         "FactionName": "Cybran",
         "Icon": "air",
-        "UnitName": "Revenant"
+        "UnitName": "Revenant",
+        "Classification": "RULEUC_MilitaryAircraft"
       },
       "Display": {
         "Abilities": [
@@ -18150,7 +18326,8 @@
       "BuildIconSortPriority": 40,
       "General": {
         "FactionName": "Cybran",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_Factory"
       },
       "Economy": {
         "StorageMass": 320,
@@ -18199,7 +18376,8 @@
       "StrategicIconName": "icon_structure3_mass",
       "General": {
         "FactionName": "Cybran",
-        "Icon": "amph"
+        "Icon": "amph",
+        "Classification": "RULEUC_Resource"
       },
       "Economy": {
         "BuildTime": 2875,
@@ -18283,7 +18461,8 @@
       "General": {
         "FactionName": "Cybran",
         "Icon": "sea",
-        "UnitName": "Command Class"
+        "UnitName": "Command Class",
+        "Classification": "RULEUC_MilitaryShip"
       },
       "Display": {
         "Abilities": [
@@ -18443,7 +18622,8 @@
       "BuildIconSortPriority": 50,
       "General": {
         "FactionName": "Cybran",
-        "Icon": "air"
+        "Icon": "air",
+        "Classification": "RULEUC_Factory"
       },
       "Economy": {
         "StorageMass": 320,
@@ -18494,7 +18674,8 @@
       "StrategicIconName": "icon_structure3_mass",
       "General": {
         "FactionName": "Cybran",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_Resource"
       },
       "Economy": {
         "BuildTime": 5000,
@@ -18553,7 +18734,8 @@
       "General": {
         "FactionName": "Cybran",
         "Icon": "air",
-        "UnitName": "Wailer"
+        "UnitName": "Wailer",
+        "Classification": "RULEUC_MilitaryAircraft"
       },
       "Description": "Heavy Gunship",
       "BuildIconSortPriority": 50,
@@ -18761,7 +18943,8 @@
       "Description": "Naval Factory HQ",
       "General": {
         "FactionName": "Cybran",
-        "Icon": "sea"
+        "Icon": "sea",
+        "Classification": "RULEUC_Factory"
       },
       "StrategicIconName": "icon_factoryhq3_naval",
       "Economy": {
@@ -18868,7 +19051,8 @@
       "General": {
         "UnitName": "Ion Reactor",
         "Icon": "land",
-        "FactionName": "Cybran"
+        "FactionName": "Cybran",
+        "Classification": "RULEUC_Resource"
       },
       "Physics": {},
       "Economy": {
@@ -18930,7 +19114,8 @@
       "General": {
         "UnitName": "Myrmidon",
         "Icon": "amph",
-        "FactionName": "Cybran"
+        "FactionName": "Cybran",
+        "Classification": "RULEUC_MilitaryStructure"
       },
       "Economy": {
         "BuildTime": 1400,
@@ -19040,7 +19225,8 @@
       "General": {
         "UnitName": "HARMS",
         "Icon": "sea",
-        "FactionName": "Cybran"
+        "FactionName": "Cybran",
+        "Classification": "RULEUC_CounterMeasure"
       },
       "Economy": {
         "BuildTime": 4100,
@@ -19146,7 +19332,8 @@
       "General": {
         "UnitName": "Disruptor",
         "Icon": "land",
-        "FactionName": "Cybran"
+        "FactionName": "Cybran",
+        "Classification": "RULEUC_MilitaryStructure"
       },
       "Economy": {
         "BuildTime": 105000,
@@ -19237,7 +19424,8 @@
       "General": {
         "UnitName": "Liberator",
         "Icon": "land",
-        "FactionName": "Cybran"
+        "FactionName": "Cybran",
+        "Classification": "RULEUC_Resource"
       },
       "Economy": {
         "BuildTime": 25000,
@@ -19350,7 +19538,8 @@
       "General": {
         "UnitName": "ED4",
         "Icon": "land",
-        "FactionName": "Cybran"
+        "FactionName": "Cybran",
+        "Classification": "RULEUC_MiscSupport"
       },
       "Economy": {
         "BuildTime": 3515,
@@ -19410,7 +19599,8 @@
       "General": {
         "UnitName": "ED5",
         "Icon": "land",
-        "FactionName": "Cybran"
+        "FactionName": "Cybran",
+        "Classification": "RULEUC_MiscSupport"
       },
       "Economy": {
         "BuildTime": 7100,
@@ -19471,7 +19661,8 @@
       "General": {
         "FactionName": "Cybran",
         "Icon": "land",
-        "UnitName": "Guardian"
+        "UnitName": "Guardian",
+        "Classification": "RULEUC_MilitaryStructure"
       },
       "Physics": {},
       "Economy": {
@@ -19553,7 +19744,8 @@
       "General": {
         "FactionName": "Cybran",
         "UnitName": "Flood XR",
-        "Icon": "sea"
+        "Icon": "sea",
+        "Classification": "RULEUC_MilitaryShip"
       },
       "Economy": {
         "BuildTime": 1400,
@@ -19611,7 +19803,8 @@
       "General": {
         "FactionName": "Cybran",
         "UnitName": "Olympus",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_Sensor"
       },
       "Economy": {
         "BuildTime": 2400,
@@ -19663,7 +19856,8 @@
       "General": {
         "FactionName": "Cybran",
         "Icon": "land",
-        "UnitName": "Soothsayer"
+        "UnitName": "Soothsayer",
+        "Classification": "RULEUC_Resource"
       },
       "BuildIconSortPriority": 200,
       "Economy": {
@@ -19712,7 +19906,8 @@
       "General": {
         "FactionName": "Cybran",
         "Icon": "land",
-        "UnitName": "Summoner"
+        "UnitName": "Summoner",
+        "Classification": "RULEUC_Factory"
       },
       "Economy": {
         "BuildTime": 4097,
@@ -19763,7 +19958,8 @@
       "General": {
         "UnitName": "Scathis",
         "Icon": "amph",
-        "FactionName": "Cybran"
+        "FactionName": "Cybran",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "BuildIconSortPriority": 10,
       "StrategicIconName": "icon_experimental_generic",
@@ -19875,7 +20071,8 @@
       "General": {
         "FactionName": "Cybran",
         "Icon": "amph",
-        "UnitName": "Monkeylord"
+        "UnitName": "Monkeylord",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "Description": "Experimental Spiderbot",
       "StrategicIconName": "icon_experimental_generic",
@@ -20100,7 +20297,8 @@
       "General": {
         "UnitName": "Megalith",
         "Icon": "amph",
-        "FactionName": "Cybran"
+        "FactionName": "Cybran",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "StrategicIconName": "icon_experimental_generic",
       "Description": "Experimental Megabot",
@@ -20369,7 +20567,8 @@
       "General": {
         "FactionName": "Cybran",
         "Icon": "air",
-        "UnitName": "Soul Ripper"
+        "UnitName": "Soul Ripper",
+        "Classification": "RULEUC_MilitaryAircraft"
       },
       "Economy": {
         "BuildTime": 48000,
@@ -20551,7 +20750,8 @@
       "StrategicIconName": "icon_factory1_land",
       "General": {
         "FactionName": "Aeon",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_Factory"
       },
       "Economy": {
         "BuildTime": 300,
@@ -20607,7 +20807,8 @@
       "Description": "Engineer",
       "General": {
         "FactionName": "Aeon",
-        "Icon": "amph"
+        "Icon": "amph",
+        "Classification": "RULEUC_Engineer"
       },
       "StrategicIconName": "icon_land1_engineer",
       "Physics": {
@@ -20667,7 +20868,8 @@
       "General": {
         "UnitName": "Mirage",
         "FactionName": "Aeon",
-        "Icon": "air"
+        "Icon": "air",
+        "Classification": "RULEUC_MilitaryAircraft"
       },
       "StrategicIconName": "icon_fighter1_intel",
       "Description": "Air Scout",
@@ -20749,7 +20951,8 @@
       "StrategicIconName": "icon_factory1_air",
       "General": {
         "FactionName": "Aeon",
-        "Icon": "air"
+        "Icon": "air",
+        "Classification": "RULEUC_Factory"
       },
       "Economy": {
         "BuildTime": 300,
@@ -20803,7 +21006,8 @@
       "General": {
         "UnitName": "Spirit",
         "FactionName": "Aeon",
-        "Icon": "amph"
+        "Icon": "amph",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "StrategicIconName": "icon_land1_intel",
       "BuildIconSortPriority": 20,
@@ -20899,7 +21103,8 @@
       "General": {
         "UnitName": "Conservator",
         "Icon": "air",
-        "FactionName": "Aeon"
+        "FactionName": "Aeon",
+        "Classification": "RULEUC_MilitaryAircraft"
       },
       "BuildIconSortPriority": 30,
       "StrategicIconName": "icon_fighter1_antiair",
@@ -21016,7 +21221,8 @@
       "BuildIconSortPriority": 30,
       "General": {
         "FactionName": "Aeon",
-        "Icon": "sea"
+        "Icon": "sea",
+        "Classification": "RULEUC_Factory"
       },
       "Economy": {
         "StorageMass": 80,
@@ -21068,7 +21274,8 @@
       "General": {
         "UnitName": "Flare",
         "FactionName": "Aeon",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "StrategicIconName": "icon_bot1_directfire",
       "Description": "Light Assault Bot",
@@ -21171,7 +21378,8 @@
       "General": {
         "UnitName": "Sylph",
         "FactionName": "Aeon",
-        "Icon": "sea"
+        "Icon": "sea",
+        "Classification": "RULEUC_MilitaryShip"
       },
       "Physics": {
         "Elevation": -1.5,
@@ -21260,7 +21468,8 @@
       "General": {
         "UnitName": "Shimmer",
         "FactionName": "Aeon",
-        "Icon": "air"
+        "Icon": "air",
+        "Classification": "RULEUC_MilitaryAircraft"
       },
       "BuildIconSortPriority": 40,
       "StrategicIconName": "icon_bomber1_directfire",
@@ -21383,7 +21592,8 @@
       },
       "General": {
         "FactionName": "Aeon",
-        "Icon": "amph"
+        "Icon": "amph",
+        "Classification": "RULEUC_Resource"
       },
       "Defense": {
         "Health": 370,
@@ -21437,7 +21647,8 @@
       "General": {
         "UnitName": "Aurora",
         "FactionName": "Aeon",
-        "Icon": "amph"
+        "Icon": "amph",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "Defense": {
         "Health": 155,
@@ -21527,7 +21738,8 @@
       "General": {
         "UnitName": "Shard",
         "FactionName": "Aeon",
-        "Icon": "sea"
+        "Icon": "sea",
+        "Classification": "RULEUC_MilitaryShip"
       },
       "Physics": {
         "TurnRate": 100,
@@ -21625,7 +21837,8 @@
       "General": {
         "UnitName": "Beacon Class",
         "FactionName": "Aeon",
-        "Icon": "sea"
+        "Icon": "sea",
+        "Classification": "RULEUC_MilitaryShip"
       },
       "Physics": {
         "TurnRate": 60,
@@ -21744,7 +21957,8 @@
       "General": {
         "UnitName": "Chariot",
         "Icon": "air",
-        "FactionName": "Aeon"
+        "FactionName": "Aeon",
+        "Classification": "RULEUC_MilitaryAircraft"
       },
       "Physics": {
         "FuelRechargeRate": 70,
@@ -21835,7 +22049,8 @@
       "BuildIconSortPriority": 50,
       "General": {
         "FactionName": "Aeon",
-        "Icon": "amph"
+        "Icon": "amph",
+        "Classification": "RULEUC_Resource"
       },
       "Economy": {
         "BuildTime": 250,
@@ -21877,7 +22092,8 @@
       "General": {
         "UnitName": "Thistle",
         "FactionName": "Aeon",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "StrategicIconName": "icon_land1_antiair",
       "Physics": {
@@ -21985,7 +22201,8 @@
       ],
       "General": {
         "FactionName": "Aeon",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_Resource"
       },
       "BuildIconSortPriority": 60,
       "Wreckage": {
@@ -22046,7 +22263,8 @@
       "General": {
         "UnitName": "Fervor",
         "FactionName": "Aeon",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "Economy": {
         "BuildTime": 200,
@@ -22136,7 +22354,8 @@
       "BuildIconSortPriority": 70,
       "General": {
         "FactionName": "Aeon",
-        "Icon": "amph"
+        "Icon": "amph",
+        "Classification": "RULEUC_Resource"
       },
       "Economy": {
         "BuildTime": 400,
@@ -22190,7 +22409,8 @@
       "Physics": {},
       "General": {
         "FactionName": "Aeon",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_Resource"
       },
       "Defense": {
         "Health": 500,
@@ -22246,7 +22466,8 @@
       "Description": "Armored Command Unit",
       "General": {
         "FactionName": "Aeon",
-        "Icon": "amph"
+        "Icon": "amph",
+        "Classification": "RULEUC_Engineer"
       },
       "Economy": {
         "StorageMass": 650,
@@ -22612,7 +22833,8 @@
       "General": {
         "UnitName": "Erupter",
         "Icon": "land",
-        "FactionName": "Aeon"
+        "FactionName": "Aeon",
+        "Classification": "RULEUC_MilitaryStructure"
       },
       "Defense": {
         "Health": 1300,
@@ -22702,7 +22924,8 @@
       "General": {
         "UnitName": "Seeker",
         "Icon": "amph",
-        "FactionName": "Aeon"
+        "FactionName": "Aeon",
+        "Classification": "RULEUC_MilitaryStructure"
       },
       "Physics": {},
       "Intel": {
@@ -22800,7 +23023,8 @@
       "General": {
         "UnitName": "Tide",
         "Icon": "sea",
-        "FactionName": "Aeon"
+        "FactionName": "Aeon",
+        "Classification": "RULEUC_Resource"
       },
       "Physics": {},
       "Intel": {
@@ -22893,7 +23117,8 @@
       },
       "General": {
         "FactionName": "Aeon",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_Resource"
       },
       "Defense": {
         "RegenRate": 0,
@@ -22938,7 +23163,8 @@
       "BuildIconSortPriority": 180,
       "General": {
         "FactionName": "Aeon",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_Sensor"
       },
       "Economy": {
         "BuildTime": 80,
@@ -22996,7 +23222,8 @@
       "BuildIconSortPriority": 190,
       "General": {
         "FactionName": "Aeon",
-        "Icon": "sea"
+        "Icon": "sea",
+        "Classification": "RULEUC_Sensor"
       },
       "Economy": {
         "BuildTime": 125,
@@ -23051,7 +23278,8 @@
       "General": {
         "FactionName": "Aeon",
         "Icon": "land",
-        "UnitName": "Cradle"
+        "UnitName": "Cradle",
+        "Classification": "RULEUC_Resource"
       },
       "BuildIconSortPriority": 210,
       "StrategicIconName": "icon_structure1_air",
@@ -23106,7 +23334,8 @@
       "StrategicIconName": "icon_land2_engineer",
       "General": {
         "FactionName": "Aeon",
-        "Icon": "amph"
+        "Icon": "amph",
+        "Classification": "RULEUC_Engineer"
       },
       "Economy": {
         "StorageMass": 20,
@@ -23161,7 +23390,8 @@
       "General": {
         "UnitName": "Swift Wind",
         "FactionName": "Aeon",
-        "Icon": "air"
+        "Icon": "air",
+        "Classification": "RULEUC_MilitaryAircraft"
       },
       "BuildIconSortPriority": 15,
       "StrategicIconName": "icon_fighter2_antiair",
@@ -23284,7 +23514,8 @@
       "General": {
         "UnitName": "Vesper",
         "FactionName": "Aeon",
-        "Icon": "sea"
+        "Icon": "sea",
+        "Classification": "RULEUC_MilitaryShip"
       },
       "Physics": {
         "Elevation": -1.5,
@@ -23404,7 +23635,8 @@
       "General": {
         "UnitName": "Skimmer",
         "FactionName": "Aeon",
-        "Icon": "air"
+        "Icon": "air",
+        "Classification": "RULEUC_MilitaryAircraft"
       },
       "Economy": {
         "BuildTime": 1600,
@@ -23520,7 +23752,8 @@
       "General": {
         "FactionName": "Aeon",
         "Icon": "land",
-        "UnitName": "Obsidian"
+        "UnitName": "Obsidian",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "BuildIconSortPriority": 20,
       "Physics": {
@@ -23622,7 +23855,8 @@
       "General": {
         "UnitName": "Blaze",
         "FactionName": "Aeon",
-        "Icon": "amph"
+        "Icon": "amph",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "BuildIconSortPriority": 20,
       "Physics": {
@@ -23722,7 +23956,8 @@
       "General": {
         "UnitName": "Ascendant",
         "FactionName": "Aeon",
-        "Icon": "amph"
+        "Icon": "amph",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "Description": "Mobile AA Flak Artillery",
       "BuildIconSortPriority": 25,
@@ -23829,7 +24064,8 @@
       "General": {
         "UnitName": "Specter",
         "FactionName": "Aeon",
-        "Icon": "air"
+        "Icon": "air",
+        "Classification": "RULEUC_MilitaryAircraft"
       },
       "BuildIconSortPriority": 30,
       "Description": "Gunship",
@@ -23937,7 +24173,8 @@
       "General": {
         "UnitName": "Evensong",
         "FactionName": "Aeon",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "StrategicIconName": "icon_land2_missile",
       "BuildIconSortPriority": 30,
@@ -24042,7 +24279,8 @@
       "General": {
         "UnitName": "Exodus Class",
         "FactionName": "Aeon",
-        "Icon": "sea"
+        "Icon": "sea",
+        "Classification": "RULEUC_MilitaryShip"
       },
       "Physics": {
         "TurnRate": 50,
@@ -24215,7 +24453,8 @@
       "General": {
         "FactionName": "Aeon",
         "Icon": "air",
-        "UnitName": "Mercy"
+        "UnitName": "Mercy",
+        "Classification": "RULEUC_MilitaryAircraft"
       },
       "Economy": {
         "BuildTime": 2000,
@@ -24339,7 +24578,8 @@
       "General": {
         "UnitName": "Aluminar",
         "Icon": "air",
-        "FactionName": "Aeon"
+        "FactionName": "Aeon",
+        "Classification": "RULEUC_MilitaryAircraft"
       },
       "Wreckage": {
         "HealthMult": 0.9,
@@ -24450,7 +24690,8 @@
       "StrategicIconName": "icon_structure2_mass",
       "General": {
         "FactionName": "Aeon",
-        "Icon": "amph"
+        "Icon": "amph",
+        "Classification": "RULEUC_Resource"
       },
       "Economy": {
         "BuildTime": 900,
@@ -24514,7 +24755,8 @@
       "General": {
         "UnitName": "Infinity Class",
         "FactionName": "Aeon",
-        "Icon": "sea"
+        "Icon": "sea",
+        "Classification": "RULEUC_MilitaryShip"
       },
       "Physics": {
         "TurnRate": 40,
@@ -24668,7 +24910,8 @@
       "BuildIconSortPriority": 50,
       "General": {
         "FactionName": "Aeon",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_Factory"
       },
       "Economy": {
         "StorageMass": 160,
@@ -24736,7 +24979,8 @@
       },
       "General": {
         "FactionName": "Aeon",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_Resource"
       },
       "Physics": {},
       "Defense": {
@@ -24782,7 +25026,8 @@
       "General": {
         "FactionName": "Aeon",
         "Icon": "amph",
-        "UnitName": "Asylum"
+        "UnitName": "Asylum",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "BuildIconSortPriority": 50,
       "Economy": {
@@ -24868,7 +25113,8 @@
       "BuildIconSortPriority": 51,
       "General": {
         "FactionName": "Aeon",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_Factory"
       },
       "Economy": {
         "StorageMass": 160,
@@ -24924,7 +25170,8 @@
       "StrategicIconName": "icon_factoryhq2_air",
       "General": {
         "FactionName": "Aeon",
-        "Icon": "air"
+        "Icon": "air",
+        "Classification": "RULEUC_Factory"
       },
       "Economy": {
         "StorageMass": 160,
@@ -25041,7 +25288,8 @@
       "BuildIconSortPriority": 70,
       "General": {
         "FactionName": "Aeon",
-        "Icon": "sea"
+        "Icon": "sea",
+        "Classification": "RULEUC_Factory"
       },
       "Economy": {
         "StorageMass": 160,
@@ -25097,7 +25345,8 @@
       "StrategicIconName": "icon_structure2_energy",
       "General": {
         "FactionName": "Aeon",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_Resource"
       },
       "Economy": {
         "BuildTime": 2198,
@@ -25223,7 +25472,8 @@
       "General": {
         "UnitName": "Oblivion",
         "Icon": "land",
-        "FactionName": "Aeon"
+        "FactionName": "Aeon",
+        "Classification": "RULEUC_MilitaryStructure"
       },
       "Economy": {
         "BuildTime": 675,
@@ -25315,7 +25565,8 @@
       "General": {
         "UnitName": "Marr",
         "Icon": "amph",
-        "FactionName": "Aeon"
+        "FactionName": "Aeon",
+        "Classification": "RULEUC_MilitaryStructure"
       },
       "Economy": {
         "BuildTime": 540,
@@ -25420,7 +25671,8 @@
       "General": {
         "UnitName": "Wave Break",
         "Icon": "sea",
-        "FactionName": "Aeon"
+        "FactionName": "Aeon",
+        "Classification": "RULEUC_Resource"
       },
       "Physics": {},
       "Intel": {
@@ -25524,7 +25776,8 @@
       "General": {
         "UnitName": "Miasma",
         "Icon": "land",
-        "FactionName": "Aeon"
+        "FactionName": "Aeon",
+        "Classification": "RULEUC_MilitaryStructure"
       },
       "Defense": {
         "Health": 2200,
@@ -25623,7 +25876,8 @@
       "General": {
         "UnitName": "Serpentine",
         "Icon": "land",
-        "FactionName": "Aeon"
+        "FactionName": "Aeon",
+        "Classification": "RULEUC_MilitaryStructure"
       },
       "Physics": {},
       "Intel": {
@@ -25722,7 +25976,8 @@
       "General": {
         "FactionName": "Aeon",
         "Icon": "amph",
-        "UnitName": "Volcano"
+        "UnitName": "Volcano",
+        "Classification": "RULEUC_MilitaryStructure"
       },
       "Economy": {
         "BuildTime": 400,
@@ -25805,7 +26060,8 @@
       "General": {
         "FactionName": "Aeon",
         "Icon": "land",
-        "UnitName": "Shield of Light"
+        "UnitName": "Shield of Light",
+        "Classification": "RULEUC_MiscSupport"
       },
       "Economy": {
         "BuildTime": 950,
@@ -25865,7 +26121,8 @@
       "BuildIconSortPriority": 180,
       "General": {
         "FactionName": "Aeon",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_Sensor"
       },
       "Economy": {
         "BuildTime": 780,
@@ -25922,7 +26179,8 @@
       "BuildIconSortPriority": 190,
       "General": {
         "FactionName": "Aeon",
-        "Icon": "sea"
+        "Icon": "sea",
+        "Classification": "RULEUC_Sensor"
       },
       "Economy": {
         "BuildTime": 780,
@@ -25979,7 +26237,8 @@
       "General": {
         "FactionName": "Aeon",
         "Icon": "land",
-        "UnitName": "Veil"
+        "UnitName": "Veil",
+        "Classification": "RULEUC_CounterMeasure"
       },
       "Economy": {
         "BuildTime": 726,
@@ -26165,7 +26424,8 @@
       },
       "General": {
         "FactionName": "Aeon",
-        "Icon": "amph"
+        "Icon": "amph",
+        "Classification": "RULEUC_Engineer"
       },
       "Weapon": [
         {
@@ -26259,7 +26519,8 @@
       "StrategicIconName": "icon_land3_engineer",
       "General": {
         "FactionName": "Aeon",
-        "Icon": "amph"
+        "Icon": "amph",
+        "Classification": "RULEUC_Engineer"
       },
       "Economy": {
         "StorageMass": 40,
@@ -26328,7 +26589,8 @@
       "General": {
         "UnitName": "Silencer",
         "FactionName": "Aeon",
-        "Icon": "sea"
+        "Icon": "sea",
+        "Classification": "RULEUC_MilitaryShip"
       },
       "Physics": {
         "Elevation": -2,
@@ -26461,7 +26723,8 @@
       "General": {
         "UnitName": "Sprite Striker",
         "FactionName": "Aeon",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "BuildIconSortPriority": 15,
       "Economy": {
@@ -26562,7 +26825,8 @@
       "General": {
         "UnitName": "Omen Class",
         "FactionName": "Aeon",
-        "Icon": "sea"
+        "Icon": "sea",
+        "Classification": "RULEUC_MilitaryShip"
       },
       "Physics": {
         "TurnRate": 40,
@@ -26680,7 +26944,8 @@
       "General": {
         "UnitName": "Seer",
         "FactionName": "Aeon",
-        "Icon": "air"
+        "Icon": "air",
+        "Classification": "RULEUC_MilitaryAircraft"
       },
       "BuildIconSortPriority": 20,
       "Physics": {
@@ -26757,7 +27022,8 @@
       "General": {
         "FactionName": "Aeon",
         "Icon": "land",
-        "UnitName": "Harbinger Mark IV"
+        "UnitName": "Harbinger Mark IV",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "StrategicIconName": "icon_bot3_directfire",
       "Economy": {
@@ -26874,7 +27140,8 @@
       "General": {
         "UnitName": "Torrent Class",
         "FactionName": "Aeon",
-        "Icon": "sea"
+        "Icon": "sea",
+        "Classification": "RULEUC_MilitaryShip"
       },
       "Physics": {
         "TurnRate": 30,
@@ -26996,7 +27263,8 @@
       "General": {
         "UnitName": "Redeemer",
         "FactionName": "Aeon",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "StrategicIconName": "icon_bot3_antiair",
       "Economy": {
@@ -27100,7 +27368,8 @@
       "General": {
         "UnitName": "Corona",
         "FactionName": "Aeon",
-        "Icon": "air"
+        "Icon": "air",
+        "Classification": "RULEUC_MilitaryAircraft"
       },
       "Economy": {
         "BuildTime": 3840,
@@ -27210,7 +27479,8 @@
       "General": {
         "UnitName": "Serenity",
         "FactionName": "Aeon",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "StrategicIconName": "icon_land3_artillery",
       "Physics": {
@@ -27340,7 +27610,8 @@
       "General": {
         "FactionName": "Aeon",
         "Icon": "sea",
-        "UnitName": "Keefer Class"
+        "UnitName": "Keefer Class",
+        "Classification": "RULEUC_MilitaryShip"
       },
       "Display": {
         "Abilities": [
@@ -27432,7 +27703,8 @@
       "General": {
         "UnitName": "Solace",
         "FactionName": "Aeon",
-        "Icon": "air"
+        "Icon": "air",
+        "Classification": "RULEUC_MilitaryAircraft"
       },
       "BuildIconSortPriority": 30,
       "StrategicIconName": "icon_bomber3_antinavy",
@@ -27547,7 +27819,8 @@
       "General": {
         "UnitName": "Absolver",
         "FactionName": "Aeon",
-        "Icon": "amph"
+        "Icon": "amph",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "BuildIconSortPriority": 40,
       "Physics": {
@@ -27684,7 +27957,8 @@
       "General": {
         "UnitName": "Shocker",
         "FactionName": "Aeon",
-        "Icon": "air"
+        "Icon": "air",
+        "Classification": "RULEUC_MilitaryAircraft"
       },
       "Display": {
         "Abilities": [
@@ -27757,7 +28031,8 @@
       "StrategicIconName": "icon_factoryhq3_land",
       "General": {
         "FactionName": "Aeon",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_Factory"
       },
       "Economy": {
         "StorageMass": 320,
@@ -27806,7 +28081,8 @@
       "StrategicIconName": "icon_structure3_mass",
       "General": {
         "FactionName": "Aeon",
-        "Icon": "amph"
+        "Icon": "amph",
+        "Classification": "RULEUC_Resource"
       },
       "Economy": {
         "BuildTime": 2875,
@@ -27859,7 +28135,8 @@
       "StrategicIconName": "icon_factory3_land",
       "General": {
         "FactionName": "Aeon",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_Factory"
       },
       "Economy": {
         "StorageMass": 320,
@@ -27911,7 +28188,8 @@
       "StrategicIconName": "icon_factoryhq3_air",
       "General": {
         "FactionName": "Aeon",
-        "Icon": "air"
+        "Icon": "air",
+        "Classification": "RULEUC_Factory"
       },
       "Economy": {
         "StorageMass": 320,
@@ -27962,7 +28240,8 @@
       "StrategicIconName": "icon_structure3_mass",
       "General": {
         "FactionName": "Aeon",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_Resource"
       },
       "Economy": {
         "BuildTime": 5000,
@@ -28020,7 +28299,8 @@
       "General": {
         "UnitName": "Restorer",
         "FactionName": "Aeon",
-        "Icon": "air"
+        "Icon": "air",
+        "Classification": "RULEUC_MilitaryAircraft"
       },
       "BuildIconSortPriority": 50,
       "Description": "AA Gunship",
@@ -28219,7 +28499,8 @@
       "BuildIconSortPriority": 60,
       "General": {
         "FactionName": "Aeon",
-        "Icon": "sea"
+        "Icon": "sea",
+        "Classification": "RULEUC_Factory"
       },
       "Economy": {
         "StorageMass": 320,
@@ -28325,7 +28606,8 @@
       "General": {
         "UnitName": "Quantum Reactor",
         "Icon": "land",
-        "FactionName": "Aeon"
+        "FactionName": "Aeon",
+        "Classification": "RULEUC_Resource"
       },
       "Physics": {},
       "Economy": {
@@ -28387,7 +28669,8 @@
       "General": {
         "UnitName": "Transcender",
         "Icon": "amph",
-        "FactionName": "Aeon"
+        "FactionName": "Aeon",
+        "Classification": "RULEUC_MilitaryStructure"
       },
       "Economy": {
         "BuildTime": 1400,
@@ -28484,7 +28767,8 @@
       "General": {
         "UnitName": "Emissary",
         "Icon": "land",
-        "FactionName": "Aeon"
+        "FactionName": "Aeon",
+        "Classification": "RULEUC_MilitaryStructure"
       },
       "StrategicIconName": "icon_structure3_artillery",
       "Physics": {},
@@ -28585,7 +28869,8 @@
       "General": {
         "UnitName": "Apocalypse",
         "Icon": "land",
-        "FactionName": "Aeon"
+        "FactionName": "Aeon",
+        "Classification": "RULEUC_Resource"
       },
       "Physics": {},
       "Defense": {
@@ -28688,7 +28973,8 @@
       "General": {
         "FactionName": "Aeon",
         "Icon": "land",
-        "UnitName": "Patron"
+        "UnitName": "Patron",
+        "Classification": "RULEUC_MilitaryStructure"
       },
       "Economy": {
         "BuildTime": 5841,
@@ -28772,7 +29058,8 @@
       "General": {
         "FactionName": "Aeon",
         "Icon": "land",
-        "UnitName": "Radiance"
+        "UnitName": "Radiance",
+        "Classification": "RULEUC_MiscSupport"
       },
       "Economy": {
         "BuildTime": 4097,
@@ -28841,7 +29128,8 @@
       },
       "General": {
         "FactionName": "Aeon",
-        "Icon": "sea"
+        "Icon": "sea",
+        "Classification": "RULEUC_MilitaryShip"
       },
       "Defense": {
         "Health": 1500,
@@ -28920,7 +29208,8 @@
       "General": {
         "FactionName": "Aeon",
         "UnitName": "Oculus",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_Sensor"
       },
       "Economy": {
         "BuildTime": 2400,
@@ -28972,7 +29261,8 @@
       "General": {
         "FactionName": "Aeon",
         "Icon": "land",
-        "UnitName": "Eye of Rhianne"
+        "UnitName": "Eye of Rhianne",
+        "Classification": "RULEUC_Resource"
       },
       "BuildIconSortPriority": 200,
       "Physics": {},
@@ -29025,7 +29315,8 @@
       "General": {
         "FactionName": "Aeon",
         "Icon": "land",
-        "UnitName": "Portal"
+        "UnitName": "Portal",
+        "Classification": "RULEUC_Factory"
       },
       "Economy": {
         "BuildTime": 4097,
@@ -29075,7 +29366,8 @@
       "General": {
         "UnitName": "Galactic Colossus",
         "FactionName": "Aeon",
-        "Icon": "amph"
+        "Icon": "amph",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "Economy": {
         "BuildTime": 51500,
@@ -29259,7 +29551,8 @@
       "General": {
         "FactionName": "Aeon",
         "Icon": "air",
-        "UnitName": "CZAR"
+        "UnitName": "CZAR",
+        "Classification": "RULEUC_MilitaryAircraft"
       },
       "Physics": {
         "TurnRate": 20,
@@ -29485,7 +29778,8 @@
       "General": {
         "FactionName": "Aeon",
         "Icon": "sea",
-        "UnitName": "Tempest"
+        "UnitName": "Tempest",
+        "Classification": "RULEUC_MilitaryShip"
       },
       "Physics": {
         "TurnRate": 35,
@@ -29649,7 +29943,8 @@
       "General": {
         "FactionName": "Aeon",
         "Icon": "land",
-        "UnitName": "Paragon"
+        "UnitName": "Paragon",
+        "Classification": "RULEUC_Resource"
       },
       "Economy": {
         "BuildTime": 325000,
@@ -29734,7 +30029,8 @@
       "General": {
         "UnitName": "Salvation",
         "Icon": "land",
-        "FactionName": "Aeon"
+        "FactionName": "Aeon",
+        "Classification": "RULEUC_MilitaryStructure"
       },
       "Physics": {},
       "Intel": {
@@ -29823,7 +30119,8 @@
       "General": {
         "UnitName": "Hethiya",
         "Icon": "land",
-        "FactionName": "Seraphim"
+        "FactionName": "Seraphim",
+        "Classification": "RULEUC_Factory"
       },
       "Economy": {
         "BuildTime": 300,
@@ -29881,7 +30178,8 @@
       "General": {
         "FactionName": "Seraphim",
         "Icon": "amph",
-        "UnitName": "Iya-istle"
+        "UnitName": "Iya-istle",
+        "Classification": "RULEUC_Engineer"
       },
       "Economy": {
         "StorageMass": 10,
@@ -29939,7 +30237,8 @@
       "General": {
         "UnitName": "Sele-istle",
         "FactionName": "Seraphim",
-        "Icon": "air"
+        "Icon": "air",
+        "Classification": "RULEUC_MilitaryAircraft"
       },
       "StrategicIconName": "icon_fighter1_intel",
       "Description": "Air Scout",
@@ -30022,7 +30321,8 @@
       "General": {
         "UnitName": "Ia-iya",
         "Icon": "air",
-        "FactionName": "Seraphim"
+        "FactionName": "Seraphim",
+        "Classification": "RULEUC_Factory"
       },
       "Economy": {
         "BuildTime": 300,
@@ -30079,7 +30379,8 @@
       "General": {
         "FactionName": "Seraphim",
         "Icon": "land",
-        "UnitName": "Selen"
+        "UnitName": "Selen",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "StrategicIconName": "icon_bot1_intel",
       "BuildIconSortPriority": 20,
@@ -30176,7 +30477,8 @@
       "General": {
         "UnitName": "Thaam",
         "FactionName": "Seraphim",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "BuildIconSortPriority": 20,
       "Physics": {
@@ -30266,7 +30568,8 @@
       "General": {
         "UnitName": "Ia-atha",
         "Icon": "air",
-        "FactionName": "Seraphim"
+        "FactionName": "Seraphim",
+        "Classification": "RULEUC_MilitaryAircraft"
       },
       "BuildIconSortPriority": 30,
       "StrategicIconName": "icon_fighter1_antiair",
@@ -30382,7 +30685,8 @@
       "General": {
         "UnitName": "Uosiya",
         "Icon": "sea",
-        "FactionName": "Seraphim"
+        "FactionName": "Seraphim",
+        "Classification": "RULEUC_Factory"
       },
       "BuildIconSortPriority": 30,
       "Economy": {
@@ -30449,7 +30753,8 @@
       "General": {
         "UnitName": "Sou-istle",
         "FactionName": "Seraphim",
-        "Icon": "sea"
+        "Icon": "sea",
+        "Classification": "RULEUC_MilitaryShip"
       },
       "Physics": {
         "Elevation": -1.5,
@@ -30594,7 +30899,8 @@
       "General": {
         "UnitName": "Sinnve",
         "FactionName": "Seraphim",
-        "Icon": "air"
+        "Icon": "air",
+        "Classification": "RULEUC_MilitaryAircraft"
       },
       "BuildIconSortPriority": 40,
       "StrategicIconName": "icon_bomber1_directfire",
@@ -30711,7 +31017,8 @@
       "General": {
         "FactionName": "Seraphim",
         "Icon": "amph",
-        "UnitName": "Hyalatoh"
+        "UnitName": "Hyalatoh",
+        "Classification": "RULEUC_Resource"
       },
       "Defense": {
         "Health": 380,
@@ -30767,7 +31074,8 @@
       "General": {
         "UnitName": "Hau-esel",
         "FactionName": "Seraphim",
-        "Icon": "sea"
+        "Icon": "sea",
+        "Classification": "RULEUC_MilitaryShip"
       },
       "Physics": {
         "TurnRate": 60,
@@ -30888,7 +31196,8 @@
       "General": {
         "UnitName": "Vish",
         "Icon": "air",
-        "FactionName": "Seraphim"
+        "FactionName": "Seraphim",
+        "Classification": "RULEUC_MilitaryAircraft"
       },
       "Physics": {
         "FuelRechargeRate": 70,
@@ -30977,7 +31286,8 @@
       "General": {
         "UnitName": "Ia-istle",
         "FactionName": "Seraphim",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "StrategicIconName": "icon_land1_antiair",
       "BuildIconSortPriority": 50,
@@ -31093,7 +31403,8 @@
       "General": {
         "UnitName": "Vishyal",
         "Icon": "amph",
-        "FactionName": "Seraphim"
+        "FactionName": "Seraphim",
+        "Classification": "RULEUC_Resource"
       },
       "Economy": {
         "BuildTime": 250,
@@ -31150,7 +31461,8 @@
       "General": {
         "UnitName": "Zthuee",
         "FactionName": "Seraphim",
-        "Icon": "amph"
+        "Icon": "amph",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "Defense": {
         "Health": 170,
@@ -31235,7 +31547,8 @@
       "General": {
         "UnitName": "Uya-iya",
         "Icon": "land",
-        "FactionName": "Seraphim"
+        "FactionName": "Seraphim",
+        "Classification": "RULEUC_Resource"
       },
       "BuildIconSortPriority": 70,
       "Wreckage": {
@@ -31297,7 +31610,8 @@
       "General": {
         "UnitName": "Uya-atoh",
         "Icon": "amph",
-        "FactionName": "Seraphim"
+        "FactionName": "Seraphim",
+        "Classification": "RULEUC_Resource"
       },
       "Economy": {
         "BuildTime": 400,
@@ -31357,7 +31671,8 @@
       "General": {
         "UnitName": "Vishuyal",
         "Icon": "land",
-        "FactionName": "Seraphim"
+        "FactionName": "Seraphim",
+        "Classification": "RULEUC_Resource"
       },
       "Defense": {
         "Health": 500,
@@ -31417,7 +31732,8 @@
       "Description": "Armored Command Unit",
       "General": {
         "FactionName": "Seraphim",
-        "Icon": "amph"
+        "Icon": "amph",
+        "Classification": "RULEUC_Engineer"
       },
       "Defense": {
         "RegenRate": 10,
@@ -31776,7 +32092,8 @@
       "General": {
         "UnitName": "Uttaus",
         "Icon": "land",
-        "FactionName": "Seraphim"
+        "FactionName": "Seraphim",
+        "Classification": "RULEUC_MilitaryStructure"
       },
       "Defense": {
         "Health": 1300,
@@ -31866,7 +32183,8 @@
       "General": {
         "UnitName": "Ialla",
         "Icon": "amph",
-        "FactionName": "Seraphim"
+        "FactionName": "Seraphim",
+        "Classification": "RULEUC_MilitaryStructure"
       },
       "Economy": {
         "BuildTime": 188,
@@ -31970,7 +32288,8 @@
       "General": {
         "UnitName": "Sou-atha",
         "Icon": "sea",
-        "FactionName": "Seraphim"
+        "FactionName": "Seraphim",
+        "Classification": "RULEUC_Resource"
       },
       "Physics": {},
       "Intel": {
@@ -32069,7 +32388,8 @@
       "General": {
         "UnitName": "Haas",
         "Icon": "land",
-        "FactionName": "Seraphim"
+        "FactionName": "Seraphim",
+        "Classification": "RULEUC_Resource"
       },
       "Defense": {
         "RegenRate": 0,
@@ -32114,7 +32434,8 @@
       "General": {
         "FactionName": "Seraphim",
         "Icon": "land",
-        "UnitName": "Esel"
+        "UnitName": "Esel",
+        "Classification": "RULEUC_Sensor"
       },
       "BuildIconSortPriority": 180,
       "Physics": {},
@@ -32174,7 +32495,8 @@
       "General": {
         "FactionName": "Seraphim",
         "Icon": "sea",
-        "UnitName": "Shou"
+        "UnitName": "Shou",
+        "Classification": "RULEUC_Sensor"
       },
       "Economy": {
         "BuildTime": 125,
@@ -32229,7 +32551,8 @@
       "General": {
         "FactionName": "Seraphim",
         "Icon": "land",
-        "UnitName": "Iathu-uhthe"
+        "UnitName": "Iathu-uhthe",
+        "Classification": "RULEUC_Resource"
       },
       "BuildIconSortPriority": 210,
       "StrategicIconName": "icon_structure1_air",
@@ -32285,7 +32608,8 @@
       "General": {
         "UnitName": "Iya",
         "Icon": "amph",
-        "FactionName": "Seraphim"
+        "FactionName": "Seraphim",
+        "Classification": "RULEUC_Engineer"
       },
       "Economy": {
         "StorageMass": 20,
@@ -32343,7 +32667,8 @@
       "General": {
         "UnitName": "Notha",
         "Icon": "air",
-        "FactionName": "Seraphim"
+        "FactionName": "Seraphim",
+        "Classification": "RULEUC_MilitaryAircraft"
       },
       "BuildIconSortPriority": 15,
       "StrategicIconName": "icon_fighter2_directfire",
@@ -32489,7 +32814,8 @@
       "General": {
         "UnitName": "Uosioz",
         "FactionName": "Seraphim",
-        "Icon": "air"
+        "Icon": "air",
+        "Classification": "RULEUC_MilitaryAircraft"
       },
       "BuildIconSortPriority": 20,
       "StrategicIconName": "icon_bomber2_antinavy",
@@ -32598,7 +32924,8 @@
       "General": {
         "FactionName": "Seraphim",
         "Icon": "land",
-        "UnitName": "Ilshavoh"
+        "UnitName": "Ilshavoh",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "StrategicIconName": "icon_bot2_directfire",
       "Physics": {
@@ -32692,7 +33019,8 @@
       "General": {
         "UnitName": "Vulthoo",
         "FactionName": "Seraphim",
-        "Icon": "air"
+        "Icon": "air",
+        "Classification": "RULEUC_MilitaryAircraft"
       },
       "BuildIconSortPriority": 30,
       "Description": "Gunship",
@@ -32797,7 +33125,8 @@
       "General": {
         "UnitName": "Yenzyne",
         "FactionName": "Seraphim",
-        "Icon": "amph"
+        "Icon": "amph",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "BuildIconSortPriority": 30,
       "Physics": {
@@ -32907,7 +33236,8 @@
       "General": {
         "UnitName": "Uashavoh",
         "FactionName": "Seraphim",
-        "Icon": "sea"
+        "Icon": "sea",
+        "Classification": "RULEUC_MilitaryShip"
       },
       "Physics": {
         "Elevation": -2,
@@ -33097,7 +33427,8 @@
       "General": {
         "UnitName": "Ithalua",
         "FactionName": "Seraphim",
-        "Icon": "sea"
+        "Icon": "sea",
+        "Classification": "RULEUC_MilitaryShip"
       },
       "Physics": {
         "TurnRate": 40,
@@ -33283,7 +33614,8 @@
       "General": {
         "UnitName": "Iashavoh",
         "FactionName": "Seraphim",
-        "Icon": "amph"
+        "Icon": "amph",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "StrategicIconName": "icon_land2_antiair",
       "Economy": {
@@ -33419,7 +33751,8 @@
       "General": {
         "UnitName": "Vishala",
         "Icon": "air",
-        "FactionName": "Seraphim"
+        "FactionName": "Seraphim",
+        "Classification": "RULEUC_MilitaryAircraft"
       },
       "Wreckage": {
         "HealthMult": 0.9,
@@ -33543,7 +33876,8 @@
       "General": {
         "UnitName": "Hyalatoh",
         "Icon": "amph",
-        "FactionName": "Seraphim"
+        "FactionName": "Seraphim",
+        "Classification": "RULEUC_Resource"
       },
       "Economy": {
         "BuildTime": 900,
@@ -33595,7 +33929,8 @@
       "General": {
         "UnitName": "Ythisah",
         "FactionName": "Seraphim",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "StrategicIconName": "icon_land2_missile",
       "BuildIconSortPriority": 40,
@@ -33691,7 +34026,8 @@
       "General": {
         "UnitName": "Hethiya",
         "Icon": "land",
-        "FactionName": "Seraphim"
+        "FactionName": "Seraphim",
+        "Classification": "RULEUC_Factory"
       },
       "Economy": {
         "StorageMass": 160,
@@ -33757,7 +34093,8 @@
       "General": {
         "FactionName": "Seraphim",
         "Icon": "land",
-        "UnitName": "Hyaliya"
+        "UnitName": "Hyaliya",
+        "Classification": "RULEUC_Resource"
       },
       "Defense": {
         "Health": 360,
@@ -33871,7 +34208,8 @@
       "General": {
         "UnitName": "Ia-iya",
         "Icon": "air",
-        "FactionName": "Seraphim"
+        "FactionName": "Seraphim",
+        "Classification": "RULEUC_Factory"
       },
       "BuildIconSortPriority": 60,
       "Physics": {},
@@ -33990,7 +34328,8 @@
       "General": {
         "UnitName": "Uosiya",
         "Icon": "sea",
-        "FactionName": "Seraphim"
+        "FactionName": "Seraphim",
+        "Classification": "RULEUC_Factory"
       },
       "BuildIconSortPriority": 70,
       "Physics": {},
@@ -34048,7 +34387,8 @@
       "General": {
         "UnitName": "Uya-iya",
         "Icon": "land",
-        "FactionName": "Seraphim"
+        "FactionName": "Seraphim",
+        "Classification": "RULEUC_Resource"
       },
       "Economy": {
         "BuildTime": 2198,
@@ -34175,7 +34515,8 @@
       "General": {
         "UnitName": "Uttaushala",
         "Icon": "land",
-        "FactionName": "Seraphim"
+        "FactionName": "Seraphim",
+        "Classification": "RULEUC_MilitaryStructure"
       },
       "Economy": {
         "BuildTime": 675,
@@ -34266,7 +34607,8 @@
       "General": {
         "UnitName": "Sinnatha",
         "Icon": "amph",
-        "FactionName": "Seraphim"
+        "FactionName": "Seraphim",
+        "Classification": "RULEUC_MilitaryStructure"
       },
       "Economy": {
         "BuildTime": 540,
@@ -34374,7 +34716,8 @@
       "General": {
         "UnitName": "Uosthu",
         "Icon": "sea",
-        "FactionName": "Seraphim"
+        "FactionName": "Seraphim",
+        "Classification": "RULEUC_Resource"
       },
       "Physics": {},
       "Intel": {
@@ -34508,7 +34851,8 @@
       "General": {
         "UnitName": "Zthuthaam",
         "Icon": "land",
-        "FactionName": "Seraphim"
+        "FactionName": "Seraphim",
+        "Classification": "RULEUC_MilitaryStructure"
       },
       "Defense": {
         "Health": 2850,
@@ -34605,7 +34949,8 @@
       "General": {
         "UnitName": "Ythis",
         "Icon": "land",
-        "FactionName": "Seraphim"
+        "FactionName": "Seraphim",
+        "Classification": "RULEUC_MilitaryStructure"
       },
       "Physics": {},
       "Intel": {
@@ -34704,7 +35049,8 @@
       "General": {
         "FactionName": "Seraphim",
         "Icon": "amph",
-        "UnitName": "Ythisatha"
+        "UnitName": "Ythisatha",
+        "Classification": "RULEUC_MilitaryStructure"
       },
       "Economy": {
         "BuildTime": 400,
@@ -34793,7 +35139,8 @@
       "General": {
         "FactionName": "Seraphim",
         "Icon": "land",
-        "UnitName": "Atha"
+        "UnitName": "Atha",
+        "Classification": "RULEUC_MiscSupport"
       },
       "Economy": {
         "BuildTime": 1250,
@@ -34856,7 +35203,8 @@
       "General": {
         "UnitName": "Sele-esel",
         "Icon": "land",
-        "FactionName": "Seraphim"
+        "FactionName": "Seraphim",
+        "Classification": "RULEUC_Sensor"
       },
       "Economy": {
         "BuildTime": 780,
@@ -34917,7 +35265,8 @@
       "General": {
         "UnitName": "Shou-esel",
         "FactionName": "Seraphim",
-        "Icon": "sea"
+        "Icon": "sea",
+        "Classification": "RULEUC_MilitaryShip"
       },
       "Economy": {
         "BuildTime": 1040,
@@ -34977,7 +35326,8 @@
       "General": {
         "FactionName": "Seraphim",
         "Icon": "land",
-        "UnitName": "Sele-ioz"
+        "UnitName": "Sele-ioz",
+        "Classification": "RULEUC_CounterMeasure"
       },
       "Economy": {
         "BuildTime": 626,
@@ -35153,7 +35503,8 @@
       },
       "General": {
         "FactionName": "Seraphim",
-        "Icon": "amph"
+        "Icon": "amph",
+        "Classification": "RULEUC_Engineer"
       },
       "Weapon": [
         {
@@ -35339,7 +35690,8 @@
       "General": {
         "UnitName": "Iyathuum",
         "Icon": "amph",
-        "FactionName": "Seraphim"
+        "FactionName": "Seraphim",
+        "Classification": "RULEUC_Engineer"
       },
       "Economy": {
         "StorageMass": 40,
@@ -35406,7 +35758,8 @@
       "General": {
         "UnitName": "Yathsou",
         "FactionName": "Seraphim",
-        "Icon": "sea"
+        "Icon": "sea",
+        "Classification": "RULEUC_MilitaryShip"
       },
       "Physics": {
         "Elevation": -1.5,
@@ -35554,7 +35907,8 @@
       "General": {
         "UnitName": "Iaselen",
         "FactionName": "Seraphim",
-        "Icon": "air"
+        "Icon": "air",
+        "Classification": "RULEUC_MilitaryAircraft"
       },
       "BuildIconSortPriority": 20,
       "Physics": {
@@ -35632,7 +35986,8 @@
       "General": {
         "UnitName": "Othuum",
         "FactionName": "Seraphim",
-        "Icon": "amph"
+        "Icon": "amph",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "StrategicIconName": "icon_land3_directfire",
       "BuildIconSortPriority": 20,
@@ -35794,7 +36149,8 @@
       "General": {
         "FactionName": "Seraphim",
         "Icon": "land",
-        "UnitName": "Usha-Ah"
+        "UnitName": "Usha-Ah",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "BuildIconSortPriority": 20,
       "StrategicIconName": "icon_bot3_sniper",
@@ -35950,7 +36306,8 @@
       "General": {
         "UnitName": "Hauthuum",
         "FactionName": "Seraphim",
-        "Icon": "sea"
+        "Icon": "sea",
+        "Classification": "RULEUC_MilitaryShip"
       },
       "Physics": {
         "TurnRate": 30,
@@ -36140,7 +36497,8 @@
       "General": {
         "UnitName": "Iazyne",
         "FactionName": "Seraphim",
-        "Icon": "air"
+        "Icon": "air",
+        "Classification": "RULEUC_MilitaryAircraft"
       },
       "BuildIconSortPriority": 30,
       "StrategicIconName": "icon_fighter3_antiair",
@@ -36290,7 +36648,8 @@
       "General": {
         "FactionName": "Seraphim",
         "Icon": "sea",
-        "UnitName": "Iavish"
+        "UnitName": "Iavish",
+        "Classification": "RULEUC_MilitaryShip"
       },
       "Display": {
         "Abilities": [
@@ -36414,7 +36773,8 @@
       "General": {
         "UnitName": "Uyanah",
         "FactionName": "Seraphim",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "BuildIconSortPriority": 35,
       "Physics": {
@@ -36542,7 +36902,8 @@
       "General": {
         "UnitName": "Sinntha",
         "FactionName": "Seraphim",
-        "Icon": "air"
+        "Icon": "air",
+        "Classification": "RULEUC_MilitaryAircraft"
       },
       "Economy": {
         "BuildTime": 12000,
@@ -36653,7 +37014,8 @@
       "General": {
         "UnitName": "Hethiya",
         "Icon": "land",
-        "FactionName": "Seraphim"
+        "FactionName": "Seraphim",
+        "Classification": "RULEUC_Factory"
       },
       "Economy": {
         "StorageMass": 320,
@@ -36703,7 +37065,8 @@
       "General": {
         "FactionName": "Seraphim",
         "UnitName": "Hyalatoh",
-        "Icon": "amph"
+        "Icon": "amph",
+        "Classification": "RULEUC_Resource"
       },
       "Economy": {
         "BuildTime": 2875,
@@ -36814,7 +37177,8 @@
       "General": {
         "UnitName": "Ia-iya",
         "Icon": "air",
-        "FactionName": "Seraphim"
+        "FactionName": "Seraphim",
+        "Classification": "RULEUC_Factory"
       },
       "BuildIconSortPriority": 50,
       "Physics": {},
@@ -36867,7 +37231,8 @@
       "General": {
         "FactionName": "Seraphim",
         "Icon": "land",
-        "UnitName": "Hyaliya"
+        "UnitName": "Hyaliya",
+        "Classification": "RULEUC_Resource"
       },
       "Economy": {
         "BuildTime": 5000,
@@ -36926,7 +37291,8 @@
       "General": {
         "UnitName": "Suthanus",
         "FactionName": "Seraphim",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "StrategicIconName": "icon_land3_artillery",
       "BuildIconSortPriority": 50,
@@ -37022,7 +37388,8 @@
       "General": {
         "FactionName": "Seraphim",
         "Icon": "amph",
-        "UnitName": "Athanah"
+        "UnitName": "Athanah",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "BuildIconSortPriority": 50,
       "Economy": {
@@ -37160,7 +37527,8 @@
       "General": {
         "UnitName": "Uosiya",
         "Icon": "sea",
-        "FactionName": "Seraphim"
+        "FactionName": "Seraphim",
+        "Classification": "RULEUC_Factory"
       },
       "BuildIconSortPriority": 60,
       "Physics": {},
@@ -37268,7 +37636,8 @@
       "General": {
         "UnitName": "Uya-iya",
         "Icon": "land",
-        "FactionName": "Seraphim"
+        "FactionName": "Seraphim",
+        "Classification": "RULEUC_Resource"
       },
       "Economy": {
         "BuildTime": 6824,
@@ -37330,7 +37699,8 @@
       "General": {
         "UnitName": "Iathu-ioz",
         "Icon": "amph",
-        "FactionName": "Seraphim"
+        "FactionName": "Seraphim",
+        "Classification": "RULEUC_MilitaryStructure"
       },
       "Economy": {
         "BuildTime": 1400,
@@ -37431,7 +37801,8 @@
       "General": {
         "UnitName": "Hovatham",
         "Icon": "land",
-        "FactionName": "Seraphim"
+        "FactionName": "Seraphim",
+        "Classification": "RULEUC_MilitaryStructure"
       },
       "StrategicIconName": "icon_structure3_artillery",
       "Intel": {
@@ -37526,7 +37897,8 @@
       "General": {
         "UnitName": "Hastue",
         "Icon": "land",
-        "FactionName": "Seraphim"
+        "FactionName": "Seraphim",
+        "Classification": "RULEUC_Resource"
       },
       "Physics": {},
       "Defense": {
@@ -37629,7 +38001,8 @@
       "General": {
         "FactionName": "Seraphim",
         "Icon": "land",
-        "UnitName": "Ythisioz"
+        "UnitName": "Ythisioz",
+        "Classification": "RULEUC_MilitaryStructure"
       },
       "Economy": {
         "BuildTime": 5841,
@@ -37713,7 +38086,8 @@
       "General": {
         "FactionName": "Seraphim",
         "UnitName": "Athanuhthe",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_MiscSupport"
       },
       "Economy": {
         "BuildTime": 5800,
@@ -37771,7 +38145,8 @@
       "General": {
         "FactionName": "Seraphim",
         "UnitName": "Aezesel",
-        "Icon": "land"
+        "Icon": "land",
+        "Classification": "RULEUC_Sensor"
       },
       "Economy": {
         "BuildTime": 2400,
@@ -37824,7 +38199,8 @@
       "General": {
         "FactionName": "Seraphim",
         "Icon": "land",
-        "UnitName": "Aezthu-uhthe"
+        "UnitName": "Aezthu-uhthe",
+        "Classification": "RULEUC_Factory"
       },
       "BuildIconSortPriority": 220,
       "StrategicIconName": "icon_structure3_transport",
@@ -37877,7 +38253,8 @@
       "General": {
         "UnitName": "Ahwassa",
         "FactionName": "Seraphim",
-        "Icon": "air"
+        "Icon": "air",
+        "Classification": "RULEUC_MilitaryAircraft"
       },
       "Economy": {
         "BuildTime": 67500,
@@ -38017,7 +38394,8 @@
       "General": {
         "UnitName": "Ythotha",
         "FactionName": "Seraphim",
-        "Icon": "amph"
+        "Icon": "amph",
+        "Classification": "RULEUC_MilitaryVehicle"
       },
       "Economy": {
         "BuildTime": 46875,
@@ -38231,7 +38609,8 @@
       "General": {
         "FactionName": "Seraphim",
         "Icon": "land",
-        "UnitName": "Yolona Oss"
+        "UnitName": "Yolona Oss",
+        "Classification": "RULEUC_Resource"
       },
       "Physics": {},
       "Intel": {
@@ -38826,7 +39205,7 @@
         "Level5": 20
       },
       "General": {
-        "Classification": "RULEUC_MilitarySub",
+        "Classification": "RULEUC_MilitaryShip",
         "FactionName": "Nomads",
         "Icon": "sea",
         "UnitName": "Buccaneer"
@@ -40697,7 +41076,7 @@
         "Level5": 30
       },
       "General": {
-        "Classification": "RULEUC_Weapon",
+        "Classification": "RULEUC_MilitaryStructure",
         "UnitName": "Scatterer",
         "Icon": "land",
         "FactionName": "Nomads"
@@ -40772,7 +41151,7 @@
       },
       "StrategicIconName": "icon_structure1_antiair",
       "General": {
-        "Classification": "RULEUC_Weapon",
+        "Classification": "RULEUC_MilitaryStructure",
         "UnitName": "Slicer",
         "Icon": "amph",
         "FactionName": "Nomads"
@@ -40886,7 +41265,7 @@
       },
       "StrategicIconName": "icon_structure1_antinavy",
       "General": {
-        "Classification": "RULEUC_Weapon",
+        "Classification": "RULEUC_Resource",
         "UnitName": "Sea Needle",
         "Icon": "sea",
         "FactionName": "Nomads"
@@ -40988,7 +41367,7 @@
       "Description": "Wall Section",
       "BuildIconSortPriority": 130,
       "General": {
-        "Classification": "RULEUC_MiscSupport",
+        "Classification": "RULEUC_Resource",
         "UnitName": "Waver",
         "Icon": "land",
         "FactionName": "Nomads"
@@ -41046,7 +41425,7 @@
         "BuildCostEnergy": 2100
       },
       "General": {
-        "Classification": "RULEUC_MiscSupport",
+        "Classification": "RULEUC_Resource",
         "FactionName": "Nomads",
         "Icon": "land",
         "UnitName": "Oasis"
@@ -43061,7 +43440,7 @@
         "Level5": 60
       },
       "General": {
-        "Classification": "RULEUC_Weapon",
+        "Classification": "RULEUC_MilitaryStructure",
         "UnitName": "Piercer",
         "Icon": "land",
         "FactionName": "Nomads"
@@ -43253,7 +43632,7 @@
       },
       "StrategicIconName": "icon_structure2_antiair",
       "General": {
-        "Classification": "RULEUC_Weapon",
+        "Classification": "RULEUC_MilitaryStructure",
         "UnitName": "Skythorn",
         "Icon": "amph",
         "FactionName": "Nomads"
@@ -43391,7 +43770,7 @@
         "Level5": 60
       },
       "General": {
-        "Classification": "RULEUC_Weapon",
+        "Classification": "RULEUC_Resource",
         "UnitName": "Harpoon",
         "Icon": "sea",
         "FactionName": "Nomads"
@@ -43481,7 +43860,7 @@
       },
       "StrategicIconName": "icon_structure2_artillery",
       "General": {
-        "Classification": "RULEUC_Weapon",
+        "Classification": "RULEUC_MilitaryStructure",
         "UnitName": "Voidbringer",
         "Icon": "land",
         "FactionName": "Nomads"
@@ -43590,7 +43969,7 @@
       },
       "StrategicIconName": "icon_structure2_missile",
       "General": {
-        "Classification": "RULEUC_Weapon",
+        "Classification": "RULEUC_MilitaryStructure",
         "UnitName": "Bowcaster",
         "Icon": "land",
         "FactionName": "Nomads"
@@ -43688,7 +44067,7 @@
       "Description": "Tactical Missile Defense",
       "BuildIconSortPriority": 155,
       "General": {
-        "Classification": "RULEUC_CounterMeasure",
+        "Classification": "RULEUC_MilitaryStructure",
         "UnitName": "Arc Aegis",
         "Icon": "amph",
         "FactionName": "Nomads"
@@ -43797,7 +44176,7 @@
       "Description": "Shield Generator",
       "BuildIconSortPriority": 160,
       "General": {
-        "Classification": "RULEUC_CounterMeasure",
+        "Classification": "RULEUC_MiscSupport",
         "Icon": "land",
         "UnitName": "Surge-Shield",
         "FactionName": "Nomads"
@@ -44195,7 +44574,7 @@
         "Level5": 120
       },
       "General": {
-        "Classification": "RULEUC_Commander",
+        "Classification": "RULEUC_Engineer",
         "Icon": "amph",
         "UnitName": "Support Armored Command Unit",
         "FactionName": "Nomads"
@@ -44467,7 +44846,7 @@
         }
       },
       "General": {
-        "Classification": "RULEUC_MilitarySub",
+        "Classification": "RULEUC_MilitaryShip",
         "FactionName": "Nomads",
         "Icon": "sea",
         "UnitName": "Leviathan"
@@ -46408,7 +46787,7 @@
         "RULEUTL_Secret"
       ],
       "General": {
-        "Classification": "RULEUC_MilitaryVehicle",
+        "Classification": null,
         "FactionName": "Nomads",
         "Icon": "air",
         "UnitName": "Planet operations support ship"
@@ -46542,7 +46921,7 @@
       },
       "StrategicIconName": "icon_structure3_antiair",
       "General": {
-        "Classification": "RULEUC_Weapon",
+        "Classification": "RULEUC_MilitaryStructure",
         "UnitName": "Vindicator",
         "Icon": "amph",
         "FactionName": "Nomads"
@@ -46673,7 +47052,8 @@
       "General": {
         "FactionName": "Nomads",
         "Icon": "land",
-        "UnitName": "Arbalast"
+        "UnitName": "Arbalast",
+        "Classification": "RULEUC_MilitaryStructure"
       },
       "Economy": {
         "BuildTime": 115000,
@@ -46776,7 +47156,7 @@
       },
       "StrategicIconName": "icon_structure3_missile",
       "General": {
-        "Classification": "RULEUC_Weapon",
+        "Classification": "RULEUC_Resource",
         "Icon": "land",
         "UnitName": "Devourer",
         "FactionName": "Nomads"
@@ -46913,7 +47293,7 @@
       "Description": "Strategic Missile Defense",
       "StrategicIconName": "icon_structure3_antimissile",
       "General": {
-        "Classification": "RULEUC_CounterMeasure",
+        "Classification": "RULEUC_MilitaryStructure",
         "UnitName": "Protector",
         "Icon": "land",
         "FactionName": "Nomads"
@@ -46993,7 +47373,7 @@
       "Description": "Heavy Shield Generator",
       "BuildIconSortPriority": 160,
       "General": {
-        "Classification": "RULEUC_CounterMeasure",
+        "Classification": "RULEUC_MiscSupport",
         "Icon": "land",
         "UnitName": "Wave Shield",
         "FactionName": "Nomads"
@@ -47125,7 +47505,7 @@
       "Description": "Sonar Platform",
       "BuildIconSortPriority": 190,
       "General": {
-        "Classification": "RULEUC_Sensor",
+        "Classification": "RULEUC_MilitaryShip",
         "UnitName": "Echo 3",
         "Icon": "sea",
         "FactionName": "Nomads"
@@ -47919,7 +48299,7 @@
       },
       "BuildIconSortPriority": 90,
       "General": {
-        "Classification": "RULEUC_Weapon",
+        "Classification": "RULEUC_MilitaryAircraft",
         "FactionName": "Nomads",
         "Icon": "air",
         "UnitName": "Deadline"
@@ -48164,7 +48544,7 @@
         "Health": 10500
       },
       "General": {
-        "Classification": "RULEUC_Commander",
+        "Classification": "RULEUC_Engineer",
         "Icon": "amph",
         "FactionName": "Nomads"
       },
