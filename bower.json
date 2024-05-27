@@ -9,8 +9,7 @@
     "angular-sanitize": "",
     "angular-route": "",
     "underscore": "",
-    "angular-underscore": "",
-    "angular-hotkeys": ""
+    "angular-underscore": ""
   },
   "devDependencies": {
     "angular-mocks": "",
