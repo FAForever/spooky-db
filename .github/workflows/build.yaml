@@ -13,6 +13,8 @@ jobs:
 
             - name: Install tooling
               run: |
+                bower --version
+                grunt --version
                 npm install bower grunt-cli
                 npx bower install
                 npm install --force
