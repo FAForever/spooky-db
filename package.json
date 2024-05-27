@@ -41,9 +41,6 @@
     "karma-phantomjs-launcher": "^1.0.4",
     "load-grunt-tasks": "^5.1.0",
     "natives": "^1.1.6",
-    "phantomjs": "^2.1.7",
-    "phantomjs-prebuilt": "^2.1.16",
-    "phantomjssmith": "^1.0.4",
     "time-grunt": "^2.0.0"
   },
   "engines": {
