@@ -15,7 +15,7 @@ jobs:
               run: |
                 npm install bower grunt-cli
                 npx bower install
-                npm install
+                npm install --force
 
             - name: Build the application
               run: |
