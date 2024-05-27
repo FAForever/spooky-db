@@ -7,17 +7,16 @@ jobs:
     build:
         name: Build
         runs-on: ubuntu-latest
+        container: archlinux:latest
         steps:
             - name: Checkout spooky db code
               uses: actions/checkout@v4
 
             - name: Install tooling
               run: |
-                bower --version
-                grunt --version
-                npm install bower grunt-cli
-                npx bower install
+                pacman --noconfirm -Syu bower cairo giflib graphicsmagick grunt-cli libjpeg-turbo npm
                 npm install --force
+                bower install
 
             - name: Build the application
               run: |
