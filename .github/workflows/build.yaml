@@ -11,6 +11,13 @@ jobs:
             - name: Checkout spooky db code
               uses: actions/checkout@v4
 
+            # https://github.com/actions/setup-node/tree/main
+            - name: Use Node.js 20.x
+              uses: actions/setup-node@v4
+              with:
+                cache: npm
+                node-version: 20.x
+
             - name: Install tooling
               run: |
                 npm install
