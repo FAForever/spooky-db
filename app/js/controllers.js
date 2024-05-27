@@ -1,6 +1,6 @@
 'use strict';
 unitDb.controllers = {
-    homeCtrl: ['$scope', '$window', '$location', '$hotkey', 'data', function($scope, $window, $location, $hotkey, data) {
+    homeCtrl: ['$scope', '$window', '$location', 'data', function($scope, $window, $location, data) {
         $scope.factions = [];
         $scope.kinds = [];
         $scope.tech = [];
@@ -92,14 +92,9 @@ unitDb.controllers = {
                 }
             }
         };
-
-        $hotkey.bind('Ctrl + X', $scope.clear);
-        $hotkey.bind('Ctrl + Z', function() {
-            angular.element('#filter').focus();
-        });
     }],
 
-    gdiCtrl: ['$scope', '$window', '$location', '$hotkey', 'data', function($scope, $window, $location, $hotkey, data) {
+    gdiCtrl: ['$scope', '$window', '$location', 'data', function($scope, $window, $location, data) {
         $scope.compact = false || (localStorage.getItem('compact') === 'true');
 
         $scope.factions = data.selectedFilterFractions;
@@ -240,11 +235,6 @@ unitDb.controllers = {
             $scope.compact = !$scope.compact;
             localStorage.setItem('compact', $scope.compact);
         };
-
-        $hotkey.bind('Ctrl + X', $scope.clear);
-        $hotkey.bind('Ctrl + Z', function() {
-            angular.element('#filter').focus();
-        });
     }],
 
     compareCtrl: ['$scope', '$routeParams', '$location', 'data', function($scope, $routeParams, $location, data) {

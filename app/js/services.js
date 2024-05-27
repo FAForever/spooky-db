@@ -10,10 +10,7 @@ unitDb.services = {
             version = index.version;
         };
 
-        this.$get = ['$hotkey', '$location', function($hotkey, $location) {
-            $hotkey.bind('Ctrl + C', function() {
-                $location.path('/' + contenders.join(','));
-            });
+        this.$get = ['$location', function($location) {
 
             return {
                 items: _.map(unitIndex, function(u) { return unitDb.UnitDecorator(u); }),

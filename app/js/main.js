@@ -2,7 +2,7 @@
 
 var unitDb = (function() {
     var init = function(appName, payload) {
-            var app = angular.module(appName, ['ngRoute', 'ngSanitize', 'angular-underscore', 'drahak.hotkeys']);
+            var app = angular.module(appName, ['ngRoute', 'ngSanitize', 'angular-underscore']);
 
             // routing
             app.config(['$routeProvider', function($routeProvider) {
