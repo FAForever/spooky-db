@@ -4,11 +4,12 @@ on:
     workflow_dispatch:
 
 jobs:
-    generate-and-update:
-        uses: FAForever/spooky-db/.github/workflows/generate.yaml@feature/deploy-workflow
+    update:
+        name: update blueprint information
+        uses: FAForever/spooky-db/.github/workflows/generate.yaml@main
 
     deploy:
-        needs: [generate-and-update]
+        needs: [update]
         name: deploy application
         runs-on: ubuntu-latest
         steps:
