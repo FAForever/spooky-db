@@ -104,4 +104,4 @@ jobs:
               with:
                   name: spookydb-dist
                   path: |
-                      dist
+                      gh-pages
