@@ -2,12 +2,13 @@ name: Generate blueprint data
 
 on:
     workflow_call:
-      inputs:
-        update:
-            description: "Update the repository"
-            required: false
-            type: "boolean"
-            default: false # it is a boolean here...
+        inputs:
+            update:
+                description: "Update the repository"
+                required: false
+                type: "boolean"
+                default: true # it is a boolean here...
+
     workflow_dispatch:
         inputs:
             update:
@@ -75,18 +76,6 @@ jobs:
               run: |
                   lua -v
                   pwsh ./index.ps1 -target ../app -inputUnits "temp/units" -inputLua "temp/lua"
-
-            - name: Minify index.json
-              uses: StefanEnsmann/Minify-Json-Action@1.1.0
-              with:
-                  input_file: app/data/index.json
-                  output_file: app/data/index.minified.json
-
-            - name: Minify index.fat.json
-              uses: StefanEnsmann/Minify-Json-Action@1.1.0
-              with:
-                  input_file: app/data/index.fat.json
-                  output_file: app/data/index.fat.minified.json
 
             - name: Add the generated file as an artifact
               uses: actions/upload-artifact@v4

@@ -6,8 +6,6 @@ on:
 jobs:
     generate-and-update:
         uses: FAForever/spooky-db/.github/workflows/generate.yaml@feature/deploy-workflow
-        with:
-            update: true
 
     deploy:
         needs: [generate-and-update]
