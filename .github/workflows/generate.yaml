@@ -103,7 +103,8 @@ jobs:
 
                   git stage .
                   git commit -m "Update generated data to game version ${{ fromJson(steps.gameVersionJSON.outputs.json).version}}"
-                  git push origin HEAD:master
+                  git log
+                # git push origin HEAD:master
 
-                  git tag "${{ fromJson(steps.gameVersionJSON.outputs.json).version}}"
-                  git tag push
+                # git tag "${{ fromJson(steps.gameVersionJSON.outputs.json).version}}"
+                # git tag push
