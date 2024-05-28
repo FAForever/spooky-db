@@ -97,20 +97,20 @@ jobs:
             # Update the repository
 
             - name: Retrieve commit hash of FA repository
-              id: hashFA # but it is a string here!
+              id: hashFA
               working-directory: fa
               run: |
                   hash=`git rev-parse --verify HEAD`
                   echo "hash=$hash" >> $GITHUB_OUTPUT
 
             - name: Retrieve commit hash of Nomads repository
-              id: hashNomads # but it is a string here!
+              id: hashNomads
               working-directory: nomads
               run: |
                   hash=`git rev-parse --verify HEAD`
                   echo "hash=$hash" >> $GITHUB_OUTPUT
 
-            - name: Update repository # but it is a string here!
+            - name: Update repository
               working-directory: app/data
               run: |
                   # Check for any differences between the working directory and the latest commit
