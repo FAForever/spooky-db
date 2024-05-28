@@ -2,6 +2,12 @@ name: Generate blueprint data
 
 on:
     workflow_call:
+      inputs:
+        update:
+            description: "Update the repository"
+            required: false
+            type: "boolean"
+            default: false # it is a boolean here...
     workflow_dispatch:
         inputs:
             update:
