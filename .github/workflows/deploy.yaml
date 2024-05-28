@@ -86,7 +86,7 @@ jobs:
               run: |
                 # Check for any differences between the working directory and the latest commit
                 if git diff --quiet; then
-                    echo "No changes to commit"
+                    echo "No changes to deploy"
                     exit 0
                 fi
 
@@ -97,7 +97,9 @@ jobs:
                 # Stage, commit and push the changes
                 git stage .
                 git commit -m '${{ steps.commit.outputs.message }}'
-                git log
+
+                echo "${{ steps.commit.outputs.message }}"
+                git push origin HEAD:gh-pages
 
             - name: Upload
               uses: actions/upload-artifact@v4
