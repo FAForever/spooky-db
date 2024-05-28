@@ -4,12 +4,13 @@ on:
     workflow_dispatch:
 
 jobs:
-    call-workflow-passing-data:
+    generate-and-update:
         uses: FAForever/spooky-db/.github/workflows/generate.yaml@feature/deploy-workflow
         with:
             update: true
 
     deploy:
+        needs: [generate-and-update]
         name: deploy application
         runs-on: ubuntu-latest
         steps:
