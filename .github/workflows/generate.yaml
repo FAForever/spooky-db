@@ -1,6 +1,7 @@
 name: Generate blueprint data
 
 on:
+    workflow_call:
     workflow_dispatch:
         inputs:
             update:

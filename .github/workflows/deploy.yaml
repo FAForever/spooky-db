@@ -1,0 +1,54 @@
+name: build
+
+on:
+    workflow_dispatch:
+
+jobs:
+    build:
+        name: build application
+        runs-on: ubuntu-latest
+        steps:
+            # https://github.com/actions/checkout/tree/v4/
+            - name: Checkout spooky db code
+              uses: actions/checkout@v4
+              with:
+                    path: spookydb
+
+            # https://github.com/actions/checkout/tree/v4/
+            - name: Checkout spooky db code
+              uses: actions/checkout@v4
+              with:
+                  path: gh-pages
+                  ref: gh-pages
+
+            # https://github.com/actions/setup-node/tree/main
+            - name: Use Node.js 20.x
+              uses: actions/setup-node@v4
+              with:
+                  cache: npm
+                  node-version: 20.x
+
+            # - name: Installation
+            #   working-directory: spookydb
+            #   run: |
+            #       npm install
+            #       npm install bower
+            #       npm install grunt-cli
+            #       npx bower install
+
+            # - name: Building
+            #   working-directory: spookydb
+            #   run: |
+            #       grunt build
+
+            - name: Deploying
+              working-directory: gh-pages
+              run: |
+                git log
+
+            - name: Uploading
+              uses: actions/upload-artifact@v4
+              with:
+                  name: spookydb-dist
+                  path: |
+                      spookydb/dist
