@@ -11,8 +11,14 @@ jobs:
             # https://github.com/actions/checkout/tree/v4/
             - name: Checkout spooky db code
               uses: actions/checkout@v4
+
+            # https://github.com/actions/setup-node/tree/main
+            - name: Use Node.js 20.x
+              uses: actions/setup-node@v4
               with:
-                    path: spookydb
+                  
+                  cache: npm
+                  node-version: 20.x
 
             # https://github.com/actions/checkout/tree/v4/
             - name: Checkout spooky db code
@@ -21,12 +27,6 @@ jobs:
                   path: gh-pages
                   ref: gh-pages
 
-            # https://github.com/actions/setup-node/tree/main
-            - name: Use Node.js 20.x
-              uses: actions/setup-node@v4
-              with:
-                  cache: npm
-                  node-version: 20.x
 
             # - name: Installation
             #   working-directory: spookydb
