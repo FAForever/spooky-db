@@ -52,7 +52,7 @@ jobs:
                   path: gh-pages
                   ref: gh-pages
 
-            - name: Installation
+            - name: Install
               run: |
                   npm install
                   npm install bower
@@ -65,7 +65,6 @@ jobs:
 
             - name: Format commit message
               id: commit
-              working-directory: fa
               run: |
                   message=`git log -1 --pretty=format:%B`
                   echo "message=$message" >> $GITHUB_OUTPUT
