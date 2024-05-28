@@ -1,0 +1,136 @@
+
+# Copyright (c) 2024 Willem 'Jip' Wijnia
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
+name: update
+
+on:
+    workflow_call:
+    workflow_dispatch:
+
+jobs:
+    update:
+        name: generate
+        permissions: write-all
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout spooky db code
+              uses: actions/checkout@v4
+
+            - name: Checkout FAForever blueprints and lua files
+              uses: actions/checkout@v4
+              with:
+                  repository: FAForever/fa
+                  path: fa
+                  sparse-checkout-cone-mode: false
+                  sparse-checkout: |
+                      *.bp
+                      *.lua
+
+            - name: Checkout Nomads blueprints and lua files
+              uses: actions/checkout@v4
+              with:
+                  repository: FAForever/nomads
+                  path: nomads
+                  sparse-checkout-cone-mode: false
+                  sparse-checkout: |
+                      *.bp
+
+            # Prepare the Lua context
+
+            - name: Install Lua
+              uses: leafo/gh-actions-lua@v10
+              with:
+                  luaVersion: "5.1.5"
+
+            - uses: leafo/gh-actions-luarocks@v4
+
+            - name: Install JSON module for Lua
+              run: luarocks install dkjson
+
+            # Prepare the script context
+
+            - name: Prepare for the script
+              shell: bash
+              run: |
+                  mkdir tools/temp
+                  mkdir tools/temp/units
+                  mkdir tools/temp/lua
+
+                  mv -f fa/units/* tools/temp/units
+                  mv -f nomads/units/* tools/temp/units
+                  mv fa/lua/version.lua tools/temp/lua/version.lua
+
+            - name: Run the script
+              shell: pwsh
+              working-directory: tools # script expects this directory
+              run: |
+                  lua -v
+                  pwsh ./index.ps1 -target ../app -inputUnits "temp/units" -inputLua "temp/lua"
+
+            # Store the created files
+
+            - name: Create artifact
+              uses: actions/upload-artifact@v4
+              with:
+                  name: Generated files
+                  path: |
+                      app/data
+
+            # Update the repository
+
+            - name: Retrieve commit hash of FA repository
+              id: hashFA
+              working-directory: fa
+              run: |
+                  hash=`git rev-parse --verify HEAD`
+                  echo "hash=$hash" >> $GITHUB_OUTPUT
+
+            - name: Retrieve commit hash of Nomads repository
+              id: hashNomads
+              working-directory: nomads
+              run: |
+                  hash=`git rev-parse --verify HEAD`
+                  echo "hash=$hash" >> $GITHUB_OUTPUT
+
+            - name: Update repository
+              working-directory: app/data
+              run: |
+                  # Check for any differences between the working directory and the latest commit
+                  if git diff --quiet; then
+                      echo "No changes to commit"
+                      exit 0
+                  fi
+
+                  # Configure git
+                  git config user.email "administrator@faforever.com"
+                  git config user.name "FAForever"
+
+                  # Stage, commit and push the changes
+                  git stage .
+                  git commit -m 'Update unit blueprint information
+
+                  Commit hash of FA repository: ${{ steps.hashFA.outputs.hash }}
+                  Commit hash of Nomads repository: ${{ steps.hashNomads.outputs.hash }}'
+                  
+                  git push origin HEAD:master
+
+              # git tag "${{ fromJson(steps.gameVersionJSON.outputs.json).version}}"
+              # git tag push
