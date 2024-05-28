@@ -6,7 +6,9 @@ on:
 jobs:
     update:
         name: update blueprint information
-        uses: FAForever/spooky-db/.github/workflows/generate.yaml@master
+        uses: FAForever/spooky-db/.github/workflows/generate.yaml@feature/deploy-workflow-02
+        with:
+            update: true
 
     deploy:
         needs: [update]
