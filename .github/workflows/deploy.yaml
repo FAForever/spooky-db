@@ -1,3 +1,23 @@
+# Copyright (c) 2024 Willem 'Jip' Wijnia
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
 name: deploy
 
 on:
@@ -5,18 +25,15 @@ on:
 
 jobs:
     update:
+        # https://docs.github.com/en/actions/using-workflows/reusing-workflows
         name: update blueprint information
-        uses: FAForever/spooky-db/.github/workflows/generate.yaml@feature/deploy-workflow-02
-        with:
-            update: true
+        uses: FAForever/spooky-db/.github/workflows/update.yaml@master
 
     deploy:
         needs: [update]
-        name: deploy application
+        name: deploy
         runs-on: ubuntu-latest
         steps:
-            # https://docs.github.com/en/actions/using-workflows/reusing-workflows
-
             # https://github.com/actions/checkout/tree/v4/
             - name: Checkout spooky db code
               uses: actions/checkout@v4
@@ -35,23 +52,23 @@ jobs:
                   path: gh-pages
                   ref: gh-pages
 
-            # - name: Installation
-            #   working-directory: spookydb
-            #   run: |
-            #       npm install
-            #       npm install bower
-            #       npm install grunt-cli
-            #       npx bower install
-
-            # - name: Building
-            #   working-directory: spookydb
-            #   run: |
-            #       grunt build
-
-            - name: Deploying
-              working-directory: gh-pages
+            - name: Installation
+              working-directory: spookydb
               run: |
-                  git log
+                  npm install
+                  npm install bower
+                  npm install grunt-cli
+                  npx bower install
+
+            - name: Building
+              working-directory: spookydb
+              run: |
+                  grunt build
+
+            # - name: Deploying
+            #   working-directory: gh-pages
+            #   run: |
+            #       git log
 
             - name: Uploading
               uses: actions/upload-artifact@v4
