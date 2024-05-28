@@ -1,11 +1,11 @@
-name: build
+name: deploy
 
 on:
     workflow_dispatch:
 
 jobs:
-    build:
-        name: build application
+    deploy:
+        name: deploy application
         runs-on: ubuntu-latest
         steps:
             # https://github.com/actions/checkout/tree/v4/
