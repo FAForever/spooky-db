@@ -14,6 +14,7 @@ unitDb.UnitDecorator = function(blueprint) {
             'RULEUC_Weapon': 'Base',
             'RULEUC_Sensor': 'Base',
             'RULEUC_Factory': 'Base',
+            'RULEUC_MilitaryStructure': 'Base',
             'RULEUC_Resource': 'Base',
             'RULEUC_MiscSupport': 'Base',
             'RULEUC_CounterMeasure': 'Base'
