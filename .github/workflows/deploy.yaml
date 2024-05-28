@@ -26,7 +26,7 @@ on:
 jobs:
     update:
         # https://docs.github.com/en/actions/using-workflows/reusing-workflows
-        name: update blueprint information
+        name: Update
         uses: FAForever/spooky-db/.github/workflows/update.yaml@master
 
     deploy:
@@ -59,16 +59,48 @@ jobs:
                   npm install grunt-cli
                   npx bower install
 
-            - name: Building
+            - name: Build
               run: |
                   grunt build
 
-            # - name: Deploying
-            #   working-directory: gh-pages
-            #   run: |
-            #       git log
+            - name: Format commit message
+              id: commit
+              working-directory: fa
+              run: |
+                  message=`git log -1 --pretty=format:%B`
+                  echo "message=$message" >> $GITHUB_OUTPUT
 
-            - name: Uploading
+            - name: Copy
+              run: |
+                  # remove old files as the hashes may not match
+                  rm -r gh-pages/css/*
+                  rm -r gh-pages/data/*
+                  rm -r gh-pages/img/*
+                  rm -r gh-pages/js/*
+                  rm -r gh-pages/views/*
+
+                  # copy over new files
+                  cp -r dist/* gh-pages/
+
+            - name: Deploy
+              working-directory: gh-pages
+              run: |
+                # Check for any differences between the working directory and the latest commit
+                if git diff --quiet; then
+                    echo "No changes to commit"
+                    exit 0
+                fi
+
+                # Configure git
+                git config user.email "administrator@faforever.com"
+                git config user.name "FAForever"
+
+                # Stage, commit and push the changes
+                git stage .
+                git commit -m '${{ steps.commit.outputs.message }}'
+                git log
+
+            - name: Upload
               uses: actions/upload-artifact@v4
               with:
                   name: spookydb-dist
