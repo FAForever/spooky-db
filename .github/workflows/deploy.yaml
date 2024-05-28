@@ -1,25 +1,23 @@
-name: build
+name: deploy
 
 on:
     workflow_dispatch:
 
 jobs:
-    build:
-        name: build application
+    update:
+        name: update blueprint information
+        uses: FAForever/spooky-db/.github/workflows/generate.yaml@main
+
+    deploy:
+        needs: [update]
+        name: deploy application
         runs-on: ubuntu-latest
         steps:
-            # https://github.com/actions/checkout/tree/v4/
-            - name: Checkout spooky db code
-              uses: actions/checkout@v4
-              with:
-                    path: spookydb
+            # https://docs.github.com/en/actions/using-workflows/reusing-workflows
 
             # https://github.com/actions/checkout/tree/v4/
             - name: Checkout spooky db code
               uses: actions/checkout@v4
-              with:
-                  path: gh-pages
-                  ref: gh-pages
 
             # https://github.com/actions/setup-node/tree/main
             - name: Use Node.js 20.x
@@ -27,6 +25,13 @@ jobs:
               with:
                   cache: npm
                   node-version: 20.x
+
+            # https://github.com/actions/checkout/tree/v4/
+            - name: Checkout spooky db code
+              uses: actions/checkout@v4
+              with:
+                  path: gh-pages
+                  ref: gh-pages
 
             # - name: Installation
             #   working-directory: spookydb
@@ -44,7 +49,7 @@ jobs:
             - name: Deploying
               working-directory: gh-pages
               run: |
-                git log
+                  git log
 
             - name: Uploading
               uses: actions/upload-artifact@v4
