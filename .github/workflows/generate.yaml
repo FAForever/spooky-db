@@ -62,6 +62,7 @@ jobs:
             - name: Prepare for the script
               shell: bash
               run: |
+                  echo ${{ github.event.inputs.update }} 
                   mkdir tools/temp
                   mkdir tools/temp/units
                   mkdir tools/temp/lua
@@ -88,14 +89,14 @@ jobs:
 
             - name: Store the game version
               id: gameVersionJSON # but it is a string here!
-              if: ${{ github.event.inputs.update == true }}
+              if: ${{ github.event.inputs.update == 'true' || github.event.inputs.update == true }}
               working-directory: app/data
               run: |
                   json=`cat ./version.json`
                   echo "json=$json" >> $GITHUB_OUTPUT
 
             - name: Update repository # but it is a string here!
-              if: ${{ github.event.inputs.update == true }}
+              if: ${{ github.event.inputs.update == 'true' || github.event.inputs.update == true }}
               working-directory: app/data
               run: |
                   git config user.email "administrator@faforever.com"
