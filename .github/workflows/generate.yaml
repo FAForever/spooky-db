@@ -114,9 +114,17 @@ jobs:
               if: ${{ github.event.inputs.update == 'true' || inputs.update == true }}
               working-directory: app/data
               run: |
+                  # Check for any differences between the working directory and the latest commit
+                  if git diff --quiet; then
+                      echo "No changes to commit"
+                      exit 0
+                  fi
+
+                  # Configure git
                   git config user.email "administrator@faforever.com"
                   git config user.name "FAForever"
 
+                  # Add and commit the changes
                   git stage .
                   git commit -m 'Update generated data to game version ${{ fromJson(steps.gameVersionJSON.outputs.json).version }}
 
@@ -124,6 +132,8 @@ jobs:
                   Commit hash of Nomads repository: ${{ steps.hashNomads.outputs.hash }}'
                   
                   git log
+
+
               # git push origin HEAD:master
 
               # git tag "${{ fromJson(steps.gameVersionJSON.outputs.json).version}}"
