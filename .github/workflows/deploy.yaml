@@ -71,7 +71,7 @@ jobs:
 
             - name: Copy
               run: |
-                  # remove old files as the hashes may not match
+                  # remove old files that have a hash in the name
                   rm -r gh-pages/css/*
                   rm -r gh-pages/data/*
                   rm -r gh-pages/img/*
@@ -84,26 +84,17 @@ jobs:
             - name: Deploy
               working-directory: gh-pages
               run: |
-                # Check for any differences between the working directory and the latest commit
-                if git diff --quiet; then
-                    echo "No changes to deploy"
-                    exit 0
-                fi
+                  # Check for any differences between the working directory and the latest commit
+                  if git diff --quiet; then
+                      echo "No changes to deploy"
+                      exit 0
+                  fi
 
-                # Configure git
-                git config user.email "administrator@faforever.com"
-                git config user.name "FAForever"
+                  # Configure git
+                  git config user.email "administrator@faforever.com"
+                  git config user.name "FAForever"
 
-                # Stage, commit and push the changes
-                git stage .
-                git commit -m '${{ steps.commit.outputs.message }}'
-
-                echo "${{ steps.commit.outputs.message }}"
-                git push origin HEAD:gh-pages
-
-            - name: Upload
-              uses: actions/upload-artifact@v4
-              with:
-                  name: spookydb-dist
-                  path: |
-                      gh-pages
+                  # Stage, commit and push the changes
+                  git stage .
+                  git commit -m 'Automated deployment of spooky db'
+                  git push origin HEAD:gh-pages
