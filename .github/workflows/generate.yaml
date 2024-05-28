@@ -62,7 +62,6 @@ jobs:
             - name: Prepare for the script
               shell: bash
               run: |
-                  echo ${{ inputs.update }} 
                   mkdir tools/temp
                   mkdir tools/temp/units
                   mkdir tools/temp/lua
@@ -92,7 +91,7 @@ jobs:
               if: ${{ github.event.inputs.update == 'true' || inputs.update == true }}
               working-directory: fa
               run: |
-                  json=`git rev-parse --verify HEAD`
+                  hash=`git rev-parse --verify HEAD`
                   echo "hash=$hash" >> $GITHUB_OUTPUT
 
             - name: Retrieve commit hash of Nomads repository
@@ -100,7 +99,7 @@ jobs:
               if: ${{ github.event.inputs.update == 'true' || inputs.update == true }}
               working-directory: nomads
               run: |
-                  json=`git rev-parse --verify HEAD`
+                  hash=`git rev-parse --verify HEAD`
                   echo "hash=$hash" >> $GITHUB_OUTPUT
 
             - name: Store the game version
