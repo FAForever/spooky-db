@@ -1,5 +1,5 @@
 {
-  "version": "3809",
+  "version": "3810",
   "units": [
     {
       "Categories": [
@@ -1860,17 +1860,17 @@
         },
         "ShieldGeneratorField": {
           "ShieldSize": 20,
-          "BuildCostEnergy": 70000,
-          "ShieldRegenRate": 67,
+          "BuildCostEnergy": 45000,
+          "ShieldRegenRate": 60,
           "Icon": "sgf",
           "MaintenanceConsumptionPerSecondEnergy": 250,
-          "ShieldRechargeTime": 60,
+          "ShieldRechargeTime": 45,
           "Slot": "Back",
           "ShieldRegenStartTime": 1,
-          "ShieldMaxHealth": 7000,
+          "ShieldMaxHealth": 5000,
           "Name": "Shield Generator Field",
-          "BuildCostMass": 2000,
-          "BuildTime": 1700
+          "BuildCostMass": 1400,
+          "BuildTime": 1500
         },
         "T3Engineering": {
           "Slot": "LCH",
@@ -2490,9 +2490,9 @@
         "BuildCostEnergy": 20
       },
       "General": {
-        "FactionName": "UEF",
-        "Icon": "land",
         "UnitName": "Calcicrete",
+        "Icon": "land",
+        "FactionName": "UEF",
         "Classification": "RULEUC_Resource"
       },
       "Defense": {
@@ -2555,9 +2555,7 @@
         "HealthMult": 0.9,
         "MassMult": 0.9
       },
-      "Physics": {
-        "TurnRate": 0
-      },
+      "Physics": {},
       "Display": {
         "Abilities": [
           "Air Staging"
@@ -4755,9 +4753,7 @@
           "Volatile"
         ]
       },
-      "Physics": {
-        "TurnRate": 0
-      },
+      "Physics": {},
       "Weapon": [
         {
           "Damage": 1500,
@@ -5985,9 +5981,9 @@
       "Description": "Stealth Field Generator",
       "BuildIconSortPriority": 190,
       "General": {
-        "FactionName": "UEF",
-        "Icon": "land",
         "UnitName": "Scattershield",
+        "Icon": "land",
+        "FactionName": "UEF",
         "Classification": "RULEUC_CounterMeasure"
       },
       "Economy": {
@@ -6064,9 +6060,7 @@
         "HealthMult": 0.9,
         "MassMult": 0.9
       },
-      "Physics": {
-        "TurnRate": 0
-      },
+      "Physics": {},
       "Display": {
         "Abilities": [
           "Engineering Suite",
@@ -6161,7 +6155,7 @@
           "Slot": "LCH",
           "BuildCostEnergy": 44700,
           "Icon": "acu",
-          "NewRateOfFire": 1.82
+          "NewRateOfFire": 2
         },
         "ResourceAllocation": {
           "Slot": "RCH",
@@ -7806,8 +7800,8 @@
       "BuildIconSortPriority": 40,
       "General": {
         "FactionName": "UEF",
-        "UnitName": "Mass Pump 3",
         "Icon": "amph",
+        "UnitName": "Mass Pump 3",
         "Classification": "RULEUC_Resource"
       },
       "Economy": {
@@ -9210,8 +9204,8 @@
         "Classification": "RULEUC_MilitaryShip"
       },
       "Physics": {
-        "TurnRate": 100,
-        "MaxSpeed": 4.5
+        "MaxSpeed": 4.5,
+        "TurnRate": 100
       },
       "Defense": {
         "Health": 2000,
@@ -9352,9 +9346,7 @@
         "Classification": "RULEUC_Resource"
       },
       "BuildIconSortPriority": 200,
-      "Physics": {
-        "TurnRate": 0
-      },
+      "Physics": {},
       "Defense": {
         "Health": 2500,
         "RegenRate": 0
@@ -9479,9 +9471,9 @@
         "BuildRate": 135
       },
       "Physics": {
-        "TurnRate": 30,
         "Elevation": 1,
-        "MaxSpeed": 1.75
+        "MaxSpeed": 1.75,
+        "TurnRate": 30
       },
       "Description": "Experimental Mobile Factory",
       "BuildIconSortPriority": 10,
@@ -9719,8 +9711,8 @@
         "FuelRechargeRate": 150,
         "TurnRate": 20,
         "Elevation": 75,
-        "FuelUseTime": 0,
-        "MaxSpeed": 10
+        "MaxSpeed": 10,
+        "FuelUseTime": 0
       },
       "Id": "XEA0002",
       "Wreckage": {
@@ -9820,8 +9812,8 @@
       ],
       "Description": "Experimental Aircraft Carrier",
       "Physics": {
-        "Elevation": -3.6,
         "TurnRate": 12,
+        "Elevation": -3.6,
         "MaxSpeed": 3.3
       },
       "StrategicIconName": "icon_experimental_generic",
@@ -12759,9 +12751,7 @@
         "HealthMult": 0.9,
         "MassMult": 0.9
       },
-      "Physics": {
-        "TurnRate": 0
-      },
+      "Physics": {},
       "Display": {
         "Abilities": [
           "Air Staging"
@@ -13065,7 +13055,7 @@
           "TurretPitchSpeed": 100,
           "MaxRadius": 37,
           "ProjectileId": "/projectiles/CDFRocketIridium02/CDFRocketIridium02_proj.bp",
-          "MuzzleVelocity": 20,
+          "MuzzleVelocity": 25,
           "RackFireTogether": false,
           "RackSalvoChargeTime": 0,
           "MuzzleSalvoSize": 3,
@@ -13308,7 +13298,7 @@
         "BuildTime": 4400,
         "BuildCostEnergy": 8800,
         "BuildCostMass": 1100,
-        "MaintenanceConsumptionPerSecondEnergy": 30
+        "MaintenanceConsumptionPerSecondEnergy": 45
       },
       "BuildIconSortPriority": 20,
       "StrategicIconName": "icon_sub2_antinavy",
@@ -14265,9 +14255,7 @@
         "VisionRadius": 4
       },
       "Display": {},
-      "Physics": {
-        "TurnRate": 0
-      },
+      "Physics": {},
       "BuildIconSortPriority": 30
     },
     {
@@ -15245,8 +15233,8 @@
         "BuildCostMass": 190
       },
       "Physics": {
-        "Elevation": 0.25,
         "TurnRate": 200,
+        "Elevation": 0.25,
         "MaxSpeed": 5
       },
       "Defense": {
@@ -16260,9 +16248,9 @@
       "Description": "Stealth Field Generator",
       "StrategicIconName": "icon_structure2_counterintel",
       "General": {
-        "FactionName": "Cybran",
-        "Icon": "land",
         "UnitName": "Twilight",
+        "Icon": "land",
+        "FactionName": "Cybran",
         "Classification": "RULEUC_CounterMeasure"
       },
       "Economy": {
@@ -16334,9 +16322,7 @@
         "BuildCostMass": 350,
         "BuildCostEnergy": 2100
       },
-      "Physics": {
-        "TurnRate": 0
-      },
+      "Physics": {},
       "Defense": {
         "Health": 500,
         "RegenRate": 0
@@ -16395,9 +16381,7 @@
         "BuildRate": 37,
         "BuildCostEnergy": 4200
       },
-      "Physics": {
-        "TurnRate": 0
-      },
+      "Physics": {},
       "Defense": {
         "Health": 1000,
         "RegenRate": 0
@@ -16455,9 +16439,7 @@
         "BuildCostMass": 1050,
         "BuildCostEnergy": 6300
       },
-      "Physics": {
-        "TurnRate": 0
-      },
+      "Physics": {},
       "Defense": {
         "Health": 2000,
         "RegenRate": 0
@@ -16828,9 +16810,7 @@
         "VisionRadius": 4
       },
       "Display": {},
-      "Physics": {
-        "TurnRate": 0
-      },
+      "Physics": {},
       "BuildIconSortPriority": 10
     },
     {
@@ -16956,8 +16936,8 @@
         "Health": 3000
       },
       "Physics": {
-        "TurnRate": 120,
-        "MaxSpeed": 3.8
+        "MaxSpeed": 3.8,
+        "TurnRate": 120
       },
       "Id": "URL0303",
       "Wreckage": {
@@ -17075,6 +17055,13 @@
           "FiringTolerance": 1,
           "TurretYawSpeed": 720,
           "WeaponCategory": "Defense"
+        },
+        {
+          "Damage": 0,
+          "WeaponCategory": "Death",
+          "DamageRadius": 10,
+          "DamageType": "EMP",
+          "DisplayName": "Death EMP"
         }
       ]
     },
@@ -17301,9 +17288,7 @@
         "VisionRadius": 4
       },
       "Display": {},
-      "Physics": {
-        "TurnRate": 0
-      },
+      "Physics": {},
       "BuildIconSortPriority": 20
     },
     {
@@ -17335,8 +17320,8 @@
       },
       "BuildIconSortPriority": 20,
       "Physics": {
-        "MaxSpeed": 2.4,
-        "TurnRate": 65
+        "TurnRate": 65,
+        "MaxSpeed": 2.4
       },
       "Economy": {
         "BuildTime": 4800,
@@ -17520,6 +17505,7 @@
       "StrategicIconName": "icon_bot3_antiair",
       "Weapon": [
         {
+          "TurretYawRange": 180,
           "RateOfFire": 10,
           "TurretYaw": 0,
           "RackBones": [
@@ -17537,15 +17523,13 @@
           "DisplayName": "Targeting Laser",
           "TurretPitchSpeed": 180,
           "ContinuousBeam": true,
-          "WeaponCategory": "Anti Air",
+          "MaxRadius": 62,
           "RackFireTogether": false,
           "RackSalvoChargeTime": 0,
           "MuzzleSalvoSize": 1,
           "BeamLifetime": 0,
-          "ProjectileLifetimeUsesMultiplier": 1.15,
           "MuzzleSalvoDelay": 0,
-          "MaxRadius": 62,
-          "TurretYawRange": 180,
+          "ProjectileLifetimeUsesMultiplier": 1.15,
           "RackSalvoReloadTime": 0,
           "TurretYawSpeed": 180
         },
@@ -18146,9 +18130,7 @@
         "VisionRadius": 4
       },
       "Display": {},
-      "Physics": {
-        "TurnRate": 0
-      },
+      "Physics": {},
       "BuildIconSortPriority": 30
     },
     {
@@ -18834,14 +18816,14 @@
             }
           ],
           "Damage": 6,
-          "ProjectileLifetime": 2,
+          "ProjectileLifetime": 2.4,
           "DamageType": "Normal",
           "TurretPitch": 0,
           "DisplayName": "Nanite Missile Launcher",
           "TurretPitchSpeed": 360,
           "WeaponCategory": "Anti Air",
           "ProjectileId": "/projectiles/CAAMissileNanite03/CAAMissileNanite03_proj.bp",
-          "MuzzleVelocity": 13,
+          "MuzzleVelocity": 22,
           "RackFireTogether": true,
           "RackSalvoChargeTime": 0,
           "MuzzleSalvoSize": 3,
@@ -19854,9 +19836,9 @@
       ],
       "Description": "Perimeter Monitoring System",
       "General": {
-        "FactionName": "Cybran",
-        "Icon": "land",
         "UnitName": "Soothsayer",
+        "Icon": "land",
+        "FactionName": "Cybran",
         "Classification": "RULEUC_Resource"
       },
       "BuildIconSortPriority": 200,
@@ -20077,8 +20059,8 @@
       "Description": "Experimental Spiderbot",
       "StrategicIconName": "icon_experimental_generic",
       "Physics": {
-        "TurnRate": 25,
-        "MaxSpeed": 2.5
+        "MaxSpeed": 2.5,
+        "TurnRate": 25
       },
       "Economy": {
         "BuildTime": 27500,
@@ -21012,9 +20994,9 @@
       "StrategicIconName": "icon_land1_intel",
       "BuildIconSortPriority": 20,
       "Physics": {
-        "TurnRate": 90,
         "Elevation": 0.25,
-        "MaxSpeed": 4.6
+        "MaxSpeed": 4.6,
+        "TurnRate": 90
       },
       "Defense": {
         "Health": 20,
@@ -23298,9 +23280,7 @@
         "HealthMult": 0.9,
         "MassMult": 0.9
       },
-      "Physics": {
-        "TurnRate": 0
-      },
+      "Physics": {},
       "Display": {
         "Abilities": [
           "Air Staging"
@@ -26235,9 +26215,9 @@
       "Description": "Stealth Field Generator",
       "BuildIconSortPriority": 200,
       "General": {
-        "FactionName": "Aeon",
-        "Icon": "land",
         "UnitName": "Veil",
+        "Icon": "land",
+        "FactionName": "Aeon",
         "Classification": "RULEUC_CounterMeasure"
       },
       "Economy": {
@@ -29056,9 +29036,9 @@
       "Description": "Heavy Shield Generator",
       "StrategicIconName": "icon_structure3_shield",
       "General": {
-        "FactionName": "Aeon",
-        "Icon": "land",
         "UnitName": "Radiance",
+        "Icon": "land",
+        "FactionName": "Aeon",
         "Classification": "RULEUC_MiscSupport"
       },
       "Economy": {
@@ -29259,9 +29239,9 @@
       ],
       "Description": "Quantum Optics Facility",
       "General": {
-        "FactionName": "Aeon",
-        "Icon": "land",
         "UnitName": "Eye of Rhianne",
+        "Icon": "land",
+        "FactionName": "Aeon",
         "Classification": "RULEUC_Resource"
       },
       "BuildIconSortPriority": 200,
@@ -29782,9 +29762,9 @@
         "Classification": "RULEUC_MilitaryShip"
       },
       "Physics": {
-        "TurnRate": 35,
         "Elevation": -5,
-        "MaxSpeed": 2.5
+        "MaxSpeed": 2.5,
+        "TurnRate": 35
       },
       "Economy": {
         "BuildTime": 38400,
@@ -29941,9 +29921,9 @@
       "BuildIconSortPriority": 140,
       "StrategicIconName": "icon_experimental_generic",
       "General": {
-        "FactionName": "Aeon",
-        "Icon": "land",
         "UnitName": "Paragon",
+        "Icon": "land",
+        "FactionName": "Aeon",
         "Classification": "RULEUC_Resource"
       },
       "Economy": {
@@ -30077,7 +30057,7 @@
           "MinRadius": 150,
           "MaxRadius": 4000,
           "ProjectileId": "/projectiles/AIFFragmentationSensorShell01/AIFFragmentationSensorShell01_proj.bp",
-          "MuzzleVelocity": 98,
+          "MuzzleVelocity": 150,
           "RackFireTogether": false,
           "RackSalvoChargeTime": 0,
           "TurretYaw": 0,
@@ -32386,9 +32366,9 @@
         "BuildCostEnergy": 20
       },
       "General": {
-        "UnitName": "Haas",
-        "Icon": "land",
         "FactionName": "Seraphim",
+        "Icon": "land",
+        "UnitName": "Haas",
         "Classification": "RULEUC_Resource"
       },
       "Defense": {
@@ -32571,9 +32551,7 @@
         "HealthMult": 0.9,
         "MassMult": 0.9
       },
-      "Physics": {
-        "TurnRate": 0
-      },
+      "Physics": {},
       "Display": {
         "Abilities": [
           "Air Staging"
@@ -32929,7 +32907,7 @@
       },
       "StrategicIconName": "icon_bot2_directfire",
       "Physics": {
-        "TurnRate": 45,
+        "TurnRate": 90,
         "MaxSpeed": 2.6
       },
       "Description": "Assault Bot",
@@ -33073,12 +33051,12 @@
               ]
             }
           ],
-          "Damage": 19.2,
+          "Damage": 20,
           "DamageType": "Normal",
           "TurretPitch": -20,
           "DisplayName": "Heavy Phasic Autogun",
           "TurretPitchSpeed": 360,
-          "MaxRadius": 22,
+          "MaxRadius": 24,
           "ProjectileId": "/projectiles/SDFHeavyPhasicAutogun02/SDFHeavyPhasicAutogun02_proj.bp",
           "MuzzleVelocity": 35,
           "RackFireTogether": false,
@@ -34091,9 +34069,9 @@
       },
       "Physics": {},
       "General": {
-        "FactionName": "Seraphim",
-        "Icon": "land",
         "UnitName": "Hyaliya",
+        "Icon": "land",
+        "FactionName": "Seraphim",
         "Classification": "RULEUC_Resource"
       },
       "Defense": {
@@ -35294,8 +35272,8 @@
         ]
       },
       "Physics": {
-        "Elevation": -2,
         "TurnRate": 60,
+        "Elevation": -2,
         "MaxSpeed": 2.8
       },
       "StrategicIconName": "icon_structure2_intel"
@@ -35324,9 +35302,9 @@
       "Description": "Stealth Field Generator",
       "BuildIconSortPriority": 200,
       "General": {
-        "FactionName": "Seraphim",
-        "Icon": "land",
         "UnitName": "Sele-ioz",
+        "Icon": "land",
+        "FactionName": "Seraphim",
         "Classification": "RULEUC_CounterMeasure"
       },
       "Economy": {
@@ -35992,7 +35970,7 @@
       "StrategicIconName": "icon_land3_directfire",
       "BuildIconSortPriority": 20,
       "Physics": {
-        "TurnRate": 75,
+        "TurnRate": 90,
         "MaxSpeed": 2.85
       },
       "Intel": {
@@ -36053,11 +36031,11 @@
           "MuzzleSalvoDelay": 0,
           "ProjectileLifetimeUsesMultiplier": 1.15,
           "ProjectilesPerOnFire": 1,
-          "TurretYawSpeed": 120,
+          "TurretYawSpeed": 170,
           "TurretYawRange": 180,
           "RackSalvoReloadTime": 0,
           "FiringTolerance": 2,
-          "MaxRadius": 20,
+          "MaxRadius": 22,
           "WeaponNumber": 2
         },
         {
@@ -36086,7 +36064,7 @@
           "MuzzleSalvoSize": 1,
           "MuzzleSalvoDelay": 0,
           "ProjectileLifetimeUsesMultiplier": 1.15,
-          "TurretYawSpeed": 90,
+          "TurretYawSpeed": 125,
           "TurretYawRange": 180,
           "FiringTolerance": 1,
           "RackSalvoReloadTime": 0,
@@ -36858,7 +36836,7 @@
             }
           ],
           "Damage": 200,
-          "BeamCollisionDelay": 0.01,
+          "BeamCollisionDelay": 0,
           "DamageType": "Normal",
           "TurretPitch": 30,
           "TurretPitchRange": 180,
@@ -37064,8 +37042,8 @@
       "StrategicIconName": "icon_structure3_mass",
       "General": {
         "FactionName": "Seraphim",
-        "UnitName": "Hyalatoh",
         "Icon": "amph",
+        "UnitName": "Hyalatoh",
         "Classification": "RULEUC_Resource"
       },
       "Economy": {
@@ -37229,9 +37207,9 @@
       "BuildIconSortPriority": 50,
       "StrategicIconName": "icon_structure3_mass",
       "General": {
-        "FactionName": "Seraphim",
-        "Icon": "land",
         "UnitName": "Hyaliya",
+        "Icon": "land",
+        "FactionName": "Seraphim",
         "Classification": "RULEUC_Resource"
       },
       "Economy": {
@@ -38321,7 +38299,7 @@
           "RackSalvoChargeTime": 0,
           "MuzzleSalvoSize": 1,
           "MuzzleSalvoDelay": 0,
-          "FiringRandomness": 3,
+          "FiringRandomness": 0,
           "RackSalvoReloadTime": 0,
           "FiringTolerance": 6,
           "MaxRadius": 90
