@@ -22,6 +22,7 @@ name: generate
 
 on:
     workflow_dispatch:
+    workflow_call:
 
 jobs:
     generate:
@@ -88,6 +89,6 @@ jobs:
             - name: Create artifact
               uses: actions/upload-artifact@v4
               with:
-                  name: Generated files
+                  name: spookydb-generated-files
                   path: |
                       app/data

@@ -21,9 +21,11 @@
 name: build
 
 on:
-    workflow_dispatch:
+    push:
 
 jobs:
+    call-workflow-2-in-local-repo:
+      uses: ./.github/workflows/generate.yaml
     build:
         name: build application
         runs-on: ubuntu-latest
@@ -31,6 +33,13 @@ jobs:
             # https://github.com/actions/checkout/tree/v4/
             - name: Checkout spooky db code
               uses: actions/checkout@v4
+
+            - uses: actions/download-artifact@v4
+              with:
+                name: spookydb-generated-files
+
+            - name: Display structure of downloaded files
+              run: ls -R
 
             # https://github.com/actions/setup-node/tree/main
             - name: Use Node.js 20.x
