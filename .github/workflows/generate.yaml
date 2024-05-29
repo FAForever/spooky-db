@@ -20,7 +20,8 @@
 
 name: generate
 
-on: push
+on:
+    workflow_dispatch:
 
 jobs:
     generate:
