@@ -27,6 +27,7 @@ jobs:
     call-workflow-generate-in-local-repo:
       uses: ./.github/workflows/generate.yaml
     build:
+        needs: [call-workflow-generate-in-local-repo]
         name: build application
         runs-on: ubuntu-latest
         steps:
