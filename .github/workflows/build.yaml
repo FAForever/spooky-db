@@ -24,7 +24,7 @@ on:
     push:
 
 jobs:
-    call-workflow-2-in-local-repo:
+    call-workflow-generate-in-local-repo:
       uses: ./.github/workflows/generate.yaml
     build:
         name: build application
