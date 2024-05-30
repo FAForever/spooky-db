@@ -39,9 +39,6 @@ jobs:
               with:
                 name: spookydb-generated-files
 
-            - name: Display structure of downloaded files
-              run: ls ./app/data -l
-
             # https://github.com/actions/setup-node/tree/main
             - name: Use Node.js 20.x
               uses: actions/setup-node@v4
