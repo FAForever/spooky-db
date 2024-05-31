@@ -49,6 +49,7 @@ jobs:
 
             - name: Install
               run: |
+                  git diff
                   npm install
                   npm install bower
                   npm install grunt-cli
