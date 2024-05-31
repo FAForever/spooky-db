@@ -24,20 +24,18 @@ on:
     workflow_dispatch:
 
 jobs:
-    update:
-        # https://docs.github.com/en/actions/using-workflows/reusing-workflows
-        name: Update
-        uses: FAForever/spooky-db/.github/workflows/update.yaml@master
+    call-workflow-build-in-local-repo:
+      uses: ./.github/workflows/build.yaml
 
     deploy:
-        needs: [update]
+        needs: [call-workflow-build-in-local-repo]
         name: deploy
         runs-on: ubuntu-latest
         steps:
-            # https://github.com/actions/checkout/tree/v4/
-            - name: Checkout spooky db code
-              uses: actions/checkout@v4
-
+            - uses: actions/download-artifact@v4
+              with:
+                name: spookydb-dist
+            
             # https://github.com/actions/setup-node/tree/main
             - name: Use Node.js 20.x
               uses: actions/setup-node@v4
