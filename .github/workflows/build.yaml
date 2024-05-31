@@ -23,22 +23,25 @@ name: build
 on:
     workflow_dispatch:
     workflow_call:
+    push:
 
 jobs:
-    call-workflow-generate-in-local-repo:
-      uses: ./.github/workflows/generate.yaml
+    update:
+        uses: ./.github/workflows/generate.yaml
     build:
-        needs: [call-workflow-generate-in-local-repo]
+        needs: [update]
         name: build application
         runs-on: ubuntu-latest
         steps:
             # https://github.com/actions/checkout/tree/v4/
             - name: Checkout spooky db code
               uses: actions/checkout@v4
+              with: 
+                  ref: master
 
             - uses: actions/download-artifact@v4
               with:
-                name: spookydb-generated-files
+                  name: spookydb-generated-files
 
             # https://github.com/actions/setup-node/tree/main
             - name: Use Node.js 20.x
