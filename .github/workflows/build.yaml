@@ -39,13 +39,12 @@ jobs:
               with: 
                   ref: master
 
-            - name: Remove old data
+            - name: Remove existing unit information
               run: |
                 rm app/data/*.json
-                ls -R
-                git diff
                 
-            - uses: actions/download-artifact@v4
+            - name: Download recent unit information
+              uses: actions/download-artifact@v4
               with:
                   name: spookydb-generated-files
                   path: app/data
@@ -59,8 +58,6 @@ jobs:
 
             - name: Install
               run: |
-                  ls -R
-                  git diff
                   npm install
                   npm install bower
                   npm install grunt-cli
