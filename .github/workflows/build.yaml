@@ -42,6 +42,7 @@ jobs:
             - uses: actions/download-artifact@v4
               with:
                   name: spookydb-generated-files
+                  path: app/data
 
             # https://github.com/actions/setup-node/tree/main
             - name: Use Node.js 20.x
@@ -52,6 +53,7 @@ jobs:
 
             - name: Install
               run: |
+                  ls -R
                   git diff
                   npm install
                   npm install bower
