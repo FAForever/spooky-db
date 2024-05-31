@@ -86,9 +86,7 @@ jobs:
               shell: bash
               working-directory: tools # script expects this directory
               run: |
-                  echo "pre-test"
                   pwsh ./index.ps1 -target ../app -inputUnits "temp/units" -inputLua "temp/lua"
-                  echo "post-test"
 
             # Store the created files
 
