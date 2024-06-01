@@ -35,13 +35,13 @@ jobs:
             - uses: actions/download-artifact@v4
               with:
                 name: spookydb-dist
-                repository: FAForever/spooky-db
                 path: dist
 
             # https://github.com/actions/checkout/tree/v4/
             - name: Checkout spooky db code
               uses: actions/checkout@v4
               with:
+                  repository: FAForever/spooky-db
                   path: gh-pages
                   ref: gh-pages
 
