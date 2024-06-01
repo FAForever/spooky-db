@@ -11,6 +11,10 @@ param (
     [string]$inputLua = ""
 )
 
+Write-Output "target: $target"
+Write-Output "inputUnits: $inputUnits"
+Write-Output "inputLua: $inputLua"
+
 $env:Path -split ';'
 
 Function Create-UnitIndex {
@@ -21,29 +25,29 @@ Function Create-UnitIndex {
 
     $version = lua getVersion.lua "$luaVersionFile"
 
-    echo '{'
-    echo "`"version`": `"$version`","
+    Write-Output '{'
+    Write-Output "`"version`": `"$version`","
 
     $blueprints = Get-ChildItem "$unitDir\**\*_unit.bp"
     $count = 1
     $total = $blueprints.Count
 
-    echo '"units": '
-    echo '['
+    Write-Output '"units": '
+    Write-Output '['
     $blueprints | Foreach-Object {
         $file = $_.BaseName
         Write-Progress -Activity "Parsing $file" -Status "($count/$total)"
 
         lua blueprint2json.lua $_.FullName
         if ($count -lt $total) {
-            echo ','
+            Write-Output ','
         }
 
         $count++
     }
-    echo ']'
+    Write-Output ']'
 
-    echo '}'
+    Write-Output '}'
 }
 
 Function Create-Version {
@@ -53,7 +57,7 @@ Function Create-Version {
 
     $version = lua getVersion.lua "$luaVersionFile"
 
-    echo "{ `"version`": `"$version`" }"
+    Write-Output "{ `"version`": `"$version`" }"
 }
 
 Function Run {
