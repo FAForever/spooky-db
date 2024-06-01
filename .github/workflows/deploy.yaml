@@ -38,6 +38,9 @@ jobs:
             # https://github.com/actions/checkout/tree/v4/
             - name: Checkout spooky db code
               uses: actions/checkout@v4
+              with:
+                  repository: FAForever/spooky-db
+                  ref: master
 
             # https://github.com/actions/setup-node/tree/main
             - name: Use Node.js 20.x
@@ -50,6 +53,7 @@ jobs:
             - name: Checkout spooky db code
               uses: actions/checkout@v4
               with:
+                  repository: FAForever/spooky-db
                   path: gh-pages
                   ref: gh-pages
 
