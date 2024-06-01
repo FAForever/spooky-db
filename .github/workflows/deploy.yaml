@@ -35,13 +35,6 @@ jobs:
             - uses: actions/download-artifact@v4
               with:
                 name: spookydb-dist
-            
-            # https://github.com/actions/setup-node/tree/main
-            - name: Use Node.js 20.x
-              uses: actions/setup-node@v4
-              with:
-                  cache: npm
-                  node-version: 20.x
 
             # https://github.com/actions/checkout/tree/v4/
             - name: Checkout spooky db code
@@ -49,17 +42,6 @@ jobs:
               with:
                   path: gh-pages
                   ref: gh-pages
-
-            - name: Install
-              run: |
-                  npm install
-                  npm install bower
-                  npm install grunt-cli
-                  npx bower install
-
-            - name: Build
-              run: |
-                  grunt build
 
             - name: Format commit message
               id: commit
