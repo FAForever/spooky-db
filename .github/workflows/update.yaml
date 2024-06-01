@@ -32,7 +32,10 @@ jobs:
         steps:
             - name: Checkout spooky db code
               uses: actions/checkout@v4
-
+              with:
+                repository: FAForever/spooky-db
+                ref: master
+                
             - name: Checkout FAForever blueprints and lua files
               uses: actions/checkout@v4
               with:
