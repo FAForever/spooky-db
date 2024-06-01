@@ -24,17 +24,18 @@ on:
     workflow_dispatch:
 
 jobs:
-    call-workflow-build-in-local-repo:
+    build:
       uses: ./.github/workflows/build.yaml
 
     deploy:
-        needs: [call-workflow-build-in-local-repo]
+        needs: [build]
         name: deploy
         runs-on: ubuntu-latest
         steps:
             - uses: actions/download-artifact@v4
               with:
                 name: spookydb-dist
+                repository: FAForever/spooky-db
                 path: dist
 
             # https://github.com/actions/checkout/tree/v4/
@@ -43,12 +44,6 @@ jobs:
               with:
                   path: gh-pages
                   ref: gh-pages
-
-            - name: Format commit message
-              id: commit
-              run: |
-                  message=`git log -1 --pretty=format:%B`
-                  echo "message=$message" >> $GITHUB_OUTPUT
 
             - name: Copy
               run: |
