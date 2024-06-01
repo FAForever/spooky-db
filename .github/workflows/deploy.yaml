@@ -35,6 +35,7 @@ jobs:
             - uses: actions/download-artifact@v4
               with:
                 name: spookydb-dist
+                path: dist
 
             # https://github.com/actions/checkout/tree/v4/
             - name: Checkout spooky db code
