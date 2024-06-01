@@ -68,12 +68,6 @@ jobs:
               run: |
                   grunt build
 
-            - name: Format commit message
-              id: commit
-              run: |
-                  message=`git log -1 --pretty=format:%B`
-                  echo "message=$message" >> $GITHUB_OUTPUT
-
             - name: Copy
               run: |
                   # remove old files that have a hash in the name
