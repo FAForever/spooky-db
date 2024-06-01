@@ -21,34 +21,21 @@
 name: deploy
 
 on:
-    workflow_call:
     workflow_dispatch:
 
 jobs:
-    update:
-        # https://docs.github.com/en/actions/using-workflows/reusing-workflows
-        name: Update
-        uses: FAForever/spooky-db/.github/workflows/update.yaml@master
+    build:
+      uses: ./.github/workflows/build.yaml
 
     deploy:
+        needs: [build]
         name: deploy
-        needs: [update]
         runs-on: ubuntu-latest
-        permissions: write-all
         steps:
-            # https://github.com/actions/checkout/tree/v4/
-            - name: Checkout spooky db code
-              uses: actions/checkout@v4
+            - uses: actions/download-artifact@v4
               with:
-                  repository: FAForever/spooky-db
-                  ref: master
-
-            # https://github.com/actions/setup-node/tree/main
-            - name: Use Node.js 20.x
-              uses: actions/setup-node@v4
-              with:
-                  cache: npm
-                  node-version: 20.x
+                name: spookydb-dist
+                path: dist
 
             # https://github.com/actions/checkout/tree/v4/
             - name: Checkout spooky db code
@@ -57,17 +44,6 @@ jobs:
                   repository: FAForever/spooky-db
                   path: gh-pages
                   ref: gh-pages
-
-            - name: Install
-              run: |
-                  npm install
-                  npm install bower
-                  npm install grunt-cli
-                  npx bower install
-
-            - name: Build
-              run: |
-                  grunt build
 
             - name: Copy
               run: |
