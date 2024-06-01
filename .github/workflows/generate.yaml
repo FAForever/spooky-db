@@ -22,6 +22,7 @@ name: generate
 
 on:
     workflow_dispatch:
+    workflow_call:
 
 jobs:
     generate:
@@ -29,14 +30,18 @@ jobs:
         permissions: write-all
         runs-on: ubuntu-latest
         steps:
+            # Checking repositories
             - name: Checkout spooky db code
               uses: actions/checkout@v4
+              with:
+                  ref: master
 
             - name: Checkout FAForever blueprints and lua files
               uses: actions/checkout@v4
               with:
                   repository: FAForever/fa
                   path: fa
+                  ref: deploy/faf
                   sparse-checkout-cone-mode: false
                   sparse-checkout: |
                       *.bp
@@ -47,6 +52,7 @@ jobs:
               with:
                   repository: FAForever/nomads
                   path: nomads
+                  ref: master
                   sparse-checkout-cone-mode: false
                   sparse-checkout: |
                       *.bp
@@ -77,10 +83,9 @@ jobs:
                   mv fa/lua/version.lua tools/temp/lua/version.lua
 
             - name: Run the script
-              shell: pwsh
+              shell: bash
               working-directory: tools # script expects this directory
               run: |
-                  lua -v
                   pwsh ./index.ps1 -target ../app -inputUnits "temp/units" -inputLua "temp/lua"
 
             # Store the created files
@@ -88,6 +93,6 @@ jobs:
             - name: Create artifact
               uses: actions/upload-artifact@v4
               with:
-                  name: Generated files
+                  name: spookydb-generated-files
                   path: |
                       app/data
