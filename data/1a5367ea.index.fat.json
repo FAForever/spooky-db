@@ -1,5 +1,5 @@
 {
-  "version": "3821",
+  "version": "3822",
   "units": [
     {
       "Categories": [
@@ -3237,7 +3237,7 @@
           },
           "TurretPitch": 45,
           "CannotAttackGround": true,
-          "TurretPitchRange": 40,
+          "TurretPitchRange": 45,
           "DisplayName": "Linked Railgun",
           "TurretPitchSpeed": 180,
           "TurretBoneYaw": "Back_Turret",
@@ -4590,7 +4590,7 @@
           },
           "TurretPitch": 45,
           "CannotAttackGround": true,
-          "TurretPitchRange": 40,
+          "TurretPitchRange": 45,
           "DisplayName": "Linked Railgun",
           "TurretPitchSpeed": 180,
           "TurretBoneYaw": "Turret",
@@ -6282,9 +6282,9 @@
           "RULEUCC_Repair": true,
           "RULEUCC_Reclaim": true
         },
-        "TeleportDelay": 15,
+        "TeleportDelay": 20,
         "QuickSelectPriority": 1,
-        "TeleportFlatEnergyCost": 75000,
+        "TeleportFlatEnergyCost": 100000,
         "BuildBones": {
           "AimBone": "Left_Arm_Muzzle",
           "BuildEffectBones": [
@@ -9946,13 +9946,13 @@
       "AverageDensity": 2000,
       "Description": "Torpedo Boat",
       "Economy": {
-        "BuildTime": 3240,
-        "BuildCostEnergy": 6480,
-        "BuildCostMass": 810
+        "BuildTime": 3000,
+        "BuildCostEnergy": 6000,
+        "BuildCostMass": 750
       },
-      "LifeBarSize": 0.5,
+      "LifeBarSize": 0.7,
       "BuildIconSortPriority": 20,
-      "LifeBarOffset": 0.7,
+      "LifeBarOffset": 0.8,
       "StrategicIconName": "icon_ship2_antinavy",
       "General": {
         "UnitName": "Cooper",
@@ -9973,7 +9973,7 @@
         "SizeX": 3,
         "SizeZ": 3
       },
-      "SizeZ": 2,
+      "SizeZ": 2.2,
       "Physics": {
         "TurnRate": 100,
         "MaxSteerForce": 5,
@@ -10026,13 +10026,13 @@
       "LifeBarHeight": 0.075,
       "Id": "XES0102",
       "Intel": {
-        "SonarRadius": 36,
+        "SonarRadius": 72,
         "WaterVisionRadius": 56,
         "VisionRadius": 32
       },
-      "SizeX": 0.75,
-      "SizeY": 0.925,
-      "SelectionSizeZ": 1.3,
+      "SizeX": 0.8,
+      "SizeY": 1,
+      "SelectionSizeZ": 1.4,
       "CollisionOffsetY": -0.4,
       "Veteran": {
         "Level2": 8,
@@ -10041,9 +10041,9 @@
         "Level4": 16,
         "Level5": 20
       },
-      "SelectionSizeX": 0.36,
+      "SelectionSizeX": 0.4,
       "Display": {
-        "UniformScale": 0.065,
+        "UniformScale": 0.07,
         "Abilities": [
           "Sonar",
           "Torpedoes",
@@ -10117,7 +10117,7 @@
       "Weapon": [
         {
           "Label": "Torpedo01",
-          "RateOfFire": 0.3030303030303,
+          "RateOfFire": 0.3125,
           "TurretYaw": 0,
           "RackBones": [
             {
@@ -10927,7 +10927,7 @@
               "Cue": "UEA0203_Riot_Gun"
             }
           },
-          "TurretPitch": -20,
+          "TurretPitch": -40,
           "AutoInitiateAttackCommand": true,
           "DisplayName": "Hells Fury Riot Gun",
           "TurretPitchSpeed": 360,
@@ -10965,7 +10965,7 @@
           "RackSalvoReloadTime": 0,
           "RackReloadTimeout": 10,
           "FiringTolerance": 2,
-          "TurretPitchRange": 60,
+          "TurretPitchRange": 90,
           "TurretDualManipulators": false,
           "TurretBonePitch": "Muzzle",
           "Turreted": true,
@@ -11044,17 +11044,17 @@
       },
       "SizeZ": 5.4,
       "Physics": {
-        "TurnRate": 50,
-        "MaxSteerForce": 5,
+        "TurnRate": 55,
+        "MaxSteerForce": 5.5,
         "MeshExtentsX": 1,
         "DragCoefficient": 0.2,
-        "MaxAcceleration": 5,
-        "MaxBrake": 5,
-        "MaxSpeed": 5,
+        "MaxAcceleration": 5.5,
+        "MaxBrake": 5.5,
+        "MaxSpeed": 5.5,
         "MeshExtentsY": 3,
         "TurnRadius": 15,
         "BackUpDistance": 5,
-        "MaxSpeedReverse": 5,
+        "MaxSpeedReverse": 5.5,
         "CatchUpAcc": 10,
         "MotionType": "RULEUMT_Water",
         "MeshExtentsZ": 6.5
@@ -11062,10 +11062,10 @@
       "Defense": {
         "ArmorType": "Normal",
         "SurfaceThreatLevel": 23,
-        "Health": 8000,
+        "Health": 7200,
         "EconomyThreatLevel": 46,
         "SubThreatLevel": 3,
-        "MaxHealth": 8000,
+        "MaxHealth": 7200,
         "AirThreatLevel": 1
       },
       "Audio": {
@@ -11231,7 +11231,7 @@
               "RackBone": "Front_Turret01_Barrel02"
             }
           ],
-          "Damage": 275,
+          "Damage": 305,
           "DamageType": "Normal",
           "Audio": {
             "BarrelStart": {
@@ -12079,7 +12079,7 @@
           "MinRadius": 2,
           "MaxRadius": 60,
           "ProjectileId": "/projectiles/TDPhalanx01/TDPhalanx01_proj.bp",
-          "MuzzleVelocity": 100,
+          "MuzzleVelocity": 120,
           "RackFireTogether": false,
           "RackSalvoChargeTime": 0,
           "TurretBoneMuzzle": "Center_Turret_Muzzle",
@@ -12099,7 +12099,7 @@
           "WeaponRepackTimeout": 0,
           "TargetType": "RULEWTT_Projectile",
           "RackSalvoReloadTime": 0,
-          "FiringTolerance": 5,
+          "FiringTolerance": 0,
           "TurretYawSpeed": 720,
           "TurretDualManipulators": false,
           "TurretBonePitch": "Center_Turret_Barrel",
@@ -16338,7 +16338,7 @@
           },
           "TurretPitch": 35,
           "CannotAttackGround": true,
-          "TurretPitchRange": 45,
+          "TurretPitchRange": 55,
           "DisplayName": "Fragmentation Flak",
           "TurretPitchSpeed": 180,
           "TurretBoneYaw": "Turret",
@@ -17348,7 +17348,7 @@
           "MinRadius": 2,
           "WeaponCategory": "Defense",
           "ProjectileId": "/projectiles/TDPhalanx01/TDPhalanx01_proj.bp",
-          "ProjectileLifetimeUsesMultiplier": 2,
+          "ProjectileLifetimeUsesMultiplier": 2.5,
           "MuzzleVelocity": 120,
           "RackFireTogether": false,
           "RackSalvoChargeTime": 0,
@@ -20934,7 +20934,7 @@
           "WeaponCategory": "Defense",
           "ProjectileId": "/projectiles/TDPhalanx01/TDPhalanx01_proj.bp",
           "BallisticArc": "RULEUBA_None",
-          "MuzzleVelocity": 100,
+          "MuzzleVelocity": 120,
           "RackFireTogether": false,
           "RackSalvoChargeTime": 0,
           "TurretBoneMuzzle": "Right_Turret02_Muzzle",
@@ -20947,7 +20947,7 @@
           "RackSalvoReloadTime": 0,
           "RackReloadTimeout": 0,
           "MuzzleSalvoDelay": 0,
-          "ProjectileLifetimeUsesMultiplier": 1.1,
+          "ProjectileLifetimeUsesMultiplier": 1.5,
           "TargetResetWhenReady": true,
           "TargetRestrictDisallow": "UNTARGETABLE,STRATEGIC",
           "CollideFriendly": false,
@@ -20955,7 +20955,7 @@
           "WeaponRepackTimeout": 2,
           "TargetType": "RULEWTT_Projectile",
           "RackRecoilDistance": 0,
-          "FiringTolerance": 5,
+          "FiringTolerance": 0,
           "TurretYawRange": 180,
           "TurretDualManipulators": false,
           "TurretBonePitch": "Right_Turret02_Barrel",
@@ -21358,7 +21358,7 @@
           "MinRadius": 2,
           "WeaponCategory": "Defense",
           "ProjectileId": "/projectiles/TDPhalanx01/TDPhalanx01_proj.bp",
-          "MuzzleVelocity": 100,
+          "MuzzleVelocity": 120,
           "RackFireTogether": false,
           "RackSalvoChargeTime": 0,
           "TurretBoneMuzzle": "Front_Turret01_Barrel01",
@@ -21370,7 +21370,7 @@
           "RackRecoilDistance": 0,
           "RackReloadTimeout": 0,
           "MuzzleSalvoDelay": 0,
-          "ProjectileLifetimeUsesMultiplier": 1.1,
+          "ProjectileLifetimeUsesMultiplier": 1.5,
           "TurretYawSpeed": 180,
           "TurretYawRange": 180,
           "TargetRestrictDisallow": "UNTARGETABLE,STRATEGIC",
@@ -21378,7 +21378,7 @@
           "CollideFriendly": false,
           "TargetRestrictOnlyAllow": "TACTICAL,MISSILE",
           "TargetType": "RULEWTT_Projectile",
-          "FiringTolerance": 5,
+          "FiringTolerance": 0,
           "TargetResetWhenReady": true,
           "TurretDualManipulators": false,
           "TurretBonePitch": "Front_Turret01_Barrel01",
@@ -21694,7 +21694,7 @@
           },
           "TurretPitch": 0,
           "CannotAttackGround": true,
-          "TurretPitchRange": 30,
+          "TurretPitchRange": 60,
           "DisplayName": "Gatling Plasma Cannon",
           "TurretPitchSpeed": 180,
           "TurretBoneYaw": "Turret",
@@ -27278,12 +27278,12 @@
       "AverageDensity": 15000,
       "Description": "Heavy Artillery Installation",
       "Economy": {
-        "BuildTime": 115000,
-        "BuildCostMass": 72000,
+        "BuildTime": 121400,
+        "BuildCostMass": 76000,
         "RebuildBonusIds": [
           "ueb2302"
         ],
-        "BuildCostEnergy": 1350000
+        "BuildCostEnergy": 1424000
       },
       "LifeBarOffset": 2.35,
       "General": {
@@ -27417,7 +27417,7 @@
         {
           "DamageRadius": 6,
           "TurretYawRange": 180,
-          "RateOfFire": 0.1,
+          "RateOfFire": 0.075187969924812,
           "ProjectilesPerOnFire": 1,
           "CameraShakeDuration": 0.5,
           "DamageFriendly": true,
@@ -27432,7 +27432,7 @@
               "TelescopeRecoilDistance": -20
             }
           ],
-          "Damage": 5500,
+          "Damage": 7840,
           "ProjectileLifetime": 120,
           "DamageType": "Normal",
           "Audio": {
@@ -27461,7 +27461,7 @@
           "TurretBoneYaw": "Turret",
           "RackSalvoSize": 1,
           "RangeCategory": "UWRC_IndirectFire",
-          "FiringRandomness": 0.525,
+          "FiringRandomness": 0.467,
           "TurretYaw": 0,
           "AboveWaterTargetsOnly": true,
           "RackSlavedToTurret": false,
@@ -34685,7 +34685,7 @@
           },
           "TurretPitch": 45,
           "CannotAttackGround": true,
-          "TurretPitchRange": 40,
+          "TurretPitchRange": 45,
           "DisplayName": "Electron Autocannon",
           "TurretPitchSpeed": 180,
           "TurretBoneYaw": "Back_Turret_AA",
@@ -35004,7 +35004,7 @@
               "Cue": "XRA0105_Hvy_Laser_Autogun"
             }
           },
-          "TurretPitch": -20,
+          "TurretPitch": -40,
           "AutoInitiateAttackCommand": true,
           "DisplayName": "Heavy Laser Autogun",
           "TurretPitchSpeed": 360,
@@ -35042,7 +35042,7 @@
           "RackSalvoReloadTime": 0,
           "TargetRestrictDisallow": "HIGHALTAIR, UNTARGETABLE",
           "FiringTolerance": 2,
-          "TurretPitchRange": 60,
+          "TurretPitchRange": 90,
           "TurretDualManipulators": false,
           "TurretBonePitch": "Laser_Muzzle",
           "Turreted": true,
@@ -35630,7 +35630,7 @@
           },
           "TurretPitch": 35,
           "CannotAttackGround": true,
-          "TurretPitchRange": 40,
+          "TurretPitchRange": 55,
           "DisplayName": "Nanodart Launcher",
           "TurretPitchSpeed": 180,
           "TurretBoneYaw": "Turret",
@@ -36879,7 +36879,7 @@
           "UpgradeEffectBones": [
             "Right_Upgrade",
             "Right_Turret",
-            "Right_Muzzle_02"
+            "Turret_Muzzle_02"
           ],
           "BuildCostEnergy": 24000,
           "BuildTime": 800,
@@ -36917,7 +36917,7 @@
           "UpgradeEffectBones": [
             "Right_Upgrade",
             "Right_Turret",
-            "Right_Muzzle_02"
+            "Turret_Muzzle_02"
           ],
           "NewBuildRate": 42,
           "BuildCostEnergy": 21000,
@@ -37062,7 +37062,7 @@
           "UpgradeEffectBones": [
             "Right_Upgrade",
             "Right_Turret",
-            "Right_Muzzle_02"
+            "Turret_Muzzle_02"
           ],
           "BuildCostEnergy": 50000,
           "BuildCostMass": 2400,
@@ -37263,9 +37263,9 @@
           "RULEUCC_Repair": true,
           "RULEUCC_Reclaim": true
         },
-        "TeleportDelay": 15,
+        "TeleportDelay": 20,
         "QuickSelectPriority": 1,
-        "TeleportFlatEnergyCost": 75000,
+        "TeleportFlatEnergyCost": 100000,
         "BuildBones": {
           "AimBone": 0,
           "BuildEffectBones": [
@@ -43279,11 +43279,10 @@
         },
         {
           "Label": "RedirectMissile",
-          "TargetCheckInterval": 0.3,
-          "RateOfFire": 0.25,
+          "TargetCheckInterval": 0.1,
+          "RateOfFire": 0.52631578947368,
           "DisableWhileReloading": true,
           "TurretYaw": 0,
-          "MaxHeightDiff": 8,
           "RackBones": [
             {
               "MuzzleBones": [
@@ -43295,7 +43294,7 @@
           "Damage": 1,
           "DamageType": "Normal",
           "TurretPitch": 0,
-          "TurretPitchRange": 70,
+          "TurretPitchRange": 80,
           "DisplayName": "Missile Deflector",
           "TurretPitchSpeed": 180,
           "TurretBoneYaw": "zapper",
@@ -43303,7 +43302,7 @@
           "RangeCategory": "UWRC_Countermeasure",
           "RackSlavedToTurret": false,
           "MinRadius": 6,
-          "MaxRadius": 20,
+          "MaxRadius": 44,
           "TargetType": "RULEWTT_Projectile",
           "RackFireTogether": false,
           "RackSalvoChargeTime": 0,
@@ -43832,8 +43831,8 @@
               "Cue": "URA_Cannon_EMP"
             }
           },
-          "TurretPitch": -30,
-          "TurretPitchRange": 30,
+          "TurretPitch": -40,
+          "TurretPitchRange": 90,
           "DisplayName": "Disintegrator Pulse Laser",
           "TurretPitchSpeed": 180,
           "TurretBoneYaw": "Front_Down_Turret",
@@ -47497,7 +47496,7 @@
           },
           "TurretPitch": 35,
           "CannotAttackGround": true,
-          "TurretPitchRange": 40,
+          "TurretPitchRange": 55,
           "DisplayName": "Electron Flak",
           "TurretPitchSpeed": 180,
           "TurretBoneYaw": "Turret",
@@ -48474,7 +48473,7 @@
           "TurretPitchRange": 80,
           "DisplayName": "Zapper Anti Missile",
           "TurretPitchSpeed": 180,
-          "MaximumBeamLength": 42,
+          "MaximumBeamLength": 60,
           "RackSalvoSize": 1,
           "RangeCategory": "UWRC_Countermeasure",
           "MinRadius": 2,
@@ -49685,16 +49684,19 @@
       "SelectionSizeX": 1,
       "Economy": {
         "BuildTime": 1171,
-        "MaxBuildDistance": 15,
-        "BuildRate": 20,
         "BuildCostMass": 350,
+        "RebuildBonusIds": [
+          "xrb0104"
+        ],
+        "BuildRate": 20,
+        "UpgradeOnlyCategory": [
+          "xrb0204"
+        ],
         "BuildableCategory": [
           "xrb0204"
         ],
         "BuildCostEnergy": 2100,
-        "RebuildBonusIds": [
-          "xrb0104"
-        ]
+        "MaxBuildDistance": 15
       },
       "Footprint": {
         "SizeX": 1,
@@ -49908,17 +49910,20 @@
       "CollisionOffsetY": -0.25,
       "SelectionSizeX": 1,
       "Economy": {
-        "BuildTime": 1171,
-        "BuildCostMass": 700,
         "RebuildBonusIds": [
           "xrb0104"
         ],
-        "BuildRate": 37,
-        "DifferentialUpgradeCostCalculation": true,
+        "UpgradeOnlyCategory": [
+          "xrb0304"
+        ],
         "BuildableCategory": [
           "xrb0304"
         ],
         "BuildCostEnergy": 4200,
+        "BuildTime": 1171,
+        "BuildRate": 37,
+        "DifferentialUpgradeCostCalculation": true,
+        "BuildCostMass": 700,
         "MaxBuildDistance": 20
       },
       "Footprint": {
@@ -56243,10 +56248,10 @@
         },
         {
           "Label": "RedirectMissile",
-          "RateOfFire": 0.4,
+          "TargetCheckInterval": 0.1,
+          "RateOfFire": 0.52631578947368,
           "DisableWhileReloading": true,
           "TurretYaw": 0,
-          "MaxHeightDiff": 10,
           "RackBones": [
             {
               "MuzzleBones": [
@@ -56258,7 +56263,7 @@
           "Damage": 1,
           "DamageType": "Normal",
           "TurretPitch": 0,
-          "TurretPitchRange": 70,
+          "TurretPitchRange": 80,
           "DisplayName": "Missile Deflector",
           "TurretPitchSpeed": 180,
           "TurretBoneYaw": "Zapper_Turret",
@@ -56266,7 +56271,7 @@
           "RangeCategory": "UWRC_Countermeasure",
           "RackSlavedToTurret": false,
           "MinRadius": 8,
-          "WeaponCategory": "Defense",
+          "MaxRadius": 44,
           "TargetType": "RULEWTT_Projectile",
           "RackFireTogether": false,
           "RackSalvoChargeTime": 0,
@@ -56279,7 +56284,7 @@
           "MuzzleSalvoDelay": 0,
           "RackRecoilDistance": 0,
           "RackReloadTimeout": 10,
-          "MaxRadius": 26,
+          "TurretYawSpeed": 720,
           "TurretYawRange": 180,
           "CollideFriendly": false,
           "TargetRestrictOnlyAllow": "TACTICAL,MISSILE",
@@ -56288,8 +56293,8 @@
           "TargetRestrictDisallow": "UNTARGETABLE,STRATEGIC",
           "TurretDualManipulators": false,
           "TurretBonePitch": "Zapper_Muzzle",
-          "TurretYawSpeed": 720,
-          "Turreted": true
+          "Turreted": true,
+          "WeaponCategory": "Defense"
         }
       ]
     },
@@ -58923,12 +58928,12 @@
       "LifeBarHeight": 0.075,
       "SelectionThickness": 0.39,
       "Economy": {
-        "BuildTime": 105000,
-        "BuildCostMass": 69600,
+        "BuildTime": 105600,
+        "BuildCostMass": 70000,
         "RebuildBonusIds": [
           "urb2302"
         ],
-        "BuildCostEnergy": 1305000
+        "BuildCostEnergy": 1313000
       },
       "Footprint": {
         "SizeX": 5,
@@ -59034,7 +59039,7 @@
         {
           "DamageRadius": 9,
           "TurretYawRange": 180,
-          "RateOfFire": 0.12987012987013,
+          "RateOfFire": 0.13333333333333,
           "ProjectilesPerOnFire": 1,
           "TurretYaw": 0,
           "DamageFriendly": true,
@@ -59047,7 +59052,7 @@
               "RackBone": "Barrel_B01"
             }
           ],
-          "Damage": 3700,
+          "Damage": 3800,
           "ProjectileLifetime": 120,
           "DamageType": "Normal",
           "Audio": {
@@ -59080,7 +59085,7 @@
           "RackSlavedToTurret": false,
           "EnergyDrainPerSecond": 3500,
           "WeaponCategory": "Artillery",
-          "FiringRandomness": 0.75,
+          "FiringRandomness": 0.646,
           "TurretYawSpeed": 3,
           "CameraShakeMax": 2,
           "ProjectileId": "/projectiles/CIFArtilleryProton02/CIFArtilleryProton02_proj.bp",
@@ -62858,7 +62863,7 @@
               "Cue": "URA0401_Rock_Pack"
             }
           },
-          "TurretPitch": -15,
+          "TurretPitch": -40,
           "AutoInitiateAttackCommand": true,
           "DisplayName": "Iridium Rocket Pack",
           "TurretPitchSpeed": 360,
@@ -62900,7 +62905,7 @@
           "TargetRestrictDisallow": "HIGHALTAIR, UNTARGETABLE",
           "RackRecoilDistance": 0,
           "FiringTolerance": 2,
-          "TurretPitchRange": 90,
+          "TurretPitchRange": 360,
           "TurretDualManipulators": false,
           "TurretBonePitch": "RightFront_Turret_Barrel",
           "MaxRadius": 30,
@@ -63001,7 +63006,7 @@
               "Cue": "URL0303_Bolter"
             }
           },
-          "TurretPitch": 0,
+          "TurretPitch": -40,
           "TurretPitchRange": 180,
           "DisplayName": "Heavy Electron Bolter",
           "TurretPitchSpeed": 360,
@@ -68619,9 +68624,9 @@
           "RULEUCC_Repair": true,
           "RULEUCC_Reclaim": true
         },
-        "TeleportDelay": 15,
+        "TeleportDelay": 20,
         "QuickSelectPriority": 1,
-        "TeleportFlatEnergyCost": 75000,
+        "TeleportFlatEnergyCost": 100000,
         "BuildBones": {
           "AimBone": "Left_Turret_Muzzle",
           "BuildEffectBones": [
@@ -68901,7 +68906,7 @@
           "Icon": "cd"
         },
         "EnhancedSensors": {
-          "NewOmniRadius": 80,
+          "NewOmniRadius": 36,
           "Slot": "RCH",
           "ShowBones": [
             "Right_Upgrade"
@@ -73728,7 +73733,7 @@
               "Cue": "UAS0201_Cannon_Oblivion"
             }
           },
-          "TurretPitch": -20,
+          "TurretPitch": -40,
           "AutoInitiateAttackCommand": true,
           "DisplayName": "Oblivion Cannon",
           "TurretPitchSpeed": 360,
@@ -73765,7 +73770,7 @@
           "RackSalvoReloadTime": 0,
           "TargetRestrictDisallow": "HIGHALTAIR, UNTARGETABLE",
           "FiringTolerance": 2,
-          "TurretPitchRange": 60,
+          "TurretPitchRange": 90,
           "TurretDualManipulators": false,
           "TurretBonePitch": "C_Barrel",
           "Turreted": true,
@@ -78368,7 +78373,7 @@
           },
           "TurretPitch": 35,
           "CannotAttackGround": true,
-          "TurretPitchRange": 40,
+          "TurretPitchRange": 55,
           "DisplayName": "Fizz Launcher",
           "TurretPitchSpeed": 180,
           "TurretBoneYaw": "Turret",
@@ -79350,7 +79355,7 @@
         "MassMult": 0.9
       },
       "SizeX": 0.65,
-      "SizeY": 0.9,
+      "SizeY": 1,
       "SelectionSizeZ": 0.95,
       "SelectionThickness": 0.45,
       "CollisionOffsetY": -0.4,
@@ -79400,7 +79405,7 @@
       "StrategicIconSortPriority": 200,
       "AI": {
         "TargetBones": [
-          "Door_Rt",
+          "Dome",
           "UAB4201"
         ]
       },
@@ -80637,9 +80642,9 @@
           "RULEUCC_Guard": true,
           "RULEUCC_Reclaim": true
         },
-        "TeleportDelay": 15,
+        "TeleportDelay": 20,
         "ConstructionBar": true,
-        "TeleportFlatEnergyCost": 75000,
+        "TeleportFlatEnergyCost": 100000,
         "BuildBones": {
           "AimBone": "Arm_Right_Build",
           "BuildEffectBones": [
@@ -82117,7 +82122,7 @@
           "CollideFriendly": false,
           "WeaponRepackTimeout": 0,
           "RackSalvoReloadTime": 0,
-          "TurretPitchSpeed": 30,
+          "TurretPitchSpeed": 50,
           "FiringTolerance": 0,
           "TurretYawSpeed": 110,
           "TurretDualManipulators": false,
@@ -82333,7 +82338,7 @@
       "Weapon": [
         {
           "DamageRadius": 2,
-          "TurretYawRange": 160,
+          "FiringRandomness": 0.2,
           "RateOfFire": 0.16949152542373,
           "HeadingArcCenter": 0,
           "TurretYaw": 0,
@@ -82373,7 +82378,6 @@
           "RangeCategory": "UWRC_DirectFire",
           "AboveWaterTargetsOnly": true,
           "RackSlavedToTurret": false,
-          "BallisticArc": "RULEUBA_LowArc",
           "HeadingArcRange": 160,
           "TargetPriorities": [
             "NAVAL MOBILE",
@@ -82381,30 +82385,30 @@
           ],
           "MaxRadius": 110,
           "ProjectileId": "/projectiles/ADFOblivionCannon02/ADFOblivionCannon02_proj.bp",
-          "MuzzleChargeDelay": 0.1,
+          "Label": "FrontTurret",
           "MuzzleVelocity": 50,
           "RackFireTogether": false,
           "RackSalvoChargeTime": 0,
           "TurretBoneMuzzle": "Turret_Front_Muzzle",
           "MuzzleSalvoSize": 1,
-          "AnimationOpen": "/units/uas0302/uas0302_awepF01.sca",
+          "MuzzleChargeDelay": 0.1,
           "FireTargetLayerCapsTable": {
             "Water": "Land|Water|Seabed"
           },
           "Turreted": true,
-          "ProjectilesPerOnFire": 1,
-          "FiringTolerance": 2,
-          "MuzzleSalvoDelay": 0,
+          "TurretYawRange": 160,
           "RackRecoilDistance": -1,
+          "MuzzleSalvoDelay": 0,
+          "FiringTolerance": 2,
           "RackReloadTimeout": 10,
-          "SlavedToBody": true,
           "RackSalvoReloadTime": 0,
+          "SlavedToBody": true,
           "RenderFireClock": true,
           "CollideFriendly": false,
-          "FiringRandomness": 0.2,
+          "BallisticArc": "RULEUBA_LowArc",
           "TargetRestrictDisallow": "UNTARGETABLE",
           "SlavedToBodyArcRange": 155,
-          "Label": "FrontTurret",
+          "ProjectilesPerOnFire": 1,
           "TurretDualManipulators": false,
           "TurretBonePitch": "Turret_Front_Barrel01",
           "WeaponCategory": "Direct Fire Naval",
@@ -84896,7 +84900,7 @@
               "RackBone": "Torpedo_Muzzle"
             }
           ],
-          "Damage": 400,
+          "Damage": 1000,
           "ProjectileLifetime": 30,
           "DamageType": "Normal",
           "Audio": {
@@ -87049,7 +87053,7 @@
               "Cue": "XAA0305_Quad_Light_Laser"
             }
           },
-          "TurretPitch": -20,
+          "TurretPitch": -40,
           "AutoInitiateAttackCommand": true,
           "DisplayName": "Quad Light Laser",
           "TurretPitchSpeed": 360,
@@ -87089,7 +87093,7 @@
           "RackSalvoReloadTime": 0,
           "TargetRestrictDisallow": "HIGHALTAIR, UNTARGETABLE",
           "FiringTolerance": 2,
-          "TurretPitchRange": 70,
+          "TurretPitchRange": 90,
           "TurretDualManipulators": false,
           "TurretBonePitch": "C_Barrel",
           "Turreted": true,
@@ -88451,12 +88455,12 @@
       },
       "SelectionThickness": 0.3,
       "Economy": {
-        "BuildTime": 120000,
-        "BuildCostMass": 73200,
+        "BuildTime": 129500,
+        "BuildCostMass": 79000,
         "RebuildBonusIds": [
           "uab2302"
         ],
-        "BuildCostEnergy": 1372500
+        "BuildCostEnergy": 1481000
       },
       "Footprint": {
         "SizeX": 5,
@@ -91827,8 +91831,8 @@
         {
           "DamageRadius": 5,
           "FiringRandomness": 0.2,
-          "RateOfFire": 0.08,
-          "TurretYaw": 0,
+          "RateOfFire": 10,
+          "RackSalvoFiresAfterCharge": true,
           "RackBones": [
             {
               "MuzzleBones": [
@@ -91880,34 +91884,35 @@
           ],
           "WeaponCategory": "Direct Fire Naval",
           "ProjectileId": "/projectiles/ADFOblivionCannon04/ADFOblivionCannon04_proj.bp",
+          "Label": "MainGun",
           "MuzzleVelocity": 35,
           "RackFireTogether": false,
-          "RackSalvoChargeTime": 0,
+          "RackSalvoChargeTime": 1.5,
           "TurretBoneMuzzle": "Turret_Muzzle",
           "MuzzleSalvoSize": 1,
-          "Label": "MainGun",
+          "NotExclusive": true,
           "FireTargetLayerCapsTable": {
             "Land": "Land|Water|Seabed",
             "Water": "Land|Water|Seabed"
           },
-          "BallisticArc": "RULEUBA_LowArc",
+          "Turreted": true,
           "MuzzleVelocityReduceDistance": 140,
-          "NotExclusive": true,
+          "MuzzleChargeDelay": 0,
           "MuzzleSalvoDelay": 0,
-          "MuzzleChargeDelay": 1.5,
           "TurretYawRange": 180,
           "RackReloadTimeout": 10,
           "FiringTolerance": 2,
-          "RackSalvoReloadTime": 0,
-          "CollideFriendly": false,
-          "TurretYawSpeed": 40,
-          "TargetRestrictDisallow": "UNTARGETABLE",
-          "SlavedToBody": false,
+          "RackSalvoReloadTime": 10.9,
           "RackRecoilDistance": -3,
+          "CollideFriendly": false,
+          "TargetRestrictDisallow": "UNTARGETABLE",
+          "TurretYawSpeed": 40,
+          "SlavedToBody": false,
+          "TurretYaw": 0,
           "TurretDualManipulators": false,
           "TurretBonePitch": "Turret_Barrel01",
-          "Turreted": true,
-          "MaxRadius": 150
+          "MaxRadius": 150,
+          "BallisticArc": "RULEUBA_LowArc"
         },
         {
           "DamageRadius": 1.5,
@@ -96167,7 +96172,7 @@
       "AverageDensity": 500,
       "Description": "Light Air Transport",
       "Transport": {
-        "SlotsLarge": 2,
+        "SlotsLarge": 1,
         "SlotsMedium": 4,
         "AirClass": true,
         "SlotsSmall": 8,
@@ -96218,8 +96223,8 @@
       },
       "Footprint": {
         "MaxSlope": 0.25,
-        "SizeX": 4,
-        "SizeZ": 6
+        "SizeX": 1,
+        "SizeZ": 3
       },
       "SizeZ": 7,
       "Air": {
@@ -98524,8 +98529,8 @@
           "RULEUCC_Repair": true,
           "RULEUCC_Reclaim": true
         },
-        "TeleportDelay": 15,
-        "TeleportFlatEnergyCost": 75000,
+        "TeleportDelay": 20,
+        "TeleportFlatEnergyCost": 100000,
         "BuildBones": {
           "AimBone": "Left_Turret_Muzzle",
           "BuildEffectBones": [
@@ -103961,8 +103966,8 @@
       },
       "Footprint": {
         "MaxSlope": 0.25,
-        "SizeX": 4,
-        "SizeZ": 6
+        "SizeX": 3,
+        "SizeZ": 3
       },
       "Air": {
         "CirclingTurnMult": 1,
@@ -107213,7 +107218,7 @@
           },
           "TurretPitch": 35,
           "CannotAttackGround": true,
-          "TurretPitchRange": 45,
+          "TurretPitchRange": 55,
           "DisplayName": "Olaris AA Artillery Cannon",
           "TurretPitchSpeed": 180,
           "TurretBoneYaw": "Turret",
@@ -109988,9 +109993,9 @@
           "RULEUCC_Guard": true,
           "RULEUCC_Reclaim": true
         },
-        "TeleportDelay": 15,
+        "TeleportDelay": 20,
         "ConstructionBar": true,
-        "TeleportFlatEnergyCost": 75000,
+        "TeleportFlatEnergyCost": 100000,
         "BuildBones": {
           "AimBone": "Left_Arm_Muzzle",
           "BuildEffectBones": [
@@ -111422,15 +111427,16 @@
         "TransportClass": 3,
         "CanFireFromTransport": false
       },
+      "LifeBarOffset": 0.95,
       "AI": {
         "TargetBones": [
           "Turret"
         ]
       },
       "StrategicIconName": "icon_land3_directfire",
-      "LifeBarOffset": 0.95,
       "BuildIconSortPriority": 20,
       "LifeBarSize": 1.2,
+      "CollisionOffsetZ": 0.2,
       "SelectionThickness": 0.3,
       "Physics": {
         "TurnRate": 90,
@@ -111449,7 +111455,7 @@
         "StandUpright": false,
         "MeshExtentsZ": 1
       },
-      "SizeZ": 2.3,
+      "SizeZ": 2,
       "Intel": {
         "WaterVisionRadius": 24,
         "VisionRadius": 22
@@ -111663,7 +111669,7 @@
               "RackBone": "Right_Turret_Barrel"
             }
           ],
-          "Damage": 64,
+          "Damage": 57,
           "DamageType": "Normal",
           "Audio": {
             "Fire": {
@@ -111723,7 +111729,7 @@
         {
           "DamageRadius": 1.2,
           "Label": "MainTurret",
-          "RateOfFire": 0.25,
+          "RateOfFire": 0.29411764705882,
           "ProjectilesPerOnFire": 1,
           "TurretYaw": 0,
           "DamageFriendly": false,
@@ -111762,7 +111768,7 @@
           ],
           "WeaponCategory": "Direct Fire",
           "ProjectileId": "/projectiles/SDFTauCannon01/SDFTauCannon01_proj.bp",
-          "MuzzleVelocity": 40,
+          "MuzzleVelocity": 36,
           "RackFireTogether": false,
           "RackSalvoChargeTime": 0,
           "TurretBoneMuzzle": "Turret_Barrel_Recoil_Muzzle",
@@ -117364,12 +117370,12 @@
       "AverageDensity": 13500,
       "Description": "Heavy Artillery Installation",
       "Economy": {
-        "BuildTime": 110000,
-        "BuildCostMass": 70800,
+        "BuildTime": 113400,
+        "BuildCostMass": 73000,
         "RebuildBonusIds": [
           "xsb2302"
         ],
-        "BuildCostEnergy": 1327500
+        "BuildCostEnergy": 1369000
       },
       "LifeBarOffset": 1.9,
       "General": {
@@ -117519,7 +117525,7 @@
         {
           "DamageRadius": 7,
           "TurretYawRange": 180,
-          "RateOfFire": 0.1,
+          "RateOfFire": 0.096153846153846,
           "ProjectilesPerOnFire": 1,
           "TurretYaw": 0,
           "DamageFriendly": true,
@@ -117532,7 +117538,7 @@
               "RackBone": "Turret_B01"
             }
           ],
-          "Damage": 5000,
+          "Damage": 5800,
           "ProjectileLifetime": 120,
           "DamageType": "Normal",
           "Audio": {
@@ -117567,7 +117573,7 @@
           "RackSalvoSize": 1,
           "RangeCategory": "UWRC_IndirectFire",
           "MuzzleChargeDelay": 0.5,
-          "FiringRandomness": 0.675,
+          "FiringRandomness": 0.56,
           "AboveWaterTargetsOnly": true,
           "RackSlavedToTurret": false,
           "EnergyDrainPerSecond": 3750,
