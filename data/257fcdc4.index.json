@@ -1,5 +1,5 @@
 {
-  "version": "3824",
+  "version": "3825",
   "units": [
     {
       "Categories": [
@@ -2160,6 +2160,7 @@
         "DEFENSE",
         "DIRECTFIRE",
         "DRAGBUILD",
+        "FASTDECAY",
         "OVERLAYDIRECTFIRE",
         "PRODUCTSC1",
         "RECLAIMABLE",
@@ -2251,6 +2252,7 @@
         "CQUEMOV",
         "DEFENSE",
         "DRAGBUILD",
+        "FASTDECAY",
         "OVERLAYANTIAIR",
         "PRODUCTSC1",
         "RECLAIMABLE",
@@ -2348,6 +2350,7 @@
         "CQUEMOV",
         "DEFENSE",
         "DRAGBUILD",
+        "FASTDECAY",
         "OVERLAYANTINAVY",
         "OVERLAYSONAR",
         "PRODUCTSC1",
@@ -11414,7 +11417,7 @@
               ]
             }
           ],
-          "Damage": 16,
+          "Damage": 14,
           "ProjectileLifetime": 4.5,
           "DamageType": "Normal",
           "TurretPitch": 35,
@@ -11824,7 +11827,7 @@
           "NewHealth": 1500,
           "BuildCostMass": 1500,
           "Icon": "srs",
-          "NewRegenRate": 60
+          "NewRegenRate": 50
         },
         "AdvancedEngineering": {
           "Slot": "LCH",
@@ -12116,14 +12119,14 @@
           "MuzzleVelocity": 5,
           "RackFireTogether": false,
           "RackSalvoChargeTime": 0,
-          "MuzzleSalvoSize": 3,
+          "MuzzleSalvoSize": 4,
           "MuzzleSalvoDelay": 0.8,
           "DisplayName": "Nanite Torpedo",
           "DoTTime": 0.4,
           "FiringTolerance": 2,
           "RackSalvoReloadTime": 0,
           "MaxRadius": 60,
-          "Damage": 60
+          "Damage": 45
         },
         {
           "DamageRadius": 4,
@@ -12148,6 +12151,7 @@
         "DEFENSE",
         "DIRECTFIRE",
         "DRAGBUILD",
+        "FASTDECAY",
         "OVERLAYDIRECTFIRE",
         "PRODUCTSC1",
         "RECLAIMABLE",
@@ -12239,6 +12243,7 @@
         "CYBRAN",
         "DEFENSE",
         "DRAGBUILD",
+        "FASTDECAY",
         "OVERLAYANTIAIR",
         "PRODUCTSC1",
         "RECLAIMABLE",
@@ -12336,6 +12341,7 @@
         "CYBRAN",
         "DEFENSE",
         "DRAGBUILD",
+        "FASTDECAY",
         "OVERLAYANTINAVY",
         "OVERLAYSONAR",
         "PRODUCTSC1",
@@ -14460,7 +14466,7 @@
         "MaintenanceConsumptionPerSecondEnergy": 100
       },
       "Defense": {
-        "Health": 1500
+        "Health": 1000
       },
       "Id": "XRS0205",
       "Physics": {
@@ -16131,7 +16137,6 @@
     },
     {
       "Categories": [
-        "BUILTBYCOMMANDER",
         "BUILTBYTIER2COMMANDER",
         "BUILTBYTIER2ENGINEER",
         "BUILTBYTIER3COMMANDER",
@@ -22341,11 +22346,11 @@
         },
         "HeatSink": {
           "Slot": "RCH",
-          "BuildCostEnergy": 15000,
-          "BuildTime": 500,
+          "BuildCostEnergy": 12000,
+          "BuildTime": 400,
           "Name": "Quantum Accelerator",
           "Icon": "hsa",
-          "BuildCostMass": 500,
+          "BuildCostMass": 400,
           "NewRateOfFire": 2
         },
         "ResourceAllocation": {
@@ -22360,11 +22365,11 @@
         },
         "CrysalisBeam": {
           "Slot": "LCH",
-          "BuildCostEnergy": 6000,
-          "BuildTime": 350,
+          "BuildCostEnergy": 12000,
+          "BuildTime": 400,
           "Name": "Enhanced Quantum Disruptor",
           "Icon": "cba",
-          "BuildCostMass": 300,
+          "BuildCostMass": 400,
           "NewMaxRadius": 30
         },
         "ResourceAllocationAdvanced": {
@@ -22592,6 +22597,7 @@
         "DEFENSE",
         "DIRECTFIRE",
         "DRAGBUILD",
+        "FASTDECAY",
         "OVERLAYDIRECTFIRE",
         "PRODUCTSC1",
         "RECLAIMABLE",
@@ -22683,6 +22689,7 @@
         "CQUEMOV",
         "DEFENSE",
         "DRAGBUILD",
+        "FASTDECAY",
         "OVERLAYANTIAIR",
         "PRODUCTSC1",
         "RECLAIMABLE",
@@ -22779,6 +22786,7 @@
         "CQUEMOV",
         "DEFENSE",
         "DRAGBUILD",
+        "FASTDECAY",
         "OVERLAYANTINAVY",
         "OVERLAYSONAR",
         "PRODUCTSC1",
@@ -25810,9 +25818,10 @@
       },
       "Economy": {
         "BuildTime": 950,
-        "MaintenanceConsumptionPerSecondEnergy": 150,
+        "BuildRate": 20,
+        "BuildCostMass": 480,
         "BuildCostEnergy": 5760,
-        "BuildCostMass": 480
+        "MaintenanceConsumptionPerSecondEnergy": 150
       },
       "Intel": {
         "VisionRadius": 20
@@ -25835,7 +25844,8 @@
       "Physics": {},
       "Display": {
         "Abilities": [
-          "Shield Dome"
+          "Shield Dome",
+          "Upgradeable"
         ]
       },
       "BuildIconSortPriority": 160
@@ -28770,9 +28780,9 @@
       "Description": "Heavy Shield Generator",
       "StrategicIconName": "icon_structure3_shield",
       "General": {
+        "FactionName": "Aeon",
         "UnitName": "Radiance",
         "Icon": "land",
-        "FactionName": "Aeon",
         "Classification": "RULEUC_MiscSupport"
       },
       "Economy": {
@@ -30487,7 +30497,7 @@
       },
       "Weapon": [
         {
-          "ProjectilesPerOnFire": 2,
+          "MuzzleSalvoDelay": 0.8,
           "RackBones": [
             {
               "MuzzleBones": [
@@ -30496,23 +30506,24 @@
               ]
             }
           ],
-          "ProjectileLifetime": 7,
-          "DamageType": "Normal",
-          "DisplayName": "Uall Cavitation Torpedo",
           "WeaponCategory": "Anti Navy",
           "ProjectileId": "/projectiles/SANUallCavitationTorpedo02/SANUallCavitationTorpedo02_proj.bp",
+          "ProjectilesPerOnFire": 2,
           "MuzzleVelocity": 5,
           "RackFireTogether": false,
           "RackSalvoChargeTime": 0,
           "MuzzleSalvoSize": 2,
-          "MuzzleSalvoDelay": 0.8,
-          "RackSalvoReloadTime": 0,
-          "RateOfFire": 0.25,
-          "MaxRadius": 32,
+          "ProjectileLifetime": 7,
+          "DamageType": "Normal",
           "FiringTolerance": 2,
-          "Damage": 75
+          "RackSalvoReloadTime": 0,
+          "DisplayName": "Uall Cavitation Torpedo",
+          "RateOfFire": 0.25,
+          "Damage": 75,
+          "MaxRadius": 32
         },
         {
+          "RateOfFire": 0.076923076923077,
           "TurretYaw": 0,
           "RackBones": [
             {
@@ -30534,13 +30545,12 @@
           "MuzzleVelocity": 80,
           "RackFireTogether": false,
           "RackSalvoChargeTime": 0,
-          "MuzzleSalvoSize": 1,
           "TurretYawSpeed": 180,
-          "RateOfFire": 0.2,
-          "RackSalvoReloadTime": 0,
           "MuzzleSalvoDelay": 0,
+          "RackSalvoReloadTime": 0,
           "FiringTolerance": 180,
           "TurretYawRange": 180,
+          "MuzzleSalvoSize": 1,
           "WeaponCategory": "Defense"
         },
         {
@@ -31758,6 +31768,7 @@
         "DEFENSE",
         "DIRECTFIRE",
         "DRAGBUILD",
+        "FASTDECAY",
         "OVERLAYDIRECTFIRE",
         "PRODUCTFA",
         "RECLAIMABLE",
@@ -31854,6 +31865,7 @@
         "CQUEMOV",
         "DEFENSE",
         "DRAGBUILD",
+        "FASTDECAY",
         "OVERLAYANTIAIR",
         "PRODUCTFA",
         "RECLAIMABLE",
@@ -31951,6 +31963,7 @@
         "CQUEMOV",
         "DEFENSE",
         "DRAGBUILD",
+        "FASTDECAY",
         "OVERLAYANTINAVY",
         "OVERLAYSONAR",
         "PRODUCTFA",
