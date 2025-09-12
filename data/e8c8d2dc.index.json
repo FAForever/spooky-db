@@ -1,5 +1,5 @@
 {
-  "version": "3827",
+  "version": "3828",
   "units": [
     {
       "Categories": [
@@ -13634,7 +13634,7 @@
           "DisplayName": "Anti Torpedo Solution",
           "TurretPitchSpeed": 0,
           "MinRadius": 5,
-          "MaxRadius": 30,
+          "WeaponCategory": "Defense",
           "MuzzleVelocity": 5,
           "RackFireTogether": false,
           "RackSalvoChargeTime": 0,
@@ -13645,7 +13645,7 @@
           "RackSalvoReloadTime": 0,
           "FiringTolerance": 2,
           "TurretYawRange": 0,
-          "WeaponCategory": "Defense"
+          "MaxRadius": 30
         }
       ]
     },
@@ -25794,6 +25794,7 @@
         "BUILTBYTIER2ENGINEER",
         "BUILTBYTIER3COMMANDER",
         "BUILTBYTIER3ENGINEER",
+        "CQUEMOV",
         "DEFENSE",
         "DRAGBUILD",
         "OVERLAYDEFENSE",

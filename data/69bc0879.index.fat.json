@@ -1,5 +1,5 @@
 {
-  "version": "3827",
+  "version": "3828",
   "units": [
     {
       "Categories": [
@@ -42163,7 +42163,6 @@
         },
         {
           "AlwaysRecheckTarget": false,
-          "TargetCheckInterval": 1,
           "RateOfFire": 0.26315789473684,
           "DisableWhileReloading": true,
           "TurretYaw": 0,
@@ -42194,7 +42193,7 @@
           "RangeCategory": "UWRC_Countermeasure",
           "RackSlavedToTurret": false,
           "MinRadius": 5,
-          "MaxRadius": 30,
+          "WeaponCategory": "Defense",
           "DepthCharge": {
             "ProjectilesToDeflect": 3,
             "Radius": 8
@@ -42223,8 +42222,8 @@
           "FiringTolerance": 2,
           "TurretYawRange": 0,
           "TurretDualManipulators": false,
+          "MaxRadius": 30,
           "Turreted": false,
-          "WeaponCategory": "Defense",
           "WeaponUnpacks": false
         }
       ]
@@ -79482,6 +79481,7 @@
         "BUILTBYTIER2ENGINEER",
         "BUILTBYTIER3COMMANDER",
         "BUILTBYTIER3ENGINEER",
+        "CQUEMOV",
         "DEFENSE",
         "DRAGBUILD",
         "OVERLAYDEFENSE",
