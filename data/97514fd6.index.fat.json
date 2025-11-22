@@ -1,5 +1,5 @@
 {
-  "version": "3828",
+  "version": "3829",
   "units": [
     {
       "Categories": [
@@ -1624,8 +1624,8 @@
           "AboveWaterTargetsOnly": true,
           "RackSlavedToTurret": false,
           "TargetPriorities": [
+            "RADAR INTELLIGENCE STRUCTURE",
             "MOBILE",
-            "(STRUCTURE * DEFENSE - ANTIMISSILE)",
             "ALLUNITS"
           ],
           "MaxRadius": 26,
@@ -6783,7 +6783,7 @@
           "ManualFire": true,
           "AboveWaterTargetsOnly": true,
           "RackSlavedToTurret": false,
-          "MinRadius": 15,
+          "MinRadius": 30,
           "CountedProjectile": true,
           "ProjectileId": "/projectiles/TIFMissileCruiseCDR/TIFMissileCruiseCDR_proj.bp",
           "MuzzleVelocity": 3,
@@ -6844,7 +6844,7 @@
           "AboveWaterTargetsOnly": true,
           "RackSlavedToTurret": false,
           "MaxRadius": 256,
-          "MinRadius": 15,
+          "MinRadius": 30,
           "CountedProjectile": true,
           "ProjectileId": "/projectiles/TIFMissileNukeCDR/TIFMissileNukeCDR_proj.bp",
           "NukeInnerRingRadius": 15,
@@ -22974,22 +22974,17 @@
       },
       "LifeBarOffset": 0.75,
       "SizeSphere": 2,
+      "AI": {
+        "GuardReturnRadius": 125
+      },
       "Economy": {
         "BuildTime": 12000,
         "BuildCostEnergy": 180000,
         "BuildCostMass": 1750,
         "MaintenanceConsumptionPerSecondEnergy": 25
       },
-      "BuildIconSortPriority": 40,
       "LifeBarSize": 1.5,
-      "StrategicIconName": "icon_bomber3_directfire",
-      "VeteranMass": [
-        4200,
-        4200,
-        4200,
-        4200,
-        4200
-      ],
+      "BuildIconSortPriority": 40,
       "Physics": {
         "MeshExtentsX": 2.25,
         "Elevation": 18,
@@ -23001,32 +22996,17 @@
         "MotionType": "RULEUMT_Air",
         "MeshExtentsZ": 2
       },
-      "Intel": {
-        "JammerBlips": 4,
-        "RadarRadius": 64,
-        "JamRadius": {
-          "Max": 40,
-          "Min": 20
-        },
-        "VisionRadius": 32
-      },
-      "SelectionThickness": 0.38,
-      "Footprint": {
-        "MaxSlope": 0.25,
-        "SizeX": 1,
-        "SizeZ": 1
-      },
-      "SizeZ": 1.3,
       "Air": {
-        "BreakOffDistance": 60,
+        "BreakOffDistance": 50,
         "KMoveDamping": 2,
         "BreakOffTrigger": 30,
         "KTurn": 0.8,
-        "TurnSpeed": 0.8,
+        "TurnSpeed": 1.2,
         "KRoll": 2,
         "MaxAirspeed": 17,
-        "LiftFactor": 7,
+        "LiftFactor": 10,
         "KLift": 3,
+        "RandomBreakOffDistanceMult": 1,
         "PredictAheadForBombDrop": 3,
         "AutoLandTime": 1,
         "BankForward": false,
@@ -23040,10 +23020,19 @@
         "KMove": 1,
         "MinAirspeed": 15,
         "KLiftDamping": 2.5,
-        "CombatTurnSpeed": 0.8,
+        "CombatTurnSpeed": 1.2,
         "TightTurnMultiplier": 0,
         "BankFactor": 2.5
       },
+      "SizeX": 1.6,
+      "SelectionThickness": 0.38,
+      "Footprint": {
+        "MaxSlope": 0.25,
+        "SizeX": 1,
+        "SizeZ": 1
+      },
+      "SizeZ": 1.3,
+      "VeteranMassMult": 2,
       "Defense": {
         "ArmorType": "Light",
         "SurfaceThreatLevel": 31,
@@ -23121,7 +23110,15 @@
       "SelectionSizeX": 1.2,
       "SizeY": 0.3,
       "SelectionSizeZ": 1,
-      "SizeX": 1.6,
+      "Intel": {
+        "JammerBlips": 4,
+        "RadarRadius": 64,
+        "JamRadius": {
+          "Max": 40,
+          "Min": 20
+        },
+        "VisionRadius": 32
+      },
       "Veteran": {
         "Level2": 24,
         "Level3": 36,
@@ -23206,16 +23203,34 @@
         }
       },
       "StrategicIconSortPriority": 55,
-      "AI": {
-        "GuardReturnRadius": 125
-      },
+      "StrategicIconName": "icon_bomber3_directfire",
       "Weapon": [
         {
+          "TargetPriorities": [
+            "TECH4",
+            "TECH3 STRUCTURE",
+            "TECH2 STRUCTURE",
+            "TECH1 STRUCTURE",
+            "ALLUNITS"
+          ],
+          "TargetCheckInterval": 3,
+          "RateOfFire": 0,
+          "AutoInitiateAttackCommand": true,
+          "MaxRadius": 64,
+          "AboveWaterTargetsOnly": true,
+          "FireTargetLayerCapsTable": {
+            "Air": "Land|Water|Seabed",
+            "Land": "Land|Water|Seabed"
+          },
+          "TrackingRadius": 1,
+          "TargetRestrictDisallow": "UNTARGETABLE"
+        },
+        {
           "DamageRadius": 5.5,
-          "FiringRandomness": 0,
+          "RackReloadTimeout": 10,
           "EffectiveRadius": 25,
           "ProjectilesPerOnFire": 1,
-          "BombDropThreshold": 3.5,
+          "BombDropThreshold": 8,
           "DamageFriendly": true,
           "RackBones": [
             {
@@ -23234,7 +23249,6 @@
               "Cue": "UEA0304_Nuke_Bomb"
             }
           },
-          "AutoInitiateAttackCommand": true,
           "DisplayName": "Small Yield Nuclear Bomb",
           "RackSalvoSize": 1,
           "AboveWaterTargetsOnly": true,
@@ -23262,7 +23276,7 @@
           "FixBombTrajectory": true,
           "NeedToComputeBombDrop": true,
           "RackRecoilDistance": 0,
-          "RackReloadTimeout": 10,
+          "FiringRandomness": 0,
           "RackSalvoReloadTime": 0,
           "WeaponRepackTimeout": 0,
           "TargetRestrictDisallow": "UNTARGETABLE",
@@ -23271,8 +23285,8 @@
           "CollideFriendly": false,
           "TurretDualManipulators": false,
           "MaxRadius": 90,
-          "Turreted": false,
-          "MuzzleSalvoSize": 1
+          "MuzzleSalvoSize": 1,
+          "Turreted": false
         },
         {
           "Label": "LinkedRailGun1",
@@ -43517,7 +43531,7 @@
       "SelectionThickness": 0.6,
       "Display": {
         "UniformScale": 0.05,
-        "BuildAttachBone": "AttachPoint",
+        "AnimationOpen": "/units/xrl0004/xrl0004_aopen.sca",
         "Mesh": {
           "IconFadeInZoom": 130,
           "LODs": [
@@ -43532,14 +43546,13 @@
               "AlbedoName": "xrl0004_lod1_albedo.dds"
             }
           ]
-        },
-        "AnimationOpen": "/units/xrl0004/xrl0004_aopen.sca"
+        }
       },
       "StrategicIconSortPriority": 220,
       "Physics": {
-        "FlattenSkirt": true,
         "MotionType": "RULEUMT_None",
         "DragCoefficient": 0.2,
+        "AlwaysAlignToTerrain": true,
         "SkirtSizeX": 1,
         "SkirtSizeZ": 1
       },
@@ -44743,10 +44756,10 @@
       },
       "Defense": {
         "ArmorType": "Structure",
-        "Health": 5500,
+        "Health": 6100,
         "EconomyThreatLevel": 190,
-        "MaxHealth": 5500,
-        "RegenRate": 20
+        "MaxHealth": 6100,
+        "RegenRate": 15
       },
       "Audio": {
         "DeathExplosion": {
@@ -45436,10 +45449,10 @@
       },
       "Defense": {
         "ArmorType": "Structure",
-        "Health": 5500,
+        "Health": 6100,
         "EconomyThreatLevel": 190,
-        "MaxHealth": 5500,
-        "RegenRate": 20
+        "MaxHealth": 6100,
+        "RegenRate": 15
       },
       "Audio": {
         "DeathExplosion": {
@@ -46807,7 +46820,8 @@
         },
         "InstantDeathOnSelfDestruct": true,
         "ToggleCaps": {
-          "RULEUTC_ProductionToggle": true
+          "RULEUTC_ProductionToggle": true,
+          "RULEUTC_CloakToggle": true
         },
         "UnitName": "Fire Beetle",
         "ExcludeFromVeterancy": true,
@@ -46843,6 +46857,7 @@
       "Economy": {
         "BuildTime": 550,
         "TeleportMassMod": 1,
+        "MaintenanceConsumptionPerSecondEnergy": 10,
         "BuildCostEnergy": 1300,
         "TeleportTimeMod": 0.01,
         "BuildCostMass": 190,
@@ -51580,7 +51595,7 @@
       "SelectionThickness": 0.6,
       "Display": {
         "UniformScale": 0.05,
-        "BuildAttachBone": "AttachPoint",
+        "AnimationOpen": "/units/xrl0002/xrl0002_aopen.sca",
         "Mesh": {
           "IconFadeInZoom": 130,
           "LODs": [
@@ -51595,14 +51610,13 @@
               "AlbedoName": "xrl0002_lod1_albedo.dds"
             }
           ]
-        },
-        "AnimationOpen": "/units/xrl0002/xrl0002_aopen.sca"
+        }
       },
       "StrategicIconSortPriority": 220,
       "Physics": {
-        "FlattenSkirt": true,
         "MotionType": "RULEUMT_None",
         "DragCoefficient": 0.2,
+        "AlwaysAlignToTerrain": true,
         "SkirtSizeX": 1,
         "SkirtSizeZ": 1
       },
@@ -52955,7 +52969,7 @@
       "SelectionThickness": 0.6,
       "Display": {
         "UniformScale": 0.05,
-        "BuildAttachBone": "AttachPoint",
+        "AnimationOpen": "/units/xrl0003/xrl0003_aopen.sca",
         "Mesh": {
           "IconFadeInZoom": 130,
           "LODs": [
@@ -52970,8 +52984,7 @@
               "AlbedoName": "xrl0003_lod1_albedo.dds"
             }
           ]
-        },
-        "AnimationOpen": "/units/xrl0003/xrl0003_aopen.sca"
+        }
       },
       "StrategicIconSortPriority": 220,
       "Physics": {
@@ -52981,7 +52994,7 @@
         },
         "MotionType": "RULEUMT_None",
         "DragCoefficient": 0.2,
-        "FlattenSkirt": true,
+        "AlwaysAlignToTerrain": true,
         "SkirtSizeX": 1,
         "SkirtSizeZ": 1
       },
@@ -54991,7 +55004,7 @@
         "Classification": "RULEUC_Factory"
       },
       "Economy": {
-        "BuildTime": 2400,
+        "BuildTime": 2150,
         "BuildCostMass": 800,
         "BuildUnit": "url0304",
         "BuildCostEnergy": 8000
@@ -55071,7 +55084,7 @@
       "SelectionThickness": 0.6,
       "Display": {
         "UniformScale": 0.05,
-        "BuildAttachBone": "AttachPoint",
+        "AnimationOpen": "/units/xrl0005/xrl0005_aopen.sca",
         "Mesh": {
           "IconFadeInZoom": 130,
           "LODs": [
@@ -55086,14 +55099,13 @@
               "AlbedoName": "xrl0005_lod1_albedo.dds"
             }
           ]
-        },
-        "AnimationOpen": "/units/xrl0005/xrl0005_aopen.sca"
+        }
       },
       "StrategicIconSortPriority": 220,
       "Physics": {
-        "FlattenSkirt": true,
         "MotionType": "RULEUMT_None",
         "DragCoefficient": 0.2,
+        "AlwaysAlignToTerrain": true,
         "SkirtSizeX": 1,
         "SkirtSizeZ": 1
       },
@@ -55154,22 +55166,17 @@
       },
       "LifeBarOffset": 0.85,
       "SizeSphere": 2,
+      "AI": {
+        "GuardReturnRadius": 125
+      },
       "Economy": {
         "BuildTime": 12000,
         "BuildCostEnergy": 180000,
         "BuildCostMass": 1750,
         "MaintenanceConsumptionPerSecondEnergy": 150
       },
-      "BuildIconSortPriority": 40,
       "LifeBarSize": 2,
-      "StrategicIconName": "icon_bomber3_directfire",
-      "VeteranMass": [
-        4200,
-        4200,
-        4200,
-        4200,
-        4200
-      ],
+      "BuildIconSortPriority": 40,
       "Physics": {
         "FuelRechargeRate": 15,
         "MaxSpeed": 0.5,
@@ -55178,28 +55185,17 @@
         "GroundCollisionOffset": 2,
         "MotionType": "RULEUMT_Air"
       },
-      "Intel": {
-        "RadarRadius": 64,
-        "RadarStealth": true,
-        "VisionRadius": 32
-      },
-      "SelectionThickness": 0.43,
-      "Footprint": {
-        "MaxSlope": 0.25,
-        "SizeX": 1,
-        "SizeZ": 1
-      },
-      "SizeZ": 1.2,
       "Air": {
-        "BreakOffDistance": 60,
+        "BreakOffDistance": 50,
         "KMoveDamping": 2,
         "BreakOffTrigger": 30,
         "KTurn": 0.8,
-        "TurnSpeed": 0.8,
+        "TurnSpeed": 1.2,
         "KRoll": 2,
         "MaxAirspeed": 17,
-        "LiftFactor": 7,
+        "LiftFactor": 10,
         "KLift": 3,
+        "RandomBreakOffDistanceMult": 1,
         "PredictAheadForBombDrop": 3,
         "AutoLandTime": 1,
         "BankForward": false,
@@ -55213,10 +55209,19 @@
         "KMove": 1,
         "MinAirspeed": 15,
         "KLiftDamping": 2.5,
-        "CombatTurnSpeed": 0.8,
+        "CombatTurnSpeed": 1.2,
         "TightTurnMultiplier": 0,
         "BankFactor": 2.5
       },
+      "SizeX": 1.6,
+      "SelectionThickness": 0.43,
+      "Footprint": {
+        "MaxSlope": 0.25,
+        "SizeX": 1,
+        "SizeZ": 1
+      },
+      "SizeZ": 1.2,
+      "VeteranMassMult": 2,
       "Defense": {
         "ArmorType": "Light",
         "SurfaceThreatLevel": 28,
@@ -55299,7 +55304,11 @@
       "SelectionSizeX": 1.6,
       "SizeY": 0.5,
       "SelectionSizeZ": 1.2,
-      "SizeX": 1.6,
+      "Intel": {
+        "RadarRadius": 64,
+        "RadarStealth": true,
+        "VisionRadius": 32
+      },
       "Veteran": {
         "Level2": 24,
         "Level3": 36,
@@ -55382,16 +55391,34 @@
         }
       },
       "StrategicIconSortPriority": 55,
-      "AI": {
-        "GuardReturnRadius": 125
-      },
+      "StrategicIconName": "icon_bomber3_directfire",
       "Weapon": [
+        {
+          "TargetPriorities": [
+            "TECH4",
+            "TECH3 STRUCTURE",
+            "TECH2 STRUCTURE",
+            "TECH1 STRUCTURE",
+            "ALLUNITS"
+          ],
+          "TargetCheckInterval": 3,
+          "RateOfFire": 0,
+          "AutoInitiateAttackCommand": true,
+          "MaxRadius": 64,
+          "AboveWaterTargetsOnly": true,
+          "FireTargetLayerCapsTable": {
+            "Air": "Land|Water|Seabed",
+            "Land": "Land|Water|Seabed"
+          },
+          "TrackingRadius": 1,
+          "TargetRestrictDisallow": "UNTARGETABLE"
+        },
         {
           "DamageRadius": 6.5,
           "FiringRandomness": 0,
-          "EffectiveRadius": 25,
+          "RateOfFire": 0.125,
           "ProjectilesPerOnFire": 1,
-          "BombDropThreshold": 3.5,
+          "BombDropThreshold": 8,
           "DamageFriendly": true,
           "RackBones": [
             {
@@ -55410,7 +55437,6 @@
               "Cue": "URA0304_Strategic_Bomb"
             }
           },
-          "AutoInitiateAttackCommand": true,
           "DisplayName": "Neutron Bomb",
           "RackSalvoSize": 1,
           "AboveWaterTargetsOnly": true,
@@ -55442,8 +55468,8 @@
           "RackReloadTimeout": 10,
           "FiringTolerance": 6,
           "RackSalvoReloadTime": 0,
-          "RateOfFire": 0.125,
           "MaxRadius": 90,
+          "EffectiveRadius": 25,
           "TargetRestrictDisallow": "UNTARGETABLE",
           "Turreted": false
         },
@@ -61889,17 +61915,22 @@
         "SNIPER",
         "SONAR",
         "VISIBLETORECON",
+        "REPAIR",
+        "RECLAIM",
         null
       ],
       "AverageDensity": 110000,
       "General": {
         "CommandCaps": {
-          "RULEUCC_RetaliateToggle": true,
+          "RULEUCC_Repair": true,
           "RULEUCC_Attack": true,
+          "RULEUCC_Pause": true,
+          "RULEUCC_Stop": true,
           "RULEUCC_Move": true,
           "RULEUCC_Guard": true,
+          "RULEUCC_RetaliateToggle": true,
           "RULEUCC_Patrol": true,
-          "RULEUCC_Stop": true
+          "RULEUCC_Reclaim": true
         },
         "UnitName": "Megalith",
         "FractionThreshold": 0.99,
@@ -61938,7 +61969,7 @@
       "CollisionOffsetZ": -1.2,
       "Economy": {
         "BuildTime": 60625,
-        "MaxBuildDistance": 1,
+        "MaxBuildDistance": 2,
         "BuildRate": 45,
         "BuildableCategory": [
           "xrl0002",
@@ -64478,8 +64509,8 @@
           "AboveWaterTargetsOnly": true,
           "RackSlavedToTurret": false,
           "TargetPriorities": [
+            "RADAR INTELLIGENCE STRUCTURE",
             "MOBILE",
-            "(STRUCTURE * DEFENSE - ANTIMISSILE)",
             "ALLUNITS"
           ],
           "MaxRadius": 33,
@@ -75789,8 +75820,8 @@
       },
       "Defense": {
         "ArmorType": "Structure",
-        "Health": 6400,
-        "MaxHealth": 6400,
+        "Health": 6600,
+        "MaxHealth": 6600,
         "EconomyThreatLevel": 208
       },
       "Audio": {
@@ -76779,8 +76810,8 @@
       },
       "Defense": {
         "ArmorType": "Structure",
-        "Health": 6400,
-        "MaxHealth": 6400,
+        "Health": 6600,
+        "MaxHealth": 6600,
         "EconomyThreatLevel": 208
       },
       "Audio": {
@@ -83242,7 +83273,8 @@
         "TargetBones": [
           "Turret_Front",
           "Turret_Back"
-        ]
+        ],
+        "GuardScanRadius": 180
       },
       "Weapon": [
         {
@@ -85293,6 +85325,7 @@
       },
       "StrategicIconName": "icon_bomber3_directfire",
       "SizeZ": 1.4,
+      "VeteranMassMult": 2,
       "LifeBarOffset": 1,
       "LifeBarHeight": 0.075,
       "Id": "UAA0304",
@@ -85311,13 +85344,6 @@
       },
       "Description": "Strategic Bomber",
       "LifeBarSize": 1.5,
-      "VeteranMass": [
-        4200,
-        4200,
-        4200,
-        4200,
-        4200
-      ],
       "CollisionOffsetZ": 0.2,
       "Economy": {
         "BuildTime": 12000,
@@ -85330,15 +85356,16 @@
         "SizeZ": 1
       },
       "Air": {
-        "BreakOffDistance": 60,
+        "BreakOffDistance": 50,
         "KMoveDamping": 2,
         "BreakOffTrigger": 30,
         "KTurn": 0.8,
-        "TurnSpeed": 0.8,
+        "TurnSpeed": 1.2,
         "KRoll": 2,
         "MaxAirspeed": 17,
-        "LiftFactor": 7,
+        "LiftFactor": 10,
         "KLift": 3,
+        "RandomBreakOffDistanceMult": 1,
         "PredictAheadForBombDrop": 3,
         "AutoLandTime": 1,
         "BankForward": false,
@@ -85352,7 +85379,7 @@
         "KMove": 1,
         "MinAirspeed": 15,
         "KLiftDamping": 2.5,
-        "CombatTurnSpeed": 0.8,
+        "CombatTurnSpeed": 1.2,
         "TightTurnMultiplier": 0,
         "BankFactor": 2.5
       },
@@ -85515,16 +85542,32 @@
         ]
       },
       "StrategicIconSortPriority": 55,
-      "Intel": {
-        "RadarRadius": 64,
-        "VisionRadius": 32
-      },
       "Weapon": [
+        {
+          "TargetPriorities": [
+            "TECH4",
+            "TECH3 STRUCTURE",
+            "TECH2 STRUCTURE",
+            "TECH1 STRUCTURE",
+            "ALLUNITS"
+          ],
+          "TargetCheckInterval": 3,
+          "RateOfFire": 0,
+          "AutoInitiateAttackCommand": true,
+          "MaxRadius": 64,
+          "AboveWaterTargetsOnly": true,
+          "FireTargetLayerCapsTable": {
+            "Air": "Land|Water|Seabed",
+            "Land": "Land|Water|Seabed"
+          },
+          "TrackingRadius": 1,
+          "TargetRestrictDisallow": "UNTARGETABLE"
+        },
         {
           "DamageRadius": 5.25,
           "FiringRandomness": 0,
           "RateOfFire": 0.125,
-          "BombDropThreshold": 3.5,
+          "BombDropThreshold": 8,
           "DamageFriendly": true,
           "RackBones": [
             {
@@ -85543,7 +85586,6 @@
               "Cue": "UAA0304_Bomb_Quark"
             }
           },
-          "AutoInitiateAttackCommand": true,
           "DisplayName": "Quark Bomb",
           "RackSalvoSize": 1,
           "AboveWaterTargetsOnly": true,
@@ -85570,12 +85612,12 @@
           "FixBombTrajectory": true,
           "Label": "Bomb",
           "NeedToComputeBombDrop": true,
-          "EffectiveRadius": 25,
+          "RackReloadTimeout": 10,
           "CollideFriendly": false,
-          "MaxRadius": 90,
+          "EffectiveRadius": 25,
           "RackRecoilDistance": 0,
           "FiringTolerance": 6,
-          "RackReloadTimeout": 10,
+          "MaxRadius": 90,
           "Display": "Quark Bomb",
           "Buffs": [
             {
@@ -85605,7 +85647,11 @@
           "AboveWaterTargetsOnly": true,
           "Damage": 500
         }
-      ]
+      ],
+      "Intel": {
+        "RadarRadius": 64,
+        "VisionRadius": 32
+      }
     },
     {
       "Categories": [
@@ -99046,7 +99092,7 @@
           "ManualFire": true,
           "AboveWaterTargetsOnly": true,
           "RackSlavedToTurret": false,
-          "MinRadius": 15,
+          "MinRadius": 30,
           "CountedProjectile": true,
           "ProjectileId": "/projectiles/SIFLaanseTacticalMissileCDR/SIFLaanseTacticalMissileCDR_proj.bp",
           "MuzzleVelocity": 12,
@@ -104863,8 +104909,8 @@
       },
       "Defense": {
         "ArmorType": "Structure",
-        "Health": 7000,
-        "MaxHealth": 7000,
+        "Health": 7200,
+        "MaxHealth": 7200,
         "EconomyThreatLevel": 220
       },
       "Audio": {
@@ -105636,8 +105682,8 @@
       },
       "Defense": {
         "ArmorType": "Structure",
-        "Health": 7000,
-        "MaxHealth": 7000,
+        "Health": 7200,
+        "MaxHealth": 7200,
         "EconomyThreatLevel": 220
       },
       "Audio": {
@@ -113929,7 +113975,7 @@
           "WeaponRepackTimeout": 4,
           "TurretYawSpeed": 1000,
           "RackRecoilDistance": 0,
-          "FiringTolerance": 2,
+          "FiringTolerance": 0,
           "MuzzleSalvoSize": 1,
           "TurretDualManipulators": false,
           "TurretBonePitch": "muzzle01",
@@ -113980,21 +114026,16 @@
       },
       "LifeBarOffset": 1.3,
       "SizeSphere": 2,
+      "AI": {
+        "GuardReturnRadius": 125
+      },
       "Economy": {
         "BuildTime": 12000,
         "BuildCostEnergy": 180000,
         "BuildCostMass": 1750
       },
-      "BuildIconSortPriority": 40,
       "LifeBarSize": 2.5,
-      "StrategicIconName": "icon_bomber3_directfire",
-      "VeteranMass": [
-        4200,
-        4200,
-        4200,
-        4200,
-        4200
-      ],
+      "BuildIconSortPriority": 40,
       "Physics": {
         "MeshExtentsX": 3.25,
         "Elevation": 18,
@@ -114006,27 +114047,17 @@
         "MotionType": "RULEUMT_Air",
         "MeshExtentsZ": 2
       },
-      "Intel": {
-        "RadarRadius": 64,
-        "VisionRadius": 32
-      },
-      "SelectionThickness": 0.29,
-      "Footprint": {
-        "MaxSlope": 0.25,
-        "SizeX": 1,
-        "SizeZ": 1
-      },
-      "SizeZ": 1,
       "Air": {
-        "BreakOffDistance": 60,
+        "BreakOffDistance": 50,
         "KMoveDamping": 2,
         "BreakOffTrigger": 30,
         "KTurn": 0.8,
-        "TurnSpeed": 0.8,
+        "TurnSpeed": 1.2,
         "KRoll": 2,
         "MaxAirspeed": 17,
-        "LiftFactor": 7,
+        "LiftFactor": 10,
         "KLift": 3,
+        "RandomBreakOffDistanceMult": 1,
         "PredictAheadForBombDrop": 3,
         "AutoLandTime": 1,
         "BankForward": false,
@@ -114040,10 +114071,19 @@
         "KMove": 1,
         "MinAirspeed": 15,
         "KLiftDamping": 2.5,
-        "CombatTurnSpeed": 0.8,
+        "CombatTurnSpeed": 1.2,
         "TightTurnMultiplier": 0,
         "BankFactor": 2.5
       },
+      "SizeX": 2.6,
+      "SelectionThickness": 0.29,
+      "Footprint": {
+        "MaxSlope": 0.25,
+        "SizeX": 1,
+        "SizeZ": 1
+      },
+      "SizeZ": 1,
+      "VeteranMassMult": 2,
       "Defense": {
         "ArmorType": "Light",
         "SurfaceThreatLevel": 30,
@@ -114120,7 +114160,10 @@
       "SelectionSizeX": 2.3,
       "SizeY": 0.4,
       "SelectionSizeZ": 0.6,
-      "SizeX": 2.6,
+      "Intel": {
+        "RadarRadius": 64,
+        "VisionRadius": 32
+      },
       "Veteran": {
         "Level2": 24,
         "Level3": 36,
@@ -114207,15 +114250,33 @@
         }
       },
       "StrategicIconSortPriority": 55,
-      "AI": {
-        "GuardReturnRadius": 125
-      },
+      "StrategicIconName": "icon_bomber3_directfire",
       "Weapon": [
+        {
+          "TargetPriorities": [
+            "TECH4",
+            "TECH3 STRUCTURE",
+            "TECH2 STRUCTURE",
+            "TECH1 STRUCTURE",
+            "ALLUNITS"
+          ],
+          "TargetCheckInterval": 3,
+          "RateOfFire": 0,
+          "AutoInitiateAttackCommand": true,
+          "MaxRadius": 64,
+          "AboveWaterTargetsOnly": true,
+          "FireTargetLayerCapsTable": {
+            "Air": "Land|Water|Seabed",
+            "Land": "Land|Water|Seabed"
+          },
+          "TrackingRadius": 1,
+          "TargetRestrictDisallow": "UNTARGETABLE"
+        },
         {
           "DamageRadius": 6,
           "FiringRandomness": 0,
           "RateOfFire": 0.125,
-          "BombDropThreshold": 3.5,
+          "BombDropThreshold": 8,
           "DamageFriendly": true,
           "RackBones": [
             {
@@ -114225,7 +114286,7 @@
               "RackBone": "Center_Projectile"
             }
           ],
-          "Damage": 3000,
+          "TargetRestrictDisallow": "UNTARGETABLE",
           "DamageType": "Normal",
           "Audio": {
             "Fire": {
@@ -114234,7 +114295,6 @@
               "Cue": "XSA0304_Zhanasse_Bomb"
             }
           },
-          "AutoInitiateAttackCommand": true,
           "DisplayName": "Zhanasee Strategic Bomb",
           "RackSalvoSize": 1,
           "AboveWaterTargetsOnly": true,
@@ -114265,10 +114325,10 @@
           "RackRecoilDistance": 0,
           "FiringTolerance": 6,
           "RackReloadTimeout": 10,
-          "RackSalvoReloadTime": 0,
           "MaxRadius": 90,
           "EffectiveRadius": 25,
-          "TargetRestrictDisallow": "UNTARGETABLE"
+          "RackSalvoReloadTime": 0,
+          "Damage": 3000
         },
         {
           "DamageRadius": 2,
