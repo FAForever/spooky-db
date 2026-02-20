@@ -1,5 +1,5 @@
 {
-  "version": "3829",
+  "version": "3831",
   "units": [
     {
       "Categories": [
@@ -2156,7 +2156,7 @@
         "KLiftDamping": 2,
         "CanFly": true,
         "Winged": true,
-        "StartTurnDistance": 10,
+        "StartTurnDistance": 5,
         "EngageDistance": 50,
         "KMove": 1.5,
         "MinAirspeed": 10,
@@ -6783,7 +6783,7 @@
           "ManualFire": true,
           "AboveWaterTargetsOnly": true,
           "RackSlavedToTurret": false,
-          "MinRadius": 30,
+          "MinRadius": 20,
           "CountedProjectile": true,
           "ProjectileId": "/projectiles/TIFMissileCruiseCDR/TIFMissileCruiseCDR_proj.bp",
           "MuzzleVelocity": 3,
@@ -6844,7 +6844,7 @@
           "AboveWaterTargetsOnly": true,
           "RackSlavedToTurret": false,
           "MaxRadius": 256,
-          "MinRadius": 30,
+          "MinRadius": 20,
           "CountedProjectile": true,
           "ProjectileId": "/projectiles/TIFMissileNukeCDR/TIFMissileNukeCDR_proj.bp",
           "NukeInnerRingRadius": 15,
@@ -8263,7 +8263,7 @@
       "LifeBarSize": 0.6,
       "BuildIconSortPriority": 15,
       "AI": {
-        "GuardScanRadius": 26
+        "GuardScanRadius": 8
       },
       "StrategicIconName": "icon_land2_engineer",
       "Physics": {
@@ -20724,7 +20724,8 @@
           "Right_Turret01",
           "Right_Turret02",
           "Right_Turret03"
-        ]
+        ],
+        "GuardScanRadius": 165
       },
       "Weapon": [
         {
@@ -26803,7 +26804,7 @@
         "PRODUCTFA",
         "RECLAIMABLE",
         "SELECTABLE",
-        "SIZE12",
+        "SIZE4",
         "SNIPEMODE",
         "SORTDEFENSE",
         "STRUCTURE",
@@ -32497,7 +32498,7 @@
         "KLiftDamping": 2,
         "CanFly": true,
         "Winged": true,
-        "StartTurnDistance": 10,
+        "StartTurnDistance": 5,
         "EngageDistance": 50,
         "KMove": 1.5,
         "MinAirspeed": 10,
@@ -34666,7 +34667,7 @@
           "TurretDualManipulators": false,
           "TurretBonePitch": "Front_Turret_Barrel",
           "Turreted": true,
-          "MaxRadius": 26
+          "MaxRadius": 28
         },
         {
           "AlwaysRecheckTarget": false,
@@ -45763,10 +45764,10 @@
       },
       "SelectionSizeX": 0.35,
       "Intel": {
-        "SonarStealthFieldRadius": 24,
+        "SonarStealthFieldRadius": 20,
         "RadarStealth": true,
         "RadarStealthField": true,
-        "RadarStealthFieldRadius": 24,
+        "RadarStealthFieldRadius": 20,
         "VisionRadius": 16
       },
       "SelectionSizeZ": 0.45,
@@ -46855,7 +46856,7 @@
       "Description": "Mobile Bomb",
       "CollisionOffsetZ": 0.05,
       "Economy": {
-        "BuildTime": 550,
+        "BuildTime": 700,
         "TeleportMassMod": 1,
         "MaintenanceConsumptionPerSecondEnergy": 10,
         "BuildCostEnergy": 1300,
@@ -64628,7 +64629,7 @@
         "KLiftDamping": 2,
         "CanFly": true,
         "Winged": true,
-        "StartTurnDistance": 10,
+        "StartTurnDistance": 5,
         "EngageDistance": 50,
         "KMove": 1.5,
         "MinAirspeed": 10,
@@ -71566,7 +71567,7 @@
         "KLiftDamping": 2,
         "CanFly": true,
         "Winged": true,
-        "StartTurnDistance": 10,
+        "StartTurnDistance": 5,
         "EngageDistance": 50,
         "KMove": 1.5,
         "MinAirspeed": 8,
@@ -74292,7 +74293,7 @@
       "Weapon": [
         {
           "DamageRadius": 1.4,
-          "FiringRandomness": 0.25,
+          "FiringRandomness": 0.2,
           "RateOfFire": 0.2,
           "TurretYaw": 0,
           "RackBones": [
@@ -74350,18 +74351,18 @@
           "RackRecoilDistance": -1,
           "MuzzleSalvoDelay": 0,
           "MuzzleChargeDelay": 0.1,
-          "TurretYawRange": 150,
+          "TurretYawRange": 160,
           "RackSalvoReloadTime": 0,
-          "FiringTolerance": 2,
+          "FiringTolerance": 1,
           "SlavedToBody": true,
           "CollideFriendly": false,
-          "TurretYawSpeed": 90,
+          "TurretYawSpeed": 100,
           "TargetRestrictDisallow": "UNTARGETABLE",
           "SlavedToBodyArcRange": 155,
           "RackReloadTimeout": 10,
           "TurretDualManipulators": false,
           "TurretBonePitch": "Turret_Front_Barrel01",
-          "MaxRadius": 70,
+          "MaxRadius": 75,
           "Turreted": true
         },
         {
@@ -94411,7 +94412,7 @@
         "KLiftDamping": 2,
         "CanFly": true,
         "Winged": true,
-        "StartTurnDistance": 10,
+        "StartTurnDistance": 5,
         "EngageDistance": 50,
         "KMove": 1.5,
         "MinAirspeed": 10,
@@ -94978,9 +94979,9 @@
       "Defense": {
         "ArmorType": "Normal",
         "SurfaceThreatLevel": 2,
-        "Health": 550,
+        "Health": 610,
         "SubThreatLevel": 4,
-        "MaxHealth": 550
+        "MaxHealth": 610
       },
       "Audio": {
         "UISelection": {
@@ -99092,7 +99093,7 @@
           "ManualFire": true,
           "AboveWaterTargetsOnly": true,
           "RackSlavedToTurret": false,
-          "MinRadius": 30,
+          "MinRadius": 20,
           "CountedProjectile": true,
           "ProjectileId": "/projectiles/SIFLaanseTacticalMissileCDR/SIFLaanseTacticalMissileCDR_proj.bp",
           "MuzzleVelocity": 12,
@@ -103028,8 +103029,8 @@
           "MuzzleVelocity": 5,
           "RackFireTogether": false,
           "RackSalvoChargeTime": 0,
-          "MuzzleSalvoDelay": 0.9,
-          "MuzzleSalvoSize": 4,
+          "MuzzleSalvoDelay": 0.8,
+          "MuzzleSalvoSize": 3,
           "RackBones": [
             {
               "MuzzleBones": [
@@ -103062,7 +103063,7 @@
           "RackRecoilDistance": 0,
           "RackSalvoSize": 1,
           "RangeCategory": "UWRC_AntiNavy",
-          "Damage": 95,
+          "Damage": 126,
           "FiringRandomness": 1,
           "MaxRadius": 45,
           "RackSlavedToTurret": false
@@ -104794,7 +104795,7 @@
           "ProjectileId": "/projectiles/SIFLaanseTacticalMissile01/SIFLaanseTacticalMissile01_proj.bp",
           "MaxRadius": 65,
           "MuzzleVelocity": 4,
-          "RackSalvoReloadTime": 0,
+          "RackSalvoReloadTime": 5.8,
           "RackSalvoChargeTime": 0,
           "Turreted": false,
           "WeaponUnpacks": false,

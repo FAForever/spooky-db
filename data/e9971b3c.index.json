@@ -1,5 +1,5 @@
 {
-  "version": "3829",
+  "version": "3831",
   "units": [
     {
       "Categories": [
@@ -2068,7 +2068,7 @@
           "DamageType": "Normal",
           "DisplayName": "Tactical Warhead",
           "ManualFire": true,
-          "MinRadius": 30,
+          "MinRadius": 20,
           "ProjectileId": "/projectiles/TIFMissileCruiseCDR/TIFMissileCruiseCDR_proj.bp",
           "MuzzleVelocity": 3,
           "RackFireTogether": false,
@@ -2091,7 +2091,7 @@
           "DisplayName": "Nuclear Warhead",
           "ManualFire": true,
           "MaxRadius": 256,
-          "MinRadius": 30,
+          "MinRadius": 20,
           "ProjectileId": "/projectiles/TIFMissileNukeCDR/TIFMissileNukeCDR_proj.bp",
           "NukeInnerRingRadius": 15,
           "MuzzleVelocity": 5,
@@ -8558,7 +8558,7 @@
         "PRODUCTFA",
         "RECLAIMABLE",
         "SELECTABLE",
-        "SIZE12",
+        "SIZE4",
         "SNIPEMODE",
         "SORTDEFENSE",
         "STRUCTURE",
@@ -11079,7 +11079,7 @@
           "TurretYawRange": 160,
           "FiringTolerance": 2,
           "RackSalvoReloadTime": 0,
-          "MaxRadius": 26
+          "MaxRadius": 28
         },
         {
           "ProjectilesPerOnFire": 1,
@@ -15101,7 +15101,7 @@
       "Buffs": {},
       "Description": "Mobile Bomb",
       "Economy": {
-        "BuildTime": 550,
+        "BuildTime": 700,
         "MaintenanceConsumptionPerSecondEnergy": 10,
         "BuildCostEnergy": 1300,
         "BuildCostMass": 190
@@ -24099,7 +24099,7 @@
       "Weapon": [
         {
           "DamageRadius": 1.4,
-          "FiringRandomness": 0.25,
+          "FiringRandomness": 0.2,
           "RateOfFire": 0.2,
           "TurretYaw": 0,
           "RackBones": [
@@ -24122,11 +24122,11 @@
           "RackSalvoChargeTime": 0,
           "MuzzleSalvoSize": 1,
           "MuzzleSalvoDelay": 0,
-          "TurretYawRange": 150,
+          "TurretYawRange": 160,
           "RackSalvoReloadTime": 0,
-          "FiringTolerance": 2,
-          "TurretYawSpeed": 90,
-          "MaxRadius": 70
+          "FiringTolerance": 1,
+          "TurretYawSpeed": 100,
+          "MaxRadius": 75
         },
         {
           "ProjectileId": "/projectiles/AANDepthCharge02/AANDepthCharge02_proj.bp",
@@ -30488,7 +30488,7 @@
         "MaxSpeed": 6
       },
       "Defense": {
-        "Health": 550
+        "Health": 610
       },
       "Id": "XSS0203",
       "Intel": {
@@ -31749,7 +31749,7 @@
           "DamageType": "Normal",
           "DisplayName": "Laanse Tactical Missile Launcher",
           "ManualFire": true,
-          "MinRadius": 30,
+          "MinRadius": 20,
           "ProjectileId": "/projectiles/SIFLaanseTacticalMissileCDR/SIFLaanseTacticalMissileCDR_proj.bp",
           "MuzzleVelocity": 12,
           "RackFireTogether": false,
@@ -33041,8 +33041,8 @@
           "MuzzleVelocity": 5,
           "RackFireTogether": false,
           "RackSalvoChargeTime": 0,
-          "MuzzleSalvoDelay": 0.9,
-          "MuzzleSalvoSize": 4,
+          "MuzzleSalvoDelay": 0.8,
+          "MuzzleSalvoSize": 3,
           "RackBones": [
             {
               "MuzzleBones": [
@@ -33056,7 +33056,7 @@
           "FiringTolerance": 2,
           "RackSalvoReloadTime": 0,
           "DisplayName": "Ana-it Torpedo Launcher",
-          "Damage": 95,
+          "Damage": 126,
           "FiringRandomness": 1,
           "MaxRadius": 45
         },
@@ -33686,7 +33686,7 @@
           "ProjectileId": "/projectiles/SIFLaanseTacticalMissile01/SIFLaanseTacticalMissile01_proj.bp",
           "MaxRadius": 65,
           "MuzzleVelocity": 4,
-          "RackSalvoReloadTime": 0,
+          "RackSalvoReloadTime": 5.8,
           "RackSalvoChargeTime": 0,
           "TurretYawSpeed": 0,
           "MuzzleSalvoDelay": 0,
