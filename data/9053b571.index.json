@@ -1,5 +1,5 @@
 {
-  "version": "3831",
+  "version": "3832",
   "units": [
     {
       "Categories": [
@@ -13602,6 +13602,7 @@
               ]
             }
           ],
+          "Damage": 40,
           "ProjectileLifetime": 7,
           "DamageType": "Normal",
           "DisplayName": "Nanite Torpedo",
@@ -13615,9 +13616,8 @@
           "MuzzleSalvoDelay": 0.8,
           "DoTTime": 0.4,
           "RackSalvoReloadTime": 0,
-          "MaxRadius": 45,
           "FiringTolerance": 2,
-          "Damage": 40
+          "MaxRadius": 45
         },
         {
           "RateOfFire": 0.26315789473684,
@@ -16177,7 +16177,7 @@
       },
       "StrategicIconName": "icon_structure2_engineer",
       "Economy": {
-        "BuildTime": 1171,
+        "BuildTime": 880,
         "BuildCostMass": 350,
         "BuildRate": 20,
         "BuildCostEnergy": 2100
@@ -16236,7 +16236,7 @@
       "StrategicIconName": "icon_structure2_engineer",
       "Economy": {
         "BuildCostEnergy": 4200,
-        "BuildTime": 1171,
+        "BuildTime": 1000,
         "BuildRate": 37,
         "BuildCostMass": 700
       },
@@ -16292,7 +16292,7 @@
       },
       "StrategicIconName": "icon_structure2_engineer",
       "Economy": {
-        "BuildTime": 1171,
+        "BuildTime": 1120,
         "BuildRate": 50,
         "BuildCostMass": 1050,
         "BuildCostEnergy": 6300
@@ -32728,16 +32728,16 @@
         "Icon": "air",
         "Classification": "RULEUC_MilitaryAircraft"
       },
+      "Air": {
+        "MinAirspeed": 3,
+        "MaxAirspeed": 11
+      },
       "BuildIconSortPriority": 30,
       "Description": "Gunship",
       "Economy": {
         "BuildTime": 2700,
         "BuildCostEnergy": 10000,
         "BuildCostMass": 500
-      },
-      "Air": {
-        "MinAirspeed": 3,
-        "MaxAirspeed": 11
       },
       "Defense": {
         "Health": 1800

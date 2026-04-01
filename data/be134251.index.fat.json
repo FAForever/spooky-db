@@ -1,5 +1,5 @@
 {
-  "version": "3831",
+  "version": "3832",
   "units": [
     {
       "Categories": [
@@ -6199,8 +6199,8 @@
         },
         "Killed": {
           "LodCutoff": "UnitMove_LodCutoff",
-          "Bank": "Explosions",
-          "Cue": "UEF_Nuke_Impact"
+          "Bank": "Wilhelm_Scream",
+          "Cue": "Wilhelm_Cue"
         },
         "EnhanceStart": {
           "LodCutoff": "UnitMove_LodCutoff",
@@ -7703,20 +7703,23 @@
       "SizeX": 1,
       "SelectionThickness": 0.66,
       "Display": {
-        "UniformScale": 0.129,
+        "UniformScale": 1,
         "BuildMeshBlueprint": "/props/UEB5101/UEB5101_prop.bp",
         "Mesh": {
           "IconFadeInZoom": 130,
           "LODs": [
             {
-              "LODCutoff": 100,
-              "ShaderName": "Unit"
+              "NormalsName": "/textures/FlatNormal.dds",
+              "LODCutoff": 300,
+              "MeshName": "/meshes/cube01_lod0.scm",
+              "SpecularName": "/textures/cube01_specteam.dds",
+              "ShaderName": "Unit",
+              "AlbedoName": "/textures/grass.dds"
             },
             {
+              "MeshName": "/meshes/cube01_lod0.scm",
               "ShaderName": "Unit",
-              "SpecularName": "ueb5101_lod1_specteam.dds",
-              "LODCutoff": 215,
-              "AlbedoName": "ueb5101_lod1_albedo.dds"
+              "LODCutoff": 100
             }
           ]
         }
@@ -37197,8 +37200,8 @@
         },
         "Killed": {
           "LodCutoff": "UnitMove_LodCutoff",
-          "Bank": "Explosions",
-          "Cue": "Cybran_Nuke_Impact"
+          "Bank": "Wilhelm_Scream",
+          "Cue": "Wilhelm_Cue"
         },
         "EnhanceStart": {
           "LodCutoff": "UnitMove_LodCutoff",
@@ -39097,18 +39100,21 @@
           "IconFadeInZoom": 130,
           "LODs": [
             {
-              "LODCutoff": 100,
-              "ShaderName": "Insect"
+              "NormalsName": "/textures/FlatNormal.dds",
+              "LODCutoff": 300,
+              "MeshName": "/meshes/cube01_lod0.scm",
+              "SpecularName": "/textures/cube01_specteam.dds",
+              "ShaderName": "Unit",
+              "AlbedoName": "/textures/grass.dds"
             },
             {
+              "MeshName": "/meshes/cube01_lod0.scm",
               "ShaderName": "Insect",
-              "SpecularName": "urb5101_lod1_specteam.dds",
-              "LODCutoff": 215,
-              "AlbedoName": "urb5101_lod1_albedo.dds"
+              "LODCutoff": 100
             }
           ]
         },
-        "UniformScale": 0.14
+        "UniformScale": 1
       },
       "StrategicIconSortPriority": 210,
       "Physics": {
@@ -42132,7 +42138,7 @@
               "RackBone": "Torp_Launcher_L"
             }
           ],
-          "TargetRestrictDisallow": "UNTARGETABLE, HOVER",
+          "Damage": 40,
           "ProjectileLifetime": 7,
           "DamageType": "Normal",
           "Audio": {
@@ -42163,6 +42169,7 @@
             "Water": "Seabed|Sub|Water"
           },
           "BallisticArc": "RULEUBA_None",
+          "NotExclusive": true,
           "MuzzleSalvoDelay": 0.8,
           "DoTTime": 0.4,
           "RackRecoilDistance": 0,
@@ -42171,9 +42178,9 @@
           "RackSalvoReloadTime": 0,
           "SlavedToBodyArcRange": 10,
           "SlavedToBody": true,
-          "MaxRadius": 45,
           "FiringTolerance": 2,
-          "Damage": 40,
+          "MaxRadius": 45,
+          "TargetRestrictDisallow": "UNTARGETABLE, HOVER",
           "Turreted": false
         },
         {
@@ -49701,7 +49708,7 @@
       "CollisionOffsetY": -0.25,
       "SelectionSizeX": 1,
       "Economy": {
-        "BuildTime": 1171,
+        "BuildTime": 880,
         "BuildCostMass": 350,
         "RebuildBonusIds": [
           "xrb0104"
@@ -49938,7 +49945,7 @@
           "xrb0304"
         ],
         "BuildCostEnergy": 4200,
-        "BuildTime": 1171,
+        "BuildTime": 1000,
         "BuildRate": 37,
         "DifferentialUpgradeCostCalculation": true,
         "BuildCostMass": 700,
@@ -50161,7 +50168,7 @@
       "CollisionOffsetY": -0.25,
       "SelectionSizeX": 1,
       "Economy": {
-        "BuildTime": 1171,
+        "BuildTime": 1120,
         "MaxBuildDistance": 25,
         "BuildRate": 50,
         "BuildCostMass": 1050,
@@ -68771,8 +68778,8 @@
         },
         "Killed": {
           "LodCutoff": "UnitMove_LodCutoff",
-          "Bank": "Explosions",
-          "Cue": "Aeon_Nuke_Impact"
+          "Bank": "Wilhelm_Scream",
+          "Cue": "Wilhelm_Cue"
         },
         "EnhanceStart": {
           "LodCutoff": "UnitMove_LodCutoff",
@@ -70630,19 +70637,22 @@
       "SizeX": 1,
       "SelectionThickness": 0.66,
       "Display": {
-        "UniformScale": 0.122,
+        "UniformScale": 1,
         "Mesh": {
           "IconFadeInZoom": 130,
           "LODs": [
             {
-              "LODCutoff": 100,
-              "ShaderName": "Aeon"
+              "NormalsName": "/textures/FlatNormal.dds",
+              "LODCutoff": 300,
+              "MeshName": "/meshes/cube01_lod0.scm",
+              "SpecularName": "/textures/cube01_specteam.dds",
+              "ShaderName": "Unit",
+              "AlbedoName": "/textures/grass.dds"
             },
             {
+              "MeshName": "/meshes/cube01_lod0.scm",
               "ShaderName": "Aeon",
-              "SpecularName": "uab5101_lod1_specteam.dds",
-              "LODCutoff": 215,
-              "AlbedoName": "uab5101_lod1_albedo.dds"
+              "LODCutoff": 100
             }
           ]
         },
@@ -98504,8 +98514,8 @@
         },
         "Killed": {
           "LodCutoff": "UnitMove_LodCutoff",
-          "Bank": "Impacts",
-          "Cue": "XSB2305_Impact"
+          "Bank": "Wilhelm_Scream",
+          "Cue": "Wilhelm_Cue"
         },
         "EnhanceStart": {
           "LodCutoff": "UnitMove_LodCutoff",
@@ -99975,7 +99985,7 @@
       "SizeX": 1,
       "SelectionThickness": 0.66,
       "Display": {
-        "UniformScale": 0.136,
+        "UniformScale": 1,
         "AnimationDeath": [
           {
             "Animation": "/units/xsb5101/xsb5101_ADeath.sca",
@@ -99988,16 +99998,17 @@
           "IconFadeInZoom": 130,
           "LODs": [
             {
-              "ShaderName": "Seraphim",
-              "LODCutoff": 100,
-              "LookupName": "/textures/environment/Falloff_seraphim_lookup.dds"
+              "NormalsName": "/textures/FlatNormal.dds",
+              "LODCutoff": 300,
+              "MeshName": "/meshes/cube01_lod0.scm",
+              "SpecularName": "/textures/cube01_specteam.dds",
+              "ShaderName": "Unit",
+              "AlbedoName": "/textures/grass.dds"
             },
             {
-              "LODCutoff": 215,
-              "SpecularName": "xsb5101_lod1_specteam.dds",
+              "MeshName": "/meshes/cube01_lod0.scm",
               "ShaderName": "Seraphim",
-              "LookupName": "/textures/environment/Falloff_seraphim_lookup.dds",
-              "AlbedoName": "xsb5101_lod1_albedo.dds"
+              "LODCutoff": 100
             }
           ]
         },
@@ -102006,29 +102017,13 @@
         },
         "Classification": "RULEUC_MilitaryAircraft"
       },
-      "SizeSphere": 1.76,
       "Transport": {
         "TransportClass": 1,
         "AirClass": true,
         "ClassGenericUpTo": 2
       },
+      "SizeSphere": 1.76,
       "LifeBarOffset": 1,
-      "LifeBarSize": 1,
-      "BuildIconSortPriority": 30,
-      "Description": "Gunship",
-      "LifeBarHeight": 0.075,
-      "SelectionThickness": 0.37,
-      "Economy": {
-        "BuildTime": 2700,
-        "BuildCostEnergy": 10000,
-        "BuildCostMass": 500
-      },
-      "Footprint": {
-        "MaxSlope": 0.25,
-        "SizeX": 1,
-        "SizeZ": 1
-      },
-      "SizeZ": 1,
       "Air": {
         "CirclingTurnMult": 3,
         "KTurn": 0.8,
@@ -102052,6 +102047,23 @@
         "MaxAirspeed": 11,
         "Winged": false
       },
+      "LifeBarSize": 1,
+      "BuildIconSortPriority": 30,
+      "Description": "Gunship",
+      "SelectionThickness": 0.37,
+      "SelectionSizeX": 0.5,
+      "Economy": {
+        "BuildTime": 2700,
+        "BuildCostEnergy": 10000,
+        "BuildCostMass": 500
+      },
+      "Footprint": {
+        "MaxSlope": 0.25,
+        "SizeX": 1,
+        "SizeZ": 1
+      },
+      "SizeZ": 1,
+      "VeteranMassMult": 1.375,
       "Defense": {
         "ArmorType": "Light",
         "SurfaceThreatLevel": 10,
@@ -102148,7 +102160,7 @@
         "Level4": 24,
         "Level5": 30
       },
-      "SelectionSizeX": 0.5,
+      "LifeBarHeight": 0.075,
       "Display": {
         "UniformScale": 0.066,
         "Mesh": {
@@ -102850,7 +102862,11 @@
       "StrategicIconSortPriority": 155,
       "AI": {
         "AttackAngle": 70,
-        "GuardReturnRadius": 30
+        "GuardReturnRadius": 30,
+        "TargetBones": [
+          "XSS0201",
+          "Center_Target"
+        ]
       },
       "Weapon": [
         {
