@@ -1,5 +1,5 @@
 {
-  "version": "3833",
+  "version": "3834",
   "units": [
     {
       "Categories": [
@@ -6199,8 +6199,8 @@
         },
         "Killed": {
           "LodCutoff": "UnitMove_LodCutoff",
-          "Bank": "Wilhelm_Scream",
-          "Cue": "Wilhelm_Cue"
+          "Bank": "Explosions",
+          "Cue": "UEF_Nuke_Impact"
         },
         "EnhanceStart": {
           "LodCutoff": "UnitMove_LodCutoff",
@@ -7703,23 +7703,20 @@
       "SizeX": 1,
       "SelectionThickness": 0.66,
       "Display": {
-        "UniformScale": 1,
+        "UniformScale": 0.129,
         "BuildMeshBlueprint": "/props/UEB5101/UEB5101_prop.bp",
         "Mesh": {
           "IconFadeInZoom": 130,
           "LODs": [
             {
-              "NormalsName": "/textures/FlatNormal.dds",
-              "LODCutoff": 300,
-              "MeshName": "/meshes/cube01_lod0.scm",
-              "SpecularName": "/textures/cube01_specteam.dds",
-              "ShaderName": "Unit",
-              "AlbedoName": "/textures/grass.dds"
+              "LODCutoff": 100,
+              "ShaderName": "Unit"
             },
             {
-              "MeshName": "/meshes/cube01_lod0.scm",
               "ShaderName": "Unit",
-              "LODCutoff": 100
+              "SpecularName": "ueb5101_lod1_specteam.dds",
+              "LODCutoff": 215,
+              "AlbedoName": "ueb5101_lod1_albedo.dds"
             }
           ]
         }
@@ -37200,8 +37197,8 @@
         },
         "Killed": {
           "LodCutoff": "UnitMove_LodCutoff",
-          "Bank": "Wilhelm_Scream",
-          "Cue": "Wilhelm_Cue"
+          "Bank": "Explosions",
+          "Cue": "Cybran_Nuke_Impact"
         },
         "EnhanceStart": {
           "LodCutoff": "UnitMove_LodCutoff",
@@ -39100,21 +39097,18 @@
           "IconFadeInZoom": 130,
           "LODs": [
             {
-              "NormalsName": "/textures/FlatNormal.dds",
-              "LODCutoff": 300,
-              "MeshName": "/meshes/cube01_lod0.scm",
-              "SpecularName": "/textures/cube01_specteam.dds",
-              "ShaderName": "Unit",
-              "AlbedoName": "/textures/grass.dds"
+              "LODCutoff": 100,
+              "ShaderName": "Insect"
             },
             {
-              "MeshName": "/meshes/cube01_lod0.scm",
               "ShaderName": "Insect",
-              "LODCutoff": 100
+              "SpecularName": "urb5101_lod1_specteam.dds",
+              "LODCutoff": 215,
+              "AlbedoName": "urb5101_lod1_albedo.dds"
             }
           ]
         },
-        "UniformScale": 1
+        "UniformScale": 0.14
       },
       "StrategicIconSortPriority": 210,
       "Physics": {
@@ -68778,8 +68772,8 @@
         },
         "Killed": {
           "LodCutoff": "UnitMove_LodCutoff",
-          "Bank": "Wilhelm_Scream",
-          "Cue": "Wilhelm_Cue"
+          "Bank": "Explosions",
+          "Cue": "Aeon_Nuke_Impact"
         },
         "EnhanceStart": {
           "LodCutoff": "UnitMove_LodCutoff",
@@ -70637,22 +70631,19 @@
       "SizeX": 1,
       "SelectionThickness": 0.66,
       "Display": {
-        "UniformScale": 1,
+        "UniformScale": 0.122,
         "Mesh": {
           "IconFadeInZoom": 130,
           "LODs": [
             {
-              "NormalsName": "/textures/FlatNormal.dds",
-              "LODCutoff": 300,
-              "MeshName": "/meshes/cube01_lod0.scm",
-              "SpecularName": "/textures/cube01_specteam.dds",
-              "ShaderName": "Unit",
-              "AlbedoName": "/textures/grass.dds"
+              "LODCutoff": 100,
+              "ShaderName": "Aeon"
             },
             {
-              "MeshName": "/meshes/cube01_lod0.scm",
               "ShaderName": "Aeon",
-              "LODCutoff": 100
+              "SpecularName": "uab5101_lod1_specteam.dds",
+              "LODCutoff": 215,
+              "AlbedoName": "uab5101_lod1_albedo.dds"
             }
           ]
         },
@@ -98514,8 +98505,8 @@
         },
         "Killed": {
           "LodCutoff": "UnitMove_LodCutoff",
-          "Bank": "Wilhelm_Scream",
-          "Cue": "Wilhelm_Cue"
+          "Bank": "Impacts",
+          "Cue": "XSB2305_Impact"
         },
         "EnhanceStart": {
           "LodCutoff": "UnitMove_LodCutoff",
@@ -99985,7 +99976,7 @@
       "SizeX": 1,
       "SelectionThickness": 0.66,
       "Display": {
-        "UniformScale": 1,
+        "UniformScale": 0.136,
         "AnimationDeath": [
           {
             "Animation": "/units/xsb5101/xsb5101_ADeath.sca",
@@ -99998,17 +99989,16 @@
           "IconFadeInZoom": 130,
           "LODs": [
             {
-              "NormalsName": "/textures/FlatNormal.dds",
-              "LODCutoff": 300,
-              "MeshName": "/meshes/cube01_lod0.scm",
-              "SpecularName": "/textures/cube01_specteam.dds",
-              "ShaderName": "Unit",
-              "AlbedoName": "/textures/grass.dds"
+              "ShaderName": "Seraphim",
+              "LODCutoff": 100,
+              "LookupName": "/textures/environment/Falloff_seraphim_lookup.dds"
             },
             {
-              "MeshName": "/meshes/cube01_lod0.scm",
+              "LODCutoff": 215,
+              "SpecularName": "xsb5101_lod1_specteam.dds",
               "ShaderName": "Seraphim",
-              "LODCutoff": 100
+              "LookupName": "/textures/environment/Falloff_seraphim_lookup.dds",
+              "AlbedoName": "xsb5101_lod1_albedo.dds"
             }
           ]
         },
