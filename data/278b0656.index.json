@@ -1,5 +1,5 @@
 {
-  "version": "3835",
+  "version": "3836",
   "units": [
     {
       "Categories": [
@@ -3060,7 +3060,7 @@
         {
           "FiringRandomness": 3,
           "RateOfFire": 0.1,
-          "Damage": 187.5,
+          "Damage": 150,
           "ProjectileLifetime": 20,
           "DamageType": "Normal",
           "DisplayName": "Angler Torpedo",
@@ -3072,7 +3072,7 @@
           "RackSalvoChargeTime": 0,
           "MuzzleSalvoDelay": 0.2,
           "ProjectilesPerOnFire": 3,
-          "MuzzleSalvoSize": 4,
+          "MuzzleSalvoSize": 5,
           "MaxRadius": 42,
           "RackSalvoReloadTime": 0,
           "FiringTolerance": 6,
@@ -3957,7 +3957,6 @@
           "MuzzleSalvoSize": 1
         },
         {
-          "DamageRadius": 1,
           "RateOfFire": 0.5,
           "ProjectilesPerOnFire": 1,
           "TurretYaw": 0,
@@ -4402,11 +4401,7 @@
         "MassMult": 0.9
       },
       "Physics": {},
-      "Display": {
-        "Abilities": [
-          "Upgradeable"
-        ]
-      },
+      "Display": {},
       "StrategicIconName": "icon_factory2_land"
     },
     {
@@ -8072,7 +8067,7 @@
         {
           "Damage": 5000,
           "WeaponCategory": "Death",
-          "DamageRadius": 14,
+          "DamageRadius": 10,
           "DamageType": "DeathExplosion",
           "DisplayName": "Death Weapon"
         }
@@ -13048,7 +13043,7 @@
           "MuzzleVelocity": 0,
           "RackSalvoReloadTime": 0,
           "RackSalvoChargeTime": 0,
-          "MuzzleSalvoSize": 4,
+          "MuzzleSalvoSize": 5,
           "MuzzleSalvoDelay": 0.2,
           "DoTTime": 0.8,
           "ProjectilesPerOnFire": 2,
@@ -13056,7 +13051,7 @@
           "MinRadius": 4,
           "MaxRadius": 42,
           "RackFireTogether": false,
-          "Damage": 37.5
+          "Damage": 30
         },
         {
           "DamageRadius": 1,
@@ -13589,7 +13584,7 @@
           "TurretYawRange": 360,
           "RackSalvoReloadTime": 0,
           "FiringTolerance": 1,
-          "MaxRadius": 60
+          "MaxRadius": 55
         },
         {
           "RateOfFire": 0.25,
@@ -13986,7 +13981,6 @@
           "MaxRadius": 80
         },
         {
-          "DamageRadius": 1,
           "RateOfFire": 0.83333333333333,
           "ProjectilesPerOnFire": 6,
           "TurretYaw": 0,
@@ -18306,19 +18300,32 @@
       "BuildIconSortPriority": 40,
       "Weapon": [
         {
+          "DamageRadius": 1.5,
           "RateOfFire": 2,
           "TurretYaw": 0,
           "RackBones": [
             {
               "MuzzleBones": [
-                "Front_Right_AA_Muzzle_01",
-                "Front_Right_AA_Muzzle_02",
-                "Front_Right_AA_Muzzle_03",
+                "Front_Right_AA_Muzzle_01"
+              ]
+            },
+            {
+              "MuzzleBones": [
+                "Front_Right_AA_Muzzle_02"
+              ]
+            },
+            {
+              "MuzzleBones": [
+                "Front_Right_AA_Muzzle_03"
+              ]
+            },
+            {
+              "MuzzleBones": [
                 "Front_Right_AA_Muzzle_04"
               ]
             }
           ],
-          "Damage": 20,
+          "Damage": 80,
           "DamageType": "Normal",
           "TurretPitch": 45,
           "TurretPitchRange": 60,
@@ -18534,7 +18541,7 @@
         {
           "Damage": 5000,
           "WeaponCategory": "Death",
-          "DamageRadius": 14,
+          "DamageRadius": 10,
           "DamageType": "DeathExplosion",
           "DisplayName": "Death Weapon"
         }
@@ -20579,6 +20586,9 @@
         "BuildCostEnergy": 2100,
         "StorageEnergy": 0
       },
+      "Intel": {
+        "VisionRadius": 20
+      },
       "Defense": {
         "Health": 3200
       },
@@ -20587,15 +20597,12 @@
         "HealthMult": 0.9,
         "MassMult": 0.9
       },
-      "Intel": {
-        "VisionRadius": 20
-      },
+      "Physics": {},
       "Display": {
         "Abilities": [
           "Upgradeable"
         ]
       },
-      "Physics": {},
       "BuildIconSortPriority": 10
     },
     {
@@ -20777,6 +20784,9 @@
         "BuildCostEnergy": 2400,
         "StorageEnergy": 0
       },
+      "Intel": {
+        "VisionRadius": 20
+      },
       "Defense": {
         "Health": 3200
       },
@@ -20785,15 +20795,12 @@
         "HealthMult": 0.9,
         "MassMult": 0.9
       },
-      "Intel": {
-        "VisionRadius": 20
-      },
+      "Physics": {},
       "Display": {
         "Abilities": [
           "Upgradeable"
         ]
       },
-      "Physics": {},
       "BuildIconSortPriority": 20
     },
     {
@@ -21030,12 +21037,12 @@
         null
       ],
       "Description": "Naval Factory",
-      "StrategicIconName": "icon_factory1_naval",
       "General": {
         "FactionName": "Aeon",
         "Icon": "sea",
         "Classification": "RULEUC_Factory"
       },
+      "StrategicIconName": "icon_factory1_naval",
       "Economy": {
         "StorageMass": 80,
         "BuildCostEnergy": 1500,
@@ -21055,12 +21062,12 @@
         "HealthMult": 0.9,
         "MassMult": 0.9
       },
+      "Physics": {},
       "Display": {
         "Abilities": [
           "Upgradeable"
         ]
       },
-      "Physics": {},
       "BuildIconSortPriority": 30
     },
     {
@@ -23486,7 +23493,7 @@
               ]
             }
           ],
-          "Damage": 187.5,
+          "Damage": 150,
           "ProjectileLifetime": 20,
           "DamageType": "Normal",
           "TurretPitch": 0,
@@ -23498,7 +23505,7 @@
           "MuzzleVelocity": 0,
           "RackFireTogether": false,
           "RackSalvoChargeTime": 0,
-          "MuzzleSalvoSize": 4,
+          "MuzzleSalvoSize": 5,
           "MuzzleSalvoDelay": 0.2,
           "ProjectilesPerOnFire": 3,
           "MinRadius": 4,
@@ -24605,7 +24612,6 @@
           "MaxRadius": 60
         },
         {
-          "DamageRadius": 1,
           "RateOfFire": 1,
           "ProjectilesPerOnFire": 1,
           "TurretYaw": 10,
@@ -24942,23 +24948,13 @@
         null
       ],
       "Description": "Air Factory HQ",
-      "StrategicIconName": "icon_factoryhq2_air",
       "General": {
         "FactionName": "Aeon",
         "Icon": "air",
         "Classification": "RULEUC_Factory"
       },
-      "Economy": {
-        "StorageMass": 160,
-        "BuildCostEnergy": 18000,
-        "BuildTime": 2300,
-        "BuildRate": 40,
-        "BuildCostMass": 920,
-        "StorageEnergy": 0
-      },
-      "Intel": {
-        "VisionRadius": 20
-      },
+      "StrategicIconName": "icon_factoryhq2_air",
+      "Physics": {},
       "Defense": {
         "Health": 6600
       },
@@ -24967,13 +24963,23 @@
         "HealthMult": 0.9,
         "MassMult": 0.9
       },
+      "Intel": {
+        "VisionRadius": 20
+      },
       "Display": {
         "Abilities": [
           "Upgradeable"
         ]
       },
-      "Physics": {},
-      "BuildIconSortPriority": 60
+      "BuildIconSortPriority": 60,
+      "Economy": {
+        "StorageMass": 160,
+        "BuildCostEnergy": 18000,
+        "BuildTime": 2300,
+        "BuildRate": 40,
+        "BuildCostMass": 920,
+        "StorageEnergy": 0
+      }
     },
     {
       "Categories": [
@@ -25002,23 +25008,13 @@
         null
       ],
       "Description": "Air Factory",
-      "StrategicIconName": "icon_factory2_air",
       "General": {
         "FactionName": "Aeon",
         "Icon": "air",
         "Classification": "RULEUC_Factory"
       },
-      "Economy": {
-        "StorageMass": 160,
-        "BuildCostEnergy": 8000,
-        "BuildTime": 1200,
-        "BuildRate": 40,
-        "BuildCostMass": 510,
-        "StorageEnergy": 0
-      },
-      "Intel": {
-        "VisionRadius": 20
-      },
+      "BuildIconSortPriority": 61,
+      "Physics": {},
       "Defense": {
         "Health": 3200
       },
@@ -25027,13 +25023,23 @@
         "HealthMult": 0.9,
         "MassMult": 0.9
       },
+      "Intel": {
+        "VisionRadius": 20
+      },
       "Display": {
         "Abilities": [
           "Upgradeable"
         ]
       },
-      "Physics": {},
-      "BuildIconSortPriority": 61
+      "StrategicIconName": "icon_factory2_air",
+      "Economy": {
+        "StorageMass": 160,
+        "BuildCostEnergy": 8000,
+        "BuildTime": 1200,
+        "BuildRate": 40,
+        "BuildCostMass": 510,
+        "StorageEnergy": 0
+      }
     },
     {
       "Categories": [
@@ -25058,12 +25064,12 @@
         null
       ],
       "Description": "Naval Factory HQ",
-      "StrategicIconName": "icon_factoryhq2_naval",
       "General": {
         "FactionName": "Aeon",
         "Icon": "sea",
         "Classification": "RULEUC_Factory"
       },
+      "StrategicIconName": "icon_factoryhq2_naval",
       "Economy": {
         "StorageMass": 160,
         "BuildCostEnergy": 10000,
@@ -25083,12 +25089,12 @@
         "HealthMult": 0.9,
         "MassMult": 0.9
       },
+      "Physics": {},
       "Display": {
         "Abilities": [
           "Upgradeable"
         ]
       },
-      "Physics": {},
       "BuildIconSortPriority": 70
     },
     {
@@ -25180,12 +25186,12 @@
         null
       ],
       "Description": "Naval Factory",
-      "BuildIconSortPriority": 71,
       "General": {
         "FactionName": "Aeon",
         "Icon": "sea",
         "Classification": "RULEUC_Factory"
       },
+      "StrategicIconName": "icon_factory2_naval",
       "Economy": {
         "StorageMass": 160,
         "BuildCostEnergy": 5500,
@@ -25205,13 +25211,13 @@
         "HealthMult": 0.9,
         "MassMult": 0.9
       },
+      "Physics": {},
       "Display": {
         "Abilities": [
           "Upgradeable"
         ]
       },
-      "Physics": {},
-      "StrategicIconName": "icon_factory2_naval"
+      "BuildIconSortPriority": 71
     },
     {
       "Categories": [
@@ -26577,9 +26583,9 @@
       ],
       "Description": "Battleship",
       "Economy": {
-        "BuildTime": 28800,
-        "BuildCostEnergy": 54000,
-        "BuildCostMass": 9000
+        "BuildTime": 30300,
+        "BuildCostEnergy": 58000,
+        "BuildCostMass": 9500
       },
       "BuildIconSortPriority": 18,
       "StrategicIconName": "icon_ship3_directfire",
@@ -26621,7 +26627,7 @@
         {
           "DamageRadius": 2,
           "FiringRandomness": 0.2,
-          "RateOfFire": 0.16949152542373,
+          "RateOfFire": 0.16666666666667,
           "TurretYaw": 0,
           "RackBones": [
             {
@@ -27379,6 +27385,7 @@
       "BuildIconSortPriority": 30,
       "Weapon": [
         {
+          "DamageRadius": 1,
           "RateOfFire": 1,
           "TurretYaw": 0,
           "RackBones": [
@@ -27517,7 +27524,7 @@
               ]
             }
           ],
-          "Damage": 1000,
+          "Damage": 834,
           "ProjectileLifetime": 30,
           "DamageType": "Normal",
           "TurretPitch": 0,
@@ -27529,8 +27536,8 @@
           "MuzzleVelocity": 0,
           "RackFireTogether": false,
           "RackSalvoChargeTime": 0,
-          "MuzzleSalvoSize": 5,
-          "MuzzleSalvoDelay": 0.2,
+          "MuzzleSalvoSize": 6,
+          "MuzzleSalvoDelay": 0.1,
           "ProjectilesPerOnFire": 4,
           "MinRadius": 4,
           "RackSalvoReloadTime": 0,
@@ -27961,8 +27968,8 @@
         "HealthMult": 0.9,
         "MassMult": 0.9
       },
-      "Display": {},
       "Physics": {},
+      "Display": {},
       "BuildIconSortPriority": 50
     },
     {
@@ -28021,7 +28028,7 @@
         {
           "Damage": 5000,
           "WeaponCategory": "Death",
-          "DamageRadius": 14,
+          "DamageRadius": 10,
           "DamageType": "DeathExplosion",
           "DisplayName": "Death Weapon"
         }
@@ -28191,7 +28198,7 @@
         null
       ],
       "Description": "Air Factory",
-      "BuildIconSortPriority": 51,
+      "StrategicIconName": "icon_factory3_air",
       "General": {
         "FactionName": "Aeon",
         "Icon": "air",
@@ -28216,9 +28223,9 @@
         "HealthMult": 0.9,
         "MassMult": 0.9
       },
-      "Display": {},
       "Physics": {},
-      "StrategicIconName": "icon_factory3_air"
+      "Display": {},
+      "BuildIconSortPriority": 51
     },
     {
       "Categories": [
@@ -28243,12 +28250,12 @@
         null
       ],
       "Description": "Naval Factory HQ",
-      "StrategicIconName": "icon_factoryhq3_naval",
       "General": {
         "FactionName": "Aeon",
         "Icon": "sea",
         "Classification": "RULEUC_Factory"
       },
+      "StrategicIconName": "icon_factoryhq3_naval",
       "Economy": {
         "StorageMass": 320,
         "BuildCostEnergy": 45000,
@@ -28268,8 +28275,8 @@
         "HealthMult": 0.9,
         "MassMult": 0.9
       },
-      "Display": {},
       "Physics": {},
+      "Display": {},
       "BuildIconSortPriority": 60
     },
     {
@@ -28297,12 +28304,12 @@
         null
       ],
       "Description": "Naval Factory",
-      "BuildIconSortPriority": 61,
       "General": {
         "FactionName": "Aeon",
         "Icon": "sea",
         "Classification": "RULEUC_Factory"
       },
+      "StrategicIconName": "icon_factory3_naval",
       "Economy": {
         "StorageMass": 320,
         "BuildCostEnergy": 11000,
@@ -28322,9 +28329,9 @@
         "HealthMult": 0.9,
         "MassMult": 0.9
       },
-      "Display": {},
       "Physics": {},
-      "StrategicIconName": "icon_factory3_naval"
+      "Display": {},
+      "BuildIconSortPriority": 61
     },
     {
       "Categories": [
@@ -29524,10 +29531,10 @@
         "MaxSpeed": 2.5
       },
       "Economy": {
-        "BuildTime": 38400,
+        "BuildTime": 40000,
         "BuildRate": 225,
-        "BuildCostEnergy": 380000,
-        "BuildCostMass": 24000
+        "BuildCostEnergy": 400000,
+        "BuildCostMass": 25000
       },
       "Defense": {
         "Health": 60000
@@ -29864,6 +29871,9 @@
         "BuildCostEnergy": 2100,
         "StorageEnergy": 0
       },
+      "Intel": {
+        "VisionRadius": 20
+      },
       "Defense": {
         "Health": 3500
       },
@@ -29872,15 +29882,12 @@
         "HealthMult": 0.9,
         "MassMult": 0.9
       },
-      "Intel": {
-        "VisionRadius": 20
-      },
+      "Physics": {},
       "Display": {
         "Abilities": [
           "Upgradeable"
         ]
       },
-      "Physics": {},
       "BuildIconSortPriority": 10
     },
     {
@@ -33164,7 +33171,7 @@
       },
       "Weapon": [
         {
-          "DamageRadius": 3,
+          "DamageRadius": 2,
           "RateOfFire": 0.5,
           "TurretYaw": 0,
           "RackBones": [
@@ -33174,7 +33181,7 @@
               ]
             }
           ],
-          "Damage": 500,
+          "Damage": 300,
           "ProjectileLifetime": 60,
           "DamageType": "Normal",
           "TurretPitch": 0,
@@ -33227,7 +33234,7 @@
           "TurretYawRange": 180,
           "RackSalvoReloadTime": 0,
           "FiringTolerance": 2,
-          "MaxRadius": 60
+          "MaxRadius": 55
         },
         {
           "FiringRandomness": 0,
@@ -33746,12 +33753,12 @@
         "HealthMult": 0.9,
         "MassMult": 0.9
       },
+      "Physics": {},
       "Display": {
         "Abilities": [
           "Upgradeable"
         ]
       },
-      "Physics": {},
       "BuildIconSortPriority": 50
     },
     {
@@ -35444,10 +35451,10 @@
       "Physics": {
         "TurnRate": 80,
         "Elevation": -1.5,
-        "MaxSpeed": 4.6
+        "MaxSpeed": 4.8
       },
       "Defense": {
-        "Health": 4000
+        "Health": 3600
       },
       "Id": "XSS0304",
       "Intel": {
@@ -35499,7 +35506,7 @@
           "Damage": 375
         },
         {
-          "RateOfFire": 0.1,
+          "RateOfFire": 0.083333333333333,
           "TurretYaw": 0,
           "RackBones": [
             {
@@ -36349,6 +36356,7 @@
           "MinRadius": 20
         },
         {
+          "DamageRadius": 1,
           "RateOfFire": 2,
           "TurretYaw": 0,
           "RackBones": [
@@ -36698,8 +36706,8 @@
         "HealthMult": 0.9,
         "MassMult": 0.9
       },
-      "Display": {},
       "Physics": {},
+      "Display": {},
       "BuildIconSortPriority": 40
     },
     {
@@ -36920,7 +36928,7 @@
         {
           "Damage": 5000,
           "WeaponCategory": "Death",
-          "DamageRadius": 14,
+          "DamageRadius": 10,
           "DamageType": "DeathExplosion",
           "DisplayName": "Death Weapon"
         }

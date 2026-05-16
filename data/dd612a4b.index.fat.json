@@ -1,5 +1,5 @@
 {
-  "version": "3835",
+  "version": "3836",
   "units": [
     {
       "Categories": [
@@ -71,7 +71,7 @@
         "SizeX": 5,
         "SizeZ": 5
       },
-      "SizeZ": 4.4,
+      "SizeZ": 4.8,
       "Intel": {
         "VisionRadius": 20
       },
@@ -214,16 +214,20 @@
           }
         ],
         "UniformScale": 0.1,
-        "Abilities": [
-          "Upgradeable"
-        ],
-        "AnimationUpgrade": "/units/ueb0101/ueb0101_aupgrade.sca",
+        "AnimationUpgradeTable": {
+          "ueb0201": "/units/ueb0101/ueb0101_aupgrade.sca",
+          "zeb9501": "/units/ueb0101/ueb0101_aupgrade2.sca"
+        },
+        "BuildAttachBone": "Attachpoint",
         "BlinkingLightsFx": {
           "Yellow": "/effects/emitters/light_yellow_02_emit.bp",
           "Green": "/effects/emitters/light_green_03_emit.bp",
           "Red": "/effects/emitters/light_red_03_emit.bp"
         },
-        "BuildAttachBone": "Attachpoint",
+        "AnimationUpgrade": "/units/ueb0101/ueb0101_aupgrade2.sca",
+        "Abilities": [
+          "Upgradeable"
+        ],
         "Mesh": {
           "IconFadeInZoom": 130,
           "LODs": [
@@ -232,9 +236,10 @@
               "ShaderName": "Unit"
             },
             {
-              "ShaderName": "Unit",
-              "SpecularName": "ueb0101_lod1_specteam.dds",
+              "NormalsName": "ueb0101_lod1_normalsts.dds",
               "LODCutoff": 500,
+              "SpecularName": "ueb0101_lod1_specteam.dds",
+              "ShaderName": "Unit",
               "AlbedoName": "ueb0101_lod1_albedo.dds"
             }
           ]
@@ -252,10 +257,11 @@
       "StrategicIconSortPriority": 220,
       "AI": {
         "TargetBones": [
-          "Foot_Right",
-          "Foot_Left",
+          "Attachpoint",
           "Pad_Left",
-          "Pad_Right"
+          "Pad_Right",
+          "Foot_Left",
+          "Foot_Right"
         ]
       },
       "BuildIconSortPriority": 10
@@ -1107,7 +1113,7 @@
         "MassMult": 0.9
       },
       "SelectionSizeX": 3.2,
-      "SizeY": 0.75,
+      "SizeY": 1,
       "SelectionSizeZ": 3.1,
       "SizeX": 3.5,
       "Physics": {
@@ -1196,16 +1202,20 @@
         ],
         "AnimationFinishBuildLand": "/units/ueb0102/ueb0102_aplatform.sca",
         "UniformScale": 0.1,
+        "AnimationUpgradeTable": {
+          "zeb9502": "/units/ueb0102/ueb0102_aupgrade2.sca",
+          "ueb0202": "/units/ueb0102/ueb0102_aupgrade.sca"
+        },
         "BuildAttachBone": "Attachpoint",
-        "AnimationUpgrade": "/units/ueb0102/ueb0102_aupgrade.sca",
-        "Abilities": [
-          "Upgradeable"
-        ],
         "BlinkingLightsFx": {
           "Yellow": "/effects/emitters/light_yellow_02_emit.bp",
           "Green": "/effects/emitters/light_green_03_emit.bp",
           "Red": "/effects/emitters/light_red_03_emit.bp"
         },
+        "AnimationUpgrade": "/units/ueb0102/ueb0102_aupgrade2.sca",
+        "Abilities": [
+          "Upgradeable"
+        ],
         "Mesh": {
           "IconFadeInZoom": 130,
           "LODs": [
@@ -1236,7 +1246,9 @@
         "TargetBones": [
           "Target01",
           "Target02",
-          "Target03"
+          "Target03",
+          "Platform",
+          "Flipper"
         ]
       },
       "BuildIconSortPriority": 20
@@ -2469,7 +2481,7 @@
         "ComputeRollOffPoint": true,
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -1,
-        "SkirtSizeZ": 14,
+        "SkirtSizeZ": 15,
         "BuildOnLayerCaps": {
           "LAYER_Water": true
         },
@@ -2576,16 +2588,6 @@
       },
       "SelectionSizeX": 2.2,
       "Display": {
-        "UniformScale": 0.083,
-        "AnimationUpgrade": "/units/ueb0103/ueb0103_aupgrade.sca",
-        "Abilities": [
-          "Upgradeable"
-        ],
-        "BlinkingLightsFx": {
-          "Yellow": "/effects/emitters/light_yellow_02_emit.bp",
-          "Green": "/effects/emitters/light_green_03_emit.bp",
-          "Red": "/effects/emitters/light_red_03_emit.bp"
-        },
         "IdleEffects": {
           "Water": {
             "Effects": [
@@ -2599,7 +2601,21 @@
             ]
           }
         },
+        "UniformScale": 0.083,
+        "AnimationUpgradeTable": {
+          "ueb0203": "/units/ueb0103/ueb0103_aupgrade.sca",
+          "zeb9503": "/units/ueb0103/ueb0103_aupgrade2.sca"
+        },
         "BuildAttachBone": "Attachpoint01",
+        "AnimationUpgrade": "/units/ueb0103/ueb0103_aupgrade2.sca",
+        "Abilities": [
+          "Upgradeable"
+        ],
+        "BlinkingLightsFx": {
+          "Yellow": "/effects/emitters/light_yellow_02_emit.bp",
+          "Green": "/effects/emitters/light_green_03_emit.bp",
+          "Red": "/effects/emitters/light_red_03_emit.bp"
+        },
         "Mesh": {
           "IconFadeInZoom": 130,
           "LODs": [
@@ -2618,8 +2634,8 @@
         "BlinkingLights": [
           {
             "BLScale": 2,
-            "BLOffsetY": 0.5,
-            "BLOffsetX": -0.05,
+            "BLOffsetY": 0.9,
+            "BLOffsetX": 0.9,
             "BLBone": "Dock_Cover",
             "BLOffsetZ": 0
           }
@@ -9601,7 +9617,7 @@
           "RateOfFire": 0.1,
           "HeadingArcCenter": 0,
           "RackRecoilDistance": 0,
-          "Damage": 187.5,
+          "Damage": 150,
           "ProjectileLifetime": 20,
           "DamageType": "Normal",
           "Audio": {
@@ -9631,7 +9647,7 @@
           "MuzzleSalvoDelay": 0.2,
           "Label": "Torpedo",
           "ProjectilesPerOnFire": 3,
-          "MuzzleSalvoSize": 4,
+          "MuzzleSalvoSize": 5,
           "RackReloadTimeout": 10,
           "MaxRadius": 42,
           "WeaponRepackTimeout": 0,
@@ -11976,7 +11992,6 @@
           "MuzzleSalvoSize": 1
         },
         {
-          "DamageRadius": 1,
           "Label": "BackTurret02",
           "TargetCheckInterval": 1,
           "RateOfFire": 0.5,
@@ -12828,7 +12843,7 @@
         "SizeX": 5,
         "SizeZ": 5
       },
-      "SizeZ": 4.4,
+      "SizeZ": 4.8,
       "Intel": {
         "VisionRadius": 20
       },
@@ -12971,7 +12986,7 @@
         "Abilities": [
           "Upgradeable"
         ],
-        "AnimationUpgrade": "/units/ueb0201/UEB0201_Aupgrade.sca",
+        "AnimationUpgrade": "/units/ueb0201/ueb0201_aupgrade.sca",
         "BlinkingLightsFx": {
           "Yellow": "/effects/emitters/light_yellow_02_emit.bp",
           "Green": "/effects/emitters/light_green_03_emit.bp",
@@ -12982,14 +12997,18 @@
           "IconFadeInZoom": 130,
           "LODs": [
             {
+              "NormalsName": "/units/ueb0101/ueb0101_normalsts.dds",
               "LODCutoff": 200,
-              "ShaderName": "Unit"
+              "SpecularName": "/units/ueb0101/ueb0101_specteam.dds",
+              "ShaderName": "Unit",
+              "AlbedoName": "/units/ueb0101/ueb0101_albedo.dds"
             },
             {
-              "ShaderName": "Unit",
-              "SpecularName": "ueb0201_lod1_specteam.dds",
+              "NormalsName": "/units/ueb0101/ueb0101_lod1_normalsts.dds",
               "LODCutoff": 500,
-              "AlbedoName": "ueb0201_lod1_albedo.dds"
+              "SpecularName": "/units/ueb0101/ueb0101_lod1_specteam.dds",
+              "ShaderName": "Unit",
+              "AlbedoName": "/units/ueb0101/ueb0101_lod1_albedo.dds"
             }
           ]
         },
@@ -13013,10 +13032,11 @@
       "StrategicIconSortPriority": 215,
       "AI": {
         "TargetBones": [
-          "Foot_Right",
-          "Foot_Left",
+          "Attachpoint",
           "Pad_Left",
-          "Pad_Right"
+          "Pad_Right",
+          "Foot_Left",
+          "Foot_Right"
         ]
       },
       "BuildIconSortPriority": 50
@@ -13255,7 +13275,7 @@
         "SizeX": 5,
         "SizeZ": 5
       },
-      "SizeZ": 4.4,
+      "SizeZ": 4.8,
       "Intel": {
         "VisionRadius": 20
       },
@@ -13377,6 +13397,9 @@
       },
       "SelectionThickness": 0.3,
       "Display": {
+        "UniformScale": 0.1,
+        "BuildAttachBone": "Attachpoint",
+        "AnimationUpgrade": "/units/zeb9501/zeb9501_aupgrade.sca",
         "Tarmacs": [
           {
             "Normal": "Tarmacs/Tar12x_01_normals",
@@ -13394,29 +13417,27 @@
             "Width": 12.8
           }
         ],
-        "UniformScale": 0.1,
-        "Abilities": [
-          "Upgradeable"
-        ],
-        "AnimationUpgrade": "/units/zeb9501/ZEB9501_Aupgrade.sca",
         "BlinkingLightsFx": {
           "Yellow": "/effects/emitters/light_yellow_02_emit.bp",
           "Green": "/effects/emitters/light_green_03_emit.bp",
           "Red": "/effects/emitters/light_red_03_emit.bp"
         },
-        "BuildAttachBone": "Attachpoint",
         "Mesh": {
           "IconFadeInZoom": 130,
           "LODs": [
             {
+              "NormalsName": "/units/ueb0101/ueb0101_normalsts.dds",
               "LODCutoff": 200,
-              "ShaderName": "Unit"
+              "SpecularName": "/units/ueb0101/ueb0101_specteam.dds",
+              "ShaderName": "Unit",
+              "AlbedoName": "/units/ueb0101/ueb0101_albedo.dds"
             },
             {
-              "ShaderName": "Unit",
-              "SpecularName": "zeb9501_lod1_specteam.dds",
+              "NormalsName": "/units/ueb0101/ueb0101_lod1_normalsts.dds",
               "LODCutoff": 500,
-              "AlbedoName": "zeb9501_lod1_albedo.dds"
+              "SpecularName": "/units/ueb0101/ueb0101_lod1_specteam.dds",
+              "ShaderName": "Unit",
+              "AlbedoName": "/units/ueb0101/ueb0101_lod1_albedo.dds"
             }
           ]
         },
@@ -13440,10 +13461,11 @@
       "StrategicIconSortPriority": 215,
       "AI": {
         "TargetBones": [
-          "Foot_Right",
-          "Foot_Left",
+          "Attachpoint",
           "Pad_Left",
-          "Pad_Right"
+          "Pad_Right",
+          "Foot_Left",
+          "Foot_Right"
         ]
       },
       "StrategicIconName": "icon_factory2_land"
@@ -13577,7 +13599,7 @@
         "MassMult": 0.9
       },
       "SelectionSizeX": 3.2,
-      "SizeY": 0.75,
+      "SizeY": 1,
       "SelectionSizeZ": 3.1,
       "SizeX": 3.5,
       "Physics": {
@@ -13677,14 +13699,18 @@
           "IconFadeInZoom": 130,
           "LODs": [
             {
+              "NormalsName": "/units/ueb0102/ueb0102_normalsts.dds",
               "LODCutoff": 200,
-              "ShaderName": "Unit"
+              "SpecularName": "/units/ueb0102/ueb0102_specteam.dds",
+              "ShaderName": "Unit",
+              "AlbedoName": "/units/ueb0102/ueb0102_albedo.dds"
             },
             {
-              "ShaderName": "Unit",
-              "SpecularName": "ueb0202_lod1_specteam.dds",
+              "NormalsName": "/units/ueb0102/ueb0102_lod1_normalsts.dds",
               "LODCutoff": 500,
-              "AlbedoName": "ueb0202_lod1_albedo.dds"
+              "SpecularName": "/units/ueb0102/ueb0102_lod1_specteam.dds",
+              "ShaderName": "Unit",
+              "AlbedoName": "/units/ueb0102/ueb0102_lod1_albedo.dds"
             }
           ]
         },
@@ -13703,7 +13729,9 @@
         "TargetBones": [
           "Target01",
           "Target02",
-          "Target03"
+          "Target03",
+          "Platform",
+          "Flipper"
         ]
       },
       "BuildIconSortPriority": 60
@@ -14091,7 +14119,7 @@
         "MassMult": 0.9
       },
       "SelectionSizeX": 3.2,
-      "SizeY": 0.75,
+      "SizeY": 1,
       "SelectionSizeZ": 3.1,
       "SizeX": 3.5,
       "Physics": {
@@ -14178,7 +14206,7 @@
         "AnimationFinishBuildLand": "/units/ueb0202/ueb0202_aplatform.sca",
         "UniformScale": 0.1,
         "BuildAttachBone": "Attachpoint",
-        "AnimationUpgrade": "/units/ueb0202/ueb0202_aupgrade.sca",
+        "AnimationUpgrade": "/units/zeb9502/zeb9502_aupgrade.sca",
         "Abilities": [
           "Upgradeable"
         ],
@@ -14191,14 +14219,18 @@
           "IconFadeInZoom": 130,
           "LODs": [
             {
+              "NormalsName": "/units/ueb0102/ueb0102_normalsts.dds",
               "LODCutoff": 200,
-              "ShaderName": "Unit"
+              "SpecularName": "/units/ueb0102/ueb0102_specteam.dds",
+              "ShaderName": "Unit",
+              "AlbedoName": "/units/ueb0102/ueb0102_albedo.dds"
             },
             {
-              "ShaderName": "Unit",
-              "SpecularName": "zeb9502_lod1_specteam.dds",
+              "NormalsName": "/units/ueb0102/ueb0102_lod1_normalsts.dds",
               "LODCutoff": 500,
-              "AlbedoName": "zeb9502_lod1_albedo.dds"
+              "SpecularName": "/units/ueb0102/ueb0102_lod1_specteam.dds",
+              "ShaderName": "Unit",
+              "AlbedoName": "/units/ueb0102/ueb0102_lod1_albedo.dds"
             }
           ]
         },
@@ -14218,7 +14250,8 @@
           "Target01",
           "Target02",
           "Target03",
-          "ZEB9502"
+          "Platform",
+          "Flipper"
         ]
       },
       "StrategicIconName": "icon_factory2_air"
@@ -14284,7 +14317,7 @@
         "BuildOnLayerCaps": {
           "LAYER_Water": true
         },
-        "SkirtSizeZ": 14,
+        "SkirtSizeZ": 15,
         "RollOffPoints": [
           {
             "UnitSpin": 180,
@@ -14415,22 +14448,33 @@
           "IconFadeInZoom": 130,
           "LODs": [
             {
+              "NormalsName": "/units/ueb0103/ueb0103_normalsts.dds",
               "LODCutoff": 200,
-              "ShaderName": "UEFNavy"
+              "SpecularName": "/units/ueb0103/ueb0103_specteam.dds",
+              "ShaderName": "UEFNavy",
+              "AlbedoName": "/units/ueb0103/ueb0103_albedo.dds"
             },
             {
-              "ShaderName": "UEFNavy",
-              "SpecularName": "ueb0203_lod1_specteam.dds",
+              "NormalsName": "/units/ueb0103/ueb0103_lod1_normalsts.dds",
               "LODCutoff": 600,
-              "AlbedoName": "ueb0203_lod1_albedo.dds"
+              "SpecularName": "/units/ueb0103/ueb0103_lod1_specteam.dds",
+              "ShaderName": "UEFNavy",
+              "AlbedoName": "/units/ueb0103/ueb0103_lod1_albedo.dds"
             }
           ]
         },
         "BlinkingLights": [
           {
             "BLScale": 2,
-            "BLOffsetY": 0.5,
-            "BLOffsetX": -0.05,
+            "BLOffsetY": 0.9,
+            "BLOffsetX": 0.5,
+            "BLBone": "Dock_Cover",
+            "BLOffsetZ": 0
+          },
+          {
+            "BLScale": 2,
+            "BLOffsetY": 0.9,
+            "BLOffsetX": 0.9,
             "BLBone": "Dock_Cover",
             "BLOffsetZ": 0
           }
@@ -14704,7 +14748,7 @@
         "BuildOnLayerCaps": {
           "LAYER_Water": true
         },
-        "SkirtSizeZ": 14,
+        "SkirtSizeZ": 15,
         "RollOffPoints": [
           {
             "UnitSpin": 180,
@@ -14822,7 +14866,7 @@
             "Effects": [
               {
                 "Bones": [
-                  "UEB0203"
+                  "ZEB9503"
                 ],
                 "Type": "SeaIdle01",
                 "Scale": 3
@@ -14835,22 +14879,33 @@
           "IconFadeInZoom": 130,
           "LODs": [
             {
+              "NormalsName": "/units/ueb0103/ueb0103_normalsts.dds",
               "LODCutoff": 200,
-              "ShaderName": "UEFNavy"
+              "SpecularName": "/units/ueb0103/ueb0103_specteam.dds",
+              "ShaderName": "UEFNavy",
+              "AlbedoName": "/units/ueb0103/ueb0103_albedo.dds"
             },
             {
-              "ShaderName": "UEFNavy",
-              "SpecularName": "zeb9503_lod1_specteam.dds",
+              "NormalsName": "/units/ueb0103/ueb0103_lod1_normalsts.dds",
               "LODCutoff": 600,
-              "AlbedoName": "zeb9503_lod1_albedo.dds"
+              "SpecularName": "/units/ueb0103/ueb0103_lod1_specteam.dds",
+              "ShaderName": "UEFNavy",
+              "AlbedoName": "/units/ueb0103/ueb0103_lod1_albedo.dds"
             }
           ]
         },
         "BlinkingLights": [
           {
             "BLScale": 2,
-            "BLOffsetY": 0.5,
-            "BLOffsetX": -0.05,
+            "BLOffsetY": 0.9,
+            "BLOffsetX": 0.5,
+            "BLBone": "Dock_Cover",
+            "BLOffsetZ": 0
+          },
+          {
+            "BLScale": 2,
+            "BLOffsetY": 0.9,
+            "BLOffsetX": 0.9,
             "BLBone": "Dock_Cover",
             "BLOffsetZ": 0
           }
@@ -23614,14 +23669,18 @@
           "IconFadeInZoom": 130,
           "LODs": [
             {
+              "NormalsName": "/units/ueb0101/ueb0101_normalsts.dds",
               "LODCutoff": 200,
-              "ShaderName": "Unit"
+              "SpecularName": "/units/ueb0101/ueb0101_specteam.dds",
+              "ShaderName": "Unit",
+              "AlbedoName": "/units/ueb0101/ueb0101_albedo.dds"
             },
             {
-              "ShaderName": "Unit",
-              "SpecularName": "ueb0301_lod1_specteam.dds",
+              "NormalsName": "/units/ueb0101/ueb0101_lod1_normalsts.dds",
               "LODCutoff": 500,
-              "AlbedoName": "ueb0301_lod1_albedo.dds"
+              "SpecularName": "/units/ueb0101/ueb0101_lod1_specteam.dds",
+              "ShaderName": "Unit",
+              "AlbedoName": "/units/ueb0101/ueb0101_lod1_albedo.dds"
             }
           ]
         },
@@ -23652,9 +23711,11 @@
       "StrategicIconSortPriority": 210,
       "AI": {
         "TargetBones": [
-          "Target01",
-          "Target02",
-          "Target03"
+          "Attachpoint",
+          "Pad_Left",
+          "Pad_Right",
+          "Foot_Left",
+          "Foot_Right"
         ]
       },
       "BuildIconSortPriority": 40
@@ -24061,14 +24122,18 @@
           "IconFadeInZoom": 130,
           "LODs": [
             {
+              "NormalsName": "/units/ueb0101/ueb0101_normalsts.dds",
               "LODCutoff": 200,
-              "ShaderName": "Unit"
+              "SpecularName": "/units/ueb0101/ueb0101_specteam.dds",
+              "ShaderName": "Unit",
+              "AlbedoName": "/units/ueb0101/ueb0101_albedo.dds"
             },
             {
-              "ShaderName": "Unit",
-              "SpecularName": "zeb9601_lod1_specteam.dds",
+              "NormalsName": "/units/ueb0101/ueb0101_lod1_normalsts.dds",
               "LODCutoff": 500,
-              "AlbedoName": "zeb9601_lod1_albedo.dds"
+              "SpecularName": "/units/ueb0101/ueb0101_lod1_specteam.dds",
+              "ShaderName": "Unit",
+              "AlbedoName": "/units/ueb0101/ueb0101_lod1_albedo.dds"
             }
           ]
         },
@@ -24099,10 +24164,11 @@
       "StrategicIconSortPriority": 210,
       "AI": {
         "TargetBones": [
-          "Foot_Right",
-          "Foot_Left",
+          "Attachpoint",
           "Pad_Left",
-          "Pad_Right"
+          "Pad_Right",
+          "Foot_Left",
+          "Foot_Right"
         ]
       },
       "StrategicIconName": "icon_factory3_land"
@@ -24633,7 +24699,9 @@
         "TargetBones": [
           "Target01",
           "Target02",
-          "Target03"
+          "Target03",
+          "Platform",
+          "Flipper"
         ]
       },
       "StrategicIconName": "icon_factoryhq3_air",
@@ -24740,8 +24808,8 @@
         "Blueprint": "/props/DefaultWreckage/DefaultWreckage_prop.bp",
         "MassMult": 0.9
       },
-      "SizeX": 3.5,
-      "SizeY": 0.75,
+      "SizeX": 4.2,
+      "SizeY": 1,
       "SelectionCenterOffsetX": -0.045,
       "Physics": {
         "DragCoefficient": 0.2,
@@ -24837,14 +24905,18 @@
           "IconFadeInZoom": 130,
           "LODs": [
             {
+              "NormalsName": "/units/ueb0102/ueb0102_normalsts.dds",
               "LODCutoff": 200,
-              "ShaderName": "Unit"
+              "SpecularName": "/units/ueb0102/ueb0102_specteam.dds",
+              "ShaderName": "Unit",
+              "AlbedoName": "/units/ueb0102/ueb0102_albedo.dds"
             },
             {
-              "ShaderName": "Unit",
-              "SpecularName": "ueb0302_lod1_specteam.dds",
+              "NormalsName": "/units/ueb0102/ueb0102_lod1_normalsts.dds",
               "LODCutoff": 500,
-              "AlbedoName": "ueb0302_lod1_albedo.dds"
+              "SpecularName": "/units/ueb0102/ueb0102_lod1_specteam.dds",
+              "ShaderName": "Unit",
+              "AlbedoName": "/units/ueb0102/ueb0102_lod1_albedo.dds"
             }
           ]
         },
@@ -25047,7 +25119,7 @@
           "DummyWeapon": true,
           "Label": "DeathWeapon",
           "WeaponCategory": "Death",
-          "DamageRadius": 14,
+          "DamageRadius": 10,
           "DamageType": "DeathExplosion",
           "DisplayName": "Death Weapon"
         }
@@ -25083,7 +25155,8 @@
           "Target01",
           "Target02",
           "Target03",
-          "ZEB9602"
+          "Platform",
+          "Flipper"
         ]
       },
       "StrategicIconName": "icon_factory3_air",
@@ -25190,8 +25263,8 @@
         "Blueprint": "/props/DefaultWreckage/DefaultWreckage_prop.bp",
         "MassMult": 0.9
       },
-      "SizeX": 3.5,
-      "SizeY": 0.75,
+      "SizeX": 4.2,
+      "SizeY": 1,
       "SelectionCenterOffsetX": -0.045,
       "Physics": {
         "DragCoefficient": 0.2,
@@ -25287,14 +25360,18 @@
           "IconFadeInZoom": 130,
           "LODs": [
             {
+              "NormalsName": "/units/ueb0102/ueb0102_normalsts.dds",
               "LODCutoff": 200,
-              "ShaderName": "Unit"
+              "SpecularName": "/units/ueb0102/ueb0102_specteam.dds",
+              "ShaderName": "Unit",
+              "AlbedoName": "/units/ueb0102/ueb0102_albedo.dds"
             },
             {
-              "ShaderName": "Unit",
-              "SpecularName": "zeb9602_lod1_specteam.dds",
+              "NormalsName": "/units/ueb0102/ueb0102_lod1_normalsts.dds",
               "LODCutoff": 500,
-              "AlbedoName": "zeb9602_lod1_albedo.dds"
+              "SpecularName": "/units/ueb0102/ueb0102_lod1_specteam.dds",
+              "ShaderName": "Unit",
+              "AlbedoName": "/units/ueb0102/ueb0102_lod1_albedo.dds"
             }
           ]
         },
@@ -25373,7 +25450,7 @@
         "BuildOnLayerCaps": {
           "LAYER_Water": true
         },
-        "SkirtSizeZ": 14,
+        "SkirtSizeZ": 15,
         "RollOffPoints": [
           {
             "UnitSpin": 180,
@@ -25500,35 +25577,39 @@
           "IconFadeInZoom": 130,
           "LODs": [
             {
+              "NormalsName": "/units/ueb0103/ueb0103_normalsts.dds",
               "LODCutoff": 200,
-              "ShaderName": "UEFNavy"
+              "SpecularName": "/units/ueb0103/ueb0103_specteam.dds",
+              "ShaderName": "UEFNavy",
+              "AlbedoName": "/units/ueb0103/ueb0103_albedo.dds"
             },
             {
-              "ShaderName": "UEFNavy",
-              "SpecularName": "ueb0303_lod1_specteam.dds",
+              "NormalsName": "/units/ueb0103/ueb0103_lod1_normalsts.dds",
               "LODCutoff": 600,
-              "AlbedoName": "ueb0303_lod1_albedo.dds"
+              "SpecularName": "/units/ueb0103/ueb0103_lod1_specteam.dds",
+              "ShaderName": "UEFNavy",
+              "AlbedoName": "/units/ueb0103/ueb0103_lod1_albedo.dds"
             }
           ]
         },
         "BlinkingLights": [
           {
             "BLScale": 2,
-            "BLOffsetY": 1,
+            "BLOffsetY": 0.9,
             "BLOffsetX": 0.1,
             "BLBone": "Dock_Cover",
             "BLOffsetZ": 0
           },
           {
             "BLScale": 2,
-            "BLOffsetY": 1,
+            "BLOffsetY": 0.9,
             "BLOffsetX": 0.5,
             "BLBone": "Dock_Cover",
             "BLOffsetZ": 0
           },
           {
             "BLScale": 2,
-            "BLOffsetY": 1,
+            "BLOffsetY": 0.9,
             "BLOffsetX": 0.9,
             "BLBone": "Dock_Cover",
             "BLOffsetZ": 0
@@ -26154,7 +26235,7 @@
         "BuildOnLayerCaps": {
           "LAYER_Water": true
         },
-        "SkirtSizeZ": 14,
+        "SkirtSizeZ": 15,
         "RollOffPoints": [
           {
             "UnitSpin": 180,
@@ -26269,7 +26350,7 @@
             "Effects": [
               {
                 "Bones": [
-                  "UEB0303"
+                  "ZEB9603"
                 ],
                 "Type": "SeaIdle01",
                 "Scale": 3
@@ -26281,35 +26362,39 @@
           "IconFadeInZoom": 130,
           "LODs": [
             {
+              "NormalsName": "/units/ueb0103/ueb0103_normalsts.dds",
               "LODCutoff": 200,
-              "ShaderName": "UEFNavy"
+              "SpecularName": "/units/ueb0103/ueb0103_specteam.dds",
+              "ShaderName": "UEFNavy",
+              "AlbedoName": "/units/ueb0103/ueb0103_albedo.dds"
             },
             {
-              "ShaderName": "UEFNavy",
-              "SpecularName": "zeb9603_lod1_specteam.dds",
+              "NormalsName": "/units/ueb0103/ueb0103_lod1_normalsts.dds",
               "LODCutoff": 600,
-              "AlbedoName": "zeb9603_lod1_albedo.dds"
+              "SpecularName": "/units/ueb0103/ueb0103_lod1_specteam.dds",
+              "ShaderName": "UEFNavy",
+              "AlbedoName": "/units/ueb0103/ueb0103_lod1_albedo.dds"
             }
           ]
         },
         "BlinkingLights": [
           {
             "BLScale": 2,
-            "BLOffsetY": 1,
+            "BLOffsetY": 0.9,
             "BLOffsetX": 0.1,
             "BLBone": "Dock_Cover",
             "BLOffsetZ": 0
           },
           {
             "BLScale": 2,
-            "BLOffsetY": 1,
+            "BLOffsetY": 0.9,
             "BLOffsetX": 0.5,
             "BLBone": "Dock_Cover",
             "BLOffsetZ": 0
           },
           {
             "BLScale": 2,
-            "BLOffsetY": 1,
+            "BLOffsetY": 0.9,
             "BLOffsetX": 0.9,
             "BLBone": "Dock_Cover",
             "BLOffsetZ": 0
@@ -31247,7 +31332,7 @@
         "SizeX": 5,
         "SizeZ": 5
       },
-      "SizeZ": 4.2,
+      "SizeZ": 4.3,
       "Intel": {
         "VisionRadius": 20
       },
@@ -31305,7 +31390,7 @@
       "SelectionSizeX": 3.25,
       "SizeY": 1,
       "SelectionSizeZ": 3,
-      "SizeX": 2.9,
+      "SizeX": 4.3,
       "Physics": {
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -1.5,
@@ -31421,22 +31506,29 @@
         "BlinkingLights": [
           {
             "BLScale": 1,
-            "BLOffsetY": 1.8,
-            "BLOffsetX": 2.05,
+            "BLOffsetY": 1.3,
+            "BLOffsetX": 0.74,
             "BLBone": 0,
-            "BLOffsetZ": -0.35
+            "BLOffsetZ": -1.15
           },
           {
             "BLScale": 1,
-            "BLOffsetY": 1.8,
-            "BLOffsetX": -2.05,
+            "BLOffsetY": 1.3,
+            "BLOffsetX": -0.74,
             "BLBone": 0,
-            "BLOffsetZ": -0.35
+            "BLOffsetZ": -1.15
           }
         ]
       },
       "StrategicIconSortPriority": 220,
-      "AI": [],
+      "AI": {
+        "TargetBones": [
+          "Attachpoint",
+          "B11",
+          "B04",
+          "B03"
+        ]
+      },
       "BuildIconSortPriority": 10
     },
     {
@@ -32080,7 +32172,7 @@
         "MassMult": 0.9
       },
       "SelectionSizeX": 3,
-      "SizeY": 0.75,
+      "SizeY": 1,
       "SelectionSizeZ": 3,
       "SizeX": 3.5,
       "Physics": {
@@ -32170,7 +32262,7 @@
         ],
         "UniformScale": 0.09,
         "AnimationUpgradeTable": {
-          "zrb9502": "/units/urb0102/URB0102_aupgrade_sup.sca",
+          "zrb9502": "/units/urb0102/URB0102_aupgrade2.sca",
           "urb0202": "/units/urb0102/URB0102_aupgrade.sca"
         },
         "BuildAttachBone": "Build_Point",
@@ -32199,14 +32291,14 @@
         "BlinkingLights": [
           {
             "BLScale": 1,
-            "BLOffsetY": 1.4,
+            "BLOffsetY": 1.42,
             "BLOffsetX": 1.1,
             "BLBone": 0,
             "BLOffsetZ": -1.9
           },
           {
             "BLScale": 1,
-            "BLOffsetY": 1.4,
+            "BLOffsetY": 1.42,
             "BLOffsetX": -1.1,
             "BLBone": 0,
             "BLOffsetZ": -1.9
@@ -32217,7 +32309,10 @@
       "AI": {
         "TargetBones": [
           "B01",
-          "B08"
+          "B08",
+          "B15",
+          "Arm02",
+          "Arm01"
         ]
       },
       "BuildIconSortPriority": 20
@@ -32873,7 +32968,7 @@
         "BuildOnLayerCaps": {
           "LAYER_Water": true
         },
-        "SkirtSizeZ": 14,
+        "SkirtSizeZ": 15,
         "RollOffPoints": [
           {
             "UnitSpin": 180,
@@ -32903,8 +32998,8 @@
         "AnimationBuild": "/units/urb0103/urb0103_abuild.sca",
         "UniformScale": 0.1,
         "AnimationUpgradeTable": {
-          "urb0203": "/units/urb0103/URB0103_Aupgrade.sca",
-          "zrb9503": "/units/urb0103/URB0103_Aupgrade_sup.sca"
+          "urb0203": "/units/urb0103/urb0103_aupgrade.sca",
+          "zrb9503": "/units/urb0103/urb0103_aupgrade_sup.sca"
         },
         "BuildAttachBone": "Attachpoint",
         "AnimationUpgrade": "/units/urb0103/urb0103_aupgrade.sca",
@@ -32954,9 +33049,10 @@
       "AI": {
         "TargetBones": [
           "B03",
-          "B08",
+          "B29",
           "B28",
-          "B14"
+          "B14",
+          "B01"
         ]
       }
     },
@@ -34589,8 +34685,6 @@
           "Front_Radar",
           "Back_Radar",
           "Back_Wake",
-          "Front_Left_Wake",
-          "Front_Right_Wake",
           "URS0103"
         ]
       },
@@ -40533,7 +40627,7 @@
           "MuzzleVelocity": 0,
           "RackSalvoReloadTime": 0,
           "RackSalvoChargeTime": 0,
-          "MuzzleSalvoSize": 4,
+          "MuzzleSalvoSize": 5,
           "FireTargetLayerCapsTable": {
             "Air": "Seabed|Sub|Water",
             "Land": "Seabed|Sub|Water"
@@ -40551,7 +40645,7 @@
           "MinRadius": 4,
           "MaxRadius": 42,
           "RackFireTogether": false,
-          "Damage": 37.5,
+          "Damage": 30,
           "Turreted": false
         },
         {
@@ -42117,7 +42211,7 @@
           "TurretDualManipulators": false,
           "TurretBonePitch": "Barrel_AA",
           "Turreted": true,
-          "MaxRadius": 60
+          "MaxRadius": 55
         },
         {
           "Label": "TorpedoL",
@@ -43224,7 +43318,6 @@
           "MaxRadius": 80
         },
         {
-          "DamageRadius": 1,
           "Label": "AAGun",
           "TargetCheckInterval": 1,
           "RateOfFire": 0.83333333333333,
@@ -44752,7 +44845,7 @@
         "SizeX": 5,
         "SizeZ": 5
       },
-      "SizeZ": 4.2,
+      "SizeZ": 4.3,
       "Intel": {
         "VisionRadius": 20
       },
@@ -44810,7 +44903,7 @@
       "SelectionSizeX": 3.25,
       "SizeY": 1,
       "SelectionSizeZ": 3,
-      "SizeX": 2.9,
+      "SizeX": 4.3,
       "Physics": {
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -1.5,
@@ -44926,22 +45019,33 @@
         "BlinkingLights": [
           {
             "BLScale": 1,
-            "BLOffsetY": 1.8,
-            "BLOffsetX": 2.05,
+            "BLOffsetY": 2.16,
+            "BLOffsetX": 0.74,
             "BLBone": 0,
-            "BLOffsetZ": -0.35
+            "BLOffsetZ": -1.15
           },
           {
             "BLScale": 1,
-            "BLOffsetY": 1.8,
-            "BLOffsetX": -2.05,
+            "BLOffsetY": 2.16,
+            "BLOffsetX": -0.74,
             "BLBone": 0,
-            "BLOffsetZ": -0.35
+            "BLOffsetZ": -1.15
           }
         ]
       },
       "StrategicIconSortPriority": 215,
-      "AI": [],
+      "AI": {
+        "TargetBones": [
+          "Attachpoint",
+          "B11",
+          "B15",
+          "B15",
+          "B12",
+          "B13",
+          "B01_1",
+          "B02_1"
+        ]
+      },
       "BuildIconSortPriority": 50
     },
     {
@@ -45177,7 +45281,7 @@
         "SizeX": 5,
         "SizeZ": 5
       },
-      "SizeZ": 4.2,
+      "SizeZ": 4.3,
       "Intel": {
         "VisionRadius": 20
       },
@@ -45235,7 +45339,7 @@
       "SelectionSizeX": 3.25,
       "SizeY": 1,
       "SelectionSizeZ": 3,
-      "SizeX": 2.9,
+      "SizeX": 4.3,
       "Physics": {
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -1.5,
@@ -45325,7 +45429,7 @@
           "Green": "/effects/emitters/light_green_03_emit.bp",
           "Red": "/effects/emitters/light_red_03_emit.bp"
         },
-        "AnimationBuild": "/units/zrb9501/zrb9501_abuild.sca",
+        "AnimationBuild": "/units/urb0201/urb0201_abuild.sca",
         "Abilities": [
           "Upgradeable"
         ],
@@ -45351,22 +45455,33 @@
         "BlinkingLights": [
           {
             "BLScale": 1,
-            "BLOffsetY": 1.8,
-            "BLOffsetX": 2.05,
+            "BLOffsetY": 1.87,
+            "BLOffsetX": 0.74,
             "BLBone": 0,
-            "BLOffsetZ": -0.35
+            "BLOffsetZ": -1.15
           },
           {
             "BLScale": 1,
-            "BLOffsetY": 1.8,
-            "BLOffsetX": -2.05,
+            "BLOffsetY": 1.87,
+            "BLOffsetX": -0.74,
             "BLBone": 0,
-            "BLOffsetZ": -0.35
+            "BLOffsetZ": -1.15
           }
         ]
       },
       "StrategicIconSortPriority": 215,
-      "AI": [],
+      "AI": {
+        "TargetBones": [
+          "Attachpoint",
+          "B11",
+          "B04",
+          "B03",
+          "B14",
+          "B15",
+          "B13_2",
+          "B12_2"
+        ]
+      },
       "StrategicIconName": "icon_factory2_land"
     },
     {
@@ -45501,7 +45616,7 @@
         "MassMult": 0.9
       },
       "SelectionSizeX": 3,
-      "SizeY": 0.75,
+      "SizeY": 1,
       "SelectionSizeZ": 3,
       "SizeX": 3.5,
       "Physics": {
@@ -45620,14 +45735,14 @@
         "BlinkingLights": [
           {
             "BLScale": 1,
-            "BLOffsetY": 1.4,
+            "BLOffsetY": 1.42,
             "BLOffsetX": 1.1,
             "BLBone": 0,
             "BLOffsetZ": -1.9
           },
           {
             "BLScale": 1,
-            "BLOffsetY": 1.4,
+            "BLOffsetY": 1.42,
             "BLOffsetX": -1.1,
             "BLBone": 0,
             "BLOffsetZ": -1.9
@@ -45637,10 +45752,11 @@
       "StrategicIconSortPriority": 215,
       "AI": {
         "TargetBones": [
-          "URB0202",
-          "B05",
-          "B07",
-          "B08"
+          "B01",
+          "B08",
+          "B15",
+          "WL",
+          "WR"
         ]
       },
       "BuildIconSortPriority": 60
@@ -45990,7 +46106,7 @@
         "MassMult": 0.9
       },
       "SelectionSizeX": 3,
-      "SizeY": 0.75,
+      "SizeY": 1,
       "SelectionSizeZ": 3,
       "SizeX": 3.5,
       "Physics": {
@@ -46109,14 +46225,14 @@
         "BlinkingLights": [
           {
             "BLScale": 1,
-            "BLOffsetY": 1.4,
+            "BLOffsetY": 1.42,
             "BLOffsetX": 1.1,
             "BLBone": 0,
             "BLOffsetZ": -1.9
           },
           {
             "BLScale": 1,
-            "BLOffsetY": 1.4,
+            "BLOffsetY": 1.42,
             "BLOffsetX": -1.1,
             "BLBone": 0,
             "BLOffsetZ": -1.9
@@ -46126,8 +46242,11 @@
       "StrategicIconSortPriority": 215,
       "AI": {
         "TargetBones": [
-          "ZRB9502",
-          "B08"
+          "B01",
+          "B08",
+          "B15",
+          "B05",
+          "B07"
         ]
       },
       "StrategicIconName": "icon_factory2_air"
@@ -46273,7 +46392,7 @@
         "BuildOnLayerCaps": {
           "LAYER_Water": true
         },
-        "SkirtSizeZ": 14,
+        "SkirtSizeZ": 15,
         "RollOffPoints": [
           {
             "UnitSpin": 180,
@@ -46301,7 +46420,7 @@
           "Red": "/effects/emitters/light_red_03_emit.bp"
         },
         "UniformScale": 0.1,
-        "AnimationBuild": "/units/urb0203/urb0203_aBuild.sca",
+        "AnimationBuild": "/units/urb0203/urb0203_abuild.sca",
         "BuildAttachBone": "Attachpoint",
         "AnimationUpgrade": "/units/urb0203/urb0203_aupgrade.sca",
         "Abilities": [
@@ -46361,9 +46480,10 @@
       "AI": {
         "TargetBones": [
           "B03",
-          "B08",
+          "B29",
           "B28",
-          "B14"
+          "B14",
+          "B01"
         ]
       }
     },
@@ -46681,7 +46801,7 @@
         "Blueprint": "/props/DefaultWreckage/DefaultWreckage_prop.bp",
         "MassMult": 0.9
       },
-      "SizeX": 3,
+      "SizeX": 4,
       "SizeY": 3,
       "SelectionSizeZ": 8.1,
       "Physics": {
@@ -46691,7 +46811,7 @@
         "BuildOnLayerCaps": {
           "LAYER_Water": true
         },
-        "SkirtSizeZ": 14,
+        "SkirtSizeZ": 15,
         "RollOffPoints": [
           {
             "UnitSpin": 180,
@@ -46719,7 +46839,7 @@
           "Red": "/effects/emitters/light_red_03_emit.bp"
         },
         "UniformScale": 0.1,
-        "AnimationBuild": "/units/urb0203/urb0203_aBuild.sca",
+        "AnimationBuild": "/units/zrb9503/zrb9503_aBuild.sca",
         "BuildAttachBone": "Attachpoint",
         "AnimationUpgrade": "/units/zrb9503/zrb9503_aupgrade.sca",
         "Abilities": [
@@ -46779,9 +46899,10 @@
       "AI": {
         "TargetBones": [
           "B03",
-          "B08",
+          "B29",
           "B28",
-          "B14"
+          "B14",
+          "B01"
         ]
       }
     },
@@ -55633,7 +55754,7 @@
         "SizeX": 5,
         "SizeZ": 5
       },
-      "SizeZ": 4.2,
+      "SizeZ": 4.3,
       "Intel": {
         "VisionRadius": 20
       },
@@ -55691,7 +55812,7 @@
       "SelectionSizeX": 3.25,
       "SizeY": 1,
       "SelectionSizeZ": 3,
-      "SizeX": 2.9,
+      "SizeX": 4.3,
       "Physics": {
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -1.5,
@@ -55800,22 +55921,33 @@
         "BlinkingLights": [
           {
             "BLScale": 1,
-            "BLOffsetY": 1.8,
-            "BLOffsetX": 2.05,
+            "BLOffsetY": 2.45,
+            "BLOffsetX": 0.74,
             "BLBone": 0,
-            "BLOffsetZ": -0.35
+            "BLOffsetZ": -1.15
           },
           {
             "BLScale": 1,
-            "BLOffsetY": 1.8,
-            "BLOffsetX": -2.05,
+            "BLOffsetY": 2.45,
+            "BLOffsetX": -0.74,
             "BLBone": 0,
-            "BLOffsetZ": -0.35
+            "BLOffsetZ": -1.15
           }
         ]
       },
       "StrategicIconSortPriority": 210,
-      "AI": [],
+      "AI": {
+        "TargetBones": [
+          "Attachpoint",
+          "B11",
+          "B14",
+          "B15",
+          "B12",
+          "B13",
+          "B01_1",
+          "B02_1"
+        ]
+      },
       "BuildIconSortPriority": 40
     },
     {
@@ -56207,6 +56339,7 @@
       "BuildIconSortPriority": 40,
       "Weapon": [
         {
+          "DamageRadius": 1.5,
           "Label": "AAGun01",
           "RateOfFire": 2,
           "HeadingArcCenter": -90,
@@ -56214,15 +56347,30 @@
           "RackBones": [
             {
               "MuzzleBones": [
-                "Front_Right_AA_Muzzle_01",
-                "Front_Right_AA_Muzzle_02",
-                "Front_Right_AA_Muzzle_03",
+                "Front_Right_AA_Muzzle_01"
+              ],
+              "RackBone": "Front_Right_AA_Turret_Barrel"
+            },
+            {
+              "MuzzleBones": [
+                "Front_Right_AA_Muzzle_02"
+              ],
+              "RackBone": "Front_Right_AA_Turret_Barrel"
+            },
+            {
+              "MuzzleBones": [
+                "Front_Right_AA_Muzzle_03"
+              ],
+              "RackBone": "Front_Right_AA_Turret_Barrel"
+            },
+            {
+              "MuzzleBones": [
                 "Front_Right_AA_Muzzle_04"
               ],
               "RackBone": "Front_Right_AA_Turret_Barrel"
             }
           ],
-          "Damage": 20,
+          "Damage": 80,
           "DamageType": "Normal",
           "Audio": {
             "Fire": {
@@ -56405,7 +56553,7 @@
         "SizeX": 5,
         "SizeZ": 5
       },
-      "SizeZ": 4.2,
+      "SizeZ": 4.3,
       "Intel": {
         "VisionRadius": 20
       },
@@ -56463,7 +56611,7 @@
       "SelectionSizeX": 3.25,
       "SizeY": 1,
       "SelectionSizeZ": 3,
-      "SizeX": 2.9,
+      "SizeX": 4.3,
       "Physics": {
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -1.5,
@@ -56572,22 +56720,33 @@
         "BlinkingLights": [
           {
             "BLScale": 1,
-            "BLOffsetY": 1.8,
-            "BLOffsetX": 2.05,
+            "BLOffsetY": 2.42,
+            "BLOffsetX": 0.74,
             "BLBone": 0,
-            "BLOffsetZ": -0.35
+            "BLOffsetZ": -1.15
           },
           {
             "BLScale": 1,
-            "BLOffsetY": 1.8,
-            "BLOffsetX": -2.05,
+            "BLOffsetY": 2.42,
+            "BLOffsetX": -0.74,
             "BLBone": 0,
-            "BLOffsetZ": -0.35
+            "BLOffsetZ": -1.15
           }
         ]
       },
       "StrategicIconSortPriority": 210,
-      "AI": [],
+      "AI": {
+        "TargetBones": [
+          "Attachpoint",
+          "B11",
+          "B04",
+          "B03",
+          "B14",
+          "B15",
+          "B13_2",
+          "B12_2"
+        ]
+      },
       "StrategicIconName": "icon_factory3_land"
     },
     {
@@ -56723,7 +56882,7 @@
         "MassMult": 0.9
       },
       "SelectionSizeX": 3,
-      "SizeY": 0.75,
+      "SizeY": 1,
       "SelectionSizeZ": 3,
       "SizeX": 3.5,
       "Physics": {
@@ -56838,14 +56997,14 @@
         "BlinkingLights": [
           {
             "BLScale": 1,
-            "BLOffsetY": 1.4,
+            "BLOffsetY": 1.42,
             "BLOffsetX": 1.1,
             "BLBone": 0,
             "BLOffsetZ": -1.9
           },
           {
             "BLScale": 1,
-            "BLOffsetY": 1.4,
+            "BLOffsetY": 1.42,
             "BLOffsetX": -1.1,
             "BLBone": 0,
             "BLOffsetZ": -1.9
@@ -56855,11 +57014,11 @@
       "StrategicIconSortPriority": 210,
       "AI": {
         "TargetBones": [
-          "URB0302",
-          "B05",
-          "B07",
-          "B08",
-          "B10"
+          "B01",
+          "B15",
+          "Arm04",
+          "WL",
+          "WR"
         ]
       },
       "BuildIconSortPriority": 50
@@ -57040,7 +57199,7 @@
           "DummyWeapon": true,
           "Label": "DeathWeapon",
           "WeaponCategory": "Death",
-          "DamageRadius": 14,
+          "DamageRadius": 10,
           "DamageType": "DeathExplosion",
           "DisplayName": "Death Weapon"
         }
@@ -57621,7 +57780,7 @@
         "MassMult": 0.9
       },
       "SelectionSizeX": 3,
-      "SizeY": 0.75,
+      "SizeY": 1,
       "SelectionSizeZ": 3,
       "SizeX": 3.5,
       "Physics": {
@@ -57736,14 +57895,14 @@
         "BlinkingLights": [
           {
             "BLScale": 1,
-            "BLOffsetY": 1.4,
+            "BLOffsetY": 1.42,
             "BLOffsetX": 1.1,
             "BLBone": 0,
             "BLOffsetZ": -1.9
           },
           {
             "BLScale": 1,
-            "BLOffsetY": 1.4,
+            "BLOffsetY": 1.42,
             "BLOffsetX": -1.1,
             "BLBone": 0,
             "BLOffsetZ": -1.9
@@ -57753,8 +57912,11 @@
       "StrategicIconSortPriority": 210,
       "AI": {
         "TargetBones": [
-          "ZRB9602",
-          "B08"
+          "B01",
+          "Arm04",
+          "B15",
+          "B05",
+          "B07"
         ]
       },
       "StrategicIconName": "icon_factory3_air"
@@ -57844,7 +58006,7 @@
         "BuildOnLayerCaps": {
           "LAYER_Water": true
         },
-        "SkirtSizeZ": 14,
+        "SkirtSizeZ": 15,
         "RollOffPoints": [
           {
             "UnitSpin": 180,
@@ -57991,9 +58153,10 @@
       "AI": {
         "TargetBones": [
           "B03",
-          "B08",
+          "B29",
           "B28",
-          "B14"
+          "B14",
+          "B01"
         ]
       },
       "BuildIconSortPriority": 60
@@ -58085,7 +58248,7 @@
         "BuildOnLayerCaps": {
           "LAYER_Water": true
         },
-        "SkirtSizeZ": 14,
+        "SkirtSizeZ": 15,
         "RollOffPoints": [
           {
             "UnitSpin": 180,
@@ -58155,7 +58318,7 @@
         "Blueprint": "/props/DefaultWreckage/DefaultWreckage_prop.bp",
         "MassMult": 0.9
       },
-      "SizeX": 3,
+      "SizeX": 4,
       "SizeY": 3,
       "SelectionCenterOffsetX": -0.57,
       "SelectionSizeZ": 8.1,
@@ -58184,7 +58347,7 @@
             ]
           }
         },
-        "AnimationBuild": "/units/urb0303/urb0303_abuild.sca",
+        "AnimationBuild": "/units/zrb9603/zrb9603_aBuild.sca",
         "Mesh": {
           "IconFadeInZoom": 130,
           "LODs": [
@@ -58232,9 +58395,10 @@
       "AI": {
         "TargetBones": [
           "B03",
-          "B08",
+          "B29",
           "B28",
-          "B14"
+          "B14",
+          "B01"
         ]
       },
       "BuildIconSortPriority": 61
@@ -63143,7 +63307,7 @@
         "UpgradesTo": "uab0201",
         "BuildBones": {
           "BuildEffectBones": [
-            "Tier1_Arm_Refpoint"
+            "Tier2_Arm_Refpoint"
           ]
         },
         "FactionName": "Aeon",
@@ -63152,6 +63316,7 @@
         "UpgradesFromBase": "uab0101",
         "Classification": "RULEUC_Factory"
       },
+      "LifeBarOffset": 1.9,
       "Economy": {
         "BuildTime": 300,
         "StorageMass": 80,
@@ -63173,7 +63338,9 @@
         "SizeZ": 5
       },
       "SizeZ": 3.6,
-      "LifeBarOffset": 1.9,
+      "Intel": {
+        "VisionRadius": 20
+      },
       "Defense": {
         "ArmorType": "Structure",
         "Health": 3200,
@@ -63225,12 +63392,98 @@
         "MassMult": 0.9
       },
       "SelectionSizeX": 2.75,
-      "Intel": {
-        "VisionRadius": 20
-      },
-      "SelectionSizeZ": 2.75,
       "SizeY": 1,
+      "SelectionSizeZ": 2.75,
       "SizeX": 3.6,
+      "Physics": {
+        "MeshExtentsX": 4.5,
+        "DragCoefficient": 0.2,
+        "MaxGroundVariation": 1.1,
+        "SkirtOffsetZ": -1.5,
+        "SkirtOffsetX": -1.5,
+        "FlattenSkirt": true,
+        "RaisedPlatforms": [
+          -1.1,
+          -1.6,
+          0.5,
+          1.1,
+          -1.6,
+          0.5,
+          -1.1,
+          1.9,
+          0.5,
+          1.1,
+          1.9,
+          0.5,
+          -1.7,
+          -1.6,
+          0.45,
+          -1.1,
+          -1.6,
+          0.45,
+          -1.7,
+          1.9,
+          0.45,
+          -1.1,
+          1.9,
+          0.45,
+          1.1,
+          -1.6,
+          0.45,
+          1.7,
+          -1.6,
+          0.45,
+          1.1,
+          1.9,
+          0.45,
+          1.7,
+          1.9,
+          0.45,
+          -2.5,
+          -1.6,
+          0,
+          -1.7,
+          -1.6,
+          0.45,
+          -2.5,
+          1.9,
+          0,
+          -1.7,
+          1.9,
+          0.45,
+          1.7,
+          -1.6,
+          0.45,
+          2.5,
+          -1.6,
+          0,
+          1.7,
+          1.9,
+          0.45,
+          2.5,
+          1.9,
+          0
+        ],
+        "MeshExtentsY": 1,
+        "MotionType": "RULEUMT_None",
+        "RollOffPoints": [
+          {
+            "UnitSpin": 90,
+            "X": 2.75,
+            "Y": 0,
+            "Z": 0.35
+          },
+          {
+            "UnitSpin": -90,
+            "X": -2.75,
+            "Y": 0,
+            "Z": 0.35
+          }
+        ],
+        "SkirtSizeZ": 8,
+        "SkirtSizeX": 8,
+        "MeshExtentsZ": 4.5
+      },
       "SelectionThickness": 0.36,
       "Display": {
         "Tarmacs": [
@@ -63250,12 +63503,6 @@
             "Width": 12.8
           }
         ],
-        "UniformScale": 0.275,
-        "AnimationUpgradeTable": {
-          "zab9501": "/units/uab0101/uab0101_asupport.sca",
-          "uab0201": "/units/uab0101/uab0101_aopen.sca"
-        },
-        "BuildAttachBone": "Attachpoint",
         "DamageEffects": [
           {
             "OffsetX": 1.5,
@@ -63306,6 +63553,13 @@
             "Bone": 0
           }
         ],
+        "UniformScale": 0.275,
+        "AnimationUpgradeTable": {
+          "zab9501": "/units/uab0101/uab0101_aopen2.sca",
+          "uab0201": "/units/uab0101/uab0101_aopen.sca"
+        },
+        "BuildAttachBone": "Attachpoint",
+        "AnimationUpgrade": "/units/uab0101/uab0101_aopen.sca",
         "BlinkingLightsFx": {
           "Yellow": "/effects/emitters/light_yellow_02_emit.bp",
           "Green": "/effects/emitters/light_green_03_emit.bp",
@@ -63332,29 +63586,29 @@
         },
         "BlinkingLights": [
           {
-            "BLScale": 1,
-            "BLOffsetY": 0.15,
-            "BLOffsetX": -1.75,
+            "BLScale": 1.4,
+            "BLOffsetY": 0.35,
+            "BLOffsetX": -1.76,
             "BLBone": 0,
             "BLOffsetZ": -1.68
           },
           {
-            "BLScale": 1,
-            "BLOffsetY": 0.15,
+            "BLScale": 1.4,
+            "BLOffsetY": 0.35,
             "BLOffsetX": 1.74,
             "BLBone": 0,
             "BLOffsetZ": -1.68
           },
           {
-            "BLScale": 1,
-            "BLOffsetY": 0.15,
+            "BLScale": 1.4,
+            "BLOffsetY": 0.35,
             "BLOffsetX": -1.75,
             "BLBone": 0,
             "BLOffsetZ": 1.77
           },
           {
-            "BLScale": 1,
-            "BLOffsetY": 0.15,
+            "BLScale": 1.4,
+            "BLOffsetY": 0.35,
             "BLOffsetX": 1.74,
             "BLBone": 0,
             "BLOffsetZ": 1.77
@@ -63362,58 +63616,14 @@
         ]
       },
       "StrategicIconSortPriority": 220,
-      "Physics": {
-        "MeshExtentsX": 4.5,
-        "DragCoefficient": 0.2,
-        "MaxGroundVariation": 1.1,
-        "SkirtOffsetZ": -1.5,
-        "SkirtOffsetX": -1.5,
-        "FlattenSkirt": true,
-        "RaisedPlatforms": [
-          -0.8,
-          -0.5,
-          0.15,
-          0.8,
-          -0.5,
-          0.15,
-          -0.8,
-          1.1,
-          0.15,
-          0.8,
-          1.1,
-          0.15,
-          -2.25,
-          -2.25,
-          0.05,
-          2.25,
-          -2.25,
-          0.05,
-          -2.25,
-          2.25,
-          0.05,
-          2.25,
-          2.25,
-          0.05
-        ],
-        "MeshExtentsY": 1,
-        "MotionType": "RULEUMT_None",
-        "RollOffPoints": [
-          {
-            "UnitSpin": 90,
-            "X": 2.75,
-            "Y": 0,
-            "Z": 0.35
-          },
-          {
-            "UnitSpin": -90,
-            "X": -2.75,
-            "Y": 0,
-            "Z": 0.35
-          }
-        ],
-        "SkirtSizeZ": 8,
-        "SkirtSizeX": 8,
-        "MeshExtentsZ": 4.5
+      "AI": {
+        "TargetBones": [
+          "Attachpoint",
+          "Right_Hardpoint01",
+          "Right_Hardpoint02",
+          "Left_Hardpoint01",
+          "Left_Hardpoint02"
+        ]
       },
       "BuildIconSortPriority": 10
     },
@@ -64007,6 +64217,7 @@
         "UpgradesFromBase": "uab0102",
         "Classification": "RULEUC_Factory"
       },
+      "LifeBarOffset": 1.55,
       "Economy": {
         "BuildTime": 300,
         "StorageMass": 80,
@@ -64028,8 +64239,10 @@
         "SizeX": 5,
         "SizeZ": 5
       },
-      "SizeZ": 3,
-      "LifeBarOffset": 1.55,
+      "SizeZ": 3.5,
+      "Intel": {
+        "VisionRadius": 20
+      },
       "Defense": {
         "ArmorType": "Structure",
         "Health": 3200,
@@ -64081,12 +64294,80 @@
         "MassMult": 0.9
       },
       "SelectionSizeX": 2.85,
-      "Intel": {
-        "VisionRadius": 20
-      },
-      "SelectionSizeZ": 2.75,
       "SizeY": 0.7,
-      "SizeX": 3,
+      "SelectionSizeZ": 2.75,
+      "SizeX": 3.5,
+      "Physics": {
+        "MeshExtentsX": 4.25,
+        "DragCoefficient": 0.2,
+        "MaxGroundVariation": 1.1,
+        "SkirtOffsetZ": -1.5,
+        "SkirtOffsetX": -1.5,
+        "FlattenSkirt": true,
+        "RaisedPlatforms": [
+          -1.4,
+          -1.2,
+          0.65,
+          1.4,
+          -1.2,
+          0.65,
+          -1.4,
+          1.5,
+          0.65,
+          1.4,
+          1.5,
+          0.65,
+          -2,
+          -1.2,
+          0,
+          -1.4,
+          -1.2,
+          0.65,
+          -2,
+          1.5,
+          0,
+          -1.4,
+          1.5,
+          0.65,
+          1.4,
+          -1.2,
+          0.65,
+          2,
+          -1.2,
+          0,
+          1.4,
+          1.5,
+          0.65,
+          2,
+          1.5,
+          0
+        ],
+        "MeshExtentsY": 2.5,
+        "MotionType": "RULEUMT_None",
+        "RollOffPoints": [
+          {
+            "UnitSpin": 0,
+            "X": 0,
+            "Y": 0,
+            "Z": 3
+          },
+          {
+            "UnitSpin": 90,
+            "X": 3,
+            "Y": 0,
+            "Z": 0
+          },
+          {
+            "UnitSpin": -90,
+            "X": -3,
+            "Y": 0,
+            "Z": 0
+          }
+        ],
+        "SkirtSizeZ": 8,
+        "SkirtSizeX": 8,
+        "MeshExtentsZ": 5
+      },
       "SelectionThickness": 0.35,
       "Display": {
         "Tarmacs": [
@@ -64180,76 +64461,12 @@
         ]
       },
       "StrategicIconSortPriority": 220,
-      "Physics": {
-        "MeshExtentsX": 4.25,
-        "DragCoefficient": 0.2,
-        "MaxGroundVariation": 1.1,
-        "SkirtOffsetZ": -1.5,
-        "SkirtOffsetX": -1.5,
-        "FlattenSkirt": true,
-        "RaisedPlatforms": [
-          -1.4,
-          -1.2,
-          0.65,
-          1.4,
-          -1.2,
-          0.65,
-          -1.4,
-          1.5,
-          0.65,
-          1.4,
-          1.5,
-          0.65,
-          -2,
-          -1.2,
-          0,
-          -1.4,
-          -1.2,
-          0.65,
-          -2,
-          1.5,
-          0,
-          -1.4,
-          1.5,
-          0.65,
-          1.4,
-          -1.2,
-          0.65,
-          2,
-          -1.2,
-          0,
-          1.4,
-          1.5,
-          0.65,
-          2,
-          1.5,
-          0
-        ],
-        "MeshExtentsY": 2.5,
-        "MotionType": "RULEUMT_None",
-        "RollOffPoints": [
-          {
-            "UnitSpin": 0,
-            "X": 0,
-            "Y": 0,
-            "Z": 3
-          },
-          {
-            "UnitSpin": 90,
-            "X": 3,
-            "Y": 0,
-            "Z": 0
-          },
-          {
-            "UnitSpin": -90,
-            "X": -3,
-            "Y": 0,
-            "Z": 0
-          }
-        ],
-        "SkirtSizeZ": 8,
-        "SkirtSizeX": 8,
-        "MeshExtentsZ": 5
+      "AI": {
+        "TargetBones": [
+          "Attachpoint",
+          "Right_Slider2",
+          "Front_Slider"
+        ]
       },
       "BuildIconSortPriority": 20
     },
@@ -64911,8 +65128,6 @@
       ],
       "AverageDensity": 3700,
       "Description": "Naval Factory",
-      "LifeBarSize": 4,
-      "StrategicIconName": "icon_factory1_naval",
       "General": {
         "CommandCaps": {
           "RULEUCC_RetaliateToggle": true,
@@ -64935,8 +65150,11 @@
         "UpgradesFromBase": "uab0103",
         "Classification": "RULEUC_Factory"
       },
+      "LifeBarSize": 4,
+      "StrategicIconName": "icon_factory1_naval",
       "LifeBarOffset": 6.5,
-      "CollisionOffsetZ": 1.5,
+      "SelectionSizeX": 2.5,
+      "CollisionOffsetZ": 1,
       "Economy": {
         "InitialRallyX": 0,
         "StorageMass": 80,
@@ -64958,7 +65176,7 @@
       "Footprint": {
         "MinWaterDepth": 1.5
       },
-      "SizeZ": 10.5,
+      "SizeZ": 13,
       "Intel": {
         "VisionRadius": 20
       },
@@ -65012,10 +65230,38 @@
         "Blueprint": "/props/DefaultWreckage/DefaultWreckage_prop.bp",
         "MassMult": 0.9
       },
-      "SelectionSizeX": 2.5,
+      "SizeX": 4,
       "SizeY": 3,
       "SelectionSizeZ": 6.5,
-      "SizeX": 4,
+      "Physics": {
+        "ComputeRollOffPoint": true,
+        "DragCoefficient": 0.2,
+        "SkirtOffsetZ": -1,
+        "SkirtSizeZ": 15,
+        "BuildOnLayerCaps": {
+          "LAYER_Water": true
+        },
+        "SkirtOffsetX": -7,
+        "MeshExtentsY": 2,
+        "MotionType": "RULEUMT_None",
+        "RollOffPoints": [
+          {
+            "UnitSpin": 180,
+            "X": -6,
+            "Y": 0,
+            "Z": -8
+          },
+          {
+            "UnitSpin": 0,
+            "X": -6,
+            "Y": 0,
+            "Z": 8
+          }
+        ],
+        "MeshExtentsX": 5,
+        "SkirtSizeX": 12,
+        "MeshExtentsZ": 10
+      },
       "SelectionThickness": 0.26,
       "CollisionOffsetY": -1,
       "Display": {
@@ -65027,18 +65273,18 @@
                   "UAB0103"
                 ],
                 "Type": "SeaIdle01",
-                "Scale": 3
+                "Scale": 2
               }
             ]
           }
         },
         "UniformScale": 0.09,
         "AnimationUpgradeTable": {
-          "uab0203": "/units/uab0103/UAB0103_Aopen.sca",
-          "zab9503": "/units/uab0103/UAB0103_Aopen_sup.sca"
+          "uab0203": "/units/uab0103/uab0103_aopen.sca",
+          "zab9503": "/units/uab0103/uab0103_aopen2.sca"
         },
         "BuildAttachBone": "Attachpoint01",
-        "AnimationUpgrade": "/units/uab0103/uab0103_aopen.sca",
+        "AnimationUpgrade": "/units/uab0103/uab0103_aopen2.sca",
         "Abilities": [
           "Upgradeable"
         ],
@@ -65065,42 +65311,21 @@
         "BlinkingLights": [
           {
             "BLScale": 1,
-            "BLOffsetY": 3.5,
+            "BLOffsetY": 3.3,
             "BLOffsetX": 0.55,
             "BLBone": 0,
-            "BLOffsetZ": 0.75
+            "BLOffsetZ": 0.4
           }
         ]
       },
       "StrategicIconSortPriority": 220,
-      "Physics": {
-        "ComputeRollOffPoint": true,
-        "DragCoefficient": 0.2,
-        "SkirtOffsetZ": -2,
-        "SkirtSizeZ": 14,
-        "BuildOnLayerCaps": {
-          "LAYER_Water": true
-        },
-        "SkirtOffsetX": -6,
-        "MeshExtentsY": 2,
-        "MotionType": "RULEUMT_None",
-        "RollOffPoints": [
-          {
-            "UnitSpin": 180,
-            "X": -6,
-            "Y": 0,
-            "Z": -8
-          },
-          {
-            "UnitSpin": 0,
-            "X": -6,
-            "Y": 0,
-            "Z": 8
-          }
-        ],
-        "MeshExtentsX": 5,
-        "SkirtSizeX": 12,
-        "MeshExtentsZ": 10
+      "AI": {
+        "TargetBones": [
+          "Slider_02",
+          "Slider_05",
+          "B06",
+          "B05"
+        ]
       },
       "BuildIconSortPriority": 30
     },
@@ -72483,7 +72708,7 @@
               "RackBone": "Torpedo"
             }
           ],
-          "Damage": 187.5,
+          "Damage": 150,
           "ProjectileLifetime": 20,
           "DamageType": "Normal",
           "Audio": {
@@ -72505,7 +72730,7 @@
           "MuzzleVelocity": 0,
           "RackFireTogether": false,
           "RackSalvoChargeTime": 0,
-          "MuzzleSalvoSize": 4,
+          "MuzzleSalvoSize": 5,
           "FireTargetLayerCapsTable": {
             "Air": "Seabed|Sub|Water",
             "Land": "Seabed|Sub|Water"
@@ -75627,7 +75852,6 @@
           "Turreted": true
         },
         {
-          "DamageRadius": 1,
           "Label": "AntiAirMissiles01",
           "TargetCheckInterval": 1,
           "RateOfFire": 1,
@@ -75882,30 +76106,66 @@
         "SkirtOffsetX": -1.5,
         "FlattenSkirt": true,
         "RaisedPlatforms": [
-          -0.8,
-          -0.5,
-          0.15,
-          0.8,
-          -0.5,
-          0.15,
-          -0.8,
+          -1.1,
+          -1.6,
+          0.5,
           1.1,
-          0.15,
-          0.8,
+          -1.6,
+          0.5,
+          -1.1,
+          1.9,
+          0.5,
           1.1,
-          0.15,
-          -2.25,
-          -2.25,
-          0.05,
-          2.25,
-          -2.25,
-          0.05,
-          -2.25,
-          2.25,
-          0.05,
-          2.25,
-          2.25,
-          0.05
+          1.9,
+          0.5,
+          -1.7,
+          -1.6,
+          0.45,
+          -1.1,
+          -1.6,
+          0.45,
+          -1.7,
+          1.9,
+          0.45,
+          -1.1,
+          1.9,
+          0.45,
+          1.1,
+          -1.6,
+          0.45,
+          1.7,
+          -1.6,
+          0.45,
+          1.1,
+          1.9,
+          0.45,
+          1.7,
+          1.9,
+          0.45,
+          -2.5,
+          -1.6,
+          0,
+          -1.7,
+          -1.6,
+          0.45,
+          -2.5,
+          1.9,
+          0,
+          -1.7,
+          1.9,
+          0.45,
+          1.7,
+          -1.6,
+          0.45,
+          2.5,
+          -1.6,
+          0,
+          1.7,
+          1.9,
+          0.45,
+          2.5,
+          1.9,
+          0
         ],
         "MeshExtentsY": 1.25,
         "MotionType": "RULEUMT_None",
@@ -75979,28 +76239,28 @@
         "BlinkingLights": [
           {
             "BLScale": 1,
-            "BLOffsetY": 0.15,
+            "BLOffsetY": 0.35,
             "BLOffsetX": -1.75,
             "BLBone": 0,
             "BLOffsetZ": -1.68
           },
           {
             "BLScale": 1,
-            "BLOffsetY": 0.15,
+            "BLOffsetY": 0.35,
             "BLOffsetX": 1.74,
             "BLBone": 0,
             "BLOffsetZ": -1.68
           },
           {
-            "BLScale": 1,
-            "BLOffsetY": 0.15,
+            "BLScale": 1.4,
+            "BLOffsetY": 0.9,
             "BLOffsetX": -1.75,
             "BLBone": 0,
             "BLOffsetZ": 1.77
           },
           {
-            "BLScale": 1,
-            "BLOffsetY": 0.15,
+            "BLScale": 1.4,
+            "BLOffsetY": 0.9,
             "BLOffsetX": 1.74,
             "BLBone": 0,
             "BLOffsetZ": 1.77
@@ -76010,9 +76270,11 @@
       "StrategicIconSortPriority": 215,
       "AI": {
         "TargetBones": [
-          "B01",
-          "B02",
-          "Attachpoint"
+          "Attachpoint",
+          "Right_Hardpoint01",
+          "Right_Hardpoint02",
+          "Left_Hardpoint01",
+          "Left_Hardpoint02"
         ]
       },
       "BuildIconSortPriority": 50
@@ -76598,30 +76860,66 @@
         "SkirtOffsetX": -1.5,
         "FlattenSkirt": true,
         "RaisedPlatforms": [
-          -0.8,
-          -0.5,
-          0.15,
-          0.8,
-          -0.5,
-          0.15,
-          -0.8,
+          -1.1,
+          -1.6,
+          0.5,
           1.1,
-          0.15,
-          0.8,
+          -1.6,
+          0.5,
+          -1.1,
+          1.9,
+          0.5,
           1.1,
-          0.15,
-          -2.25,
-          -2.25,
-          0.05,
-          2.25,
-          -2.25,
-          0.05,
-          -2.25,
-          2.25,
-          0.05,
-          2.25,
-          2.25,
-          0.05
+          1.9,
+          0.5,
+          -1.7,
+          -1.6,
+          0.45,
+          -1.1,
+          -1.6,
+          0.45,
+          -1.7,
+          1.9,
+          0.45,
+          -1.1,
+          1.9,
+          0.45,
+          1.1,
+          -1.6,
+          0.45,
+          1.7,
+          -1.6,
+          0.45,
+          1.1,
+          1.9,
+          0.45,
+          1.7,
+          1.9,
+          0.45,
+          -2.5,
+          -1.6,
+          0,
+          -1.7,
+          -1.6,
+          0.45,
+          -2.5,
+          1.9,
+          0,
+          -1.7,
+          1.9,
+          0.45,
+          1.7,
+          -1.6,
+          0.45,
+          2.5,
+          -1.6,
+          0,
+          1.7,
+          1.9,
+          0.45,
+          2.5,
+          1.9,
+          0
         ],
         "MeshExtentsY": 1.25,
         "MotionType": "RULEUMT_None",
@@ -76666,7 +76964,7 @@
         "Abilities": [
           "Upgradeable"
         ],
-        "AnimationUpgrade": "/units/uab0201/uab0201_aopen.sca",
+        "AnimationUpgrade": "/units/zab9501/zab9501_aopen.sca",
         "BlinkingLightsFx": {
           "Yellow": "/effects/emitters/light_yellow_02_emit.bp",
           "Green": "/effects/emitters/light_green_03_emit.bp",
@@ -76694,29 +76992,29 @@
         },
         "BlinkingLights": [
           {
-            "BLScale": 1,
-            "BLOffsetY": 0.15,
-            "BLOffsetX": -1.75,
+            "BLScale": 1.4,
+            "BLOffsetY": 0.35,
+            "BLOffsetX": -1.76,
             "BLBone": 0,
             "BLOffsetZ": -1.68
           },
           {
-            "BLScale": 1,
-            "BLOffsetY": 0.15,
+            "BLScale": 1.4,
+            "BLOffsetY": 0.35,
             "BLOffsetX": 1.74,
             "BLBone": 0,
             "BLOffsetZ": -1.68
           },
           {
-            "BLScale": 1,
-            "BLOffsetY": 0.15,
+            "BLScale": 1.4,
+            "BLOffsetY": 0.35,
             "BLOffsetX": -1.75,
             "BLBone": 0,
             "BLOffsetZ": 1.77
           },
           {
-            "BLScale": 1,
-            "BLOffsetY": 0.15,
+            "BLScale": 1.4,
+            "BLOffsetY": 0.35,
             "BLOffsetX": 1.74,
             "BLBone": 0,
             "BLOffsetZ": 1.77
@@ -76726,8 +77024,11 @@
       "StrategicIconSortPriority": 215,
       "AI": {
         "TargetBones": [
-          "B01",
-          "B02"
+          "Attachpoint",
+          "Right_Hardpoint01",
+          "Right_Hardpoint02",
+          "Left_Hardpoint01",
+          "Left_Hardpoint02"
         ]
       },
       "StrategicIconName": "icon_factory2_land"
@@ -76756,8 +77057,6 @@
       ],
       "AverageDensity": 6400,
       "Description": "Air Factory HQ",
-      "LifeBarSize": 4.5,
-      "StrategicIconName": "icon_factoryhq2_air",
       "General": {
         "CommandCaps": {
           "RULEUCC_RetaliateToggle": true,
@@ -76782,33 +77081,95 @@
         "SelectionPriority": 5,
         "Classification": "RULEUC_Factory"
       },
+      "LifeBarSize": 4.5,
+      "StrategicIconName": "icon_factoryhq2_air",
       "LifeBarOffset": 2,
-      "SelectionSizeX": 2.85,
-      "Economy": {
-        "StorageMass": 160,
-        "RebuildBonusIds": [
-          "uab0202"
-        ],
-        "DifferentialUpgradeCostCalculation": true,
-        "BuildableCategory": [
-          "BUILTBYTIER2FACTORY AEON MOBILE CONSTRUCTION",
-          "BUILTBYTIER2FACTORY AEON STRUCTURE AIR",
-          "BUILTBYTIER2FACTORY AEON MOBILE AIR",
-          "TRANSPORTBUILTBYTIER2FACTORY AEON MOBILE AIR"
-        ],
-        "BuildCostEnergy": 18000,
-        "BuildTime": 2300,
-        "BuildRate": 40,
-        "BuildCostMass": 920,
-        "StorageEnergy": 0
+      "AI": {
+        "TargetBones": [
+          "Attachpoint",
+          "Right_Slider",
+          "Front_Slider",
+          "Left_Arm_Slider",
+          "Left_Arm_Slider01"
+        ]
       },
+      "SelectionSizeX": 2.85,
+      "SelectionThickness": 0.35,
       "Footprint": {
         "SizeX": 5,
         "SizeZ": 5
       },
       "SizeZ": 4,
-      "Intel": {
-        "VisionRadius": 20
+      "Physics": {
+        "MeshExtentsX": 5.5,
+        "DragCoefficient": 0.2,
+        "MaxGroundVariation": 1.1,
+        "SkirtOffsetZ": -1.5,
+        "SkirtOffsetX": -1.5,
+        "FlattenSkirt": true,
+        "RaisedPlatforms": [
+          -1.6,
+          -1.2,
+          0.65,
+          1.6,
+          -1.2,
+          0.65,
+          -1.6,
+          1.5,
+          0.65,
+          1.6,
+          1.5,
+          0.65,
+          -2.2,
+          -1.2,
+          0,
+          -1.6,
+          -1.2,
+          0.65,
+          -2.2,
+          1.5,
+          0,
+          -1.6,
+          1.5,
+          0.65,
+          1.6,
+          -1.2,
+          0.65,
+          2.2,
+          -1.2,
+          0,
+          1.6,
+          1.5,
+          0.65,
+          2.2,
+          1.5,
+          0
+        ],
+        "MeshExtentsY": 3,
+        "MotionType": "RULEUMT_None",
+        "RollOffPoints": [
+          {
+            "UnitSpin": 0,
+            "X": 0,
+            "Y": 0,
+            "Z": 3
+          },
+          {
+            "UnitSpin": 90,
+            "X": 3,
+            "Y": 0,
+            "Z": 0
+          },
+          {
+            "UnitSpin": -90,
+            "X": -3,
+            "Y": 0,
+            "Z": 0
+          }
+        ],
+        "SkirtSizeZ": 8,
+        "SkirtSizeX": 8,
+        "MeshExtentsZ": 5.5
       },
       "Defense": {
         "ArmorType": "Structure",
@@ -76865,7 +77226,9 @@
       "SelectionCenterOffsetX": 0.22,
       "SelectionCenterOffsetZ": -0.25,
       "SelectionSizeZ": 2.75,
-      "SelectionThickness": 0.35,
+      "Intel": {
+        "VisionRadius": 20
+      },
       "Display": {
         "Tarmacs": [
           {
@@ -76918,7 +77281,7 @@
         "BlinkingLights": [
           {
             "BLScale": 1,
-            "BLOffsetY": 2.75,
+            "BLOffsetY": 2.7,
             "BLOffsetX": 0,
             "BLBone": 0,
             "BLOffsetZ": -1.45
@@ -76926,13 +77289,102 @@
           {
             "BLScale": 1,
             "BLOffsetY": 2.4,
-            "BLOffsetX": -2.26,
+            "BLOffsetX": -2,
             "BLBone": 0,
-            "BLOffsetZ": -1.28
+            "BLOffsetZ": -1.1
           }
         ]
       },
       "StrategicIconSortPriority": 215,
+      "BuildIconSortPriority": 60,
+      "Economy": {
+        "StorageMass": 160,
+        "RebuildBonusIds": [
+          "uab0202"
+        ],
+        "DifferentialUpgradeCostCalculation": true,
+        "BuildableCategory": [
+          "BUILTBYTIER2FACTORY AEON MOBILE CONSTRUCTION",
+          "BUILTBYTIER2FACTORY AEON STRUCTURE AIR",
+          "BUILTBYTIER2FACTORY AEON MOBILE AIR",
+          "TRANSPORTBUILTBYTIER2FACTORY AEON MOBILE AIR"
+        ],
+        "BuildCostEnergy": 18000,
+        "BuildTime": 2300,
+        "BuildRate": 40,
+        "BuildCostMass": 920,
+        "StorageEnergy": 0
+      }
+    },
+    {
+      "Categories": [
+        "AEON",
+        "AIR",
+        "BUILTBYTIER1FACTORY",
+        "BUILTBYTIER2COMMANDER",
+        "BUILTBYTIER2ENGINEER",
+        "BUILTBYTIER3COMMANDER",
+        "BUILTBYTIER3ENGINEER",
+        "CONSTRUCTION",
+        "CONSTRUCTIONSORTDOWN",
+        "DRAGBUILD",
+        "FACTORY",
+        "PRODUCTSC1",
+        "RALLYPOINT",
+        "RECLAIMABLE",
+        "SELECTABLE",
+        "SHOWQUEUE",
+        "SIZE16",
+        "SORTCONSTRUCTION",
+        "STRUCTURE",
+        "SUPPORTFACTORY",
+        "TECH2",
+        "VISIBLETORECON",
+        null
+      ],
+      "Description": "Air Factory",
+      "General": {
+        "CommandCaps": {
+          "RULEUCC_RetaliateToggle": true,
+          "RULEUCC_Guard": true,
+          "RULEUCC_Move": true,
+          "RULEUCC_Pause": true,
+          "RULEUCC_Patrol": true,
+          "RULEUCC_Stop": true
+        },
+        "UpgradesFrom": "uab0102",
+        "ConstructionBar": true,
+        "UpgradesFromBase": "uab0102",
+        "UpgradesTo": "zab9602",
+        "BuildBones": {
+          "BuildEffectBones": [
+            "Turret_Muzzle_01",
+            "Turret_Muzzle_02"
+          ]
+        },
+        "FactionName": "Aeon",
+        "Icon": "air",
+        "SelectionPriority": 5,
+        "Classification": "RULEUC_Factory"
+      },
+      "AI": {
+        "TargetBones": [
+          "Attachpoint",
+          "Right_Slider",
+          "Left_Arm_Slider",
+          "Left_Arm_Slider01"
+        ]
+      },
+      "BuildIconSortPriority": 61,
+      "LifeBarOffset": 2,
+      "LifeBarSize": 4.5,
+      "SelectionSizeX": 2.85,
+      "SelectionThickness": 0.35,
+      "Footprint": {
+        "SizeX": 5,
+        "SizeZ": 5
+      },
+      "SizeZ": 4,
       "Physics": {
         "MeshExtentsX": 5.5,
         "DragCoefficient": 0.2,
@@ -77003,89 +77455,6 @@
         "SkirtSizeZ": 8,
         "SkirtSizeX": 8,
         "MeshExtentsZ": 5.5
-      },
-      "BuildIconSortPriority": 60
-    },
-    {
-      "Categories": [
-        "AEON",
-        "AIR",
-        "BUILTBYTIER1FACTORY",
-        "BUILTBYTIER2COMMANDER",
-        "BUILTBYTIER2ENGINEER",
-        "BUILTBYTIER3COMMANDER",
-        "BUILTBYTIER3ENGINEER",
-        "CONSTRUCTION",
-        "CONSTRUCTIONSORTDOWN",
-        "DRAGBUILD",
-        "FACTORY",
-        "PRODUCTSC1",
-        "RALLYPOINT",
-        "RECLAIMABLE",
-        "SELECTABLE",
-        "SHOWQUEUE",
-        "SIZE16",
-        "SORTCONSTRUCTION",
-        "STRUCTURE",
-        "SUPPORTFACTORY",
-        "TECH2",
-        "VISIBLETORECON",
-        null
-      ],
-      "Description": "Air Factory",
-      "LifeBarSize": 4.5,
-      "StrategicIconName": "icon_factory2_air",
-      "General": {
-        "CommandCaps": {
-          "RULEUCC_RetaliateToggle": true,
-          "RULEUCC_Guard": true,
-          "RULEUCC_Move": true,
-          "RULEUCC_Pause": true,
-          "RULEUCC_Patrol": true,
-          "RULEUCC_Stop": true
-        },
-        "UpgradesFrom": "uab0102",
-        "ConstructionBar": true,
-        "UpgradesFromBase": "uab0102",
-        "UpgradesTo": "zab9602",
-        "BuildBones": {
-          "BuildEffectBones": [
-            "Turret_Muzzle_01",
-            "Turret_Muzzle_02"
-          ]
-        },
-        "FactionName": "Aeon",
-        "Icon": "air",
-        "SelectionPriority": 5,
-        "Classification": "RULEUC_Factory"
-      },
-      "LifeBarOffset": 2,
-      "SelectionSizeX": 2.85,
-      "Economy": {
-        "StorageMass": 160,
-        "RebuildBonusIds": [
-          "zab9502"
-        ],
-        "DifferentialUpgradeCostCalculation": true,
-        "BuildableCategory": [
-          "BUILTBYTIER2FACTORY AEON MOBILE CONSTRUCTION",
-          "BUILTBYTIER2SUPPORTFACTORY AEON STRUCTURE AIR",
-          "BUILTBYTIER2FACTORY AEON MOBILE AIR",
-          "TRANSPORTBUILTBYTIER2FACTORY AEON MOBILE AIR"
-        ],
-        "BuildCostEnergy": 8000,
-        "BuildTime": 1200,
-        "BuildRate": 40,
-        "BuildCostMass": 510,
-        "StorageEnergy": 0
-      },
-      "Footprint": {
-        "SizeX": 5,
-        "SizeZ": 5
-      },
-      "SizeZ": 4,
-      "Intel": {
-        "VisionRadius": 20
       },
       "Defense": {
         "ArmorType": "Structure",
@@ -77142,7 +77511,9 @@
       "SelectionCenterOffsetX": 0.22,
       "SelectionCenterOffsetZ": -0.25,
       "SelectionSizeZ": 2.75,
-      "SelectionThickness": 0.35,
+      "Intel": {
+        "VisionRadius": 20
+      },
       "Display": {
         "Tarmacs": [
           {
@@ -77195,7 +77566,7 @@
         "BlinkingLights": [
           {
             "BLScale": 1,
-            "BLOffsetY": 2.75,
+            "BLOffsetY": 2.7,
             "BLOffsetX": 0,
             "BLBone": 0,
             "BLOffsetZ": -1.45
@@ -77203,85 +77574,32 @@
           {
             "BLScale": 1,
             "BLOffsetY": 2.4,
-            "BLOffsetX": -2.26,
+            "BLOffsetX": -1.9,
             "BLBone": 0,
-            "BLOffsetZ": -1.28
+            "BLOffsetZ": -1
           }
         ]
       },
       "StrategicIconSortPriority": 215,
-      "Physics": {
-        "MeshExtentsX": 5.5,
-        "DragCoefficient": 0.2,
-        "MaxGroundVariation": 1.1,
-        "SkirtOffsetZ": -1.5,
-        "SkirtOffsetX": -1.5,
-        "FlattenSkirt": true,
-        "RaisedPlatforms": [
-          -1.6,
-          -1.2,
-          0.65,
-          1.6,
-          -1.2,
-          0.65,
-          -1.6,
-          1.5,
-          0.65,
-          1.6,
-          1.5,
-          0.65,
-          -2.2,
-          -1.2,
-          0,
-          -1.6,
-          -1.2,
-          0.65,
-          -2.2,
-          1.5,
-          0,
-          -1.6,
-          1.5,
-          0.65,
-          1.6,
-          -1.2,
-          0.65,
-          2.2,
-          -1.2,
-          0,
-          1.6,
-          1.5,
-          0.65,
-          2.2,
-          1.5,
-          0
+      "StrategicIconName": "icon_factory2_air",
+      "Economy": {
+        "StorageMass": 160,
+        "RebuildBonusIds": [
+          "zab9502"
         ],
-        "MeshExtentsY": 3,
-        "MotionType": "RULEUMT_None",
-        "RollOffPoints": [
-          {
-            "UnitSpin": 0,
-            "X": 0,
-            "Y": 0,
-            "Z": 3
-          },
-          {
-            "UnitSpin": 90,
-            "X": 3,
-            "Y": 0,
-            "Z": 0
-          },
-          {
-            "UnitSpin": -90,
-            "X": -3,
-            "Y": 0,
-            "Z": 0
-          }
+        "DifferentialUpgradeCostCalculation": true,
+        "BuildableCategory": [
+          "BUILTBYTIER2FACTORY AEON MOBILE CONSTRUCTION",
+          "BUILTBYTIER2SUPPORTFACTORY AEON STRUCTURE AIR",
+          "BUILTBYTIER2FACTORY AEON MOBILE AIR",
+          "TRANSPORTBUILTBYTIER2FACTORY AEON MOBILE AIR"
         ],
-        "SkirtSizeZ": 8,
-        "SkirtSizeX": 8,
-        "MeshExtentsZ": 5.5
-      },
-      "BuildIconSortPriority": 61
+        "BuildCostEnergy": 8000,
+        "BuildTime": 1200,
+        "BuildRate": 40,
+        "BuildCostMass": 510,
+        "StorageEnergy": 0
+      }
     },
     {
       "Categories": [
@@ -77307,8 +77625,6 @@
       ],
       "AverageDensity": 12800,
       "Description": "Naval Factory HQ",
-      "LifeBarSize": 4.5,
-      "StrategicIconName": "icon_factoryhq2_naval",
       "General": {
         "CommandCaps": {
           "RULEUCC_RetaliateToggle": true,
@@ -77333,7 +77649,10 @@
         "SelectionPriority": 5,
         "Classification": "RULEUC_Factory"
       },
+      "LifeBarSize": 4.5,
+      "StrategicIconName": "icon_factoryhq2_naval",
       "LifeBarOffset": 6.5,
+      "SelectionSizeX": 2.5,
       "CollisionOffsetZ": 1,
       "Economy": {
         "InitialRallyX": 0,
@@ -77357,7 +77676,7 @@
       "Footprint": {
         "MinWaterDepth": 1.5
       },
-      "SizeZ": 12,
+      "SizeZ": 13,
       "Intel": {
         "VisionRadius": 20
       },
@@ -77411,10 +77730,38 @@
         "Blueprint": "/props/DefaultWreckage/DefaultWreckage_prop.bp",
         "MassMult": 0.9
       },
-      "SelectionSizeX": 2.5,
+      "SizeX": 4,
       "SizeY": 3,
       "SelectionSizeZ": 7.5,
-      "SizeX": 4,
+      "Physics": {
+        "ComputeRollOffPoint": true,
+        "DragCoefficient": 0.2,
+        "SkirtOffsetZ": -1,
+        "SkirtSizeZ": 15,
+        "BuildOnLayerCaps": {
+          "LAYER_Water": true
+        },
+        "SkirtOffsetX": -7,
+        "MeshExtentsY": 2,
+        "MotionType": "RULEUMT_None",
+        "RollOffPoints": [
+          {
+            "UnitSpin": 180,
+            "X": -6,
+            "Y": 0,
+            "Z": -8
+          },
+          {
+            "UnitSpin": 0,
+            "X": -6,
+            "Y": 0,
+            "Z": 8
+          }
+        ],
+        "MeshExtentsX": 5,
+        "SkirtSizeX": 12,
+        "MeshExtentsZ": 10
+      },
       "SelectionThickness": 0.23,
       "CollisionOffsetY": -1,
       "Display": {
@@ -77467,46 +77814,25 @@
             "BLOffsetY": 4.6,
             "BLOffsetX": 0.45,
             "BLBone": 0,
-            "BLOffsetZ": 0.8
+            "BLOffsetZ": 0.4
           },
           {
             "BLScale": 1,
             "BLOffsetY": 3.3,
-            "BLOffsetX": 3.5,
+            "BLOffsetX": 0.45,
             "BLBone": 0,
-            "BLOffsetZ": -0.25
+            "BLOffsetZ": 3.45
           }
         ]
       },
       "StrategicIconSortPriority": 215,
-      "Physics": {
-        "ComputeRollOffPoint": true,
-        "DragCoefficient": 0.2,
-        "SkirtOffsetZ": -2,
-        "SkirtSizeZ": 14,
-        "BuildOnLayerCaps": {
-          "LAYER_Water": true
-        },
-        "SkirtOffsetX": -6,
-        "MeshExtentsY": 2,
-        "MotionType": "RULEUMT_None",
-        "RollOffPoints": [
-          {
-            "UnitSpin": 180,
-            "X": -6,
-            "Y": 0,
-            "Z": -8
-          },
-          {
-            "UnitSpin": 0,
-            "X": -6,
-            "Y": 0,
-            "Z": 8
-          }
-        ],
-        "MeshExtentsX": 5,
-        "SkirtSizeX": 12,
-        "MeshExtentsZ": 10
+      "AI": {
+        "TargetBones": [
+          "Slider_02",
+          "Slider_05",
+          "B06",
+          "B05"
+        ]
       },
       "BuildIconSortPriority": 70
     },
@@ -77761,8 +78087,6 @@
         null
       ],
       "Description": "Naval Factory",
-      "LifeBarSize": 4.5,
-      "BuildIconSortPriority": 71,
       "General": {
         "CommandCaps": {
           "RULEUCC_RetaliateToggle": true,
@@ -77787,7 +78111,17 @@
         "SelectionPriority": 5,
         "Classification": "RULEUC_Factory"
       },
+      "AI": {
+        "TargetBones": [
+          "Slider_02",
+          "Slider_05",
+          "B06",
+          "B05"
+        ]
+      },
+      "StrategicIconName": "icon_factory2_naval",
       "LifeBarOffset": 6.5,
+      "SelectionSizeX": 2.5,
       "CollisionOffsetZ": 1,
       "Economy": {
         "InitialRallyX": 0,
@@ -77811,7 +78145,7 @@
       "Footprint": {
         "MinWaterDepth": 1.5
       },
-      "SizeZ": 12,
+      "SizeZ": 13,
       "Intel": {
         "VisionRadius": 20
       },
@@ -77865,10 +78199,38 @@
         "Blueprint": "/props/DefaultWreckage/DefaultWreckage_prop.bp",
         "MassMult": 0.9
       },
-      "SelectionSizeX": 2.5,
+      "SizeX": 4,
       "SizeY": 3,
       "SelectionSizeZ": 7.5,
-      "SizeX": 4,
+      "Physics": {
+        "ComputeRollOffPoint": true,
+        "DragCoefficient": 0.2,
+        "SkirtOffsetZ": -1,
+        "SkirtSizeZ": 15,
+        "BuildOnLayerCaps": {
+          "LAYER_Water": true
+        },
+        "SkirtOffsetX": -7,
+        "MeshExtentsY": 2,
+        "MotionType": "RULEUMT_None",
+        "RollOffPoints": [
+          {
+            "UnitSpin": 180,
+            "X": -6,
+            "Y": 0,
+            "Z": -8
+          },
+          {
+            "UnitSpin": 0,
+            "X": -6,
+            "Y": 0,
+            "Z": 8
+          }
+        ],
+        "MeshExtentsX": 5,
+        "SkirtSizeX": 12,
+        "MeshExtentsZ": 10
+      },
       "SelectionThickness": 0.23,
       "CollisionOffsetY": -1,
       "Display": {
@@ -77921,48 +78283,20 @@
             "BLOffsetY": 4.6,
             "BLOffsetX": 0.45,
             "BLBone": 0,
-            "BLOffsetZ": 0.8
+            "BLOffsetZ": 0.4
           },
           {
             "BLScale": 1,
             "BLOffsetY": 3.3,
-            "BLOffsetX": 3.5,
+            "BLOffsetX": 0.45,
             "BLBone": 0,
-            "BLOffsetZ": -0.25
+            "BLOffsetZ": 3.45
           }
         ]
       },
       "StrategicIconSortPriority": 215,
-      "Physics": {
-        "ComputeRollOffPoint": true,
-        "DragCoefficient": 0.2,
-        "SkirtOffsetZ": -2,
-        "SkirtSizeZ": 14,
-        "BuildOnLayerCaps": {
-          "LAYER_Water": true
-        },
-        "SkirtOffsetX": -6,
-        "MeshExtentsY": 2,
-        "MotionType": "RULEUMT_None",
-        "RollOffPoints": [
-          {
-            "UnitSpin": 180,
-            "X": -6,
-            "Y": 0,
-            "Z": -8
-          },
-          {
-            "UnitSpin": 0,
-            "X": -6,
-            "Y": 0,
-            "Z": 8
-          }
-        ],
-        "MeshExtentsX": 5,
-        "SkirtSizeX": 12,
-        "MeshExtentsZ": 10
-      },
-      "StrategicIconName": "icon_factory2_naval"
+      "LifeBarSize": 4.5,
+      "BuildIconSortPriority": 71
     },
     {
       "Categories": [
@@ -82202,9 +82536,9 @@
       "AverageDensity": 48000,
       "Description": "Battleship",
       "Economy": {
-        "BuildTime": 28800,
-        "BuildCostEnergy": 54000,
-        "BuildCostMass": 9000
+        "BuildTime": 30300,
+        "BuildCostEnergy": 58000,
+        "BuildCostMass": 9500
       },
       "LifeBarSize": 4,
       "BuildIconSortPriority": 18,
@@ -82233,7 +82567,7 @@
       "Physics": {
         "TurnRate": 40,
         "MaxSteerForce": 5,
-        "MeshExtentsX": 3.25,
+        "MeshExtentsX": 3,
         "DragCoefficient": 0.2,
         "MaxAcceleration": 3.7,
         "MaxBrake": 3.7,
@@ -82244,7 +82578,7 @@
         "MaxSpeedReverse": 3.7,
         "CatchUpAcc": 10,
         "MotionType": "RULEUMT_Water",
-        "MeshExtentsZ": 15
+        "MeshExtentsZ": 8
       },
       "Defense": {
         "ArmorType": "Normal",
@@ -82385,7 +82719,7 @@
         {
           "DamageRadius": 2,
           "FiringRandomness": 0.2,
-          "RateOfFire": 0.16949152542373,
+          "RateOfFire": 0.16666666666667,
           "HeadingArcCenter": 0,
           "TurretYaw": 0,
           "RackBones": [
@@ -83134,7 +83468,7 @@
       "Physics": {
         "TurnRate": 30,
         "MaxSteerForce": 5,
-        "MeshExtentsX": 3.25,
+        "MeshExtentsX": 2.5,
         "DragCoefficient": 0.2,
         "MaxAcceleration": 3,
         "MaxBrake": 3,
@@ -83145,7 +83479,7 @@
         "MaxSpeedReverse": 3,
         "CatchUpAcc": 10,
         "MotionType": "RULEUMT_Water",
-        "MeshExtentsZ": 15
+        "MeshExtentsZ": 7.5
       },
       "Defense": {
         "ArmorType": "Normal",
@@ -84400,18 +84734,18 @@
       "Physics": {
         "TurnRate": 30,
         "MaxSteerForce": 5,
-        "MeshExtentsX": 6.5,
+        "MeshExtentsX": 3.7,
         "DragCoefficient": 0.2,
         "MaxAcceleration": 3,
         "MaxBrake": 2.5,
         "MaxSpeed": 3,
-        "MeshExtentsY": 4.5,
+        "MeshExtentsY": 5,
         "TurnRadius": 25,
         "BackUpDistance": 10,
         "MaxSpeedReverse": 3,
         "CatchUpAcc": 10,
         "MotionType": "RULEUMT_Water",
-        "MeshExtentsZ": 17
+        "MeshExtentsZ": 10
       },
       "CollisionOffsetY": -0.6,
       "Economy": {
@@ -84560,6 +84894,7 @@
       "BuildIconSortPriority": 30,
       "Weapon": [
         {
+          "DamageRadius": 1,
           "Label": "AntiAirMissiles01",
           "RateOfFire": 1,
           "TurretYaw": 0,
@@ -84947,7 +85282,7 @@
               "RackBone": "Torpedo_Muzzle"
             }
           ],
-          "Damage": 1000,
+          "Damage": 834,
           "ProjectileLifetime": 30,
           "DamageType": "Normal",
           "Audio": {
@@ -84969,7 +85304,7 @@
           "MuzzleVelocity": 0,
           "RackFireTogether": false,
           "RackSalvoChargeTime": 0,
-          "MuzzleSalvoSize": 5,
+          "MuzzleSalvoSize": 6,
           "FireTargetLayerCapsTable": {
             "Air": "Seabed|Sub|Water",
             "Land": "Seabed|Sub|Water"
@@ -84977,7 +85312,7 @@
           "BallisticArc": "RULEUBA_None",
           "HeadingArcRange": 30,
           "Label": "Bomb",
-          "MuzzleSalvoDelay": 0.2,
+          "MuzzleSalvoDelay": 0.1,
           "ProjectilesPerOnFire": 4,
           "MinRadius": 4,
           "RackReloadTimeout": 10,
@@ -85793,30 +86128,66 @@
         "SkirtOffsetX": -1.5,
         "FlattenSkirt": true,
         "RaisedPlatforms": [
-          -0.8,
-          -0.5,
-          0.15,
-          0.8,
-          -0.5,
-          0.15,
-          -0.8,
+          -1.1,
+          -1.6,
+          0.5,
           1.1,
-          0.15,
-          0.8,
+          -1.6,
+          0.5,
+          -1.1,
+          1.9,
+          0.5,
           1.1,
-          0.15,
-          -2.25,
-          -2.25,
-          0.05,
-          2.25,
-          -2.25,
-          0.05,
-          -2.25,
-          2.25,
-          0.05,
-          2.25,
-          2.25,
-          0.05
+          1.9,
+          0.5,
+          -1.7,
+          -1.6,
+          0.45,
+          -1.1,
+          -1.6,
+          0.45,
+          -1.7,
+          1.9,
+          0.45,
+          -1.1,
+          1.9,
+          0.45,
+          1.1,
+          -1.6,
+          0.45,
+          1.7,
+          -1.6,
+          0.45,
+          1.1,
+          1.9,
+          0.45,
+          1.7,
+          1.9,
+          0.45,
+          -2.5,
+          -1.6,
+          0,
+          -1.7,
+          -1.6,
+          0.45,
+          -2.5,
+          1.9,
+          0,
+          -1.7,
+          1.9,
+          0.45,
+          1.7,
+          -1.6,
+          0.45,
+          2.5,
+          -1.6,
+          0,
+          1.7,
+          1.9,
+          0.45,
+          2.5,
+          1.9,
+          0
         ],
         "MeshExtentsY": 1.5,
         "MotionType": "RULEUMT_None",
@@ -85883,28 +86254,28 @@
         "BlinkingLights": [
           {
             "BLScale": 1,
-            "BLOffsetY": 0.15,
+            "BLOffsetY": 0.35,
             "BLOffsetX": -1.75,
             "BLBone": 0,
             "BLOffsetZ": -1.68
           },
           {
             "BLScale": 1,
-            "BLOffsetY": 0.15,
+            "BLOffsetY": 0.35,
             "BLOffsetX": 1.74,
             "BLBone": 0,
             "BLOffsetZ": -1.68
           },
           {
-            "BLScale": 1,
-            "BLOffsetY": 0.15,
+            "BLScale": 1.4,
+            "BLOffsetY": 1.6,
             "BLOffsetX": -1.75,
             "BLBone": 0,
             "BLOffsetZ": 1.77
           },
           {
-            "BLScale": 1,
-            "BLOffsetY": 0.15,
+            "BLScale": 1.4,
+            "BLOffsetY": 1.6,
             "BLOffsetX": 1.74,
             "BLBone": 0,
             "BLOffsetZ": 1.77
@@ -85914,10 +86285,11 @@
       "StrategicIconSortPriority": 210,
       "AI": {
         "TargetBones": [
-          "Foot_Right",
-          "Foot_Left",
-          "Pad_Left",
-          "Pad_Right"
+          "Attachpoint",
+          "Right_Hardpoint01",
+          "Right_Hardpoint02",
+          "Left_Hardpoint01",
+          "Left_Hardpoint02"
         ]
       },
       "BuildIconSortPriority": 40
@@ -86216,30 +86588,66 @@
         "SkirtOffsetX": -1.5,
         "FlattenSkirt": true,
         "RaisedPlatforms": [
-          -0.8,
-          -0.5,
-          0.15,
-          0.8,
-          -0.5,
-          0.15,
-          -0.8,
+          -1.1,
+          -1.6,
+          0.5,
           1.1,
-          0.15,
-          0.8,
+          -1.6,
+          0.5,
+          -1.1,
+          1.9,
+          0.5,
           1.1,
-          0.15,
-          -2.25,
-          -2.25,
-          0.05,
-          2.25,
-          -2.25,
-          0.05,
-          -2.25,
-          2.25,
-          0.05,
-          2.25,
-          2.25,
-          0.05
+          1.9,
+          0.5,
+          -1.7,
+          -1.6,
+          0.45,
+          -1.1,
+          -1.6,
+          0.45,
+          -1.7,
+          1.9,
+          0.45,
+          -1.1,
+          1.9,
+          0.45,
+          1.1,
+          -1.6,
+          0.45,
+          1.7,
+          -1.6,
+          0.45,
+          1.1,
+          1.9,
+          0.45,
+          1.7,
+          1.9,
+          0.45,
+          -2.5,
+          -1.6,
+          0,
+          -1.7,
+          -1.6,
+          0.45,
+          -2.5,
+          1.9,
+          0,
+          -1.7,
+          1.9,
+          0.45,
+          1.7,
+          -1.6,
+          0.45,
+          2.5,
+          -1.6,
+          0,
+          1.7,
+          1.9,
+          0.45,
+          2.5,
+          1.9,
+          0
         ],
         "MeshExtentsY": 1.5,
         "MotionType": "RULEUMT_None",
@@ -86305,29 +86713,29 @@
         },
         "BlinkingLights": [
           {
-            "BLScale": 1,
-            "BLOffsetY": 0.15,
-            "BLOffsetX": -1.75,
+            "BLScale": 1.4,
+            "BLOffsetY": 0.35,
+            "BLOffsetX": -1.76,
             "BLBone": 0,
             "BLOffsetZ": -1.68
           },
           {
-            "BLScale": 1,
-            "BLOffsetY": 0.15,
+            "BLScale": 1.4,
+            "BLOffsetY": 0.35,
             "BLOffsetX": 1.74,
             "BLBone": 0,
             "BLOffsetZ": -1.68
           },
           {
-            "BLScale": 1,
-            "BLOffsetY": 0.15,
+            "BLScale": 1.4,
+            "BLOffsetY": 0.35,
             "BLOffsetX": -1.75,
             "BLBone": 0,
             "BLOffsetZ": 1.77
           },
           {
-            "BLScale": 1,
-            "BLOffsetY": 0.15,
+            "BLScale": 1.4,
+            "BLOffsetY": 0.35,
             "BLOffsetX": 1.74,
             "BLBone": 0,
             "BLOffsetZ": 1.77
@@ -86337,8 +86745,11 @@
       "StrategicIconSortPriority": 210,
       "AI": {
         "TargetBones": [
-          "B01",
-          "B02"
+          "Attachpoint",
+          "Right_Hardpoint01",
+          "Right_Hardpoint02",
+          "Left_Hardpoint01",
+          "Left_Hardpoint02"
         ]
       },
       "StrategicIconName": "icon_factory3_land"
@@ -86367,7 +86778,16 @@
       ],
       "AverageDensity": 12800,
       "Description": "Air Factory HQ",
-      "LifeBarSize": 4.5,
+      "AI": {
+        "TargetBones": [
+          "Attachpoint",
+          "Right_Slider",
+          "Front_Slider",
+          "Left_Arm_Slider",
+          "Left_Arm_Slider01",
+          "Left_Slider"
+        ]
+      },
       "StrategicIconName": "icon_factoryhq3_air",
       "General": {
         "UpgradesFromBase": "uab0102",
@@ -86394,6 +86814,7 @@
         "Classification": "RULEUC_Factory"
       },
       "LifeBarOffset": 2.1,
+      "SelectionSizeX": 2.85,
       "Economy": {
         "StorageMass": 320,
         "RebuildBonusIds": [
@@ -86470,82 +86891,9 @@
         "Blueprint": "/props/DefaultWreckage/DefaultWreckage_prop.bp",
         "MassMult": 0.9
       },
-      "SelectionSizeX": 2.85,
+      "SizeX": 4,
       "SizeY": 0.7,
       "SelectionCenterOffsetZ": -0.25,
-      "SizeX": 4,
-      "SelectionSizeZ": 2.75,
-      "SelectionThickness": 0.35,
-      "Display": {
-        "UniformScale": 0.35,
-        "BuildAttachBone": "Attachpoint",
-        "BlinkingLightsFx": {
-          "Yellow": "/effects/emitters/light_yellow_02_emit.bp",
-          "Green": "/effects/emitters/light_green_03_emit.bp",
-          "Red": "/effects/emitters/light_red_03_emit.bp"
-        },
-        "Tarmacs": [
-          {
-            "Normal": "Tarmacs/Tar12x_aeon_01_normals",
-            "FadeOut": 150,
-            "Albedo": "Tarmacs/Tar12x_aeon_01_albedo",
-            "DeathLifetime": 300,
-            "RemoveWhenDead": false,
-            "Length": 12.8,
-            "Orientations": [
-              0,
-              90,
-              180,
-              270
-            ],
-            "Width": 12.8
-          }
-        ],
-        "Mesh": {
-          "IconFadeInZoom": 130,
-          "LODs": [
-            {
-              "NormalsName": "/units/uab0102/UAB0102_NormalsTS.dds",
-              "LODCutoff": 200,
-              "Scrolling": true,
-              "ShaderName": "Aeon",
-              "SpecularName": "/units/uab0102/UAB0102_SpecTeam.dds",
-              "AlbedoName": "/units/uab0102/UAB0102_Albedo.dds"
-            },
-            {
-              "NormalsName": "/units/uab0102/uab0102_lod1_NormalsTS.dds",
-              "LODCutoff": 500,
-              "SpecularName": "/units/uab0102/uab0102_lod1_SpecTeam.dds",
-              "ShaderName": "Aeon",
-              "AlbedoName": "/units/uab0102/uab0102_lod1_Albedo.dds"
-            }
-          ]
-        },
-        "BlinkingLights": [
-          {
-            "BLScale": 1,
-            "BLOffsetY": 4,
-            "BLOffsetX": 0,
-            "BLBone": 0,
-            "BLOffsetZ": -1.4
-          },
-          {
-            "BLScale": 1,
-            "BLOffsetY": 2.4,
-            "BLOffsetX": -2.05,
-            "BLBone": 0,
-            "BLOffsetZ": -1.12
-          },
-          {
-            "BLScale": 1,
-            "BLOffsetY": 2.4,
-            "BLOffsetX": 2.05,
-            "BLBone": 0,
-            "BLOffsetZ": -1.12
-          }
-        ]
-      },
-      "StrategicIconSortPriority": 210,
       "Physics": {
         "MeshExtentsX": 6,
         "DragCoefficient": 0.2,
@@ -86617,6 +86965,79 @@
         "SkirtSizeX": 8,
         "MeshExtentsZ": 6
       },
+      "SelectionSizeZ": 2.75,
+      "SelectionThickness": 0.35,
+      "Display": {
+        "UniformScale": 0.35,
+        "BuildAttachBone": "Attachpoint",
+        "BlinkingLightsFx": {
+          "Yellow": "/effects/emitters/light_yellow_02_emit.bp",
+          "Green": "/effects/emitters/light_green_03_emit.bp",
+          "Red": "/effects/emitters/light_red_03_emit.bp"
+        },
+        "Tarmacs": [
+          {
+            "Normal": "Tarmacs/Tar12x_aeon_01_normals",
+            "FadeOut": 150,
+            "Albedo": "Tarmacs/Tar12x_aeon_01_albedo",
+            "DeathLifetime": 300,
+            "RemoveWhenDead": false,
+            "Length": 12.8,
+            "Orientations": [
+              0,
+              90,
+              180,
+              270
+            ],
+            "Width": 12.8
+          }
+        ],
+        "Mesh": {
+          "IconFadeInZoom": 130,
+          "LODs": [
+            {
+              "NormalsName": "/units/uab0102/UAB0102_NormalsTS.dds",
+              "LODCutoff": 200,
+              "Scrolling": true,
+              "ShaderName": "Aeon",
+              "SpecularName": "/units/uab0102/UAB0102_SpecTeam.dds",
+              "AlbedoName": "/units/uab0102/UAB0102_Albedo.dds"
+            },
+            {
+              "NormalsName": "/units/uab0102/uab0102_lod1_NormalsTS.dds",
+              "LODCutoff": 500,
+              "SpecularName": "/units/uab0102/uab0102_lod1_SpecTeam.dds",
+              "ShaderName": "Aeon",
+              "AlbedoName": "/units/uab0102/uab0102_lod1_Albedo.dds"
+            }
+          ]
+        },
+        "BlinkingLights": [
+          {
+            "BLScale": 1,
+            "BLOffsetY": 3.8,
+            "BLOffsetX": 0,
+            "BLBone": 0,
+            "BLOffsetZ": -1.4
+          },
+          {
+            "BLScale": 1,
+            "BLOffsetY": 2.4,
+            "BLOffsetX": -2.05,
+            "BLBone": 0,
+            "BLOffsetZ": -1.12
+          },
+          {
+            "BLScale": 1,
+            "BLOffsetY": 2.4,
+            "BLOffsetX": 2.05,
+            "BLBone": 0,
+            "BLOffsetZ": -1.12
+          }
+        ]
+      },
+      "StrategicIconSortPriority": 210,
+      "LifeBarSize": 4.5,
       "BuildIconSortPriority": 50
     },
     {
@@ -86829,7 +87250,7 @@
           "DummyWeapon": true,
           "Label": "DeathWeapon",
           "WeaponCategory": "Death",
-          "DamageRadius": 14,
+          "DamageRadius": 10,
           "DamageType": "DeathExplosion",
           "DisplayName": "Death Weapon"
         }
@@ -87269,8 +87690,16 @@
         null
       ],
       "Description": "Air Factory",
-      "LifeBarSize": 4.5,
-      "BuildIconSortPriority": 51,
+      "AI": {
+        "TargetBones": [
+          "Attachpoint",
+          "Right_Slider",
+          "Left_Arm_Slider",
+          "Left_Arm_Slider01",
+          "Left_Slider"
+        ]
+      },
+      "StrategicIconName": "icon_factory3_air",
       "General": {
         "UpgradesFromBase": "uab0102",
         "UpgradesFrom": "zab9502",
@@ -87296,6 +87725,7 @@
         "Classification": "RULEUC_Factory"
       },
       "LifeBarOffset": 2.1,
+      "SelectionSizeX": 2.85,
       "Economy": {
         "StorageMass": 320,
         "RebuildBonusIds": [
@@ -87372,82 +87802,9 @@
         "Blueprint": "/props/DefaultWreckage/DefaultWreckage_prop.bp",
         "MassMult": 0.9
       },
-      "SelectionSizeX": 2.85,
+      "SizeX": 4,
       "SizeY": 0.7,
       "SelectionCenterOffsetZ": -0.25,
-      "SizeX": 4,
-      "SelectionSizeZ": 2.75,
-      "SelectionThickness": 0.35,
-      "Display": {
-        "UniformScale": 0.35,
-        "BuildAttachBone": "Attachpoint",
-        "BlinkingLightsFx": {
-          "Yellow": "/effects/emitters/light_yellow_02_emit.bp",
-          "Green": "/effects/emitters/light_green_03_emit.bp",
-          "Red": "/effects/emitters/light_red_03_emit.bp"
-        },
-        "Tarmacs": [
-          {
-            "Normal": "Tarmacs/Tar12x_aeon_01_normals",
-            "FadeOut": 150,
-            "Albedo": "Tarmacs/Tar12x_aeon_01_albedo",
-            "DeathLifetime": 300,
-            "RemoveWhenDead": false,
-            "Length": 12.8,
-            "Orientations": [
-              0,
-              90,
-              180,
-              270
-            ],
-            "Width": 12.8
-          }
-        ],
-        "Mesh": {
-          "IconFadeInZoom": 130,
-          "LODs": [
-            {
-              "NormalsName": "/units/uab0102/UAB0102_NormalsTS.dds",
-              "LODCutoff": 200,
-              "Scrolling": true,
-              "ShaderName": "Aeon",
-              "SpecularName": "/units/uab0102/UAB0102_SpecTeam.dds",
-              "AlbedoName": "/units/uab0102/UAB0102_Albedo.dds"
-            },
-            {
-              "NormalsName": "/units/uab0102/UAB0102_lod1_NormalsTS.dds",
-              "LODCutoff": 500,
-              "SpecularName": "/units/uab0102/UAB0102_lod1_SpecTeam.dds",
-              "ShaderName": "Aeon",
-              "AlbedoName": "/units/uab0102/UAB0102_lod1_Albedo.dds"
-            }
-          ]
-        },
-        "BlinkingLights": [
-          {
-            "BLScale": 1,
-            "BLOffsetY": 4,
-            "BLOffsetX": 0,
-            "BLBone": 0,
-            "BLOffsetZ": -1.4
-          },
-          {
-            "BLScale": 1,
-            "BLOffsetY": 2.4,
-            "BLOffsetX": -2.05,
-            "BLBone": 0,
-            "BLOffsetZ": -1.12
-          },
-          {
-            "BLScale": 1,
-            "BLOffsetY": 2.4,
-            "BLOffsetX": 2.05,
-            "BLBone": 0,
-            "BLOffsetZ": -1.12
-          }
-        ]
-      },
-      "StrategicIconSortPriority": 210,
       "Physics": {
         "MeshExtentsX": 6,
         "DragCoefficient": 0.2,
@@ -87519,7 +87876,80 @@
         "SkirtSizeX": 8,
         "MeshExtentsZ": 6
       },
-      "StrategicIconName": "icon_factory3_air"
+      "SelectionSizeZ": 2.75,
+      "SelectionThickness": 0.35,
+      "Display": {
+        "UniformScale": 0.35,
+        "BuildAttachBone": "Attachpoint",
+        "BlinkingLightsFx": {
+          "Yellow": "/effects/emitters/light_yellow_02_emit.bp",
+          "Green": "/effects/emitters/light_green_03_emit.bp",
+          "Red": "/effects/emitters/light_red_03_emit.bp"
+        },
+        "Tarmacs": [
+          {
+            "Normal": "Tarmacs/Tar12x_aeon_01_normals",
+            "FadeOut": 150,
+            "Albedo": "Tarmacs/Tar12x_aeon_01_albedo",
+            "DeathLifetime": 300,
+            "RemoveWhenDead": false,
+            "Length": 12.8,
+            "Orientations": [
+              0,
+              90,
+              180,
+              270
+            ],
+            "Width": 12.8
+          }
+        ],
+        "Mesh": {
+          "IconFadeInZoom": 130,
+          "LODs": [
+            {
+              "NormalsName": "/units/uab0102/UAB0102_NormalsTS.dds",
+              "LODCutoff": 200,
+              "Scrolling": true,
+              "ShaderName": "Aeon",
+              "SpecularName": "/units/uab0102/UAB0102_SpecTeam.dds",
+              "AlbedoName": "/units/uab0102/UAB0102_Albedo.dds"
+            },
+            {
+              "NormalsName": "/units/uab0102/UAB0102_lod1_NormalsTS.dds",
+              "LODCutoff": 500,
+              "SpecularName": "/units/uab0102/UAB0102_lod1_SpecTeam.dds",
+              "ShaderName": "Aeon",
+              "AlbedoName": "/units/uab0102/UAB0102_lod1_Albedo.dds"
+            }
+          ]
+        },
+        "BlinkingLights": [
+          {
+            "BLScale": 1,
+            "BLOffsetY": 3.5,
+            "BLOffsetX": 0,
+            "BLBone": 0,
+            "BLOffsetZ": -1.45
+          },
+          {
+            "BLScale": 1,
+            "BLOffsetY": 2.4,
+            "BLOffsetX": -1.9,
+            "BLBone": 0,
+            "BLOffsetZ": -1
+          },
+          {
+            "BLScale": 1,
+            "BLOffsetY": 2.4,
+            "BLOffsetX": 1.9,
+            "BLBone": 0,
+            "BLOffsetZ": -1
+          }
+        ]
+      },
+      "StrategicIconSortPriority": 210,
+      "LifeBarSize": 4.5,
+      "BuildIconSortPriority": 51
     },
     {
       "Categories": [
@@ -87545,8 +87975,6 @@
       ],
       "AverageDensity": 21000,
       "Description": "Naval Factory HQ",
-      "LifeBarSize": 4.75,
-      "StrategicIconName": "icon_factoryhq3_naval",
       "General": {
         "UpgradesFromBase": "uab0103",
         "UpgradesFrom": "uab0203",
@@ -87571,7 +87999,11 @@
         },
         "Classification": "RULEUC_Factory"
       },
+      "LifeBarSize": 4.75,
+      "StrategicIconName": "icon_factoryhq3_naval",
       "LifeBarOffset": 6.7,
+      "SelectionSizeX": 2.5,
+      "CollisionOffsetZ": 0.5,
       "Economy": {
         "InitialRallyX": 0,
         "StorageMass": 320,
@@ -87594,7 +88026,7 @@
       "Footprint": {
         "MinWaterDepth": 1.5
       },
-      "SizeZ": 14.5,
+      "SizeZ": 13,
       "Intel": {
         "VisionRadius": 20
       },
@@ -87648,10 +88080,38 @@
         "Blueprint": "/props/DefaultWreckage/DefaultWreckage_prop.bp",
         "MassMult": 0.9
       },
-      "SelectionSizeX": 2.5,
+      "SizeX": 4,
       "SizeY": 3,
       "SelectionSizeZ": 8.8,
-      "SizeX": 4,
+      "Physics": {
+        "ComputeRollOffPoint": true,
+        "DragCoefficient": 0.2,
+        "SkirtOffsetZ": -1,
+        "SkirtSizeZ": 15,
+        "BuildOnLayerCaps": {
+          "LAYER_Water": true
+        },
+        "SkirtOffsetX": -7,
+        "MeshExtentsY": 2,
+        "MotionType": "RULEUMT_None",
+        "RollOffPoints": [
+          {
+            "UnitSpin": 180,
+            "X": -6,
+            "Y": 0,
+            "Z": -8
+          },
+          {
+            "UnitSpin": 0,
+            "X": -6,
+            "Y": 0,
+            "Z": 8
+          }
+        ],
+        "MeshExtentsX": 5,
+        "SkirtSizeX": 12,
+        "MeshExtentsZ": 14
+      },
       "SelectionThickness": 0.2,
       "CollisionOffsetY": -1,
       "Display": {
@@ -87670,7 +88130,7 @@
                   "UAB0303"
                 ],
                 "Type": "SeaIdle01",
-                "Scale": 3
+                "Scale": 3.8
               }
             ]
           }
@@ -87700,53 +88160,32 @@
             "BLOffsetY": 5.7,
             "BLOffsetX": 0.45,
             "BLBone": 0,
-            "BLOffsetZ": 0.8
+            "BLOffsetZ": 0.4
           },
           {
             "BLScale": 1,
             "BLOffsetY": 3.3,
-            "BLOffsetX": 3.5,
+            "BLOffsetX": 0.45,
             "BLBone": 0,
-            "BLOffsetZ": -0.25
+            "BLOffsetZ": 3.45
           },
           {
             "BLScale": 1,
             "BLOffsetY": 3.3,
-            "BLOffsetX": -4,
+            "BLOffsetX": 0.45,
             "BLBone": 0,
-            "BLOffsetZ": -0.25
+            "BLOffsetZ": -3.95
           }
         ]
       },
       "StrategicIconSortPriority": 210,
-      "Physics": {
-        "ComputeRollOffPoint": true,
-        "DragCoefficient": 0.2,
-        "SkirtOffsetZ": -2,
-        "SkirtSizeZ": 14,
-        "BuildOnLayerCaps": {
-          "LAYER_Water": true
-        },
-        "SkirtOffsetX": -6,
-        "MeshExtentsY": 2,
-        "MotionType": "RULEUMT_None",
-        "RollOffPoints": [
-          {
-            "UnitSpin": 180,
-            "X": -6,
-            "Y": 0,
-            "Z": -8
-          },
-          {
-            "UnitSpin": 0,
-            "X": -6,
-            "Y": 0,
-            "Z": 8
-          }
-        ],
-        "MeshExtentsX": 5,
-        "SkirtSizeX": 12,
-        "MeshExtentsZ": 14
+      "AI": {
+        "TargetBones": [
+          "Slider_02",
+          "Slider_05",
+          "B06",
+          "B05"
+        ]
       },
       "BuildIconSortPriority": 60
     },
@@ -87775,8 +88214,6 @@
         null
       ],
       "Description": "Naval Factory",
-      "LifeBarSize": 4.75,
-      "BuildIconSortPriority": 61,
       "General": {
         "UpgradesFromBase": "uab0103",
         "UpgradesFrom": "zab9503",
@@ -87801,7 +88238,18 @@
         },
         "Classification": "RULEUC_Factory"
       },
+      "AI": {
+        "TargetBones": [
+          "Slider_02",
+          "Slider_05",
+          "B06",
+          "B05"
+        ]
+      },
+      "StrategicIconName": "icon_factory3_naval",
       "LifeBarOffset": 6.7,
+      "SelectionSizeX": 2.5,
+      "CollisionOffsetZ": 0.5,
       "Economy": {
         "InitialRallyX": 0,
         "StorageMass": 320,
@@ -87878,10 +88326,38 @@
         "Blueprint": "/props/DefaultWreckage/DefaultWreckage_prop.bp",
         "MassMult": 0.9
       },
-      "SelectionSizeX": 2.5,
+      "SizeX": 4,
       "SizeY": 3,
       "SelectionSizeZ": 8.8,
-      "SizeX": 4,
+      "Physics": {
+        "ComputeRollOffPoint": true,
+        "DragCoefficient": 0.2,
+        "SkirtOffsetZ": -1,
+        "SkirtSizeZ": 15,
+        "BuildOnLayerCaps": {
+          "LAYER_Water": true
+        },
+        "SkirtOffsetX": -7,
+        "MeshExtentsY": 2,
+        "MotionType": "RULEUMT_None",
+        "RollOffPoints": [
+          {
+            "UnitSpin": 180,
+            "X": -6,
+            "Y": 0,
+            "Z": -8
+          },
+          {
+            "UnitSpin": 0,
+            "X": -6,
+            "Y": 0,
+            "Z": 8
+          }
+        ],
+        "MeshExtentsX": 5,
+        "SkirtSizeX": 12,
+        "MeshExtentsZ": 14
+      },
       "SelectionThickness": 0.2,
       "CollisionOffsetY": -1,
       "Display": {
@@ -87900,7 +88376,7 @@
                   "ZAB9603"
                 ],
                 "Type": "SeaIdle01",
-                "Scale": 3
+                "Scale": 3.5
               }
             ]
           }
@@ -87930,55 +88406,27 @@
             "BLOffsetY": 5.7,
             "BLOffsetX": 0.45,
             "BLBone": 0,
-            "BLOffsetZ": 0.8
+            "BLOffsetZ": 0.4
           },
           {
             "BLScale": 1,
             "BLOffsetY": 3.3,
-            "BLOffsetX": 3.5,
+            "BLOffsetX": 0.45,
             "BLBone": 0,
-            "BLOffsetZ": -0.25
+            "BLOffsetZ": 3.45
           },
           {
             "BLScale": 1,
             "BLOffsetY": 3.3,
-            "BLOffsetX": -4,
+            "BLOffsetX": 0.45,
             "BLBone": 0,
-            "BLOffsetZ": -0.25
+            "BLOffsetZ": -3.5
           }
         ]
       },
       "StrategicIconSortPriority": 210,
-      "Physics": {
-        "ComputeRollOffPoint": true,
-        "DragCoefficient": 0.2,
-        "SkirtOffsetZ": -2,
-        "SkirtSizeZ": 14,
-        "BuildOnLayerCaps": {
-          "LAYER_Water": true
-        },
-        "SkirtOffsetX": -6,
-        "MeshExtentsY": 2,
-        "MotionType": "RULEUMT_None",
-        "RollOffPoints": [
-          {
-            "UnitSpin": 180,
-            "X": -6,
-            "Y": 0,
-            "Z": -8
-          },
-          {
-            "UnitSpin": 0,
-            "X": -6,
-            "Y": 0,
-            "Z": 8
-          }
-        ],
-        "MeshExtentsX": 5,
-        "SkirtSizeX": 12,
-        "MeshExtentsZ": 14
-      },
-      "StrategicIconName": "icon_factory3_naval"
+      "LifeBarSize": 4.75,
+      "BuildIconSortPriority": 61
     },
     {
       "Categories": [
@@ -91634,7 +92082,7 @@
         "MaxBrake": 2.5
       },
       "Economy": {
-        "BuildTime": 38400,
+        "BuildTime": 40000,
         "BuildRate": 225,
         "BuildableCategory": [
           "BUILTBYTIER3FACTORY AEON MOBILE CONSTRUCTION",
@@ -91642,8 +92090,8 @@
           "BUILTBYTIER1FACTORY AEON MOBILE CONSTRUCTION",
           "BUILTBYTIER2FACTORY AEON MOBILE NAVAL"
         ],
-        "BuildCostEnergy": 380000,
-        "BuildCostMass": 24000
+        "BuildCostEnergy": 400000,
+        "BuildCostMass": 25000
       },
       "ExternalFactory": {
         "SelectionSizeZ": 3,
@@ -92655,6 +93103,7 @@
         "FactionName": "Seraphim",
         "Classification": "RULEUC_Factory"
       },
+      "LifeBarOffset": 1.9,
       "Economy": {
         "BuildTime": 300,
         "StorageMass": 80,
@@ -92676,7 +93125,9 @@
         "SizeZ": 5
       },
       "SizeZ": 3.6,
-      "LifeBarOffset": 1.9,
+      "Intel": {
+        "VisionRadius": 20
+      },
       "Defense": {
         "ArmorType": "Structure",
         "Health": 3500,
@@ -92728,150 +93179,9 @@
         "MassMult": 0.9
       },
       "SelectionSizeX": 2.25,
-      "Intel": {
-        "VisionRadius": 20
-      },
-      "SelectionSizeZ": 3,
       "SizeY": 0.8,
+      "SelectionSizeZ": 3,
       "SizeX": 3.1,
-      "SelectionThickness": 0.34,
-      "Display": {
-        "Tarmacs": [
-          {
-            "Normal": "Tarmacs/Tar12x_seraphim_01_normals",
-            "FadeOut": 150,
-            "Albedo": "Tarmacs/Tar12x_seraphim_01_albedo",
-            "DeathLifetime": 300,
-            "RemoveWhenDead": false,
-            "Length": 12.8,
-            "Orientations": [
-              0,
-              90,
-              180,
-              270
-            ],
-            "Width": 12.8
-          }
-        ],
-        "AnimationDeath": [
-          {
-            "Animation": "/units/xsb0101/xsb0101_ADeath.sca",
-            "AnimationRateMax": 1,
-            "AnimationRateMin": 1,
-            "Weight": 100
-          }
-        ],
-        "UniformScale": 0.05,
-        "DamageEffects": [
-          {
-            "OffsetX": 1.5,
-            "OffsetY": 0,
-            "OffsetZ": 1.5,
-            "Bone": 0
-          },
-          {
-            "OffsetX": -1.5,
-            "OffsetY": 0,
-            "OffsetZ": 1.5,
-            "Bone": 0
-          },
-          {
-            "OffsetX": -1.5,
-            "OffsetY": 0,
-            "OffsetZ": -1.5,
-            "Bone": 0
-          },
-          {
-            "OffsetX": 1.5,
-            "OffsetY": 0,
-            "OffsetZ": -1.5,
-            "Bone": 0
-          },
-          {
-            "OffsetX": 1.1,
-            "OffsetY": 1.4,
-            "OffsetZ": 0.5,
-            "Bone": 0
-          },
-          {
-            "OffsetX": -1.1,
-            "OffsetY": 1.4,
-            "OffsetZ": 0.5,
-            "Bone": 0
-          },
-          {
-            "OffsetX": 0,
-            "OffsetY": 1.65,
-            "OffsetZ": -0.5,
-            "Bone": 0
-          },
-          {
-            "OffsetX": 0.5,
-            "OffsetY": 0,
-            "OffsetZ": 0.5,
-            "Bone": 0
-          }
-        ],
-        "BuildAttachBone": "Attachpoint",
-        "AnimationUpgrade": "/units/xsb0101/xsb0101_aupgrade.sca",
-        "BlinkingLightsFx": {
-          "Yellow": "/effects/emitters/light_yellow_02_emit.bp",
-          "Green": "/effects/emitters/light_green_03_emit.bp",
-          "Red": "/effects/emitters/light_red_03_emit.bp"
-        },
-        "Abilities": [
-          "Upgradeable"
-        ],
-        "Mesh": {
-          "IconFadeInZoom": 130,
-          "LODs": [
-            {
-              "LODCutoff": 200,
-              "ShaderName": "Seraphim",
-              "LookupName": "/textures/environment/Falloff_seraphim_lookup.dds",
-              "Scrolling": true
-            },
-            {
-              "LODCutoff": 500,
-              "SpecularName": "xsb0101_lod1_specteam.dds",
-              "ShaderName": "Seraphim",
-              "LookupName": "/textures/environment/Falloff_seraphim_lookup.dds",
-              "AlbedoName": "xsb0101_lod1_albedo.dds"
-            }
-          ]
-        },
-        "BlinkingLights": [
-          {
-            "BLScale": 1,
-            "BLOffsetY": 0.15,
-            "BLOffsetX": -1.75,
-            "BLBone": 0,
-            "BLOffsetZ": -1.68
-          },
-          {
-            "BLScale": 1,
-            "BLOffsetY": 0.15,
-            "BLOffsetX": 1.74,
-            "BLBone": 0,
-            "BLOffsetZ": -1.68
-          },
-          {
-            "BLScale": 1,
-            "BLOffsetY": 0.15,
-            "BLOffsetX": -1.75,
-            "BLBone": 0,
-            "BLOffsetZ": 1.77
-          },
-          {
-            "BLScale": 1,
-            "BLOffsetY": 0.15,
-            "BLOffsetX": 1.74,
-            "BLBone": 0,
-            "BLOffsetZ": 1.77
-          }
-        ]
-      },
-      "StrategicIconSortPriority": 220,
       "Physics": {
         "MeshExtentsX": 4.5,
         "DragCoefficient": 0.2,
@@ -92936,6 +93246,154 @@
         "SkirtSizeZ": 8,
         "SkirtSizeX": 8,
         "MeshExtentsZ": 4.5
+      },
+      "SelectionThickness": 0.34,
+      "Display": {
+        "Tarmacs": [
+          {
+            "Normal": "Tarmacs/Tar12x_seraphim_01_normals",
+            "FadeOut": 150,
+            "Albedo": "Tarmacs/Tar12x_seraphim_01_albedo",
+            "DeathLifetime": 300,
+            "RemoveWhenDead": false,
+            "Length": 12.8,
+            "Orientations": [
+              0,
+              90,
+              180,
+              270
+            ],
+            "Width": 12.8
+          }
+        ],
+        "AnimationDeath": [
+          {
+            "Animation": "/units/xsb0101/xsb0101_adeath.sca",
+            "AnimationRateMax": 1,
+            "AnimationRateMin": 1,
+            "Weight": 100
+          }
+        ],
+        "DamageEffects": [
+          {
+            "OffsetX": 1.5,
+            "OffsetY": 0,
+            "OffsetZ": 1.5,
+            "Bone": 0
+          },
+          {
+            "OffsetX": -1.5,
+            "OffsetY": 0,
+            "OffsetZ": 1.5,
+            "Bone": 0
+          },
+          {
+            "OffsetX": -1.5,
+            "OffsetY": 0,
+            "OffsetZ": -1.5,
+            "Bone": 0
+          },
+          {
+            "OffsetX": 1.5,
+            "OffsetY": 0,
+            "OffsetZ": -1.5,
+            "Bone": 0
+          },
+          {
+            "OffsetX": 1.1,
+            "OffsetY": 1.4,
+            "OffsetZ": 0.5,
+            "Bone": 0
+          },
+          {
+            "OffsetX": -1.1,
+            "OffsetY": 1.4,
+            "OffsetZ": 0.5,
+            "Bone": 0
+          },
+          {
+            "OffsetX": 0,
+            "OffsetY": 1.65,
+            "OffsetZ": -0.5,
+            "Bone": 0
+          },
+          {
+            "OffsetX": 0.5,
+            "OffsetY": 0,
+            "OffsetZ": 0.5,
+            "Bone": 0
+          }
+        ],
+        "UniformScale": 0.05,
+        "AnimationUpgradeTable": {
+          "xsb0201": "/units/xsb0101/xsb0101_aupgrade.sca",
+          "zsb9501": "/units/xsb0101/xsb0101_aupgrade_sup.sca"
+        },
+        "BuildAttachBone": "Attachpoint",
+        "AnimationUpgrade": "/units/xsb0101/xsb0101_aupgrade.sca",
+        "BlinkingLightsFx": {
+          "Yellow": "/effects/emitters/light_yellow_02_emit.bp",
+          "Green": "/effects/emitters/light_green_03_emit.bp",
+          "Red": "/effects/emitters/light_red_03_emit.bp"
+        },
+        "Abilities": [
+          "Upgradeable"
+        ],
+        "Mesh": {
+          "IconFadeInZoom": 130,
+          "LODs": [
+            {
+              "LODCutoff": 200,
+              "ShaderName": "Seraphim",
+              "LookupName": "/textures/environment/Falloff_seraphim_lookup.dds",
+              "Scrolling": true
+            },
+            {
+              "LODCutoff": 500,
+              "SpecularName": "xsb0101_lod1_specteam.dds",
+              "ShaderName": "Seraphim",
+              "LookupName": "/textures/environment/Falloff_seraphim_lookup.dds",
+              "AlbedoName": "xsb0101_lod1_albedo.dds"
+            }
+          ]
+        },
+        "BlinkingLights": [
+          {
+            "BLScale": 1,
+            "BLOffsetY": 0.15,
+            "BLOffsetX": -1.75,
+            "BLBone": 0,
+            "BLOffsetZ": -1.68
+          },
+          {
+            "BLScale": 1,
+            "BLOffsetY": 0.15,
+            "BLOffsetX": 1.74,
+            "BLBone": 0,
+            "BLOffsetZ": -1.68
+          },
+          {
+            "BLScale": 1,
+            "BLOffsetY": 0.15,
+            "BLOffsetX": -1.75,
+            "BLBone": 0,
+            "BLOffsetZ": 1.77
+          },
+          {
+            "BLScale": 1,
+            "BLOffsetY": 0.15,
+            "BLOffsetX": 1.74,
+            "BLBone": 0,
+            "BLOffsetZ": 1.77
+          }
+        ]
+      },
+      "StrategicIconSortPriority": 220,
+      "AI": {
+        "TargetBones": [
+          "Attachpoint",
+          "B01"
+        ]
       },
       "BuildIconSortPriority": 10
     },
@@ -93586,7 +94044,7 @@
         "SizeX": 5,
         "SizeZ": 5
       },
-      "SizeZ": 2.5,
+      "SizeZ": 3.5,
       "Intel": {
         "VisionRadius": 20
       },
@@ -93641,9 +94099,9 @@
         "MassMult": 0.9
       },
       "SelectionSizeX": 2.75,
-      "SizeY": 2.8,
+      "SizeY": 2.7,
       "SelectionSizeZ": 2.75,
-      "SizeX": 2.5,
+      "SizeX": 3.5,
       "Physics": {
         "StandUpright": true,
         "MeshExtentsX": 4.25,
@@ -93699,13 +94157,12 @@
         ],
         "AnimationDeath": [
           {
-            "Animation": "/units/xsb0102/xsb0102_ADeath.sca",
+            "Animation": "/units/xsb0102/xsb0102_adeath.sca",
             "AnimationRateMax": 1,
             "AnimationRateMin": 1,
             "Weight": 100
           }
         ],
-        "UniformScale": 0.05,
         "DamageEffects": [
           {
             "OffsetX": 1.2,
@@ -93738,6 +94195,11 @@
             "Bone": 0
           }
         ],
+        "UniformScale": 0.05,
+        "AnimationUpgradeTable": {
+          "xsb0202": "/units/xsb0102/xsb0102_aupgrade.sca",
+          "zsb9502": "/units/xsb0102/xsb0102_aupgrade_sup.sca"
+        },
         "BuildAttachBone": "Attachpoint",
         "AnimationUpgrade": "/units/xsb0102/xsb0102_aupgrade.sca",
         "BlinkingLightsFx": {
@@ -93768,10 +94230,10 @@
         "BlinkingLights": [
           {
             "BLScale": 1,
-            "BLOffsetY": 1.9,
+            "BLOffsetY": 3.8,
             "BLOffsetX": 0,
             "BLBone": 0,
-            "BLOffsetZ": -1.45
+            "BLOffsetZ": -2.3
           }
         ]
       },
@@ -94748,7 +95210,7 @@
         "ComputeRollOffPoint": true,
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -2,
-        "SkirtSizeZ": 14,
+        "SkirtSizeZ": 15,
         "BuildOnLayerCaps": {
           "LAYER_Water": true
         },
@@ -94834,20 +95296,24 @@
       "Display": {
         "AnimationDeath": [
           {
-            "Animation": "/units/xsb0103/xsb0103_ADeath.sca",
+            "Animation": "/units/xsb0103/xsb0103_adeath.sca",
             "AnimationRateMax": 1,
             "AnimationRateMin": 1,
             "Weight": 100
           }
         ],
-        "UniformScale": 0.05,
-        "AnimationUpgrade": "/units/xsb0103/xsb0103_aupgrade.sca",
-        "BuildAttachBone": "Attachpoint",
         "BlinkingLightsFx": {
           "Yellow": "/effects/emitters/light_yellow_02_emit.bp",
           "Green": "/effects/emitters/light_green_03_emit.bp",
           "Red": "/effects/emitters/light_red_03_emit.bp"
         },
+        "UniformScale": 0.05,
+        "AnimationUpgradeTable": {
+          "zsb9503": "/units/xsb0103/xsb0103_aupgrade_sup.sca",
+          "xsb0203": "/units/xsb0103/xsb0103_aupgrade.sca"
+        },
+        "BuildAttachBone": "Attachpoint",
+        "AnimationUpgrade": "/units/xsb0103/xsb0103_aupgrade.sca",
         "Abilities": [
           "Upgradeable"
         ],
@@ -103336,7 +103802,7 @@
       },
       "Weapon": [
         {
-          "DamageRadius": 3,
+          "DamageRadius": 2,
           "Label": "Missile",
           "RateOfFire": 0.5,
           "TurretYaw": 0,
@@ -103349,7 +103815,7 @@
               "RackBone": "Projectile01"
             }
           ],
-          "Damage": 500,
+          "Damage": 300,
           "ProjectileLifetime": 60,
           "DamageType": "Normal",
           "Audio": {
@@ -103470,7 +103936,7 @@
           "TurretDualManipulators": false,
           "TurretBonePitch": "Left_Turret01_Barrel",
           "Turreted": true,
-          "MaxRadius": 60
+          "MaxRadius": 55
         },
         {
           "FiringRandomness": 0,
@@ -104861,7 +105327,13 @@
       ],
       "AverageDensity": 7000,
       "Description": "Land Factory HQ",
-      "LifeBarSize": 4.5,
+      "AI": {
+        "TargetBones": [
+          "Attachpoint",
+          "B01",
+          "B06"
+        ]
+      },
       "StrategicIconName": "icon_factoryhq2_land",
       "General": {
         "CommandCaps": {
@@ -104889,6 +105361,7 @@
         "Classification": "RULEUC_Factory"
       },
       "LifeBarOffset": 1.95,
+      "SelectionSizeX": 2.25,
       "Economy": {
         "StorageMass": 160,
         "RebuildBonusIds": [
@@ -104964,99 +105437,9 @@
         "Blueprint": "/props/DefaultWreckage/DefaultWreckage_prop.bp",
         "MassMult": 0.9
       },
-      "SelectionSizeX": 2.25,
+      "SizeX": 3.1,
       "SizeY": 0.8,
       "SelectionCenterOffsetZ": 0.09,
-      "SizeX": 3.1,
-      "SelectionSizeZ": 3,
-      "SelectionThickness": 0.34,
-      "Display": {
-        "Tarmacs": [
-          {
-            "Normal": "Tarmacs/Tar12x_seraphim_01_normals",
-            "FadeOut": 150,
-            "Albedo": "Tarmacs/Tar12x_seraphim_01_albedo",
-            "DeathLifetime": 300,
-            "RemoveWhenDead": false,
-            "Length": 12.8,
-            "Orientations": [
-              0,
-              90,
-              180,
-              270
-            ],
-            "Width": 12.8
-          }
-        ],
-        "UniformScale": 0.05,
-        "AnimationDeath": [
-          {
-            "Animation": "/units/xsb0201/xsb0201_ADeath.sca",
-            "AnimationRateMax": 1,
-            "AnimationRateMin": 1,
-            "Weight": 100
-          }
-        ],
-        "BuildAttachBone": "Attachpoint",
-        "BlinkingLightsFx": {
-          "Yellow": "/effects/emitters/light_yellow_02_emit.bp",
-          "Green": "/effects/emitters/light_green_03_emit.bp",
-          "Red": "/effects/emitters/light_red_03_emit.bp"
-        },
-        "Abilities": [
-          "Upgradeable"
-        ],
-        "AnimationUpgrade": "/units/xsb0201/xsb0201_Aupgrade.sca",
-        "Mesh": {
-          "IconFadeInZoom": 130,
-          "LODs": [
-            {
-              "LODCutoff": 200,
-              "ShaderName": "Seraphim",
-              "LookupName": "/textures/environment/Falloff_seraphim_lookup.dds",
-              "Scrolling": true
-            },
-            {
-              "LODCutoff": 500,
-              "SpecularName": "xsb0201_lod1_specteam.dds",
-              "ShaderName": "Seraphim",
-              "LookupName": "/textures/environment/Falloff_seraphim_lookup.dds",
-              "AlbedoName": "xsb0201_lod1_albedo.dds"
-            }
-          ]
-        },
-        "BlinkingLights": [
-          {
-            "BLScale": 1,
-            "BLOffsetY": 0.15,
-            "BLOffsetX": -1.75,
-            "BLBone": 0,
-            "BLOffsetZ": -1.68
-          },
-          {
-            "BLScale": 1,
-            "BLOffsetY": 0.15,
-            "BLOffsetX": 1.74,
-            "BLBone": 0,
-            "BLOffsetZ": -1.68
-          },
-          {
-            "BLScale": 1,
-            "BLOffsetY": 0.15,
-            "BLOffsetX": -1.75,
-            "BLBone": 0,
-            "BLOffsetZ": 1.77
-          },
-          {
-            "BLScale": 1,
-            "BLOffsetY": 0.15,
-            "BLOffsetX": 1.74,
-            "BLBone": 0,
-            "BLOffsetZ": 1.77
-          }
-        ]
-      },
-      "StrategicIconSortPriority": 215,
       "Physics": {
         "MeshExtentsX": 4.5,
         "DragCoefficient": 0.2,
@@ -105122,6 +105505,99 @@
         "SkirtSizeX": 8,
         "MeshExtentsZ": 4.5
       },
+      "SelectionSizeZ": 3,
+      "SelectionThickness": 0.34,
+      "Display": {
+        "Tarmacs": [
+          {
+            "Normal": "Tarmacs/Tar12x_seraphim_01_normals",
+            "FadeOut": 150,
+            "Albedo": "Tarmacs/Tar12x_seraphim_01_albedo",
+            "DeathLifetime": 300,
+            "RemoveWhenDead": false,
+            "Length": 12.8,
+            "Orientations": [
+              0,
+              90,
+              180,
+              270
+            ],
+            "Width": 12.8
+          }
+        ],
+        "UniformScale": 0.05,
+        "AnimationDeath": [
+          {
+            "Animation": "/units/xsb0201/xsb0201_adeath.sca",
+            "AnimationRateMax": 1,
+            "AnimationRateMin": 1,
+            "Weight": 100
+          }
+        ],
+        "BuildAttachBone": "Attachpoint",
+        "BlinkingLightsFx": {
+          "Yellow": "/effects/emitters/light_yellow_02_emit.bp",
+          "Green": "/effects/emitters/light_green_03_emit.bp",
+          "Red": "/effects/emitters/light_red_03_emit.bp"
+        },
+        "Abilities": [
+          "Upgradeable"
+        ],
+        "AnimationUpgrade": "/units/xsb0201/xsb0201_aupgrade.sca",
+        "Mesh": {
+          "IconFadeInZoom": 130,
+          "LODs": [
+            {
+              "NormalsName": "/units/xsb0101/xsb0101_normalsts.dds",
+              "LODCutoff": 200,
+              "Scrolling": true,
+              "LookupName": "/textures/environment/Falloff_seraphim_lookup.dds",
+              "SpecularName": "/units/xsb0101/xsb0101_specteam.dds",
+              "ShaderName": "Seraphim",
+              "AlbedoName": "/units/xsb0101/xsb0101_albedo.dds"
+            },
+            {
+              "NormalsName": "/units/xsb0101/xsb0101_lod1_normalsts.dds",
+              "LODCutoff": 500,
+              "SpecularName": "/units/xsb0101/xsb0101_lod1_specteam.dds",
+              "ShaderName": "Seraphim",
+              "AlbedoName": "/units/xsb0101/xsb0101_lod1_albedo.dds"
+            }
+          ]
+        },
+        "BlinkingLights": [
+          {
+            "BLScale": 1,
+            "BLOffsetY": 0.15,
+            "BLOffsetX": -1.75,
+            "BLBone": 0,
+            "BLOffsetZ": -1.68
+          },
+          {
+            "BLScale": 1,
+            "BLOffsetY": 0.15,
+            "BLOffsetX": 1.74,
+            "BLBone": 0,
+            "BLOffsetZ": -1.68
+          },
+          {
+            "BLScale": 1,
+            "BLOffsetY": 0.15,
+            "BLOffsetX": -1.75,
+            "BLBone": 0,
+            "BLOffsetZ": 1.77
+          },
+          {
+            "BLScale": 1,
+            "BLOffsetY": 0.15,
+            "BLOffsetX": 1.74,
+            "BLBone": 0,
+            "BLOffsetZ": 1.77
+          }
+        ]
+      },
+      "StrategicIconSortPriority": 215,
+      "LifeBarSize": 4.5,
       "BuildIconSortPriority": 50
     },
     {
@@ -105320,9 +105796,9 @@
       "Description": "Land Factory",
       "AI": {
         "TargetBones": [
-          "B06",
+          "Attachpoint",
           "B01",
-          "Attachpoint"
+          "B06"
         ]
       },
       "StrategicIconName": "icon_factory2_land",
@@ -105519,7 +105995,7 @@
         "UniformScale": 0.05,
         "AnimationDeath": [
           {
-            "Animation": "/units/zsb9501/zsb9501_ADeath.sca",
+            "Animation": "/units/zsb9501/zsb9501_adeath.sca",
             "AnimationRateMax": 1,
             "AnimationRateMin": 1,
             "Weight": 100
@@ -105534,22 +106010,25 @@
         "Abilities": [
           "Upgradeable"
         ],
-        "AnimationUpgrade": "/units/zsb9501/zsb9501_Aupgrade.sca",
+        "AnimationUpgrade": "/units/zsb9501/zsb9501_aupgrade.sca",
         "Mesh": {
           "IconFadeInZoom": 130,
           "LODs": [
             {
+              "NormalsName": "/units/xsb0101/xsb0101_normalsts.dds",
               "LODCutoff": 200,
-              "ShaderName": "Seraphim",
+              "Scrolling": true,
               "LookupName": "/textures/environment/Falloff_seraphim_lookup.dds",
-              "Scrolling": true
+              "SpecularName": "/units/xsb0101/xsb0101_specteam.dds",
+              "ShaderName": "Seraphim",
+              "AlbedoName": "/units/xsb0101/xsb0101_albedo.dds"
             },
             {
+              "NormalsName": "/units/xsb0101/xsb0101_lod1_normalsts.dds",
               "LODCutoff": 500,
-              "SpecularName": "zsb9501_lod1_specteam.dds",
+              "SpecularName": "/units/xsb0101/xsb0101_lod1_specteam.dds",
               "ShaderName": "Seraphim",
-              "LookupName": "/textures/environment/Falloff_seraphim_lookup.dds",
-              "AlbedoName": "zsb9501_lod1_albedo.dds"
+              "AlbedoName": "/units/xsb0101/xsb0101_lod1_albedo.dds"
             }
           ]
         },
@@ -105766,7 +106245,7 @@
         "UniformScale": 0.05,
         "AnimationDeath": [
           {
-            "Animation": "/units/xsb0202/xsb0202_ADeath.sca",
+            "Animation": "/units/xsb0202/xsb0202_adeath.sca",
             "AnimationRateMax": 1,
             "AnimationRateMin": 1,
             "Weight": 100
@@ -105781,38 +106260,49 @@
         "Abilities": [
           "Upgradeable"
         ],
-        "AnimationUpgrade": "/units/XSB0202/XSB0202_Aupgrade.sca",
+        "AnimationUpgrade": "/units/xsb0202/xsb0202_aupgrade.sca",
         "Mesh": {
           "IconFadeInZoom": 130,
           "LODs": [
             {
+              "NormalsName": "/units/xsb0102/xsb0102_normalsts.dds",
               "LODCutoff": 200,
-              "ShaderName": "Seraphim",
+              "Scrolling": true,
               "LookupName": "/textures/environment/Falloff_seraphim_lookup.dds",
-              "Scrolling": true
+              "SpecularName": "/units/xsb0102/xsb0102_specteam.dds",
+              "ShaderName": "Seraphim",
+              "AlbedoName": "/units/xsb0102/xsb0102_albedo.dds"
             },
             {
-              "ShaderName": "Seraphim",
-              "SpecularName": "xsb0202_lod1_specteam.dds",
+              "NormalsName": "/units/xsb0102/xsb0102_lod1_normalsts.dds",
               "LODCutoff": 500,
-              "AlbedoName": "xsb0202_lod1_albedo.dds"
+              "SpecularName": "/units/xsb0102/xsb0102_lod1_specteam.dds",
+              "ShaderName": "Seraphim",
+              "AlbedoName": "/units/xsb0102/xsb0102_lod1_albedo.dds"
             }
           ]
         },
         "BlinkingLights": [
           {
             "BLScale": 1,
-            "BLOffsetY": 2.75,
+            "BLOffsetY": 3.8,
             "BLOffsetX": 0,
             "BLBone": 0,
-            "BLOffsetZ": -1.45
+            "BLOffsetZ": -2.3
           },
           {
             "BLScale": 1,
-            "BLOffsetY": 2.4,
-            "BLOffsetX": -2.26,
+            "BLOffsetY": 1.9,
+            "BLOffsetX": -1.5,
             "BLBone": 0,
-            "BLOffsetZ": -1.28
+            "BLOffsetZ": -1.2
+          },
+          {
+            "BLScale": 1,
+            "BLOffsetY": 1.9,
+            "BLOffsetX": 1.4,
+            "BLBone": 0,
+            "BLOffsetZ": -1.4
           }
         ]
       },
@@ -105990,7 +106480,7 @@
         "MassMult": 0.9
       },
       "SizeX": 3.5,
-      "SizeY": 3,
+      "SizeY": 2.7,
       "SelectionCenterOffsetX": -0.128,
       "SelectionCenterOffsetZ": 0.067,
       "SelectionSizeZ": 2.75,
@@ -106018,7 +106508,7 @@
         "UniformScale": 0.05,
         "AnimationDeath": [
           {
-            "Animation": "/units/zsb9502/zsb9502_ADeath.sca",
+            "Animation": "/units/zsb9502/zsb9502_adeath.sca",
             "AnimationRateMax": 1,
             "AnimationRateMin": 1,
             "Weight": 100
@@ -106033,38 +106523,49 @@
         "Abilities": [
           "Upgradeable"
         ],
-        "AnimationUpgrade": "/units/ZSB9502/ZSB9502_Aupgrade.sca",
+        "AnimationUpgrade": "/units/zsb9502/zsb9502_aupgrade.sca",
         "Mesh": {
           "IconFadeInZoom": 130,
           "LODs": [
             {
+              "NormalsName": "/units/xsb0102/xsb0102_normalsts.dds",
               "LODCutoff": 200,
-              "ShaderName": "Seraphim",
+              "Scrolling": true,
               "LookupName": "/textures/environment/Falloff_seraphim_lookup.dds",
-              "Scrolling": true
+              "SpecularName": "/units/xsb0102/xsb0102_specteam.dds",
+              "ShaderName": "Seraphim",
+              "AlbedoName": "/units/xsb0102/xsb0102_albedo.dds"
             },
             {
-              "ShaderName": "Seraphim",
-              "SpecularName": "zsb9502_lod1_specteam.dds",
+              "NormalsName": "/units/xsb0102/xsb0102_lod1_normalsts.dds",
               "LODCutoff": 500,
-              "AlbedoName": "zsb9502_lod1_albedo.dds"
+              "SpecularName": "/units/xsb0102/xsb0102_lod1_specteam.dds",
+              "ShaderName": "Seraphim",
+              "AlbedoName": "/units/xsb0102/xsb0102_lod1_albedo.dds"
             }
           ]
         },
         "BlinkingLights": [
           {
             "BLScale": 1,
-            "BLOffsetY": 2.75,
+            "BLOffsetY": 3.8,
             "BLOffsetX": 0,
             "BLBone": 0,
-            "BLOffsetZ": -1.45
+            "BLOffsetZ": -2.3
           },
           {
             "BLScale": 1,
-            "BLOffsetY": 2.4,
-            "BLOffsetX": -2.26,
+            "BLOffsetY": 1.9,
+            "BLOffsetX": -1.4,
             "BLBone": 0,
-            "BLOffsetZ": -1.28
+            "BLOffsetZ": -1.4
+          },
+          {
+            "BLScale": 1,
+            "BLOffsetY": 1.9,
+            "BLOffsetX": 1.4,
+            "BLBone": 0,
+            "BLOffsetZ": -1.4
           }
         ]
       },
@@ -106154,7 +106655,7 @@
         "ComputeRollOffPoint": true,
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -2,
-        "SkirtSizeZ": 14,
+        "SkirtSizeZ": 15,
         "BuildOnLayerCaps": {
           "LAYER_Water": true
         },
@@ -106246,7 +106747,7 @@
       "Display": {
         "AnimationDeath": [
           {
-            "Animation": "/units/xsb0203/xsb0203_ADeath.sca",
+            "Animation": "/units/xsb0203/xsb0203_adeath.sca",
             "AnimationRateMax": 1,
             "AnimationRateMin": 1,
             "Weight": 100
@@ -106280,16 +106781,20 @@
           "IconFadeInZoom": 130,
           "LODs": [
             {
-              "ShaderName": "SeraphimNavy",
+              "NormalsName": "/units/xsb0103/xsb0103_normalsts.dds",
               "LODCutoff": 200,
-              "LookupName": "/textures/environment/Falloff_seraphim_lookup.dds"
-            },
-            {
-              "LODCutoff": 600,
-              "SpecularName": "xsb0203_lod1_specteam.dds",
+              "SpecularName": "/units/xsb0103/xsb0103_specteam.dds",
               "ShaderName": "SeraphimNavy",
               "LookupName": "/textures/environment/Falloff_seraphim_lookup.dds",
-              "AlbedoName": "xsb0203_lod1_albedo.dds"
+              "AlbedoName": "/units/xsb0103/xsb0103_albedo.dds"
+            },
+            {
+              "NormalsName": "/units/xsb0103/xsb0103_lod1_normalsts.dds",
+              "LODCutoff": 600,
+              "SpecularName": "/units/xsb0103/xsb0103_lod1_specteam.dds",
+              "ShaderName": "SeraphimNavy",
+              "LookupName": "/textures/environment/Falloff_seraphim_lookup.dds",
+              "AlbedoName": "/units/xsb0103/xsb0103_lod1_albedo.dds"
             }
           ]
         },
@@ -106632,7 +107137,7 @@
         "ComputeRollOffPoint": true,
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -2,
-        "SkirtSizeZ": 14,
+        "SkirtSizeZ": 15,
         "BuildOnLayerCaps": {
           "LAYER_Water": true
         },
@@ -106724,7 +107229,7 @@
       "Display": {
         "AnimationDeath": [
           {
-            "Animation": "/units/zsb9503/zsb9503_ADeath.sca",
+            "Animation": "/units/zsb9503/zsb9503_adeath.sca",
             "AnimationRateMax": 1,
             "AnimationRateMin": 1,
             "Weight": 100
@@ -106746,7 +107251,7 @@
             "Effects": [
               {
                 "Bones": [
-                  "XSB0203"
+                  "ZSB9503"
                 ],
                 "Type": "SeaIdle01",
                 "Scale": 3
@@ -106758,16 +107263,20 @@
           "IconFadeInZoom": 130,
           "LODs": [
             {
-              "ShaderName": "SeraphimNavy",
+              "NormalsName": "/units/xsb0103/xsb0103_normalsts.dds",
               "LODCutoff": 200,
-              "LookupName": "/textures/environment/Falloff_seraphim_lookup.dds"
-            },
-            {
-              "LODCutoff": 600,
-              "SpecularName": "zsb9503_lod1_specteam.dds",
+              "SpecularName": "/units/xsb0103/xsb0103_specteam.dds",
               "ShaderName": "SeraphimNavy",
               "LookupName": "/textures/environment/Falloff_seraphim_lookup.dds",
-              "AlbedoName": "zsb9503_lod1_albedo.dds"
+              "AlbedoName": "/units/xsb0103/xsb0103_albedo.dds"
+            },
+            {
+              "NormalsName": "/units/xsb0103/xsb0103_lod1_normalsts.dds",
+              "LODCutoff": 600,
+              "SpecularName": "/units/xsb0103/xsb0103_lod1_specteam.dds",
+              "ShaderName": "SeraphimNavy",
+              "LookupName": "/textures/environment/Falloff_seraphim_lookup.dds",
+              "AlbedoName": "/units/xsb0103/xsb0103_lod1_albedo.dds"
             }
           ]
         },
@@ -110808,26 +111317,26 @@
       "SizeZ": 2.6,
       "Physics": {
         "TurnRate": 80,
-        "MaxSteerForce": 4.6,
+        "MaxSteerForce": 4.8,
         "Elevation": -1.5,
         "DragCoefficient": 0.2,
         "MaxAcceleration": 5.5,
         "MaxBrake": 5.5,
-        "MaxSpeed": 4.6,
+        "MaxSpeed": 4.8,
         "MeshExtentsX": 0.6,
         "MeshExtentsY": 0.65,
         "TurnRadius": 5,
         "BackUpDistance": 5,
         "CatchUpAcc": 10,
-        "MaxSpeedReverse": 4.6,
+        "MaxSpeedReverse": 4.8,
         "MotionType": "RULEUMT_SurfacingSub",
         "MeshExtentsZ": 2.5
       },
       "Defense": {
         "ArmorType": "Normal",
-        "Health": 4000,
+        "Health": 3600,
         "SubThreatLevel": 34,
-        "MaxHealth": 4000,
+        "MaxHealth": 3600,
         "AirThreatLevel": 20
       },
       "Audio": {
@@ -111075,7 +111584,7 @@
         },
         {
           "AlwaysRecheckTarget": false,
-          "RateOfFire": 0.1,
+          "RateOfFire": 0.083333333333333,
           "DisableWhileReloading": true,
           "TurretYaw": 0,
           "RackBones": [
@@ -113490,6 +113999,7 @@
           "Turreted": false
         },
         {
+          "DamageRadius": 1,
           "Label": "AntiAirRight",
           "RateOfFire": 2,
           "TurretYaw": 0,
@@ -114374,7 +114884,13 @@
       ],
       "AverageDensity": 14000,
       "Description": "Land Factory HQ",
-      "LifeBarSize": 4.5,
+      "AI": {
+        "TargetBones": [
+          "Attachpoint",
+          "B01",
+          "B06"
+        ]
+      },
       "StrategicIconName": "icon_factoryhq3_land",
       "General": {
         "CommandCaps": {
@@ -114402,6 +114918,7 @@
         "Classification": "RULEUC_Factory"
       },
       "LifeBarOffset": 2,
+      "SelectionSizeX": 2.25,
       "Economy": {
         "StorageMass": 320,
         "RebuildBonusIds": [
@@ -114477,92 +114994,9 @@
         "Blueprint": "/props/DefaultWreckage/DefaultWreckage_prop.bp",
         "MassMult": 0.9
       },
-      "SelectionSizeX": 2.25,
+      "SizeX": 3.1,
       "SizeY": 0.8,
       "SelectionCenterOffsetZ": 0.22,
-      "SizeX": 3.1,
-      "SelectionSizeZ": 3,
-      "SelectionThickness": 0.34,
-      "Display": {
-        "UniformScale": 0.05,
-        "BuildAttachBone": "Attachpoint",
-        "BlinkingLightsFx": {
-          "Yellow": "/effects/emitters/light_yellow_02_emit.bp",
-          "Green": "/effects/emitters/light_green_03_emit.bp",
-          "Red": "/effects/emitters/light_red_03_emit.bp"
-        },
-        "AnimationDeath": [
-          {
-            "Animation": "/units/xsb0301/xsb0301_ADeath.sca",
-            "AnimationRateMax": 1.6,
-            "AnimationRateMin": 1.6,
-            "Weight": 100
-          }
-        ],
-        "Tarmacs": [
-          {
-            "Normal": "Tarmacs/Tar12x_seraphim_01_normals",
-            "FadeOut": 150,
-            "Albedo": "Tarmacs/Tar12x_seraphim_01_albedo",
-            "DeathLifetime": 300,
-            "RemoveWhenDead": false,
-            "Length": 12.8,
-            "Orientations": [
-              0
-            ],
-            "Width": 12.8
-          }
-        ],
-        "Mesh": {
-          "IconFadeInZoom": 130,
-          "LODs": [
-            {
-              "LODCutoff": 200,
-              "ShaderName": "Seraphim",
-              "LookupName": "/textures/environment/Falloff_seraphim_lookup.dds",
-              "Scrolling": true
-            },
-            {
-              "LODCutoff": 500,
-              "SpecularName": "xsb0301_lod1_specteam.dds",
-              "ShaderName": "Seraphim",
-              "LookupName": "/textures/environment/Falloff_seraphim_lookup.dds",
-              "AlbedoName": "xsb0301_lod1_albedo.dds"
-            }
-          ]
-        },
-        "BlinkingLights": [
-          {
-            "BLScale": 1,
-            "BLOffsetY": 0.15,
-            "BLOffsetX": -1.75,
-            "BLBone": 0,
-            "BLOffsetZ": -1.68
-          },
-          {
-            "BLScale": 1,
-            "BLOffsetY": 0.15,
-            "BLOffsetX": 1.74,
-            "BLBone": 0,
-            "BLOffsetZ": -1.68
-          },
-          {
-            "BLScale": 1,
-            "BLOffsetY": 0.15,
-            "BLOffsetX": -1.75,
-            "BLBone": 0,
-            "BLOffsetZ": 1.77
-          },
-          {
-            "BLScale": 1,
-            "BLOffsetY": 0.15,
-            "BLOffsetX": 1.74,
-            "BLBone": 0,
-            "BLOffsetZ": 1.77
-          }
-        ]
-      },
-      "StrategicIconSortPriority": 210,
       "Physics": {
         "MeshExtentsX": 4.5,
         "DragCoefficient": 0.2,
@@ -114628,6 +115062,92 @@
         "SkirtSizeX": 8,
         "MeshExtentsZ": 4.5
       },
+      "SelectionSizeZ": 3,
+      "SelectionThickness": 0.34,
+      "Display": {
+        "UniformScale": 0.05,
+        "BuildAttachBone": "Attachpoint",
+        "BlinkingLightsFx": {
+          "Yellow": "/effects/emitters/light_yellow_02_emit.bp",
+          "Green": "/effects/emitters/light_green_03_emit.bp",
+          "Red": "/effects/emitters/light_red_03_emit.bp"
+        },
+        "AnimationDeath": [
+          {
+            "Animation": "/units/xsb0301/xsb0301_adeath.sca",
+            "AnimationRateMax": 1.6,
+            "AnimationRateMin": 1.6,
+            "Weight": 100
+          }
+        ],
+        "Tarmacs": [
+          {
+            "Normal": "Tarmacs/Tar12x_seraphim_01_normals",
+            "FadeOut": 150,
+            "Albedo": "Tarmacs/Tar12x_seraphim_01_albedo",
+            "DeathLifetime": 300,
+            "RemoveWhenDead": false,
+            "Length": 12.8,
+            "Orientations": [
+              0
+            ],
+            "Width": 12.8
+          }
+        ],
+        "Mesh": {
+          "IconFadeInZoom": 130,
+          "LODs": [
+            {
+              "NormalsName": "/units/xsb0101/xsb0101_normalsts.dds",
+              "LODCutoff": 200,
+              "Scrolling": true,
+              "LookupName": "/textures/environment/Falloff_seraphim_lookup.dds",
+              "SpecularName": "/units/xsb0101/xsb0101_specteam.dds",
+              "ShaderName": "Seraphim",
+              "AlbedoName": "/units/xsb0101/xsb0101_albedo.dds"
+            },
+            {
+              "NormalsName": "/units/xsb0101/xsb0101_lod1_normalsts.dds",
+              "LODCutoff": 500,
+              "SpecularName": "/units/xsb0101/xsb0101_lod1_specteam.dds",
+              "ShaderName": "Seraphim",
+              "AlbedoName": "/units/xsb0101/xsb0101_lod1_albedo.dds"
+            }
+          ]
+        },
+        "BlinkingLights": [
+          {
+            "BLScale": 1,
+            "BLOffsetY": 0.15,
+            "BLOffsetX": -1.75,
+            "BLBone": 0,
+            "BLOffsetZ": -1.68
+          },
+          {
+            "BLScale": 1,
+            "BLOffsetY": 0.15,
+            "BLOffsetX": 1.74,
+            "BLBone": 0,
+            "BLOffsetZ": -1.68
+          },
+          {
+            "BLScale": 1,
+            "BLOffsetY": 0.15,
+            "BLOffsetX": -1.75,
+            "BLBone": 0,
+            "BLOffsetZ": 1.77
+          },
+          {
+            "BLScale": 1,
+            "BLOffsetY": 0.15,
+            "BLOffsetX": 1.74,
+            "BLBone": 0,
+            "BLOffsetZ": 1.77
+          }
+        ]
+      },
+      "StrategicIconSortPriority": 210,
+      "LifeBarSize": 4.5,
       "BuildIconSortPriority": 40
     },
     {
@@ -114823,9 +115343,9 @@
       "Description": "Land Factory",
       "AI": {
         "TargetBones": [
-          "B06",
+          "Attachpoint",
           "B01",
-          "Attachpoint"
+          "B06"
         ]
       },
       "StrategicIconName": "icon_factory3_land",
@@ -115011,7 +115531,7 @@
         },
         "AnimationDeath": [
           {
-            "Animation": "/units/zsb9601/zsb9601_ADeath.sca",
+            "Animation": "/units/zsb9601/zsb9601_adeath.sca",
             "AnimationRateMax": 1.6,
             "AnimationRateMin": 1.6,
             "Weight": 100
@@ -115035,17 +115555,20 @@
           "IconFadeInZoom": 130,
           "LODs": [
             {
+              "NormalsName": "/units/xsb0101/xsb0101_normalsts.dds",
               "LODCutoff": 200,
-              "ShaderName": "Seraphim",
+              "Scrolling": true,
               "LookupName": "/textures/environment/Falloff_seraphim_lookup.dds",
-              "Scrolling": true
+              "SpecularName": "/units/xsb0101/xsb0101_specteam.dds",
+              "ShaderName": "Seraphim",
+              "AlbedoName": "/units/xsb0101/xsb0101_albedo.dds"
             },
             {
+              "NormalsName": "/units/xsb0101/xsb0101_lod1_normalsts.dds",
               "LODCutoff": 500,
-              "SpecularName": "zsb9601_lod1_specteam.dds",
+              "SpecularName": "/units/xsb0101/xsb0101_lod1_specteam.dds",
               "ShaderName": "Seraphim",
-              "LookupName": "/textures/environment/Falloff_seraphim_lookup.dds",
-              "AlbedoName": "zsb9601_lod1_albedo.dds"
+              "AlbedoName": "/units/xsb0101/xsb0101_lod1_albedo.dds"
             }
           ]
         },
@@ -115148,7 +115671,7 @@
         "SizeX": 5,
         "SizeZ": 5
       },
-      "SizeZ": 4,
+      "SizeZ": 3.5,
       "Physics": {
         "StandUpright": true,
         "MeshExtentsX": 6,
@@ -115233,8 +115756,8 @@
         "Blueprint": "/props/DefaultWreckage/DefaultWreckage_prop.bp",
         "MassMult": 0.9
       },
-      "SizeX": 4,
-      "SizeY": 2.8,
+      "SizeX": 3.5,
+      "SizeY": 2.7,
       "SelectionCenterOffsetX": -0.14,
       "SelectionCenterOffsetZ": -0.35,
       "SelectionSizeZ": 2.75,
@@ -115251,16 +115774,16 @@
         },
         "AnimationDeath": [
           {
-            "Animation": "/units/xsb0302/xsb0302_ADeath.sca",
+            "Animation": "/units/xsb0302/xsb0302_adeath.sca",
             "AnimationRateMax": 1,
             "AnimationRateMin": 1,
-            "Weight": 100
+            "Weight": 50
           },
           {
-            "Animation": "/units/xsb0302/xsb0302_ADeathv1.sca",
+            "Animation": "/units/xsb0302/xsb0302_adeathv1.sca",
             "AnimationRateMax": 1,
             "AnimationRateMin": 1,
-            "Weight": 100
+            "Weight": 50
           }
         ],
         "Tarmacs": [
@@ -115284,40 +115807,44 @@
           "IconFadeInZoom": 130,
           "LODs": [
             {
+              "NormalsName": "/units/xsb0102/xsb0102_normalsts.dds",
               "LODCutoff": 200,
-              "ShaderName": "Seraphim",
+              "Scrolling": true,
               "LookupName": "/textures/environment/Falloff_seraphim_lookup.dds",
-              "Scrolling": true
+              "SpecularName": "/units/xsb0102/xsb0102_specteam.dds",
+              "ShaderName": "Seraphim",
+              "AlbedoName": "/units/xsb0102/xsb0102_albedo.dds"
             },
             {
-              "ShaderName": "Seraphim",
-              "SpecularName": "xsb0302_lod1_specteam.dds",
+              "NormalsName": "/units/xsb0102/xsb0102_lod1_normalsts.dds",
               "LODCutoff": 500,
-              "AlbedoName": "xsb0302_lod1_albedo.dds"
+              "SpecularName": "/units/xsb0102/xsb0102_lod1_specteam.dds",
+              "ShaderName": "Seraphim",
+              "AlbedoName": "/units/xsb0102/xsb0102_lod1_albedo.dds"
             }
           ]
         },
         "BlinkingLights": [
           {
             "BLScale": 1,
-            "BLOffsetY": 4,
+            "BLOffsetY": 3.8,
             "BLOffsetX": 0,
             "BLBone": 0,
-            "BLOffsetZ": -1.4
+            "BLOffsetZ": -2.3
           },
           {
             "BLScale": 1,
-            "BLOffsetY": 2.4,
-            "BLOffsetX": -2.05,
+            "BLOffsetY": 1.9,
+            "BLOffsetX": -1.5,
             "BLBone": 0,
-            "BLOffsetZ": -1.12
+            "BLOffsetZ": -1.2
           },
           {
             "BLScale": 1,
-            "BLOffsetY": 2.4,
-            "BLOffsetX": 2.05,
+            "BLOffsetY": 1.9,
+            "BLOffsetX": 1.5,
             "BLBone": 0,
-            "BLOffsetZ": -1.12
+            "BLOffsetZ": -1.2
           }
         ]
       },
@@ -115560,7 +116087,7 @@
           "DummyWeapon": true,
           "Label": "DeathWeapon",
           "WeaponCategory": "Death",
-          "DamageRadius": 14,
+          "DamageRadius": 10,
           "DamageType": "DeathExplosion",
           "DisplayName": "Death Weapon"
         }
@@ -116244,7 +116771,7 @@
         "SizeX": 5,
         "SizeZ": 5
       },
-      "SizeZ": 4,
+      "SizeZ": 3.5,
       "Physics": {
         "StandUpright": true,
         "MeshExtentsX": 6,
@@ -116329,8 +116856,8 @@
         "Blueprint": "/props/DefaultWreckage/DefaultWreckage_prop.bp",
         "MassMult": 0.9
       },
-      "SizeX": 4,
-      "SizeY": 3,
+      "SizeX": 3.5,
+      "SizeY": 2.7,
       "SelectionCenterOffsetX": -0.14,
       "SelectionCenterOffsetZ": -0.35,
       "SelectionSizeZ": 2.75,
@@ -116347,7 +116874,7 @@
         },
         "AnimationDeath": [
           {
-            "Animation": "/units/zsb9602/zsb9602_ADeath.sca",
+            "Animation": "/units/zsb9602/zsb9602_adeath.sca",
             "AnimationRateMax": 1,
             "AnimationRateMin": 1,
             "Weight": 100
@@ -116374,40 +116901,44 @@
           "IconFadeInZoom": 130,
           "LODs": [
             {
+              "NormalsName": "/units/xsb0102/xsb0102_normalsts.dds",
               "LODCutoff": 200,
-              "ShaderName": "Seraphim",
+              "Scrolling": true,
               "LookupName": "/textures/environment/Falloff_seraphim_lookup.dds",
-              "Scrolling": true
+              "SpecularName": "/units/xsb0102/xsb0102_specteam.dds",
+              "ShaderName": "Seraphim",
+              "AlbedoName": "/units/xsb0102/xsb0102_albedo.dds"
             },
             {
-              "ShaderName": "Seraphim",
-              "SpecularName": "zsb9602_lod1_specteam.dds",
+              "NormalsName": "/units/xsb0102/xsb0102_lod1_normalsts.dds",
               "LODCutoff": 500,
-              "AlbedoName": "zsb9602_lod1_albedo.dds"
+              "SpecularName": "/units/xsb0102/xsb0102_lod1_specteam.dds",
+              "ShaderName": "Seraphim",
+              "AlbedoName": "/units/xsb0102/xsb0102_lod1_albedo.dds"
             }
           ]
         },
         "BlinkingLights": [
           {
             "BLScale": 1,
-            "BLOffsetY": 4,
+            "BLOffsetY": 3.8,
             "BLOffsetX": 0,
+            "BLBone": 0,
+            "BLOffsetZ": -2.3
+          },
+          {
+            "BLScale": 1,
+            "BLOffsetY": 1.9,
+            "BLOffsetX": -1.4,
             "BLBone": 0,
             "BLOffsetZ": -1.4
           },
           {
             "BLScale": 1,
-            "BLOffsetY": 2.4,
-            "BLOffsetX": -2.05,
+            "BLOffsetY": 1.9,
+            "BLOffsetX": 1.4,
             "BLBone": 0,
-            "BLOffsetZ": -1.12
-          },
-          {
-            "BLScale": 1,
-            "BLOffsetY": 2.4,
-            "BLOffsetX": 2.05,
-            "BLBone": 0,
-            "BLOffsetZ": -1.12
+            "BLOffsetZ": -1.4
           }
         ]
       },
@@ -116497,7 +117028,7 @@
         "ComputeRollOffPoint": true,
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -2,
-        "SkirtSizeZ": 14,
+        "SkirtSizeZ": 15,
         "BuildOnLayerCaps": {
           "LAYER_Water": true
         },
@@ -116596,7 +117127,7 @@
         },
         "AnimationDeath": [
           {
-            "Animation": "/units/xsb0303/xsb0303_ADeath.sca",
+            "Animation": "/units/xsb0303/xsb0303_adeath.sca",
             "AnimationRateMax": 1,
             "AnimationRateMin": 1,
             "Weight": 100
@@ -116619,16 +117150,20 @@
           "IconFadeInZoom": 130,
           "LODs": [
             {
-              "ShaderName": "SeraphimNavy",
+              "NormalsName": "/units/xsb0103/xsb0103_normalsts.dds",
               "LODCutoff": 200,
-              "LookupName": "/textures/environment/Falloff_seraphim_lookup.dds"
-            },
-            {
-              "LODCutoff": 600,
-              "SpecularName": "xsb0303_lod1_specteam.dds",
+              "SpecularName": "/units/xsb0103/xsb0103_specteam.dds",
               "ShaderName": "SeraphimNavy",
               "LookupName": "/textures/environment/Falloff_seraphim_lookup.dds",
-              "AlbedoName": "xsb0303_lod1_albedo.dds"
+              "AlbedoName": "/units/xsb0103/xsb0103_albedo.dds"
+            },
+            {
+              "NormalsName": "/units/xsb0103/xsb0103_lod1_normalsts.dds",
+              "LODCutoff": 600,
+              "SpecularName": "/units/xsb0103/xsb0103_lod1_specteam.dds",
+              "ShaderName": "SeraphimNavy",
+              "LookupName": "/textures/environment/Falloff_seraphim_lookup.dds",
+              "AlbedoName": "/units/xsb0103/xsb0103_lod1_albedo.dds"
             }
           ]
         },
@@ -116744,7 +117279,7 @@
         "ComputeRollOffPoint": true,
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -2,
-        "SkirtSizeZ": 14,
+        "SkirtSizeZ": 15,
         "BuildOnLayerCaps": {
           "LAYER_Water": true
         },
@@ -116843,7 +117378,7 @@
         },
         "AnimationDeath": [
           {
-            "Animation": "/units/zsb9603/zsb9603_ADeath.sca",
+            "Animation": "/units/zsb9603/zsb9603_adeath.sca",
             "AnimationRateMax": 1,
             "AnimationRateMin": 1,
             "Weight": 100
@@ -116854,7 +117389,7 @@
             "Effects": [
               {
                 "Bones": [
-                  "XSB0303"
+                  "ZSB9603"
                 ],
                 "Type": "SeaIdle01",
                 "Scale": 3
@@ -116866,16 +117401,20 @@
           "IconFadeInZoom": 130,
           "LODs": [
             {
-              "ShaderName": "SeraphimNavy",
+              "NormalsName": "/units/xsb0103/xsb0103_normalsts.dds",
               "LODCutoff": 200,
-              "LookupName": "/textures/environment/Falloff_seraphim_lookup.dds"
-            },
-            {
-              "LODCutoff": 600,
-              "SpecularName": "zsb9603_lod1_specteam.dds",
+              "SpecularName": "/units/xsb0103/xsb0103_specteam.dds",
               "ShaderName": "SeraphimNavy",
               "LookupName": "/textures/environment/Falloff_seraphim_lookup.dds",
-              "AlbedoName": "zsb9603_lod1_albedo.dds"
+              "AlbedoName": "/units/xsb0103/xsb0103_albedo.dds"
+            },
+            {
+              "NormalsName": "/units/xsb0103/xsb0103_lod1_normalsts.dds",
+              "LODCutoff": 600,
+              "SpecularName": "/units/xsb0103/xsb0103_lod1_specteam.dds",
+              "ShaderName": "SeraphimNavy",
+              "LookupName": "/textures/environment/Falloff_seraphim_lookup.dds",
+              "AlbedoName": "/units/xsb0103/xsb0103_lod1_albedo.dds"
             }
           ]
         },
