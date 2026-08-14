@@ -1,5 +1,5 @@
 {
-  "version": "3836",
+  "version": "3837",
   "units": [
     {
       "Categories": [
@@ -7781,7 +7781,7 @@
         "VISIBLETORECON",
         null
       ],
-      "Description": "Suport Land Factory",
+      "Description": "Support Land Factory",
       "BuildIconSortPriority": 41,
       "General": {
         "FactionName": "UEF",
@@ -9580,14 +9580,14 @@
         "EXPERIMENTAL",
         "HIGHALTAIR",
         "MOBILE",
-        "OMNI",
-        "OVERLAYOMNI",
         "OVERLAYRADAR",
+        "OVERLAYSONAR",
         "PRODUCTFA",
         "RECLAIMABLE",
         "SATELLITE",
         "SELECTABLE",
         "SNIPEMODE",
+        "SONAR",
         "UEF",
         "UNTARGETABLE",
         "VISIBLETORECON",
@@ -9633,12 +9633,13 @@
       },
       "Intel": {
         "RadarRadius": 200,
+        "SonarRadius": 60,
         "VisionRadius": 60
       },
       "Display": {
         "Abilities": [
-          "Omni Sensor",
-          "Radar"
+          "Radar",
+          "Sonar"
         ]
       },
       "Weapon": [
@@ -9652,25 +9653,25 @@
               ]
             }
           ],
-          "Damage": 60,
+          "Damage": 90,
           "BeamCollisionDelay": 0,
           "DamageType": "Normal",
           "TurretPitch": 0,
           "DisplayName": "Orbital Death Laser",
-          "TurretPitchSpeed": 360,
-          "MaxRadius": 32,
-          "TurretYawSpeed": 360,
-          "RackSalvoReloadTime": 0,
+          "TurretPitchSpeed": 8,
+          "WeaponCategory": "Direct Fire",
+          "MuzzleSalvoSize": 1,
+          "FiringTolerance": 0,
           "RackFireTogether": false,
           "RackSalvoChargeTime": 0,
-          "FiringTolerance": 0,
-          "BeamLifetime": 8,
-          "TurretYawRange": 180,
+          "RackSalvoReloadTime": 0,
+          "BeamLifetime": 5.3,
           "MuzzleSalvoDelay": 0,
-          "DamageRadius": 1,
+          "DamageRadius": 0.5,
           "TurretPitchRange": 180,
-          "MuzzleSalvoSize": 1,
-          "WeaponCategory": "Direct Fire"
+          "TurretYawRange": 180,
+          "TurretYawSpeed": 8,
+          "MaxRadius": 32
         },
         {
           "DamageType": "Normal",
@@ -9875,10 +9876,10 @@
       "Description": "Experimental Satellite System",
       "StrategicIconName": "icon_experimental_generic",
       "Economy": {
-        "BuildTime": 44800,
+        "BuildTime": 43600,
         "BuildRate": 300,
-        "BuildCostEnergy": 512000,
-        "BuildCostMass": 36000
+        "BuildCostEnergy": 800000,
+        "BuildCostMass": 32000
       },
       "General": {
         "FactionName": "UEF",
@@ -15096,17 +15097,17 @@
       "Description": "Mobile Bomb",
       "Economy": {
         "BuildTime": 700,
-        "MaintenanceConsumptionPerSecondEnergy": 10,
         "BuildCostEnergy": 1300,
         "BuildCostMass": 190
       },
       "Physics": {
         "TurnRate": 200,
         "Elevation": 0.25,
-        "MaxSpeed": 5
+        "MaxSpeed": 3.8
       },
       "Defense": {
-        "Health": 400
+        "Health": 1340,
+        "RegenRate": 10
       },
       "Id": "XRL0302",
       "Wreckage": {
@@ -15118,7 +15119,6 @@
       },
       "Display": {
         "Abilities": [
-          "Cloaking",
           "Suicide Weapon",
           "EMP Weapon"
         ]
@@ -19768,6 +19768,7 @@
         "LOWSELECTPRIO",
         "MOBILE",
         "NEEDMOBILEBUILD",
+        "OVERLAYCOUNTERINTEL",
         "OVERLAYINDIRECTFIRE",
         "PRODUCTSC1",
         "RECLAIMABLE",
@@ -19779,9 +19780,9 @@
         null
       ],
       "General": {
-        "UnitName": "Scathis",
-        "Icon": "amph",
         "FactionName": "Cybran",
+        "Icon": "amph",
+        "UnitName": "Scathis",
         "Classification": "RULEUC_MilitaryVehicle"
       },
       "BuildIconSortPriority": 10,
@@ -19795,7 +19796,8 @@
         "VisionRadius": 26
       },
       "Defense": {
-        "Health": 9000
+        "Health": 17000,
+        "RegenRate": 134
       },
       "Id": "URL0401",
       "Wreckage": {
@@ -19818,6 +19820,7 @@
       },
       "Economy": {
         "BuildTime": 240000,
+        "MaintenanceConsumptionPerSecondEnergy": 400,
         "BuildCostEnergy": 4000000,
         "BuildCostMass": 220000
       },
@@ -22771,7 +22774,7 @@
               ]
             }
           ],
-          "Damage": 14,
+          "Damage": 15,
           "DamageType": "Normal",
           "TurretPitch": 45,
           "TurretPitchRange": 45,
@@ -24247,9 +24250,9 @@
       "BuildIconSortPriority": 35,
       "Description": "Guided Missile",
       "Economy": {
-        "BuildTime": 1200,
-        "BuildCostEnergy": 4600,
-        "BuildCostMass": 230
+        "BuildTime": 1600,
+        "BuildCostEnergy": 8850,
+        "BuildCostMass": 270
       },
       "Air": {
         "TurnSpeed": 1,
@@ -24257,7 +24260,7 @@
         "MaxAirspeed": 13
       },
       "Defense": {
-        "Health": 90
+        "Health": 10
       },
       "Id": "DAA0206",
       "StrategicIconName": "icon_fighter2_bomb",
@@ -24286,17 +24289,17 @@
               ]
             }
           ],
-          "Damage": 50,
+          "Damage": 350,
           "ProjectileLifetime": 10,
           "DamageType": "Normal",
           "TurretPitch": 0,
           "TurretPitchRange": 40,
           "DisplayName": "Kamikaze",
           "TurretPitchSpeed": 720,
-          "DoTPulses": 20,
+          "DoTPulses": 6,
           "MaxRadius": 25,
           "ProjectileId": "/projectiles/AIFGuidedMissile01/AIFGuidedMissile01_proj.bp",
-          "DoTTime": 9.5,
+          "DoTTime": 4,
           "MuzzleVelocity": 18,
           "RackFireTogether": false,
           "RackSalvoChargeTime": 0,
@@ -24307,7 +24310,7 @@
           "FiringTolerance": 0.1,
           "RackSalvoReloadTime": 10,
           "TurretYawRange": 40,
-          "DamageRadius": 7.5,
+          "DamageRadius": 3.5,
           "WeaponCategory": "Kamikaze"
         },
         {
@@ -26482,7 +26485,6 @@
         "PRODUCTFA",
         "RECLAIMABLE",
         "SELECTABLE",
-        "SNIPEMODE",
         "SNIPER",
         "TECH3",
         "VISIBLETORECON",
@@ -26499,7 +26501,7 @@
       "Description": "Sniper Bot",
       "Physics": {
         "TurnRate": 110,
-        "MaxSpeed": 2.5
+        "MaxSpeed": 2.3
       },
       "Economy": {
         "BuildTime": 4950,
@@ -26542,7 +26544,7 @@
           "TurretPitch": 10,
           "TurretPitchRange": 60,
           "DisplayName": "Heavy Disruptor Cannon",
-          "MaxRadius": 60,
+          "MaxRadius": 65,
           "ProjectileId": "/projectiles/ADFHeavyDisruptorCannon01/ADFHeavyDisruptorCannon01_proj.bp",
           "MuzzleVelocity": 90,
           "RackFireTogether": false,
@@ -29214,7 +29216,7 @@
           "FiringTolerance": 1,
           "TurretYaw": -35,
           "TurretYawSpeed": 20,
-          "MaxRadius": 41
+          "MaxRadius": 30
         },
         {
           "DamageRadius": 0,
@@ -29245,7 +29247,7 @@
           "FiringTolerance": 1,
           "TurretYaw": 35,
           "TurretYawSpeed": 20,
-          "MaxRadius": 41
+          "MaxRadius": 30
         },
         {
           "DamageType": "DeathExplosion",
@@ -29338,10 +29340,10 @@
         "VisionRadius": 100
       },
       "Economy": {
-        "BuildTime": 50625,
+        "BuildTime": 48094,
         "BuildRate": 180,
-        "BuildCostMass": 45000,
-        "BuildCostEnergy": 1530000,
+        "BuildCostMass": 42750,
+        "BuildCostEnergy": 1453500,
         "MaintenanceConsumptionPerSecondEnergy": 500
       },
       "StrategicIconName": "icon_experimental_generic",
@@ -31901,7 +31903,7 @@
         "VISIBLETORECON",
         null
       ],
-      "Description": "Anti-Air Defense",
+      "Description": "Anti-Air Turret",
       "BuildIconSortPriority": 120,
       "StrategicIconName": "icon_structure1_antiair",
       "General": {
@@ -33327,7 +33329,7 @@
         "Classification": "RULEUC_MilitaryVehicle"
       },
       "StrategicIconName": "icon_land2_antiair",
-      "Description": "Mobile Anti-Air Cannon",
+      "Description": "Mobile AA Flak Artillery",
       "Economy": {
         "BuildTime": 800,
         "BuildCostEnergy": 800,
@@ -35825,7 +35827,6 @@
         "RECLAIMABLE",
         "SELECTABLE",
         "SERAPHIM",
-        "SNIPEMODE",
         "SNIPER",
         "TECH3",
         "VISIBLETORECON",
@@ -35841,7 +35842,7 @@
       "StrategicIconName": "icon_bot3_sniper",
       "Physics": {
         "TurnRate": 90,
-        "MaxSpeed": 2.3
+        "MaxSpeed": 2.2
       },
       "Defense": {
         "Health": 700
@@ -35903,7 +35904,7 @@
           "TurretPitchSpeed": 30,
           "RackSalvoReloadTime": 0,
           "TurretYawRange": 180,
-          "MaxRadius": 55
+          "MaxRadius": 60
         },
         {
           "DamageRadius": 0,
@@ -35935,7 +35936,7 @@
           "TurretPitchSpeed": 30,
           "RackSalvoReloadTime": 0,
           "TurretYawRange": 180,
-          "MaxRadius": 65
+          "MaxRadius": 70
         }
       ]
     },
@@ -37352,7 +37353,7 @@
         "VISIBLETORECON",
         null
       ],
-      "Description": "Anti-Air Defense",
+      "Description": "Anti-Air SAM Launcher",
       "BuildIconSortPriority": 120,
       "StrategicIconName": "icon_structure3_antiair",
       "General": {

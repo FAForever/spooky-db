@@ -1,5 +1,5 @@
 {
-  "version": "3836",
+  "version": "3837",
   "units": [
     {
       "Categories": [
@@ -130,12 +130,20 @@
       "SelectionSizeZ": 3.3,
       "SizeX": 4.2,
       "Physics": {
+        "MaxGroundVariation": 1.1,
         "MeshExtentsX": 5,
         "DragCoefficient": 0.2,
-        "MaxGroundVariation": 1.1,
-        "SkirtOffsetZ": -1.5,
         "SkirtOffsetX": -1.5,
+        "SkirtOffsetZ": -1.5,
         "FlattenSkirt": true,
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "RaisedPlatforms": [
           -1.1,
           -1.6,
@@ -174,7 +182,7 @@
           1.9,
           0
         ],
-        "MeshExtentsY": 4.5,
+        "SkirtSizeZ": 8,
         "MotionType": "RULEUMT_None",
         "RollOffPoints": [
           {
@@ -190,7 +198,7 @@
             "Z": 0
           }
         ],
-        "SkirtSizeZ": 8,
+        "MeshExtentsY": 4.5,
         "SkirtSizeX": 8,
         "MeshExtentsZ": 5.45
       },
@@ -463,6 +471,14 @@
         "MeshExtentsY": 2.75,
         "SkirtOffsetX": -0.5,
         "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 2,
         "MeshExtentsZ": 1.1
       },
@@ -1117,12 +1133,20 @@
       "SelectionSizeZ": 3.1,
       "SizeX": 3.5,
       "Physics": {
+        "MaxGroundVariation": 1.1,
         "MeshExtentsX": 5.5,
         "DragCoefficient": 0.2,
-        "MaxGroundVariation": 1.1,
-        "SkirtOffsetZ": -1.5,
         "SkirtOffsetX": -1.5,
+        "SkirtOffsetZ": -1.5,
         "FlattenSkirt": true,
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "RaisedPlatforms": [
           -1.6,
           -2,
@@ -1161,7 +1185,7 @@
           1.75,
           0
         ],
-        "MeshExtentsY": 4.5,
+        "SkirtSizeZ": 8,
         "MotionType": "RULEUMT_None",
         "RollOffPoints": [
           {
@@ -1177,7 +1201,7 @@
             "Z": 0
           }
         ],
-        "SkirtSizeZ": 8,
+        "MeshExtentsY": 4.5,
         "SkirtSizeX": 8,
         "MeshExtentsZ": 5.5
       },
@@ -1372,7 +1396,12 @@
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": 0,
         "BuildOnLayerCaps": {
-          "LAYER_Water": true
+          "LAYER_Sub": false,
+          "LAYER_Land": false,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": true,
+          "LAYER_Air": false
         },
         "SkirtSizeZ": 1,
         "MeshExtentsY": 2,
@@ -2483,7 +2512,12 @@
         "SkirtOffsetZ": -1,
         "SkirtSizeZ": 15,
         "BuildOnLayerCaps": {
-          "LAYER_Water": true
+          "LAYER_Sub": false,
+          "LAYER_Land": false,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": true,
+          "LAYER_Air": false
         },
         "SkirtOffsetX": -7,
         "MeshExtentsY": 4,
@@ -3759,8 +3793,12 @@
         "SkirtOffsetZ": -0.5,
         "BuildRestriction": "RULEUBR_OnMassDeposit",
         "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
           "LAYER_Seabed": true,
-          "LAYER_Land": true
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
         },
         "FlattenSkirt": false,
         "SkirtSizeZ": 2,
@@ -4837,8 +4875,12 @@
         "SkirtOffsetX": -0.5,
         "MotionType": "RULEUMT_None",
         "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
           "LAYER_Seabed": true,
-          "LAYER_Land": true
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
         },
         "SkirtSizeX": 2,
         "MeshExtentsZ": 1.25
@@ -5168,6 +5210,14 @@
         "MeshExtentsY": 0.75,
         "SkirtOffsetX": -0.5,
         "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 2,
         "MeshExtentsZ": 1
       },
@@ -5396,8 +5446,12 @@
         "SkirtOffsetZ": -1.5,
         "BuildRestriction": "RULEUBR_OnHydrocarbonDeposit",
         "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
           "LAYER_Seabed": true,
-          "LAYER_Land": true
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
         },
         "FlattenSkirt": false,
         "SkirtSizeZ": 6,
@@ -5592,6 +5646,14 @@
         "MeshExtentsY": 0.75,
         "SkirtOffsetX": -0.5,
         "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 2,
         "MeshExtentsZ": 1.25
       },
@@ -7077,6 +7139,14 @@
         "DragCoefficient": 0.2,
         "AlwaysAlignToTerrain": true,
         "SkirtOffsetZ": 0,
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeZ": 1,
         "MeshExtentsY": 1.15,
         "SkirtOffsetX": 0,
@@ -7211,8 +7281,12 @@
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": 0,
         "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
           "LAYER_Land": true,
-          "LAYER_Water": true
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": true,
+          "LAYER_Air": false
         },
         "SkirtSizeZ": 1,
         "MeshExtentsY": 1.15,
@@ -7451,7 +7525,12 @@
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": 0,
         "BuildOnLayerCaps": {
-          "LAYER_Water": true
+          "LAYER_Sub": false,
+          "LAYER_Land": false,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": true,
+          "LAYER_Air": false
         },
         "SkirtSizeZ": 1,
         "MeshExtentsY": 1,
@@ -7743,11 +7822,19 @@
         "DragCoefficient": 0.2,
         "AlwaysAlignToTerrain": true,
         "SkirtOffsetZ": 0,
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "MaxGroundVariation": 50,
-        "SkirtSizeZ": 1,
+        "MeshExtentsY": 1.15,
         "SkirtOffsetX": 0,
         "MotionType": "RULEUMT_None",
-        "MeshExtentsY": 1.15,
+        "SkirtSizeZ": 1,
         "SkirtSizeX": 1,
         "MeshExtentsZ": 1.1
       },
@@ -7858,6 +7945,14 @@
         "MeshExtentsY": 1.6,
         "SkirtOffsetX": -1.5,
         "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 6,
         "MeshExtentsZ": 3.2
       },
@@ -9654,12 +9749,12 @@
           "RackSalvoReloadTime": 0,
           "TargetPriorities": [
             "CRUISER",
-            "(NAVAL * TECH2 * SHIELD)",
-            "(STRUCTURE * DEFENSE * ANTIAIR)",
-            "(TECH3 * NAVAL * CARRIER)",
+            "NAVAL TECH2 SHIELD",
+            "STRUCTURE DEFENSE ANTIAIR",
+            "TECH3 NAVAL CARRIER",
             "SUBMERSIBLE",
-            "NAVAL * TECH2",
-            "NAVAL * TECH3",
+            "NAVAL TECH2",
+            "NAVAL TECH3",
             "MOBILE",
             "(STRUCTURE * DEFENSE - ANTIMISSILE)",
             "ALLUNITS"
@@ -12666,8 +12761,12 @@
         "SkirtOffsetZ": -0.5,
         "BuildRestriction": "RULEUBR_OnMassDeposit",
         "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
           "LAYER_Seabed": true,
-          "LAYER_Land": true
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
         },
         "FlattenSkirt": false,
         "SkirtSizeZ": 2,
@@ -12904,7 +13003,15 @@
       "Physics": {
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -1.5,
-        "FlattenSkirt": true,
+        "SkirtSizeZ": 8,
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "RaisedPlatforms": [
           -1.1,
           -1.6,
@@ -12943,8 +13050,8 @@
           1.9,
           0
         ],
-        "SkirtSizeZ": 8,
         "MotionType": "RULEUMT_None",
+        "SkirtOffsetX": -1.5,
         "RollOffPoints": [
           {
             "UnitSpin": 90,
@@ -12959,7 +13066,7 @@
             "Z": 0
           }
         ],
-        "SkirtOffsetX": -1.5,
+        "FlattenSkirt": true,
         "SkirtSizeX": 8,
         "MaxGroundVariation": 1.1
       },
@@ -13183,6 +13290,14 @@
         "MeshExtentsY": 1,
         "SkirtOffsetX": -0.5,
         "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 2,
         "MeshExtentsZ": 1.25
       },
@@ -13336,7 +13451,10 @@
       "Physics": {
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -1.5,
-        "FlattenSkirt": true,
+        "SkirtSizeZ": 8,
+        "BuildOnLayerCaps": {
+          "LAYER_Land": true
+        },
         "RaisedPlatforms": [
           -1.1,
           -1.6,
@@ -13375,8 +13493,8 @@
           1.9,
           0
         ],
-        "SkirtSizeZ": 8,
         "MotionType": "RULEUMT_None",
+        "SkirtOffsetX": -1.5,
         "RollOffPoints": [
           {
             "UnitSpin": 90,
@@ -13391,7 +13509,7 @@
             "Z": 0
           }
         ],
-        "SkirtOffsetX": -1.5,
+        "FlattenSkirt": true,
         "SkirtSizeX": 8,
         "MaxGroundVariation": 1.1
       },
@@ -13605,7 +13723,15 @@
       "Physics": {
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -1.5,
-        "FlattenSkirt": true,
+        "SkirtSizeZ": 8,
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "RaisedPlatforms": [
           -1.6,
           -2,
@@ -13644,8 +13770,8 @@
           1.75,
           0
         ],
-        "SkirtSizeZ": 8,
         "MotionType": "RULEUMT_None",
+        "SkirtOffsetX": -1.5,
         "RollOffPoints": [
           {
             "UnitSpin": 0,
@@ -13660,7 +13786,7 @@
             "Z": 0
           }
         ],
-        "SkirtOffsetX": -1.5,
+        "FlattenSkirt": true,
         "SkirtSizeX": 8,
         "MaxGroundVariation": 1.1
       },
@@ -14125,7 +14251,15 @@
       "Physics": {
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -1.5,
-        "FlattenSkirt": true,
+        "SkirtSizeZ": 8,
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "RaisedPlatforms": [
           -1.6,
           -2,
@@ -14164,8 +14298,8 @@
           1.75,
           0
         ],
-        "SkirtSizeZ": 8,
         "MotionType": "RULEUMT_None",
+        "SkirtOffsetX": -1.5,
         "RollOffPoints": [
           {
             "UnitSpin": 0,
@@ -14180,7 +14314,7 @@
             "Z": 0
           }
         ],
-        "SkirtOffsetX": -1.5,
+        "FlattenSkirt": true,
         "SkirtSizeX": 8,
         "MaxGroundVariation": 1.1
       },
@@ -14315,7 +14449,12 @@
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -1,
         "BuildOnLayerCaps": {
-          "LAYER_Water": true
+          "LAYER_Sub": false,
+          "LAYER_Land": false,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": true,
+          "LAYER_Air": false
         },
         "SkirtSizeZ": 15,
         "RollOffPoints": [
@@ -14668,6 +14807,14 @@
         "MeshExtentsY": 1.4,
         "SkirtOffsetX": -1.5,
         "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 6,
         "MeshExtentsZ": 3.1
       },
@@ -14746,7 +14893,12 @@
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -1,
         "BuildOnLayerCaps": {
-          "LAYER_Water": true
+          "LAYER_Sub": false,
+          "LAYER_Land": false,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": true,
+          "LAYER_Air": false
         },
         "SkirtSizeZ": 15,
         "RollOffPoints": [
@@ -15796,6 +15948,14 @@
         "MeshExtentsY": 1.15,
         "SkirtOffsetX": -0.5,
         "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 2,
         "MeshExtentsZ": 1.5
       },
@@ -16239,8 +16399,12 @@
         "SkirtOffsetX": -0.5,
         "MotionType": "RULEUMT_None",
         "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
           "LAYER_Land": true,
-          "LAYER_Water": true
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": true,
+          "LAYER_Air": false
         },
         "SkirtSizeX": 2,
         "MeshExtentsZ": 1.65
@@ -16508,7 +16672,12 @@
         "SkirtOffsetX": -0.5,
         "MotionType": "RULEUMT_None",
         "BuildOnLayerCaps": {
-          "LAYER_Water": true
+          "LAYER_Sub": false,
+          "LAYER_Land": false,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": true,
+          "LAYER_Air": false
         },
         "SkirtSizeX": 3,
         "MeshExtentsZ": 1.65
@@ -16769,6 +16938,14 @@
         "MeshExtentsY": 1.65,
         "SkirtOffsetX": -0.5,
         "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 2,
         "MeshExtentsZ": 4
       },
@@ -17027,14 +17204,22 @@
       },
       "SizeZ": 0.75,
       "Physics": {
-        "FlattenSkirt": true,
-        "HorizontalSkirt": true,
-        "MotionType": "RULEUMT_None",
-        "SkirtOffsetX": -0.5,
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -0.5,
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
+        "SkirtSizeZ": 2,
+        "FlattenSkirt": true,
+        "HorizontalSkirt": true,
+        "SkirtOffsetX": -0.5,
         "SkirtSizeX": 2,
-        "SkirtSizeZ": 2
+        "MotionType": "RULEUMT_None"
       },
       "Defense": {
         "ArmorType": "Structure",
@@ -17366,8 +17551,12 @@
         "SkirtOffsetX": -0.5,
         "MotionType": "RULEUMT_None",
         "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
           "LAYER_Land": true,
-          "LAYER_Water": true
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": true,
+          "LAYER_Air": false
         },
         "SkirtSizeX": 2,
         "MeshExtentsZ": 1.5
@@ -17575,9 +17764,17 @@
         "SkirtOffsetZ": -1.5,
         "FlattenSkirt": true,
         "SkirtSizeZ": 6,
-        "MotionType": "RULEUMT_None",
-        "SkirtOffsetX": -1.5,
         "MeshExtentsY": 4.5,
+        "SkirtOffsetX": -1.5,
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
+        "MotionType": "RULEUMT_None",
         "SkirtSizeX": 6,
         "MaxGroundVariation": 1.1
       },
@@ -17815,6 +18012,14 @@
         "MeshExtentsY": 3.2,
         "SkirtOffsetX": -0.5,
         "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 2,
         "MeshExtentsZ": 1.35
       },
@@ -17943,7 +18148,12 @@
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": 0,
         "BuildOnLayerCaps": {
-          "LAYER_Water": true
+          "LAYER_Sub": false,
+          "LAYER_Land": false,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": true,
+          "LAYER_Air": false
         },
         "SkirtSizeZ": 1,
         "MeshExtentsY": 2.5,
@@ -18162,6 +18372,14 @@
         "MeshExtentsY": 5,
         "SkirtOffsetX": -1.5,
         "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 6,
         "MeshExtentsZ": 3.2
       },
@@ -18310,6 +18528,14 @@
         "MeshExtentsY": 2.2,
         "SkirtOffsetX": -0.5,
         "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 2,
         "MeshExtentsZ": 2
       },
@@ -23060,7 +23286,7 @@
         "TurnSpeed": 1.2,
         "KRoll": 2,
         "MaxAirspeed": 17,
-        "LiftFactor": 10,
+        "LiftFactor": 7,
         "KLift": 3,
         "RandomBreakOffDistanceMult": 1,
         "PredictAheadForBombDrop": 3,
@@ -23559,7 +23785,15 @@
       "Physics": {
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -1.5,
-        "FlattenSkirt": true,
+        "SkirtSizeZ": 8,
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "RaisedPlatforms": [
           -1.1,
           -1.6,
@@ -23622,8 +23856,8 @@
           1.9,
           0
         ],
-        "SkirtSizeZ": 8,
         "MotionType": "RULEUMT_None",
+        "SkirtOffsetX": -1.5,
         "RollOffPoints": [
           {
             "UnitSpin": 90,
@@ -23638,7 +23872,7 @@
             "Z": 0
           }
         ],
-        "SkirtOffsetX": -1.5,
+        "FlattenSkirt": true,
         "SkirtSizeX": 8,
         "MaxGroundVariation": 1.1
       },
@@ -23775,8 +24009,12 @@
         "SkirtOffsetZ": -0.5,
         "BuildRestriction": "RULEUBR_OnMassDeposit",
         "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
           "LAYER_Seabed": true,
-          "LAYER_Land": true
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
         },
         "FlattenSkirt": false,
         "SkirtSizeZ": 2,
@@ -23901,7 +24139,7 @@
         "VISIBLETORECON",
         null
       ],
-      "Description": "Suport Land Factory",
+      "Description": "Support Land Factory",
       "LifeBarSize": 4.75,
       "BuildIconSortPriority": 41,
       "General": {
@@ -24012,7 +24250,10 @@
       "Physics": {
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -1.5,
-        "FlattenSkirt": true,
+        "SkirtSizeZ": 8,
+        "BuildOnLayerCaps": {
+          "LAYER_Land": true
+        },
         "RaisedPlatforms": [
           -1.1,
           -1.6,
@@ -24075,8 +24316,8 @@
           1.9,
           0
         ],
-        "SkirtSizeZ": 8,
         "MotionType": "RULEUMT_None",
+        "SkirtOffsetX": -1.5,
         "RollOffPoints": [
           {
             "UnitSpin": 90,
@@ -24091,7 +24332,7 @@
             "Z": 0
           }
         ],
-        "SkirtOffsetX": -1.5,
+        "FlattenSkirt": true,
         "SkirtSizeX": 8,
         "MaxGroundVariation": 1.1
       },
@@ -24814,7 +25055,15 @@
       "Physics": {
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -1.5,
-        "FlattenSkirt": true,
+        "SkirtSizeZ": 8,
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "RaisedPlatforms": [
           -1.6,
           -2,
@@ -24853,8 +25102,8 @@
           1.75,
           0
         ],
-        "SkirtSizeZ": 8,
         "MotionType": "RULEUMT_None",
+        "SkirtOffsetX": -1.5,
         "RollOffPoints": [
           {
             "UnitSpin": 0,
@@ -24869,7 +25118,7 @@
             "Z": 0
           }
         ],
-        "SkirtOffsetX": -1.5,
+        "FlattenSkirt": true,
         "SkirtSizeX": 8,
         "MaxGroundVariation": 1.1
       },
@@ -25103,12 +25352,20 @@
         "MeshExtentsX": 3.2,
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -1.5,
-        "FlattenSkirt": true,
         "MaxGroundVariation": 1.1,
-        "SkirtSizeZ": 6,
+        "FlattenSkirt": true,
         "SkirtOffsetX": -1.5,
-        "MotionType": "RULEUMT_None",
         "MeshExtentsY": 2,
+        "SkirtSizeZ": 6,
+        "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 6,
         "MeshExtentsZ": 3.2
       },
@@ -25269,7 +25526,15 @@
       "Physics": {
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -1.5,
-        "FlattenSkirt": true,
+        "SkirtSizeZ": 8,
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "RaisedPlatforms": [
           -1.6,
           -2,
@@ -25308,8 +25573,8 @@
           1.75,
           0
         ],
-        "SkirtSizeZ": 8,
         "MotionType": "RULEUMT_None",
+        "SkirtOffsetX": -1.5,
         "RollOffPoints": [
           {
             "UnitSpin": 0,
@@ -25324,7 +25589,7 @@
             "Z": 0
           }
         ],
-        "SkirtOffsetX": -1.5,
+        "FlattenSkirt": true,
         "SkirtSizeX": 8,
         "MaxGroundVariation": 1.1
       },
@@ -25448,7 +25713,12 @@
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -1,
         "BuildOnLayerCaps": {
-          "LAYER_Water": true
+          "LAYER_Sub": false,
+          "LAYER_Land": false,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": true,
+          "LAYER_Air": false
         },
         "SkirtSizeZ": 15,
         "RollOffPoints": [
@@ -26233,7 +26503,12 @@
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -1,
         "BuildOnLayerCaps": {
-          "LAYER_Water": true
+          "LAYER_Sub": false,
+          "LAYER_Land": false,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": true,
+          "LAYER_Air": false
         },
         "SkirtSizeZ": 15,
         "RollOffPoints": [
@@ -26465,12 +26740,20 @@
         "MeshExtentsX": 5.2,
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -1.5,
-        "FlattenSkirt": true,
         "MaxGroundVariation": 1.1,
-        "SkirtSizeZ": 8,
+        "FlattenSkirt": true,
         "SkirtOffsetX": -1.5,
-        "MotionType": "RULEUMT_None",
         "MeshExtentsY": 4.2,
+        "SkirtSizeZ": 8,
+        "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 8,
         "MeshExtentsZ": 5.2
       },
@@ -27025,6 +27308,14 @@
         "MeshExtentsY": 1.15,
         "SkirtOffsetX": -0.5,
         "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 2,
         "MeshExtentsZ": 1.1
       },
@@ -27194,8 +27485,12 @@
         "SkirtOffsetX": -0.5,
         "MotionType": "RULEUMT_None",
         "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
           "LAYER_Land": true,
-          "LAYER_Water": true
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": true,
+          "LAYER_Air": false
         },
         "SkirtSizeX": 2,
         "MeshExtentsZ": 1.6
@@ -27446,12 +27741,20 @@
         "MeshExtentsX": 6,
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -1.5,
-        "FlattenSkirt": true,
         "MaxGroundVariation": 1.1,
-        "SkirtSizeZ": 8,
+        "FlattenSkirt": true,
         "SkirtOffsetX": -1.5,
-        "MotionType": "RULEUMT_None",
         "MeshExtentsY": 3.75,
+        "SkirtSizeZ": 8,
+        "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 8,
         "MeshExtentsZ": 9
       },
@@ -27676,12 +27979,20 @@
         "MeshExtentsX": 3.6,
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -1.5,
-        "FlattenSkirt": true,
         "SkirtSizeZ": 6,
-        "MeshExtentsY": 1.45,
+        "FlattenSkirt": true,
         "SkirtOffsetX": -1.5,
-        "HorizontalSkirt": true,
+        "MeshExtentsY": 1.45,
         "MotionType": "RULEUMT_None",
+        "HorizontalSkirt": true,
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 6,
         "MeshExtentsZ": 3.6
       },
@@ -27949,6 +28260,14 @@
         "MeshExtentsY": 0.75,
         "SkirtOffsetX": -0.5,
         "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 3,
         "MeshExtentsZ": 2
       },
@@ -28230,12 +28549,20 @@
         "MeshExtentsX": 4.25,
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -1.5,
-        "FlattenSkirt": true,
         "MaxGroundVariation": 1.1,
-        "SkirtSizeZ": 6,
+        "FlattenSkirt": true,
         "SkirtOffsetX": -1.5,
-        "MotionType": "RULEUMT_None",
         "MeshExtentsY": 4.25,
+        "SkirtSizeZ": 6,
+        "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 6,
         "MeshExtentsZ": 4.5
       },
@@ -28726,6 +29053,14 @@
         "MeshExtentsY": 4,
         "SkirtOffsetX": -0.5,
         "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 2,
         "MeshExtentsZ": 2
       },
@@ -28814,6 +29149,14 @@
         "MeshExtentsY": 2.5,
         "SkirtOffsetX": -0.5,
         "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 2,
         "MeshExtentsZ": 2
       },
@@ -29016,6 +29359,14 @@
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -1.5,
         "FlattenSkirt": true,
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "RaisedPlatforms": [
           -1.5,
           -1.5,
@@ -29054,7 +29405,7 @@
           3.4,
           0
         ],
-        "SkirtSizeZ": 10,
+        "MotionType": "RULEUMT_None",
         "OccupyRects": [
           -2.5,
           0,
@@ -29079,9 +29430,9 @@
             "Z": -3
           }
         ],
-        "SkirtSizeX": 10,
         "SkirtOffsetX": -1.5,
-        "MotionType": "RULEUMT_None"
+        "SkirtSizeX": 10,
+        "SkirtSizeZ": 10
       },
       "Defense": {
         "ArmorType": "Structure",
@@ -29967,14 +30318,14 @@
         "EXPERIMENTAL",
         "HIGHALTAIR",
         "MOBILE",
-        "OMNI",
-        "OVERLAYOMNI",
         "OVERLAYRADAR",
+        "OVERLAYSONAR",
         "PRODUCTFA",
         "RECLAIMABLE",
         "SATELLITE",
         "SELECTABLE",
         "SNIPEMODE",
+        "SONAR",
         "UEF",
         "UNTARGETABLE",
         "VISIBLETORECON",
@@ -30119,14 +30470,14 @@
       },
       "Intel": {
         "RadarRadius": 200,
-        "OmniRadius": 60,
+        "SonarRadius": 60,
         "VisionRadius": 60
       },
       "Display": {
         "UniformScale": 0.05,
         "Abilities": [
-          "Omni Sensor",
-          "Radar"
+          "Radar",
+          "Sonar"
         ],
         "Mesh": {
           "IconFadeInZoom": 130,
@@ -30152,6 +30503,7 @@
           "RateOfFire": 0.05,
           "TurretYaw": 0,
           "DamageFriendly": true,
+          "EnergyChargeForFirstShot": false,
           "RackBones": [
             {
               "MuzzleBones": [
@@ -30160,7 +30512,7 @@
               "RackBone": "Turret_Barrel01"
             }
           ],
-          "Damage": 60,
+          "Damage": 90,
           "BeamCollisionDelay": 0,
           "DamageType": "Normal",
           "Audio": {
@@ -30173,34 +30525,36 @@
           "TurretPitch": 0,
           "AutoInitiateAttackCommand": true,
           "DisplayName": "Orbital Death Laser",
-          "TurretPitchSpeed": 360,
+          "TurretPitchSpeed": 8,
           "MaximumBeamLength": 200,
           "RackSalvoSize": 1,
           "RangeCategory": "UWRC_DirectFire",
+          "EnergyRequired": 72000,
           "AboveWaterTargetsOnly": true,
           "RackSlavedToTurret": false,
+          "EnergyDrainPerSecond": 5000,
           "FireTargetLayerCapsTable": {
             "Air": "Land|Water|Seabed",
             "Land": "Land|Water|Seabed",
             "Water": "Land|Water|Seabed"
           },
-          "RackRecoilDistance": -1,
-          "NeedPrep": true,
-          "MaxRadius": 32,
           "MuzzleChargeDelay": 0,
-          "TurretYawSpeed": 360,
-          "RackSalvoReloadTime": 0,
+          "NeedPrep": true,
+          "WeaponCategory": "Direct Fire",
+          "MuzzleSalvoSize": 1,
+          "RackReloadTimeout": 0,
+          "FiringTolerance": 0,
           "RackFireTogether": false,
           "RackSalvoChargeTime": 0,
           "TurretBoneMuzzle": "Turret_Barrel_Muzzle",
           "WeaponUnpacks": false,
-          "FiringTolerance": 0,
-          "BeamLifetime": 8,
+          "RackSalvoReloadTime": 0,
+          "BeamLifetime": 5.3,
           "Turreted": true,
           "RenderFireClock": true,
-          "TurretYawRange": 180,
-          "MuzzleSalvoDelay": 0,
           "CollideFriendly": false,
+          "MuzzleSalvoDelay": 0,
+          "BallisticArc": "RULEUBA_None",
           "TargetPriorities": [
             "EXPERIMENTAL MASSFABRICATION",
             "(EXPERIMENTAL * ARTILLERY - FACTORY)",
@@ -30217,17 +30571,17 @@
             "ALLUNITS"
           ],
           "TargetRestrictDisallow": "UNTARGETABLE",
-          "DamageRadius": 1,
+          "DamageRadius": 0.5,
           "TurretBoneYaw": "Turret_Barrel01",
           "WeaponRepackTimeout": 10,
-          "RackReloadTimeout": 0,
+          "RackRecoilDistance": -1,
           "TurretPitchRange": 180,
           "SlavedToBody": false,
-          "BallisticArc": "RULEUBA_None",
+          "TurretYawRange": 180,
           "TurretDualManipulators": false,
           "TurretBonePitch": "Turret_Barrel01",
-          "MuzzleSalvoSize": 1,
-          "WeaponCategory": "Direct Fire"
+          "TurretYawSpeed": 8,
+          "MaxRadius": 32
         },
         {
           "DamageType": "Normal",
@@ -30806,7 +31160,7 @@
       "LifeBarSize": 5.5,
       "StrategicIconName": "icon_experimental_generic",
       "Economy": {
-        "BuildTime": 44800,
+        "BuildTime": 43600,
         "RebuildBonusIds": [
           "xeb2402"
         ],
@@ -30814,8 +31168,8 @@
         "BuildableCategory": [
           "SATELLITE"
         ],
-        "BuildCostEnergy": 512000,
-        "BuildCostMass": 36000
+        "BuildCostEnergy": 800000,
+        "BuildCostMass": 32000
       },
       "Footprint": {
         "SizeX": 6,
@@ -30975,12 +31329,20 @@
         "MeshExtentsX": 5.4,
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -1.5,
-        "FlattenSkirt": true,
         "MaxGroundVariation": 1.2,
-        "SkirtSizeZ": 9,
+        "FlattenSkirt": true,
         "SkirtOffsetX": -1.5,
-        "MotionType": "RULEUMT_None",
         "MeshExtentsY": 5.2,
+        "SkirtSizeZ": 9,
+        "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 9,
         "MeshExtentsZ": 5.7
       },
@@ -31045,12 +31407,20 @@
         "MeshExtentsX": 7,
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -1.5,
-        "FlattenSkirt": true,
         "MaxGroundVariation": 1.2,
-        "SkirtSizeZ": 8,
+        "FlattenSkirt": true,
         "SkirtOffsetX": -1.5,
-        "MotionType": "RULEUMT_None",
         "MeshExtentsY": 4,
+        "SkirtSizeZ": 8,
+        "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 8,
         "MeshExtentsZ": 7.25
       },
@@ -31394,7 +31764,15 @@
       "Physics": {
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -1.5,
-        "FlattenSkirt": true,
+        "SkirtSizeZ": 8,
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "RaisedPlatforms": [
           -1.75,
           -1.75,
@@ -31433,8 +31811,8 @@
           1.75,
           0.35
         ],
-        "SkirtSizeZ": 8,
         "MotionType": "RULEUMT_None",
+        "SkirtOffsetX": -1.5,
         "RollOffPoints": [
           {
             "UnitSpin": 90,
@@ -31449,7 +31827,7 @@
             "Z": 0.35
           }
         ],
-        "SkirtOffsetX": -1.5,
+        "FlattenSkirt": true,
         "SkirtSizeX": 8,
         "MaxGroundVariation": 1.1
       },
@@ -32178,7 +32556,15 @@
       "Physics": {
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -1.5,
-        "FlattenSkirt": true,
+        "SkirtSizeZ": 8,
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "RaisedPlatforms": [
           -1.4,
           -2,
@@ -32217,8 +32603,8 @@
           1.6,
           0
         ],
-        "SkirtSizeZ": 8,
         "MotionType": "RULEUMT_None",
+        "SkirtOffsetX": -1.5,
         "RollOffPoints": [
           {
             "UnitSpin": 90,
@@ -32233,7 +32619,7 @@
             "Z": 0.35
           }
         ],
-        "SkirtOffsetX": -1.5,
+        "FlattenSkirt": true,
         "SkirtSizeX": 8,
         "MaxGroundVariation": 1.1
       },
@@ -32966,7 +33352,12 @@
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -2,
         "BuildOnLayerCaps": {
-          "LAYER_Water": true
+          "LAYER_Sub": false,
+          "LAYER_Land": false,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": true,
+          "LAYER_Air": false
         },
         "SkirtSizeZ": 15,
         "RollOffPoints": [
@@ -34181,8 +34572,12 @@
         "SkirtOffsetZ": -0.5,
         "BuildRestriction": "RULEUBR_OnMassDeposit",
         "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
           "LAYER_Seabed": true,
-          "LAYER_Land": true
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
         },
         "FlattenSkirt": false,
         "SkirtSizeZ": 2,
@@ -35955,8 +36350,12 @@
       "StrategicIconSortPriority": 250,
       "Physics": {
         "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
           "LAYER_Seabed": true,
-          "LAYER_Land": true
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
         },
         "FlattenSkirt": true,
         "MotionType": "RULEUMT_None",
@@ -36423,13 +36822,21 @@
       },
       "StrategicIconSortPriority": 250,
       "Physics": {
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "FlattenSkirt": true,
-        "SkirtSizeZ": 2,
-        "SkirtOffsetZ": -0.5,
-        "DragCoefficient": 0.2,
+        "MotionType": "RULEUMT_None",
         "SkirtOffsetX": -0.5,
+        "DragCoefficient": 0.2,
+        "SkirtOffsetZ": -0.5,
         "SkirtSizeX": 2,
-        "MotionType": "RULEUMT_None"
+        "SkirtSizeZ": 2
       },
       "Weapon": [
         {
@@ -36499,8 +36906,12 @@
         "MotionType": "RULEUMT_None",
         "BuildRestriction": "RULEUBR_OnHydrocarbonDeposit",
         "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
           "LAYER_Seabed": true,
-          "LAYER_Land": true
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
         },
         "SkirtSizeZ": 6,
         "SkirtSizeX": 6,
@@ -36770,13 +37181,21 @@
       },
       "StrategicIconSortPriority": 250,
       "Physics": {
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "FlattenSkirt": true,
-        "SkirtSizeZ": 2,
-        "SkirtOffsetZ": -0.5,
-        "DragCoefficient": 0.2,
+        "MotionType": "RULEUMT_None",
         "SkirtOffsetX": -0.5,
+        "DragCoefficient": 0.2,
+        "SkirtOffsetZ": -0.5,
         "SkirtSizeX": 2,
-        "MotionType": "RULEUMT_None"
+        "SkirtSizeZ": 2
       },
       "Weapon": [
         {
@@ -38190,13 +38609,21 @@
       },
       "StrategicIconSortPriority": 205,
       "Physics": {
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtOffsetZ": 0,
-        "SkirtSizeZ": 1,
+        "MotionType": "RULEUMT_None",
         "SkirtOffsetX": 0,
         "DragCoefficient": 0.2,
         "AlwaysAlignToTerrain": true,
         "SkirtSizeX": 1,
-        "MotionType": "RULEUMT_None"
+        "SkirtSizeZ": 1
       },
       "Weapon": [
         {
@@ -38321,8 +38748,12 @@
       },
       "Physics": {
         "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
           "LAYER_Land": true,
-          "LAYER_Water": true
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": true,
+          "LAYER_Air": false
         },
         "SkirtSizeZ": 1,
         "SkirtOffsetZ": 0,
@@ -38561,7 +38992,12 @@
       },
       "Physics": {
         "BuildOnLayerCaps": {
-          "LAYER_Water": true
+          "LAYER_Sub": false,
+          "LAYER_Land": false,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": true,
+          "LAYER_Air": false
         },
         "SkirtSizeZ": 1,
         "SkirtOffsetZ": 0,
@@ -38922,13 +39358,21 @@
       },
       "StrategicIconSortPriority": 64,
       "Physics": {
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "FlattenSkirt": true,
-        "SkirtSizeZ": 2,
-        "SkirtOffsetZ": -0.5,
-        "DragCoefficient": 0.2,
+        "MotionType": "RULEUMT_None",
         "SkirtOffsetX": -0.5,
+        "DragCoefficient": 0.2,
+        "SkirtOffsetZ": -0.5,
         "SkirtSizeX": 2,
-        "MotionType": "RULEUMT_None"
+        "SkirtSizeZ": 2
       },
       "BuildIconSortPriority": 180
     },
@@ -39051,7 +39495,12 @@
       "SelectionSizeZ": 0.4,
       "Physics": {
         "BuildOnLayerCaps": {
-          "LAYER_Water": true
+          "LAYER_Sub": false,
+          "LAYER_Land": false,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": true,
+          "LAYER_Air": false
         },
         "SkirtSizeZ": 1,
         "SkirtOffsetZ": 0,
@@ -39206,12 +39655,20 @@
       },
       "StrategicIconSortPriority": 210,
       "Physics": {
-        "MotionType": "RULEUMT_None",
-        "SkirtOffsetX": 0,
-        "SkirtSizeZ": 1,
-        "SkirtOffsetZ": 0,
         "DragCoefficient": 0.2,
         "AlwaysAlignToTerrain": true,
+        "SkirtOffsetZ": 0,
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
+        "SkirtSizeZ": 1,
+        "MotionType": "RULEUMT_None",
+        "SkirtOffsetX": 0,
         "SkirtSizeX": 1,
         "MaxGroundVariation": 50
       },
@@ -39308,13 +39765,21 @@
       "SizeY": 1.5,
       "SelectionSizeZ": 2.15,
       "Physics": {
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "FlattenSkirt": true,
-        "SkirtSizeZ": 6,
-        "SkirtOffsetZ": -1.5,
-        "DragCoefficient": 0.2,
+        "MotionType": "RULEUMT_None",
         "SkirtOffsetX": -1.5,
+        "DragCoefficient": 0.2,
+        "SkirtOffsetZ": -1.5,
         "SkirtSizeX": 6,
-        "MotionType": "RULEUMT_None"
+        "SkirtSizeZ": 6
       },
       "SelectionThickness": 0.32,
       "CollisionOffsetY": -0.25,
@@ -40612,12 +41077,12 @@
           "RackSlavedToTurret": false,
           "TargetPriorities": [
             "CRUISER",
-            "(NAVAL * TECH2 * SHIELD)",
-            "(STRUCTURE * DEFENSE * ANTIAIR)",
-            "(TECH3 * NAVAL * CARRIER)",
+            "NAVAL TECH2 SHIELD",
+            "STRUCTURE DEFENSE ANTIAIR",
+            "TECH3 NAVAL CARRIER",
             "SUBMERSIBLE",
-            "NAVAL * TECH2",
-            "NAVAL * TECH3",
+            "NAVAL TECH2",
+            "NAVAL TECH3",
             "MOBILE",
             "(STRUCTURE * DEFENSE - ANTIMISSILE)",
             "ALLUNITS"
@@ -43645,6 +44110,14 @@
       },
       "StrategicIconSortPriority": 220,
       "Physics": {
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "MotionType": "RULEUMT_None",
         "DragCoefficient": 0.2,
         "AlwaysAlignToTerrain": true,
@@ -44139,8 +44612,12 @@
         "AlwaysAlignToTerrain": true,
         "SkirtOffsetZ": -0.5,
         "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
           "LAYER_Seabed": true,
-          "LAYER_Land": true
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
         },
         "SkirtSizeZ": 2,
         "MotionType": "RULEUMT_None",
@@ -44814,8 +45291,8 @@
           "BuildEffectBones": [
             "Arm01_Muzzle",
             "Arm02_Muzzle",
-            "Arm03_Muzzle",
-            "Arm03_Muzzle"
+            "Arm05_Muzzle",
+            "Arm06_Muzzle"
           ]
         },
         "FactionName": "Cybran",
@@ -44907,7 +45384,15 @@
       "Physics": {
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -1.5,
-        "FlattenSkirt": true,
+        "SkirtSizeZ": 8,
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "RaisedPlatforms": [
           -1.75,
           -1.75,
@@ -44946,8 +45431,8 @@
           1.75,
           0.35
         ],
-        "SkirtSizeZ": 8,
         "MotionType": "RULEUMT_None",
+        "SkirtOffsetX": -1.5,
         "RollOffPoints": [
           {
             "UnitSpin": 90,
@@ -44962,7 +45447,7 @@
             "Z": 0.35
           }
         ],
-        "SkirtOffsetX": -1.5,
+        "FlattenSkirt": true,
         "SkirtSizeX": 8,
         "MaxGroundVariation": 1.1
       },
@@ -45182,13 +45667,21 @@
       },
       "StrategicIconSortPriority": 250,
       "Physics": {
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "FlattenSkirt": true,
-        "SkirtSizeZ": 2,
-        "SkirtOffsetZ": -0.5,
-        "DragCoefficient": 0.2,
+        "MotionType": "RULEUMT_None",
         "SkirtOffsetX": -0.5,
+        "DragCoefficient": 0.2,
+        "SkirtOffsetZ": -0.5,
         "SkirtSizeX": 2,
-        "MotionType": "RULEUMT_None"
+        "SkirtSizeZ": 2
       },
       "Weapon": [
         {
@@ -45250,8 +45743,8 @@
           "BuildEffectBones": [
             "Arm01_Muzzle",
             "Arm02_Muzzle",
-            "Arm03_Muzzle",
-            "Arm03_Muzzle"
+            "Arm05_Muzzle",
+            "Arm06_Muzzle"
           ]
         },
         "FactionName": "Cybran",
@@ -45343,7 +45836,10 @@
       "Physics": {
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -1.5,
-        "FlattenSkirt": true,
+        "SkirtSizeZ": 8,
+        "BuildOnLayerCaps": {
+          "LAYER_Land": true
+        },
         "RaisedPlatforms": [
           -1.75,
           -1.75,
@@ -45382,8 +45878,8 @@
           1.75,
           0.35
         ],
-        "SkirtSizeZ": 8,
         "MotionType": "RULEUMT_None",
+        "SkirtOffsetX": -1.5,
         "RollOffPoints": [
           {
             "UnitSpin": 90,
@@ -45398,7 +45894,7 @@
             "Z": 0.35
           }
         ],
-        "SkirtOffsetX": -1.5,
+        "FlattenSkirt": true,
         "SkirtSizeX": 8,
         "MaxGroundVariation": 1.1
       },
@@ -45622,7 +46118,15 @@
       "Physics": {
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -1.5,
-        "FlattenSkirt": true,
+        "SkirtSizeZ": 8,
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "RaisedPlatforms": [
           -1.4,
           -2,
@@ -45661,8 +46165,8 @@
           1.6,
           0
         ],
-        "SkirtSizeZ": 8,
         "MotionType": "RULEUMT_None",
+        "SkirtOffsetX": -1.5,
         "RollOffPoints": [
           {
             "UnitSpin": 90,
@@ -45677,7 +46181,7 @@
             "Z": 0.35
           }
         ],
-        "SkirtOffsetX": -1.5,
+        "FlattenSkirt": true,
         "SkirtSizeX": 8,
         "MaxGroundVariation": 1.1
       },
@@ -46112,7 +46616,15 @@
       "Physics": {
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -1.5,
-        "FlattenSkirt": true,
+        "SkirtSizeZ": 8,
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "RaisedPlatforms": [
           -1.4,
           -2,
@@ -46151,8 +46663,8 @@
           1.6,
           0
         ],
-        "SkirtSizeZ": 8,
         "MotionType": "RULEUMT_None",
+        "SkirtOffsetX": -1.5,
         "RollOffPoints": [
           {
             "UnitSpin": 90,
@@ -46167,7 +46679,7 @@
             "Z": 0.35
           }
         ],
-        "SkirtOffsetX": -1.5,
+        "FlattenSkirt": true,
         "SkirtSizeX": 8,
         "MaxGroundVariation": 1.1
       },
@@ -46390,7 +46902,12 @@
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -2,
         "BuildOnLayerCaps": {
-          "LAYER_Water": true
+          "LAYER_Sub": false,
+          "LAYER_Land": false,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": true,
+          "LAYER_Air": false
         },
         "SkirtSizeZ": 15,
         "RollOffPoints": [
@@ -46645,13 +47162,21 @@
       },
       "StrategicIconSortPriority": 245,
       "Physics": {
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "FlattenSkirt": true,
-        "SkirtSizeZ": 6,
-        "SkirtOffsetZ": -1.5,
-        "DragCoefficient": 0.2,
+        "MotionType": "RULEUMT_None",
         "SkirtOffsetX": -1.5,
+        "DragCoefficient": 0.2,
+        "SkirtOffsetZ": -1.5,
         "SkirtSizeX": 6,
-        "MotionType": "RULEUMT_None"
+        "SkirtSizeZ": 6
       },
       "Weapon": [
         {
@@ -46809,7 +47334,12 @@
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -2,
         "BuildOnLayerCaps": {
-          "LAYER_Water": true
+          "LAYER_Sub": false,
+          "LAYER_Land": false,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": true,
+          "LAYER_Air": false
         },
         "SkirtSizeZ": 15,
         "RollOffPoints": [
@@ -46924,7 +47454,7 @@
         "VISIBLETORECON",
         null
       ],
-      "AverageDensity": 400,
+      "AverageDensity": 1340,
       "General": {
         "CommandCaps": {
           "RULEUCC_RetaliateToggle": true,
@@ -46943,8 +47473,7 @@
         },
         "InstantDeathOnSelfDestruct": true,
         "ToggleCaps": {
-          "RULEUTC_ProductionToggle": true,
-          "RULEUTC_CloakToggle": true
+          "RULEUTC_ProductionToggle": true
         },
         "UnitName": "Fire Beetle",
         "ExcludeFromVeterancy": true,
@@ -46980,7 +47509,6 @@
       "Economy": {
         "BuildTime": 700,
         "TeleportMassMod": 1,
-        "MaintenanceConsumptionPerSecondEnergy": 10,
         "BuildCostEnergy": 1300,
         "TeleportTimeMod": 0.01,
         "BuildCostMass": 190,
@@ -46996,20 +47524,21 @@
         "MaxAcceleration": 7,
         "BankingSlope": 0.5,
         "TransportSpeedReduction": 0.15,
-        "MaxBrake": 5,
+        "MaxBrake": 3.8,
         "MeshExtentsX": 0.55,
         "TurnRadius": 4,
         "MeshExtentsY": 0.25,
         "MaxSpeedReverse": 5,
-        "MaxSpeed": 5,
+        "MaxSpeed": 3.8,
         "MotionType": "RULEUMT_Land",
         "MeshExtentsZ": 0.65
       },
       "Defense": {
         "ArmorType": "Normal",
         "SurfaceThreatLevel": 110,
-        "Health": 400,
-        "MaxHealth": 400
+        "Health": 1340,
+        "MaxHealth": 1340,
+        "RegenRate": 10
       },
       "Audio": {
         "UISelection": {
@@ -47060,14 +47589,12 @@
       "SelectionSizeZ": 0.45,
       "SelectionThickness": 0.83,
       "Intel": {
-        "Cloak": true,
         "VisionRadius": 24
       },
       "SelectionSizeX": 0.35,
       "Display": {
         "UniformScale": 0.054,
         "Abilities": [
-          "Cloaking",
           "Suicide Weapon",
           "EMP Weapon"
         ],
@@ -47279,13 +47806,21 @@
         }
       },
       "Physics": {
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "FlattenSkirt": true,
-        "SkirtSizeZ": 2,
-        "SkirtOffsetZ": -0.5,
-        "DragCoefficient": 0.2,
+        "MotionType": "RULEUMT_None",
         "SkirtOffsetX": -0.5,
+        "DragCoefficient": 0.2,
+        "SkirtOffsetZ": -0.5,
         "SkirtSizeX": 2,
-        "MotionType": "RULEUMT_None"
+        "SkirtSizeZ": 2
       },
       "Id": "URB2301",
       "Wreckage": {
@@ -47473,8 +48008,12 @@
       },
       "Physics": {
         "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
           "LAYER_Land": true,
-          "LAYER_Water": true
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": true,
+          "LAYER_Air": false
         },
         "FlattenSkirt": true,
         "MotionType": "RULEUMT_None",
@@ -47739,7 +48278,12 @@
       },
       "Physics": {
         "BuildOnLayerCaps": {
-          "LAYER_Water": true
+          "LAYER_Sub": false,
+          "LAYER_Land": false,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": true,
+          "LAYER_Air": false
         },
         "FlattenSkirt": true,
         "MotionType": "RULEUMT_None",
@@ -48017,13 +48561,21 @@
         }
       },
       "Physics": {
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "FlattenSkirt": true,
-        "SkirtSizeZ": 2,
-        "SkirtOffsetZ": -0.5,
-        "DragCoefficient": 0.2,
+        "MotionType": "RULEUMT_None",
         "SkirtOffsetX": -0.5,
+        "DragCoefficient": 0.2,
+        "SkirtOffsetZ": -0.5,
         "SkirtSizeX": 2,
-        "MotionType": "RULEUMT_None"
+        "SkirtSizeZ": 2
       },
       "Id": "URB2303",
       "Wreckage": {
@@ -48223,14 +48775,22 @@
         "DamageRadius": 1.3
       },
       "Physics": {
-        "FlattenSkirt": true,
-        "HorizontalSkirt": true,
-        "MotionType": "RULEUMT_None",
-        "SkirtOffsetX": -0.5,
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -0.5,
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
+        "SkirtSizeZ": 2,
+        "FlattenSkirt": true,
+        "HorizontalSkirt": true,
+        "SkirtOffsetX": -0.5,
         "SkirtSizeX": 2,
-        "SkirtSizeZ": 2
+        "MotionType": "RULEUMT_None"
       },
       "SelectionSizeX": 0.75,
       "SelectionThickness": 0.5,
@@ -48575,8 +49135,12 @@
       "StrategicIconSortPriority": 200,
       "Physics": {
         "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
           "LAYER_Land": true,
-          "LAYER_Water": true
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": true,
+          "LAYER_Air": false
         },
         "FlattenSkirt": true,
         "MotionType": "RULEUMT_None",
@@ -48792,12 +49356,20 @@
       "SizeY": 5,
       "SelectionSizeZ": 2.2,
       "Physics": {
+        "DragCoefficient": 0.2,
+        "SkirtOffsetZ": -2.5,
         "FlattenSkirt": true,
         "SkirtSizeZ": 6,
         "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtOffsetX": -2.5,
-        "DragCoefficient": 0.2,
-        "SkirtOffsetZ": -2.5,
         "SkirtSizeX": 6,
         "MaxGroundVariation": 1.1
       },
@@ -48984,12 +49556,20 @@
       "SizeY": 5,
       "SelectionSizeZ": 2.2,
       "Physics": {
+        "DragCoefficient": 0.2,
+        "SkirtOffsetZ": -2.5,
         "FlattenSkirt": true,
         "SkirtSizeZ": 6,
         "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtOffsetX": -2.5,
-        "DragCoefficient": 0.2,
-        "SkirtOffsetZ": -2.5,
         "SkirtSizeX": 6,
         "MaxGroundVariation": 1.1
       },
@@ -49177,12 +49757,20 @@
       "SizeY": 5,
       "SelectionSizeZ": 2.2,
       "Physics": {
+        "DragCoefficient": 0.2,
+        "SkirtOffsetZ": -2.5,
         "FlattenSkirt": true,
         "SkirtSizeZ": 6,
         "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtOffsetX": -2.5,
-        "DragCoefficient": 0.2,
-        "SkirtOffsetZ": -2.5,
         "SkirtSizeX": 6,
         "MaxGroundVariation": 1.1
       },
@@ -49416,13 +50004,21 @@
       },
       "StrategicIconSortPriority": 64,
       "Physics": {
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "FlattenSkirt": true,
-        "SkirtSizeZ": 2,
-        "SkirtOffsetZ": -0.5,
-        "DragCoefficient": 0.2,
+        "MotionType": "RULEUMT_None",
         "SkirtOffsetX": -0.5,
+        "DragCoefficient": 0.2,
+        "SkirtOffsetZ": -0.5,
         "SkirtSizeX": 2,
-        "MotionType": "RULEUMT_None"
+        "SkirtSizeZ": 2
       },
       "BuildIconSortPriority": 180
     },
@@ -49545,7 +50141,12 @@
       "SelectionSizeZ": 0.45,
       "Physics": {
         "BuildOnLayerCaps": {
-          "LAYER_Water": true
+          "LAYER_Sub": false,
+          "LAYER_Land": false,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": true,
+          "LAYER_Air": false
         },
         "SkirtSizeZ": 1,
         "SkirtOffsetZ": 0,
@@ -49744,13 +50345,21 @@
       },
       "StrategicIconSortPriority": 200,
       "Physics": {
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "FlattenSkirt": true,
-        "SkirtSizeZ": 6,
-        "SkirtOffsetZ": -1.5,
-        "DragCoefficient": 0.2,
+        "MotionType": "RULEUMT_None",
         "SkirtOffsetX": -1.5,
+        "DragCoefficient": 0.2,
+        "SkirtOffsetZ": -1.5,
         "SkirtSizeX": 6,
-        "MotionType": "RULEUMT_None"
+        "SkirtSizeZ": 6
       },
       "BuildIconSortPriority": 200
     },
@@ -49852,6 +50461,14 @@
         "MeshExtentsY": 4,
         "SkirtOffsetX": -0.5,
         "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 2,
         "MeshExtentsZ": 2
       },
@@ -50080,6 +50697,14 @@
         "MeshExtentsY": 4,
         "SkirtOffsetX": -0.5,
         "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 2,
         "MeshExtentsZ": 2
       },
@@ -50307,6 +50932,14 @@
         "MeshExtentsY": 4,
         "SkirtOffsetX": -0.5,
         "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 2,
         "MeshExtentsZ": 2
       },
@@ -51737,6 +52370,14 @@
       },
       "StrategicIconSortPriority": 220,
       "Physics": {
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "MotionType": "RULEUMT_None",
         "DragCoefficient": 0.2,
         "AlwaysAlignToTerrain": true,
@@ -52284,7 +52925,7 @@
                 "OnImpact": true
               },
               "BuffType": "STUN",
-              "Duration": 1.5,
+              "Duration": 0.4,
               "TargetAllow": "TECH1,TECH2",
               "TargetDisallow": "TECH3,EXPERIMENTAL,COMMAND,NAVAL,STRUCTURE"
             }
@@ -53112,8 +53753,12 @@
       "StrategicIconSortPriority": 220,
       "Physics": {
         "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
           "LAYER_Seabed": true,
-          "LAYER_Land": true
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
         },
         "MotionType": "RULEUMT_None",
         "DragCoefficient": 0.2,
@@ -55226,6 +55871,14 @@
       },
       "StrategicIconSortPriority": 220,
       "Physics": {
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "MotionType": "RULEUMT_None",
         "DragCoefficient": 0.2,
         "AlwaysAlignToTerrain": true,
@@ -55316,7 +55969,7 @@
         "TurnSpeed": 1.2,
         "KRoll": 2,
         "MaxAirspeed": 17,
-        "LiftFactor": 10,
+        "LiftFactor": 7,
         "KLift": 3,
         "RandomBreakOffDistanceMult": 1,
         "PredictAheadForBombDrop": 3,
@@ -55816,7 +56469,15 @@
       "Physics": {
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -1.5,
-        "FlattenSkirt": true,
+        "SkirtSizeZ": 8,
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "RaisedPlatforms": [
           -1.75,
           -1.75,
@@ -55855,8 +56516,8 @@
           1.75,
           0.35
         ],
-        "SkirtSizeZ": 8,
         "MotionType": "RULEUMT_None",
+        "SkirtOffsetX": -1.5,
         "RollOffPoints": [
           {
             "UnitSpin": 90,
@@ -55871,7 +56532,7 @@
             "Z": 0.35
           }
         ],
-        "SkirtOffsetX": -1.5,
+        "FlattenSkirt": true,
         "SkirtSizeX": 8,
         "MaxGroundVariation": 1.1
       },
@@ -56001,8 +56662,12 @@
         "AlwaysAlignToTerrain": true,
         "SkirtOffsetZ": -0.5,
         "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
           "LAYER_Seabed": true,
-          "LAYER_Land": true
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
         },
         "SkirtSizeZ": 2,
         "MotionType": "RULEUMT_None",
@@ -56615,7 +57280,10 @@
       "Physics": {
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -1.5,
-        "FlattenSkirt": true,
+        "SkirtSizeZ": 8,
+        "BuildOnLayerCaps": {
+          "LAYER_Land": true
+        },
         "RaisedPlatforms": [
           -1.75,
           -1.75,
@@ -56654,8 +57322,8 @@
           1.75,
           0.35
         ],
-        "SkirtSizeZ": 8,
         "MotionType": "RULEUMT_None",
+        "SkirtOffsetX": -1.5,
         "RollOffPoints": [
           {
             "UnitSpin": 90,
@@ -56670,7 +57338,7 @@
             "Z": 0.35
           }
         ],
-        "SkirtOffsetX": -1.5,
+        "FlattenSkirt": true,
         "SkirtSizeX": 8,
         "MaxGroundVariation": 1.1
       },
@@ -56888,7 +57556,15 @@
       "Physics": {
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -1.5,
-        "FlattenSkirt": true,
+        "SkirtSizeZ": 8,
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "RaisedPlatforms": [
           -1.4,
           -2,
@@ -56927,8 +57603,8 @@
           1.6,
           0
         ],
-        "SkirtSizeZ": 8,
         "MotionType": "RULEUMT_None",
+        "SkirtOffsetX": -1.5,
         "RollOffPoints": [
           {
             "UnitSpin": 90,
@@ -56943,7 +57619,7 @@
             "Z": 0.35
           }
         ],
-        "SkirtOffsetX": -1.5,
+        "FlattenSkirt": true,
         "SkirtSizeX": 8,
         "MaxGroundVariation": 1.1
       },
@@ -57183,12 +57859,20 @@
       },
       "StrategicIconSortPriority": 240,
       "Physics": {
+        "DragCoefficient": 0.2,
+        "SkirtOffsetZ": -1.5,
         "FlattenSkirt": true,
         "SkirtSizeZ": 6,
         "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtOffsetX": -1.5,
-        "DragCoefficient": 0.2,
-        "SkirtOffsetZ": -1.5,
         "SkirtSizeX": 6,
         "MaxGroundVariation": 1.1
       },
@@ -57786,7 +58470,15 @@
       "Physics": {
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -1.5,
-        "FlattenSkirt": true,
+        "SkirtSizeZ": 8,
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "RaisedPlatforms": [
           -1.4,
           -2,
@@ -57825,8 +58517,8 @@
           1.6,
           0
         ],
-        "SkirtSizeZ": 8,
         "MotionType": "RULEUMT_None",
+        "SkirtOffsetX": -1.5,
         "RollOffPoints": [
           {
             "UnitSpin": 90,
@@ -57841,7 +58533,7 @@
             "Z": 0.35
           }
         ],
-        "SkirtOffsetX": -1.5,
+        "FlattenSkirt": true,
         "SkirtSizeX": 8,
         "MaxGroundVariation": 1.1
       },
@@ -58004,7 +58696,12 @@
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -2,
         "BuildOnLayerCaps": {
-          "LAYER_Water": true
+          "LAYER_Sub": false,
+          "LAYER_Land": false,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": true,
+          "LAYER_Air": false
         },
         "SkirtSizeZ": 15,
         "RollOffPoints": [
@@ -58246,7 +58943,12 @@
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -2,
         "BuildOnLayerCaps": {
-          "LAYER_Water": true
+          "LAYER_Sub": false,
+          "LAYER_Land": false,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": true,
+          "LAYER_Air": false
         },
         "SkirtSizeZ": 15,
         "RollOffPoints": [
@@ -58437,12 +59139,20 @@
       },
       "Adjacency": "T3PowerGeneratorAdjacencyBuffs",
       "Physics": {
+        "DragCoefficient": 0.2,
+        "SkirtOffsetZ": -1.5,
         "FlattenSkirt": true,
         "SkirtSizeZ": 8,
         "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtOffsetX": -1.5,
-        "DragCoefficient": 0.2,
-        "SkirtOffsetZ": -1.5,
         "SkirtSizeX": 8,
         "MaxGroundVariation": 1.1
       },
@@ -58653,8 +59363,12 @@
       },
       "Physics": {
         "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
           "LAYER_Land": true,
-          "LAYER_Water": true
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": true,
+          "LAYER_Air": false
         },
         "FlattenSkirt": true,
         "MotionType": "RULEUMT_None",
@@ -58918,7 +59632,12 @@
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -0.5,
         "BuildOnLayerCaps": {
-          "LAYER_Water": true
+          "LAYER_Sub": false,
+          "LAYER_Land": false,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": true,
+          "LAYER_Air": false
         },
         "SkirtSizeZ": 3,
         "FlattenSkirt": true,
@@ -59220,12 +59939,20 @@
       },
       "StrategicIconSortPriority": 175,
       "Physics": {
+        "DragCoefficient": 0.2,
+        "SkirtOffsetZ": -1.5,
         "FlattenSkirt": true,
         "SkirtSizeZ": 8,
         "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtOffsetX": -1.5,
-        "DragCoefficient": 0.2,
-        "SkirtOffsetZ": -1.5,
         "SkirtSizeX": 8,
         "MaxGroundVariation": 1.1
       },
@@ -59383,14 +60110,22 @@
         "BuildCostMass": 16500
       },
       "Physics": {
-        "FlattenSkirt": true,
-        "HorizontalSkirt": true,
-        "MotionType": "RULEUMT_None",
-        "SkirtOffsetX": -1.5,
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -1.5,
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
+        "SkirtSizeZ": 6,
+        "FlattenSkirt": true,
+        "HorizontalSkirt": true,
+        "SkirtOffsetX": -1.5,
         "SkirtSizeX": 6,
-        "SkirtSizeZ": 6
+        "MotionType": "RULEUMT_None"
       },
       "SizeZ": 2.9,
       "VeteranMassMult": 1,
@@ -59780,12 +60515,20 @@
       "SizeY": 5,
       "SelectionSizeZ": 2.2,
       "Physics": {
+        "DragCoefficient": 0.2,
+        "SkirtOffsetZ": -2.5,
         "FlattenSkirt": true,
         "SkirtSizeZ": 6,
         "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtOffsetX": -2.5,
-        "DragCoefficient": 0.2,
-        "SkirtOffsetZ": -2.5,
         "SkirtSizeX": 6,
         "MaxGroundVariation": 1.1
       },
@@ -59967,12 +60710,20 @@
       "SizeY": 5,
       "SelectionSizeZ": 2.2,
       "Physics": {
+        "DragCoefficient": 0.2,
+        "SkirtOffsetZ": -2.5,
         "FlattenSkirt": true,
         "SkirtSizeZ": 6,
         "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtOffsetX": -2.5,
-        "DragCoefficient": 0.2,
-        "SkirtOffsetZ": -2.5,
         "SkirtSizeX": 6,
         "MaxGroundVariation": 1.1
       },
@@ -60081,13 +60832,21 @@
       },
       "SizeZ": 1,
       "Physics": {
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "FlattenSkirt": true,
-        "SkirtSizeZ": 3,
-        "SkirtOffsetZ": -0.5,
-        "DragCoefficient": 0.2,
+        "MotionType": "RULEUMT_None",
         "SkirtOffsetX": -0.5,
+        "DragCoefficient": 0.2,
+        "SkirtOffsetZ": -0.5,
         "SkirtSizeX": 3,
-        "MotionType": "RULEUMT_None"
+        "SkirtSizeZ": 3
       },
       "Defense": {
         "ArmorType": "Structure",
@@ -60638,13 +61397,21 @@
       },
       "StrategicIconSortPriority": 64,
       "Physics": {
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "FlattenSkirt": true,
-        "SkirtSizeZ": 2,
-        "SkirtOffsetZ": -0.5,
-        "DragCoefficient": 0.2,
+        "MotionType": "RULEUMT_None",
         "SkirtOffsetX": -0.5,
+        "DragCoefficient": 0.2,
+        "SkirtOffsetZ": -0.5,
         "SkirtSizeX": 2,
-        "MotionType": "RULEUMT_None"
+        "SkirtSizeZ": 2
       },
       "BuildIconSortPriority": 200
     },
@@ -60704,13 +61471,21 @@
       },
       "SizeZ": 4.1,
       "Physics": {
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "FlattenSkirt": true,
-        "SkirtSizeZ": 6,
-        "SkirtOffsetZ": -0.5,
-        "DragCoefficient": 0.2,
+        "MotionType": "RULEUMT_None",
         "SkirtOffsetX": -0.5,
+        "DragCoefficient": 0.2,
+        "SkirtOffsetZ": -0.5,
         "SkirtSizeX": 6,
-        "MotionType": "RULEUMT_None"
+        "SkirtSizeZ": 6
       },
       "Defense": {
         "ArmorType": "Structure",
@@ -60926,6 +61701,14 @@
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -1.5,
         "FlattenSkirt": true,
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "RaisedPlatforms": [
           -1.5,
           -1.5,
@@ -60964,7 +61747,7 @@
           3.4,
           0
         ],
-        "SkirtSizeZ": 10,
+        "MotionType": "RULEUMT_None",
         "OccupyRects": [
           -2.5,
           -0.5,
@@ -60989,9 +61772,9 @@
             "Z": 3
           }
         ],
-        "SkirtSizeX": 10,
         "SkirtOffsetX": -1.5,
-        "MotionType": "RULEUMT_None"
+        "SkirtSizeX": 10,
+        "SkirtSizeZ": 10
       },
       "SelectionThickness": 0.26,
       "SizeX": 4.75,
@@ -61098,6 +61881,7 @@
         "LOWSELECTPRIO",
         "MOBILE",
         "NEEDMOBILEBUILD",
+        "OVERLAYCOUNTERINTEL",
         "OVERLAYINDIRECTFIRE",
         "PRODUCTSC1",
         "RECLAIMABLE",
@@ -61118,10 +61902,19 @@
           "RULEUCC_Patrol": true,
           "RULEUCC_Stop": true
         },
-        "UnitName": "Scathis",
+        "OrderOverrides": {
+          "RULEUTC_StealthToggle": {
+            "helpText": "toggle_stealth_field",
+            "bitmapId": "stealth-field"
+          }
+        },
+        "ToggleCaps": {
+          "RULEUTC_StealthToggle": true
+        },
+        "FactionName": "Cybran",
         "SelectionPriority": 5,
         "Icon": "amph",
-        "FactionName": "Cybran",
+        "UnitName": "Scathis",
         "Classification": "RULEUC_MilitaryVehicle"
       },
       "Transport": {
@@ -61155,8 +61948,13 @@
         "MaxBrake": 1.5
       },
       "Intel": {
+        "SonarStealthFieldRadius": 24,
+        "RadarStealth": true,
+        "RadarStealthField": true,
         "WaterVisionRadius": 24,
-        "VisionRadius": 26
+        "RadarStealthFieldRadius": 24,
+        "VisionRadius": 26,
+        "SonarStealth": true
       },
       "SelectionThickness": 0.36,
       "Footprint": {
@@ -61167,9 +61965,10 @@
       "VeteranMassMult": 1,
       "Defense": {
         "ArmorType": "Experimental",
-        "Health": 9000,
-        "MaxHealth": 9000,
-        "EconomyThreatLevel": 1600
+        "Health": 17000,
+        "EconomyThreatLevel": 1600,
+        "MaxHealth": 17000,
+        "RegenRate": 134
       },
       "Audio": {
         "Activate": {
@@ -61322,6 +62121,7 @@
       "Economy": {
         "BuildTime": 240000,
         "TeleportMassMod": 1,
+        "MaintenanceConsumptionPerSecondEnergy": 400,
         "BuildCostEnergy": 4000000,
         "TeleportTimeMod": 0.01,
         "BuildCostMass": 220000,
@@ -61361,7 +62161,7 @@
           "TurretPitch": 0,
           "RackReloadTimeout": 0,
           "RackSalvoReloadTime": 0,
-          "FixedSpreadRadius": 70,
+          "FixedSpreadRadius": 63,
           "DisplayName": "Proton Artillery",
           "TurretPitchSpeed": 30,
           "TurretBoneYaw": "Turret_Aim",
@@ -63396,12 +64196,15 @@
       "SelectionSizeZ": 2.75,
       "SizeX": 3.6,
       "Physics": {
+        "MaxGroundVariation": 1.1,
         "MeshExtentsX": 4.5,
         "DragCoefficient": 0.2,
-        "MaxGroundVariation": 1.1,
-        "SkirtOffsetZ": -1.5,
         "SkirtOffsetX": -1.5,
+        "SkirtOffsetZ": -1.5,
         "FlattenSkirt": true,
+        "BuildOnLayerCaps": {
+          "LAYER_Land": true
+        },
         "RaisedPlatforms": [
           -1.1,
           -1.6,
@@ -63464,7 +64267,7 @@
           1.9,
           0
         ],
-        "MeshExtentsY": 1,
+        "SkirtSizeZ": 8,
         "MotionType": "RULEUMT_None",
         "RollOffPoints": [
           {
@@ -63480,7 +64283,7 @@
             "Z": 0.35
           }
         ],
-        "SkirtSizeZ": 8,
+        "MeshExtentsY": 1,
         "SkirtSizeX": 8,
         "MeshExtentsZ": 4.5
       },
@@ -64298,12 +65101,20 @@
       "SelectionSizeZ": 2.75,
       "SizeX": 3.5,
       "Physics": {
+        "MaxGroundVariation": 1.1,
         "MeshExtentsX": 4.25,
         "DragCoefficient": 0.2,
-        "MaxGroundVariation": 1.1,
-        "SkirtOffsetZ": -1.5,
         "SkirtOffsetX": -1.5,
+        "SkirtOffsetZ": -1.5,
         "FlattenSkirt": true,
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "RaisedPlatforms": [
           -1.4,
           -1.2,
@@ -64342,7 +65153,7 @@
           1.5,
           0
         ],
-        "MeshExtentsY": 2.5,
+        "SkirtSizeZ": 8,
         "MotionType": "RULEUMT_None",
         "RollOffPoints": [
           {
@@ -64364,7 +65175,7 @@
             "Z": 0
           }
         ],
-        "SkirtSizeZ": 8,
+        "MeshExtentsY": 2.5,
         "SkirtSizeX": 8,
         "MeshExtentsZ": 5
       },
@@ -65239,7 +66050,12 @@
         "SkirtOffsetZ": -1,
         "SkirtSizeZ": 15,
         "BuildOnLayerCaps": {
-          "LAYER_Water": true
+          "LAYER_Sub": false,
+          "LAYER_Land": false,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": true,
+          "LAYER_Air": false
         },
         "SkirtOffsetX": -7,
         "MeshExtentsY": 2,
@@ -66409,8 +67225,12 @@
         "SkirtOffsetZ": -0.5,
         "BuildRestriction": "RULEUBR_OnMassDeposit",
         "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
           "LAYER_Seabed": true,
-          "LAYER_Land": true
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
         },
         "FlattenSkirt": false,
         "SkirtSizeZ": 2,
@@ -67752,8 +68572,12 @@
         "SkirtOffsetX": -0.5,
         "MotionType": "RULEUMT_None",
         "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
           "LAYER_Seabed": true,
-          "LAYER_Land": true
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
         },
         "SkirtSizeX": 2,
         "MeshExtentsZ": 1.1
@@ -68215,6 +69039,14 @@
         "MeshExtentsY": 0.75,
         "SkirtOffsetX": -0.5,
         "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 2,
         "MeshExtentsZ": 1
       },
@@ -68552,8 +69384,12 @@
         "SkirtOffsetZ": -1.5,
         "BuildRestriction": "RULEUBR_OnHydrocarbonDeposit",
         "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
           "LAYER_Seabed": true,
-          "LAYER_Land": true
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
         },
         "FlattenSkirt": false,
         "SkirtSizeZ": 6,
@@ -68818,6 +69654,14 @@
         "MeshExtentsY": 0.6,
         "SkirtOffsetX": -0.5,
         "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 2,
         "MeshExtentsZ": 1.1
       },
@@ -70219,6 +71063,14 @@
         "DragCoefficient": 0.2,
         "AlwaysAlignToTerrain": true,
         "SkirtOffsetZ": 0,
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeZ": 1,
         "MeshExtentsY": 1.1,
         "SkirtOffsetX": 0,
@@ -70351,8 +71203,12 @@
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": 0,
         "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
           "LAYER_Land": true,
-          "LAYER_Water": true
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": true,
+          "LAYER_Air": false
         },
         "SkirtSizeZ": 1,
         "MeshExtentsY": 1.25,
@@ -70482,7 +71338,7 @@
               "RackBone": "Turret_Barrel"
             }
           ],
-          "Damage": 14,
+          "Damage": 15,
           "DamageType": "Normal",
           "Audio": {
             "Fire": {
@@ -70596,7 +71452,12 @@
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": 0,
         "BuildOnLayerCaps": {
-          "LAYER_Water": true
+          "LAYER_Sub": false,
+          "LAYER_Land": false,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": true,
+          "LAYER_Air": false
         },
         "SkirtSizeZ": 1,
         "MeshExtentsY": 0.75,
@@ -70893,11 +71754,19 @@
         "DragCoefficient": 0.2,
         "AlwaysAlignToTerrain": true,
         "SkirtOffsetZ": 0,
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "MaxGroundVariation": 50,
-        "SkirtSizeZ": 1,
+        "MeshExtentsY": 1,
         "SkirtOffsetX": 0,
         "MotionType": "RULEUMT_None",
-        "MeshExtentsY": 1,
+        "SkirtSizeZ": 1,
         "SkirtSizeX": 1,
         "MeshExtentsZ": 1.5
       },
@@ -71091,6 +71960,14 @@
         "MeshExtentsY": 2,
         "SkirtOffsetX": -0.5,
         "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 2,
         "MeshExtentsZ": 1.25
       },
@@ -71221,7 +72098,12 @@
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": 0,
         "BuildOnLayerCaps": {
-          "LAYER_Water": true
+          "LAYER_Sub": false,
+          "LAYER_Land": false,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": true,
+          "LAYER_Air": false
         },
         "SkirtSizeZ": 1,
         "MeshExtentsY": 0.65,
@@ -71379,6 +72261,14 @@
         "MeshExtentsY": 1.25,
         "SkirtOffsetX": -1.5,
         "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 6,
         "MeshExtentsZ": 3
       },
@@ -72747,12 +73637,12 @@
           "CollideFriendly": false,
           "TargetPriorities": [
             "CRUISER",
-            "(NAVAL * TECH2 * SHIELD)",
-            "(STRUCTURE * DEFENSE * ANTIAIR)",
-            "(TECH3 * NAVAL * CARRIER)",
+            "NAVAL TECH2 SHIELD",
+            "STRUCTURE DEFENSE ANTIAIR",
+            "TECH3 NAVAL CARRIER",
             "SUBMERSIBLE",
-            "NAVAL * TECH2",
-            "NAVAL * TECH3",
+            "NAVAL TECH2",
+            "NAVAL TECH3",
             "MOBILE",
             "(STRUCTURE * DEFENSE - ANTIMISSILE)",
             "ALLUNITS"
@@ -74798,9 +75688,9 @@
       "LifeBarOffset": 0.6,
       "Description": "Guided Missile",
       "Economy": {
-        "BuildTime": 1200,
-        "BuildCostEnergy": 4600,
-        "BuildCostMass": 230
+        "BuildTime": 1600,
+        "BuildCostEnergy": 8850,
+        "BuildCostMass": 270
       },
       "Footprint": {
         "MaxSlope": 0.25,
@@ -74831,8 +75721,8 @@
       },
       "Defense": {
         "ArmorType": "Light",
-        "Health": 90,
-        "MaxHealth": 90,
+        "Health": 10,
+        "MaxHealth": 10,
         "EconomyThreatLevel": 80000
       },
       "Audio": {
@@ -74978,7 +75868,7 @@
               "RackBone": "DAA0206"
             }
           ],
-          "Damage": 50,
+          "Damage": 350,
           "ProjectileLifetime": 10,
           "DamageType": "Normal",
           "Audio": {
@@ -74994,7 +75884,7 @@
           "TurretPitchSpeed": 720,
           "TurretBoneYaw": "DAA0206",
           "RackSalvoSize": 1,
-          "DoTPulses": 20,
+          "DoTPulses": 6,
           "AboveWaterTargetsOnly": true,
           "RackSlavedToTurret": false,
           "TargetPriorities": [
@@ -75006,7 +75896,7 @@
           ],
           "MaxRadius": 25,
           "ProjectileId": "/projectiles/AIFGuidedMissile01/AIFGuidedMissile01_proj.bp",
-          "DoTTime": 9.5,
+          "DoTTime": 4,
           "MuzzleVelocity": 18,
           "RackFireTogether": false,
           "RackSalvoChargeTime": 0,
@@ -75034,7 +75924,7 @@
           "TurretYawRange": 40,
           "TurretDualManipulators": false,
           "TurretBonePitch": "DAA0206",
-          "DamageRadius": 7.5,
+          "DamageRadius": 3.5,
           "WeaponCategory": "Kamikaze"
         },
         {
@@ -75479,8 +76369,12 @@
         "SkirtOffsetZ": -0.5,
         "BuildRestriction": "RULEUBR_OnMassDeposit",
         "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
           "LAYER_Seabed": true,
-          "LAYER_Land": true
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
         },
         "FlattenSkirt": false,
         "SkirtSizeZ": 2,
@@ -76099,12 +76993,15 @@
       "SelectionSizeZ": 2.75,
       "SizeX": 3.6,
       "Physics": {
+        "MaxGroundVariation": 1.1,
         "MeshExtentsX": 4.5,
         "DragCoefficient": 0.2,
-        "MaxGroundVariation": 1.1,
-        "SkirtOffsetZ": -1.5,
         "SkirtOffsetX": -1.5,
+        "SkirtOffsetZ": -1.5,
         "FlattenSkirt": true,
+        "BuildOnLayerCaps": {
+          "LAYER_Land": true
+        },
         "RaisedPlatforms": [
           -1.1,
           -1.6,
@@ -76167,7 +77064,7 @@
           1.9,
           0
         ],
-        "MeshExtentsY": 1.25,
+        "SkirtSizeZ": 8,
         "MotionType": "RULEUMT_None",
         "RollOffPoints": [
           {
@@ -76183,7 +77080,7 @@
             "Z": 0.35
           }
         ],
-        "SkirtSizeZ": 8,
+        "MeshExtentsY": 1.25,
         "SkirtSizeX": 8,
         "MeshExtentsZ": 4.5
       },
@@ -76381,6 +77278,14 @@
         "MeshExtentsY": 0.4,
         "SkirtOffsetX": -0.5,
         "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 2,
         "MeshExtentsZ": 1
       },
@@ -76853,12 +77758,15 @@
       "SelectionSizeZ": 2.75,
       "SizeX": 3.6,
       "Physics": {
+        "MaxGroundVariation": 1.1,
         "MeshExtentsX": 4.5,
         "DragCoefficient": 0.2,
-        "MaxGroundVariation": 1.1,
-        "SkirtOffsetZ": -1.5,
         "SkirtOffsetX": -1.5,
+        "SkirtOffsetZ": -1.5,
         "FlattenSkirt": true,
+        "BuildOnLayerCaps": {
+          "LAYER_Land": true
+        },
         "RaisedPlatforms": [
           -1.1,
           -1.6,
@@ -76921,7 +77829,7 @@
           1.9,
           0
         ],
-        "MeshExtentsY": 1.25,
+        "SkirtSizeZ": 8,
         "MotionType": "RULEUMT_None",
         "RollOffPoints": [
           {
@@ -76937,7 +77845,7 @@
             "Z": 0.35
           }
         ],
-        "SkirtSizeZ": 8,
+        "MeshExtentsY": 1.25,
         "SkirtSizeX": 8,
         "MeshExtentsZ": 4.5
       },
@@ -77101,12 +78009,20 @@
       },
       "SizeZ": 4,
       "Physics": {
+        "MaxGroundVariation": 1.1,
         "MeshExtentsX": 5.5,
         "DragCoefficient": 0.2,
-        "MaxGroundVariation": 1.1,
-        "SkirtOffsetZ": -1.5,
         "SkirtOffsetX": -1.5,
+        "SkirtOffsetZ": -1.5,
         "FlattenSkirt": true,
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "RaisedPlatforms": [
           -1.6,
           -1.2,
@@ -77145,7 +78061,7 @@
           1.5,
           0
         ],
-        "MeshExtentsY": 3,
+        "SkirtSizeZ": 8,
         "MotionType": "RULEUMT_None",
         "RollOffPoints": [
           {
@@ -77167,7 +78083,7 @@
             "Z": 0
           }
         ],
-        "SkirtSizeZ": 8,
+        "MeshExtentsY": 3,
         "SkirtSizeX": 8,
         "MeshExtentsZ": 5.5
       },
@@ -77386,12 +78302,20 @@
       },
       "SizeZ": 4,
       "Physics": {
+        "MaxGroundVariation": 1.1,
         "MeshExtentsX": 5.5,
         "DragCoefficient": 0.2,
-        "MaxGroundVariation": 1.1,
-        "SkirtOffsetZ": -1.5,
         "SkirtOffsetX": -1.5,
+        "SkirtOffsetZ": -1.5,
         "FlattenSkirt": true,
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "RaisedPlatforms": [
           -1.6,
           -1.2,
@@ -77430,7 +78354,7 @@
           1.5,
           0
         ],
-        "MeshExtentsY": 3,
+        "SkirtSizeZ": 8,
         "MotionType": "RULEUMT_None",
         "RollOffPoints": [
           {
@@ -77452,7 +78376,7 @@
             "Z": 0
           }
         ],
-        "SkirtSizeZ": 8,
+        "MeshExtentsY": 3,
         "SkirtSizeX": 8,
         "MeshExtentsZ": 5.5
       },
@@ -77739,7 +78663,12 @@
         "SkirtOffsetZ": -1,
         "SkirtSizeZ": 15,
         "BuildOnLayerCaps": {
-          "LAYER_Water": true
+          "LAYER_Sub": false,
+          "LAYER_Land": false,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": true,
+          "LAYER_Air": false
         },
         "SkirtOffsetX": -7,
         "MeshExtentsY": 2,
@@ -78044,6 +78973,14 @@
         "MeshExtentsY": 2.35,
         "SkirtOffsetX": -1.5,
         "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 6,
         "MeshExtentsZ": 3.5
       },
@@ -78208,7 +79145,12 @@
         "SkirtOffsetZ": -1,
         "SkirtSizeZ": 15,
         "BuildOnLayerCaps": {
-          "LAYER_Water": true
+          "LAYER_Sub": false,
+          "LAYER_Land": false,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": true,
+          "LAYER_Air": false
         },
         "SkirtOffsetX": -7,
         "MeshExtentsY": 2,
@@ -78386,6 +79328,14 @@
         "MeshExtentsY": 1,
         "SkirtOffsetX": -0.5,
         "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 2,
         "MeshExtentsZ": 2
       },
@@ -78622,8 +79572,12 @@
         "SkirtOffsetX": -0.5,
         "MotionType": "RULEUMT_None",
         "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
           "LAYER_Land": true,
-          "LAYER_Water": true
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": true,
+          "LAYER_Air": false
         },
         "SkirtSizeX": 2,
         "MeshExtentsZ": 1.25
@@ -78856,7 +79810,12 @@
         "SkirtOffsetX": -0.5,
         "MotionType": "RULEUMT_None",
         "BuildOnLayerCaps": {
-          "LAYER_Water": true
+          "LAYER_Sub": false,
+          "LAYER_Land": false,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": true,
+          "LAYER_Air": false
         },
         "SkirtSizeX": 3,
         "MeshExtentsZ": 1.75
@@ -79160,6 +80119,14 @@
         "MeshExtentsY": 2,
         "SkirtOffsetX": -0.5,
         "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 2,
         "MeshExtentsZ": 3
       },
@@ -79387,12 +80354,20 @@
         "MeshExtentsX": 0.75,
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -0.5,
-        "FlattenSkirt": true,
         "SkirtSizeZ": 2,
-        "MeshExtentsY": 0.35,
+        "FlattenSkirt": true,
         "SkirtOffsetX": -0.5,
-        "HorizontalSkirt": true,
+        "MeshExtentsY": 0.35,
         "MotionType": "RULEUMT_None",
+        "HorizontalSkirt": true,
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 2,
         "MeshExtentsZ": 1.5
       },
@@ -79672,8 +80647,12 @@
         "SkirtOffsetX": -0.5,
         "MotionType": "RULEUMT_None",
         "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
           "LAYER_Land": true,
-          "LAYER_Water": true
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": true,
+          "LAYER_Air": false
         },
         "SkirtSizeX": 2,
         "MeshExtentsZ": 1.75
@@ -79983,12 +80962,20 @@
         "MeshExtentsX": 3,
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -1.5,
-        "FlattenSkirt": true,
         "MaxGroundVariation": 1.1,
-        "SkirtSizeZ": 6,
+        "FlattenSkirt": true,
         "SkirtOffsetX": -1.5,
-        "MotionType": "RULEUMT_None",
         "MeshExtentsY": 2,
+        "SkirtSizeZ": 6,
+        "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 6,
         "MeshExtentsZ": 3
       },
@@ -80266,6 +81253,14 @@
         "MeshExtentsY": 2.75,
         "SkirtOffsetX": -0.5,
         "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 2,
         "MeshExtentsZ": 1.5
       },
@@ -80395,7 +81390,12 @@
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": 0,
         "BuildOnLayerCaps": {
-          "LAYER_Water": true
+          "LAYER_Sub": false,
+          "LAYER_Land": false,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": true,
+          "LAYER_Air": false
         },
         "SkirtSizeZ": 1,
         "MeshExtentsY": 1,
@@ -80627,6 +81627,14 @@
         "MeshExtentsY": 1,
         "SkirtOffsetX": -1.5,
         "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 6,
         "MeshExtentsZ": 3
       },
@@ -82223,7 +83231,6 @@
         "PRODUCTFA",
         "RECLAIMABLE",
         "SELECTABLE",
-        "SNIPEMODE",
         "SNIPER",
         "TECH3",
         "VISIBLETORECON",
@@ -82259,14 +83266,14 @@
         "MaxSteerForce": 10,
         "MeshExtentsX": 1,
         "DragCoefficient": 0.2,
-        "MaxAcceleration": 2.5,
-        "MaxBrake": 2.5,
+        "MaxAcceleration": 2.3,
+        "MaxBrake": 2.3,
         "MeshExtentsY": 1.25,
         "TurnRadius": 5,
         "MaxSpeedReverse": 0,
         "MotionType": "RULEUMT_Land",
         "StandUpright": true,
-        "MaxSpeed": 2.5,
+        "MaxSpeed": 2.3,
         "MeshExtentsZ": 1
       },
       "Economy": {
@@ -82471,14 +83478,13 @@
             "(ARTILLERY - TECH1)",
             "ANTISHIELD",
             "SHIELD",
-            "COMMAND",
             "TECH3 MOBILE",
             "TECH2 MOBILE",
             "(STRUCTURE * DEFENSE - ANTIMISSILE)",
             "STRUCTURE",
             "ALLUNITS"
           ],
-          "MaxRadius": 60,
+          "MaxRadius": 65,
           "ProjectileId": "/projectiles/ADFHeavyDisruptorCannon01/ADFHeavyDisruptorCannon01_proj.bp",
           "MuzzleChargeDelay": 1,
           "MuzzleVelocity": 90,
@@ -85321,15 +86327,15 @@
           "CollideFriendly": false,
           "TargetPriorities": [
             "CRUISER",
-            "(NAVAL * TECH2 * SHIELD)",
-            "(TECH3 * STRUCTURE * DEFENSE * ANTIAIR)",
-            "(TECH3 * NAVAL * CARRIER)",
+            "NAVAL TECH2 SHIELD",
+            "TECH3 STRUCTURE DEFENSE ANTIAIR",
+            "TECH3 NAVAL CARRIER",
             "(SUBMERSIBLE - TECH1)",
-            "(NAVAL * TECH2)",
-            "(NAVAL * TECH3)",
+            "NAVAL TECH2",
+            "NAVAL TECH3",
             "SUBMERSIBLE",
             "MOBILE",
-            "(STRUCTURE * DEFENSE * ANTIAIR)",
+            "STRUCTURE DEFENSE ANTIAIR",
             "(STRUCTURE * DEFENSE - ANTIMISSILE)",
             "ALLUNITS"
           ],
@@ -85700,7 +86706,7 @@
         "TurnSpeed": 1.2,
         "KRoll": 2,
         "MaxAirspeed": 17,
-        "LiftFactor": 10,
+        "LiftFactor": 7,
         "KLift": 3,
         "RandomBreakOffDistanceMult": 1,
         "PredictAheadForBombDrop": 3,
@@ -86121,12 +87127,15 @@
       "SelectionSizeZ": 2.75,
       "SizeX": 3.6,
       "Physics": {
+        "MaxGroundVariation": 1.1,
         "MeshExtentsX": 4.5,
         "DragCoefficient": 0.2,
-        "MaxGroundVariation": 1.1,
-        "SkirtOffsetZ": -1.5,
         "SkirtOffsetX": -1.5,
+        "SkirtOffsetZ": -1.5,
         "FlattenSkirt": true,
+        "BuildOnLayerCaps": {
+          "LAYER_Land": true
+        },
         "RaisedPlatforms": [
           -1.1,
           -1.6,
@@ -86189,7 +87198,7 @@
           1.9,
           0
         ],
-        "MeshExtentsY": 1.5,
+        "SkirtSizeZ": 8,
         "MotionType": "RULEUMT_None",
         "RollOffPoints": [
           {
@@ -86205,7 +87214,7 @@
             "Z": 0.35
           }
         ],
-        "SkirtSizeZ": 8,
+        "MeshExtentsY": 1.5,
         "SkirtSizeX": 8,
         "MeshExtentsZ": 4.5
       },
@@ -86348,8 +87357,12 @@
         "SkirtOffsetZ": -0.5,
         "BuildRestriction": "RULEUBR_OnMassDeposit",
         "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
           "LAYER_Seabed": true,
-          "LAYER_Land": true
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
         },
         "FlattenSkirt": false,
         "SkirtSizeZ": 2,
@@ -86581,12 +87594,15 @@
       "SelectionSizeZ": 2.75,
       "SizeX": 3.6,
       "Physics": {
+        "MaxGroundVariation": 1.1,
         "MeshExtentsX": 4.5,
         "DragCoefficient": 0.2,
-        "MaxGroundVariation": 1.1,
-        "SkirtOffsetZ": -1.5,
         "SkirtOffsetX": -1.5,
+        "SkirtOffsetZ": -1.5,
         "FlattenSkirt": true,
+        "BuildOnLayerCaps": {
+          "LAYER_Land": true
+        },
         "RaisedPlatforms": [
           -1.1,
           -1.6,
@@ -86649,7 +87665,7 @@
           1.9,
           0
         ],
-        "MeshExtentsY": 1.5,
+        "SkirtSizeZ": 8,
         "MotionType": "RULEUMT_None",
         "RollOffPoints": [
           {
@@ -86665,7 +87681,7 @@
             "Z": 0.35
           }
         ],
-        "SkirtSizeZ": 8,
+        "MeshExtentsY": 1.5,
         "SkirtSizeX": 8,
         "MeshExtentsZ": 4.5
       },
@@ -86895,12 +87911,20 @@
       "SizeY": 0.7,
       "SelectionCenterOffsetZ": -0.25,
       "Physics": {
+        "MaxGroundVariation": 1.1,
         "MeshExtentsX": 6,
         "DragCoefficient": 0.2,
-        "MaxGroundVariation": 1.1,
-        "SkirtOffsetZ": -1.5,
         "SkirtOffsetX": -1.5,
+        "SkirtOffsetZ": -1.5,
         "FlattenSkirt": true,
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "RaisedPlatforms": [
           -1.6,
           -1.2,
@@ -86939,7 +87963,7 @@
           1.5,
           0
         ],
-        "MeshExtentsY": 4,
+        "SkirtSizeZ": 8,
         "MotionType": "RULEUMT_None",
         "RollOffPoints": [
           {
@@ -86961,7 +87985,7 @@
             "Z": 0
           }
         ],
-        "SkirtSizeZ": 8,
+        "MeshExtentsY": 4,
         "SkirtSizeX": 8,
         "MeshExtentsZ": 6
       },
@@ -87234,12 +88258,20 @@
         "MeshExtentsX": 3,
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -1.5,
-        "FlattenSkirt": true,
         "MaxGroundVariation": 1.1,
-        "SkirtSizeZ": 6,
+        "FlattenSkirt": true,
         "SkirtOffsetX": -1.5,
-        "MotionType": "RULEUMT_None",
         "MeshExtentsY": 3,
+        "SkirtSizeZ": 6,
+        "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 6,
         "MeshExtentsZ": 3
       },
@@ -87806,12 +88838,20 @@
       "SizeY": 0.7,
       "SelectionCenterOffsetZ": -0.25,
       "Physics": {
+        "MaxGroundVariation": 1.1,
         "MeshExtentsX": 6,
         "DragCoefficient": 0.2,
-        "MaxGroundVariation": 1.1,
-        "SkirtOffsetZ": -1.5,
         "SkirtOffsetX": -1.5,
+        "SkirtOffsetZ": -1.5,
         "FlattenSkirt": true,
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "RaisedPlatforms": [
           -1.6,
           -1.2,
@@ -87850,7 +88890,7 @@
           1.5,
           0
         ],
-        "MeshExtentsY": 4,
+        "SkirtSizeZ": 8,
         "MotionType": "RULEUMT_None",
         "RollOffPoints": [
           {
@@ -87872,7 +88912,7 @@
             "Z": 0
           }
         ],
-        "SkirtSizeZ": 8,
+        "MeshExtentsY": 4,
         "SkirtSizeX": 8,
         "MeshExtentsZ": 6
       },
@@ -88089,7 +89129,12 @@
         "SkirtOffsetZ": -1,
         "SkirtSizeZ": 15,
         "BuildOnLayerCaps": {
-          "LAYER_Water": true
+          "LAYER_Sub": false,
+          "LAYER_Land": false,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": true,
+          "LAYER_Air": false
         },
         "SkirtOffsetX": -7,
         "MeshExtentsY": 2,
@@ -88335,7 +89380,12 @@
         "SkirtOffsetZ": -1,
         "SkirtSizeZ": 15,
         "BuildOnLayerCaps": {
-          "LAYER_Water": true
+          "LAYER_Sub": false,
+          "LAYER_Land": false,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": true,
+          "LAYER_Air": false
         },
         "SkirtOffsetX": -7,
         "MeshExtentsY": 2,
@@ -88480,12 +89530,20 @@
         "MeshExtentsX": 5.75,
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -1.5,
-        "FlattenSkirt": true,
         "MaxGroundVariation": 1.1,
-        "SkirtSizeZ": 8,
+        "FlattenSkirt": true,
         "SkirtOffsetX": -1.5,
-        "MotionType": "RULEUMT_None",
         "MeshExtentsY": 4.25,
+        "SkirtSizeZ": 8,
+        "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 8,
         "MeshExtentsZ": 5.75
       },
@@ -88746,8 +89804,12 @@
         "SkirtOffsetX": -0.5,
         "MotionType": "RULEUMT_None",
         "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
           "LAYER_Land": true,
-          "LAYER_Water": true
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": true,
+          "LAYER_Air": false
         },
         "SkirtSizeX": 2,
         "MeshExtentsZ": 1.15
@@ -88950,12 +90012,20 @@
         "MeshExtentsX": 5.75,
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -1.5,
-        "FlattenSkirt": true,
         "MaxGroundVariation": 1.1,
-        "SkirtSizeZ": 8,
+        "FlattenSkirt": true,
         "SkirtOffsetX": -1.5,
-        "MotionType": "RULEUMT_None",
         "MeshExtentsY": 4.5,
+        "SkirtSizeZ": 8,
+        "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 8,
         "MeshExtentsZ": 8
       },
@@ -89235,12 +90305,20 @@
         "MeshExtentsX": 2.1,
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -1.5,
-        "FlattenSkirt": true,
         "SkirtSizeZ": 6,
-        "MeshExtentsY": 1,
+        "FlattenSkirt": true,
         "SkirtOffsetX": -1.5,
-        "HorizontalSkirt": true,
+        "MeshExtentsY": 1,
         "MotionType": "RULEUMT_None",
+        "HorizontalSkirt": true,
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 6,
         "MeshExtentsZ": 2.1
       },
@@ -89537,6 +90615,14 @@
         "MeshExtentsY": 1.25,
         "SkirtOffsetX": -0.5,
         "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 3,
         "MeshExtentsZ": 2
       },
@@ -89867,12 +90953,20 @@
         "MeshExtentsX": 2.75,
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -1.5,
-        "FlattenSkirt": true,
         "MaxGroundVariation": 1.1,
-        "SkirtSizeZ": 6,
+        "FlattenSkirt": true,
         "SkirtOffsetX": -1.5,
-        "MotionType": "RULEUMT_None",
         "MeshExtentsY": 2.25,
+        "SkirtSizeZ": 6,
+        "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 6,
         "MeshExtentsZ": 2.75
       },
@@ -90372,6 +91466,14 @@
         "MeshExtentsY": 3.1,
         "SkirtOffsetX": -0.5,
         "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 2,
         "MeshExtentsZ": 1.5
       },
@@ -90425,6 +91527,14 @@
         "MeshExtentsY": 3.1,
         "SkirtOffsetX": -1.5,
         "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 6,
         "MeshExtentsZ": 1.5
       },
@@ -90699,12 +91809,20 @@
       "SizeY": 1.5,
       "SelectionSizeZ": 3.5,
       "Physics": {
+        "FlattenSkirt": true,
         "MeshExtentsX": 7.5,
         "DragCoefficient": 0.2,
-        "SkirtSizeZ": 10,
-        "SkirtOffsetZ": -1.5,
         "SkirtOffsetX": -1.5,
-        "FlattenSkirt": true,
+        "SkirtOffsetZ": -1.5,
+        "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "RaisedPlatforms": [
           -1.5,
           -1.5,
@@ -90743,7 +91861,7 @@
           3.4,
           0
         ],
-        "MeshExtentsY": 2.5,
+        "SkirtSizeZ": 10,
         "OccupyRects": [
           -3,
           0,
@@ -90768,7 +91886,7 @@
             "Z": -3
           }
         ],
-        "MotionType": "RULEUMT_None",
+        "MeshExtentsY": 2.5,
         "SkirtSizeX": 10,
         "MeshExtentsZ": 7.5
       },
@@ -91260,7 +92378,7 @@
           "MuzzleSalvoSize": 1
         },
         {
-          "TractorDamage": 729,
+          "TractorDamage": 240,
           "DamageRadius": 0,
           "TurretYawRange": 41,
           "TargetCheckInterval": 0.2,
@@ -91335,10 +92453,10 @@
           "TurretDualManipulators": false,
           "TurretBonePitch": "Right_Arm_B02",
           "TurretYawSpeed": 20,
-          "MaxRadius": 41
+          "MaxRadius": 30
         },
         {
-          "TractorDamage": 729,
+          "TractorDamage": 240,
           "DamageRadius": 0,
           "TurretYawRange": 41,
           "TargetCheckInterval": 0.2,
@@ -91428,7 +92546,7 @@
           "TurretDualManipulators": false,
           "TurretBonePitch": "Left_Arm_B02",
           "TurretYawSpeed": 20,
-          "MaxRadius": 41
+          "MaxRadius": 30
         },
         {
           "DamageType": "DeathExplosion",
@@ -91686,13 +92804,13 @@
         "VisionRadius": 100
       },
       "Economy": {
-        "BuildTime": 50625,
+        "BuildTime": 48094,
         "BuildRate": 180,
-        "BuildCostMass": 45000,
+        "BuildCostMass": 42750,
         "BuildableCategory": [
           "BUILTBYTIER3FACTORY AEON MOBILE AIR"
         ],
-        "BuildCostEnergy": 1530000,
+        "BuildCostEnergy": 1453500,
         "MaintenanceConsumptionPerSecondEnergy": 500
       },
       "SizeY": 3,
@@ -92744,12 +93862,20 @@
         "MeshExtentsX": 3,
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -1.5,
-        "FlattenSkirt": true,
         "MaxGroundVariation": 1.2,
-        "SkirtSizeZ": 10,
+        "FlattenSkirt": true,
         "SkirtOffsetX": -1.5,
-        "MotionType": "RULEUMT_None",
         "MeshExtentsY": 3,
+        "SkirtSizeZ": 10,
+        "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 10,
         "MeshExtentsZ": 3
       },
@@ -92848,12 +93974,20 @@
         "MeshExtentsX": 4,
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -1.5,
-        "FlattenSkirt": true,
         "MaxGroundVariation": 1.2,
-        "SkirtSizeZ": 10,
+        "FlattenSkirt": true,
         "SkirtOffsetX": -1.5,
-        "MotionType": "RULEUMT_None",
         "MeshExtentsY": 4.5,
+        "SkirtSizeZ": 10,
+        "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 10,
         "MeshExtentsZ": 5.5
       },
@@ -93183,12 +94317,20 @@
       "SelectionSizeZ": 3,
       "SizeX": 3.1,
       "Physics": {
+        "MaxGroundVariation": 1.1,
         "MeshExtentsX": 4.5,
         "DragCoefficient": 0.2,
-        "MaxGroundVariation": 1.1,
-        "SkirtOffsetZ": -1.5,
         "SkirtOffsetX": -1.5,
+        "SkirtOffsetZ": -1.5,
         "FlattenSkirt": true,
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "RaisedPlatforms": [
           -1.1,
           -0.7,
@@ -93227,7 +94369,7 @@
           0.5,
           0
         ],
-        "MeshExtentsY": 1,
+        "SkirtSizeZ": 8,
         "MotionType": "RULEUMT_None",
         "RollOffPoints": [
           {
@@ -93243,7 +94385,7 @@
             "Z": 0.1
           }
         ],
-        "SkirtSizeZ": 8,
+        "MeshExtentsY": 1,
         "SkirtSizeX": 8,
         "MeshExtentsZ": 4.5
       },
@@ -94106,10 +95248,18 @@
         "StandUpright": true,
         "MeshExtentsX": 4.25,
         "DragCoefficient": 0.2,
-        "SkirtOffsetZ": -1.5,
         "MaxGroundVariation": 1.1,
-        "FlattenSkirt": true,
+        "SkirtOffsetZ": -1.5,
         "SkirtOffsetX": -1.5,
+        "FlattenSkirt": true,
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeZ": 8,
         "MotionType": "RULEUMT_None",
         "RollOffPoints": [
@@ -95212,7 +96362,12 @@
         "SkirtOffsetZ": -2,
         "SkirtSizeZ": 15,
         "BuildOnLayerCaps": {
-          "LAYER_Water": true
+          "LAYER_Sub": false,
+          "LAYER_Land": false,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": true,
+          "LAYER_Air": false
         },
         "SkirtOffsetX": -2,
         "MeshExtentsY": 2,
@@ -96300,8 +97455,12 @@
         "SkirtOffsetZ": -0.5,
         "BuildRestriction": "RULEUBR_OnMassDeposit",
         "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
           "LAYER_Seabed": true,
-          "LAYER_Land": true
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
         },
         "FlattenSkirt": false,
         "SkirtSizeZ": 2,
@@ -97456,8 +98615,12 @@
         "SkirtOffsetX": -0.5,
         "MotionType": "RULEUMT_None",
         "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
           "LAYER_Seabed": true,
-          "LAYER_Land": true
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
         },
         "SkirtSizeX": 2,
         "MeshExtentsZ": 1.1
@@ -97991,6 +99154,14 @@
         "MeshExtentsY": 0.75,
         "SkirtOffsetX": -0.5,
         "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 2,
         "MeshExtentsZ": 1
       },
@@ -98147,8 +99318,12 @@
         "SkirtOffsetZ": -1.5,
         "BuildRestriction": "RULEUBR_OnHydrocarbonDeposit",
         "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
           "LAYER_Seabed": true,
-          "LAYER_Land": true
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
         },
         "FlattenSkirt": false,
         "SkirtSizeZ": 6,
@@ -98353,6 +99528,14 @@
         "MeshExtentsY": 0.6,
         "SkirtOffsetX": -0.5,
         "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 2,
         "MeshExtentsZ": 1.1
       },
@@ -99757,6 +100940,14 @@
         "DragCoefficient": 0.2,
         "AlwaysAlignToTerrain": true,
         "SkirtOffsetZ": 0,
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeZ": 1,
         "MeshExtentsY": 1.1,
         "SkirtOffsetX": 0,
@@ -99865,7 +101056,7 @@
         null
       ],
       "AverageDensity": 800,
-      "Description": "Anti-Air Defense",
+      "Description": "Anti-Air Turret",
       "BuildIconSortPriority": 120,
       "LifeBarSize": 0.9,
       "StrategicIconName": "icon_structure1_antiair",
@@ -99929,8 +101120,12 @@
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": 0,
         "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
           "LAYER_Land": true,
-          "LAYER_Water": true
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": true,
+          "LAYER_Air": false
         },
         "SkirtSizeZ": 1,
         "MeshExtentsY": 1.25,
@@ -100150,7 +101345,12 @@
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": 0,
         "BuildOnLayerCaps": {
-          "LAYER_Water": true
+          "LAYER_Sub": false,
+          "LAYER_Land": false,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": true,
+          "LAYER_Air": false
         },
         "SkirtSizeZ": 1,
         "MeshExtentsY": 0.75,
@@ -100489,11 +101689,19 @@
         "DragCoefficient": 0.2,
         "AlwaysAlignToTerrain": true,
         "SkirtOffsetZ": 0,
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "MaxGroundVariation": 50,
-        "SkirtSizeZ": 1,
+        "MeshExtentsY": 1,
         "SkirtOffsetX": 0,
         "MotionType": "RULEUMT_None",
-        "MeshExtentsY": 1,
+        "SkirtSizeZ": 1,
         "SkirtSizeX": 1,
         "MeshExtentsZ": 1.5
       },
@@ -100690,6 +101898,14 @@
         "MeshExtentsY": 2,
         "SkirtOffsetX": -0.5,
         "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 2,
         "MeshExtentsZ": 1.25
       },
@@ -100861,7 +102077,12 @@
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": 0,
         "BuildOnLayerCaps": {
-          "LAYER_Water": true
+          "LAYER_Sub": false,
+          "LAYER_Land": false,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": true,
+          "LAYER_Air": false
         },
         "SkirtSizeZ": 1,
         "MeshExtentsY": 0.65,
@@ -100989,6 +102210,14 @@
         "MeshExtentsY": 1.25,
         "SkirtOffsetX": -1.5,
         "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 6,
         "MeshExtentsZ": 3
       },
@@ -102071,12 +103300,12 @@
           "RackSlavedToTurret": false,
           "TargetPriorities": [
             "CRUISER",
-            "(NAVAL * TECH2 * SHIELD)",
-            "(STRUCTURE * DEFENSE * ANTIAIR)",
-            "(TECH3 * NAVAL * CARRIER)",
+            "NAVAL TECH2 SHIELD",
+            "STRUCTURE DEFENSE ANTIAIR",
+            "TECH3 NAVAL CARRIER",
             "SUBMERSIBLE",
-            "NAVAL * TECH2",
-            "NAVAL * TECH3",
+            "NAVAL TECH2",
+            "NAVAL TECH3",
             "MOBILE",
             "(STRUCTURE * DEFENSE - ANTIMISSILE)",
             "ALLUNITS"
@@ -104108,7 +105337,7 @@
       "LifeBarSize": 0.8,
       "StrategicIconName": "icon_land2_antiair",
       "CollisionOffsetY": 0.1,
-      "Description": "Mobile Anti-Air Cannon",
+      "Description": "Mobile AA Flak Artillery",
       "CollisionOffsetZ": 0.05,
       "Economy": {
         "BuildTime": 800,
@@ -104934,8 +106163,12 @@
         "SkirtOffsetZ": -0.5,
         "BuildRestriction": "RULEUBR_OnMassDeposit",
         "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
           "LAYER_Seabed": true,
-          "LAYER_Land": true
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
         },
         "FlattenSkirt": false,
         "SkirtSizeZ": 2,
@@ -105441,12 +106674,20 @@
       "SizeY": 0.8,
       "SelectionCenterOffsetZ": 0.09,
       "Physics": {
+        "MaxGroundVariation": 1.1,
         "MeshExtentsX": 4.5,
         "DragCoefficient": 0.2,
-        "MaxGroundVariation": 1.1,
-        "SkirtOffsetZ": -1.5,
         "SkirtOffsetX": -1.5,
+        "SkirtOffsetZ": -1.5,
         "FlattenSkirt": true,
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "RaisedPlatforms": [
           -1.1,
           -0.7,
@@ -105485,7 +106726,7 @@
           0.5,
           0
         ],
-        "MeshExtentsY": 1.25,
+        "SkirtSizeZ": 8,
         "MotionType": "RULEUMT_None",
         "RollOffPoints": [
           {
@@ -105501,7 +106742,7 @@
             "Z": 0.35
           }
         ],
-        "SkirtSizeZ": 8,
+        "MeshExtentsY": 1.25,
         "SkirtSizeX": 8,
         "MeshExtentsZ": 4.5
       },
@@ -105751,6 +106992,14 @@
         "MeshExtentsY": 0.4,
         "SkirtOffsetX": -0.5,
         "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 2,
         "MeshExtentsZ": 1
       },
@@ -105908,12 +107157,15 @@
       "SizeY": 0.8,
       "SelectionCenterOffsetZ": 0.09,
       "Physics": {
+        "MaxGroundVariation": 1.1,
         "MeshExtentsX": 4.5,
         "DragCoefficient": 0.2,
-        "MaxGroundVariation": 1.1,
-        "SkirtOffsetZ": -1.5,
         "SkirtOffsetX": -1.5,
+        "SkirtOffsetZ": -1.5,
         "FlattenSkirt": true,
+        "BuildOnLayerCaps": {
+          "LAYER_Land": true
+        },
         "RaisedPlatforms": [
           -1.1,
           -0.7,
@@ -105952,7 +107204,7 @@
           0.5,
           0
         ],
-        "MeshExtentsY": 1.25,
+        "SkirtSizeZ": 8,
         "MotionType": "RULEUMT_None",
         "RollOffPoints": [
           {
@@ -105968,7 +107220,7 @@
             "Z": 0.35
           }
         ],
-        "SkirtSizeZ": 8,
+        "MeshExtentsY": 1.25,
         "SkirtSizeX": 8,
         "MeshExtentsZ": 4.5
       },
@@ -106136,10 +107388,18 @@
         "StandUpright": true,
         "MeshExtentsX": 5.5,
         "DragCoefficient": 0.2,
-        "SkirtOffsetZ": -1.5,
         "MaxGroundVariation": 1.1,
-        "FlattenSkirt": true,
+        "SkirtOffsetZ": -1.5,
         "SkirtOffsetX": -1.5,
+        "FlattenSkirt": true,
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeZ": 8,
         "MotionType": "RULEUMT_None",
         "RollOffPoints": [
@@ -106399,10 +107659,18 @@
         "StandUpright": true,
         "MeshExtentsX": 5.5,
         "DragCoefficient": 0.2,
-        "SkirtOffsetZ": -1.5,
         "MaxGroundVariation": 1.1,
-        "FlattenSkirt": true,
+        "SkirtOffsetZ": -1.5,
         "SkirtOffsetX": -1.5,
+        "FlattenSkirt": true,
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeZ": 8,
         "MotionType": "RULEUMT_None",
         "RollOffPoints": [
@@ -106657,7 +107925,12 @@
         "SkirtOffsetZ": -2,
         "SkirtSizeZ": 15,
         "BuildOnLayerCaps": {
-          "LAYER_Water": true
+          "LAYER_Sub": false,
+          "LAYER_Land": false,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": true,
+          "LAYER_Air": false
         },
         "SkirtOffsetX": -2,
         "MeshExtentsY": 2,
@@ -107053,6 +108326,14 @@
         "MeshExtentsY": 2.35,
         "SkirtOffsetX": -1.5,
         "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 6,
         "MeshExtentsZ": 3.5
       },
@@ -107139,7 +108420,12 @@
         "SkirtOffsetZ": -2,
         "SkirtSizeZ": 15,
         "BuildOnLayerCaps": {
-          "LAYER_Water": true
+          "LAYER_Sub": false,
+          "LAYER_Land": false,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": true,
+          "LAYER_Air": false
         },
         "SkirtOffsetX": -2,
         "MeshExtentsY": 2,
@@ -107412,6 +108698,14 @@
         "MeshExtentsY": 1,
         "SkirtOffsetX": -0.5,
         "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 2,
         "MeshExtentsZ": 2
       },
@@ -107667,8 +108961,12 @@
         "SkirtOffsetX": -0.5,
         "MotionType": "RULEUMT_None",
         "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
           "LAYER_Land": true,
-          "LAYER_Water": true
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": true,
+          "LAYER_Air": false
         },
         "SkirtSizeX": 2,
         "MeshExtentsZ": 1.25
@@ -107907,7 +109205,12 @@
         "SkirtOffsetX": -0.5,
         "MotionType": "RULEUMT_None",
         "BuildOnLayerCaps": {
-          "LAYER_Water": true
+          "LAYER_Sub": false,
+          "LAYER_Land": false,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": true,
+          "LAYER_Air": false
         },
         "SkirtSizeX": 3,
         "MeshExtentsZ": 1.75
@@ -108283,6 +109586,14 @@
         "MeshExtentsY": 2,
         "SkirtOffsetX": -0.5,
         "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 2,
         "MeshExtentsZ": 3
       },
@@ -108533,12 +109844,20 @@
         "MeshExtentsX": 0.75,
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -0.5,
-        "FlattenSkirt": true,
         "SkirtSizeZ": 2,
-        "MeshExtentsY": 0.35,
+        "FlattenSkirt": true,
         "SkirtOffsetX": -0.5,
-        "HorizontalSkirt": true,
+        "MeshExtentsY": 0.35,
         "MotionType": "RULEUMT_None",
+        "HorizontalSkirt": true,
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 2,
         "MeshExtentsZ": 1.5
       },
@@ -108943,8 +110262,12 @@
         "SkirtOffsetX": -0.5,
         "MotionType": "RULEUMT_None",
         "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
           "LAYER_Land": true,
-          "LAYER_Water": true
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": true,
+          "LAYER_Air": false
         },
         "SkirtSizeX": 2,
         "MeshExtentsZ": 1
@@ -109161,12 +110484,20 @@
         "MeshExtentsX": 3,
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -1.5,
-        "FlattenSkirt": true,
         "MaxGroundVariation": 1.1,
-        "SkirtSizeZ": 6,
+        "FlattenSkirt": true,
         "SkirtOffsetX": -1.5,
-        "MotionType": "RULEUMT_None",
         "MeshExtentsY": 2,
+        "SkirtSizeZ": 6,
+        "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 6,
         "MeshExtentsZ": 3
       },
@@ -109447,6 +110778,14 @@
         "MeshExtentsY": 2.75,
         "SkirtOffsetX": -0.5,
         "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 2,
         "MeshExtentsZ": 1.5
       },
@@ -109845,6 +111184,14 @@
         "MeshExtentsY": 1,
         "SkirtOffsetX": -1.5,
         "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 6,
         "MeshExtentsZ": 3
       },
@@ -112449,7 +113796,6 @@
         "RECLAIMABLE",
         "SELECTABLE",
         "SERAPHIM",
-        "SNIPEMODE",
         "SNIPER",
         "TECH3",
         "VISIBLETORECON",
@@ -112499,14 +113845,14 @@
         "MaxSteerForce": 10,
         "MeshExtentsX": 1,
         "DragCoefficient": 0.2,
-        "MaxAcceleration": 2.3,
-        "MaxBrake": 2.3,
+        "MaxAcceleration": 2.2,
+        "MaxBrake": 2.2,
         "MeshExtentsY": 1.25,
         "MaxSpeedReverse": 0,
         "TurnRadius": 5,
         "MotionType": "RULEUMT_Land",
-        "SniperModeSpeedMultiplier": 0.8695652173913,
-        "MaxSpeed": 2.3,
+        "SniperModeSpeedMultiplier": 0.879,
+        "MaxSpeed": 2.2,
         "StandUpright": true,
         "MeshExtentsZ": 1
       },
@@ -112757,7 +114103,6 @@
             "(ARTILLERY - TECH1)",
             "ANTISHIELD",
             "SHIELD",
-            "COMMAND",
             "TECH3 MOBILE",
             "TECH2 MOBILE",
             "(STRUCTURE * DEFENSE - ANTIMISSILE)",
@@ -112773,7 +114118,7 @@
           "TurretYawRange": 180,
           "TurretDualManipulators": false,
           "TurretBonePitch": "Barrel",
-          "MaxRadius": 55,
+          "MaxRadius": 60,
           "WeaponUnpacks": false
         },
         {
@@ -112835,7 +114180,6 @@
             "SNIPER",
             "(ARTILLERY - TECH1)",
             "SHIELD",
-            "COMMAND",
             "TECH3 MOBILE",
             "TECH2 MOBILE",
             "(STRUCTURE * DEFENSE - ANTIMISSILE)",
@@ -112851,7 +114195,7 @@
           "TurretYawRange": 180,
           "TurretDualManipulators": false,
           "TurretBonePitch": "Barrel",
-          "MaxRadius": 65,
+          "MaxRadius": 70,
           "WeaponUnpacks": false
         }
       ]
@@ -114572,7 +115916,7 @@
         "TurnSpeed": 1.2,
         "KRoll": 2,
         "MaxAirspeed": 17,
-        "LiftFactor": 10,
+        "LiftFactor": 7,
         "KLift": 3,
         "RandomBreakOffDistanceMult": 1,
         "PredictAheadForBombDrop": 3,
@@ -114998,12 +116342,20 @@
       "SizeY": 0.8,
       "SelectionCenterOffsetZ": 0.22,
       "Physics": {
+        "MaxGroundVariation": 1.1,
         "MeshExtentsX": 4.5,
         "DragCoefficient": 0.2,
-        "MaxGroundVariation": 1.1,
-        "SkirtOffsetZ": -1.5,
         "SkirtOffsetX": -1.5,
+        "SkirtOffsetZ": -1.5,
         "FlattenSkirt": true,
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "RaisedPlatforms": [
           -1.1,
           -0.7,
@@ -115042,7 +116394,7 @@
           0.5,
           0
         ],
-        "MeshExtentsY": 1.5,
+        "SkirtSizeZ": 8,
         "MotionType": "RULEUMT_None",
         "RollOffPoints": [
           {
@@ -115058,7 +116410,7 @@
             "Z": 0.35
           }
         ],
-        "SkirtSizeZ": 8,
+        "MeshExtentsY": 1.5,
         "SkirtSizeX": 8,
         "MeshExtentsZ": 4.5
       },
@@ -115205,8 +116557,12 @@
         "SkirtOffsetZ": -0.5,
         "BuildRestriction": "RULEUBR_OnMassDeposit",
         "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
           "LAYER_Seabed": true,
-          "LAYER_Land": true
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
         },
         "FlattenSkirt": false,
         "SkirtSizeZ": 2,
@@ -115455,12 +116811,15 @@
       "SizeY": 0.8,
       "SelectionCenterOffsetZ": 0.22,
       "Physics": {
+        "MaxGroundVariation": 1.1,
         "MeshExtentsX": 4.5,
         "DragCoefficient": 0.2,
-        "MaxGroundVariation": 1.1,
-        "SkirtOffsetZ": -1.5,
         "SkirtOffsetX": -1.5,
+        "SkirtOffsetZ": -1.5,
         "FlattenSkirt": true,
+        "BuildOnLayerCaps": {
+          "LAYER_Land": true
+        },
         "RaisedPlatforms": [
           -1.1,
           -0.7,
@@ -115499,7 +116858,7 @@
           0.5,
           0
         ],
-        "MeshExtentsY": 1.5,
+        "SkirtSizeZ": 8,
         "MotionType": "RULEUMT_None",
         "RollOffPoints": [
           {
@@ -115515,7 +116874,7 @@
             "Z": 0.35
           }
         ],
-        "SkirtSizeZ": 8,
+        "MeshExtentsY": 1.5,
         "SkirtSizeX": 8,
         "MeshExtentsZ": 4.5
       },
@@ -115676,10 +117035,18 @@
         "StandUpright": true,
         "MeshExtentsX": 6,
         "DragCoefficient": 0.2,
-        "SkirtOffsetZ": -1.5,
         "MaxGroundVariation": 1.1,
-        "FlattenSkirt": true,
+        "SkirtOffsetZ": -1.5,
         "SkirtOffsetX": -1.5,
+        "FlattenSkirt": true,
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeZ": 8,
         "MotionType": "RULEUMT_None",
         "RollOffPoints": [
@@ -116071,12 +117438,20 @@
         "MeshExtentsX": 3,
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -1.5,
-        "FlattenSkirt": true,
         "MaxGroundVariation": 1.1,
-        "SkirtSizeZ": 6,
+        "FlattenSkirt": true,
         "SkirtOffsetX": -1.5,
-        "MotionType": "RULEUMT_None",
         "MeshExtentsY": 3,
+        "SkirtSizeZ": 6,
+        "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 6,
         "MeshExtentsZ": 3
       },
@@ -116776,10 +118151,18 @@
         "StandUpright": true,
         "MeshExtentsX": 6,
         "DragCoefficient": 0.2,
-        "SkirtOffsetZ": -1.5,
         "MaxGroundVariation": 1.1,
-        "FlattenSkirt": true,
+        "SkirtOffsetZ": -1.5,
         "SkirtOffsetX": -1.5,
+        "FlattenSkirt": true,
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeZ": 8,
         "MotionType": "RULEUMT_None",
         "RollOffPoints": [
@@ -117030,7 +118413,12 @@
         "SkirtOffsetZ": -2,
         "SkirtSizeZ": 15,
         "BuildOnLayerCaps": {
-          "LAYER_Water": true
+          "LAYER_Sub": false,
+          "LAYER_Land": false,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": true,
+          "LAYER_Air": false
         },
         "SkirtOffsetX": -2,
         "MeshExtentsY": 2,
@@ -117281,7 +118669,12 @@
         "SkirtOffsetZ": -2,
         "SkirtSizeZ": 15,
         "BuildOnLayerCaps": {
-          "LAYER_Water": true
+          "LAYER_Sub": false,
+          "LAYER_Land": false,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": true,
+          "LAYER_Air": false
         },
         "SkirtOffsetX": -2,
         "MeshExtentsY": 2,
@@ -117674,12 +119067,20 @@
         "MeshExtentsX": 5.75,
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -1.5,
-        "FlattenSkirt": true,
         "MaxGroundVariation": 1.1,
-        "SkirtSizeZ": 8,
+        "FlattenSkirt": true,
         "SkirtOffsetX": -1.5,
-        "MotionType": "RULEUMT_None",
         "MeshExtentsY": 4.25,
+        "SkirtSizeZ": 8,
+        "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 8,
         "MeshExtentsZ": 5.75
       },
@@ -117717,7 +119118,7 @@
         null
       ],
       "AverageDensity": 5000,
-      "Description": "Anti-Air Defense",
+      "Description": "Anti-Air SAM Launcher",
       "BuildIconSortPriority": 120,
       "LifeBarSize": 1.25,
       "StrategicIconName": "icon_structure3_antiair",
@@ -117786,8 +119187,12 @@
         "SkirtOffsetX": -0.5,
         "MotionType": "RULEUMT_None",
         "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
           "LAYER_Land": true,
-          "LAYER_Water": true
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": true,
+          "LAYER_Air": false
         },
         "SkirtSizeX": 2,
         "MeshExtentsZ": 1.15
@@ -118062,12 +119467,20 @@
         "MeshExtentsX": 5.75,
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -1.5,
-        "FlattenSkirt": true,
         "MaxGroundVariation": 1.1,
-        "SkirtSizeZ": 8,
+        "FlattenSkirt": true,
         "SkirtOffsetX": -1.5,
-        "MotionType": "RULEUMT_None",
         "MeshExtentsY": 4.5,
+        "SkirtSizeZ": 8,
+        "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 8,
         "MeshExtentsZ": 8
       },
@@ -118304,12 +119717,20 @@
         "MeshExtentsX": 2.1,
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -1.5,
-        "FlattenSkirt": true,
         "SkirtSizeZ": 6,
-        "MeshExtentsY": 1,
+        "FlattenSkirt": true,
         "SkirtOffsetX": -1.5,
-        "HorizontalSkirt": true,
+        "MeshExtentsY": 1,
         "MotionType": "RULEUMT_None",
+        "HorizontalSkirt": true,
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 6,
         "MeshExtentsZ": 2.1
       },
@@ -118606,6 +120027,14 @@
         "MeshExtentsY": 1.25,
         "SkirtOffsetX": -0.5,
         "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 3,
         "MeshExtentsZ": 2
       },
@@ -118933,12 +120362,20 @@
         "MeshExtentsX": 2.75,
         "DragCoefficient": 0.2,
         "SkirtOffsetZ": -1.5,
-        "FlattenSkirt": true,
         "MaxGroundVariation": 1.1,
-        "SkirtSizeZ": 6,
+        "FlattenSkirt": true,
         "SkirtOffsetX": -1.5,
-        "MotionType": "RULEUMT_None",
         "MeshExtentsY": 2.25,
+        "SkirtSizeZ": 6,
+        "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 6,
         "MeshExtentsZ": 2.75
       },
@@ -119220,6 +120657,14 @@
         "MeshExtentsY": 3.1,
         "SkirtOffsetX": -0.5,
         "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 2,
         "MeshExtentsZ": 1.5
       },
@@ -119468,12 +120913,20 @@
       },
       "StrategicIconSortPriority": 175,
       "Physics": {
+        "FlattenSkirt": true,
         "MeshExtentsX": 7.5,
         "DragCoefficient": 0.2,
-        "SkirtSizeZ": 10,
-        "SkirtOffsetZ": -1.5,
         "SkirtOffsetX": -1.5,
-        "FlattenSkirt": true,
+        "SkirtOffsetZ": -1.5,
+        "MotionType": "RULEUMT_None",
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "RaisedPlatforms": [
           -1,
           -1,
@@ -119500,7 +120953,7 @@
           2.4,
           0
         ],
-        "MeshExtentsY": 2.5,
+        "SkirtSizeZ": 10,
         "OccupyRects": [
           -3,
           1.5,
@@ -119539,7 +120992,7 @@
             "Z": -1.8
           }
         ],
-        "MotionType": "RULEUMT_None",
+        "MeshExtentsY": 2.5,
         "SkirtSizeX": 10,
         "MeshExtentsZ": 7.5
       },
@@ -120648,14 +122101,22 @@
       "Physics": {
         "MeshExtentsX": 2.1,
         "DragCoefficient": 0.2,
-        "SkirtOffsetZ": -1.5,
         "MaxGroundVariation": 1.2,
-        "FlattenSkirt": true,
+        "SkirtOffsetZ": -1.5,
         "SkirtOffsetX": -1.5,
+        "FlattenSkirt": true,
         "MeshExtentsY": 1,
+        "SkirtSizeZ": 8,
         "MotionType": "RULEUMT_None",
         "HorizontalSkirt": true,
-        "SkirtSizeZ": 8,
+        "BuildOnLayerCaps": {
+          "LAYER_Sub": false,
+          "LAYER_Land": true,
+          "LAYER_Seabed": false,
+          "LAYER_Orbit": false,
+          "LAYER_Water": false,
+          "LAYER_Air": false
+        },
         "SkirtSizeX": 8,
         "MeshExtentsZ": 2.1
       },
